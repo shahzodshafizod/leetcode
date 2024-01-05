@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// go test -v -count=1 ./internal/arrays/ -run ^TestTwoSum$
+// go test -v -count=1 ./dsa/arrays/ -run ^TestTwoSum$
 func TestTwoSum(t *testing.T) {
 	for _, data := range []struct {
 		nums   []int
