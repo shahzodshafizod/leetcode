@@ -23,6 +23,7 @@ func TestIsPalindrome(t *testing.T) {
 		{s: "race a car", is: false},
 		{s: " ", is: true},
 		{s: ".,", is: true},
+		{s: "ab_a", is: true},
 	} {
 		is := isPalindrome(data.s)
 		assert.Equal(t, data.is, is)

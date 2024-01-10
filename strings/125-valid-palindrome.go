@@ -58,3 +58,15 @@ func isPalindrome(s string) bool {
 	}
 	return true
 }
+
+// func isPalindrome(s string) bool {
+// 	s = strings.ToLower(regexp.MustCompile(`[^A-Za-z0-9]`).ReplaceAllString(s, ""))
+// 	for left, right := 0, len(s)-1; left < right; {
+// 		if s[left] != s[right] {
+// 			return false
+// 		}
+// 		left++
+// 		right--
+// 	}
+// 	return true
+// }
