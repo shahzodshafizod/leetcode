@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// go test -v -count=1 ./dsa/arrays/ -run ^TestMaxArea$
+// go test -v -count=1 ./arrays/ -run ^TestMaxArea$
 func TestMaxArea(t *testing.T) {
 	for _, data := range []struct {
 		height []int

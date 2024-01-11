@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// go test -v -count=1 ./dsa/strings/ -run ^TestLengthOfLongestSubstring$
+// go test -v -count=1 ./strings/ -run ^TestLengthOfLongestSubstring$
 func TestLengthOfLongestSubstring(t *testing.T) {
 	for _, data := range []struct {
 		s         string

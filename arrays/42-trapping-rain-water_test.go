@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// go test -v -count=1 ./dsa/arrays/ -run ^TestTrap$
+// go test -v -count=1 ./arrays/ -run ^TestTrap$
 func TestTrap(t *testing.T) {
 	for _, data := range []struct {
 		height []int
