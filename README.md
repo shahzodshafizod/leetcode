@@ -1,7 +1,8 @@
 [![LeetCode Badge](https://img.shields.io/badge/LeetCode-B3B3B3?logo=leetcode&logoColor=black&labelColor=FFA116&style=for-the-badge)](https://leetcode.com/shahzodshafizod/)
 
-| # | Title | Difficulty | Tag | Date | Solutions
-| - | ----- | ---------- | --- | ---- | ---------
+| # | Title | Difficulty | Tags | Date | Solutions
+| - | ----- | ---------- | ---- | ---- | ---------
+| 430 | [Flatten a Multilevel Doubly Linked List](https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/) | Medium | Linked List, Depth-First Search, Doubly-Linked List | 2024-01-12 | [Go](linkedlists/430-flatten-a-multilevel-doubly-linked-list.go)
 | 92 | [Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii) | Medium | Linked List | 2024-01-11 | [Go](linkedlists/92-reverse-linked-list-ii.go)
 | 206 | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list) | Easy | Linked List, Recursion | 2024-01-10 | [Go](linkedlists/206-reverse-linked-list.go)
 | 680 | [Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii) | Easy | Two Pointers, String, Greedy | 2024-01-09 | [Go](strings/680-valid-palindrome-ii.go)
