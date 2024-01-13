@@ -2,6 +2,7 @@
 
 | # | Title | Difficulty | Tags | Date | Solutions
 | - | ----- | ---------- | ---- | ---- | ---------
+| 142 | [Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/) | Medium | Hash Table, Linked List, Two Pointers | 2024-01-13 | [Go](linkedlists/142-linked-list-cycle-ii.go)
 | 430 | [Flatten a Multilevel Doubly Linked List](https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/) | Medium | Linked List, Depth-First Search, Doubly-Linked List | 2024-01-12 | [Go](linkedlists/430-flatten-a-multilevel-doubly-linked-list.go)
 | 92 | [Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii) | Medium | Linked List | 2024-01-11 | [Go](linkedlists/92-reverse-linked-list-ii.go)
 | 206 | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list) | Easy | Linked List, Recursion | 2024-01-10 | [Go](linkedlists/206-reverse-linked-list.go)
