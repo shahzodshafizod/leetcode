@@ -2,6 +2,7 @@
 
 | # | Title | Difficulty | Tags | Date | Solutions
 | - | ----- | ---------- | ---- | ---- | ---------
+| 1249 | [Minimum Remove to Make Valid Parentheses](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/) | Medium | String, Stack | 2024-01-15 | [Go](stacks/1249-minimum-remove-to-make-valid-parentheses.go)
 | 20 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | Easy | String, Stack | 2024-01-14 | [Go](stacks/20-valid-parentheses.go)
 | 142 | [Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/) | Medium | Hash Table, Linked List, Two Pointers | 2024-01-13 | [Go](linkedlists/142-linked-list-cycle-ii.go)
 | 430 | [Flatten a Multilevel Doubly Linked List](https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/) | Medium | Linked List, Depth-First Search, Doubly-Linked List | 2024-01-12 | [Go](linkedlists/430-flatten-a-multilevel-doubly-linked-list.go)
