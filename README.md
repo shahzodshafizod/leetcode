@@ -2,6 +2,7 @@
 
 | # | Title | Difficulty | Tags | Date | Solutions
 | - | ----- | ---------- | ---- | ---- | ---------
+| 232 | [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/) | Easy | Stack, Design, Queue | 2024-01-16 | [Go](queues/232-implement-queue-using-stacks.go)
 | 1249 | [Minimum Remove to Make Valid Parentheses](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/) | Medium | String, Stack | 2024-01-15 | [Go](stacks/1249-minimum-remove-to-make-valid-parentheses.go)
 | 20 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | Easy | String, Stack | 2024-01-14 | [Go](stacks/20-valid-parentheses.go)
 | 142 | [Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/) | Medium | Hash Table, Linked List, Two Pointers | 2024-01-13 | [Go](linkedlists/142-linked-list-cycle-ii.go)
