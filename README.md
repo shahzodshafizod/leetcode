@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0034 | [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | Medium | Array, Binary Search | 2024-01-18 | [Go](arrays/0034-find-first-and-last-position-of-element-in-sorted-array.go)
 | 0215 | [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | Medium | Array, Divide and Conquer, Sorting, Heap (Priority Queue), Quickselect | 2024-01-17 | [Go](recursion/0215-kth-largest-element-in-an-array.go)
 | 0232 | [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/) | Easy | Stack, Design, Queue | 2024-01-16 | [Go](queues/0232-implement-queue-using-stacks.go)
 | 1249 | [Minimum Remove to Make Valid Parentheses](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/) | Medium | String, Stack | 2024-01-15 | [Go](stacks/1249-minimum-remove-to-make-valid-parentheses.go)
