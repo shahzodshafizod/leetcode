@@ -8,7 +8,7 @@ import (
 
 // go test -v -count=1 ./stacks/ -run ^TestMinRemoveToMakeValid$
 func TestMinRemoveToMakeValid(t *testing.T) {
-	for _, data := range []struct {
+	for _, tc := range []struct {
 		s      string
 		validS string
 	}{
@@ -25,7 +25,7 @@ func TestMinRemoveToMakeValid(t *testing.T) {
 		{s: "(t(e)y))d(()(e(", validS: "(t(e)y)d()e"},
 		{s: "())fwk)))())(())))())()()((())", validS: "()fwk()(())()()()(())"},
 	} {
-		validS := minRemoveToMakeValid(data.s)
-		assert.Equal(t, data.validS, validS)
+		validS := minRemoveToMakeValid(tc.s)
+		assert.Equal(t, tc.validS, validS)
 	}
 }

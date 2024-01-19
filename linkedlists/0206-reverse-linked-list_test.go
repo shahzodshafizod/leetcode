@@ -8,7 +8,7 @@ import (
 
 // go test -v -count=1 ./linkedlists/ -run ^TestReverseList$
 func TestReverseList(t *testing.T) {
-	for _, data := range []struct {
+	for _, tc := range []struct {
 		head     *ListNode
 		reversed *ListNode
 	}{
@@ -17,7 +17,7 @@ func TestReverseList(t *testing.T) {
 		{head: makeLinkedList(), reversed: makeLinkedList()},
 		{head: makeLinkedList(1, 2), reversed: makeLinkedList(2, 1)},
 	} {
-		reversed := reverseList(data.head)
-		assert.Equal(t, data.reversed, reversed)
+		reversed := reverseList(tc.head)
+		assert.Equal(t, tc.reversed, reversed)
 	}
 }

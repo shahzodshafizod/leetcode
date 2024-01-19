@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0104 | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | Easy | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 2024-10-19 | [Go](trees/0104-maximum-depth-of-binary-tree.go)
 | 0034 | [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | Medium | Array, Binary Search | 2024-01-18 | [Go](arrays/0034-find-first-and-last-position-of-element-in-sorted-array.go)
 | 0215 | [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | Medium | Array, Divide and Conquer, Sorting, Heap (Priority Queue), Quickselect | 2024-01-17 | [Go](recursion/0215-kth-largest-element-in-an-array.go)
 | 0232 | [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/) | Easy | Stack, Design, Queue | 2024-01-16 | [Go](queues/0232-implement-queue-using-stacks.go)

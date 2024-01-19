@@ -8,7 +8,7 @@ import (
 
 // go test -v -count=1 ./arrays/ -run ^TestSearchRange$
 func TestSearchRange(t *testing.T) {
-	for _, data := range []struct {
+	for _, tc := range []struct {
 		nums      []int
 		target    int
 		positions []int
@@ -22,7 +22,7 @@ func TestSearchRange(t *testing.T) {
 		{nums: []int{4, 4, 4, 4, 4, 4}, target: 4, positions: []int{0, 5}},
 		{nums: []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 13, 13, 13, 14, 15, 16}, target: 13, positions: []int{12, 15}},
 	} {
-		positions := searchRange(data.nums, data.target)
-		assert.Equal(t, data.positions, positions)
+		positions := searchRange(tc.nums, tc.target)
+		assert.Equal(t, tc.positions, positions)
 	}
 }

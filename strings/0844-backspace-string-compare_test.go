@@ -8,7 +8,7 @@ import (
 
 // go test -v -count=1 ./strings/ -run ^TestBackspaceCompare$
 func TestBackspaceCompare(t *testing.T) {
-	for _, data := range []struct {
+	for _, tc := range []struct {
 		s     string
 		t     string
 		equal bool
@@ -27,7 +27,7 @@ func TestBackspaceCompare(t *testing.T) {
 		{s: "a#c", t: "b", equal: false},
 		{s: "bxj##tw", t: "bxo#j##tw", equal: true},
 	} {
-		equal := backspaceCompare(data.s, data.t)
-		assert.Equal(t, data.equal, equal)
+		equal := backspaceCompare(tc.s, tc.t)
+		assert.Equal(t, tc.equal, equal)
 	}
 }

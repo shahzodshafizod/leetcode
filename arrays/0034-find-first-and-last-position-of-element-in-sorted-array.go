@@ -45,6 +45,7 @@ func searchRange(nums []int, target int) []int {
 		pos++
 		pos = binarySearch(nums, &pos, &right, target)
 	}
+
 	return []int{first, last}
 }
 

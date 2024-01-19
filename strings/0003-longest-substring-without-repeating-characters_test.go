@@ -8,7 +8,7 @@ import (
 
 // go test -v -count=1 ./strings/ -run ^TestLengthOfLongestSubstring$
 func TestLengthOfLongestSubstring(t *testing.T) {
-	for _, data := range []struct {
+	for _, tc := range []struct {
 		s         string
 		maxLength int
 	}{
@@ -24,7 +24,7 @@ func TestLengthOfLongestSubstring(t *testing.T) {
 		{s: "abcbdaac", maxLength: 4},
 		{s: "abccabb", maxLength: 3},
 	} {
-		maxLength := lengthOfLongestSubstring(data.s)
-		assert.Equal(t, data.maxLength, maxLength)
+		maxLength := lengthOfLongestSubstring(tc.s)
+		assert.Equal(t, tc.maxLength, maxLength)
 	}
 }

@@ -8,7 +8,7 @@ import (
 
 // go test -v -count=1 ./arrays/ -run ^TestTrap$
 func TestTrap(t *testing.T) {
-	for _, data := range []struct {
+	for _, tc := range []struct {
 		height []int
 		total  int
 	}{
@@ -20,7 +20,7 @@ func TestTrap(t *testing.T) {
 		{height: []int{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1}, total: 6},
 		{height: []int{4, 2, 0, 3, 2, 5}, total: 9},
 	} {
-		total := trap(data.height)
-		assert.Equal(t, data.total, total)
+		total := trap(tc.height)
+		assert.Equal(t, tc.total, total)
 	}
 }

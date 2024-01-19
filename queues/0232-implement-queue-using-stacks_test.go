@@ -8,7 +8,7 @@ import (
 
 // go test -v -count=1 ./queues/ -run ^TestMyQueue$
 func TestMyQueue(t *testing.T) {
-	for _, data := range []struct {
+	for _, tc := range []struct {
 		operations []string
 		values     [][]int
 		results    []any
@@ -20,13 +20,13 @@ func TestMyQueue(t *testing.T) {
 		},
 	} {
 		var queue MyQueue
-		for index, operation := range data.operations {
+		for index, operation := range tc.operations {
 			var result any = nil
 			switch operation {
 			case "MyQueue":
 				queue = Constructor()
 			case "push":
-				queue.Push(data.values[index][0])
+				queue.Push(tc.values[index][0])
 			case "peek":
 				result = queue.Peek()
 			case "pop":
@@ -34,7 +34,7 @@ func TestMyQueue(t *testing.T) {
 			case "empty":
 				result = queue.Empty()
 			}
-			assert.Equal(t, data.results[index], result)
+			assert.Equal(t, tc.results[index], result)
 		}
 	}
 }

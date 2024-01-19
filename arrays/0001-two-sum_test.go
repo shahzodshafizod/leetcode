@@ -8,7 +8,7 @@ import (
 
 // go test -v -count=1 ./arrays/ -run ^TestTwoSum$
 func TestTwoSum(t *testing.T) {
-	for _, data := range []struct {
+	for _, tc := range []struct {
 		nums   []int
 		target int
 		result []int
@@ -23,7 +23,7 @@ func TestTwoSum(t *testing.T) {
 		{nums: []int{3, 2, 4}, target: 6, result: []int{1, 2}},
 		{nums: []int{3, 3}, target: 6, result: []int{0, 1}},
 	} {
-		result := twoSum(data.nums, data.target)
-		assert.Equal(t, data.result, result)
+		result := twoSum(tc.nums, tc.target)
+		assert.Equal(t, tc.result, result)
 	}
 }

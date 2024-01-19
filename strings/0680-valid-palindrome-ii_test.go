@@ -9,7 +9,7 @@ import (
 
 // go test -v -count=1 ./strings/ -run ^TestValidPalindrome$
 func TestValidPalindrome(t *testing.T) {
-	for _, data := range []struct {
+	for _, tc := range []struct {
 		s     string
 		valid bool
 	}{
@@ -33,9 +33,9 @@ func TestValidPalindrome(t *testing.T) {
 		{s: "acucucubucucucua", valid: true},
 		{s: "aguokepatgbnvfqmgmlcupuufxoohdfpgjdmysgvhmvffcnqxjjxqncffvmhvgsymdjgpfdhooxfuupuculmgmqfvnbgtapekouga", valid: true},
 	} {
-		valid := validPalindrome(data.s)
-		if !assert.Equal(t, data.valid, valid) {
-			log.Printf("ERROR s [%s]\n", data.s)
+		valid := validPalindrome(tc.s)
+		if !assert.Equal(t, tc.valid, valid) {
+			log.Printf("ERROR s [%s]\n", tc.s)
 		}
 	}
 }

@@ -8,7 +8,7 @@ import (
 
 // go test -v -count=1 ./arrays/ -run ^TestMaxArea$
 func TestMaxArea(t *testing.T) {
-	for _, data := range []struct {
+	for _, tc := range []struct {
 		height []int
 		max    int
 	}{
@@ -20,7 +20,7 @@ func TestMaxArea(t *testing.T) {
 		{[]int{1, 8, 6, 2, 5, 4, 8, 3, 7}, 49},
 		{[]int{1, 1}, 1},
 	} {
-		max := maxArea(data.height)
-		assert.Equal(t, data.max, max)
+		max := maxArea(tc.height)
+		assert.Equal(t, tc.max, max)
 	}
 }

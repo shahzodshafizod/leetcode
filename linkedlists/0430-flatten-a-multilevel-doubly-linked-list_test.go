@@ -8,7 +8,7 @@ import (
 
 // go test -v -count=1 ./linkedlists/ -run ^TestFlatten$
 func TestFlatten(t *testing.T) {
-	for _, data := range []struct {
+	for _, tc := range []struct {
 		root          *Node
 		flattenedRoot *Node
 	}{
@@ -22,7 +22,7 @@ func TestFlatten(t *testing.T) {
 			flattenedRoot: makeDoublyLinkedList(1, 2, 3)},
 		{root: makeDoublyLinkedList(), flattenedRoot: makeDoublyLinkedList()},
 	} {
-		flattenedRoot := flatten(data.root)
-		assert.Equal(t, data.flattenedRoot, flattenedRoot)
+		flattenedRoot := flatten(tc.root)
+		assert.Equal(t, tc.flattenedRoot, flattenedRoot)
 	}
 }

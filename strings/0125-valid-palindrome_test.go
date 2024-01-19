@@ -8,7 +8,7 @@ import (
 
 // go test -v -count=1 ./strings/ -run ^TestIsPalindrome$
 func TestIsPalindrome(t *testing.T) {
-	for _, data := range []struct {
+	for _, tc := range []struct {
 		s  string
 		is bool
 	}{
@@ -25,7 +25,7 @@ func TestIsPalindrome(t *testing.T) {
 		{s: ".,", is: true},
 		{s: "ab_a", is: true},
 	} {
-		is := isPalindrome(data.s)
-		assert.Equal(t, data.is, is)
+		is := isPalindrome(tc.s)
+		assert.Equal(t, tc.is, is)
 	}
 }

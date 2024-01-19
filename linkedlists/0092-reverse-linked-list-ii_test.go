@@ -8,7 +8,7 @@ import (
 
 // go test -v -count=1 ./linkedlists/ -run ^TestReverseBetween$
 func TestReverseBetween(t *testing.T) {
-	for _, data := range []struct {
+	for _, tc := range []struct {
 		head     *ListNode
 		left     int
 		right    int
@@ -25,7 +25,7 @@ func TestReverseBetween(t *testing.T) {
 		{head: makeLinkedList(), left: 0, right: 0, reversed: makeLinkedList()},
 		{head: makeLinkedList(1, 2, 3, 4, 5, 6, 7), left: 3, right: 5, reversed: makeLinkedList(1, 2, 5, 4, 3, 6, 7)},
 	} {
-		reversed := reverseBetween(data.head, data.left, data.right)
-		assert.Equal(t, data.reversed, reversed)
+		reversed := reverseBetween(tc.head, tc.left, tc.right)
+		assert.Equal(t, tc.reversed, reversed)
 	}
 }
