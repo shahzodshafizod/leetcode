@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0199 | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) | Medium | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 2024-01-21 | [Go](trees/0199-binary-tree-right-side-view.go)
 | 0102 | [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | Medium | Tree, Breadth-First Search, Binary Tree | 2024-01-20 | [Go](trees/0102-binary-tree-level-order-traversal.go)
 | 0104 | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | Easy | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 2024-10-19 | [Go](trees/0104-maximum-depth-of-binary-tree.go)
 | 0034 | [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | Medium | Array, Binary Search | 2024-01-18 | [Go](arrays/0034-find-first-and-last-position-of-element-in-sorted-array.go)

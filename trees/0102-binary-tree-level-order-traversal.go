@@ -31,12 +31,13 @@ func levelOrder(root *TreeNode) [][]int {
 		count := len(nodes)
 		for count > 0 {
 			count--
-			levelElements = append(levelElements, nodes[0].Val)
-			if nodes[0].Left != nil {
-				nodes = append(nodes, nodes[0].Left)
+			node := nodes[0]
+			levelElements = append(levelElements, node.Val)
+			if node.Left != nil {
+				nodes = append(nodes, node.Left)
 			}
-			if nodes[0].Right != nil {
-				nodes = append(nodes, nodes[0].Right)
+			if node.Right != nil {
+				nodes = append(nodes, node.Right)
 			}
 			nodes = nodes[1:]
 		}
