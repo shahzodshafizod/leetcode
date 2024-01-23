@@ -7,33 +7,13 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-func makeTree(vals []any) *TreeNode {
-	if len(vals) == 0 {
+func makeTree(index int, vals []any) *TreeNode {
+	if len := len(vals); len == 0 || len <= index || vals[index] == nil {
 		return nil
 	}
-	root := &TreeNode{Val: vals[0].(int)}
-	vals = vals[1:]
-	parents := []*TreeNode{root}
-	for len(parents) > 0 && len(vals) > 0 {
-		newParents := make([]*TreeNode, 0)
-		for _, parent := range parents {
-			leftVal := vals[0]
-			rightVal := vals[1]
-			vals = vals[2:]
-			if parent == nil {
-				newParents = append(newParents, nil, nil)
-				continue
-			}
-			if leftVal != nil {
-				parent.Left = &TreeNode{Val: leftVal.(int)}
-			}
-			if rightVal != nil {
-				parent.Right = &TreeNode{Val: rightVal.(int)}
-			}
-			newParents = append(newParents, parent.Left)
-			newParents = append(newParents, parent.Right)
-		}
-		parents = newParents
+	return &TreeNode{
+		Val:   vals[index].(int),
+		Left:  makeTree(2*index+1, vals),
+		Right: makeTree(2*index+2, vals),
 	}
-	return root
 }

@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0098 | [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | Medium | Tree, Depth-First Search, Binary Search Tree, Binary Tree | 2024-01-23 | [Go](trees/0098-validate-binary-search-tree.go)
 | 0222 | [Count Complete Tree Nodes](https://leetcode.com/problems/count-complete-tree-nodes/) | Easy | Binary Search, Bit Manipulation, Tree, Binary Tree | 2024-01-22 | [Go](trees/0222-count-complete-tree-nodes.go)
 | 0199 | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) | Medium | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 2024-01-21 | [Go](trees/0199-binary-tree-right-side-view.go)
 | 0102 | [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | Medium | Tree, Breadth-First Search, Binary Tree | 2024-01-20 | [Go](trees/0102-binary-tree-level-order-traversal.go)
