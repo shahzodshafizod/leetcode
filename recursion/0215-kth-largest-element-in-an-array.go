@@ -125,3 +125,15 @@ return h[0]
 // 	quickSort(nums, left, partition-1)
 // 	quickSort(nums, partition+1, right)
 // }
+
+// // Approach#4: Priority Queue (array as tree)
+// func findKthLargest(nums []int, k int) int {
+// 	var pq = trees.NewPriorityQueue()
+// 	for _, num := range nums {
+// 		pq.Push(num)
+// 	}
+// 	for i := 1; i < k; i++ {
+// 		pq.Pop()
+// 	}
+// 	return pq.Peek()
+// }
