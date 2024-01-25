@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0867 | [Transpose Matrix](https://leetcode.com/problems/transpose-matrix/) | Easy | Array, Matrix, Simulation | 2024-01-25 | [Go](matrices/0867-transpose-matrix.go)
 | 0994 | [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/) | Medium | Array, Breadth-First Search, Matrix | 2024-01-25 | [Go](matrices/0994-rotting-oranges.go)
 | 0200 | [Number of Islands](https://leetcode.com/problems/number-of-islands/) | Medium | Array, Depth-First Search, Breadth-First Search, Union Find, Matrix | 2024-01-24 | [Go](matrices/0200-number-of-islands.go)
 | 0098 | [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | Medium | Tree, Depth-First Search, Binary Search Tree, Binary Tree | 2024-01-23 | [Go](trees/0098-validate-binary-search-tree.go)

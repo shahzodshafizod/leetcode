@@ -21,9 +21,6 @@ func TestTraversalDFS(t *testing.T) {
 	} {
 		values := traversalDFS(tc.matrix)
 		assert.Equal(t, tc.values, values)
-
-		values = traversalDFSiter(tc.matrix)
-		assert.Equal(t, tc.values, values)
 	}
 }
 
@@ -38,8 +35,5 @@ func TestTraversalBFS(t *testing.T) {
 	} {
 		values := traversalBFS(tc.matrix)
 		assert.Equal(t, tc.values, values)
-
-		// values = traversalBFSiter(tc.matrix)
-		// assert.Equal(t, tc.values, values)
 	}
 }
