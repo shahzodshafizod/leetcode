@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0994 | [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/) | Medium | Array, Breadth-First Search, Matrix | 2024-01-25 | [Go](matrices/0994-rotting-oranges.go)
 | 0200 | [Number of Islands](https://leetcode.com/problems/number-of-islands/) | Medium | Array, Depth-First Search, Breadth-First Search, Union Find, Matrix | 2024-01-24 | [Go](matrices/0200-number-of-islands.go)
 | 0098 | [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | Medium | Tree, Depth-First Search, Binary Search Tree, Binary Tree | 2024-01-23 | [Go](trees/0098-validate-binary-search-tree.go)
 | 0222 | [Count Complete Tree Nodes](https://leetcode.com/problems/count-complete-tree-nodes/) | Easy | Binary Search, Bit Manipulation, Tree, Binary Tree | 2024-01-22 | [Go](trees/0222-count-complete-tree-nodes.go)
