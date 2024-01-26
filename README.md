@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0074 | [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) | Medium | Array, Binary Search, Matrix | 2024-01-26 | [Go](matrices/0074-search-a-2d-matrix.go)
+| 0073 | [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) | Medium | Array, Hash Table, Matrix | 2024-01-26 | [Go](matrices/0073-set-matrix-zeroes.go)
 | 0867 | [Transpose Matrix](https://leetcode.com/problems/transpose-matrix/) | Easy | Array, Matrix, Simulation | 2024-01-25 | [Go](matrices/0867-transpose-matrix.go)
 | 0994 | [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/) | Medium | Array, Breadth-First Search, Matrix | 2024-01-25 | [Go](matrices/0994-rotting-oranges.go)
 | 0200 | [Number of Islands](https://leetcode.com/problems/number-of-islands/) | Medium | Array, Depth-First Search, Breadth-First Search, Union Find, Matrix | 2024-01-24 | [Go](matrices/0200-number-of-islands.go)

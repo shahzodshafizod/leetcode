@@ -23,26 +23,25 @@ Depth-First Search:
 
 // https://leetcode.com/problems/binary-tree-right-side-view/
 
+// BFS Traversal
 func rightSideView(root *TreeNode) []int {
 	values := make([]int, 0)
 	if root == nil {
 		return values
 	}
-	nodes := []*TreeNode{root}
-	for len(nodes) > 0 {
-		count := len(nodes)
-		values = append(values, nodes[count-1].Val)
-		for count > 0 {
-			count--
-			node := nodes[0]
-			nodes = nodes[1:]
+	queue := []*TreeNode{root}
+	for queueLen := len(queue); queueLen > 0; queueLen = len(queue) {
+		values = append(values, queue[queueLen-1].Val)
+		for count := 0; count < queueLen; count++ {
+			node := queue[count]
 			if node.Left != nil {
-				nodes = append(nodes, node.Left)
+				queue = append(queue, node.Left)
 			}
 			if node.Right != nil {
-				nodes = append(nodes, node.Right)
+				queue = append(queue, node.Right)
 			}
 		}
+		queue = queue[queueLen:]
 	}
 	return values
 }

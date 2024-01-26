@@ -20,30 +20,26 @@ Step 2: Write out some test cases
 
 // https://leetcode.com/problems/binary-tree-level-order-traversal/
 
+// BFS Traversal
 func levelOrder(root *TreeNode) [][]int {
 	levels := make([][]int, 0)
 	if root == nil {
 		return levels
 	}
-	var nodes = []*TreeNode{root}
-	for len(nodes) > 0 {
+	var queue = []*TreeNode{root}
+	for queueLen := len(queue); queueLen > 0; queueLen = len(queue) {
 		levelElements := make([]int, 0)
-		count := len(nodes)
-		for count > 0 {
-			count--
-			node := nodes[0]
+		for count := 0; count < queueLen; count++ {
+			node := queue[count]
 			levelElements = append(levelElements, node.Val)
 			if node.Left != nil {
-				nodes = append(nodes, node.Left)
+				queue = append(queue, node.Left)
 			}
 			if node.Right != nil {
-				nodes = append(nodes, node.Right)
+				queue = append(queue, node.Right)
 			}
-			nodes = nodes[1:]
 		}
-		if len(levelElements) == 0 {
-			break
-		}
+		queue = queue[queueLen:]
 		levels = append(levels, levelElements)
 	}
 	return levels
