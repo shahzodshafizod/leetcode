@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1376 | [Time Needed to Inform All Employees](https://leetcode.com/problems/time-needed-to-inform-all-employees/) | Medium | Tree, Depth-First Search, Breadth-First Search | 2024-01-27 | [Go](graphs/1376-time-needed-to-inform-all-employees.go)
 | 0074 | [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) | Medium | Array, Binary Search, Matrix | 2024-01-26 | [Go](matrices/0074-search-a-2d-matrix.go)
 | 0073 | [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) | Medium | Array, Hash Table, Matrix | 2024-01-26 | [Go](matrices/0073-set-matrix-zeroes.go)
 | 0867 | [Transpose Matrix](https://leetcode.com/problems/transpose-matrix/) | Easy | Array, Matrix, Simulation | 2024-01-25 | [Go](matrices/0867-transpose-matrix.go)
