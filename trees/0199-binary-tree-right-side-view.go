@@ -7,11 +7,11 @@ Return an array of the values of the nodes you can see ordered from top to botto
 
 Step 1: Verify the constraints
 Step 2: Write out some test cases
-	-				+------(1)--+
-		+----------(2)--+		(3)--+
-		(4)------+		(5)			(6)
-			+--(7)
-			(8)
+	-                +------(1)--+
+	     +----------(2)--+      (3)--+
+	    (4)------+      (5)         (6)
+	         +--(7)
+	        (8)
 		: [1, 3, 6, 7, 8]
 	- (1)
 		: [1]

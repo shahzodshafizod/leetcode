@@ -43,7 +43,7 @@ func lengthOfLongestSubstring(s string) int {
 			left = index + 1
 		}
 		hash[s[right]] = right
-		// maxLength = max(maxLength, right-left+1) // remove other maxLength = max()'s
+		// maxLength = max(maxLength, right-left+1) // to uncomment this line, comment other maxLength = max()'s
 	}
 	maxLength = max(maxLength, right-left)
 	return maxLength

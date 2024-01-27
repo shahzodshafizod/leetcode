@@ -9,11 +9,11 @@ Each employee has one direct manager. The company head has no manager (managers[
 It's guaranteed the subordination relationships will have a tree structure.
 
 example: 8 employees: 0, 1, 2, 3, 4, 5, 6, 7, headID: 4, managers: [2, 2, 4, 6, -1, 4, 4, 5]
-			 +----------(4)----------+
-			 |			 |			 |
-		 +--(5)		 +--(2)--+		(6)--+
-		 |			 |		 |			 |
-		(7)			(0)		(1)			(3)
+	         +----------(4)----------+
+	         |           |           |
+	     +--(5)      +--(2)--+      (6)--+
+	     |           |       |           |
+	    (7)         (0)     (1)         (3)
 
 The head of the company wants to inform all employees of news. He will inform his direct subordinates
 who will inform their direct subordinates and so on until everyone knows the news.
@@ -23,11 +23,11 @@ it takes for employee i to inform all their direct subordinates.
 Return the total number of minutes it takes to inform all employees of the news.
 
 example: informTime = [0, 0, 4, 0, 7, 3, 6, 0]
-			 +----------(7)----------+
-			 |			 |			 |
-		 +--(3)		 +--(4)--+		(6)--+
-		 |			 |		 |			 |
-		(0)			(0)		(0)			(0)
+	         +----------(7)----------+
+	         |           |           |
+	     +--(3)      +--(4)--+      (6)--+
+	     |           |       |           |
+	    (0)         (0)     (0)         (0)
 
 numOfMinutes: 13 (max(10, 11, 13))
 

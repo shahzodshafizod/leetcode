@@ -11,7 +11,7 @@ type Heap interface {
 	Println(string)
 }
 
-type priorityQueue []int
+type priorityQueue []int // tree as array
 
 func NewPriorityQueue() Heap {
 	var pq priorityQueue = make([]int, 0)

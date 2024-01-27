@@ -1,4 +1,4 @@
-package recursion
+package arrays
 
 import (
 	"testing"
@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// go test -v -count=1 ./recursion/ -run ^TestFindKthLargest$
+// go test -v -count=1 ./arrays/ -run ^TestFindKthLargest$
 func TestFindKthLargest(t *testing.T) {
 	for _, tc := range []struct {
 		nums  []int

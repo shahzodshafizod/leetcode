@@ -1,4 +1,4 @@
-package recursion
+package arrays
 
 /*
 Data Structures: 2-D Arrays/ Matrixes, Binary Trees, Heaps, Graphs

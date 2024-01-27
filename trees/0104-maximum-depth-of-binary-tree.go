@@ -20,22 +20,22 @@ Step 1: Verify the constraints
 	- What do we return if the tree is empty?
 		: Return 0.
 Step 2: Write out some test cases
-	-			(1)
-			(2)		(3)
-		(4)
-			(5)
-				(6)
-		: 5
+	-                +---(1)---+
+	     +----------(2)       (3)
+	    (4)--+
+	        (5)--+
+	            (6)
+	    : 5
 	- nil
-		: 0
+	    : 0
 	- (1)
-		: 1
-	-	(1)
-			(2)
-				(3)
-					(4)
-						(5)
-		: 5
+	    : 1
+	- (1)--+
+	      (2)--+
+	          (3)--+
+	              (4)--+
+	                  (5)
+	    : 5
 */
 
 // https://leetcode.com/problems/maximum-depth-of-binary-tree/

@@ -9,19 +9,19 @@ Full & Complete Binary Trees
 
 Full Tree: Every node has either two or no (zero) children
 	 +--(A)------+
-	(B)		 +--(C)--+
-			(D)		(E)
+	(B)      +--(C)--+
+	        (D)     (E)
 
 Complete Tree: Every level (except the last) is completely full.
 Nodes in the last level are filled from the left.
-		 +------(A)------+
-	 +--(B)--+		 +--(C)
-	(D)		(E)		(F)
+	     +------(A)------+
+	 +--(B)--+       +--(C)
+	(D)     (E)     (F)
 
 Full & Complete Tree:
-		 +------(A)------+
-	 +--(B)--+		 +--(C)--+
-	(D)		(E)		(F)		(G)
+	     +------(A)------+
+	 +--(B)--+       +--(C)--+
+	(D)     (E)     (F)     (G)
 
 Problem:
 Given a complete binary tree, count the number of nodes.
