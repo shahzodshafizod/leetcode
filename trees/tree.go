@@ -17,3 +17,11 @@ func makeTree(index int, vals []any) *TreeNode {
 		Right: makeTree(2*index+2, vals),
 	}
 }
+
+func traversalBFS(root *TreeNode) []int {
+	return []int{}
+}
+
+func traversalDFS(root *TreeNode) []int {
+	return []int{}
+}

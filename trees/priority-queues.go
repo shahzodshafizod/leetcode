@@ -1,29 +1,29 @@
 package trees
 
-import "fmt"
-
 type Heap interface {
 	Size() int
 	IsEmpty() bool
 	Peek() int
+	Has(int) bool
 	Push(int)
 	Pop() int
-	Println(string)
 }
 
-type priorityQueue []int // tree as array
+type priorityQueue struct {
+	array      []int // binary tree as array
+	comparator func(i int, j int) bool
+}
 
-func NewPriorityQueue() Heap {
-	var pq priorityQueue = make([]int, 0)
+func NewPriorityQueue(comparator func(i int, j int) bool) Heap {
+	var pq = priorityQueue{
+		array:      make([]int, 0),
+		comparator: comparator,
+	}
 	return &pq
 }
 
-func (p priorityQueue) Println(label string) {
-	fmt.Println(label, p)
-}
-
 func (p priorityQueue) Size() int {
-	return len(p)
+	return len(p.array)
 }
 
 func (p priorityQueue) IsEmpty() bool {
@@ -31,11 +31,11 @@ func (p priorityQueue) IsEmpty() bool {
 }
 
 func (p priorityQueue) compare(i, j int) bool {
-	return p[i] < p[j]
+	return p.comparator(p.array[i], p.array[j])
 }
 
 func (p *priorityQueue) swap(i, j int) {
-	(*p)[i], (*p)[j] = (*p)[j], (*p)[i]
+	(*p).array[i], (*p).array[j] = (*p).array[j], (*p).array[i]
 }
 
 func (p priorityQueue) parent(idx int) int {
@@ -51,15 +51,24 @@ func (p priorityQueue) rightChild(idx int) int {
 }
 
 func (p priorityQueue) Peek() int {
-	var elem int
+	var item int
 	if !p.IsEmpty() {
-		elem = p[0]
+		item = p.array[0]
 	}
-	return elem
+	return item
+}
+
+func (p priorityQueue) Has(v int) bool {
+	for _, item := range p.array {
+		if item == v {
+			return true
+		}
+	}
+	return false
 }
 
 func (p *priorityQueue) Push(x int) {
-	*p = append(*p, x)
+	(*p).array = append((*p).array, x)
 	p.siftUp()
 }
 
@@ -77,11 +86,11 @@ func (p *priorityQueue) Pop() int {
 	if p.IsEmpty() {
 		return 0
 	}
-	var lastElem = (*p)[0]
+	var lastItem = (*p).array[0]
 	p.swap(0, p.Size()-1)
-	*p = (*p)[:p.Size()-1]
+	(*p).array = (*p).array[:p.Size()-1]
 	p.siftDown()
-	return lastElem
+	return lastItem
 }
 
 func (p *priorityQueue) siftDown() {

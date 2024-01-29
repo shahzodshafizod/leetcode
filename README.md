@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0997 | [Find the Town Judge](https://leetcode.com/problems/find-the-town-judge/) | Easy | Array, Hash Table, Graph | 2024-01-29 | [Go](graphs/0997-find-the-town-judge.go)
 | 0207 | [Course Schedule](https://leetcode.com/problems/course-schedule/) | Medium | Depth-First Search, Breadth-First Search, Graph, Topological Sort | 2024-01-28 | [Go](graphs/0207-course-schedule.go)
 | 1376 | [Time Needed to Inform All Employees](https://leetcode.com/problems/time-needed-to-inform-all-employees/) | Medium | Tree, Depth-First Search, Breadth-First Search | 2024-01-27 | [Go](graphs/1376-time-needed-to-inform-all-employees.go)
 | 0074 | [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) | Medium | Array, Binary Search, Matrix | 2024-01-26 | [Go](matrices/0074-search-a-2d-matrix.go)
