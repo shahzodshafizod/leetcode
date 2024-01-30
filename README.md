@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0743 | [Network Delay Time](https://leetcode.com/problems/network-delay-time/) | Medium | Depth-First Search, Breadth-First Search, Graph, Heap (Priority Queue), Shortest Path | 2024-01-30 | [Go](graphs/0743-network-delay-time.go)
 | 0997 | [Find the Town Judge](https://leetcode.com/problems/find-the-town-judge/) | Easy | Array, Hash Table, Graph | 2024-01-29 | [Go](graphs/0997-find-the-town-judge.go)
 | 0207 | [Course Schedule](https://leetcode.com/problems/course-schedule/) | Medium | Depth-First Search, Breadth-First Search, Graph, Topological Sort | 2024-01-28 | [Go](graphs/0207-course-schedule.go)
 | 1376 | [Time Needed to Inform All Employees](https://leetcode.com/problems/time-needed-to-inform-all-employees/) | Medium | Tree, Depth-First Search, Breadth-First Search | 2024-01-27 | [Go](graphs/1376-time-needed-to-inform-all-employees.go)
