@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0746 | [Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/) | Easy | Array, Dynamic Programming | 2024-01-31 | [Go](dp/0746-min-cost-climbing-stairs.go)
 | 0743 | [Network Delay Time](https://leetcode.com/problems/network-delay-time/) | Medium | Depth-First Search, Breadth-First Search, Graph, Heap (Priority Queue), Shortest Path | 2024-01-30 | [Go](graphs/0743-network-delay-time.go)
 | 0997 | [Find the Town Judge](https://leetcode.com/problems/find-the-town-judge/) | Easy | Array, Hash Table, Graph | 2024-01-29 | [Go](graphs/0997-find-the-town-judge.go)
 | 0207 | [Course Schedule](https://leetcode.com/problems/course-schedule/) | Medium | Depth-First Search, Breadth-First Search, Graph, Topological Sort | 2024-01-28 | [Go](graphs/0207-course-schedule.go)
@@ -15,9 +16,9 @@
 | 0222 | [Count Complete Tree Nodes](https://leetcode.com/problems/count-complete-tree-nodes/) | Easy | Binary Search, Bit Manipulation, Tree, Binary Tree | 2024-01-22 | [Go](trees/0222-count-complete-tree-nodes.go)
 | 0199 | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) | Medium | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 2024-01-21 | [Go](trees/0199-binary-tree-right-side-view.go)
 | 0102 | [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | Medium | Tree, Breadth-First Search, Binary Tree | 2024-01-20 | [Go](trees/0102-binary-tree-level-order-traversal.go)
-| 0104 | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | Easy | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 2024-10-19 | [Go](trees/0104-maximum-depth-of-binary-tree.go)
+| 0104 | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | Easy | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 2024-01-19 | [Go](trees/0104-maximum-depth-of-binary-tree.go)
 | 0034 | [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | Medium | Array, Binary Search | 2024-01-18 | [Go](arrays/0034-find-first-and-last-position-of-element-in-sorted-array.go)
-| 0215 | [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | Medium | Array, Divide and Conquer, Sorting, Heap (Priority Queue), Quickselect | 2024-01-17 | [Go](recursion/0215-kth-largest-element-in-an-array.go)
+| 0215 | [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | Medium | Array, Divide and Conquer, Sorting, Heap (Priority Queue), Quickselect | 2024-01-17 | [Go](arrays/0215-kth-largest-element-in-an-array.go)
 | 0232 | [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/) | Easy | Stack, Design, Queue | 2024-01-16 | [Go](queues/0232-implement-queue-using-stacks.go)
 | 1249 | [Minimum Remove to Make Valid Parentheses](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/) | Medium | String, Stack | 2024-01-15 | [Go](stacks/1249-minimum-remove-to-make-valid-parentheses.go)
 | 0020 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | Easy | String, Stack | 2024-01-14 | [Go](stacks/0020-valid-parentheses.go)
