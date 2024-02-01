@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0688 | [Knight Probability in Chessboard](https://leetcode.com/problems/knight-probability-in-chessboard/) | Medium | Dynamic Programming | 2024-02-01 | [Go](dp/0688-knight-probability-in-chessboard.go)
 | 0746 | [Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/) | Easy | Array, Dynamic Programming | 2024-01-31 | [Go](dp/0746-min-cost-climbing-stairs.go)
 | 0743 | [Network Delay Time](https://leetcode.com/problems/network-delay-time/) | Medium | Depth-First Search, Breadth-First Search, Graph, Heap (Priority Queue), Shortest Path | 2024-01-30 | [Go](graphs/0743-network-delay-time.go)
 | 0997 | [Find the Town Judge](https://leetcode.com/problems/find-the-town-judge/) | Easy | Array, Hash Table, Graph | 2024-01-29 | [Go](graphs/0997-find-the-town-judge.go)
