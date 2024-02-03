@@ -1,4 +1,4 @@
-package queues
+package design
 
 import (
 	"testing"
@@ -6,35 +6,35 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// go test -v -count=1 ./queues/ -run ^TestMyQueue$
+// go test -v -count=1 ./design/ -run ^TestMyQueue$
 func TestMyQueue(t *testing.T) {
 	for _, tc := range []struct {
 		operations []string
 		values     [][]int
-		results    []any
+		output     []any
 	}{
 		{
 			operations: []string{"MyQueue", "push", "push", "peek", "pop", "empty"},
 			values:     [][]int{{}, {1}, {2}, {}, {}, {}},
-			results:    []any{nil, nil, nil, 1, 1, false},
+			output:     []any{nil, nil, nil, 1, 1, false},
 		},
 	} {
 		var queue MyQueue
 		for index, operation := range tc.operations {
-			var result any = nil
+			var output any = nil
 			switch operation {
 			case "MyQueue":
-				queue = Constructor()
+				queue = NewMyQueue()
 			case "push":
 				queue.Push(tc.values[index][0])
 			case "peek":
-				result = queue.Peek()
+				output = queue.Peek()
 			case "pop":
-				result = queue.Pop()
+				output = queue.Pop()
 			case "empty":
-				result = queue.Empty()
+				output = queue.Empty()
 			}
-			assert.Equal(t, tc.results[index], result)
+			assert.Equal(t, tc.output[index], output)
 		}
 	}
 }

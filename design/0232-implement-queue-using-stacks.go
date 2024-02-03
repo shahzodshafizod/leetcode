@@ -1,4 +1,4 @@
-package queues
+package design
 
 /*
 Problem:
@@ -25,7 +25,7 @@ type MyQueue struct {
 	out *node
 }
 
-func Constructor() MyQueue {
+func NewMyQueue() MyQueue {
 	return MyQueue{}
 }
 

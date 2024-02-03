@@ -2,6 +2,9 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0589 | [N-ary Tree Preorder Traversal](https://leetcode.com/problems/n-ary-tree-preorder-traversal/) | Easy | Stack, Tree, Depth-First Search | 2024-02-03 | [Go](trees/0589-n-ary-tree-preorder-traversal.go)
+| 0429 | [N-ary Tree Level Order Traversal](https://leetcode.com/problems/n-ary-tree-level-order-traversal/) | Medium | Tree, Breadth-First Search | 2024-02-03 | [Go](trees/0429-n-ary-tree-level-order-traversal.go)
+| 0387 | [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/) | Easy | Hash Table, String, Queue, Counting | 2024-02-03 | [Go](queues/0387-first-unique-character-in-a-string.go)
 | 0037 | [Sudoku Solver](https://leetcode.com/problems/sudoku-solver/) | Hard | Array, Hash Table, Backtracking, Matrix | 2024-02-02 | [Go](backtracking/0037-sudoku-solver.go)
 | 0688 | [Knight Probability in Chessboard](https://leetcode.com/problems/knight-probability-in-chessboard/) | Medium | Dynamic Programming | 2024-02-01 | [Go](dp/0688-knight-probability-in-chessboard.go)
 | 0746 | [Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/) | Easy | Array, Dynamic Programming | 2024-01-31 | [Go](dp/0746-min-cost-climbing-stairs.go)
@@ -21,7 +24,7 @@
 | 0104 | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | Easy | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 2024-01-19 | [Go](trees/0104-maximum-depth-of-binary-tree.go)
 | 0034 | [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | Medium | Array, Binary Search | 2024-01-18 | [Go](arrays/0034-find-first-and-last-position-of-element-in-sorted-array.go)
 | 0215 | [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | Medium | Array, Divide and Conquer, Sorting, Heap (Priority Queue), Quickselect | 2024-01-17 | [Go](arrays/0215-kth-largest-element-in-an-array.go)
-| 0232 | [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/) | Easy | Stack, Design, Queue | 2024-01-16 | [Go](queues/0232-implement-queue-using-stacks.go)
+| 0232 | [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/) | Easy | Stack, Design, Queue | 2024-01-16 | [Go](design/0232-implement-queue-using-stacks.go)
 | 1249 | [Minimum Remove to Make Valid Parentheses](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/) | Medium | String, Stack | 2024-01-15 | [Go](stacks/1249-minimum-remove-to-make-valid-parentheses.go)
 | 0020 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | Easy | String, Stack | 2024-01-14 | [Go](stacks/0020-valid-parentheses.go)
 | 0142 | [Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/) | Medium | Hash Table, Linked List, Two Pointers | 2024-01-13 | [Go](linkedlists/0142-linked-list-cycle-ii.go)
