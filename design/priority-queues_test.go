@@ -1,11 +1,11 @@
-package trees
+package design
 
 import (
 	"fmt"
 	"testing"
 )
 
-// go test -v -count=1 ./trees/ -run ^TestMaxHeap$
+// go test -v -count=1 ./design/ -run ^TestMaxHeap$
 func TestMaxHeap(t *testing.T) {
 	var array = []int{6, 4, 7, 1, 4, 0, 3, 4, 5, 6, 2, 4, 2, 6, 11, 5, 45, 1, 6, 7, 5}
 	var maxHeap = NewPriorityQueue(func(a, b int) bool { return a < b })
@@ -22,7 +22,7 @@ func TestMaxHeap(t *testing.T) {
 	fmt.Println("sorted:", sorted, len(sorted))
 }
 
-// go test -v -count=1 ./trees/ -run ^TestMinHeap$
+// go test -v -count=1 ./design/ -run ^TestMinHeap$
 func TestMinHeap(t *testing.T) {
 	var array = []int{6, 4, 7, 1, 4, 0, 3, 4, 5, 6, 2, 4, 2, 6, 11, 5, 45, 1, 6, 7, 5}
 	var minHeap = NewPriorityQueue(func(a, b int) bool { return a > b })

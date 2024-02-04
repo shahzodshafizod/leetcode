@@ -15,14 +15,14 @@ Step 3: Figure out a solution without code
 
 // https://leetcode.com/problems/implement-queue-using-stacks/
 
-type node struct {
+type stackNode struct {
 	data int
-	next *node
+	next *stackNode
 }
 
 type MyQueue struct {
-	in  *node
-	out *node
+	in  *stackNode
+	out *stackNode
 }
 
 func NewMyQueue() MyQueue {
@@ -31,7 +31,7 @@ func NewMyQueue() MyQueue {
 
 // enqueue: append a value to the end of the queue
 func (q *MyQueue) Push(x int) {
-	q.in = &node{data: x, next: q.in}
+	q.in = &stackNode{data: x, next: q.in}
 }
 
 // dequeue: remove the value at the start of the queue

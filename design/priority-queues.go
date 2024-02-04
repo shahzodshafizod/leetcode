@@ -1,4 +1,4 @@
-package trees
+package design
 
 type Heap interface {
 	Size() int
