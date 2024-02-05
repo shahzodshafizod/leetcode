@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0355 | [Design Twitter](https://leetcode.com/problems/design-twitter/) | Medium | Hash Table, Linked List, Design, Heap (Priority Queue) | 2024-02-05 | [Go](design/0355-design-twitter.go)
 | 0208 | [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/) | Medium | Hash Table, String, Design, Trie | 2024-02-04 | [Go](design/0208-implement-trie-prefix-tree.go)
 | 0225 | [Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/) | Easy | Stack, Design, Queue | 2024-02-04 | [Go](design/0225-implement-stack-using-queues.go)
 | 0589 | [N-ary Tree Preorder Traversal](https://leetcode.com/problems/n-ary-tree-preorder-traversal/) | Easy | Stack, Tree, Depth-First Search | 2024-02-03 | [Go](trees/0589-n-ary-tree-preorder-traversal.go)
