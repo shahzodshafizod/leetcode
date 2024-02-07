@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1093 | [Statistics from a Large Sample](https://leetcode.com/problems/statistics-from-a-large-sample/) | Medium | Array, Math, Probability and Statistics | 2024-02-07 | [Go](arrays/1093-statistics-from-a-large-sample.go)
+| 0295 | [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) | Hard | Two Pointers, Design, Sorting, Heap (Priority Queue), Data Stream | 2024-02-07 | [Go](design/0295-find-median-from-data-stream.go)
 | 0239 | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) | Hard | Array, Queue, Sliding Window, Heap (Priority Queue), Monotonic Queue | 2024-02-06 | [Go](queues/0239-sliding-window-maximum.go)
 | 0355 | [Design Twitter](https://leetcode.com/problems/design-twitter/) | Medium | Hash Table, Linked List, Design, Heap (Priority Queue) | 2024-02-05 | [Go](design/0355-design-twitter.go)
 | 0208 | [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/) | Medium | Hash Table, String, Design, Trie | 2024-02-04 | [Go](design/0208-implement-trie-prefix-tree.go)
@@ -41,4 +43,4 @@
 | 0844 | [Backspace String Compare](https://leetcode.com/problems/backspace-string-compare/) | Easy | Two Pointers, String, Stack, Simulation | 2024-01-07 | [Go](strings/0844-backspace-string-compare.go)
 | 0042 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | Hard | Array, Two Pointers, Dynamic Programming, Stack | 2024-01-06 | [Go](arrays/0042-trapping-rain-water.go)
 | 0011 | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | Medium | Array, Two Pointers, Greedy | 2024-01-05 | [Go](arrays/0011-container-with-most-water.go)
-| 0001 | [Two Sum](https://leetcode.com/problems/two-sum/) | Easy | Array, Hash Table | 2024-01-04 | [Go](arrays/0001-two-sum.go)
+| 0001 | [Two Sum](https://leetcode.com/problems/two-sum/) | Easy | Array, Hash Table | 2024-01-04 | [Go](hashes/0001-two-sum.go)

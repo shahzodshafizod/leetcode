@@ -1,4 +1,4 @@
-package arrays
+package hashes
 
 import (
 	"testing"
@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// go test -v -count=1 ./arrays/ -run ^TestTwoSum$
+// go test -v -count=1 ./hashes/ -run ^TestTwoSum$
 func TestTwoSum(t *testing.T) {
 	for _, tc := range []struct {
 		nums   []int
