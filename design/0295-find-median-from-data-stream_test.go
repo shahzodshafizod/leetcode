@@ -35,19 +35,17 @@ func TestMedianFinder(t *testing.T) {
 		},
 	} {
 		var medianFinder MedianFinder
-		var output = make([]any, 0)
 		for index, command := range tc.commands {
-			var o any = nil
+			var output any = nil
 			switch command {
 			case "MedianFinder":
 				medianFinder = NewMedianFinder()
 			case "addNum":
 				medianFinder.AddNum(tc.values[index][0])
 			case "findMedian":
-				o = medianFinder.FindMedian()
+				output = medianFinder.FindMedian()
 			}
-			output = append(output, o)
+			assert.Equal(t, tc.output[index], output)
 		}
-		assert.Equal(t, tc.output, output)
 	}
 }

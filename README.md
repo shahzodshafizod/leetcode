@@ -2,6 +2,9 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0432 | [All O`one Data Structure](https://leetcode.com/problems/all-oone-data-structure/) | Hard | Hash Table, Linked List, Design, Doubly-Linked List | 2024-02-08 | [Go](design/0432-all-oone-data-structure.go)
+| 0025 | [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) | Hard | Linked List, Recursion | 2024-02-08 | [Go](linkedlists/0025-reverse-nodes-in-k-group.go)
+| 0076 | [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | Hard | Hash Table, String, Sliding Window | 2024-02-08 | [Go](hashes/0076-minimum-window-substring.go)
 | 1093 | [Statistics from a Large Sample](https://leetcode.com/problems/statistics-from-a-large-sample/) | Medium | Array, Math, Probability and Statistics | 2024-02-07 | [Go](arrays/1093-statistics-from-a-large-sample.go)
 | 0295 | [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) | Hard | Two Pointers, Design, Sorting, Heap (Priority Queue), Data Stream | 2024-02-07 | [Go](design/0295-find-median-from-data-stream.go)
 | 0239 | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) | Hard | Array, Queue, Sliding Window, Heap (Priority Queue), Monotonic Queue | 2024-02-06 | [Go](queues/0239-sliding-window-maximum.go)
