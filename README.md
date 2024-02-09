@@ -2,6 +2,9 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0649 | [Dota2 Senate](https://leetcode.com/problems/dota2-senate/) | Medium | String, Greedy, Queue | 2024-02-09 | [Go](queues/0649-dota2-senate.go)
+| 0224 | [Basic Calculator](https://leetcode.com/problems/basic-calculator/) | Hard | Math, String, Stack, Recursion | 2024-02-09 | [Go](stacks/0224-basic-calculator.go)
+| 2551 | [Put Marbles in Bags](https://leetcode.com/problems/put-marbles-in-bags/) | Hard | Array, Greedy, Sorting, Heap (Priority Queue) | 2024-02-09 | [Go](arrays/2551-put-marbles-in-bags.go)
 | 0432 | [All O`one Data Structure](https://leetcode.com/problems/all-oone-data-structure/) | Hard | Hash Table, Linked List, Design, Doubly-Linked List | 2024-02-08 | [Go](design/0432-all-oone-data-structure.go)
 | 0025 | [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) | Hard | Linked List, Recursion | 2024-02-08 | [Go](linkedlists/0025-reverse-nodes-in-k-group.go)
 | 0076 | [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | Hard | Hash Table, String, Sliding Window | 2024-02-08 | [Go](hashes/0076-minimum-window-substring.go)

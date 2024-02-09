@@ -1,7 +1,6 @@
 package strings
 
 import (
-	"log"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -34,8 +33,6 @@ func TestValidPalindrome(t *testing.T) {
 		{s: "aguokepatgbnvfqmgmlcupuufxoohdfpgjdmysgvhmvffcnqxjjxqncffvmhvgsymdjgpfdhooxfuupuculmgmqfvnbgtapekouga", valid: true},
 	} {
 		valid := validPalindrome(tc.s)
-		if !assert.Equal(t, tc.valid, valid) {
-			log.Printf("ERROR s [%s]\n", tc.s)
-		}
+		assert.Equal(t, tc.valid, valid)
 	}
 }
