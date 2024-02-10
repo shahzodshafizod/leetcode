@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0332 | [Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/) | Hard | Depth-First Search, Graph, Eulerian Circuit | 2024-02-10 | [Go](graphs/0332-reconstruct-itinerary.go)
+| 1028 | [Recover a Tree From Preorder Traversal](https://leetcode.com/problems/recover-a-tree-from-preorder-traversal/) | Hard | String, Tree, Depth-First Search, Binary Tree | 2024-02-10 | [Go](trees/1028-recover-a-tree-from-preorder-traversal.go)
 | 0649 | [Dota2 Senate](https://leetcode.com/problems/dota2-senate/) | Medium | String, Greedy, Queue | 2024-02-09 | [Go](queues/0649-dota2-senate.go)
 | 0224 | [Basic Calculator](https://leetcode.com/problems/basic-calculator/) | Hard | Math, String, Stack, Recursion | 2024-02-09 | [Go](stacks/0224-basic-calculator.go)
 | 2551 | [Put Marbles in Bags](https://leetcode.com/problems/put-marbles-in-bags/) | Hard | Array, Greedy, Sorting, Heap (Priority Queue) | 2024-02-09 | [Go](arrays/2551-put-marbles-in-bags.go)
@@ -17,7 +19,7 @@
 | 0589 | [N-ary Tree Preorder Traversal](https://leetcode.com/problems/n-ary-tree-preorder-traversal/) | Easy | Stack, Tree, Depth-First Search | 2024-02-03 | [Go](trees/0589-n-ary-tree-preorder-traversal.go)
 | 0429 | [N-ary Tree Level Order Traversal](https://leetcode.com/problems/n-ary-tree-level-order-traversal/) | Medium | Tree, Breadth-First Search | 2024-02-03 | [Go](trees/0429-n-ary-tree-level-order-traversal.go)
 | 0387 | [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/) | Easy | Hash Table, String, Queue, Counting | 2024-02-03 | [Go](queues/0387-first-unique-character-in-a-string.go)
-| 0037 | [Sudoku Solver](https://leetcode.com/problems/sudoku-solver/) | Hard | Array, Hash Table, Backtracking, Matrix | 2024-02-02 | [Go](backtracking/0037-sudoku-solver.go)
+| 0037 | [Sudoku Solver](https://leetcode.com/problems/sudoku-solver/) | Hard | Array, Hash Table, Backtracking, Matrix | 2024-02-02 | [Go](matrices/0037-sudoku-solver.go)
 | 0688 | [Knight Probability in Chessboard](https://leetcode.com/problems/knight-probability-in-chessboard/) | Medium | Dynamic Programming | 2024-02-01 | [Go](dp/0688-knight-probability-in-chessboard.go)
 | 0746 | [Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/) | Easy | Array, Dynamic Programming | 2024-01-31 | [Go](dp/0746-min-cost-climbing-stairs.go)
 | 0743 | [Network Delay Time](https://leetcode.com/problems/network-delay-time/) | Medium | Depth-First Search, Breadth-First Search, Graph, Heap (Priority Queue), Shortest Path | 2024-01-30 | [Go](graphs/0743-network-delay-time.go)

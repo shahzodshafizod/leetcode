@@ -1,5 +1,7 @@
 package trees
 
+import "github.com/shahzodshafizod/alkhwarizmi/queues"
+
 // Definition for a binary tree node.
 type TreeNode struct {
 	Val   int
@@ -19,11 +21,38 @@ func makeTree(index int, vals []any) *TreeNode {
 }
 
 func traversalBFS(root *TreeNode) []int {
-	return []int{}
+	if root == nil {
+		return []int{}
+	}
+	var values = make([]int, 0)
+	var queue = queues.NewQueue[*TreeNode]()
+	queue.Enqueue(root)
+	for queue.Size() > 0 {
+		current := queue.Dequeue()
+		values = append(values, current.Val)
+		if current.Left != nil {
+			queue.Enqueue(current.Left)
+		}
+		if current.Right != nil {
+			queue.Enqueue(current.Right)
+		}
+	}
+	return values
 }
 
-func traversalDFS(root *TreeNode) []int {
-	return []int{}
+func traversalDFSInOrder(root *TreeNode) []int {
+	if root == nil {
+		return []int{}
+	}
+	var values = make([]int, 0)
+	if root.Left != nil {
+		values = append(values, traversalDFSInOrder(root.Left)...)
+	}
+	values = append(values, root.Val)
+	if root.Right != nil {
+		values = append(values, traversalDFSInOrder(root.Right)...)
+	}
+	return values
 }
 
 // Definition for a n-ary tree node.

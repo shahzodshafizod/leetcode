@@ -12,7 +12,7 @@ func TestTraversalBFS(t *testing.T) {
 		root   *TreeNode
 		values []int
 	}{
-		{root: makeTree(0, []any{}), values: []int{}},
+		{root: makeTree(0, []any{9, 4, 20, 1, 6, 15, 170}), values: []int{9, 4, 20, 1, 6, 15, 170}},
 	} {
 		values := traversalBFS(tc.root)
 		assert.Equal(t, tc.values, values)
@@ -25,9 +25,9 @@ func TestTraversalDFS(t *testing.T) {
 		root   *TreeNode
 		values []int
 	}{
-		{root: makeTree(0, []any{}), values: []int{}},
+		{root: makeTree(0, []any{9, 4, 20, 1, 6, 15, 170}), values: []int{1, 4, 6, 9, 15, 20, 170}},
 	} {
-		values := traversalDFS(tc.root)
+		values := traversalDFSInOrder(tc.root)
 		assert.Equal(t, tc.values, values)
 	}
 }
