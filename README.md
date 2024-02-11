@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0273 | [Integer to English Words](https://leetcode.com/problems/integer-to-english-words/) | Hard | Math, String, Recursion | 2024-02-11 | [Go](strings/0273-integer-to-english-words.go)
 | 0332 | [Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/) | Hard | Depth-First Search, Graph, Eulerian Circuit | 2024-02-10 | [Go](graphs/0332-reconstruct-itinerary.go)
 | 1028 | [Recover a Tree From Preorder Traversal](https://leetcode.com/problems/recover-a-tree-from-preorder-traversal/) | Hard | String, Tree, Depth-First Search, Binary Tree | 2024-02-10 | [Go](trees/1028-recover-a-tree-from-preorder-traversal.go)
 | 0649 | [Dota2 Senate](https://leetcode.com/problems/dota2-senate/) | Medium | String, Greedy, Queue | 2024-02-09 | [Go](queues/0649-dota2-senate.go)
