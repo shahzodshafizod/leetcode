@@ -1,5 +1,7 @@
 package arrays
 
+import "github.com/shahzodshafizod/alkhwarizmi/design"
+
 // Sorting Algorithms Dance
 // https://www.youtube.com/user/AlgoRythmics/videos
 
@@ -93,11 +95,40 @@ func merge(array1 []int, array2 []int) []int {
 // time: O(N^2), is sorted; else O(N*Log(N))
 // space: O(Log(N))
 func quickSort(array []int) []int {
-	return nil
+	quickSortHelper(array, 0, len(array)-1)
+	return array
+}
+
+func quickSortHelper(array []int, left int, right int) {
+	if left < right {
+		mid := partition(array, left, right)
+		quickSortHelper(array, left, mid-1)
+		quickSortHelper(array, mid+1, right)
+	}
+}
+
+func partition(array []int, left int, right int) int {
+	var pivot = array[right]
+	var mid = left
+	for i := left; i < right; i++ {
+		if array[i] < pivot {
+			array[i], array[mid] = array[mid], array[i]
+			mid++
+		}
+	}
+	array[right], array[mid] = array[mid], array[right]
+	return mid
 }
 
 // 3. Tree Sort
 
 func heapSort(array []int) []int {
-	return nil
+	var heap = design.NewPriorityQueue[int](func(item1, item2 int) bool { return item1 > item2 })
+	for _, item := range array {
+		heap.Push(item)
+	}
+	for i, len := 0, len(array); i < len; i++ {
+		array[i] = heap.Pop()
+	}
+	return array
 }

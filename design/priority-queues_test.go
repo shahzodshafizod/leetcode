@@ -8,7 +8,7 @@ import (
 // go test -v -count=1 ./design/ -run ^TestMaxHeap$
 func TestMaxHeap(t *testing.T) {
 	var array = []int{6, 4, 7, 1, 4, 0, 3, 4, 5, 6, 2, 4, 2, 6, 11, 5, 45, 1, 6, 7, 5}
-	var maxHeap = NewPriorityQueue(func(a, b int) bool { return a < b })
+	var maxHeap = NewPriorityQueue(func(item1, item2 int) bool { return item1 < item2 })
 	for _, elem := range array {
 		if !maxHeap.Has(elem) {
 			maxHeap.Push(elem)
@@ -25,7 +25,7 @@ func TestMaxHeap(t *testing.T) {
 // go test -v -count=1 ./design/ -run ^TestMinHeap$
 func TestMinHeap(t *testing.T) {
 	var array = []int{6, 4, 7, 1, 4, 0, 3, 4, 5, 6, 2, 4, 2, 6, 11, 5, 45, 1, 6, 7, 5}
-	var minHeap = NewPriorityQueue(func(a, b int) bool { return a > b })
+	var minHeap = NewPriorityQueue(func(item1, item2 int) bool { return item1 > item2 })
 	for _, elem := range array {
 		minHeap.Push(elem)
 	}

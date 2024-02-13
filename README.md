@@ -2,6 +2,9 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1470 | [Shuffle the Array](https://leetcode.com/problems/shuffle-the-array/) | Easy | Array | 2024-02-13 | [Go](arrays/1470-shuffle-the-array.go)
+| 0027 | [Remove Element](https://leetcode.com/problems/remove-element/) | Easy | Array, Two Pointers | 2024-02-13 | [Go](arrays/0027-remove-element.go)
+| 0026 | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | Easy | Array, Two Pointers | 2024-02-13 | [Go](arrays/0026-remove-duplicates-from-sorted-array.go)
 | 1632 | [Rank Transform of a Matrix](https://leetcode.com/problems/rank-transform-of-a-matrix/) | Hard | Array, Union Find, Graph, Topological Sort, Sorting, Matrix | 2024-02-12 | [Go](matrices/1632-rank-transform-of-a-matrix.go)
 | 0273 | [Integer to English Words](https://leetcode.com/problems/integer-to-english-words/) | Hard | Math, String, Recursion | 2024-02-11 | [Go](strings/0273-integer-to-english-words.go)
 | 0332 | [Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/) | Hard | Depth-First Search, Graph, Eulerian Circuit | 2024-02-10 | [Go](graphs/0332-reconstruct-itinerary.go)
