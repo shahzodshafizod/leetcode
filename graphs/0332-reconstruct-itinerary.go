@@ -2,6 +2,8 @@ package graphs
 
 import (
 	"container/heap"
+
+	"github.com/shahzodshafizod/alkhwarizmi/design"
 )
 
 /*
@@ -12,32 +14,15 @@ For other vertex vi has indeg(vi)=outdeg(vi).
 
 // https://leetcode.com/problems/reconstruct-itinerary/
 
-type itineraryHeap []string
-
-var _ heap.Interface = &itineraryHeap{}
-
-func (i *itineraryHeap) Len() int { return len(*i) }
-func (i *itineraryHeap) Less(x, y int) bool {
-	var str1, str2 = (*i)[x], (*i)[y]
-	len1, len2 := len(str1), len(str2)
-	for idx := 0; idx < len1 && idx < len2; idx++ {
-		if str1[idx] == str2[idx] {
-			continue
-		}
-		return str1[idx] < str2[idx]
-	}
-	return len1 < len2
-}
-func (i *itineraryHeap) Swap(x, y int) { (*i)[x], (*i)[y] = (*i)[y], (*i)[x] }
-func (i *itineraryHeap) Push(x any)    { *i = append(*i, x.(string)) }
-func (i *itineraryHeap) Pop() any      { last := (*i)[i.Len()-1]; *i = (*i)[:i.Len()-1]; return last }
-
 func findItinerary(tickets [][]string) []string {
-	var adjList = make(map[string]*itineraryHeap)
+	var adjList = make(map[string]*design.Heap[string])
 	for _, ticket := range tickets {
 		var src, dst = ticket[0], ticket[1]
 		if adjList[src] == nil {
-			adjList[src] = &itineraryHeap{}
+			adjList[src] = design.NewHeap(
+				make([]string, 0),
+				func(x, y string) bool { return x < y },
+			)
 		}
 		heap.Push(adjList[src], dst)
 	}
@@ -47,7 +32,7 @@ func findItinerary(tickets [][]string) []string {
 	return result
 }
 
-func findItineraryDFS(adjList map[string]*itineraryHeap, source string, result *[]string, index *int) {
+func findItineraryDFS(adjList map[string]*design.Heap[string], source string, result *[]string, index *int) {
 	for adjList[source] != nil && adjList[source].Len() > 0 {
 		next := heap.Pop(adjList[source]).(string)
 		findItineraryDFS(adjList, next, result, index)

@@ -1,4 +1,4 @@
-package stacks
+package design
 
 type Stack[T any] interface {
 	Push(T)
@@ -6,11 +6,6 @@ type Stack[T any] interface {
 	Peek() T
 	Empty() bool
 	Size() int
-}
-
-type node[T any] struct {
-	val  T
-	next *node[T]
 }
 
 type stack[T any] struct {

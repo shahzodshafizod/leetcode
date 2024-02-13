@@ -3,7 +3,7 @@ package matrices
 import (
 	"sort"
 
-	"github.com/shahzodshafizod/alkhwarizmi/graphs"
+	"github.com/shahzodshafizod/alkhwarizmi/design"
 )
 
 // https://leetcode.com/problems/rank-transform-of-a-matrix/
@@ -32,7 +32,7 @@ func matrixRankTransform(matrix [][]int) [][]int {
 	sort.Ints(vals)
 	var rowRanks = make([]int, m)
 	var colRanks = make([]int, n)
-	var groups = graphs.NewUnionFind(m + n)
+	var groups = design.NewUnionFind(m + n)
 	var ranks = make(map[int]int)
 	for _, val := range vals {
 		var cells = list[val]

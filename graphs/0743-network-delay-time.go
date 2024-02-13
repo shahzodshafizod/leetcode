@@ -2,6 +2,8 @@ package graphs
 
 import (
 	"container/heap"
+
+	"github.com/shahzodshafizod/alkhwarizmi/design"
 )
 
 /*
@@ -51,27 +53,20 @@ type distance struct {
 	weight int
 }
 
-type distanceHeap []distance
-
-var _ heap.Interface = &distanceHeap{}
-
-func (d distanceHeap) Len() int           { return len(d) }
-func (d distanceHeap) Less(i, j int) bool { return d[i].weight < d[j].weight }
-func (d *distanceHeap) Swap(i, j int)     { (*d)[i], (*d)[j] = (*d)[j], (*d)[i] }
-func (d *distanceHeap) Push(x any)        { *d = append(*d, x.(distance)) }
-func (d *distanceHeap) Pop() any          { value := (*d)[d.Len()-1]; *d = (*d)[:d.Len()-1]; return value }
-
 // Dijkstra's Algorithm
 func networkDelayTime(times [][]int, n int, k int) int {
-	var graph = make(map[int][]distance)
+	var graph = make(map[int][]*distance)
 	for _, time := range times {
 		var source, target, weight = time[0], time[1], time[2]
-		graph[source] = append(graph[source], distance{target: target, weight: weight})
+		graph[source] = append(graph[source], &distance{target: target, weight: weight})
 	}
-	var minHeap = &distanceHeap{distance{target: k, weight: 0}}
+	var minHeap = design.NewHeap[*distance](
+		[]*distance{{target: k, weight: 0}},
+		func(x, y *distance) bool { return x.weight < y.weight },
+	)
 	var arrivalTime = make(map[int]int)
 	for minHeap.Len() > 0 {
-		var dist = heap.Pop(minHeap).(distance)
+		var dist = heap.Pop(minHeap).(*distance)
 		if _, found := arrivalTime[dist.target]; found {
 			continue
 		}

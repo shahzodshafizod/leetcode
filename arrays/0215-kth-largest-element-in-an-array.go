@@ -41,8 +41,7 @@ func findKthLargest(nums []int, k int) int {
 	return quickSelect(nums, 0, len(nums)-1, k-1)
 }
 
-// // Approach#1
-// Hoare's Quickselect Algorithm
+// Approach#1: Hoare's Quickselect Algorithm
 func quickSelect(nums []int, left, right int, k int) int {
 	/*
 		how to use:
@@ -69,34 +68,17 @@ func quickSelect(nums []int, left, right int, k int) int {
 }
 
 /*
+Approach#2: Priority Queue
 how to use:
-h := IntHeap(nums[:k])
-heap.Init(&h)
-for _, num := range nums {
-	if num > h[0] {
-		heap.Pop(&h)
-		heap.Push(&h, num)
-	}
+numsHeap := design.NewHeap(nums, func(x, y int) bool { return x > y })
+heap.Init(numsHeap)
+var kth int
+for k > 0 {
+	k--
+	kth = heap.Pop(numsHeap).(int)
 }
-return h[0]
+return kth
 */
-
-// // Approach#2
-// type IntHeap []int
-
-// func (h IntHeap) Len() int           { return len(h) }
-// func (h IntHeap) Less(i, j int) bool { return h[i] < h[j] }
-// func (h IntHeap) Swap(i, j int)      { h[i], h[j] = h[j], h[i] }
-
-// func (h *IntHeap) Push(x any) {
-// 	*h = append(*h, x.(int))
-// }
-
-// func (h *IntHeap) Pop() any {
-// 	value := (*h)[h.Len()-1]
-// 	*h = (*h)[:h.Len()-1]
-// 	return value
-// }
 
 // // Approach#3
 // func quickSort(nums []int, left int, right int) {

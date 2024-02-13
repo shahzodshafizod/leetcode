@@ -1,4 +1,4 @@
-package queues
+package design
 
 type Queue[T any] interface {
 	Enqueue(T)
@@ -6,11 +6,6 @@ type Queue[T any] interface {
 	Peek() T
 	Empty() bool
 	Size() int
-}
-
-type node[T any] struct {
-	val  T
-	next *node[T]
 }
 
 type queue[T any] struct {

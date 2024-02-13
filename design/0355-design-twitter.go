@@ -11,23 +11,6 @@ type tweet struct {
 	uniqueId int
 }
 
-type tweets []*tweet
-
-var _ heap.Interface = &tweets{}
-
-func (t tweets) Len() int           { return len(t) }
-func (t tweets) Less(i, j int) bool { return t[i].uniqueId > t[j].uniqueId }
-func (t *tweets) Swap(i, j int)     { (*t)[i], (*t)[j] = (*t)[j], (*t)[i] }
-func (t *tweets) Push(x any)        { *t = append(*t, x.(*tweet)) }
-func (t *tweets) Pop() any {
-	if t.Len() == 0 {
-		return nil
-	}
-	var value = (*t)[t.Len()-1]
-	*t = (*t)[:t.Len()-1]
-	return value
-}
-
 type Twitter struct {
 	tweets    map[int][]*tweet
 	followees map[int]map[int]bool
@@ -53,17 +36,20 @@ func (t *Twitter) PostTweet(userId int, tweetId int) { // O(1)
 }
 
 func (t *Twitter) GetNewsFeed(userId int) []int { // O(N)
-	var tweets = tweets(t.tweets[userId])
+	var tweets = NewHeap(
+		t.tweets[userId],
+		func(x, y *tweet) bool { return x.uniqueId > y.uniqueId },
+	)
 	for followeeId := range t.followees[userId] {
-		tweets = append(tweets, t.tweets[followeeId]...)
+		tweets.PushMany(t.tweets[followeeId]...)
 	}
 
-	heap.Init(&tweets)
+	heap.Init(tweets)
 	var result = make([]int, 0)
 	var count = 10
 	for tweets.Len() > 0 && count > 0 {
 		count--
-		tweet := heap.Pop(&tweets).(*tweet)
+		tweet := heap.Pop(tweets).(*tweet)
 		result = append(result, tweet.id)
 	}
 	return result

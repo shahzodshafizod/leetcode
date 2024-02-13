@@ -1,4 +1,4 @@
-package stacks
+package design
 
 import (
 	"testing"
@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// go test -v -count=1 ./stacks/ -run ^TestStack$
+// go test -v -count=1 ./design/ -run ^TestStack$
 func TestStack(t *testing.T) {
 	var stack Stack[string]
 	for _, tc := range []struct {

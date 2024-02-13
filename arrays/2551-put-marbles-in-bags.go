@@ -1,8 +1,6 @@
 package arrays
 
-import (
-	"sort"
-)
+import "sort"
 
 // https://leetcode.com/problems/put-marbles-in-bags/
 
@@ -22,22 +20,9 @@ func putMarbles(weights []int, k int) int64 {
 	return int64(max - min)
 }
 
-// type marbleHeap struct {
-// 	data    []int
-// 	compare func(data []int, i int, j int) bool
-// }
-
-// var _ heap.Interface = &marbleHeap{}
-
-// func (m *marbleHeap) Len() int           { return len(m.data) }
-// func (m *marbleHeap) Less(i, j int) bool { return m.compare(m.data, i, j) }
-// func (m *marbleHeap) Swap(i, j int)      { m.data[i], m.data[j] = m.data[j], m.data[i] }
-// func (m *marbleHeap) Push(x any)         { m.data = append(m.data, x.(int)) }
-// func (m *marbleHeap) Pop() any           { last := m.data[m.Len()-1]; m.data = m.data[:m.Len()-1]; return last }
-
 // func putMarbles(weights []int, k int) int64 {
-// 	var minHeap = &marbleHeap{compare: func(data []int, i, j int) bool { return data[i] < data[j] }}
-// 	var maxHeap = &marbleHeap{compare: func(data []int, i, j int) bool { return data[i] > data[j] }}
+// 	var minHeap = design.NewHeap(make([]int, 0), func(x int, y int) bool { return x < y })
+// 	var maxHeap = design.NewHeap(make([]int, 0), func(x int, y int) bool { return x > y })
 // 	for i, len := 1, len(weights); i < len; i++ {
 // 		sum := weights[i-1] + weights[i]
 // 		heap.Push(minHeap, sum)

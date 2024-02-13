@@ -1,6 +1,8 @@
 package trees
 
-import "github.com/shahzodshafizod/alkhwarizmi/queues"
+import (
+	"github.com/shahzodshafizod/alkhwarizmi/design"
+)
 
 // Definition for a binary tree node.
 type TreeNode struct {
@@ -25,7 +27,7 @@ func traversalBFS(root *TreeNode) []int {
 		return []int{}
 	}
 	var values = make([]int, 0)
-	var queue = queues.NewQueue[*TreeNode]()
+	var queue = design.NewQueue[*TreeNode]()
 	queue.Enqueue(root)
 	for queue.Size() > 0 {
 		current := queue.Dequeue()

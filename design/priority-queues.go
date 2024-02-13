@@ -1,10 +1,9 @@
 package design
 
-type Heap[T comparable] interface {
+type PriorityQueue[T comparable] interface {
 	Size() int
 	IsEmpty() bool
 	Peek() T
-	Has(T) bool
 	Push(T)
 	Pop() T
 }
@@ -14,7 +13,7 @@ type priorityQueue[T comparable] struct {
 	comparator func(item1 T, item2 T) bool
 }
 
-func NewPriorityQueue[T comparable](comparator func(item1 T, item2 T) bool) Heap[T] {
+func NewPriorityQueue[T comparable](comparator func(item1 T, item2 T) bool) PriorityQueue[T] {
 	var pq = priorityQueue[T]{
 		array:      make([]T, 0),
 		comparator: comparator,
@@ -56,15 +55,6 @@ func (p priorityQueue[T]) Peek() T {
 		item = p.array[0]
 	}
 	return item
-}
-
-func (p priorityQueue[T]) Has(v T) bool {
-	for _, item := range p.array {
-		if item == v {
-			return true
-		}
-	}
-	return false
 }
 
 func (p *priorityQueue[T]) Push(x T) {

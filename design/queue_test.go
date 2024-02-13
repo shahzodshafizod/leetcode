@@ -1,4 +1,4 @@
-package queues
+package design
 
 import (
 	"testing"
@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// go test -v -count=1 ./queues/ -run ^TestQueue$
+// go test -v -count=1 ./design/ -run ^TestQueue$
 func TestQueue(t *testing.T) {
 	var queue Queue[int]
 	for _, tc := range []struct {

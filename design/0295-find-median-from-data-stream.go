@@ -4,35 +4,15 @@ import "container/heap"
 
 // https://leetcode.com/problems/find-median-from-data-stream/
 
-type medianHeap struct {
-	data    []int
-	compare func(data []int, i int, j int) bool
-}
-
-var _ heap.Interface = &medianHeap{}
-
-func (m *medianHeap) Len() int           { return len(m.data) }
-func (m *medianHeap) Less(i, j int) bool { return m.compare(m.data, i, j) }
-func (m *medianHeap) Swap(i, j int)      { m.data[i], m.data[j] = m.data[j], m.data[i] }
-func (m *medianHeap) Push(x any)         { m.data = append(m.data, x.(int)) }
-func (m *medianHeap) Pop() any           { last := m.data[m.Len()-1]; m.data = m.data[:m.Len()-1]; return last }
-func (m *medianHeap) Top() int           { return m.data[0] }
-
 type MedianFinder struct {
-	minHeap *medianHeap // right from median
-	maxHeap *medianHeap // left from median
+	minHeap *Heap[int] // right from median
+	maxHeap *Heap[int] // left from median
 }
 
 func NewMedianFinder() MedianFinder {
 	return MedianFinder{
-		minHeap: &medianHeap{
-			data:    make([]int, 0),
-			compare: func(data []int, i, j int) bool { return data[i] < data[j] },
-		},
-		maxHeap: &medianHeap{
-			data:    make([]int, 0),
-			compare: func(data []int, i, j int) bool { return data[i] > data[j] },
-		},
+		minHeap: NewHeap(make([]int, 0), func(x, y int) bool { return x < y }),
+		maxHeap: NewHeap(make([]int, 0), func(x, y int) bool { return x > y }),
 	}
 }
 
@@ -49,10 +29,10 @@ func (m *MedianFinder) rebalance() {
 	// Every element in the min-heap is greater or equal to the median,
 	// and every element in the max-heap is less or equal to the median.
 	// THAT'S: maxHeap is in left side, minHeap is in right side.
-	for m.minHeap.Len() > 0 && (m.minHeap.Len() > m.maxHeap.Len()+1 || float64(m.minHeap.Top()) < m.FindMedian()) {
+	for m.minHeap.Len() > 0 && (m.minHeap.Len() > m.maxHeap.Len()+1 || float64(m.minHeap.Peek()) < m.FindMedian()) {
 		heap.Push(m.maxHeap, heap.Pop(m.minHeap))
 	}
-	for m.maxHeap.Len() > 0 && (m.maxHeap.Len() > m.minHeap.Len()+1 || float64(m.maxHeap.Top()) > m.FindMedian()) {
+	for m.maxHeap.Len() > 0 && (m.maxHeap.Len() > m.minHeap.Len()+1 || float64(m.maxHeap.Peek()) > m.FindMedian()) {
 		heap.Push(m.minHeap, heap.Pop(m.maxHeap))
 	}
 }
@@ -63,12 +43,12 @@ func (m *MedianFinder) FindMedian() float64 {
 		return 0
 	}
 	if minLen > maxLen {
-		return float64(m.minHeap.Top())
+		return float64(m.minHeap.Peek())
 	}
 	if maxLen > minLen {
-		return float64(m.maxHeap.Top())
+		return float64(m.maxHeap.Peek())
 	}
-	return float64(m.minHeap.Top()+m.maxHeap.Top()) / 2
+	return float64(m.minHeap.Peek()+m.maxHeap.Peek()) / 2
 }
 
 /**
