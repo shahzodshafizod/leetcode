@@ -19,10 +19,7 @@ func findItinerary(tickets [][]string) []string {
 	for _, ticket := range tickets {
 		var src, dst = ticket[0], ticket[1]
 		if adjList[src] == nil {
-			adjList[src] = design.NewHeap(
-				make([]string, 0),
-				func(x, y string) bool { return x < y },
-			)
+			adjList[src] = design.NewHeap(make([]string, 0), func(x, y string) bool { return x < y })
 		}
 		heap.Push(adjList[src], dst)
 	}

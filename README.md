@@ -2,6 +2,10 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1700 | [Number of Students Unable to Eat Lunch](https://leetcode.com/problems/number-of-students-unable-to-eat-lunch/) | Easy | Array, Stack, Queue, Simulation | 2024-02-14 | [Go](queues/1700-number-of-students-unable-to-eat-lunch.go)
+| 0021 | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Easy | Linked List, Recursion | 2024-02-14 | [Go](linkedlists/0021-merge-two-sorted-lists.go)
+| 1472 | [Design Browser History](https://leetcode.com/problems/design-browser-history/) | Medium | Array, Linked List, Stack, Design, Doubly-Linked List, Data Stream | 2024-02-14 | [Go](design/1472-design-browser-history.go)
+| 0707 | [Design Linked List](https://leetcode.com/problems/design-linked-list/) | Medium | Linked List, Design | 2024-02-14 | [Go](design/0707-design-linked-list.go)
 | 1470 | [Shuffle the Array](https://leetcode.com/problems/shuffle-the-array/) | Easy | Array | 2024-02-13 | [Go](arrays/1470-shuffle-the-array.go)
 | 0027 | [Remove Element](https://leetcode.com/problems/remove-element/) | Easy | Array, Two Pointers | 2024-02-13 | [Go](arrays/0027-remove-element.go)
 | 0026 | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | Easy | Array, Two Pointers | 2024-02-13 | [Go](arrays/0026-remove-duplicates-from-sorted-array.go)
