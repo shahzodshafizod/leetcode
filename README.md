@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0070 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | Easy | Math, Dynamic Programming, Memoization | 2024-02-15 | [Go](dp/0070-climbing-stairs.go)
+| 0509 | [Fibonacci Number](https://leetcode.com/problems/fibonacci-number/) | Easy | Math, Dynamic Programming, Recursion, Memoization | 2024-02-15 | [Go](dp/0509-fibonacci-number.go)
 | 1700 | [Number of Students Unable to Eat Lunch](https://leetcode.com/problems/number-of-students-unable-to-eat-lunch/) | Easy | Array, Stack, Queue, Simulation | 2024-02-14 | [Go](queues/1700-number-of-students-unable-to-eat-lunch.go)
 | 0021 | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Easy | Linked List, Recursion | 2024-02-14 | [Go](linkedlists/0021-merge-two-sorted-lists.go)
 | 1472 | [Design Browser History](https://leetcode.com/problems/design-browser-history/) | Medium | Array, Linked List, Stack, Design, Doubly-Linked List, Data Stream | 2024-02-14 | [Go](design/1472-design-browser-history.go)
