@@ -6,6 +6,7 @@ type PriorityQueue[T any] interface {
 	Push(T)
 	Pop() T
 	Sort()
+	Init()
 	Array() []T
 }
 
@@ -14,9 +15,9 @@ type priorityQueue[T any] struct {
 	less  func(x T, y T) bool
 }
 
-func NewPriorityQueue[T any](less func(x T, y T) bool) PriorityQueue[T] {
+func NewPriorityQueue[T any](array []T, less func(x T, y T) bool) PriorityQueue[T] {
 	var pq = priorityQueue[T]{
-		array: make([]T, 0),
+		array: array,
 		less:  less,
 	}
 	return &pq
@@ -36,7 +37,7 @@ func (p priorityQueue[T]) Peek() T {
 
 func (p *priorityQueue[T]) Push(x T) {
 	(*p).array = append((*p).array, x)
-	p.siftUp()
+	p.siftUp(p.Len() - 1)
 }
 
 func (p *priorityQueue[T]) Pop() T {
@@ -60,6 +61,12 @@ func (p *priorityQueue[T]) Sort() {
 	}
 }
 
+func (p *priorityQueue[T]) Init() {
+	for i, len := 1, p.Len(); i < len; i++ {
+		p.siftUp(i)
+	}
+}
+
 func (p *priorityQueue[T]) Array() []T {
 	return p.array
 }
@@ -80,11 +87,10 @@ func (p priorityQueue[T]) left(idx int) int {
 	return 2*idx + 1 // right: 2*idx + 2
 }
 
-func (p *priorityQueue[T]) siftUp() {
-	child := p.Len() - 1
+func (p *priorityQueue[T]) siftUp(child int) {
 	var parent = p.parent(child)
 	for parent >= 0 && p.compare(parent, child) {
-		p.swap(child, parent)
+		p.swap(parent, child)
 		child = parent
 		parent = p.parent(child)
 	}
