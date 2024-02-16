@@ -1,5 +1,11 @@
 package arrays
 
+import (
+	"container/heap"
+
+	"github.com/shahzodshafizod/alkhwarizmi/design"
+)
+
 /*
 Data Structures: 2-D Arrays/ Matrixes, Binary Trees, Heaps, Graphs
 Algorithmic approaches: Sorting, Greedy Method, Divide and Conquer, Dynamic Programming, Backtracking
@@ -37,60 +43,56 @@ Algorithmic Paradigm: Divide & Conquer
 
 // https://leetcode.com/problems/kth-largest-element-in-an-array/
 
+// Approach#1: Heap (Priority Queue)
 func findKthLargest(nums []int, k int) int {
-	return quickSelect(nums, 0, len(nums)-1, k-1)
-}
-
-// Approach#1: Hoare's Quickselect Algorithm
-func quickSelect(nums []int, left, right int, k int) int {
-	/*
-		how to use:
-		return quickSelect(nums, 0, len(nums)-1, k-1)
-	*/
-
-	randIdx := left + (right-left)/2
-	nums[randIdx], nums[right] = nums[right], nums[randIdx]
-	var partition = left
-	for i := left; i < right; i++ {
-		if nums[i] > nums[right] {
-			nums[i], nums[partition] = nums[partition], nums[i]
-			partition++
-		}
+	numsHeap := design.NewHeap(nums, func(x, y int) bool { return x > y })
+	heap.Init(numsHeap)
+	var kth int
+	for k > 0 {
+		k--
+		kth = heap.Pop(numsHeap).(int)
 	}
-	nums[right], nums[partition] = nums[partition], nums[right]
-
-	if partition > k {
-		return quickSelect(nums, left, partition-1, k)
-	} else if partition < k {
-		return quickSelect(nums, partition+1, right, k)
-	}
-	return nums[k]
+	return kth
 }
 
-/*
-Approach#2: Priority Queue
-how to use:
-numsHeap := design.NewHeap(nums, func(x, y int) bool { return x > y })
-heap.Init(numsHeap)
-var kth int
-for k > 0 {
-	k--
-	kth = heap.Pop(numsHeap).(int)
-}
-return kth
-*/
+// // Approach#2: Hoare's Quickselect Algorithm
+// func findKthLargest(nums []int, k int) int {
+// 	return quickSelect(nums, 0, len(nums)-1, k-1)
+// }
 
-// // Approach#3
-// func quickSort(nums []int, left int, right int) {
-// 	/*
-// 		how to use:
-// 		(1)
-// 			quickSort(nums, 0, len(nums)-1)
-// 			return nums[k-1]
-// 		(2)
-// 			sort.Ints(nums)
-// 			return nums[len(nums)-k]
-// 	*/
+// func quickSelect(nums []int, left, right int, k int) int {
+// 	randIdx := left + (right-left)/2
+// 	nums[randIdx], nums[right] = nums[right], nums[randIdx]
+// 	var partition = left
+// 	for i := left; i < right; i++ {
+// 		if nums[i] > nums[right] {
+// 			nums[i], nums[partition] = nums[partition], nums[i]
+// 			partition++
+// 		}
+// 	}
+// 	nums[right], nums[partition] = nums[partition], nums[right]
+
+// 	if partition > k {
+// 		return quickSelect(nums, left, partition-1, k)
+// 	} else if partition < k {
+// 		return quickSelect(nums, partition+1, right, k)
+// 	}
+// 	return nums[k]
+// }
+
+// // Approach#3 sort library
+// func findKthLargest(nums []int, k int) int {
+// 	sort.Ints(nums)
+// 	return nums[len(nums)-k]
+// }
+
+// // Approach#4 Quick Sort
+// func findKthLargest(nums []int, k int) int {
+// 	kthLargestQuickSort(nums, 0, len(nums)-1)
+// 	return nums[k-1]
+// }
+
+// func kthLargestQuickSort(nums []int, left int, right int) {
 // 	if left >= right {
 // 		return
 // 	}
@@ -104,13 +106,13 @@ return kth
 // 		}
 // 	}
 // 	nums[partition], nums[right] = nums[right], nums[partition]
-// 	quickSort(nums, left, partition-1)
-// 	quickSort(nums, partition+1, right)
+// 	kthLargestQuickSort(nums, left, partition-1)
+// 	kthLargestQuickSort(nums, partition+1, right)
 // }
 
-// // Approach#4: Priority Queue (array as tree)
+// // Approach#5: Priority Queue (array as tree)
 // func findKthLargest(nums []int, k int) int {
-// 	var pq = trees.NewPriorityQueue()
+// 	var pq = design.NewPriorityQueue(func(x, y int) bool { return x < y })
 // 	for _, num := range nums {
 // 		pq.Push(num)
 // 	}

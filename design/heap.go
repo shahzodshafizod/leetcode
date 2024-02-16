@@ -1,11 +1,11 @@
 package design
 
-type Heap[T comparable] struct {
+type Heap[T any] struct {
 	array   []T
 	compare func(x T, y T) bool
 }
 
-func NewHeap[T comparable](array []T, compare func(x T, y T) bool) *Heap[T] {
+func NewHeap[T any](array []T, compare func(x T, y T) bool) *Heap[T] {
 	var newArray = make([]T, len(array))
 	copy(newArray, array)
 	return &Heap[T]{newArray, compare}

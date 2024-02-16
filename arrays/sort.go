@@ -1,7 +1,5 @@
 package arrays
 
-import "github.com/shahzodshafizod/alkhwarizmi/design"
-
 // Sorting Algorithms Dance
 // https://www.youtube.com/user/AlgoRythmics/videos
 
@@ -43,15 +41,33 @@ func selectionSort(array []int) []int {
 // time: O(N^2), if array isn't sorted (not ASC, nor DEC); else O(N)
 // space: O(1)
 func insertionSort(array []int) []int {
-	for i, len := 0, len(array); i < len; i++ {
-		if array[i] < array[0] {
+	for i, len := 1, len(array); i < len; i++ {
+		if array[i] < array[0] { // space: O(N)
 			array = append(append([]int{array[i]}, array[:i]...), array[i+1:]...)
-		} else {
-			for j := i; j > 0; j-- {
-				if array[j-1] > array[j] {
-					array[j-1], array[j] = array[j], array[j-1]
-				}
-			}
+			continue
+		}
+		for j := i; j > 0 && array[j-1] > array[j]; j-- {
+			array[j-1], array[j] = array[j], array[j-1]
+		}
+	}
+	return array
+}
+
+// Counting Sort
+// time: O(N+N) -> O(N)
+// space: O(k) -> O(1)
+// works for [0;k]
+func bucketSort(array []int, k int) []int {
+	var buckets = make([]int, k+1)
+	for _, num := range array { // O(N)
+		buckets[num]++
+	}
+	var idx = 0
+	for num, count := range buckets { // O(k)
+		for count > 0 { // O(N/k)
+			count--
+			array[idx] = num
+			idx++
 		}
 	}
 	return array
@@ -67,8 +83,10 @@ func mergeSort(array []int) []int {
 		return array
 	}
 	var middle = len / 2
-	var left, right = array[:middle], array[middle:]
-	return merge(mergeSort(left), mergeSort(right))
+	return merge(
+		mergeSort(array[:middle]), // [0-middle)
+		mergeSort(array[middle:]), // [middle-len)
+	)
 }
 
 func merge(array1 []int, array2 []int) []int {
@@ -95,15 +113,15 @@ func merge(array1 []int, array2 []int) []int {
 // time: O(N^2), is sorted; else O(N*Log(N))
 // space: O(Log(N))
 func quickSort(array []int) []int {
-	quickSortHelper(array, 0, len(array)-1)
+	quickSortRecur(array, 0, len(array)-1)
 	return array
 }
 
-func quickSortHelper(array []int, left int, right int) {
+func quickSortRecur(array []int, left int, right int) {
 	if left < right {
 		mid := partition(array, left, right)
-		quickSortHelper(array, left, mid-1)
-		quickSortHelper(array, mid+1, right)
+		quickSortRecur(array, left, mid-1)
+		quickSortRecur(array, mid+1, right)
 	}
 }
 
@@ -123,12 +141,43 @@ func partition(array []int, left int, right int) int {
 // 3. Tree Sort
 
 func heapSort(array []int) []int {
-	var heap = design.NewPriorityQueue[int](func(item1, item2 int) bool { return item1 > item2 })
-	for _, item := range array {
-		heap.Push(item)
+	var (
+		getParent = func(child int) int { return (child - 1) / 2 }
+		getLeft   = func(parent int) int { return 2*parent + 1 }
+		compare   = func(i int, j int) bool { return array[i] < array[j] }
+		swap      = func(i int, j int) { array[i], array[j] = array[j], array[i] }
+	)
+	// 1. create a max heap
+	var len = len(array)
+	for i := 1; i < len; i++ {
+		// sift up
+		child := i
+		parent := getParent(child)
+		for parent >= 0 && compare(parent, child) {
+			swap(parent, child)
+			child = parent
+			parent = getParent(child)
+		}
 	}
-	for i, len := 0, len(array); i < len; i++ {
-		array[i] = heap.Pop()
+	// 2. sort ascending
+	// move max to the end, and continue with the array[0:len-1]
+	for len > 0 {
+		len--
+		swap(0, len)
+		// sift down
+		parent := 0
+		child := getLeft(parent)
+		for child < len {
+			if child+1 < len && compare(child, child+1) {
+				child++
+			}
+			if !compare(parent, child) {
+				break
+			}
+			swap(parent, child)
+			parent = child
+			child = getLeft(parent)
+		}
 	}
 	return array
 }

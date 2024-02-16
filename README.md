@@ -2,6 +2,9 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0023 | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | Hard | Linked List, Divide and Conquer, Heap (Priority Queue), Merge Sort | 2024-02-16 | [Go](linkedlists/0023-merge-k-sorted-lists.go)
+| 0912 | [Sort an Array](https://leetcode.com/problems/sort-an-array/) | Medium | Array, Divide and Conquer, Sorting, Heap (Priority Queue), Merge Sort, Bucket Sort, Radix Sort, Counting Sort | 2024-02-16 | [Go](arrays/0912-sort-an-array.go)
+| 0075 | [Sort Colors](https://leetcode.com/problems/sort-colors/) | Medium | Array, Two Pointers, Sorting | 2024-02-16 | [Go](arrays/0075-sort-colors.go)
 | 0070 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | Easy | Math, Dynamic Programming, Memoization | 2024-02-15 | [Go](dp/0070-climbing-stairs.go)
 | 0509 | [Fibonacci Number](https://leetcode.com/problems/fibonacci-number/) | Easy | Math, Dynamic Programming, Recursion, Memoization | 2024-02-15 | [Go](dp/0509-fibonacci-number.go)
 | 1700 | [Number of Students Unable to Eat Lunch](https://leetcode.com/problems/number-of-students-unable-to-eat-lunch/) | Easy | Array, Stack, Queue, Simulation | 2024-02-14 | [Go](queues/1700-number-of-students-unable-to-eat-lunch.go)
