@@ -2,6 +2,10 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0230 | [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | Medium | Tree, Depth-First Search, Binary Search Tree, Binary Tree | 2024-02-17 | [Go](trees/0230-kth-smallest-element-in-a-bst.go)
+| 0105 | [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) | Medium | Array, Hash Table, Divide and Conquer, Tree, Binary Tree | 2024-02-17 | [Go](trees/0105-construct-binary-tree-from-preorder-and-inorder-traversal.go)
+| 0094 | [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) | Easy | Stack, Tree, Depth-First Search, Binary Tree | 2024-02-17 | [Go](trees/0094-binary-tree-inorder-traversal.go)
+| 0704 | [Binary Search](https://leetcode.com/problems/binary-search/) | Easy | Array, Binary Search | 2024-02-17 | [Go](arrays/0704-binary-search.go)
 | 0023 | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | Hard | Linked List, Divide and Conquer, Heap (Priority Queue), Merge Sort | 2024-02-16 | [Go](linkedlists/0023-merge-k-sorted-lists.go)
 | 0912 | [Sort an Array](https://leetcode.com/problems/sort-an-array/) | Medium | Array, Divide and Conquer, Sorting, Heap (Priority Queue), Merge Sort, Bucket Sort, Radix Sort, Counting Sort | 2024-02-16 | [Go](arrays/0912-sort-an-array.go)
 | 0075 | [Sort Colors](https://leetcode.com/problems/sort-colors/) | Medium | Array, Two Pointers, Sorting | 2024-02-16 | [Go](arrays/0075-sort-colors.go)
