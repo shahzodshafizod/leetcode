@@ -2,6 +2,13 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0112 | [Path Sum](https://leetcode.com/problems/path-sum/) | Easy | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 2024-02-18 | [Go](trees/0112-path-sum.go)
+| 0078 | [Subsets](https://leetcode.com/problems/subsets/) | Medium | Array, Backtracking, Bit Manipulation | 2024-02-18 | [Go](arrays/0078-subsets.go)
+| 0039 | [Combination Sum](https://leetcode.com/problems/combination-sum/) | Medium | Array, Backtracking | 2024-02-18 | [Go](arrays/0039-combination-sum.go)
+| 0701 | [Insert into a Binary Search Tree](https://leetcode.com/problems/insert-into-a-binary-search-tree/) | Medium | Tree, Binary Search Tree, Binary Tree | 2024-02-18 | [Go](trees/0701-insert-into-a-binary-search-tree.go)
+| 0700 | [Search in a Binary Search Tree](https://leetcode.com/problems/search-in-a-binary-search-tree/) | Easy | Tree, Binary Search Tree, Binary Tree | 2024-02-18 | [Go](trees/0700-search-in-a-binary-search-tree.go)
+| 0450 | [Delete Node in a BST](https://leetcode.com/problems/delete-node-in-a-bst/) | Medium | Tree, Binary Search Tree, Binary Tree | 2024-02-18 | [Go](trees/0450-delete-node-in-a-bst.go)
+| 0235 | [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | Medium | Tree, Depth-First Search, Binary Search Tree, Binary Tree | 2024-02-18 | [Go](trees/0235-lowest-common-ancestor-of-a-binary-search-tree.go)
 | 0230 | [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | Medium | Tree, Depth-First Search, Binary Search Tree, Binary Tree | 2024-02-17 | [Go](trees/0230-kth-smallest-element-in-a-bst.go)
 | 0105 | [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) | Medium | Array, Hash Table, Divide and Conquer, Tree, Binary Tree | 2024-02-17 | [Go](trees/0105-construct-binary-tree-from-preorder-and-inorder-traversal.go)
 | 0094 | [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) | Easy | Stack, Tree, Depth-First Search, Binary Tree | 2024-02-17 | [Go](trees/0094-binary-tree-inorder-traversal.go)
