@@ -10,3 +10,9 @@ type listNode[T any] struct {
 	next *listNode[T]
 	prev *listNode[T]
 }
+
+type treeNode struct {
+	val   int
+	left  *treeNode
+	right *treeNode
+}

@@ -2,6 +2,13 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1046 | [Last Stone Weight](https://leetcode.com/problems/last-stone-weight/) | Easy | Array, Heap (Priority Queue) | 2024-02-19 | [Go](arrays/1046-last-stone-weight.go)
+| 0973 | [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/) | Medium | Array, Math, Divide and Conquer, Geometry, Sorting, Heap (Priority Queue), Quickselect | 2024-02-19 | [Go](arrays/0973-k-closest-points-to-origin.go)
+| 0146 | [LRU Cache](https://leetcode.com/problems/lru-cache/) | Medium | Hash Table, Linked List, Design, Doubly-Linked List | 2024-02-19 | [Go](design/0146-lru-cache.go)
+| 0703 | [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/) | Easy | Tree, Design, Binary Search Tree, Heap (Priority Queue), Binary Tree, Data Stream | 2024-02-19 | [Go](design/0703-kth-largest-element-in-a-stream.go)
+| 0705 | [Design HashSet](https://leetcode.com/problems/design-hashset/) | Easy | Array, Hash Table, Linked List, Design, Hash Function | 2024-02-19 | [Go](design/0705-design-hashset.go)
+| 0706 | [Design HashMap](https://leetcode.com/problems/design-hashmap/) | Easy | Array, Hash Table, Linked List, Design, Hash Function | 2024-02-19 | [Go](design/0706-design-hashmap.go)
+| 0217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | Easy | Array, Hash Table, Sorting | 2024-02-19 | [Go](hashes/0217-contains-duplicate.go)
 | 0112 | [Path Sum](https://leetcode.com/problems/path-sum/) | Easy | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 2024-02-18 | [Go](trees/0112-path-sum.go)
 | 0078 | [Subsets](https://leetcode.com/problems/subsets/) | Medium | Array, Backtracking, Bit Manipulation | 2024-02-18 | [Go](arrays/0078-subsets.go)
 | 0039 | [Combination Sum](https://leetcode.com/problems/combination-sum/) | Medium | Array, Backtracking | 2024-02-18 | [Go](arrays/0039-combination-sum.go)

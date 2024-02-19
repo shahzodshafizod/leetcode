@@ -1,12 +1,12 @@
 package design
 
 type PriorityQueue[T any] interface {
+	Heapify()
 	Len() int
 	Peek() T
 	Push(T)
 	Pop() T
 	Sort()
-	Init()
 	Array() []T
 }
 
@@ -23,6 +23,12 @@ func NewPriorityQueue[T any](array []T, less func(x T, y T) bool) PriorityQueue[
 	return &pq
 }
 
+func (p *priorityQueue[T]) Heapify() { // O(N)
+	for parent := p.Len()/2 - 1; parent >= 0; parent-- {
+		p.shiftDown(parent, p.Len())
+	}
+}
+
 func (p priorityQueue[T]) Len() int {
 	return len(p.array)
 }
@@ -37,7 +43,7 @@ func (p priorityQueue[T]) Peek() T {
 
 func (p *priorityQueue[T]) Push(x T) {
 	(*p).array = append((*p).array, x)
-	p.siftUp(p.Len() - 1)
+	p.shiftUp(p.Len() - 1)
 }
 
 func (p *priorityQueue[T]) Pop() T {
@@ -48,7 +54,7 @@ func (p *priorityQueue[T]) Pop() T {
 	p.swap(0, p.Len()-1)
 	last = (*p).array[p.Len()-1]
 	(*p).array = (*p).array[:p.Len()-1]
-	p.siftDown(p.Len())
+	p.shiftDown(0, p.Len())
 	return last
 }
 
@@ -57,13 +63,7 @@ func (p *priorityQueue[T]) Sort() {
 	for len > 0 {
 		len--
 		p.swap(0, len)
-		p.siftDown(len)
-	}
-}
-
-func (p *priorityQueue[T]) Init() {
-	for i, len := 1, p.Len(); i < len; i++ {
-		p.siftUp(i)
+		p.shiftDown(0, len)
 	}
 }
 
@@ -87,7 +87,7 @@ func (p priorityQueue[T]) left(idx int) int {
 	return 2*idx + 1 // right: 2*idx + 2
 }
 
-func (p *priorityQueue[T]) siftUp(child int) {
+func (p *priorityQueue[T]) shiftUp(child int) {
 	var parent = p.parent(child)
 	for parent >= 0 && p.compare(parent, child) {
 		p.swap(parent, child)
@@ -96,8 +96,8 @@ func (p *priorityQueue[T]) siftUp(child int) {
 	}
 }
 
-func (p *priorityQueue[T]) siftDown(hi int) {
-	parent := 0
+func (p *priorityQueue[T]) shiftDown(lo int, hi int) {
+	parent := lo
 	child := p.left(parent)
 	for child < hi {
 		if child+1 < hi && p.compare(child, child+1) { // right

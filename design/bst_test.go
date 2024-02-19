@@ -1,4 +1,4 @@
-package trees
+package design
 
 import (
 	"testing"
@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// go test -v -count=1 ./trees/ -run ^TestBST$
+// go test -v -count=1 ./design/ -run ^TestBST$
 func TestBST(t *testing.T) {
 	var bst BST
 	for _, tc := range []struct {
