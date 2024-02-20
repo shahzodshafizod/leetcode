@@ -2,6 +2,9 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1091 | [Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/) | Medium | Array, Breadth-First Search, Matrix | 2024-02-20 | [Go](matrices/1091-shortest-path-in-binary-matrix.go)
+| 0695 | [Max Area of Island](https://leetcode.com/problems/max-area-of-island/) | Medium | Array, Depth-First Search, Breadth-First Search, Union Find, Matrix | 2024-02-20 | [Go](matrices/0695-max-area-of-island.go)
+| 0133 | [Clone Graph](https://leetcode.com/problems/clone-graph/) | Medium | Hash Table, Depth-First Search, Breadth-First Search, Graph | 2024-02-20 | [Go](graphs/0133-clone-graph.go)
 | 1046 | [Last Stone Weight](https://leetcode.com/problems/last-stone-weight/) | Easy | Array, Heap (Priority Queue) | 2024-02-19 | [Go](arrays/1046-last-stone-weight.go)
 | 0973 | [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/) | Medium | Array, Math, Divide and Conquer, Geometry, Sorting, Heap (Priority Queue), Quickselect | 2024-02-19 | [Go](arrays/0973-k-closest-points-to-origin.go)
 | 0146 | [LRU Cache](https://leetcode.com/problems/lru-cache/) | Medium | Hash Table, Linked List, Design, Doubly-Linked List | 2024-02-19 | [Go](design/0146-lru-cache.go)

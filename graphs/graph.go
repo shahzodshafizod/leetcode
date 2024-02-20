@@ -63,3 +63,46 @@ func traversalDFSHelper(graph [][]int, vertex int, seen map[int]bool) []int {
 	}
 	return values
 }
+
+// Definition for a Node.
+type Node struct {
+	Val       int
+	Neighbors []*Node
+}
+
+func makeGraph(adjList [][]int) *Node {
+	var root *Node
+	var ptrs = make(map[int]*Node)
+	for node, neighbors := range adjList {
+		node++
+		if ptrs[node] == nil {
+			ptrs[node] = &Node{Val: node, Neighbors: make([]*Node, 0)}
+		}
+		for _, neighbor := range neighbors {
+			if ptrs[neighbor] == nil {
+				ptrs[neighbor] = &Node{Val: neighbor, Neighbors: make([]*Node, 0)}
+			}
+			ptrs[node].Neighbors = append(ptrs[node].Neighbors, ptrs[neighbor])
+			if root == nil && ptrs[node].Val == 1 {
+				root = ptrs[node]
+			}
+		}
+	}
+	return root
+}
+
+// func printGraph(root *Node, seen map[*Node]bool) {
+// 	if root == nil {
+// 		return
+// 	}
+// 	seen[root] = true
+// 	var neighbors = make([]int, 0)
+// 	for _, neighbor := range root.Neighbors {
+// 		neighbors = append(neighbors, neighbor.Val)
+// 		if seen[neighbor] {
+// 			continue
+// 		}
+// 		printGraph(neighbor, seen)
+// 	}
+// 	fmt.Printf("%d: %v\n", root.Val, neighbors)
+// }
