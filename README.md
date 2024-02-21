@@ -2,6 +2,10 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0300 | [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) | Medium | Array, Binary Search, Dynamic Programming | 2024-02-21 | [Go](dp/0300-longest-increasing-subsequence.go)
+| 0198 | [House Robber](https://leetcode.com/problems/house-robber/) | Medium | Array, Dynamic Programming | 2024-02-21 | [Go](dp/0198-house-robber.go)
+| 0063 | [Unique Paths II](https://leetcode.com/problems/unique-paths-ii/) | Medium | Array, Dynamic Programming, Matrix | 2024-02-21 | [Go](dp/0063-unique-paths-ii.go)
+| 0062 | [Unique Paths](https://leetcode.com/problems/unique-paths/) | Medium | Math, Dynamic Programming, Combinatorics | 2024-02-21 | [Go](dp/0062-unique-paths.go)
 | 1091 | [Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/) | Medium | Array, Breadth-First Search, Matrix | 2024-02-20 | [Go](matrices/1091-shortest-path-in-binary-matrix.go)
 | 0695 | [Max Area of Island](https://leetcode.com/problems/max-area-of-island/) | Medium | Array, Depth-First Search, Breadth-First Search, Union Find, Matrix | 2024-02-20 | [Go](matrices/0695-max-area-of-island.go)
 | 0133 | [Clone Graph](https://leetcode.com/problems/clone-graph/) | Medium | Hash Table, Depth-First Search, Breadth-First Search, Graph | 2024-02-20 | [Go](graphs/0133-clone-graph.go)
