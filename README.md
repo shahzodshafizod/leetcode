@@ -2,6 +2,10 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1143 | [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) | Medium | String, Dynamic Programming | 2024-02-22 | [Go](dp/1143-longest-common-subsequence.go)
+| 0338 | [Counting Bits](https://leetcode.com/problems/counting-bits/) | Easy | Dynamic Programming, Bit Manipulation | 2024-02-22 | [Go](bits/0338-counting-bits.go)
+| 0191 | [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | Easy | Divide and Conquer, Bit Manipulation | 2024-02-22 | [Go](bits/0191-number-of-1-bits.go)
+| 0190 | [Reverse Bits](https://leetcode.com/problems/reverse-bits/) | Easy | Divide and Conquer, Bit Manipulation | 2024-02-22 | [Go](bits/0190-reverse-bits.go)
 | 0300 | [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) | Medium | Array, Binary Search, Dynamic Programming | 2024-02-21 | [Go](dp/0300-longest-increasing-subsequence.go)
 | 0198 | [House Robber](https://leetcode.com/problems/house-robber/) | Medium | Array, Dynamic Programming | 2024-02-21 | [Go](dp/0198-house-robber.go)
 | 0063 | [Unique Paths II](https://leetcode.com/problems/unique-paths-ii/) | Medium | Array, Dynamic Programming, Matrix | 2024-02-21 | [Go](dp/0063-unique-paths-ii.go)
