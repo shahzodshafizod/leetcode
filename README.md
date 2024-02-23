@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0787 | [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/) | Medium | Dynamic Programming, Depth-First Search, Breadth-First Search, Graph, Heap (Priority Queue), Shortest Path | 2024-02-23 | [Go](graphs/0787-cheapest-flights-within-k-stops.go)
 | 1143 | [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) | Medium | String, Dynamic Programming | 2024-02-22 | [Go](dp/1143-longest-common-subsequence.go)
 | 0338 | [Counting Bits](https://leetcode.com/problems/counting-bits/) | Easy | Dynamic Programming, Bit Manipulation | 2024-02-22 | [Go](bits/0338-counting-bits.go)
 | 0191 | [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | Easy | Divide and Conquer, Bit Manipulation | 2024-02-22 | [Go](bits/0191-number-of-1-bits.go)
