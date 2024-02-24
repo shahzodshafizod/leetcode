@@ -1,32 +1,40 @@
 package design
 
-type UnionFind interface {
+// UnionFind
+type UF interface {
 	Union(int, int)
 	Find(int) int
+	Connected(int, int) bool
 	Reset(int)
 }
 
-type unionfind []int
-
-func (uf *unionfind) Reset(x int) {
-	(*uf)[x] = x
+type uf struct {
+	parent []int
 }
 
-func NewUnionFind(size int) UnionFind {
-	var uf = unionfind(make([]int, size))
+func (u *uf) Reset(x int) {
+	u.parent[x] = x
+}
+
+func NewUF(size int) UF {
+	var u = &uf{parent: make([]int, size)}
 	for i := 0; i < size; i++ {
-		uf.Reset(i)
+		u.Reset(i)
 	}
-	return &uf
+	return u
 }
 
-func (uf *unionfind) Union(x int, y int) {
-	(*uf)[uf.Find(y)] = uf.Find(x)
+func (u *uf) Union(x int, y int) {
+	u.parent[u.Find(y)] = u.Find(x)
 }
 
-func (uf *unionfind) Find(x int) int {
-	if (*uf)[x] != x {
-		(*uf)[x] = uf.Find((*uf)[x])
+func (u *uf) Find(x int) int {
+	if u.parent[x] != x {
+		u.parent[x] = u.Find(u.parent[x])
 	}
-	return (*uf)[x]
+	return u.parent[x]
+}
+
+func (u *uf) Connected(x int, y int) bool {
+	return u.Find(x) == u.Find(y)
 }

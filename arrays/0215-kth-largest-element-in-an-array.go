@@ -112,7 +112,7 @@ func findKthLargest(nums []int, k int) int {
 
 // // Approach#5: Priority Queue (array as tree)
 // func findKthLargest(nums []int, k int) int {
-// 	var pq = design.NewPriorityQueue(func(x, y int) bool { return x < y })
+// 	var pq = design.NewPQ(func(x, y int) bool { return x < y })
 // 	for _, num := range nums {
 // 		pq.Push(num)
 // 	}

@@ -5,7 +5,7 @@ import "github.com/shahzodshafizod/alkhwarizmi/design"
 // https://leetcode.com/problems/merge-k-sorted-lists/
 
 func mergeKLists(lists []*ListNode) *ListNode {
-	var minHeap = design.NewPriorityQueue[*ListNode](
+	var minHeap = design.NewPQ[*ListNode](
 		make([]*ListNode, 0),
 		func(x, y *ListNode) bool { return x.Val > y.Val },
 	)

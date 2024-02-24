@@ -17,7 +17,7 @@ func TestMaxPriorityQueue(t *testing.T) {
 			sorted: []int{45, 11, 7, 7, 6, 6, 6, 6, 5, 5, 5, 4, 4, 4, 4, 3, 2, 2, 1, 1, 0},
 		},
 	} {
-		var maxHeap = NewPriorityQueue(tc.array, func(x, y int) bool { return x < y })
+		var maxHeap = NewPQ(tc.array, func(x, y int) bool { return x < y })
 		maxHeap.Heapify()
 		sorted := make([]int, 0, maxHeap.Len())
 		for maxHeap.Len() > 0 {
@@ -38,7 +38,7 @@ func TestMinPriorityQueue(t *testing.T) {
 			sorted: []int{0, 1, 1, 2, 2, 3, 4, 4, 4, 4, 5, 5, 5, 6, 6, 6, 6, 7, 7, 11, 45},
 		},
 	} {
-		var minHeap = NewPriorityQueue(tc.array, func(x, y int) bool { return x > y })
+		var minHeap = NewPQ(tc.array, func(x, y int) bool { return x > y })
 		minHeap.Heapify()
 		sorted := make([]int, 0, minHeap.Len())
 		for minHeap.Len() > 0 {

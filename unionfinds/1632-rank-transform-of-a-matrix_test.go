@@ -1,4 +1,4 @@
-package matrices
+package unionfinds
 
 import (
 	"testing"
@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// go test -v -count=1 ./matrices/ -run ^TestMatrixRankTransform$
+// go test -v -count=1 ./unionfinds/ -run ^TestMatrixRankTransform$
 func TestMatrixRankTransform(t *testing.T) {
 	for _, tc := range []struct {
 		matrix [][]int

@@ -6,10 +6,7 @@ import "github.com/shahzodshafizod/alkhwarizmi/design"
 
 // Heap Sort
 func sortArray(nums []int) []int {
-	var maxHeap = design.NewPriorityQueue(
-		nums,
-		func(x, y int) bool { return x < y },
-	)
+	var maxHeap = design.NewPQ(nums, func(x, y int) bool { return x < y })
 	maxHeap.Heapify()
 	maxHeap.Sort()
 	return maxHeap.Array()

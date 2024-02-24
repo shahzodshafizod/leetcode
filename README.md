@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0005 | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | Medium | String, Dynamic Programming | 2024-02-24 | [Go](strings/0005-longest-palindromic-substring.go)
+| 2092 | [Find All People With Secret](https://leetcode.com/problems/find-all-people-with-secret/) | Hard | Depth-First Search, Breadth-First Search, Union Find, Graph, Sorting | 2024-02-24 | [Go](unionfinds/2092-find-all-people-with-secret.go)
 | 0787 | [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/) | Medium | Dynamic Programming, Depth-First Search, Breadth-First Search, Graph, Heap (Priority Queue), Shortest Path | 2024-02-23 | [Go](graphs/0787-cheapest-flights-within-k-stops.go)
 | 1143 | [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) | Medium | String, Dynamic Programming | 2024-02-22 | [Go](dp/1143-longest-common-subsequence.go)
 | 0338 | [Counting Bits](https://leetcode.com/problems/counting-bits/) | Easy | Dynamic Programming, Bit Manipulation | 2024-02-22 | [Go](bits/0338-counting-bits.go)

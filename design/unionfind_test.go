@@ -8,7 +8,7 @@ import (
 
 // go test -v -count=1 ./design/ -run ^TestUnionFind$
 func TestUnionFind(t *testing.T) {
-	var uf UnionFind
+	var uf UF
 	var m, n = 4, 3
 	for _, tc := range []struct {
 		command string
@@ -40,7 +40,7 @@ func TestUnionFind(t *testing.T) {
 		var output any = nil
 		switch tc.command {
 		case "UnionFind":
-			uf = NewUnionFind(tc.value[0])
+			uf = NewUF(tc.value[0])
 		case "Union":
 			uf.Union(tc.value[0], tc.value[1])
 		case "Find":

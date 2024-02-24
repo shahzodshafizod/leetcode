@@ -1,4 +1,4 @@
-package matrices
+package unionfinds
 
 import (
 	"sort"
@@ -32,7 +32,7 @@ func matrixRankTransform(matrix [][]int) [][]int {
 	sort.Ints(vals)
 	var rowRanks = make([]int, m)
 	var colRanks = make([]int, n)
-	var groups = design.NewUnionFind(m + n)
+	var groups = design.NewUF(m + n)
 	var ranks = make(map[int]int)
 	for _, val := range vals {
 		var cells = list[val]
