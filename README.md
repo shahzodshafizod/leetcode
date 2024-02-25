@@ -2,6 +2,9 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2709 | [Greatest Common Divisor Traversal](https://leetcode.com/problems/greatest-common-divisor-traversal/) | Hard | Array, Math, Union Find, Number Theory | 2024-02-25 | [Go](unionfinds/2709-greatest-common-divisor-traversal.go)
+| 0322 | [Coin Change](https://leetcode.com/problems/coin-change/) | Medium | Array, Dynamic Programming, Breadth-First Search | 2024-02-25 | [Go](dp/0322-coin-change.go)
+| 0064 | [Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/) | Medium | Array, Dynamic Programming, Matrix | 2024-02-25 | [Go](dp/0064-minimum-path-sum.go)
 | 0005 | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | Medium | String, Dynamic Programming | 2024-02-24 | [Go](strings/0005-longest-palindromic-substring.go)
 | 2092 | [Find All People With Secret](https://leetcode.com/problems/find-all-people-with-secret/) | Hard | Depth-First Search, Breadth-First Search, Union Find, Graph, Sorting | 2024-02-24 | [Go](unionfinds/2092-find-all-people-with-secret.go)
 | 0787 | [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/) | Medium | Dynamic Programming, Depth-First Search, Breadth-First Search, Graph, Heap (Priority Queue), Shortest Path | 2024-02-23 | [Go](graphs/0787-cheapest-flights-within-k-stops.go)
@@ -46,7 +49,7 @@
 | 1470 | [Shuffle the Array](https://leetcode.com/problems/shuffle-the-array/) | Easy | Array | 2024-02-13 | [Go](arrays/1470-shuffle-the-array.go)
 | 0027 | [Remove Element](https://leetcode.com/problems/remove-element/) | Easy | Array, Two Pointers | 2024-02-13 | [Go](arrays/0027-remove-element.go)
 | 0026 | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | Easy | Array, Two Pointers | 2024-02-13 | [Go](arrays/0026-remove-duplicates-from-sorted-array.go)
-| 1632 | [Rank Transform of a Matrix](https://leetcode.com/problems/rank-transform-of-a-matrix/) | Hard | Array, Union Find, Graph, Topological Sort, Sorting, Matrix | 2024-02-12 | [Go](matrices/1632-rank-transform-of-a-matrix.go)
+| 1632 | [Rank Transform of a Matrix](https://leetcode.com/problems/rank-transform-of-a-matrix/) | Hard | Array, Union Find, Graph, Topological Sort, Sorting, Matrix | 2024-02-12 | [Go](unionfinds/1632-rank-transform-of-a-matrix.go)
 | 0273 | [Integer to English Words](https://leetcode.com/problems/integer-to-english-words/) | Hard | Math, String, Recursion | 2024-02-11 | [Go](strings/0273-integer-to-english-words.go)
 | 0332 | [Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/) | Hard | Depth-First Search, Graph, Eulerian Circuit | 2024-02-10 | [Go](graphs/0332-reconstruct-itinerary.go)
 | 1028 | [Recover a Tree From Preorder Traversal](https://leetcode.com/problems/recover-a-tree-from-preorder-traversal/) | Hard | String, Tree, Depth-First Search, Binary Tree | 2024-02-10 | [Go](trees/1028-recover-a-tree-from-preorder-traversal.go)
