@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0516 | [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) | Medium | String, Dynamic Programming | 2024-02-26 | [Go](dp/0516-longest-palindromic-subsequence.go)
+| 0100 | [Same Tree](https://leetcode.com/problems/same-tree/) | Easy | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 2024-02-26 | [Go](trees/0100-same-tree.go)
 | 2709 | [Greatest Common Divisor Traversal](https://leetcode.com/problems/greatest-common-divisor-traversal/) | Hard | Array, Math, Union Find, Number Theory | 2024-02-25 | [Go](unionfinds/2709-greatest-common-divisor-traversal.go)
 | 0322 | [Coin Change](https://leetcode.com/problems/coin-change/) | Medium | Array, Dynamic Programming, Breadth-First Search | 2024-02-25 | [Go](dp/0322-coin-change.go)
 | 0064 | [Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/) | Medium | Array, Dynamic Programming, Matrix | 2024-02-25 | [Go](dp/0064-minimum-path-sum.go)
