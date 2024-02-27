@@ -2,6 +2,9 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0543 | [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/) | Easy | Tree Depth-First Search Binary Tree | 2024-02-27 | [Go](trees/0543-diameter-of-binary-tree.go)
+| 0121 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | Easy | Array, Dynamic Programming | 2024-02-27 | [Go](dp/0121-best-time-to-buy-and-sell-stock.go)
+| 0053 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | Medium | Array, Divide and Conquer, Dynamic Programming | 2024-02-27 | [Go](dp/0053-maximum-subarray.go)
 | 0516 | [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) | Medium | String, Dynamic Programming | 2024-02-26 | [Go](dp/0516-longest-palindromic-subsequence.go)
 | 0100 | [Same Tree](https://leetcode.com/problems/same-tree/) | Easy | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 2024-02-26 | [Go](trees/0100-same-tree.go)
 | 2709 | [Greatest Common Divisor Traversal](https://leetcode.com/problems/greatest-common-divisor-traversal/) | Hard | Array, Math, Union Find, Number Theory | 2024-02-25 | [Go](unionfinds/2709-greatest-common-divisor-traversal.go)
