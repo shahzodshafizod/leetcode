@@ -2,6 +2,9 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1609 | [Even Odd Tree](https://leetcode.com/problems/even-odd-tree/) | Medium | Tree, Breadth-First Search, Binary Tree | 2024-02-29 | [Go](trees/1609-even-odd-tree.go)
+| 0513 | [Find Bottom Left Tree Value](https://leetcode.com/problems/find-bottom-left-tree-value/) | Medium | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 2024-02-28 | [Go](trees/0513-find-bottom-left-tree-value.go)
+| 0647 | [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) | Medium | String, Dynamic Programming | 2024-02-28 | [Go](dp/0647-palindromic-substrings.go)
 | 0543 | [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/) | Easy | Tree Depth-First Search Binary Tree | 2024-02-27 | [Go](trees/0543-diameter-of-binary-tree.go)
 | 0121 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | Easy | Array, Dynamic Programming | 2024-02-27 | [Go](dp/0121-best-time-to-buy-and-sell-stock.go)
 | 0053 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | Medium | Array, Divide and Conquer, Dynamic Programming | 2024-02-27 | [Go](dp/0053-maximum-subarray.go)
