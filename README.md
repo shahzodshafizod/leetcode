@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2864 | [Maximum Odd Binary Number](https://leetcode.com/problems/maximum-odd-binary-number/) | Easy | Math, String, Greedy | 2024-03-01 | [Go](bits/2864-maximum-odd-binary-number.go)
 | 1609 | [Even Odd Tree](https://leetcode.com/problems/even-odd-tree/) | Medium | Tree, Breadth-First Search, Binary Tree | 2024-02-29 | [Go](trees/1609-even-odd-tree.go)
 | 0513 | [Find Bottom Left Tree Value](https://leetcode.com/problems/find-bottom-left-tree-value/) | Medium | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 2024-02-28 | [Go](trees/0513-find-bottom-left-tree-value.go)
 | 0647 | [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) | Medium | String, Dynamic Programming | 2024-02-28 | [Go](dp/0647-palindromic-substrings.go)
