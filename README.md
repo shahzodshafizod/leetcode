@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0019 | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | Medium | Linked List, Two Pointers | 2024-03-03 | [Go](linkedlists/0019-remove-nth-node-from-end-of-list.go)
 | 0977 | [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/) | Easy | Array, Two Pointers, Sorting | 2024-03-02 | [Go](arrays/0977-squares-of-a-sorted-array.go)
 | 2864 | [Maximum Odd Binary Number](https://leetcode.com/problems/maximum-odd-binary-number/) | Easy | Math, String, Greedy | 2024-03-01 | [Go](bits/2864-maximum-odd-binary-number.go)
 | 1609 | [Even Odd Tree](https://leetcode.com/problems/even-odd-tree/) | Medium | Tree, Breadth-First Search, Binary Tree | 2024-02-29 | [Go](trees/1609-even-odd-tree.go)
