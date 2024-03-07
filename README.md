@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0876 | [Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/) | Easy | Linked List, Two Pointers | 2024-03-07 | [Go](linkedlists/0876-middle-of-the-linked-list.go)
 | 0141 | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | Easy | Hash Table, Linked List, Two Pointers | 2024-03-06 | [Go](linkedlists/0141-linked-list-cycle.go)
 | 1750 | [Minimum Length of String After Deleting Similar Ends](https://leetcode.com/problems/minimum-length-of-string-after-deleting-similar-ends/) | Medium | Two Pointers, String | 2024-03-05 | [Go](strings/1750-minimum-length-of-string-after-deleting-similar-ends.go)
 | 0948 | [Bag of Tokens](https://leetcode.com/problems/bag-of-tokens/) | Medium | Array, Two Pointers, Greedy, Sorting | 2024-03-04 | [Go](arrays/0948-bag-of-tokens.go)
