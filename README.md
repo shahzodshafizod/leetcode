@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3005 | [Count Elements With Maximum Frequency](https://leetcode.com/problems/count-elements-with-maximum-frequency/) | Easy | Array, Hash Table, Counting | 2024-03-08 | [Go](./arrays/3005-count-elements-with-maximum-frequency.go)
 | 0876 | [Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/) | Easy | Linked List, Two Pointers | 2024-03-07 | [Go](linkedlists/0876-middle-of-the-linked-list.go)
 | 0141 | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | Easy | Hash Table, Linked List, Two Pointers | 2024-03-06 | [Go](linkedlists/0141-linked-list-cycle.go)
 | 1750 | [Minimum Length of String After Deleting Similar Ends](https://leetcode.com/problems/minimum-length-of-string-after-deleting-similar-ends/) | Medium | Two Pointers, String | 2024-03-05 | [Go](strings/1750-minimum-length-of-string-after-deleting-similar-ends.go)
