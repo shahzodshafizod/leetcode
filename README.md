@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0349 | [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/) | Easy | Array, Hash Table, Two Pointers, Binary Search, Sorting | 2024-03-10 | [Go](hashes/0349-intersection-of-two-arrays.go)
 | 2540 | [Minimum Common Value](https://leetcode.com/problems/minimum-common-value/) | Easy | Array, Hash Table, Two Pointers, Binary Search | 2024-03-09 | [Go](arrays/2540-minimum-common-value.go)
 | 3005 | [Count Elements With Maximum Frequency](https://leetcode.com/problems/count-elements-with-maximum-frequency/) | Easy | Array, Hash Table, Counting | 2024-03-08 | [Go](./arrays/3005-count-elements-with-maximum-frequency.go)
 | 0876 | [Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/) | Easy | Linked List, Two Pointers | 2024-03-07 | [Go](linkedlists/0876-middle-of-the-linked-list.go)
