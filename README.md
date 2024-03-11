@@ -2,7 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
-| 0791 | [Custom Sort String](https://leetcode.com/problems/custom-sort-string/) | Medium | Hash Table, String, Sorting | 2024-03-11 | [Go](hashes/0791-custom-sort-string.go)
+| 0791 | [Custom Sort String](https://leetcode.com/problems/custom-sort-string/) | Medium | Hash Table, String, Sorting | 2024-03-11 | [Go](strings/0791-custom-sort-string.go)
 | 0349 | [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/) | Easy | Array, Hash Table, Two Pointers, Binary Search, Sorting | 2024-03-10 | [Go](hashes/0349-intersection-of-two-arrays.go)
 | 2540 | [Minimum Common Value](https://leetcode.com/problems/minimum-common-value/) | Easy | Array, Hash Table, Two Pointers, Binary Search | 2024-03-09 | [Go](arrays/2540-minimum-common-value.go)
 | 3005 | [Count Elements With Maximum Frequency](https://leetcode.com/problems/count-elements-with-maximum-frequency/) | Easy | Array, Hash Table, Counting | 2024-03-08 | [Go](./arrays/3005-count-elements-with-maximum-frequency.go)
