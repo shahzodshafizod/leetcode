@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1171 | [Remove Zero Sum Consecutive Nodes from Linked List](https://leetcode.com/problems/remove-zero-sum-consecutive-nodes-from-linked-list/) | Medium | Hash Table, Linked List | 2024-03-12 | [Go](linkedlists/1171-remove-zero-sum-consecutive-nodes-from-linked-list.go)
 | 0791 | [Custom Sort String](https://leetcode.com/problems/custom-sort-string/) | Medium | Hash Table, String, Sorting | 2024-03-11 | [Go](strings/0791-custom-sort-string.go)
 | 0349 | [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/) | Easy | Array, Hash Table, Two Pointers, Binary Search, Sorting | 2024-03-10 | [Go](hashes/0349-intersection-of-two-arrays.go)
 | 2540 | [Minimum Common Value](https://leetcode.com/problems/minimum-common-value/) | Easy | Array, Hash Table, Two Pointers, Binary Search | 2024-03-09 | [Go](arrays/2540-minimum-common-value.go)
