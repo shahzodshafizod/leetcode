@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0930 | [Binary Subarrays With Sum](https://leetcode.com/problems/binary-subarrays-with-sum/) | Medium | Array, Hash Table, Sliding Window, Prefix Sum | 2024-03-14 | [Go](arrays/0930-binary-subarrays-with-sum.go)
 | 2485 | [Find the Pivot Integer](https://leetcode.com/problems/find-the-pivot-integer/) | Easy | Math, Prefix Sum | 2024-03-13 | [Go](math/2485-find-the-pivot-integer.go)
 | 1171 | [Remove Zero Sum Consecutive Nodes from Linked List](https://leetcode.com/problems/remove-zero-sum-consecutive-nodes-from-linked-list/) | Medium | Hash Table, Linked List | 2024-03-12 | [Go](linkedlists/1171-remove-zero-sum-consecutive-nodes-from-linked-list.go)
 | 0791 | [Custom Sort String](https://leetcode.com/problems/custom-sort-string/) | Medium | Hash Table, String, Sorting | 2024-03-11 | [Go](strings/0791-custom-sort-string.go)
