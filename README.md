@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0238 | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | Medium | Array, Prefix Sum | 2024-03-15 | [Go](arrays/0238-product-of-array-except-self.go)
 | 0930 | [Binary Subarrays With Sum](https://leetcode.com/problems/binary-subarrays-with-sum/) | Medium | Array, Hash Table, Sliding Window, Prefix Sum | 2024-03-14 | [Go](arrays/0930-binary-subarrays-with-sum.go)
 | 2485 | [Find the Pivot Integer](https://leetcode.com/problems/find-the-pivot-integer/) | Easy | Math, Prefix Sum | 2024-03-13 | [Go](math/2485-find-the-pivot-integer.go)
 | 1171 | [Remove Zero Sum Consecutive Nodes from Linked List](https://leetcode.com/problems/remove-zero-sum-consecutive-nodes-from-linked-list/) | Medium | Hash Table, Linked List | 2024-03-12 | [Go](linkedlists/1171-remove-zero-sum-consecutive-nodes-from-linked-list.go)
