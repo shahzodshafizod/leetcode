@@ -1,4 +1,4 @@
-package arrays
+package intervals
 
 import (
 	"sort"
@@ -7,8 +7,8 @@ import (
 // https://leetcode.com/problems/merge-intervals/
 
 // time: O(n log n)
-// space: O(1)
-func merge56(intervals [][]int) [][]int {
+// space: O(n)
+func merge(intervals [][]int) [][]int {
 	sort.Slice(intervals, func(i, j int) bool { return intervals[i][0] < intervals[j][0] })
 	var result = make([][]int, 0)
 	var lastIdx = -1

@@ -2,8 +2,9 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
-| 0057 | [Insert Interval](https://leetcode.com/problems/insert-interval/) | Medium | Array | 2024-03-17 | [Go](arrays/0057-insert-interval.go)
-| 0056 | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | Medium | Array, Sorting | 2024-03-17 | [Go](arrays/0056-merge-intervals.go)
+| 0452 | [Minimum Number of Arrows to Burst Balloons](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/) | Medium | Array, Greedy, Sorting | 2024-03-18 | [Go](intervals/0452-minimum-number-of-arrows-to-burst-balloons.go)
+| 0057 | [Insert Interval](https://leetcode.com/problems/insert-interval/) | Medium | Array | 2024-03-17 | [Go](intervals/0057-insert-interval.go)
+| 0056 | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | Medium | Array, Sorting | 2024-03-17 | [Go](intervals/0056-merge-intervals.go)
 | 0525 | [Contiguous Array](https://leetcode.com/problems/contiguous-array/) | Medium | Array, Hash Table, Prefix Sum | 2024-03-16 | [Go](hashes/0525-contiguous-array.go)
 | 0238 | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | Medium | Array, Prefix Sum | 2024-03-15 | [Go](arrays/0238-product-of-array-except-self.go)
 | 0930 | [Binary Subarrays With Sum](https://leetcode.com/problems/binary-subarrays-with-sum/) | Medium | Array, Hash Table, Sliding Window, Prefix Sum | 2024-03-14 | [Go](arrays/0930-binary-subarrays-with-sum.go)

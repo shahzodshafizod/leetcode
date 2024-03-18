@@ -1,4 +1,4 @@
-package arrays
+package intervals
 
 import (
 	"testing"
@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// go test -v -count=1 ./arrays/ -run ^TestInsert$
+// go test -v -count=1 ./intervals/ -run ^TestInsert$
 func TestInsert(t *testing.T) {
 	for _, tc := range []struct {
 		intervals   [][]int

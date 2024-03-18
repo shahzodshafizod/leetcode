@@ -1,4 +1,4 @@
-package arrays
+package intervals
 
 // https://leetcode.com/problems/insert-interval/
 
