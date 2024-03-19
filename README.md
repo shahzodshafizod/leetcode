@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0621 | [Task Scheduler](https://leetcode.com/problems/task-scheduler/) | Medium | Array, Hash Table, Greedy, Sorting, Heap (Priority Queue), Counting | 2024-03-19 | [Go](math/0621-task-scheduler.go)
+| 2365 | [Task Scheduler II](https://leetcode.com/problems/task-scheduler-ii/) | Medium | Array, Hash Table, Simulation | 2024-03-19 | [Go](hashes/2365-task-scheduler-ii.go)
 | 0452 | [Minimum Number of Arrows to Burst Balloons](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/) | Medium | Array, Greedy, Sorting | 2024-03-18 | [Go](intervals/0452-minimum-number-of-arrows-to-burst-balloons.go)
 | 0057 | [Insert Interval](https://leetcode.com/problems/insert-interval/) | Medium | Array | 2024-03-17 | [Go](intervals/0057-insert-interval.go)
 | 0056 | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | Medium | Array, Sorting | 2024-03-17 | [Go](intervals/0056-merge-intervals.go)

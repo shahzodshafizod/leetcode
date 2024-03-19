@@ -1,20 +1,13 @@
 package intervals
 
-import (
-	"sort"
-)
+import "sort"
 
 // https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/
 
 // time: O(n log n)
 // space: O(n)
 func findMinArrowShots(points [][]int) int {
-	sort.Slice(points, func(i, j int) bool {
-		if points[i][0] == points[j][0] {
-			return points[i][1] < points[j][1]
-		}
-		return points[i][0] < points[j][0]
-	})
+	sort.Slice(points, func(i, j int) bool { return points[i][0] < points[j][0] })
 	var count = 0
 	var prev []int
 	for idx, curr := range points {
