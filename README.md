@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1669 | [Merge In Between Linked Lists](https://leetcode.com/problems/merge-in-between-linked-lists/) | Medium | Linked List | 2024-03-20 | [Go](linkedlists/1669-merge-in-between-linked-lists.go)
 | 0621 | [Task Scheduler](https://leetcode.com/problems/task-scheduler/) | Medium | Array, Hash Table, Greedy, Sorting, Heap (Priority Queue), Counting | 2024-03-19 | [Go](math/0621-task-scheduler.go)
 | 2365 | [Task Scheduler II](https://leetcode.com/problems/task-scheduler-ii/) | Medium | Array, Hash Table, Simulation | 2024-03-19 | [Go](hashes/2365-task-scheduler-ii.go)
 | 0452 | [Minimum Number of Arrows to Burst Balloons](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/) | Medium | Array, Greedy, Sorting | 2024-03-18 | [Go](intervals/0452-minimum-number-of-arrows-to-burst-balloons.go)
