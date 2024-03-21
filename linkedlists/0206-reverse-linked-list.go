@@ -19,14 +19,16 @@ Step 2: Write out some test cases
 // https://leetcode.com/problems/reverse-linked-list/
 
 func reverseList(head *ListNode) *ListNode {
-	var newHead *ListNode
-	for i := head; i != nil; {
-		prev := newHead
-		newHead = i
-		i = i.Next
-		newHead.Next = prev
+	var node = head
+	head = nil
+	var next *ListNode
+	for node != nil {
+		next = node.Next
+		node.Next = head
+		head = node
+		node = next
 	}
-	return newHead
+	return head
 }
 
 // func reverseList(head *ListNode) *ListNode {
