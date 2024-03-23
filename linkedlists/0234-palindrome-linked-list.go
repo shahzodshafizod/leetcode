@@ -31,23 +31,25 @@ func isPalindrome(head *ListNode) bool {
 }
 
 // // time: O(n)
-// // space: O(n/2) = O(n)
+// // space: O(n) (O(n/2))
 // // NOT modifying
 // func isPalindrome(head *ListNode) bool {
-// 	var recur func(tortoise *ListNode, hare *ListNode) (*ListNode, bool)
-// 	recur = func(tortoise *ListNode, hare *ListNode) (*ListNode, bool) {
-// 		if hare == nil || hare.Next == nil {
-// 			if hare != nil {
-// 				tortoise = tortoise.Next
+// 	var check func(left *ListNode, last *ListNode) *ListNode
+// 	check = func(left *ListNode, last *ListNode) *ListNode {
+// 		if last == nil || last.Next == nil {
+// 			if last != nil && last != left {
+// 				left = left.Next
 // 			}
-// 			return tortoise, true
+// 			return left
 // 		}
-// 		next, _ := recur(tortoise.Next, hare.Next.Next)
-// 		if next == nil || next.Val != tortoise.Val {
-// 			return nil, false
+// 		right := check(left.Next, last.Next.Next)
+// 		if right == nil || right.Val != left.Val {
+// 			return nil
 // 		}
-// 		return next.Next, true
+// 		if right.Next != nil {
+// 			right = right.Next
+// 		}
+// 		return right
 // 	}
-// 	_, ok := recur(head, head)
-// 	return ok
+// 	return check(head, head) != nil
 // }
