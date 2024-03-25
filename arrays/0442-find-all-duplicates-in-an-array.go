@@ -24,3 +24,21 @@ func findDuplicates(nums []int) []int {
 	}
 	return duplicates
 }
+
+// // Bit Manipulation
+// func findDuplicates(nums []int) []int {
+// 	var duplicates = make([]int, 0)
+// 	var number, count int
+// 	for _, pointer := range nums {
+// 		pointer--
+// 		pointer &= 0xFFFF
+// 		number = nums[pointer] & 0xFFFF
+// 		count = nums[pointer] >> 16
+// 		count++
+// 		if count == 2 {
+// 			duplicates = append(duplicates, pointer+1)
+// 		}
+// 		nums[pointer] = (count << 16) + number
+// 	}
+// 	return duplicates
+// }

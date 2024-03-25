@@ -19,34 +19,61 @@ could give us that duplicate
 // https://leetcode.com/problems/find-the-duplicate-number/
 
 func findDuplicate(nums []int) int {
-	var duplicate int
-	for _, num := range nums {
-		if num < 0 {
-			num = -num
+	// 1. find meeting point
+	var tortoise, hare = 0, 0
+	for {
+		tortoise = nums[tortoise]
+		hare = nums[nums[hare]]
+		if tortoise == hare {
+			break
 		}
-		if nums[num] < 0 {
-			return num
-		}
-		nums[num] = -nums[num]
 	}
-	return duplicate
+	// 2. find the duplicate
+	hare = 0 // here, hare is tortoise:)
+	for tortoise != hare {
+		tortoise = nums[tortoise]
+		hare = nums[hare]
+	}
+	return tortoise
 }
 
+// // Bit Manipulation
 // func findDuplicate(nums []int) int {
-// 	// 1. find meeting point
-// 	var tortoise, hare = 0, 0
-// 	for {
-// 		tortoise = nums[tortoise]
-// 		hare = nums[nums[hare]]
-// 		if tortoise == hare {
+// 	var duplicate, number, count int
+// 	for _, pointer := range nums {
+// 		pointer--
+// 		pointer &= 0xFFFF
+// 		number = nums[pointer] & 0xFFFF
+// 		count = nums[pointer] >> 16
+// 		count++
+// 		if count == 2 {
+// 			duplicate = pointer + 1
 // 			break
 // 		}
+// 		nums[pointer] = (count << 16) + number
 // 	}
-// 	// 2. find the duplicate
-// 	hare = 0 // here, hare is tortoise:)
-// 	for tortoise != hare {
-// 		tortoise = nums[tortoise]
-// 		hare = nums[hare]
+// 	for idx := range nums {
+// 		nums[idx] = ((nums[idx] - 1) & 0xFFFF) + 1
 // 	}
-// 	return tortoise
+// 	return duplicate
+// }
+
+// func findDuplicate(nums []int) int {
+// 	var duplicate int
+// 	for _, num := range nums {
+// 		if num < 0 {
+// 			num = -num
+// 		}
+// 		if nums[num] < 0 {
+// 			duplicate = num
+// 			break
+// 		}
+// 		nums[num] = -nums[num]
+// 	}
+// 	for idx := range nums {
+// 		if nums[idx] < 0 {
+// 			nums[idx] = -nums[idx]
+// 		}
+// 	}
+// 	return duplicate
 // }
