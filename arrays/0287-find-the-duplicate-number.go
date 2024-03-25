@@ -19,20 +19,34 @@ could give us that duplicate
 // https://leetcode.com/problems/find-the-duplicate-number/
 
 func findDuplicate(nums []int) int {
-	// 1. find meeting point
-	var tortoise, hare = 0, 0
-	for {
-		tortoise = nums[tortoise]
-		hare = nums[nums[hare]]
-		if tortoise == hare {
-			break
+	var duplicate int
+	for _, num := range nums {
+		if num < 0 {
+			num = -num
 		}
+		if nums[num] < 0 {
+			return num
+		}
+		nums[num] = -nums[num]
 	}
-	// 2. find the duplicate
-	hare = 0 // here, hare is tortoise:)
-	for tortoise != hare {
-		tortoise = nums[tortoise]
-		hare = nums[hare]
-	}
-	return tortoise
+	return duplicate
 }
+
+// func findDuplicate(nums []int) int {
+// 	// 1. find meeting point
+// 	var tortoise, hare = 0, 0
+// 	for {
+// 		tortoise = nums[tortoise]
+// 		hare = nums[nums[hare]]
+// 		if tortoise == hare {
+// 			break
+// 		}
+// 	}
+// 	// 2. find the duplicate
+// 	hare = 0 // here, hare is tortoise:)
+// 	for tortoise != hare {
+// 		tortoise = nums[tortoise]
+// 		hare = nums[hare]
+// 	}
+// 	return tortoise
+// }
