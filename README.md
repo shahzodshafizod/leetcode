@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0041 | [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) | Hard | Array, Hash Table | 2024-03-25 | [Go](arrays/0041-first-missing-positive.go)
 | 0442 | [Find All Duplicates in an Array](https://leetcode.com/problems/find-all-duplicates-in-an-array/) | Medium | Array, Hash Table | 2024-03-25 | [Go](arrays/0442-find-all-duplicates-in-an-array.go)
 | 0287 | [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) | Medium | Array, Two Pointers, Binary Search, Bit Manipulation | 2024-03-24 | [Go](arrays/0287-find-the-duplicate-number.go)
 | 0143 | [Reorder List](https://leetcode.com/problems/reorder-list/) | Medium | Linked List, Two Pointers, Stack, Recursion | 2024-03-23 | [Go](linkedlists/0143-reorder-list.go)
