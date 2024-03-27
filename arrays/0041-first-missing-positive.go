@@ -19,17 +19,12 @@ func firstMissingPositive(nums []int) int {
 		}
 	}
 	// 2. find first missing positive element: O(N)
-	var missing int
 	for idx := range nums {
 		if nums[idx] == 0 {
-			missing = idx + 1
-			break
+			return idx + 1
 		}
 	}
 	// if all elements in array exist, then the first
 	// missing is the next element after the last one.
-	if missing == 0 {
-		missing = len + 1
-	}
-	return missing
+	return len + 1
 }

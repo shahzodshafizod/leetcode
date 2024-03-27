@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0713 | [Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/) | Medium | Array, Sliding Window | 2024-03-27 | [Go](arrays/0713-subarray-product-less-than-k.go)
 | 0041 | [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) | Hard | Array, Hash Table | 2024-03-25 | [Go](arrays/0041-first-missing-positive.go)
 | 0442 | [Find All Duplicates in an Array](https://leetcode.com/problems/find-all-duplicates-in-an-array/) | Medium | Array, Hash Table | 2024-03-25 | [Go](arrays/0442-find-all-duplicates-in-an-array.go)
 | 0287 | [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) | Medium | Array, Two Pointers, Binary Search, Bit Manipulation | 2024-03-24 | [Go](arrays/0287-find-the-duplicate-number.go)
