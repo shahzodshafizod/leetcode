@@ -5,15 +5,13 @@ package arrays
 func numSubarrayProductLessThanK(nums []int, k int) int {
 	var count, pro = 0, 1
 	var start = 0
-	for end, num := range nums {
-		pro *= num
-		for pro >= k && start < end {
+	for end := range nums {
+		pro *= nums[end]
+		for pro >= k && start <= end {
 			pro /= nums[start]
 			start++
 		}
-		if pro < k {
-			count += end - start + 1
-		}
+		count += end - start + 1
 	}
 	return count
 }

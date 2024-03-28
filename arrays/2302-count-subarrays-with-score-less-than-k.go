@@ -5,18 +5,16 @@ package arrays
 func countSubarrays(nums []int, k int64) int64 {
 	var count, sum int64 = 0, 0
 	var start = 0
-	var score int64
-	for end, num := range nums {
-		sum += int64(num)
-		score = sum * int64(end-start+1)
-		for score >= k && start < end {
+	var length int64 = 0
+	for end := range nums {
+		sum += int64(nums[end])
+		length++
+		for sum*length >= k && start <= end {
 			sum -= int64(nums[start])
+			length--
 			start++
-			score = sum * int64(end-start+1)
 		}
-		if score < k {
-			count += int64(end - start + 1)
-		}
+		count += length
 	}
 	return count
 }
