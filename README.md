@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0992 | [Subarrays with K Different Integers](https://leetcode.com/problems/subarrays-with-k-different-integers/) | Hard | Array, Hash Table, Sliding Window, Counting | 2024-03-29 | [Go](hashes/0992-subarrays-with-k-different-integers.go)
+| 2962 | [Count Subarrays Where Max Element Appears at Least K Times](https://leetcode.com/problems/count-subarrays-where-max-element-appears-at-least-k-times/) | Medium | Array, Sliding Window | 2024-03-29 | [Go](arrays/2962-count-subarrays-where-max-element-appears-at-least-k-times.go)
 | 2958 | [Length of Longest Subarray With at Most K Frequency](https://leetcode.com/problems/length-of-longest-subarray-with-at-most-k-frequency/) | Medium | Array, Hash Table, Sliding Window | 2024-03-28 | [Go](hashes/2958-length-of-longest-subarray-with-at-most-k-frequency.go)
 | 2302 | [Count Subarrays With Score Less Than K](https://leetcode.com/problems/count-subarrays-with-score-less-than-k/) | Hard | Array, Binary Search, Sliding Window, Prefix Sum | 2024-03-27 | [Go](arrays/2302-count-subarrays-with-score-less-than-k.go)
 | 0713 | [Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/) | Medium | Array, Sliding Window | 2024-03-27 | [Go](arrays/0713-subarray-product-less-than-k.go)
