@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0004 | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | Hard | Array, Binary Search, Divide and Conquer | 2024-03-30 | [Go](arrays/0004-median-of-two-sorted-arrays.go)
 | 0992 | [Subarrays with K Different Integers](https://leetcode.com/problems/subarrays-with-k-different-integers/) | Hard | Array, Hash Table, Sliding Window, Counting | 2024-03-29 | [Go](hashes/0992-subarrays-with-k-different-integers.go)
 | 2962 | [Count Subarrays Where Max Element Appears at Least K Times](https://leetcode.com/problems/count-subarrays-where-max-element-appears-at-least-k-times/) | Medium | Array, Sliding Window | 2024-03-29 | [Go](arrays/2962-count-subarrays-where-max-element-appears-at-least-k-times.go)
 | 2958 | [Length of Longest Subarray With at Most K Frequency](https://leetcode.com/problems/length-of-longest-subarray-with-at-most-k-frequency/) | Medium | Array, Hash Table, Sliding Window | 2024-03-28 | [Go](hashes/2958-length-of-longest-subarray-with-at-most-k-frequency.go)
