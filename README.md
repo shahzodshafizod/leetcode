@@ -2,6 +2,9 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0765 | [Couples Holding Hands](https://leetcode.com/problems/couples-holding-hands/) | Hard | Greedy, Depth-First Search, Breadth-First Search, Union Find, Graph | 2024-03-31 | [Go](unionfinds/0765-couples-holding-hands.go)
+| 0268 | [Missing Number](https://leetcode.com/problems/missing-number/) | Easy | Array, Hash Table, Math, Binary Search, Bit Manipulation, Sorting | 2024-03-31 | [Go](arrays/0268-missing-number.go)
+| 2444 | [Count Subarrays With Fixed Bounds](https://leetcode.com/problems/count-subarrays-with-fixed-bounds/) | Hard | Array, Queue, Sliding Window, Monotonic Queue | 2024-03-31 | [Go](arrays/2444-count-subarrays-with-fixed-bounds.go)
 | 0004 | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | Hard | Array, Binary Search, Divide and Conquer | 2024-03-30 | [Go](arrays/0004-median-of-two-sorted-arrays.go)
 | 0992 | [Subarrays with K Different Integers](https://leetcode.com/problems/subarrays-with-k-different-integers/) | Hard | Array, Hash Table, Sliding Window, Counting | 2024-03-29 | [Go](hashes/0992-subarrays-with-k-different-integers.go)
 | 2962 | [Count Subarrays Where Max Element Appears at Least K Times](https://leetcode.com/problems/count-subarrays-where-max-element-appears-at-least-k-times/) | Medium | Array, Sliding Window | 2024-03-29 | [Go](arrays/2962-count-subarrays-where-max-element-appears-at-least-k-times.go)
