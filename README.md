@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0205 | [Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/) | Easy | Hash Table, String | 2024-04-02 | [Go](strings/0205-isomorphic-strings.go)
 | 0058 | [Length of Last Word](https://leetcode.com/problems/length-of-last-word/) | Easy | String | 2024-04-01 | [Go](strings/0058-length-of-last-word.go)
 | 0765 | [Couples Holding Hands](https://leetcode.com/problems/couples-holding-hands/) | Hard | Greedy, Depth-First Search, Breadth-First Search, Union Find, Graph | 2024-03-31 | [Go](unionfinds/0765-couples-holding-hands.go)
 | 0268 | [Missing Number](https://leetcode.com/problems/missing-number/) | Easy | Array, Hash Table, Math, Binary Search, Bit Manipulation, Sorting | 2024-03-31 | [Go](arrays/0268-missing-number.go)
