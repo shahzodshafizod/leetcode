@@ -51,13 +51,13 @@ func (t *Trie) insert(word string, n int, i int, node *Trie) {
 		node.end = true
 		return
 	}
-	if nextNode := node.children[word[i]]; nextNode != nil {
-		t.insert(word, n, i+1, nextNode)
-		return
+	letter := word[i]
+	next := node.children[letter]
+	if next == nil {
+		next = &Trie{end: false, children: make(map[byte]*Trie)}
+		node.children[letter] = next
 	}
-	var newNode = &Trie{end: false, children: make(map[byte]*Trie)}
-	node.children[word[i]] = newNode
-	t.insert(word, n, i+1, newNode)
+	t.insert(word, n, i+1, next)
 }
 
 func (t *Trie) Search(word string) bool {
@@ -68,8 +68,8 @@ func (t *Trie) search(word string, n int, i int, node *Trie, prefix bool) bool {
 	if i == n {
 		return prefix || node.end
 	}
-	if nextNode := node.children[word[i]]; nextNode != nil {
-		return t.search(word, n, i+1, nextNode, prefix)
+	if next := node.children[word[i]]; next != nil {
+		return t.search(word, n, i+1, next, prefix)
 	}
 	return false
 }

@@ -2,6 +2,9 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1544 | [Make The String Great](https://leetcode.com/problems/make-the-string-great/) | Easy | String, Stack | 2024-04-05 | [Go](stacks/1544-make-the-string-great.go)
+| 0212 | [Word Search II](https://leetcode.com/problems/word-search-ii/) | Hard | Array, String, Backtracking, Trie, Matrix | 2024-04-05 | [Go](tries/0212-word-search-ii.go)
+| 1614 | [Maximum Nesting Depth of the Parentheses](https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/) | Easy | String, Stack | 2024-04-04 | [Go](stacks/1614-maximum-nesting-depth-of-the-parentheses.go)
 | 0079 | [Word Search](https://leetcode.com/problems/word-search/) | Medium | Array, String, Backtracking, Matrix | 2024-04-03 | [Go](matrices/0079-word-search.go)
 | 0205 | [Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/) | Easy | Hash Table, String | 2024-04-02 | [Go](strings/0205-isomorphic-strings.go)
 | 0058 | [Length of Last Word](https://leetcode.com/problems/length-of-last-word/) | Easy | String | 2024-04-01 | [Go](strings/0058-length-of-last-word.go)
