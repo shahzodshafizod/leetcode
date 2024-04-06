@@ -18,7 +18,7 @@
 | 2958 | [Length of Longest Subarray With at Most K Frequency](https://leetcode.com/problems/length-of-longest-subarray-with-at-most-k-frequency/) | Medium | Array, Hash Table, Sliding Window | 2024-03-28 | [Go](hashes/2958-length-of-longest-subarray-with-at-most-k-frequency.go)
 | 2302 | [Count Subarrays With Score Less Than K](https://leetcode.com/problems/count-subarrays-with-score-less-than-k/) | Hard | Array, Binary Search, Sliding Window, Prefix Sum | 2024-03-27 | [Go](arrays/2302-count-subarrays-with-score-less-than-k.go)
 | 0713 | [Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/) | Medium | Array, Sliding Window | 2024-03-27 | [Go](arrays/0713-subarray-product-less-than-k.go)
-| 0041 | [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) | Hard | Array, Hash Table | 2024-03-25 | [Go](arrays/0041-first-missing-positive.go)
+| 0041 | [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) | Hard | Array, Hash Table | 2024-03-26 | [Go](arrays/0041-first-missing-positive.go)
 | 0442 | [Find All Duplicates in an Array](https://leetcode.com/problems/find-all-duplicates-in-an-array/) | Medium | Array, Hash Table | 2024-03-25 | [Go](arrays/0442-find-all-duplicates-in-an-array.go)
 | 0287 | [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) | Medium | Array, Two Pointers, Binary Search, Bit Manipulation | 2024-03-24 | [Go](arrays/0287-find-the-duplicate-number.go)
 | 0143 | [Reorder List](https://leetcode.com/problems/reorder-list/) | Medium | Linked List, Two Pointers, Stack, Recursion | 2024-03-23 | [Go](linkedlists/0143-reorder-list.go)

@@ -3,32 +3,52 @@ package stacks
 // https://leetcode.com/problems/longest-valid-parentheses/
 
 func longestValidParentheses(s string) int {
-	var sb = []byte(s)
-	var stack = make([]int, 0)
-	for idx := range sb {
-		switch s[idx] {
-		case '(':
-			stack = append(stack, idx)
-		case ')':
-			if len(stack) > 0 {
-				sb[stack[len(stack)-1]] = '.'
-				sb[idx] = '.'
-				stack = stack[:len(stack)-1]
+	var length = func(open byte, from int, to int, factor int) int {
+		var length, opens, closes = 0, 0, 0
+		for idx := from; idx != to; idx += factor {
+			if s[idx] == open {
+				opens++
+			} else {
+				closes++
+			}
+			if closes > opens {
+				opens, closes = 0, 0
+			} else if opens == closes {
+				length = max(length, opens+closes)
 			}
 		}
+		return length
 	}
-	var length, count = 0, 0
-	for _, c := range sb {
-		switch c {
-		case '.':
-			count++
-		default:
-			count = 0
-		}
-		length = max(length, count)
-	}
-	return length
+	return max(length('(', 0, len(s), 1), length(')', len(s)-1, -1, -1))
 }
+
+// func longestValidParentheses(s string) int {
+// 	var sb = []byte(s)
+// 	var stack = make([]int, 0)
+// 	for idx := range sb {
+// 		switch s[idx] {
+// 		case '(':
+// 			stack = append(stack, idx)
+// 		case ')':
+// 			if len(stack) > 0 {
+// 				sb[stack[len(stack)-1]] = '.'
+// 				sb[idx] = '.'
+// 				stack = stack[:len(stack)-1]
+// 			}
+// 		}
+// 	}
+// 	var length, count = 0, 0
+// 	for _, c := range sb {
+// 		switch c {
+// 		case '.':
+// 			count++
+// 		default:
+// 			count = 0
+// 		}
+// 		length = max(length, count)
+// 	}
+// 	return length
+// }
 
 // func longestValidParentheses(s string) int {
 // 	var sb = []byte(s)
