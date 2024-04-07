@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0678 | [Valid Parenthesis String](https://leetcode.com/problems/valid-parenthesis-string/) | Medium | String, Dynamic Programming, Stack, Greedy | 2024-04-07 | [Go](stacks/0678-valid-parenthesis-string.go)
 | 0032 | [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/) | Hard | String, Dynamic Programming, Stack | 2024-04-06 | [Go](stacks/0032-longest-valid-parentheses.go)
 | 1544 | [Make The String Great](https://leetcode.com/problems/make-the-string-great/) | Easy | String, Stack | 2024-04-05 | [Go](stacks/1544-make-the-string-great.go)
 | 0212 | [Word Search II](https://leetcode.com/problems/word-search-ii/) | Hard | Array, String, Backtracking, Trie, Matrix | 2024-04-05 | [Go](tries/0212-word-search-ii.go)
