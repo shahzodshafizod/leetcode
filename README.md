@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0950 | [Reveal Cards In Increasing Order](https://leetcode.com/problems/reveal-cards-in-increasing-order/) | Medium | Array, Queue, Sorting, Simulation | 2024-04-10 | [Go](queues/0950-reveal-cards-in-increasing-order.go)
 | 2073 | [Time Needed to Buy Tickets](https://leetcode.com/problems/time-needed-to-buy-tickets/) | Easy | Array, Queue, Simulation | 2024-04-09 | [Go](queues/2073-time-needed-to-buy-tickets.go)
 | 0978 | [Longest Turbulent Subarray](https://leetcode.com/problems/longest-turbulent-subarray/) | Medium | Array, Dynamic Programming, Sliding Window | 2024-04-08 | [Go](arrays/kadanes/0978-longest-turbulent-subarray.go)
 | 0678 | [Valid Parenthesis String](https://leetcode.com/problems/valid-parenthesis-string/) | Medium | String, Dynamic Programming, Stack, Greedy | 2024-04-07 | [Go](stacks/0678-valid-parenthesis-string.go)
