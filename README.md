@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0402 | [Remove K Digits](https://leetcode.com/problems/remove-k-digits/) | Medium | String, Stack, Greedy, Monotonic Stack | 2024-04-11 | [Go](stacks/monotonic/0402-remove-k-digits.go)
+| 0496 | [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/) | Easy | Array, Hash Table, Stack, Monotonic Stack | 2024-04-11 | [Go](stacks/monotonic/0496-next-greater-element-i.go)
 | 0950 | [Reveal Cards In Increasing Order](https://leetcode.com/problems/reveal-cards-in-increasing-order/) | Medium | Array, Queue, Sorting, Simulation | 2024-04-10 | [Go](queues/0950-reveal-cards-in-increasing-order.go)
 | 2073 | [Time Needed to Buy Tickets](https://leetcode.com/problems/time-needed-to-buy-tickets/) | Easy | Array, Queue, Simulation | 2024-04-09 | [Go](queues/2073-time-needed-to-buy-tickets.go)
 | 0978 | [Longest Turbulent Subarray](https://leetcode.com/problems/longest-turbulent-subarray/) | Medium | Array, Dynamic Programming, Sliding Window | 2024-04-08 | [Go](arrays/kadanes/0978-longest-turbulent-subarray.go)
