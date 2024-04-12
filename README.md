@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0219 | [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/) | Easy | Array, Hash Table, Sliding Window | 2024-04-12 | [Go](arrays/slidingwindows/0219-contains-duplicate-ii.go)
 | 0402 | [Remove K Digits](https://leetcode.com/problems/remove-k-digits/) | Medium | String, Stack, Greedy, Monotonic Stack | 2024-04-11 | [Go](stacks/monotonic/0402-remove-k-digits.go)
 | 0496 | [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/) | Easy | Array, Hash Table, Stack, Monotonic Stack | 2024-04-11 | [Go](stacks/monotonic/0496-next-greater-element-i.go)
 | 0950 | [Reveal Cards In Increasing Order](https://leetcode.com/problems/reveal-cards-in-increasing-order/) | Medium | Array, Queue, Sorting, Simulation | 2024-04-10 | [Go](queues/0950-reveal-cards-in-increasing-order.go)
