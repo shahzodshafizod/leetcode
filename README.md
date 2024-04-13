@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0085 | [Maximal Rectangle](https://leetcode.com/problems/maximal-rectangle/) | Hard | Array, Dynamic Programming, Stack, Matrix, Monotonic Stack | 2024-04-13 | [Go](stacks/monotonic/0085-maximal-rectangle.go)
+| 0221 | [Maximal Square](https://leetcode.com/problems/maximal-square/) | Medium | Array, Dynamic Programming, Matrix | 2024-04-13 | [Go](dp/0221-maximal-square.go)
 | 0219 | [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/) | Easy | Array, Hash Table, Sliding Window | 2024-04-12 | [Go](arrays/slidingwindows/0219-contains-duplicate-ii.go)
 | 0402 | [Remove K Digits](https://leetcode.com/problems/remove-k-digits/) | Medium | String, Stack, Greedy, Monotonic Stack | 2024-04-11 | [Go](stacks/monotonic/0402-remove-k-digits.go)
 | 0496 | [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/) | Easy | Array, Hash Table, Stack, Monotonic Stack | 2024-04-11 | [Go](stacks/monotonic/0496-next-greater-element-i.go)
