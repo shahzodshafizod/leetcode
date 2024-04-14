@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0404 | [Sum of Left Leaves](https://leetcode.com/problems/sum-of-left-leaves/) | Easy | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 2024-04-14 | [Go](trees/0404-sum-of-left-leaves.go)
 | 0085 | [Maximal Rectangle](https://leetcode.com/problems/maximal-rectangle/) | Hard | Array, Dynamic Programming, Stack, Matrix, Monotonic Stack | 2024-04-13 | [Go](stacks/monotonic/0085-maximal-rectangle.go)
 | 0221 | [Maximal Square](https://leetcode.com/problems/maximal-square/) | Medium | Array, Dynamic Programming, Matrix | 2024-04-13 | [Go](dp/0221-maximal-square.go)
 | 0219 | [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/) | Easy | Array, Hash Table, Sliding Window | 2024-04-12 | [Go](arrays/slidingwindows/0219-contains-duplicate-ii.go)
