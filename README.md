@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0129 | [Sum Root to Leaf Numbers](https://leetcode.com/problems/sum-root-to-leaf-numbers/) | Medium | Tree, Depth-First Search, Binary Tree | 2024-04-15 | [Go](trees/0129-sum-root-to-leaf-numbers.go)
 | 0404 | [Sum of Left Leaves](https://leetcode.com/problems/sum-of-left-leaves/) | Easy | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 2024-04-14 | [Go](trees/0404-sum-of-left-leaves.go)
 | 0085 | [Maximal Rectangle](https://leetcode.com/problems/maximal-rectangle/) | Hard | Array, Dynamic Programming, Stack, Matrix, Monotonic Stack | 2024-04-13 | [Go](stacks/monotonic/0085-maximal-rectangle.go)
 | 0221 | [Maximal Square](https://leetcode.com/problems/maximal-square/) | Medium | Array, Dynamic Programming, Matrix | 2024-04-13 | [Go](dp/0221-maximal-square.go)
