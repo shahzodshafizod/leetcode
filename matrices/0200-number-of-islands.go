@@ -42,42 +42,36 @@ Step 2: Write out some test cases
 
 // https://leetcode.com/problems/number-of-islands/
 
+// DFS
 func numIslands(grid [][]byte) int {
-	var m = len(grid)
-	if m == 0 {
-		return 0
+	var m, n = len(grid), len(grid[0])
+	var drowning func(row int, col int)
+	drowning = func(row int, col int) {
+		if grid[row][col] == '0' {
+			return
+		}
+		grid[row][col] = '0'
+		if row+1 < m { // south
+			drowning(row+1, col)
+		}
+		if row-1 >= 0 { // north
+			drowning(row-1, col)
+		}
+		if col+1 < n { // east
+			drowning(row, col+1)
+		}
+		if col-1 >= 0 { // west
+			drowning(row, col-1)
+		}
 	}
-	var n = len(grid[0])
-	if n == 0 {
-		return 0
-	}
-
 	var num = 0
-
-	var directions = [4][2]int{{-1, 0}, {0, 1}, {1, 0}, {0, -1}} // up, right, down and left
 	for row := 0; row < m; row++ {
 		for col := 0; col < n; col++ {
-			if grid[row][col] != '1' {
-				continue
-			}
-
-			num++
-
-			// BFS
-			var queue = [][2]int{{row, col}}
-			grid[row][col] = '0'
-			for len(queue) > 0 {
-				for _, direction := range directions {
-					var r, c = queue[0][0] + direction[0], queue[0][1] + direction[1]
-					if r >= 0 && c >= 0 && r < m && c < n && grid[r][c] == '1' {
-						queue = append(queue, [2]int{r, c})
-						grid[r][c] = '0'
-					}
-				}
-				queue = queue[1:]
+			if grid[row][col] == '1' {
+				num++
+				drowning(row, col)
 			}
 		}
 	}
-
 	return num
 }
