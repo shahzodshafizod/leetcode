@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1992 | [Find All Groups of Farmland](https://leetcode.com/problems/find-all-groups-of-farmland/) | Medium | Array, Depth-First Search, Breadth-First Search, Matrix | 2024-04-20 | [Go](matrices/1992-find-all-groups-of-farmland.go)
 | 0220 | [Contains Duplicate III](https://leetcode.com/problems/contains-duplicate-iii/) | Hard | Array, Sliding Window, Sorting, Bucket Sort, Ordered Set | 2024-04-19 | [Go](arrays/slidingwindows/0220-contains-duplicate-iii.go)
 | 0463 | [Island Perimeter](https://leetcode.com/problems/island-perimeter/) | Easy | Array, Depth-First Search, Breadth-First Search, Matrix | 2024-04-18 | [Go](matrices/0463-island-perimeter.go)
 | 0988 | [Smallest String Starting From Leaf](https://leetcode.com/problems/smallest-string-starting-from-leaf/) | Medium | String, Tree, Depth-First Search, Binary Tree | 2024-04-17 | [Go](trees/0988-smallest-string-starting-from-leaf.go)
