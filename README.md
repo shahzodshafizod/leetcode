@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0752 | [Open the Lock](https://leetcode.com/problems/open-the-lock/) | Medium | Array, Hash Table, String, Breadth-First Search | 2024-04-22 | [Go](hashes/0752-open-the-lock.go)
 | 1971 | [Find if Path Exists in Graph](https://leetcode.com/problems/find-if-path-exists-in-graph/) | Easy | Depth-First Search, Breadth-First Search, Union Find, Graph | 2024-04-21 | [Go](unionfinds/1971-find-if-path-exists-in-graph.go)
 | 1992 | [Find All Groups of Farmland](https://leetcode.com/problems/find-all-groups-of-farmland/) | Medium | Array, Depth-First Search, Breadth-First Search, Matrix | 2024-04-20 | [Go](matrices/1992-find-all-groups-of-farmland.go)
 | 0220 | [Contains Duplicate III](https://leetcode.com/problems/contains-duplicate-iii/) | Hard | Array, Sliding Window, Sorting, Bucket Sort, Ordered Set | 2024-04-19 | [Go](arrays/slidingwindows/0220-contains-duplicate-iii.go)
