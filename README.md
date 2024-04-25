@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2370 | [Longest Ideal Subsequence](https://leetcode.com/problems/longest-ideal-subsequence/) | Medium | Hash Table, String, Dynamic Programming | 2024-04-25 | [Go](dp/2370-longest-ideal-subsequence.go)
 | 1137 | [N-th Tribonacci Number](https://leetcode.com/problems/n-th-tribonacci-number/) | Easy | Math, Dynamic Programming, Memoization | 2024-04-24 | [Go](dp/1137-n-th-tribonacci-number.go)
 | 0310 | [Minimum Height Trees](https://leetcode.com/problems/minimum-height-trees/) | Medium | Depth-First Search, Breadth-First Search, Graph, Topological Sort | 2024-04-23 | [Go](graphs/0310-minimum-height-trees.go)
 | 0752 | [Open the Lock](https://leetcode.com/problems/open-the-lock/) | Medium | Array, Hash Table, String, Breadth-First Search | 2024-04-22 | [Go](hashes/0752-open-the-lock.go)
