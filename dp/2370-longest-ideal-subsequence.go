@@ -30,10 +30,10 @@ func longestIdealString(s string, k int) int {
 // 		if idx == n {
 // 			return 0
 // 		}
-// 		var curr = int(s[idx] - 'a')
 // 		if prev >= 0 && cache[idx][prev] != 0 {
 // 			return cache[idx][prev]
 // 		}
+// 		var curr = int(s[idx] - 'a')
 // 		var length = dp(idx+1, prev)
 // 		if prev == -1 || int(math.Abs(float64(curr-prev))) <= k {
 // 			length = max(length, 1+dp(idx+1, curr))
