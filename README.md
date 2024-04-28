@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0834 | [Sum of Distances in Tree](https://leetcode.com/problems/sum-of-distances-in-tree/) | Hard | Dynamic Programming, Tree, Depth-First Search, Graph | 2024-04-28 | [Go](graphs/0834-sum-of-distances-in-tree.go)
 | 0514 | [Freedom Trail](https://leetcode.com/problems/freedom-trail/) | Hard | String, Dynamic Programming, Depth-First Search, Breadth-First Search | 2024-04-27 | [Go](dp/0514-freedom-trail.go)
 | 1289 | [Minimum Falling Path Sum II](https://leetcode.com/problems/minimum-falling-path-sum-ii/) | Hard | Array, Dynamic Programming, Matrix | 2024-04-26 | [Go](dp/1289-minimum-falling-path-sum-ii.go)
 | 2370 | [Longest Ideal Subsequence](https://leetcode.com/problems/longest-ideal-subsequence/) | Medium | Hash Table, String, Dynamic Programming | 2024-04-25 | [Go](dp/2370-longest-ideal-subsequence.go)
