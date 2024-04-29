@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2997 | [Minimum Number of Operations to Make Array XOR Equal to K](https://leetcode.com/problems/minimum-number-of-operations-to-make-array-xor-equal-to-k/) | Medium | Array, Bit Manipulation | 2024-04-29 | [Go](bits/2997-minimum-number-of-operations-to-make-array-xor-equal-to-k.go)
 | 0834 | [Sum of Distances in Tree](https://leetcode.com/problems/sum-of-distances-in-tree/) | Hard | Dynamic Programming, Tree, Depth-First Search, Graph | 2024-04-28 | [Go](graphs/0834-sum-of-distances-in-tree.go)
 | 0514 | [Freedom Trail](https://leetcode.com/problems/freedom-trail/) | Hard | String, Dynamic Programming, Depth-First Search, Breadth-First Search | 2024-04-27 | [Go](dp/0514-freedom-trail.go)
 | 1289 | [Minimum Falling Path Sum II](https://leetcode.com/problems/minimum-falling-path-sum-ii/) | Hard | Array, Dynamic Programming, Matrix | 2024-04-26 | [Go](dp/1289-minimum-falling-path-sum-ii.go)
