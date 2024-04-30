@@ -30,9 +30,8 @@ func minOperations(nums []int, k int) int {
 }
 
 // func minOperations(nums []int, k int) int {
-// 	var xor = k
 // 	for _, num := range nums {
-// 		xor ^= num
+// 		k ^= num
 // 	}
-// 	return bits.OnesCount(uint(xor))
+// 	return bits.OnesCount(uint(k))
 // }
