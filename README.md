@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2000 | [Reverse Prefix of Word](https://leetcode.com/problems/reverse-prefix-of-word/) | Easy | Two Pointers, String | 2024-05-01 | [Go](strings/2000-reverse-prefix-of-word.go)
 | 1915 | [Number of Wonderful Substrings](https://leetcode.com/problems/number-of-wonderful-substrings/) | Medium | Hash Table, String, Bit Manipulation, Prefix Sum | 2024-04-30 | [Go](bits/1915-number-of-wonderful-substrings.go)
 | 2997 | [Minimum Number of Operations to Make Array XOR Equal to K](https://leetcode.com/problems/minimum-number-of-operations-to-make-array-xor-equal-to-k/) | Medium | Array, Bit Manipulation | 2024-04-29 | [Go](bits/2997-minimum-number-of-operations-to-make-array-xor-equal-to-k.go)
 | 0834 | [Sum of Distances in Tree](https://leetcode.com/problems/sum-of-distances-in-tree/) | Hard | Dynamic Programming, Tree, Depth-First Search, Graph | 2024-04-28 | [Go](graphs/0834-sum-of-distances-in-tree.go)
