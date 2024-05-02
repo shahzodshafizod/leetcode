@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2441 | [Largest Positive Integer That Exists With Its Negative](https://leetcode.com/problems/largest-positive-integer-that-exists-with-its-negative/) | Easy | Array, Hash Table, Two Pointers, Sorting | 2024-05-02 | [Go](hashes/2441-largest-positive-integer-that-exists-with-its-negative.go)
 | 2000 | [Reverse Prefix of Word](https://leetcode.com/problems/reverse-prefix-of-word/) | Easy | Two Pointers, String | 2024-05-01 | [Go](strings/2000-reverse-prefix-of-word.go)
 | 1915 | [Number of Wonderful Substrings](https://leetcode.com/problems/number-of-wonderful-substrings/) | Medium | Hash Table, String, Bit Manipulation, Prefix Sum | 2024-04-30 | [Go](bits/1915-number-of-wonderful-substrings.go)
 | 2997 | [Minimum Number of Operations to Make Array XOR Equal to K](https://leetcode.com/problems/minimum-number-of-operations-to-make-array-xor-equal-to-k/) | Medium | Array, Bit Manipulation | 2024-04-29 | [Go](bits/2997-minimum-number-of-operations-to-make-array-xor-equal-to-k.go)
