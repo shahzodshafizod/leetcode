@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0165 | [Compare Version Numbers](https://leetcode.com/problems/compare-version-numbers/) | Medium | Two Pointers, String | 2024-05-03 | [Go](strings/0165-compare-version-numbers.go)
 | 2441 | [Largest Positive Integer That Exists With Its Negative](https://leetcode.com/problems/largest-positive-integer-that-exists-with-its-negative/) | Easy | Array, Hash Table, Two Pointers, Sorting | 2024-05-02 | [Go](hashes/2441-largest-positive-integer-that-exists-with-its-negative.go)
 | 2000 | [Reverse Prefix of Word](https://leetcode.com/problems/reverse-prefix-of-word/) | Easy | Two Pointers, String | 2024-05-01 | [Go](strings/2000-reverse-prefix-of-word.go)
 | 1915 | [Number of Wonderful Substrings](https://leetcode.com/problems/number-of-wonderful-substrings/) | Medium | Hash Table, String, Bit Manipulation, Prefix Sum | 2024-04-30 | [Go](bits/1915-number-of-wonderful-substrings.go)
