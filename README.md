@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0237 | [Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/) | Medium | Linked List | 2024-05-05 | [Go](linkedlists/0237-delete-node-in-a-linked-list.go)
 | 0881 | [Boats to Save People](https://leetcode.com/problems/boats-to-save-people/) | Medium | Array, Two Pointers, Greedy, Sorting | 2024-05-04 | [Go](greedy/0881-boats-to-save-people.go)
 | 0165 | [Compare Version Numbers](https://leetcode.com/problems/compare-version-numbers/) | Medium | Two Pointers, String | 2024-05-03 | [Go](strings/0165-compare-version-numbers.go)
 | 2441 | [Largest Positive Integer That Exists With Its Negative](https://leetcode.com/problems/largest-positive-integer-that-exists-with-its-negative/) | Easy | Array, Hash Table, Two Pointers, Sorting | 2024-05-02 | [Go](hashes/2441-largest-positive-integer-that-exists-with-its-negative.go)

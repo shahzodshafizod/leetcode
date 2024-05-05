@@ -24,7 +24,19 @@ func makeLinkedList(vals ...int) *ListNode {
 	return head
 }
 
-func makeCycleLinkedList(position int, vals ...int) (*ListNode, *ListNode) {
+// position starts from 0
+func getNode(head *ListNode, position int) *ListNode {
+	for node := head; node != nil && position >= 0; {
+		if position == 0 {
+			return node
+		}
+		node = node.Next
+		position--
+	}
+	return nil
+}
+
+func makeCycleLinkedList(position int, vals ...int) *ListNode {
 	var head, tail *ListNode = nil, nil
 	var cyclePoint *ListNode = nil
 	for index, val := range vals {
@@ -42,7 +54,7 @@ func makeCycleLinkedList(position int, vals ...int) (*ListNode, *ListNode) {
 	if tail != nil {
 		tail.Next = cyclePoint
 	}
-	return head, cyclePoint
+	return head
 }
 
 // Definition for a Node.
