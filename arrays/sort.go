@@ -3,6 +3,9 @@ package arrays
 // Sorting Algorithms Dance
 // https://www.youtube.com/user/AlgoRythmics/videos
 
+// Sorting Humor
+// https://www.reddit.com/r/ProgrammerHumor/comments/9s9kgn/nononsense_sorting_algorithm/
+
 // 1. Elementary Sort
 
 // time: O(N^2), if array isn't sorted; else O(N)
