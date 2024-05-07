@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2816 | [Double a Number Represented as a Linked List](https://leetcode.com/problems/double-a-number-represented-as-a-linked-list/) | Medium | Linked List, Math, Stack | 2024-05-07 | [Go](linkedlists/2816-double-a-number-represented-as-a-linked-list.go)
 | 2487 | [Remove Nodes From Linked List](https://leetcode.com/problems/remove-nodes-from-linked-list/) | Medium | Linked List, Stack, Recursion, Monotonic Stack | 2024-05-06 | [Go](linkedlists/2487-remove-nodes-from-linked-list.go)
 | 0237 | [Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/) | Medium | Linked List | 2024-05-05 | [Go](linkedlists/0237-delete-node-in-a-linked-list.go)
 | 0881 | [Boats to Save People](https://leetcode.com/problems/boats-to-save-people/) | Medium | Array, Two Pointers, Greedy, Sorting | 2024-05-04 | [Go](greedy/0881-boats-to-save-people.go)
