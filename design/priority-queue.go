@@ -42,20 +42,20 @@ func (p pq[T]) Peek() T {
 }
 
 func (p *pq[T]) Push(x T) {
-	(*p).data = append((*p).data, x)
+	p.data = append(p.data, x)
 	p.shiftUp(p.Len() - 1)
 }
 
 func (p *pq[T]) Pop() T {
-	var last T
+	var root T
 	if p.Len() == 0 {
-		return last
+		return root
 	}
+	root = p.data[0]
 	p.swap(0, p.Len()-1)
-	last = (*p).data[p.Len()-1]
-	(*p).data = (*p).data[:p.Len()-1]
+	p.data = p.data[:p.Len()-1]
 	p.shiftDown(0, p.Len())
-	return last
+	return root
 }
 
 func (p *pq[T]) Sort() {
@@ -72,7 +72,7 @@ func (p *pq[T]) Array() []T {
 }
 
 func (p pq[T]) compare(i int, j int) bool { return p.less(p.data[i], p.data[j]) }
-func (p *pq[T]) swap(i int, j int)        { (*p).data[i], (*p).data[j] = (*p).data[j], (*p).data[i] }
+func (p *pq[T]) swap(i int, j int)        { p.data[i], p.data[j] = p.data[j], p.data[i] }
 func (p pq[T]) parent(idx int) int        { return (idx - 1) / 2 }
 func (p pq[T]) left(idx int) int          { return 2*idx + 1 } // right: 2*idx + 2
 
