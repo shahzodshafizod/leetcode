@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0857 | [Minimum Cost to Hire K Workers](https://leetcode.com/problems/minimum-cost-to-hire-k-workers/) | Hard | Array, Greedy, Sorting, Heap (Priority Queue) | 2024-05-11 | [Go](greedy/0857-minimum-cost-to-hire-k-workers.go)
 | 0786 | [K-th Smallest Prime Fraction](https://leetcode.com/problems/k-th-smallest-prime-fraction/) | Medium | Array, Two Pointers, Binary Search, Sorting, Heap (Priority Queue) | 2024-05-10 | [Go](arrays/0786-k-th-smallest-prime-fraction.go)
 | 3075 | [Maximize Happiness of Selected Children](https://leetcode.com/problems/maximize-happiness-of-selected-children/) | Medium | Array, Greedy, Sorting | 2024-05-09 | [Go](greedy/3075-maximize-happiness-of-selected-children.go)
 | 0506 | [Relative Ranks](https://leetcode.com/problems/relative-ranks/) | Easy | Array, Sorting, Heap (Priority Queue) | 2024-05-08 | [Go](arrays/0506-relative-ranks.go)
