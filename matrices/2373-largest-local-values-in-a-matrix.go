@@ -5,13 +5,13 @@ package matrices
 func largestLocal(grid [][]int) [][]int {
 	var n = len(grid)
 	var maxLocal = make([][]int, n-2)
-	for r := 0; r < n-2; r++ {
-		maxLocal[r] = make([]int, n-2)
-		for c := 0; c < n-2; c++ {
-			maxLocal[r][c] = max(
-				max(grid[r][c], grid[r][c+1], grid[r][c+2]),
-				max(grid[r+1][c], grid[r+1][c+1], grid[r+1][c+2]),
-				max(grid[r+2][c], grid[r+2][c+1], grid[r+2][c+2]),
+	for row := 0; row < n-2; row++ {
+		maxLocal[row] = make([]int, n-2)
+		for col := 0; col < n-2; col++ {
+			maxLocal[row][col] = max(
+				grid[row][col], grid[row][col+1], grid[row][col+2],
+				grid[row+1][col], grid[row+1][col+1], grid[row+1][col+2],
+				grid[row+2][col], grid[row+2][col+1], grid[row+2][col+2],
 			)
 		}
 	}
