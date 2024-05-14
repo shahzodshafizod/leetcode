@@ -1,4 +1,4 @@
-package arrays
+package backtracking
 
 import (
 	"testing"
@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// go test -v -count=1 ./arrays/ -run ^TestCombinationSum$
+// go test -v -count=1 ./backtracking/ -run ^TestCombinationSum$
 func TestCombinationSum(t *testing.T) {
 	for _, tc := range []struct {
 		candidates   []int

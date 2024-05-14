@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1219 | [Path with Maximum Gold](https://leetcode.com/problems/path-with-maximum-gold/) | Medium | Array, Backtracking, Matrix | 2024-05-14 | [Go](backtracking/1219-path-with-maximum-gold.go)
 | 0861 | [Score After Flipping Matrix](https://leetcode.com/problems/score-after-flipping-matrix/) | Medium | Array, Greedy, Bit Manipulation, Matrix | 2024-05-13 | [Go](bits/0861-score-after-flipping-matrix.go)
 | 2373 | [Largest Local Values in a Matrix](https://leetcode.com/problems/largest-local-values-in-a-matrix/) | Easy | Array, Matrix | 2024-05-12 | [Go](matrices/2373-largest-local-values-in-a-matrix.go)
 | 0857 | [Minimum Cost to Hire K Workers](https://leetcode.com/problems/minimum-cost-to-hire-k-workers/) | Hard | Array, Greedy, Sorting, Heap (Priority Queue) | 2024-05-11 | [Go](greedy/0857-minimum-cost-to-hire-k-workers.go)
@@ -45,7 +46,7 @@
 | 1544 | [Make The String Great](https://leetcode.com/problems/make-the-string-great/) | Easy | String, Stack | 2024-04-05 | [Go](stacks/1544-make-the-string-great.go)
 | 0212 | [Word Search II](https://leetcode.com/problems/word-search-ii/) | Hard | Array, String, Backtracking, Trie, Matrix | 2024-04-05 | [Go](tries/0212-word-search-ii.go)
 | 1614 | [Maximum Nesting Depth of the Parentheses](https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/) | Easy | String, Stack | 2024-04-04 | [Go](stacks/1614-maximum-nesting-depth-of-the-parentheses.go)
-| 0079 | [Word Search](https://leetcode.com/problems/word-search/) | Medium | Array, String, Backtracking, Matrix | 2024-04-03 | [Go](matrices/0079-word-search.go)
+| 0079 | [Word Search](https://leetcode.com/problems/word-search/) | Medium | Array, String, Backtracking, Matrix | 2024-04-03 | [Go](backtracking/0079-word-search.go)
 | 0205 | [Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/) | Easy | Hash Table, String | 2024-04-02 | [Go](strings/0205-isomorphic-strings.go)
 | 0058 | [Length of Last Word](https://leetcode.com/problems/length-of-last-word/) | Easy | String | 2024-04-01 | [Go](strings/0058-length-of-last-word.go)
 | 0765 | [Couples Holding Hands](https://leetcode.com/problems/couples-holding-hands/) | Hard | Greedy, Depth-First Search, Breadth-First Search, Union Find, Graph | 2024-03-31 | [Go](unionfinds/0765-couples-holding-hands.go)
@@ -119,7 +120,7 @@
 | 0217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | Easy | Array, Hash Table, Sorting | 2024-02-19 | [Go](hashes/0217-contains-duplicate.go)
 | 0112 | [Path Sum](https://leetcode.com/problems/path-sum/) | Easy | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 2024-02-18 | [Go](trees/0112-path-sum.go)
 | 0078 | [Subsets](https://leetcode.com/problems/subsets/) | Medium | Array, Backtracking, Bit Manipulation | 2024-02-18 | [Go](arrays/0078-subsets.go)
-| 0039 | [Combination Sum](https://leetcode.com/problems/combination-sum/) | Medium | Array, Backtracking | 2024-02-18 | [Go](arrays/0039-combination-sum.go)
+| 0039 | [Combination Sum](https://leetcode.com/problems/combination-sum/) | Medium | Array, Backtracking | 2024-02-18 | [Go](backtracking/0039-combination-sum.go)
 | 0701 | [Insert into a Binary Search Tree](https://leetcode.com/problems/insert-into-a-binary-search-tree/) | Medium | Tree, Binary Search Tree, Binary Tree | 2024-02-18 | [Go](trees/0701-insert-into-a-binary-search-tree.go)
 | 0700 | [Search in a Binary Search Tree](https://leetcode.com/problems/search-in-a-binary-search-tree/) | Easy | Tree, Binary Search Tree, Binary Tree | 2024-02-18 | [Go](trees/0700-search-in-a-binary-search-tree.go)
 | 0450 | [Delete Node in a BST](https://leetcode.com/problems/delete-node-in-a-bst/) | Medium | Tree, Binary Search Tree, Binary Tree | 2024-02-18 | [Go](trees/0450-delete-node-in-a-bst.go)
@@ -159,7 +160,7 @@
 | 0589 | [N-ary Tree Preorder Traversal](https://leetcode.com/problems/n-ary-tree-preorder-traversal/) | Easy | Stack, Tree, Depth-First Search | 2024-02-03 | [Go](trees/0589-n-ary-tree-preorder-traversal.go)
 | 0429 | [N-ary Tree Level Order Traversal](https://leetcode.com/problems/n-ary-tree-level-order-traversal/) | Medium | Tree, Breadth-First Search | 2024-02-03 | [Go](trees/0429-n-ary-tree-level-order-traversal.go)
 | 0387 | [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/) | Easy | Hash Table, String, Queue, Counting | 2024-02-03 | [Go](queues/0387-first-unique-character-in-a-string.go)
-| 0037 | [Sudoku Solver](https://leetcode.com/problems/sudoku-solver/) | Hard | Array, Hash Table, Backtracking, Matrix | 2024-02-02 | [Go](matrices/0037-sudoku-solver.go)
+| 0037 | [Sudoku Solver](https://leetcode.com/problems/sudoku-solver/) | Hard | Array, Hash Table, Backtracking, Matrix | 2024-02-02 | [Go](backtracking/0037-sudoku-solver.go)
 | 0688 | [Knight Probability in Chessboard](https://leetcode.com/problems/knight-probability-in-chessboard/) | Medium | Dynamic Programming | 2024-02-01 | [Go](dp/0688-knight-probability-in-chessboard.go)
 | 0746 | [Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/) | Easy | Array, Dynamic Programming | 2024-01-31 | [Go](dp/0746-min-cost-climbing-stairs.go)
 | 0743 | [Network Delay Time](https://leetcode.com/problems/network-delay-time/) | Medium | Depth-First Search, Breadth-First Search, Graph, Heap (Priority Queue), Shortest Path | 2024-01-30 | [Go](graphs/0743-network-delay-time.go)

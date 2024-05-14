@@ -1,4 +1,4 @@
-package matrices
+package backtracking
 
 import (
 	"testing"
@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// go test -v -count=1 ./matrices/ -run ^TestSolveSudoku$
+// go test -v -count=1 ./backtracking/ -run ^TestSolveSudoku$
 func TestSolveSudoku(t *testing.T) {
 	for _, tc := range []struct {
 		board  [][]byte

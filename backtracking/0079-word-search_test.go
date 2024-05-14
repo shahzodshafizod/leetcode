@@ -1,4 +1,4 @@
-package matrices
+package backtracking
 
 import (
 	"testing"
@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// go test -v -count=1 ./matrices/ -run ^TestExist$
+// go test -v -count=1 ./backtracking/ -run ^TestExist$
 func TestExist(t *testing.T) {
 	for _, tc := range []struct {
 		board [][]byte

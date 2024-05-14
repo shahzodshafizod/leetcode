@@ -1,4 +1,4 @@
-package matrices
+package backtracking
 
 // https://leetcode.com/problems/word-search/
 
