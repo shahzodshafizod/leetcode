@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2812 | [Find the Safest Path in a Grid](https://leetcode.com/problems/find-the-safest-path-in-a-grid/) | Medium | Array, Binary Search, Breadth-First Search, Union Find, Matrix | 2024-05-15 | [Go](matrices/2812-find-the-safest-path-in-a-grid.go)
 | 1219 | [Path with Maximum Gold](https://leetcode.com/problems/path-with-maximum-gold/) | Medium | Array, Backtracking, Matrix | 2024-05-14 | [Go](backtracking/1219-path-with-maximum-gold.go)
 | 0861 | [Score After Flipping Matrix](https://leetcode.com/problems/score-after-flipping-matrix/) | Medium | Array, Greedy, Bit Manipulation, Matrix | 2024-05-13 | [Go](bits/0861-score-after-flipping-matrix.go)
 | 2373 | [Largest Local Values in a Matrix](https://leetcode.com/problems/largest-local-values-in-a-matrix/) | Easy | Array, Matrix | 2024-05-12 | [Go](matrices/2373-largest-local-values-in-a-matrix.go)
