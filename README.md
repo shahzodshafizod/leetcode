@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2331 | [Evaluate Boolean Binary Tree](https://leetcode.com/problems/evaluate-boolean-binary-tree/) | Easy | Tree, Depth-First Search, Binary Tree | 2024-05-16 | [Go](trees/2331-evaluate-boolean-binary-tree.go)
 | 2812 | [Find the Safest Path in a Grid](https://leetcode.com/problems/find-the-safest-path-in-a-grid/) | Medium | Array, Binary Search, Breadth-First Search, Union Find, Matrix | 2024-05-15 | [Go](matrices/2812-find-the-safest-path-in-a-grid.go)
 | 1219 | [Path with Maximum Gold](https://leetcode.com/problems/path-with-maximum-gold/) | Medium | Array, Backtracking, Matrix | 2024-05-14 | [Go](backtracking/1219-path-with-maximum-gold.go)
 | 0861 | [Score After Flipping Matrix](https://leetcode.com/problems/score-after-flipping-matrix/) | Medium | Array, Greedy, Bit Manipulation, Matrix | 2024-05-13 | [Go](bits/0861-score-after-flipping-matrix.go)
