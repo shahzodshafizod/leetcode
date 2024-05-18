@@ -3,9 +3,6 @@ package trees
 // https://leetcode.com/problems/delete-leaves-with-a-given-value/
 
 func removeLeafNodes(root *TreeNode, target int) *TreeNode {
-	if root == nil {
-		return nil
-	}
 	if root.Left != nil {
 		root.Left = removeLeafNodes(root.Left, target)
 	}
