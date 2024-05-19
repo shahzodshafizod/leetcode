@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3068 | [Find the Maximum Sum of Node Values](https://leetcode.com/problems/find-the-maximum-sum-of-node-values/) | Hard | Array, Dynamic Programming, Greedy, Bit Manipulation, Tree, Sorting | 2024-05-19 | [Go](dp/3068-find-the-maximum-sum-of-node-values.go)
 | 0979 | [Distribute Coins in Binary Tree](https://leetcode.com/problems/distribute-coins-in-binary-tree/) | Medium | Tree, Depth-First Search, Binary Tree | 2024-05-18 | [Go](trees/0979-distribute-coins-in-binary-tree.go)
 | 1325 | [Delete Leaves With a Given Value](https://leetcode.com/problems/delete-leaves-with-a-given-value/) | Medium | Tree, Depth-First Search, Binary Tree | 2024-05-17 | [Go](trees/1325-delete-leaves-with-a-given-value.go)
 | 2331 | [Evaluate Boolean Binary Tree](https://leetcode.com/problems/evaluate-boolean-binary-tree/) | Easy | Tree, Depth-First Search, Binary Tree | 2024-05-16 | [Go](trees/2331-evaluate-boolean-binary-tree.go)
