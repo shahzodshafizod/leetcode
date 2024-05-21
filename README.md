@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1982 | [Find Array Given Subset Sums](https://leetcode.com/problems/find-array-given-subset-sums/) | Hard | Array, Divide and Conquer | 2024-05-21 | [Go](arrays/1982-find-array-given-subset-sums.go)
 | 1863 | [Sum of All Subset XOR Totals](https://leetcode.com/problems/sum-of-all-subset-xor-totals/) | Easy | Array, Math, Backtracking, Bit Manipulation, Combinatorics, Enumeration | 2024-05-20 | [Go](bits/1863-sum-of-all-subset-xor-totals.go)
 | 3068 | [Find the Maximum Sum of Node Values](https://leetcode.com/problems/find-the-maximum-sum-of-node-values/) | Hard | Array, Dynamic Programming, Greedy, Bit Manipulation, Tree, Sorting | 2024-05-19 | [Go](dp/3068-find-the-maximum-sum-of-node-values.go)
 | 0979 | [Distribute Coins in Binary Tree](https://leetcode.com/problems/distribute-coins-in-binary-tree/) | Medium | Tree, Depth-First Search, Binary Tree | 2024-05-18 | [Go](trees/0979-distribute-coins-in-binary-tree.go)
