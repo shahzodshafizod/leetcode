@@ -8,7 +8,7 @@ import (
 
 func recoverArray(n int, sums []int) []int {
 	sort.Ints(sums)
-	var num int
+	var num, exclude int
 	var positive bool
 	var ans = make([]int, 0, n)
 	for length := len(sums); length >= 2; length = len(sums) {
@@ -21,7 +21,7 @@ func recoverArray(n int, sums []int) []int {
 		num = sums[length-1] - sums[length-2] // OR sums[1] - sums[0]
 		positive = false
 		for _, include := range sums {
-			var exclude = include - num
+			exclude = include - num
 			if count[include] > 0 && count[exclude] > 0 {
 				count[include]--
 				count[exclude]--
