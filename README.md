@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1255 | [Maximum Score Words Formed by Letters](https://leetcode.com/problems/maximum-score-words-formed-by-letters/) | Hard | Array, String, Dynamic Programming, Backtracking, Bit Manipulation, Bitmask | 2024-05-24 | [Go](backtracking/1255-maximum-score-words-formed-by-letters.go)
 | 2597 | [The Number of Beautiful Subsets](https://leetcode.com/problems/the-number-of-beautiful-subsets/) | Medium | Array, Dynamic Programming, Backtracking, Sorting | 2024-05-23 | [Go](backtracking/2597-the-number-of-beautiful-subsets.go)
 | 0131 | [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/) | Medium | String, Dynamic Programming, Backtracking | 2024-05-22 | [Go](backtracking/0131-palindrome-partitioning.go)
 | 1982 | [Find Array Given Subset Sums](https://leetcode.com/problems/find-array-given-subset-sums/) | Hard | Array, Divide and Conquer | 2024-05-21 | [Go](arrays/1982-find-array-given-subset-sums.go)

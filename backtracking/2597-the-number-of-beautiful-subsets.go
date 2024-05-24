@@ -8,20 +8,19 @@ import "sort"
 // space: O(n)
 func beautifulSubsets(nums []int, k int) int {
 	sort.Ints(nums)
-	var count = make(map[int][]int)
+	var groups = make(map[int][]int)
 	var mod int
 	for _, num := range nums {
 		mod = num % k
-		count[mod] = append(count[mod], num)
+		groups[mod] = append(groups[mod], num)
 	}
 	var subsets = 1
-	for _, group := range count {
+	for _, group := range groups {
 		var subset = 1
-		var dict = make(map[int]int)
+		var count = make(map[int]int)
 		for _, num := range group {
-			cnt := subset - dict[num-k]
-			subset += cnt
-			dict[num] += cnt
+			count[num] = subset - count[num-k]
+			subset += count[num]
 		}
 		subsets *= subset
 	}
