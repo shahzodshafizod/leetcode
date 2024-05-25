@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0140 | [Word Break II](https://leetcode.com/problems/word-break-ii/) | Hard | Array, Hash Table, String, Dynamic Programming, Backtracking, Trie, Memoization | 2024-05-25 | [Go](backtracking/0140-word-break-ii.go)
+| 0139 | [Word Break](https://leetcode.com/problems/word-break/) | Medium | Array, Hash Table, String, Dynamic Programming, Trie, Memoization | 2024-05-25 | [Go](dp/0139-word-break.go)
 | 1255 | [Maximum Score Words Formed by Letters](https://leetcode.com/problems/maximum-score-words-formed-by-letters/) | Hard | Array, String, Dynamic Programming, Backtracking, Bit Manipulation, Bitmask | 2024-05-24 | [Go](backtracking/1255-maximum-score-words-formed-by-letters.go)
 | 2597 | [The Number of Beautiful Subsets](https://leetcode.com/problems/the-number-of-beautiful-subsets/) | Medium | Array, Dynamic Programming, Backtracking, Sorting | 2024-05-23 | [Go](backtracking/2597-the-number-of-beautiful-subsets.go)
 | 0131 | [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/) | Medium | String, Dynamic Programming, Backtracking | 2024-05-22 | [Go](backtracking/0131-palindrome-partitioning.go)
