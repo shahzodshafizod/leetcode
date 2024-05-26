@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0552 | [Student Attendance Record II](https://leetcode.com/problems/student-attendance-record-ii/) | Hard | Dynamic Programming | 2024-05-26 | [Go](dp/0552-student-attendance-record-ii.go)
+| 0551 | [Student Attendance Record I](https://leetcode.com/problems/student-attendance-record-i/) | Easy | String | 2024-05-26 | [Go](strings/0551-student-attendance-record-i.go)
 | 0140 | [Word Break II](https://leetcode.com/problems/word-break-ii/) | Hard | Array, Hash Table, String, Dynamic Programming, Backtracking, Trie, Memoization | 2024-05-25 | [Go](backtracking/0140-word-break-ii.go)
 | 0139 | [Word Break](https://leetcode.com/problems/word-break/) | Medium | Array, Hash Table, String, Dynamic Programming, Trie, Memoization | 2024-05-25 | [Go](dp/0139-word-break.go)
 | 1255 | [Maximum Score Words Formed by Letters](https://leetcode.com/problems/maximum-score-words-formed-by-letters/) | Hard | Array, String, Dynamic Programming, Backtracking, Bit Manipulation, Bitmask | 2024-05-24 | [Go](backtracking/1255-maximum-score-words-formed-by-letters.go)
