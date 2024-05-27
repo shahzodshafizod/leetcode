@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1608 | [Special Array With X Elements Greater Than or Equal X](https://leetcode.com/problems/special-array-with-x-elements-greater-than-or-equal-x/) | Easy | Array, Binary Search, Sorting | 2024-05-27 | [Go](arrays/1608-special-array-with-x-elements-greater-than-or-equal-x.go)
 | 0552 | [Student Attendance Record II](https://leetcode.com/problems/student-attendance-record-ii/) | Hard | Dynamic Programming | 2024-05-26 | [Go](dp/0552-student-attendance-record-ii.go)
 | 0551 | [Student Attendance Record I](https://leetcode.com/problems/student-attendance-record-i/) | Easy | String | 2024-05-26 | [Go](strings/0551-student-attendance-record-i.go)
 | 0140 | [Word Break II](https://leetcode.com/problems/word-break-ii/) | Hard | Array, Hash Table, String, Dynamic Programming, Backtracking, Trie, Memoization | 2024-05-25 | [Go](backtracking/0140-word-break-ii.go)
