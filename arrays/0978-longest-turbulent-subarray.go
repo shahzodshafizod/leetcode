@@ -1,4 +1,4 @@
-package kadanes
+package arrays
 
 /*
 Convert the arr

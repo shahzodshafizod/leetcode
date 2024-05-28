@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1208 | [Get Equal Substrings Within Budget](https://leetcode.com/problems/get-equal-substrings-within-budget/) | Medium | String, Binary Search, Sliding Window, Prefix Sum | 2024-05-28 | [Go](slidingwindows/1208-get-equal-substrings-within-budget.go)
 | 1608 | [Special Array With X Elements Greater Than or Equal X](https://leetcode.com/problems/special-array-with-x-elements-greater-than-or-equal-x/) | Easy | Array, Binary Search, Sorting | 2024-05-27 | [Go](arrays/1608-special-array-with-x-elements-greater-than-or-equal-x.go)
 | 0552 | [Student Attendance Record II](https://leetcode.com/problems/student-attendance-record-ii/) | Hard | Dynamic Programming | 2024-05-26 | [Go](dp/0552-student-attendance-record-ii.go)
 | 0551 | [Student Attendance Record I](https://leetcode.com/problems/student-attendance-record-i/) | Easy | String | 2024-05-26 | [Go](strings/0551-student-attendance-record-i.go)
@@ -42,7 +43,7 @@
 | 0752 | [Open the Lock](https://leetcode.com/problems/open-the-lock/) | Medium | Array, Hash Table, String, Breadth-First Search | 2024-04-22 | [Go](hashes/0752-open-the-lock.go)
 | 1971 | [Find if Path Exists in Graph](https://leetcode.com/problems/find-if-path-exists-in-graph/) | Easy | Depth-First Search, Breadth-First Search, Union Find, Graph | 2024-04-21 | [Go](unionfinds/1971-find-if-path-exists-in-graph.go)
 | 1992 | [Find All Groups of Farmland](https://leetcode.com/problems/find-all-groups-of-farmland/) | Medium | Array, Depth-First Search, Breadth-First Search, Matrix | 2024-04-20 | [Go](matrices/1992-find-all-groups-of-farmland.go)
-| 0220 | [Contains Duplicate III](https://leetcode.com/problems/contains-duplicate-iii/) | Hard | Array, Sliding Window, Sorting, Bucket Sort, Ordered Set | 2024-04-19 | [Go](arrays/slidingwindows/0220-contains-duplicate-iii.go)
+| 0220 | [Contains Duplicate III](https://leetcode.com/problems/contains-duplicate-iii/) | Hard | Array, Sliding Window, Sorting, Bucket Sort, Ordered Set | 2024-04-19 | [Go](slidingwindows/0220-contains-duplicate-iii.go)
 | 0463 | [Island Perimeter](https://leetcode.com/problems/island-perimeter/) | Easy | Array, Depth-First Search, Breadth-First Search, Matrix | 2024-04-18 | [Go](matrices/0463-island-perimeter.go)
 | 0988 | [Smallest String Starting From Leaf](https://leetcode.com/problems/smallest-string-starting-from-leaf/) | Medium | String, Tree, Depth-First Search, Binary Tree | 2024-04-17 | [Go](trees/0988-smallest-string-starting-from-leaf.go)
 | 0623 | [Add One Row to Tree](https://leetcode.com/problems/add-one-row-to-tree/) | Medium | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 2024-04-16 | [Go](trees/0623-add-one-row-to-tree.go)
@@ -50,12 +51,12 @@
 | 0404 | [Sum of Left Leaves](https://leetcode.com/problems/sum-of-left-leaves/) | Easy | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 2024-04-14 | [Go](trees/0404-sum-of-left-leaves.go)
 | 0085 | [Maximal Rectangle](https://leetcode.com/problems/maximal-rectangle/) | Hard | Array, Dynamic Programming, Stack, Matrix, Monotonic Stack | 2024-04-13 | [Go](stacks/monotonic/0085-maximal-rectangle.go)
 | 0221 | [Maximal Square](https://leetcode.com/problems/maximal-square/) | Medium | Array, Dynamic Programming, Matrix | 2024-04-13 | [Go](dp/0221-maximal-square.go)
-| 0219 | [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/) | Easy | Array, Hash Table, Sliding Window | 2024-04-12 | [Go](arrays/slidingwindows/0219-contains-duplicate-ii.go)
+| 0219 | [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/) | Easy | Array, Hash Table, Sliding Window | 2024-04-12 | [Go](slidingwindows/0219-contains-duplicate-ii.go)
 | 0402 | [Remove K Digits](https://leetcode.com/problems/remove-k-digits/) | Medium | String, Stack, Greedy, Monotonic Stack | 2024-04-11 | [Go](stacks/monotonic/0402-remove-k-digits.go)
 | 0496 | [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/) | Easy | Array, Hash Table, Stack, Monotonic Stack | 2024-04-11 | [Go](stacks/monotonic/0496-next-greater-element-i.go)
 | 0950 | [Reveal Cards In Increasing Order](https://leetcode.com/problems/reveal-cards-in-increasing-order/) | Medium | Array, Queue, Sorting, Simulation | 2024-04-10 | [Go](queues/0950-reveal-cards-in-increasing-order.go)
 | 2073 | [Time Needed to Buy Tickets](https://leetcode.com/problems/time-needed-to-buy-tickets/) | Easy | Array, Queue, Simulation | 2024-04-09 | [Go](queues/2073-time-needed-to-buy-tickets.go)
-| 0978 | [Longest Turbulent Subarray](https://leetcode.com/problems/longest-turbulent-subarray/) | Medium | Array, Dynamic Programming, Sliding Window | 2024-04-08 | [Go](arrays/kadanes/0978-longest-turbulent-subarray.go)
+| 0978 | [Longest Turbulent Subarray](https://leetcode.com/problems/longest-turbulent-subarray/) | Medium | Array, Dynamic Programming, Sliding Window | 2024-04-08 | [Go](arrays/0978-longest-turbulent-subarray.go)
 | 0678 | [Valid Parenthesis String](https://leetcode.com/problems/valid-parenthesis-string/) | Medium | String, Dynamic Programming, Stack, Greedy | 2024-04-07 | [Go](stacks/0678-valid-parenthesis-string.go)
 | 0032 | [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/) | Hard | String, Dynamic Programming, Stack | 2024-04-06 | [Go](stacks/0032-longest-valid-parentheses.go)
 | 1544 | [Make The String Great](https://leetcode.com/problems/make-the-string-great/) | Easy | String, Stack | 2024-04-05 | [Go](stacks/1544-make-the-string-great.go)

@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// go test -v -count=1 ./arrays/slidingwindows/ -run ^TestContainsNearbyAlmostDuplicate$
+// go test -v -count=1 ./slidingwindows/ -run ^TestContainsNearbyAlmostDuplicate$
 func TestContainsNearbyAlmostDuplicate(t *testing.T) {
 	for _, tc := range []struct {
 		nums      []int

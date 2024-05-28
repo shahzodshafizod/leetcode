@@ -1,4 +1,4 @@
-package kadanes
+package arrays
 
 import (
 	"testing"
@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// go test -v -count=1 ./arrays/kadanes/ -run ^TestMaxTurbulenceSize$
+// go test -v -count=1 ./arrays/ -run ^TestMaxTurbulenceSize$
 func TestMaxTurbulenceSize(t *testing.T) {
 	for _, tc := range []struct {
 		arr []int
