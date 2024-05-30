@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1442 | [Count Triplets That Can Form Two Arrays of Equal XOR](https://leetcode.com/problems/count-triplets-that-can-form-two-arrays-of-equal-xor/) | Medium | Array, Hash Table, Math, Bit Manipulation, Prefix Sum | 2024-05-30 | [Go](bits/1442-count-triplets-that-can-form-two-arrays-of-equal-xor.go)
 | 1404 | [Number of Steps to Reduce a Number in Binary Representation to One](https://leetcode.com/problems/number-of-steps-to-reduce-a-number-in-binary-representation-to-one/) | Medium | String, Bit Manipulation | 2024-05-29 | [Go](bits/1404-number-of-steps-to-reduce-a-number-in-binary-representation-to-one.go)
 | 1208 | [Get Equal Substrings Within Budget](https://leetcode.com/problems/get-equal-substrings-within-budget/) | Medium | String, Binary Search, Sliding Window, Prefix Sum | 2024-05-28 | [Go](slidingwindows/1208-get-equal-substrings-within-budget.go)
 | 1608 | [Special Array With X Elements Greater Than or Equal X](https://leetcode.com/problems/special-array-with-x-elements-greater-than-or-equal-x/) | Easy | Array, Binary Search, Sorting | 2024-05-27 | [Go](arrays/1608-special-array-with-x-elements-greater-than-or-equal-x.go)
