@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0392 | [Is Subsequence](https://leetcode.com/problems/is-subsequence/) | Easy | Two Pointers, String, Dynamic Programming | 2024-06-03 | [Go](dp/0392-is-subsequence.go)
+| 2486 | [Append Characters to String to Make Subsequence](https://leetcode.com/problems/append-characters-to-string-to-make-subsequence/) | Medium | Two Pointers, String, Greedy | 2024-06-03 | [Go](greedy/2486-append-characters-to-string-to-make-subsequence.go)
 | 0344 | [Reverse String](https://leetcode.com/problems/reverse-string/) | Easy | Two Pointers, String | 2024-06-02 | [Go](strings/0344-reverse-string.go)
 | 3110 | [Score of a String](https://leetcode.com/problems/score-of-a-string/) | Easy | String | 2024-06-01 | [Go](strings/3110-score-of-a-string.go)
 | 0260 | [Single Number III](https://leetcode.com/problems/single-number-iii/) | Medium | Array, Bit Manipulation | 2024-05-31 | [Go](bits/0260-single-number-iii.go)
