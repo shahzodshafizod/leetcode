@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0350 | [Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/) | Easy | Array, Hash Table, Two Pointers, Binary Search, Sorting | 2024-06-05 | [Go](hashes/0350-intersection-of-two-arrays-ii.go)
+| 1002 | [Find Common Characters](https://leetcode.com/problems/find-common-characters/) | Easy | Array, Hash Table, String | 2024-06-05 | [Go](hashes/1002-find-common-characters.go)
 | 0409 | [Longest Palindrome](https://leetcode.com/problems/longest-palindrome/) | Easy | Hash Table, String, Greedy | 2024-06-04 | [Go](greedy/0409-longest-palindrome.go)
 | 0392 | [Is Subsequence](https://leetcode.com/problems/is-subsequence/) | Easy | Two Pointers, String, Dynamic Programming | 2024-06-03 | [Go](dp/0392-is-subsequence.go)
 | 2486 | [Append Characters to String to Make Subsequence](https://leetcode.com/problems/append-characters-to-string-to-make-subsequence/) | Medium | Two Pointers, String, Greedy | 2024-06-03 | [Go](greedy/2486-append-characters-to-string-to-make-subsequence.go)
