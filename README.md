@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0846 | [Hand of Straights](https://leetcode.com/problems/hand-of-straights/) | Medium | Array, Hash Table, Greedy, Sorting | 2024-06-06 | [Go](greedy/0846-hand-of-straights.go)
 | 0350 | [Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/) | Easy | Array, Hash Table, Two Pointers, Binary Search, Sorting | 2024-06-05 | [Go](hashes/0350-intersection-of-two-arrays-ii.go)
 | 1002 | [Find Common Characters](https://leetcode.com/problems/find-common-characters/) | Easy | Array, Hash Table, String | 2024-06-05 | [Go](hashes/1002-find-common-characters.go)
 | 0409 | [Longest Palindrome](https://leetcode.com/problems/longest-palindrome/) | Easy | Hash Table, String, Greedy | 2024-06-04 | [Go](greedy/0409-longest-palindrome.go)
