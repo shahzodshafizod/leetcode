@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0648 | [Replace Words](https://leetcode.com/problems/replace-words/) | Medium | Array, Hash Table, String, Trie | 2024-06-07 | [Go](tries/0648-replace-words.go)
 | 0846 | [Hand of Straights](https://leetcode.com/problems/hand-of-straights/) | Medium | Array, Hash Table, Greedy, Sorting | 2024-06-06 | [Go](greedy/0846-hand-of-straights.go)
 | 0350 | [Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/) | Easy | Array, Hash Table, Two Pointers, Binary Search, Sorting | 2024-06-05 | [Go](hashes/0350-intersection-of-two-arrays-ii.go)
 | 1002 | [Find Common Characters](https://leetcode.com/problems/find-common-characters/) | Easy | Array, Hash Table, String | 2024-06-05 | [Go](hashes/1002-find-common-characters.go)
