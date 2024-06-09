@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0974 | [Subarray Sums Divisible by K](https://leetcode.com/problems/subarray-sums-divisible-by-k/) | Medium | Array, Hash Table, Prefix Sum | 2024-06-09 | [Go](hashes/0974-subarray-sums-divisible-by-k.go)
 | 0523 | [Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/) | Medium | Array, Hash Table, Math, Prefix Sum | 2024-06-08 | [Go](hashes/0523-continuous-subarray-sum.go)
 | 0648 | [Replace Words](https://leetcode.com/problems/replace-words/) | Medium | Array, Hash Table, String, Trie | 2024-06-07 | [Go](tries/0648-replace-words.go)
 | 0846 | [Hand of Straights](https://leetcode.com/problems/hand-of-straights/) | Medium | Array, Hash Table, Greedy, Sorting | 2024-06-06 | [Go](greedy/0846-hand-of-straights.go)
