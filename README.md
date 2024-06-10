@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1051 | [Height Checker](https://leetcode.com/problems/height-checker/) | Easy | Array, Sorting, Counting Sort | 2024-06-10 | [Go](arrays/1051-height-checker.go)
 | 0974 | [Subarray Sums Divisible by K](https://leetcode.com/problems/subarray-sums-divisible-by-k/) | Medium | Array, Hash Table, Prefix Sum | 2024-06-09 | [Go](hashes/0974-subarray-sums-divisible-by-k.go)
 | 0523 | [Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/) | Medium | Array, Hash Table, Math, Prefix Sum | 2024-06-08 | [Go](hashes/0523-continuous-subarray-sum.go)
 | 0648 | [Replace Words](https://leetcode.com/problems/replace-words/) | Medium | Array, Hash Table, String, Trie | 2024-06-07 | [Go](tries/0648-replace-words.go)
