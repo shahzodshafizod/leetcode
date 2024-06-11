@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1122 | [Relative Sort Array](https://leetcode.com/problems/relative-sort-array/) | Easy | Array, Hash Table, Sorting, Counting Sort | 2024-06-11 | [Go](arrays/1122-relative-sort-array.go)
 | 1051 | [Height Checker](https://leetcode.com/problems/height-checker/) | Easy | Array, Sorting, Counting Sort | 2024-06-10 | [Go](arrays/1051-height-checker.go)
 | 0974 | [Subarray Sums Divisible by K](https://leetcode.com/problems/subarray-sums-divisible-by-k/) | Medium | Array, Hash Table, Prefix Sum | 2024-06-09 | [Go](hashes/0974-subarray-sums-divisible-by-k.go)
 | 0523 | [Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/) | Medium | Array, Hash Table, Math, Prefix Sum | 2024-06-08 | [Go](hashes/0523-continuous-subarray-sum.go)
