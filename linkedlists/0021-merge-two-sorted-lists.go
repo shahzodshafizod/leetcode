@@ -20,8 +20,8 @@ package linkedlists
 
 // space: O(1)
 func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
-	var head = &ListNode{} // to escape "if tail != nil"
-	var tail = head
+	var dummy = &ListNode{} // to escape "if tail != nil"
+	var tail = dummy
 	for list1 != nil && list2 != nil {
 		if list1.Val < list2.Val {
 			tail.Next = list1
@@ -31,7 +31,6 @@ func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
 			list2 = list2.Next
 		}
 		tail = tail.Next
-		tail.Next = nil
 	}
 	if list1 != nil {
 		tail.Next = list1
@@ -39,5 +38,5 @@ func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
 	if list2 != nil {
 		tail.Next = list2
 	}
-	return head.Next
+	return dummy.Next
 }

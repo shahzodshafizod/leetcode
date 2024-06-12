@@ -1,5 +1,7 @@
 package arrays
 
+import "slices"
+
 // Sorting Algorithms Dance
 // https://www.youtube.com/user/AlgoRythmics/videos
 
@@ -29,8 +31,9 @@ func bubleSort(array []int) []int {
 // time: O(N^2)
 // space: O(1)
 func selectionSort(array []int) []int {
+	var min int
 	for i, len := 0, len(array); i < len-1; i++ {
-		var min = i
+		min = i
 		for j := i + 1; j < len; j++ {
 			if array[j] < array[min] {
 				min = j
@@ -60,7 +63,8 @@ func insertionSort(array []int) []int {
 // time: O(N+N) -> O(N)
 // space: O(k) -> O(1)
 // works for [0;k]
-func bucketSort(array []int, k int) []int {
+func bucketSort(array []int) []int {
+	var k = slices.Max(array)
 	var buckets = make([]int, k+1)
 	for _, num := range array { // O(N)
 		buckets[num]++
@@ -116,29 +120,28 @@ func merge(array1 []int, array2 []int) []int {
 // time: O(N^2), is sorted; else O(N*Log(N))
 // space: O(Log(N))
 func quickSort(array []int) []int {
-	quickSortRecur(array, 0, len(array)-1)
-	return array
-}
-
-func quickSortRecur(array []int, left int, right int) {
-	if left < right {
-		mid := partition(array, left, right)
-		quickSortRecur(array, left, mid-1)
-		quickSortRecur(array, mid+1, right)
+	var partition = func(array []int, left int, right int) int {
+		var pivot = array[right]
+		var mid = left
+		for i := left; i < right; i++ {
+			if array[i] < pivot {
+				array[i], array[mid] = array[mid], array[i]
+				mid++
+			}
+		}
+		array[right], array[mid] = array[mid], array[right]
+		return mid
 	}
-}
-
-func partition(array []int, left int, right int) int {
-	var pivot = array[right]
-	var mid = left
-	for i := left; i < right; i++ {
-		if array[i] < pivot {
-			array[i], array[mid] = array[mid], array[i]
-			mid++
+	var quickSortRecur func(array []int, left int, right int)
+	quickSortRecur = func(array []int, left int, right int) {
+		if left < right {
+			mid := partition(array, left, right)
+			quickSortRecur(array, left, mid-1)
+			quickSortRecur(array, mid+1, right)
 		}
 	}
-	array[right], array[mid] = array[mid], array[right]
-	return mid
+	quickSortRecur(array, 0, len(array)-1)
+	return array
 }
 
 // 3. Tree Sort
