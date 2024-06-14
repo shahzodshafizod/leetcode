@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0945 | [Minimum Increment to Make Array Unique](https://leetcode.com/problems/minimum-increment-to-make-array-unique/) | Medium | Array, Greedy, Sorting, Counting | 2024-06-14 | [Go](greedy/0945-minimum-increment-to-make-array-unique.go)
 | 2037 | [Minimum Number of Moves to Seat Everyone](https://leetcode.com/problems/minimum-number-of-moves-to-seat-everyone/) | Easy | Array, Greedy, Sorting | 2024-06-13 | [Go](greedy/2037-minimum-number-of-moves-to-seat-everyone.go)
 | 0148 | [Sort List](https://leetcode.com/problems/sort-list/) | Medium | Linked List, Two Pointers, Divide and Conquer, Sorting, Merge Sort | 2024-06-12 | [Go](linkedlists/0148-sort-list.go)
 | 1122 | [Relative Sort Array](https://leetcode.com/problems/relative-sort-array/) | Easy | Array, Hash Table, Sorting, Counting Sort | 2024-06-11 | [Go](arrays/1122-relative-sort-array.go)
