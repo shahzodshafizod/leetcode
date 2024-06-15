@@ -4,10 +4,10 @@ import "slices"
 
 // https://leetcode.com/problems/minimum-increment-to-make-array-unique/
 
-// n = len(nums)
-// max = max(nums)
-// time: O(n + max)
-// space: O(n + max)
+// N = len(nums)
+// Len = n + max(nums)
+// time: O(N)
+// space: O(Len)
 func minIncrementForUnique(nums []int) int {
 	var len = len(nums) + slices.Max(nums)
 	var count = make([]int, len)
@@ -15,7 +15,7 @@ func minIncrementForUnique(nums []int) int {
 		count[num]++
 	}
 	var moves = 0
-	for num := 0; num < len; num++ { // O(n + max)
+	for num := 0; num < len; num++ { // O(len)
 		if count[num] > 1 {
 			moves += count[num] - 1
 			count[num+1] += count[num] - 1
