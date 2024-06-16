@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0330 | [Patching Array](https://leetcode.com/problems/patching-array/) | Hard | Array, Greedy | 2024-06-16 | [Go](greedy/0330-patching-array.go)
 | 0502 | [IPO](https://leetcode.com/problems/ipo/) | Hard | Array, Greedy, Sorting, Heap (Priority Queue) | 2024-06-15 | [Go](greedy/0502-ipo.go)
 | 0945 | [Minimum Increment to Make Array Unique](https://leetcode.com/problems/minimum-increment-to-make-array-unique/) | Medium | Array, Greedy, Sorting, Counting | 2024-06-14 | [Go](greedy/0945-minimum-increment-to-make-array-unique.go)
 | 2037 | [Minimum Number of Moves to Seat Everyone](https://leetcode.com/problems/minimum-number-of-moves-to-seat-everyone/) | Easy | Array, Greedy, Sorting | 2024-06-13 | [Go](greedy/2037-minimum-number-of-moves-to-seat-everyone.go)
