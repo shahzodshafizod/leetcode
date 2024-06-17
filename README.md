@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0633 | [Sum of Square Numbers](https://leetcode.com/problems/sum-of-square-numbers/) | Medium | Math, Two Pointers, Binary Search | 2024-06-17 | [Go](math/0633-sum-of-square-numbers.go)
 | 0330 | [Patching Array](https://leetcode.com/problems/patching-array/) | Hard | Array, Greedy | 2024-06-16 | [Go](greedy/0330-patching-array.go)
 | 0502 | [IPO](https://leetcode.com/problems/ipo/) | Hard | Array, Greedy, Sorting, Heap (Priority Queue) | 2024-06-15 | [Go](greedy/0502-ipo.go)
 | 0945 | [Minimum Increment to Make Array Unique](https://leetcode.com/problems/minimum-increment-to-make-array-unique/) | Medium | Array, Greedy, Sorting, Counting | 2024-06-14 | [Go](greedy/0945-minimum-increment-to-make-array-unique.go)
