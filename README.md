@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1482 | [Minimum Number of Days to Make m Bouquets](https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/) | Medium | Array, Binary Search | 2024-06-19 | [Go](arrays/1482-minimum-number-of-days-to-make-m-bouquets.go)
 | 0826 | [Most Profit Assigning Work](https://leetcode.com/problems/most-profit-assigning-work/) | Medium | Array, Two Pointers, Binary Search, Greedy, Sorting | 2024-06-18 | [Go](greedy/0826-most-profit-assigning-work.go)
 | 0633 | [Sum of Square Numbers](https://leetcode.com/problems/sum-of-square-numbers/) | Medium | Math, Two Pointers, Binary Search | 2024-06-17 | [Go](math/0633-sum-of-square-numbers.go)
 | 0330 | [Patching Array](https://leetcode.com/problems/patching-array/) | Hard | Array, Greedy | 2024-06-16 | [Go](greedy/0330-patching-array.go)
