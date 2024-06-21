@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1052 | [Grumpy Bookstore Owner](https://leetcode.com/problems/grumpy-bookstore-owner/) | Medium | Array, Sliding Window | 2024-06-21 | [Go](slidingwindows/1052-grumpy-bookstore-owner.go)
 | 1552 | [Magnetic Force Between Two Balls](https://leetcode.com/problems/magnetic-force-between-two-balls/) | Medium | Array, Binary Search, Sorting | 2024-06-20 | [Go](arrays/1552-magnetic-force-between-two-balls.go)
 | 1482 | [Minimum Number of Days to Make m Bouquets](https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/) | Medium | Array, Binary Search | 2024-06-19 | [Go](arrays/1482-minimum-number-of-days-to-make-m-bouquets.go)
 | 0826 | [Most Profit Assigning Work](https://leetcode.com/problems/most-profit-assigning-work/) | Medium | Array, Two Pointers, Binary Search, Greedy, Sorting | 2024-06-18 | [Go](greedy/0826-most-profit-assigning-work.go)
