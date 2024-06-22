@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1248 | [Count Number of Nice Subarrays](https://leetcode.com/problems/count-number-of-nice-subarrays/) | Medium | Array, Hash Table, Math, Sliding Window | 2024-06-22 | [Go](slidingwindows/1248-count-number-of-nice-subarrays.go)
 | 1052 | [Grumpy Bookstore Owner](https://leetcode.com/problems/grumpy-bookstore-owner/) | Medium | Array, Sliding Window | 2024-06-21 | [Go](slidingwindows/1052-grumpy-bookstore-owner.go)
 | 1552 | [Magnetic Force Between Two Balls](https://leetcode.com/problems/magnetic-force-between-two-balls/) | Medium | Array, Binary Search, Sorting | 2024-06-20 | [Go](arrays/1552-magnetic-force-between-two-balls.go)
 | 1482 | [Minimum Number of Days to Make m Bouquets](https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/) | Medium | Array, Binary Search | 2024-06-19 | [Go](arrays/1482-minimum-number-of-days-to-make-m-bouquets.go)

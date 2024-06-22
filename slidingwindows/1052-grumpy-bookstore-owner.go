@@ -14,11 +14,11 @@ func maxSatisfied(customers []int, grumpy []int, minutes int) int {
 		} else {
 			satisfied += customers[end]
 		}
-		if end-start >= minutes {
+		if end-start+1 == minutes {
+			maxWindow = max(maxWindow, window)
 			window -= grumpy[start] * customers[start]
 			start++
 		}
-		maxWindow = max(maxWindow, window)
 	}
 	return satisfied + maxWindow
 }
