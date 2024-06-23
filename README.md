@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1438 | [Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit](https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/) | Medium | Array, Queue, Sliding Window, Heap (Priority Queue), Ordered Set, Monotonic Queue | 2024-06-23 | [Go](slidingwindows/1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit.go)
 | 1248 | [Count Number of Nice Subarrays](https://leetcode.com/problems/count-number-of-nice-subarrays/) | Medium | Array, Hash Table, Math, Sliding Window | 2024-06-22 | [Go](slidingwindows/1248-count-number-of-nice-subarrays.go)
 | 1052 | [Grumpy Bookstore Owner](https://leetcode.com/problems/grumpy-bookstore-owner/) | Medium | Array, Sliding Window | 2024-06-21 | [Go](slidingwindows/1052-grumpy-bookstore-owner.go)
 | 1552 | [Magnetic Force Between Two Balls](https://leetcode.com/problems/magnetic-force-between-two-balls/) | Medium | Array, Binary Search, Sorting | 2024-06-20 | [Go](arrays/1552-magnetic-force-between-two-balls.go)
