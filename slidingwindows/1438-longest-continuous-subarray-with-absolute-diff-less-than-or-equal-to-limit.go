@@ -98,24 +98,21 @@ func longestSubarray(nums []int, limit int) int {
 // // space: O(1)
 // func longestSubarray(nums []int, limit int) int {
 // 	var size = 0
-// 	var start = 0
-// 	for end := range nums { // O(n)
-// 		for start < end {
-// 			var mi, ma = start, start
-// 			for idx := start + 1; idx <= end; idx++ { // O(n)
-// 				if nums[idx] < nums[mi] {
-// 					mi = idx
-// 				}
-// 				if nums[idx] > nums[ma] {
-// 					ma = idx
-// 				}
+// 	var minidx, maxidx, end int
+// 	for start, n := 0, len(nums); start < n; start++ { // O(n)
+// 		minidx, maxidx = start, start
+// 		for end = start + 1; end < n; end++ { // O(n)
+// 			if nums[end] < nums[minidx] {
+// 				minidx = end
 // 			}
-// 			if nums[ma]-nums[mi] <= limit {
+// 			if nums[end] > nums[maxidx] {
+// 				maxidx = end
+// 			}
+// 			if nums[maxidx]-nums[minidx] > limit {
 // 				break
 // 			}
-// 			start = min(mi, ma) + 1
 // 		}
-// 		size = max(size, end-start+1)
+// 		size = max(size, end-start)
 // 	}
 // 	return size
 // }
