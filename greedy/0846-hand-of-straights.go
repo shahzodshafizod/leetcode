@@ -1,6 +1,9 @@
 package greedy
 
 /*
+Note: This question is the same as 1296:
+https://leetcode.com/problems/divide-array-in-sets-of-k-consecutive-numbers/
+
 Key Observations:
 - If the total number of cards is not divisible by groupSize,
 	it's impossible to rearrange the cards into the desired groups.

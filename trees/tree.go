@@ -57,6 +57,32 @@ func traversalDFSInOrder(root *TreeNode) []int {
 	return values
 }
 
+func traversalMorris(root *TreeNode) []int {
+	var values = make([]int, 0)
+	var prev *TreeNode
+	var curr = root
+	for curr != nil {
+		if curr.Left == nil {
+			values = append(values, curr.Val)
+			curr = curr.Right
+		} else {
+			prev = curr.Left
+			for prev.Right != nil && prev.Right != curr {
+				prev = prev.Right
+			}
+			if prev.Right == curr {
+				prev.Right = nil
+				values = append(values, curr.Val)
+				curr = curr.Right
+			} else {
+				prev.Right = curr
+				curr = curr.Left
+			}
+		}
+	}
+	return values
+}
+
 // Definition for a n-ary tree node.
 type Node struct {
 	Val      int

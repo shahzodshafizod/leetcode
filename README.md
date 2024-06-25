@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1038 | [Binary Search Tree to Greater Sum Tree](https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/) | Medium | Tree, Depth-First Search, Binary Search Tree, Binary Tree | 2024-06-25 | [Go](trees/1038-binary-search-tree-to-greater-sum-tree.go)
 | 0995 | [Minimum Number of K Consecutive Bit Flips](https://leetcode.com/problems/minimum-number-of-k-consecutive-bit-flips/) | Hard | Array, Bit Manipulation, Queue, Sliding Window, Prefix Sum | 2024-06-24 | [Go](slidingwindows/0995-minimum-number-of-k-consecutive-bit-flips.go)
 | 1438 | [Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit](https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/) | Medium | Array, Queue, Sliding Window, Heap (Priority Queue), Ordered Set, Monotonic Queue | 2024-06-23 | [Go](slidingwindows/1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit.go)
 | 1248 | [Count Number of Nice Subarrays](https://leetcode.com/problems/count-number-of-nice-subarrays/) | Medium | Array, Hash Table, Math, Sliding Window | 2024-06-22 | [Go](slidingwindows/1248-count-number-of-nice-subarrays.go)
