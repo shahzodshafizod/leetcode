@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1791 | [Find Center of Star Graph](https://leetcode.com/problems/find-center-of-star-graph/) | Easy | Graph | 2024-06-27 | [Go](graphs/1791-find-center-of-star-graph.go)
 | 1382 | [Balance a Binary Search Tree](https://leetcode.com/problems/balance-a-binary-search-tree/) | Medium | Divide and Conquer, Greedy, Tree, Depth-First Search, Binary Search Tree, Binary Tree | 2024-06-26 | [Go](trees/1382-balance-a-binary-search-tree.go)
 | 1038 | [Binary Search Tree to Greater Sum Tree](https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/) | Medium | Tree, Depth-First Search, Binary Search Tree, Binary Tree | 2024-06-25 | [Go](trees/1038-binary-search-tree-to-greater-sum-tree.go)
 | 0995 | [Minimum Number of K Consecutive Bit Flips](https://leetcode.com/problems/minimum-number-of-k-consecutive-bit-flips/) | Hard | Array, Bit Manipulation, Queue, Sliding Window, Prefix Sum | 2024-06-24 | [Go](slidingwindows/0995-minimum-number-of-k-consecutive-bit-flips.go)
