@@ -5,8 +5,8 @@ import "slices"
 // https://leetcode.com/problems/maximum-total-importance-of-roads/
 
 // Approach #2: Counting (Bucket) Sorting
-// R = len(roads)
-// time: O(R+3N) = O(R+N)
+// R = len(roads) = N^2
+// time: O(R+3N) = O(R+N) = O(N^2)
 // space: O(2N) = O(N)
 func maximumImportance(n int, roads [][]int) int64 {
 	var degrees = make([]int, n)
@@ -31,8 +31,8 @@ func maximumImportance(n int, roads [][]int) int64 {
 }
 
 // // Approach #1: Sorting + Greedy
-// // R = len(roads)
-// // time: O(2R+NLogN) = O(R+NLogN)
+// // R = len(roads) = N^2
+// // time: O(2R+NLogN) = O(R+NLogN) = O(N^2)
 // // space: O(N)
 // func maximumImportance(n int, roads [][]int) int64 {
 // 	var degrees = make([]int, n)

@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2192 | [All Ancestors of a Node in a Directed Acyclic Graph](https://leetcode.com/problems/all-ancestors-of-a-node-in-a-directed-acyclic-graph/) | Medium | Depth-First Search, Breadth-First Search, Graph, Topological Sort | 2024-06-29 | [Go](graphs/2192-all-ancestors-of-a-node-in-a-directed-acyclic-graph.go)
 | 2285 | [Maximum Total Importance of Roads](https://leetcode.com/problems/maximum-total-importance-of-roads/) | Medium | Greedy, Graph, Sorting, Heap (Priority Queue) | 2024-06-28 | [Go](graphs/2285-maximum-total-importance-of-roads.go)
 | 1791 | [Find Center of Star Graph](https://leetcode.com/problems/find-center-of-star-graph/) | Easy | Graph | 2024-06-27 | [Go](graphs/1791-find-center-of-star-graph.go)
 | 1382 | [Balance a Binary Search Tree](https://leetcode.com/problems/balance-a-binary-search-tree/) | Medium | Divide and Conquer, Greedy, Tree, Depth-First Search, Binary Search Tree, Binary Tree | 2024-06-26 | [Go](trees/1382-balance-a-binary-search-tree.go)
