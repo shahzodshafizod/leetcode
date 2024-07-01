@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1550 | [Three Consecutive Odds](https://leetcode.com/problems/three-consecutive-odds/) | Easy | Array | 2024-07-01 | [Go](arrays/1550-three-consecutive-odds.go)
+| 1579 | [Remove Max Number of Edges to Keep Graph Fully Traversable](https://leetcode.com/problems/remove-max-number-of-edges-to-keep-graph-fully-traversable/) | Hard | Union Find, Graph | 2024-06-30 | [Go](unionfinds/1579-remove-max-number-of-edges-to-keep-graph-fully-traversable.go)
 | 2192 | [All Ancestors of a Node in a Directed Acyclic Graph](https://leetcode.com/problems/all-ancestors-of-a-node-in-a-directed-acyclic-graph/) | Medium | Depth-First Search, Breadth-First Search, Graph, Topological Sort | 2024-06-29 | [Go](graphs/2192-all-ancestors-of-a-node-in-a-directed-acyclic-graph.go)
 | 2285 | [Maximum Total Importance of Roads](https://leetcode.com/problems/maximum-total-importance-of-roads/) | Medium | Greedy, Graph, Sorting, Heap (Priority Queue) | 2024-06-28 | [Go](graphs/2285-maximum-total-importance-of-roads.go)
 | 1791 | [Find Center of Star Graph](https://leetcode.com/problems/find-center-of-star-graph/) | Easy | Graph | 2024-06-27 | [Go](graphs/1791-find-center-of-star-graph.go)
