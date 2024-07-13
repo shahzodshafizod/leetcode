@@ -2,6 +2,18 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2751 | [Robot Collisions](https://leetcode.com/problems/robot-collisions/) | Hard | Array, Stack, Sorting, Simulation | 2024-07-13 | [Go](stacks/2751-robot-collisions.go)
+| 1717 | [Maximum Score From Removing Substrings](https://leetcode.com/problems/maximum-score-from-removing-substrings/) | Medium | String, Stack, Greedy | 2024-07-12 | [Go](stacks/1717-maximum-score-from-removing-substrings.go)
+| 1190 | [Reverse Substrings Between Each Pair of Parentheses](https://leetcode.com/problems/reverse-substrings-between-each-pair-of-parentheses/) | Medium | String, Stack | 2024-07-11 | [Go](stacks/1190-reverse-substrings-between-each-pair-of-parentheses.go)
+| 1598 | [Crawler Log Folder](https://leetcode.com/problems/crawler-log-folder/) | Easy | Array, String, Stack | 2024-07-10 | [Go](stacks/1598-crawler-log-folder.go)
+| 1701 | [Average Waiting Time](https://leetcode.com/problems/average-waiting-time/) | Medium | Array, Simulation | 2024-07-09 | [Go](arrays/1701-average-waiting-time.go)
+| 1823 | [Find the Winner of the Circular Game](https://leetcode.com/problems/find-the-winner-of-the-circular-game/) | Medium | Array, Math, Recursion, Queue, Simulation | 2024-07-08 | [Go](queues/1823-find-the-winner-of-the-circular-game.go)
+| 1518 | [Water Bottles](https://leetcode.com/problems/water-bottles/) | Easy | Math, Simulation | 2024-07-07 | [Go](math/1518-water-bottles.go)
+| 2582 | [Pass the Pillow](https://leetcode.com/problems/pass-the-pillow/) | Easy | Math, Simulation | 2024-07-06 | [Go](math/2582-pass-the-pillow.go)
+| 2058 | [Find the Minimum and Maximum Number of Nodes Between Critical Points](https://leetcode.com/problems/find-the-minimum-and-maximum-number-of-nodes-between-critical-points/) | Medium | Linked List | 2024-07-05 | [Go](linkedlists/2058-find-the-minimum-and-maximum-number-of-nodes-between-critical-points.go)
+| 2181 | [Merge Nodes in Between Zeros](https://leetcode.com/problems/merge-nodes-in-between-zeros/) | Medium | Linked List, Simulation | 2024-07-04 | [Go](linkedlists/2181-merge-nodes-in-between-zeros.go)
+| 1509 | [Minimum Difference Between Largest and Smallest Value in Three Moves](https://leetcode.com/problems/minimum-difference-between-largest-and-smallest-value-in-three-moves/) | Medium | Array, Greedy, Sorting | 2024-07-03 | [Go](greedy/1509-minimum-difference-between-largest-and-smallest-value-in-three-moves.go)
+| 2215 | [Find the Difference of Two Arrays](https://leetcode.com/problems/find-the-difference-of-two-arrays/) | Easy | Array, Hash Table | 2024-07-02 | [Go](arrays/2215-find-the-difference-of-two-arrays.go)
 | 1550 | [Three Consecutive Odds](https://leetcode.com/problems/three-consecutive-odds/) | Easy | Array | 2024-07-01 | [Go](arrays/1550-three-consecutive-odds.go)
 | 1579 | [Remove Max Number of Edges to Keep Graph Fully Traversable](https://leetcode.com/problems/remove-max-number-of-edges-to-keep-graph-fully-traversable/) | Hard | Union Find, Graph | 2024-06-30 | [Go](unionfinds/1579-remove-max-number-of-edges-to-keep-graph-fully-traversable.go)
 | 2192 | [All Ancestors of a Node in a Directed Acyclic Graph](https://leetcode.com/problems/all-ancestors-of-a-node-in-a-directed-acyclic-graph/) | Medium | Depth-First Search, Breadth-First Search, Graph, Topological Sort | 2024-06-29 | [Go](graphs/2192-all-ancestors-of-a-node-in-a-directed-acyclic-graph.go)

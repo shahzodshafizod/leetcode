@@ -3,7 +3,7 @@ package design
 type Stack[T any] interface {
 	Push(T)
 	Pop() T
-	Peek() T
+	Top() T
 	Empty() bool
 	Size() int
 }
@@ -32,7 +32,7 @@ func (s *stack[T]) Pop() T {
 	return val
 }
 
-func (s *stack[T]) Peek() T {
+func (s *stack[T]) Top() T {
 	var val T
 	if !s.Empty() {
 		val = s.top.val

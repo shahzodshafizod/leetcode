@@ -36,7 +36,7 @@ func TestStack(t *testing.T) {
 		case "Pop":
 			output = stack.Pop()
 		case "Peek":
-			output = stack.Peek()
+			output = stack.Top()
 		case "Empty":
 			output = stack.Empty()
 		case "Size":
