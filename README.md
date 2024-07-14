@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0726 | [Number of Atoms](https://leetcode.com/problems/number-of-atoms/) | Hard | Hash Table, String, Stack, Sorting | 2024-07-14 | [Go](stacks/0726-number-of-atoms.go)
 | 2751 | [Robot Collisions](https://leetcode.com/problems/robot-collisions/) | Hard | Array, Stack, Sorting, Simulation | 2024-07-13 | [Go](stacks/2751-robot-collisions.go)
 | 1717 | [Maximum Score From Removing Substrings](https://leetcode.com/problems/maximum-score-from-removing-substrings/) | Medium | String, Stack, Greedy | 2024-07-12 | [Go](stacks/1717-maximum-score-from-removing-substrings.go)
 | 1190 | [Reverse Substrings Between Each Pair of Parentheses](https://leetcode.com/problems/reverse-substrings-between-each-pair-of-parentheses/) | Medium | String, Stack | 2024-07-11 | [Go](stacks/1190-reverse-substrings-between-each-pair-of-parentheses.go)
