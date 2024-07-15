@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2196 | [Create Binary Tree From Descriptions](https://leetcode.com/problems/create-binary-tree-from-descriptions/) | Medium | Array, Hash Table, Tree, Binary Tree | 2024-07-15 | [Go](trees/2196-create-binary-tree-from-descriptions.go)
 | 0726 | [Number of Atoms](https://leetcode.com/problems/number-of-atoms/) | Hard | Hash Table, String, Stack, Sorting | 2024-07-14 | [Go](stacks/0726-number-of-atoms.go)
 | 2751 | [Robot Collisions](https://leetcode.com/problems/robot-collisions/) | Hard | Array, Stack, Sorting, Simulation | 2024-07-13 | [Go](stacks/2751-robot-collisions.go)
 | 1717 | [Maximum Score From Removing Substrings](https://leetcode.com/problems/maximum-score-from-removing-substrings/) | Medium | String, Stack, Greedy | 2024-07-12 | [Go](stacks/1717-maximum-score-from-removing-substrings.go)
