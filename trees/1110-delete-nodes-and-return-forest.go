@@ -5,29 +5,62 @@ package trees
 // time: O(N)
 // space: O(N)
 func delNodes(root *TreeNode, toDelete []int) []*TreeNode {
-	var delMap = make(map[int]bool)
+	var inDelMap = make(map[int]bool)
 	for _, val := range toDelete {
-		delMap[val] = true
+		inDelMap[val] = true
 	}
-	var preorder func(node *TreeNode, isRoot bool) []*TreeNode
-	preorder = func(node *TreeNode, isRoot bool) []*TreeNode {
-		var roots = make([]*TreeNode, 0)
-		if isRoot && !delMap[node.Val] {
-			roots = append(roots, node)
+	var dfs func(node *TreeNode, isRoot bool) ([]*TreeNode, *TreeNode) // (roots, child)
+	dfs = func(node *TreeNode, isRoot bool) ([]*TreeNode, *TreeNode) {
+		if node == nil {
+			return nil, nil
 		}
-		if node.Left != nil {
-			roots = append(roots, preorder(node.Left, delMap[node.Val])...)
-			if delMap[node.Left.Val] {
-				node.Left = nil
-			}
+		var forest = make([]*TreeNode, 0)
+		if isRoot && !inDelMap[node.Val] {
+			forest = append(forest, node)
 		}
-		if node.Right != nil {
-			roots = append(roots, preorder(node.Right, delMap[node.Val])...)
-			if delMap[node.Right.Val] {
-				node.Right = nil
-			}
+
+		var roots []*TreeNode
+		roots, node.Left = dfs(node.Left, inDelMap[node.Val])
+		forest = append(forest, roots...)
+
+		roots, node.Right = dfs(node.Right, inDelMap[node.Val])
+		forest = append(forest, roots...)
+
+		if inDelMap[node.Val] {
+			return forest, nil
 		}
-		return roots
+		return forest, node
 	}
-	return preorder(root, true)
+	var forest, _ = dfs(root, true)
+	return forest
 }
+
+// // time: O(N)
+// // space: O(N)
+// func delNodes(root *TreeNode, toDelete []int) []*TreeNode {
+// 	var inDelMap = make(map[int]bool)
+// 	for _, val := range toDelete {
+// 		inDelMap[val] = true
+// 	}
+// 	var dfs func(node *TreeNode, isRoot bool) []*TreeNode
+// 	dfs = func(node *TreeNode, isRoot bool) []*TreeNode {
+// 		var forest = make([]*TreeNode, 0)
+// 		if isRoot && !inDelMap[node.Val] {
+// 			forest = append(forest, node)
+// 		}
+// 		if node.Left != nil {
+// 			forest = append(forest, dfs(node.Left, inDelMap[node.Val])...)
+// 			if inDelMap[node.Left.Val] {
+// 				node.Left = nil
+// 			}
+// 		}
+// 		if node.Right != nil {
+// 			forest = append(forest, dfs(node.Right, inDelMap[node.Val])...)
+// 			if inDelMap[node.Right.Val] {
+// 				node.Right = nil
+// 			}
+// 		}
+// 		return forest
+// 	}
+// 	return dfs(root, true)
+// }
