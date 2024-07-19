@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1380 | [Lucky Numbers in a Matrix](https://leetcode.com/problems/lucky-numbers-in-a-matrix/) | Easy | Array, Matrix | 2024-07-19 | [Go](matrices/1380-lucky-numbers-in-a-matrix.go)
 | 1530 | [Number of Good Leaf Nodes Pairs](https://leetcode.com/problems/number-of-good-leaf-nodes-pairs/) | Medium | Tree, Depth-First Search, Binary Tree | 2024-07-18 | [Go](trees/1530-number-of-good-leaf-nodes-pairs.go)
 | 1110 | [Delete Nodes And Return Forest](https://leetcode.com/problems/delete-nodes-and-return-forest/) | Medium | Array, Hash Table, Tree, Depth-First Search, Binary Tree | 2024-07-17 | [Go](trees/1110-delete-nodes-and-return-forest.go)
 | 2096 | [Step-By-Step Directions From a Binary Tree Node to Another](https://leetcode.com/problems/step-by-step-directions-from-a-binary-tree-node-to-another/) | Medium | String, Tree, Depth-First Search, Binary Tree | 2024-07-16 | [Go](trees/2096-step-by-step-directions-from-a-binary-tree-node-to-another.go)
