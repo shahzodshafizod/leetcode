@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1605 | [Find Valid Matrix Given Row and Column Sums](https://leetcode.com/problems/find-valid-matrix-given-row-and-column-sums/) | Medium | Array, Greedy, Matrix | 2024-07-20 | [Go](matrices/1605-find-valid-matrix-given-row-and-column-sums.go)
 | 1380 | [Lucky Numbers in a Matrix](https://leetcode.com/problems/lucky-numbers-in-a-matrix/) | Easy | Array, Matrix | 2024-07-19 | [Go](matrices/1380-lucky-numbers-in-a-matrix.go)
 | 1530 | [Number of Good Leaf Nodes Pairs](https://leetcode.com/problems/number-of-good-leaf-nodes-pairs/) | Medium | Tree, Depth-First Search, Binary Tree | 2024-07-18 | [Go](trees/1530-number-of-good-leaf-nodes-pairs.go)
 | 1110 | [Delete Nodes And Return Forest](https://leetcode.com/problems/delete-nodes-and-return-forest/) | Medium | Array, Hash Table, Tree, Depth-First Search, Binary Tree | 2024-07-17 | [Go](trees/1110-delete-nodes-and-return-forest.go)

@@ -618,3 +618,26 @@ func TestMinimumIsland(t *testing.T) {
 		assert.Equal(t, tc.minIsland, minIsland)
 	}
 }
+
+// go test -v -count=1 ./graphs/ -run ^TestDungeon$
+func TestDungeon(t *testing.T) {
+	for _, tc := range []struct {
+		grid [][]byte
+		path int
+	}{
+		{
+			grid: [][]byte{
+				{'S', '.', '.', '#', '.', '.', '.'},
+				{'.', '#', '.', '.', '.', '#', '.'},
+				{'.', '#', '.', '.', '.', '.', '.'},
+				{'.', '.', '#', '#', '.', '.', '.'},
+				{'#', '.', '#', 'E', '.', '#', '.'},
+			},
+			path: 10,
+		},
+	} {
+		var graph Graph = &graph{}
+		path := graph.Dungeon(tc.grid)
+		assert.Equal(t, tc.path, path)
+	}
+}
