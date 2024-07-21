@@ -660,7 +660,401 @@ you would have one queue for each of the x, y, and z dimensions.
 
 === Topological Sort ===
 
-continue from 56:24
+Many real world situations can be modelled as a graph directed edges where some
+events must occur before others.
+	- School class prerequisites
+	- Program dependencies
+	- Event scheduling
+	- Assembly instructions
+	- Etc...
+
+Suppose you're a student at university X and you want to take Class H, then you
+must take classes A, B, D and E as prerequisites. In this sense there is an
+ordering on the nodes of the graph.
+
+                   +=========+
+                   | Class C |
++=========+------->+=========+------->+=========+
+| Class A |                           | Class J |
++=========+------->+=========+------->+=========+
+                   | Class D |
+              +--->+=========+----+
+              |                   |
+              |    +=========+    +-->+=========+
+              |    | Class E |        | Class H |
++=========+---+    +=========+------->+=========+
+| Class B |
++=========+------->+=========+        +=========+
+                   | Class F |        | Class I |
+                   +=========+        +=========+
+
+Another canonical example where an ordering on the nodes of the graph matters is
+for program build dependencies. A program cannot be built unless its dependencies
+are first built.
+
+A topological ordering is an ordering of the nodes in a directed graph where for
+each directed edge from node A to node B, node A appears before node B in the
+ordering.
+
+The topological sort algorithm can find a topological ordering in O(V+E) time!
+
+NOTE: Topological orderings are NOT unique.
+
+=== Directed Acyclic Graphs (DAG) ===
+
+Not every graph can have a topoligical ordering. A graph which contains a cycle
+cannot have a valid ordering.
+
+The only type of graph which has a valid topological ordering is a Directed
+Acyclic Graph (DAG). These are graphs with directed edges and no cycles.
+
+Q: How do I verify that my graph does not contain a directed cycle?
+A: One method is to use Tarjan's strongly connected component algorithm which
+can be used to find these cycles.
+
+By definition, all rooted trees have a topological ordering since they do not
+contain any cycles.
+
+Topological Sort Algorithm
+
+- Pick an unvisited node
+- Beginning with the selected node, do a Depth First Search (DFS) exploring only
+	unvisited nodes.
+- On the recurive callback of the DFS, add the current node to the topological
+	ordering in reverse order.
+
+Topsort pseudocode
+
+```
+	# Assumption: graph is sorted as adjacency list
+	function topsort(graph):
+		N = graph.numberOfNodes()
+		V = [false, ..., false] # Length N
+		ordering = [0, ..., 0] # Length N
+		i = N - 1 # Index for ordering array
+
+		for (at = 0; at < N; at++):
+			if V[at] == false:
+				visitedNodes = []
+				dfs(at, V, visitedNodes, graph)
+				for nodeId in visitedNodes:
+					ordering[i] = nodeId
+					i = i - 1
+			return ordering
+
+	# Execute Depth First Search (DFS)
+	function dfs(at, V, visitedNodes, graph):
+
+		V[at] = true
+
+		edges = graph.getEdgesOutFromNode(at)
+		for edge in edges:
+			if V[edge.to] == false:
+				dfs(edge.to, V, visitedNodes, graph)
+
+		visitedNodes.add(at)
+```
+
+Topsort Optimization
+
+```
+	# Assumption: graph is stored as adjacency list
+	function topsort(graph):
+
+		N = graph.numberOfNodes()
+		V = [false, ..., false] # Length N
+		ordering = [0, ..., 0] # Length N
+		i = N - 1 # Index for ordering array
+
+		for (at = 0; at < N; at++):
+			if V[at] == false:
+				i = dfs(i, at, V, ordering, graph)
+
+		return ordering
+
+	# Execute Depth First Search (DFS)
+	function dfs(i, at, V, ordering, graph):
+
+		V[at] = true
+
+		edges = graph.getEdgesOutFromNode(at)
+		for edge in edges:
+			if V[edge.to] == false:
+				i = dfs(i, edge.to, V, ordering, graph)
+
+		ordering[i] = at
+		return i - 1
+```
+
+=== Shortest and longest paths on DAGs ===
+
+Recall that a Directed Acyclic Graph (DAG) is a graph with directed edges and no
+cycles. By definition this means all trees are automatically DAGs since they do
+not contain cycles.
+
+SSSP on DAG
+
+The Single Source Shortest Path (SSSP) problem can be solved efficiently on a
+DAG in O(V+E) time. This is due to the fact that the nodes can be ordered in a
+topological ordering via topsort and processed sequentially.
+
+Longest path on DAG
+
+What about the longest path? On a general graph this problem is NP-Hard, but on
+a DAG this problem is solvable in O(V+E)!
+
+The trick is to multiply all edge values by -1 then find the shortest path and
+then multiply the edge values by -1 again!
+
+Source Code Link
+Implementation source code can be found at the following link:
+	github.com/williamfiset/algorithms
+
+A useful application of the topological sort is to find the shortest path
+between two nodes in a Directed Acyclic Graph (DAG). Given an adjacency list
+this method finds the shortest path to all nodes starting at 'start'
+
+NOTE: 'numNodes' is not necessarily the number of nodes currently present
+in the adjacency list since you can have singleton nodes with no edges which
+wouldn't be present in the adjacency list but are still part of the graph!
+
+```
+	func dagShortestPath(graph map[int][]int, start int, numNodes int) []int {
+		var topsort = topologicalSort(graph, numNodes)
+		var dist = make([]any, numNodes)
+		dist[0] = 0
+
+		for i := 0; i < numNodes; i++ {
+
+			nodeIndex = topsort[i]
+			if dist[nodeIndex] != nil {
+				var adjacentEdges = graph.get(nodeIndex)
+				for _, edge := range adjacentEdges {
+					var newDist = dist[nodeIndex].(int) + edge.weight
+					if dist[edge.to] == nil || newDist < dist[edge.to].(int) {
+						dist[edge.to] = newDist
+					}
+				}
+			}
+		}
+
+		return dist
+	}
+```
+
+=== Dijkstra's Shortest Path Algorithm ===
+
+What is Dijkstra's algorithm?
+
+Dijkstra's algorithm is a Single Source Shortest Path (SSSP) algorithm for
+graphs with non-negative edge weights.
+
+Depending on how the algorithm is implemented and what data structures are used
+the time complexity is typically O(E*log(V)) which is competitive against other
+shortest path algorithms.
+
+Algorithm prerequisites
+
+One constraint for Dijkstra's algorithm is that the graph must only contain
+non-negative edge weights. This constraint is imposed to ensure that once a node
+has been visited its optimal distance cannot be improved.
+
+This property is especially important because it enables Dijkstra's algorithm
+to act in a greedy manner by always selecting the next most promising node.
+
+Outline
+
+The goal of this slide deck is for you to understand how to implement Dijkstra's
+algorithm and implement it efficiently.
+
+- Lazy Dijkstra's animation
+- Lazy Dijkstra's pseudo-code
+- Finding SP + stopping early optimazation
+- Using indexed priority queue + decreaseKey to reduce soace and increase
+	performance.
+- Eager Dijkstra's animation
+- Eager Dijkstra's pseudo-code
+- Heap optimization with D-ary heap
+
+Quick Algorithm Overview
+
+Maintain a 'dist' array where the distance to every node is positive infinity.
+Mark the distance to the shortest start node 's' to be 0.
+
+Maintain a PQ of key-value pairs of (node index, distance) pairs which tell you
+which node to visit next based on sorted min value.
+
+Insert (s, 0) into the PQ and loop while PQ is not empty pulling out the next
+most promising (node index, distance) pair.
+
+Iterate over all edges outwards from the current node and relax each edge
+appending a new (node index, distance) key-value pair to the PQ for every
+relaxation.
+
+Lazy Dijkstra's
+
+```
+	# Runs Dijkstra's algorithm and returns an array that contains
+	# the shortest distance to every node from the start node s.
+	# g - adjacency list of weighted graph
+	# n - the number of nodes in the graph
+	# s - the index of the starting node (0 <= s < n)
+	function dijkstra(g, n, s):
+		vis = [false, false, ..., false] # size n
+		dist = [+inf, +inf, ..., +inf, +inf] # size n
+		dist[s] = 0
+		pq = empty priority queue
+		pq.insert((s, 0))
+		while pq.size() != 0:
+			index, minValue = pq.poll()
+			vis[index] = true
+			for (edge : g[index]):
+				if vis[edge.to]: continue
+				newDist = dist[index] + edge.cost
+				if newDist < dist[edge.to]:
+					dist[edge.to] = newDist
+					pq.insert((edge.to, newDist))
+		return dist
+```
+
+In practice most standard libraries do not support the decrease key operation
+for PQs. A way to get around this is to add a new (node index, best distance)
+pair every time we update the distance to a node.
+
+As a result, it is possible to have duplicate node indices in the PQ. Ths is not
+ideal, but inserting a new key-value pair in O(log(n)) is much faster than
+searching for the key in the PQ which takes O(n)
+
+A neat optimization we can do which ignores stale (index, dist) pairs in our PQ
+is to skip nodes where we already found a better path routing through other
+nodes before we got to processing this node.
+
+```
+	# Runs Dijkstra's algorithm and returns an array that contains
+	# the shortest distance to every node from the start node s.
+	# g - adjacency list of weighted graph
+	# n - the number of nodes in the graph
+	# s - the index of the starting node (0 <= s < n)
+	function dijkstra(g, n, s):
+		vis = [false, false, ..., false] # size n
+		dist = [+inf, +inf, ..., +inf, +inf] # size n
+		dist[s] = 0
+		pq = empty priority queue
+		pq.insert((s, 0))
+		while pq.size() != 0:
+			index, minValue = pq.poll()
+			vis[index] = true
+			if dist[index] < minValue: continue
+			for (edge : g[index]):
+				if vis[edge.to]: continue
+				newDist = dist[index] + edge.cost
+				if newDist < dist[edge.to]:
+					dist[edge.to] = newDist
+					pq.insert((edge.to, newDist))
+		return dist
+```
+
+Finding the optimal path
+
+If you wish to not only find the optimal distance to a particular node but also
+what sequence of nodes were taken to get there you need to track some additional
+information.
+
+```
+	# Runs Dijkstra's algorithm and returns an array that contains
+	# the shortest distance to every node from the start node s and
+	# the prev array to reconstruct the shortest path itself
+	# g = adjacency list of weighted graph
+	# n - the number of nodes in the graph
+	# s - the index of the starting node (0 <= s < n)
+	function dijkstra(g, n, s):
+		vis = [false, false, ..., false] # size n
+		prev = [null, null, ..., null] # size n
+		dist = [+inf, +inf, ..., +inf, +inf] # size n
+		dist[s] = 0
+		pq = empty priority queue
+		pq.insert((s, 0))
+		while pq.size() != 0:
+			index, minValue = pq.poll()
+			vis[index] = true
+			if dist[index] < minValue: continue
+			for (edge : g[index]):
+				if vis[edge.to]: continue
+				newDist = dist[index] + edge.cost
+				if newDist < dist[edge.to]:
+					prev[edge.to] = index
+					dist[edge.to] = newDist
+					pq.insert((edge.to, newDist))
+		return (dist, prev)
+
+	# Finds the shortest path between two nodes.
+	# g - adjacency list of weighted graph
+	# n - the number of nodes in the graph
+	# s - the index of the starting node (0 <= e < n)
+	# e - the index of the end node (0 <= e < n)
+	function findShortestPath(g, n, s, e):
+		dist, prev = dijkstra(g, n, s)
+		path = []
+		if (dist[e] == +inf) return path
+		for (at = e; at != null; at = prev[at]):
+			path.add(at)
+		path.reverse()
+		return path
+```
+
+Stopping Early
+
+Q: Suppose you know the destination node you're trying to reach is 'e' and you
+start at node 's' do you still have to visit every node in the graph?
+
+A: Yes, in the worst case. However, it is possible to stop early once you have
+finished visiting the destination node.
+
+The main idea for stopping early is that Dijkstra's algorithm processes each
+next most promising node in order. So if the destination node has been visited,
+its shortest distance will not change as more future nodes are visited.
+
+```
+	# Runs Dijkstra's algorithm and returns the shortest distance
+	# between nodes 's' and 'e'. If there is no path, +inf is returned.
+	# g - adjacency list of weighted graph
+	# n - the number of nodes in the graph
+	# s - the index of the starting node (0 <= s < n)
+	# e - the index of the end node (0 <= e < n)
+	function dijkstra(g, n, s, e):
+		vis = [false, false, ..., false] # size n
+		dist = [+inf, +inf, ..., +inf, +inf] # size n
+		dist[s] = 0
+		pq = empty priority queue
+		pq.insert((s, 0))
+		while pq.size() != 0:
+			index, minValue = pq.poll()
+			vis[index] = true
+			if dist[index] < minValue: continue
+			for (edge : g[index]):
+				if vis[edge.to]: continue
+				newDist = dist[index] + edge.cost
+				if newDist < dist[edge.to]:
+					dist[edge.to] = newDist
+					pq.insert((edge.to, newDist))
+			if index == e:
+				return dist[e]
+		return +inf
+```
+
+Eager Dijkstra's using an Indexed Priority Queue
+
+Our current lazy implementation of Dijkstra's inserts duplicate key-value pairs
+(keys being the node index and the value being the shortest distance to get to
+that node) in our PQ because it's more efficient to insert a new key-value pair
+in O(log(n)) than it is to update an existing key's value in O(n)
+
+This approach is inefficient for dense graphs because we end up with several
+stale outdated key-value pairs in our PQ. The eager version of Dijkstra's avoids
+duplicate key-value pairs and supports efficient value updates in O(log(n))
+by using an Indexed Priority Queue (IPQ)
+
+continue from 1:34:44
 
 */
 
