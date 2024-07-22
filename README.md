@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2418 | [Sort the People](https://leetcode.com/problems/sort-the-people/) | Easy | Array, Hash Table, String, Sorting | 2024-07-22 | [Go](arrays/2418-sort-the-people.go)
 | 2392 | [Build a Matrix With Conditions](https://leetcode.com/problems/build-a-matrix-with-conditions/) | Hard | Array, Graph, Topological Sort, Matrix | 2024-07-21 | [Go](graphs/2392-build-a-matrix-with-conditions.go)
 | 1605 | [Find Valid Matrix Given Row and Column Sums](https://leetcode.com/problems/find-valid-matrix-given-row-and-column-sums/) | Medium | Array, Greedy, Matrix | 2024-07-20 | [Go](matrices/1605-find-valid-matrix-given-row-and-column-sums.go)
 | 1380 | [Lucky Numbers in a Matrix](https://leetcode.com/problems/lucky-numbers-in-a-matrix/) | Easy | Array, Matrix | 2024-07-19 | [Go](matrices/1380-lucky-numbers-in-a-matrix.go)
