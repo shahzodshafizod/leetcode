@@ -16,7 +16,7 @@ func sortPeople(names []string, heights []int) []string {
 		heights[i], heights[j] = heights[j], heights[i]
 		names[i], names[j] = names[j], names[i]
 	}
-	var shiftDown = func(parent int, n int) {
+	var shiftDown = func(parent int, n int) { // O(Log N)
 		child := left(parent)
 		for child < n {
 			if child+1 < n && compare(child, child+1) { // right
@@ -31,12 +31,12 @@ func sortPeople(names []string, heights []int) []string {
 		}
 	}
 	var heapify = func(n int) {
-		for parent := n/2 - 1; parent >= 0; parent-- {
+		for parent := n/2 - 1; parent >= 0; parent-- { // O(N/2) = O(N)
 			shiftDown(parent, n)
 		}
 	}
 	var sort = func(n int) {
-		for n > 0 {
+		for n > 0 { // O(N)
 			n--
 			swap(0, n)
 			shiftDown(0, n)
@@ -44,9 +44,8 @@ func sortPeople(names []string, heights []int) []string {
 	}
 
 	var n = len(names)
-	heapify(n)
-	sort(n)
-
+	heapify(n) // O(N Log N)
+	sort(n)    // O(N Log N)
 	return names
 }
 
