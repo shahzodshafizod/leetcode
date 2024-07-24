@@ -1,14 +1,13 @@
 package arrays
 
+import "github.com/shahzodshafizod/alkhwarizmi/design"
+
 // https://leetcode.com/problems/sort-the-people/
 
 // Approach #4: Space Optimized Priority Queue
 // Time: O(N Log N)
 // Space: O(1)
 func sortPeople(names []string, heights []int) []string {
-	var left = func(parent int) int { // right: 2*idx + 2
-		return 2*parent + 1
-	}
 	var compare = func(i int, j int) bool {
 		return heights[i] > heights[j]
 	}
@@ -16,36 +15,9 @@ func sortPeople(names []string, heights []int) []string {
 		heights[i], heights[j] = heights[j], heights[i]
 		names[i], names[j] = names[j], names[i]
 	}
-	var shiftDown = func(parent int, n int) { // O(Log N)
-		child := left(parent)
-		for child < n {
-			if child+1 < n && compare(child, child+1) { // right
-				child++
-			}
-			if !compare(parent, child) {
-				break
-			}
-			swap(parent, child)
-			parent = child
-			child = left(parent)
-		}
-	}
-	var heapify = func(n int) {
-		for parent := n/2 - 1; parent >= 0; parent-- { // O(N/2) = O(N)
-			shiftDown(parent, n)
-		}
-	}
-	var sort = func(n int) {
-		for n > 0 { // O(N)
-			n--
-			swap(0, n)
-			shiftDown(0, n)
-		}
-	}
 
-	var n = len(names)
-	heapify(n) // O(N Log N)
-	sort(n)    // O(N Log N)
+	var pq = design.NewPQSort(len(names), compare, swap)
+	pq.Sort() // O(N Log N)
 	return names
 }
 

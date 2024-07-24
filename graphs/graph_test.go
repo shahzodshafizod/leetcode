@@ -21,7 +21,7 @@ func TestBFS(t *testing.T) {
 			values:  []int{0, 1, 2, 3, 4, 5},
 		},
 	} {
-		var graph Structy = &graph{}
+		var graph Graph = &graph{}
 		values := graph.BFS(tc.adjList)
 		assert.Equal(t, tc.values, values)
 	}
@@ -42,14 +42,79 @@ func TestDFS(t *testing.T) {
 			values:  []int{0, 1, 3, 5, 2, 4},
 		},
 	} {
-		var graph Structy = &graph{}
+		var graph Graph = &graph{}
 		values := graph.DFS(tc.adjList)
 		assert.Equal(t, tc.values, values)
 	}
 }
 
-// go test -v -count=1 ./graphs/ -run ^TestHasPath$
-func TestHasPath(t *testing.T) {
+// go test -v -count=1 ./graphs/ -run ^TestTopologicalSort$
+func TestTopologicalSort(t *testing.T) {
+	for _, tc := range []struct {
+		edges     [][2]byte
+		sortedBFS []byte
+		sortedDFS []byte
+	}{
+		{
+			edges: [][2]byte{
+				{'E', 'A'},
+				{'E', 'D'},
+				{'E', 'F'},
+				{'A', 'D'},
+				{'C', 'A'},
+				{'C', 'B'},
+				{'B', 'D'},
+				{'D', 'G'},
+				{'D', 'H'},
+				{'G', 'I'},
+				{'I', 'L'},
+				{'H', 'I'},
+				{'H', 'J'},
+				{'J', 'M'},
+				{'J', 'L'},
+				{'F', 'K'},
+				{'F', 'J'},
+				{'K', 'J'},
+			},
+			sortedBFS: []byte{'E', 'C', 'F', 'A', 'B', 'K', 'D', 'G', 'H', 'I', 'J', 'M', 'L'},
+			sortedDFS: []byte{'C', 'B', 'E', 'F', 'K', 'A', 'D', 'H', 'J', 'M', 'G', 'I', 'L'},
+		},
+	} {
+		var graph Graph = &graph{}
+
+		sorted := graph.TopologicalSortBFS(tc.edges)
+		assert.Equal(t, tc.sortedBFS, sorted)
+
+		sorted = graph.TopologicalSortDFS(tc.edges)
+		assert.Equal(t, tc.sortedDFS, sorted)
+	}
+}
+
+// go test -v -count=1 ./graphs/ -run ^TestDungeon$
+func TestDungeon(t *testing.T) {
+	for _, tc := range []struct {
+		grid [][]byte
+		path int
+	}{
+		{
+			grid: [][]byte{
+				{'S', '.', '.', '#', '.', '.', '.'},
+				{'.', '#', '.', '.', '.', '#', '.'},
+				{'.', '#', '.', '.', '.', '.', '.'},
+				{'.', '.', '#', '#', '.', '.', '.'},
+				{'#', '.', '#', 'E', '.', '#', '.'},
+			},
+			path: 10,
+		},
+	} {
+		var graph Graph = &graph{}
+		path := graph.Dungeon(tc.grid)
+		assert.Equal(t, tc.path, path)
+	}
+}
+
+// go test -v -count=1 ./graphs/ -run ^TestStructyHasPath$
+func TestStructyHasPath(t *testing.T) {
 	for _, tc := range []struct {
 		adjList map[byte][]byte
 		src     byte
@@ -126,8 +191,8 @@ func TestHasPath(t *testing.T) {
 	}
 }
 
-// go test -v -count=1 ./graphs/ -run ^TestUndirectedPath$
-func TestUndirectedPath(t *testing.T) {
+// go test -v -count=1 ./graphs/ -run ^TestStructyUndirectedPath$
+func TestStructyUndirectedPath(t *testing.T) {
 	for _, tc := range []struct {
 		edges   [][]byte
 		nodeA   byte
@@ -267,8 +332,8 @@ func TestUndirectedPath(t *testing.T) {
 	}
 }
 
-// go test -v -count=1 ./graphs/ -run ^TestConnectedComponentsCount$
-func TestConnectedComponentsCount(t *testing.T) {
+// go test -v -count=1 ./graphs/ -run ^TestStructyConnectedComponentsCount$
+func TestStructyConnectedComponentsCount(t *testing.T) {
 	for _, tc := range []struct {
 		adjList map[int][]int
 		count   int
@@ -333,8 +398,8 @@ func TestConnectedComponentsCount(t *testing.T) {
 	}
 }
 
-// go test -v -count=1 ./graphs/ -run ^TestLargestComponent$
-func TestLargestComponent(t *testing.T) {
+// go test -v -count=1 ./graphs/ -run ^TestStructyLargestComponent$
+func TestStructyLargestComponent(t *testing.T) {
 	for _, tc := range []struct {
 		adjList map[int][]int
 		maxsize int
@@ -399,8 +464,8 @@ func TestLargestComponent(t *testing.T) {
 	}
 }
 
-// go test -v -count=1 ./graphs/ -run ^TestShortestPath$
-func TestShortestPath(t *testing.T) {
+// go test -v -count=1 ./graphs/ -run ^TestStructyShortestPath$
+func TestStructyShortestPath(t *testing.T) {
 	for _, tc := range []struct {
 		edges   [][]byte
 		nodeA   byte
@@ -518,8 +583,8 @@ func TestShortestPath(t *testing.T) {
 	}
 }
 
-// go test -v -count=1 ./graphs/ -run ^TestIslandCount$
-func TestIslandCount(t *testing.T) {
+// go test -v -count=1 ./graphs/ -run ^TestStructyIslandCount$
+func TestStructyIslandCount(t *testing.T) {
 	for _, tc := range []struct {
 		grid    [][]byte
 		islands int
@@ -568,8 +633,8 @@ func TestIslandCount(t *testing.T) {
 	}
 }
 
-// go test -v -count=1 ./graphs/ -run ^TestMinimumIsland$
-func TestMinimumIsland(t *testing.T) {
+// go test -v -count=1 ./graphs/ -run ^TestStructyMinimumIsland$
+func TestStructyMinimumIsland(t *testing.T) {
 	for _, tc := range []struct {
 		grid      [][]byte
 		minIsland int
@@ -616,28 +681,5 @@ func TestMinimumIsland(t *testing.T) {
 		var graph Structy = &graph{}
 		minIsland := graph.MinimumIsland(tc.grid)
 		assert.Equal(t, tc.minIsland, minIsland)
-	}
-}
-
-// go test -v -count=1 ./graphs/ -run ^TestDungeon$
-func TestDungeon(t *testing.T) {
-	for _, tc := range []struct {
-		grid [][]byte
-		path int
-	}{
-		{
-			grid: [][]byte{
-				{'S', '.', '.', '#', '.', '.', '.'},
-				{'.', '#', '.', '.', '.', '#', '.'},
-				{'.', '#', '.', '.', '.', '.', '.'},
-				{'.', '.', '#', '#', '.', '.', '.'},
-				{'#', '.', '#', 'E', '.', '#', '.'},
-			},
-			path: 10,
-		},
-	} {
-		var graph Graph = &graph{}
-		path := graph.Dungeon(tc.grid)
-		assert.Equal(t, tc.path, path)
 	}
 }

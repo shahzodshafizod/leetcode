@@ -55,6 +55,14 @@ func makeGraph(adjList [][]int) *Node {
 	return root
 }
 
+type Graph interface {
+	DFS(adjList [][]int) []int
+	BFS(adjList [][]int) []int
+	TopologicalSortBFS(edges [][2]byte) []byte
+	TopologicalSortDFS(edges [][2]byte) []byte
+	Dungeon(grid [][]byte) int
+}
+
 /*
 Graph Basics
 Graph Algorithms Course for Technical Interviews
@@ -99,8 +107,6 @@ asyclic = no cycles
 */
 
 type Structy interface {
-	DFS(adjList [][]int) []int
-	BFS(adjList [][]int) []int
 	/*
 		https://structy.net/problems/has-path
 
@@ -1054,20 +1060,285 @@ stale outdated key-value pairs in our PQ. The eager version of Dijkstra's avoids
 duplicate key-value pairs and supports efficient value updates in O(log(n))
 by using an Indexed Priority Queue (IPQ)
 
-continue from 1:34:44
+Indexed Priority Queue
+
+Insertion Pseudo Code
+```
+	# Inserts a value into the min indexed binary
+	# heap. The key index must not already be in
+	# the heap and the value must not be null.
+	function insert(ki, value):
+		values[ki] = value
+		# 'sz' is the current size of the heap
+		pm[ki] = sz
+		im[sz] = ki
+		swim(sz)
+		sz = sz + 1
+```
+
+Swim Pseudo Code
+```
+	# Swims up node i (zero based) until heap
+	# invariant is satisfied.
+	function swim(i):
+		for (p = (i-1)/2; i > 0 and less(i, p)):
+			swap(i, p)
+			i = p
+			p = (i-1)/2
+
+	function swap(i, j):
+		pm[im[j]] = i
+		pm[im[i]] = j
+		tmp = im[i]
+		im[i] = im[j]
+		im[j] = tmp
+
+	function less(i, j):
+		return values[im[i]] < values[im[j]]
+```
+
+Polling & Removals
+Polling and removing in a min indexed binary heap are both O(log(n)) operations
+rather than O(n) for a traditional PQ since node position lookups are O(1) but
+repositioning is still O(log(n))
+
+Eager Dijkstra's
+
+```
+	# Runs Dijkstra's algorithm and returns an array that contains
+	# the shortest distance to every node from the start node s.
+	# g - adjacency list of weighted graph
+	# n - the number of nodes in the graph
+	# s - the index of the starting node (0 <= s < n)
+	function dijkstra(g, n, s):
+		vis = [false, false, ..., false] # size n
+		dist = [+inf, +inf, ..., +inf, +inf] # size
+		dist[s] = 0
+		ipq = empty indexed priority queue
+		ipq.insert(s, 0)
+		while ipq.size() != 0:
+			index, minValue = ipq.poll()
+			vis[index] = true
+			if dist[index] < minValue: continue
+			for (edge : g[index]):
+				if vis[edge.to]: continue
+				newDist = dist[index] + edge.cost
+				if newDist < dist[edge.to]:
+					dist[edge.to] = newDist
+					if !ipq.contains(edge.to):
+						ipq.insert(edge.to, newDist)
+					else:
+						ipq.decreaseKey(edge.to, newDist)
+		return dist
+```
+The main advantage of using decreaseKey is to prevent duplicate node indexes to
+be present in the PQ.
+
+D-ary Heap Optimization
+
+When executing Dijkstra's algorithm, especially on dense graphs, there are a
+lot more updates (i.e. decreaseKey operations) to key-value pairs than there are
+deqeue (poll) operations.
+
+A D-ary heap is a heap variant in which each node has D children, This speeds up
+decrease key operations at the expense of more costly removals.
+
+Optimal D-ary Heap degree
+
+Q: What is the optimal D-ary heap degree to maximize performance of Dijkstra's
+algorithm?
+
+A: In general D = E/V is the best degree to use to balance removals against
+decreaseKey operations improving Dijkstra's time complexity to O(E*log E/V (V))
+which is much better especially for dense graphs which have lots of decreaseKey
+operations.
+
+The state of the art
+
+The current state of the art as of now is the Fibonacci heap which gives
+Dijkstra's algorithm a time complexity of O(E + Vlog(V))
+
+However, in practice, Fibonacci heaps are very difficult to implement and have
+a large enough constant amortized overhead to make them impractical unless your
+graph is quite large.
+
+=== Dijkstra's Shortest Path Algorithm Source Code ===
+
+```
+	// An edge class to represent a directed edge
+	// between two nodes with a certain cost.
+	type Edge struct {
+		to int
+		cost float64
+	}
+
+	var n int
+	var edgeCount int
+	var prev []*int
+	var graph [][]*Edge
+
+	// n - The number of nodes in the graph
+	func DijkstrasShortestPathAdjacencyListWithDHeap(n int) {
+		this.n = n
+		createEmptyGraph(n)
+	}
+
+	// Construct an empty graph with n nodes including the source and sink nodes.
+	func createEmptyGraph(n int) {
+		graph = make([][]*Edge, n)
+		for idx := range graph {
+			graph[i] = make([]*Edge, 0)
+		}
+	}
+
+	// Adds a directed edge to the graph
+	// from - The index of the node the directed edge starts at.
+	// to - The index of the node the directed edge ends at.
+	// cost - The cost of the edge.
+	func addEdge(from int, to int, cost int) {
+		edgeCount++
+		graph[from] = append(graph[from], &Edge{to, cost})
+	}
+
+	// Run Dijkstra's algorithm on a directed graph to find the shortest path
+	// from a starting node to an ending node. If there is no path between the
+	// starting node and the destination node the returned value is set to be
+	// Double.POSITIVE_INFINITY.
+	func dijkstra(start int, end int) float64 {
+
+		// Keep an Indexed Priority Queue (ipq) of the next most promising node
+		// to visit.
+		var degree int = edgeCount / n
+		var ipq *MinIndexedDHeap = &MinIndexedDHeap{degree, n}
+		ipq.insert(start, 0.0)
+
+		// Maintain an array of the minimum distance to each node.
+		dist = make([]float64, n)
+		for idx := range dist {
+			dist[idx] = Double.POSITIVE_INFINITY
+		}
+		dist[start] = 0.0
+
+		var visited = make([]bool, n)
+		prev = make([]*int, n)
+
+		for !ipq.isEmpty() {
+			var nodeId = ipq.peekMinKeyIndex()
+
+			visited[nodeId] = true
+			var minValue = ipq.pollMinValue()
+
+			// We already found a better path before we got to
+			// processing this node so we can ignore it.
+			if minValue > dist[nodeId] { continue }
+
+			for _, edge := range graph[nodeId] {
+
+				// We cannot get a shorter path by revisiting
+				// a node we have already visited before.
+				if visited[edge.to] { continue }
+
+				// Relax edge by updating minimum cost if applicable.
+				var newDist = dist[nodeId] + edge.cost
+				if newDist < dist[edge.to] {
+					prev[edge.to] = nodeId
+					dist[edge.to] = newDist
+					// Insert the cost of going to a node for the first time in
+					// the PQ, or try and update it to a better value by calling
+					// decrease.
+					if !ipq.contains(edge.to) {
+						ipq.insert(edge.to, newDist)
+					} else {
+						ipq.decrease(edge.to, newDist)
+					}
+				}
+			}
+			// Once we've processed the end node we can return early (without
+			// necessarily visiting the whole graph) because we know we cannot
+			// get a shorter path by routing through any other nodes since
+			// Dijkstra's is greedy and there are no negative edge weights.
+			if nodeId == end {
+				return return dist[end]
+			}
+		}
+		// End node is unreachable.
+		return Double.POSITIVE_INFINITY
+	}
+
+	func reconstructPath(start int, end int) {
+		var path = make([]int, 0)
+		var dist = dijkstra(start, end)
+		if dist == Double.POSITIVE_INFINITY {
+			return path
+		}
+		for at := end; at != null; at = prev[at] {
+			path = append(path, at)
+		}
+		path.reverse()
+		return path
+	}
+```
+
+=== Bellman-Ford Algorithm ===
+
+BF algorithm overview
+
+In graph theory, the Bellman-Ford (BF) algorithm is a Single Source Shortest
+Path (SSSP) algorithm. This means it can find the shortest path from one node
+to any other node.
+
+However, BF is not ideal for most SSSP problems because it has a time complexity
+of O(EV). It is better to use Dijkstra's algorithm which is much faster. It is
+on the order of O((E+V)log(V)) when using a binary heap priority queue.
+
+However, Dijkstra's algorithm can fail when the graph has negative edge weights.
+This is when BF becomes really handy because it can be used to detect negative
+cycles and determine where they occur.
+
+Finding negative cycles can be useful in many types of applications. One
+particularly neat application arises in finance when performing an arbitrage
+between two or more markets.
+
+Negative Cycles
+
+Negative Cycles can manifest themselves in many ways...
+
+BF Algorithm Steps
+
+Let's define a few variables...
+	- Let E be the number of edges.
+	- Let V be the number of vertices.
+	- Let S be the id of the starting node.
+	- Let D be an array of size V that tracks the best distance from S to each
+		node.
+
+1) Set every entry in D to +inf
+2) Set D[S] = 0
+3) Relax eah edge V-1 times:
+```
+	for (i := 0; i < V-1; i = i + 1):
+		for edge in graph.edges:
+			// Relax edge (update D with shorter path)
+			if (D[edge.from] + edge.cost < D[edge.to])
+				D[edge.to] = D[edge.from] + edge.cost
+
+	// Repeat to find nodes caught in a negative cycle
+	for (i = 0; i < V-1; i = i + 1):
+		for edge in graph.edges:
+			if (D[edge.from] + edge.cost < D[edge.to])
+				D[edge.to] = -inf
+```
+
+=== Floyd-Warshall Algorithm ===
+
+continue from 2:05:37
 
 */
 
-type Graph interface {
-	DFS(adjList [][]int) []int
-	BFS(adjList [][]int) []int
-	Dungeon(grid [][]byte) int
-}
-
 type graph struct{}
 
-var _ Structy = &graph{}
 var _ Graph = &graph{}
+var _ Structy = &graph{}
 
 func (g *graph) DFS(adjList [][]int) []int {
 	var dfs func(curr int, visited map[int]bool) []int
@@ -1100,6 +1371,117 @@ func (g *graph) BFS(adjList [][]int) []int {
 		}
 	}
 	return nodes
+}
+
+func (g *graph) TopologicalSortBFS(edges [][2]byte) []byte {
+	var adjList = make(map[byte][]byte)
+	var indegrees = make(map[byte]int)
+	var sources = make([]byte, 0)
+	var src, dst byte
+	for _, edge := range edges {
+		src, dst = edge[0], edge[1]
+		adjList[src] = append(adjList[src], dst)
+		indegrees[dst]++
+		sources = append(sources, src)
+	}
+	var visited = make(map[byte]bool)
+	var queue = design.NewQueue[byte]()
+	for _, src := range sources {
+		if indegrees[src] == 0 && !visited[src] {
+			queue.Enqueue(src)
+			visited[src] = true
+		}
+	}
+	var sorted = make([]byte, 0)
+	var node byte
+	for !queue.Empty() {
+		node = queue.Dequeue()
+		sorted = append(sorted, node)
+		for _, dst := range adjList[node] {
+			if !visited[dst] {
+				indegrees[dst]--
+				if indegrees[dst] == 0 {
+					queue.Enqueue(dst)
+					visited[dst] = true
+				}
+			}
+		}
+	}
+	return sorted
+}
+
+func (g *graph) TopologicalSortDFS(edges [][2]byte) []byte {
+	var adjList = make(map[byte][]byte)
+	var sources = make([]byte, 0)
+	var nodes = make(map[byte]bool)
+	var src, dst byte
+	for _, edge := range edges {
+		src, dst = edge[0], edge[1]
+		adjList[src] = append(adjList[src], dst)
+		sources = append(sources, src)
+		nodes[src] = true
+		nodes[dst] = true
+	}
+	var n = len(nodes)
+	var sorted = make([]byte, n)
+	var dfs func(node byte, visited map[byte]bool, idx int, sorted []byte) int
+	dfs = func(node byte, visited map[byte]bool, idx int, sorted []byte) int {
+		visited[node] = true
+		for _, next := range adjList[node] {
+			if !visited[next] {
+				idx = dfs(next, visited, idx, sorted)
+			}
+		}
+		sorted[idx] = node
+		return idx - 1
+	}
+	var visited = make(map[byte]bool)
+	var idx = n - 1
+	for _, src := range sources {
+		if !visited[src] {
+			visited[src] = true
+			idx = dfs(src, visited, idx, sorted)
+		}
+	}
+	return sorted
+}
+
+// Approach: BFS
+func (g *graph) Dungeon(grid [][]byte) int {
+	var directions = [5]int{-1, 0, 1, 0, -1}
+	var m, n = len(grid), len(grid[0])
+	var visited = make([][]bool, m)
+	for idx := range visited {
+		visited[idx] = make([]bool, n)
+	}
+	var queue = design.NewQueue[[3]int]()
+	for row := 0; row < m && queue.Empty(); row++ {
+		for col := 0; col < n && queue.Empty(); col++ {
+			if grid[row][col] == 'S' {
+				queue.Enqueue([3]int{row, col, 1})
+				visited[row][col] = true
+			}
+		}
+	}
+	var row, col, path, r, c int
+	for !queue.Empty() {
+		var current = queue.Dequeue()
+		row, col, path = current[0], current[1], current[2]
+		for dir := 1; dir < 5; dir++ {
+			r = row + directions[dir-1]
+			c = col + directions[dir]
+			if min(r, c) >= 0 && r < m && c < n && !visited[r][c] {
+				switch grid[r][c] {
+				case 'E':
+					return path + 1
+				case '.':
+					queue.Enqueue([3]int{r, c, path + 1})
+					visited[r][c] = true
+				}
+			}
+		}
+	}
+	return -1
 }
 
 // N = # nodes
@@ -1294,42 +1676,4 @@ func (g *graph) MinimumIsland(grid [][]byte) int {
 		}
 	}
 	return minSize
-}
-
-// Approach: BFS
-func (g *graph) Dungeon(grid [][]byte) int {
-	var directions = [5]int{-1, 0, 1, 0, -1}
-	var m, n = len(grid), len(grid[0])
-	var visited = make([][]bool, m)
-	for idx := range visited {
-		visited[idx] = make([]bool, n)
-	}
-	var queue = design.NewQueue[[3]int]()
-	for row := 0; row < m && queue.Empty(); row++ {
-		for col := 0; col < n && queue.Empty(); col++ {
-			if grid[row][col] == 'S' {
-				queue.Enqueue([3]int{row, col, 1})
-				visited[row][col] = true
-			}
-		}
-	}
-	var row, col, path, r, c int
-	for !queue.Empty() {
-		var current = queue.Dequeue()
-		row, col, path = current[0], current[1], current[2]
-		for dir := 1; dir < 5; dir++ {
-			r = row + directions[dir-1]
-			c = col + directions[dir]
-			if min(r, c) >= 0 && r < m && c < n && !visited[r][c] {
-				switch grid[r][c] {
-				case 'E':
-					return path + 1
-				case '.':
-					queue.Enqueue([3]int{r, c, path + 1})
-					visited[r][c] = true
-				}
-			}
-		}
-	}
-	return -1
 }
