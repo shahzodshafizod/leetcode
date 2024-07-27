@@ -6,8 +6,6 @@ type PQ[T any] interface {
 	Peek() T
 	Push(T)
 	Pop() T
-	Sort()
-	Array() []T
 }
 
 type pq[T any] struct {
@@ -56,19 +54,6 @@ func (p *pq[T]) Pop() T {
 	p.data = p.data[:p.Len()-1]
 	p.shiftDown(0, p.Len())
 	return root
-}
-
-func (p *pq[T]) Sort() {
-	var len = p.Len()
-	for len > 0 {
-		len--
-		p.swap(0, len)
-		p.shiftDown(0, len)
-	}
-}
-
-func (p *pq[T]) Array() []T {
-	return p.data
 }
 
 func (p pq[T]) compare(i int, j int) bool { return p.less(p.data[i], p.data[j]) }
