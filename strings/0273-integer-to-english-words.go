@@ -49,6 +49,29 @@ func numberToWords(num int) string {
 // Follow-up: Convert NUMBER in reverse order to WORDS without reversing the NUMBER itself
 
 func numberToWordsReverse(num int) string {
+	var levels = []string{"", "Thousand", "Million", "Billion", "Trillion"}
+	var numberToWordsReverseHelper func(num int, divider int, level int) string
+	numberToWordsReverseHelper = func(num int, divider int, level int) string {
+		var words string
+		var current = divider + num
+		divider /= 1000
+		if divider != 0 {
+			current /= divider
+			if num%divider != 0 {
+				words += numberToWordsReverseHelper(num%divider, divider, level+1) + " "
+			}
+		}
+		num = 0           // reverse every block separately
+		for current > 1 { // skip the first digit and reverse: 1004 => 400, 145 => 54
+			num = num*10 + current%10
+			current /= 10
+		}
+		words += numberToWords(num)
+		if levels[level] != "" {
+			words += " " + levels[level]
+		}
+		return words
+	}
 	var divider = 1
 	var tempNum = num
 	for tempNum > 0 {
@@ -57,27 +80,3 @@ func numberToWordsReverse(num int) string {
 	}
 	return numberToWordsReverseHelper(num, divider, 0)
 }
-
-func numberToWordsReverseHelper(num int, divider int, level int) string {
-	var words string
-	var current = divider + num
-	divider /= 1000
-	if divider != 0 {
-		current /= divider
-		if num%divider != 0 {
-			words += numberToWordsReverseHelper(num%divider, divider, level+1) + " "
-		}
-	}
-	num = 0           // reverse every block separately
-	for current > 1 { // skip the first digit and reverse: 1004 => 400, 145 => 54
-		num = num*10 + current%10
-		current /= 10
-	}
-	words += numberToWords(num)
-	if levels[level] != "" {
-		words += " " + levels[level]
-	}
-	return words
-}
-
-var levels = []string{"", "Thousand", "Million", "Billion", "Trillion"}

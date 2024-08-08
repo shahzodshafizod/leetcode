@@ -2,6 +2,19 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0724 | [Find Pivot Index](https://leetcode.com/problems/find-pivot-index/) | Easy | Array, Prefix Sum | 2024-08-08 | [Go](prefixsums/0724-find-pivot-index.go)
+| 0303 | [Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/) | Easy | Array, Design, Prefix Sum | 2024-08-07 | [Go](design/0303-range-sum-query-immutable.go)
+| 0084 | [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) | Hard | Array, Stack, Monotonic Stack | 2024-08-06 | [Go](stacks/0084-largest-rectangle-in-histogram.go)
+| 2053 | [Kth Distinct String in an Array](https://leetcode.com/problems/kth-distinct-string-in-an-array/) | Easy | Array, Hash Table, String, Counting | 2024-08-05 | [Go](hashes/2053-kth-distinct-string-in-an-array.go)
+| 1827 | [Minimum Operations to Make the Array Increasing](https://leetcode.com/problems/minimum-operations-to-make-the-array-increasing/) | Easy | Array, Greedy | 2024-08-04 | [Go](greedy/1827-minimum-operations-to-make-the-array-increasing.go)
+| 1460 | [Make Two Arrays Equal by Reversing Subarrays](https://leetcode.com/problems/make-two-arrays-equal-by-reversing-subarrays/) | Easy | Array, Hash Table, Sorting | 2024-08-03 | [Go](hashes/1460-make-two-arrays-equal-by-reversing-subarrays.go)
+| 0315 | [Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/) | Hard | Array, Binary Search, Divide and Conquer, Binary Indexed Tree, Segment Tree, Merge Sort, Ordered Set | 2024-08-02 | [Go](arrays/0315-count-of-smaller-numbers-after-self.go)
+| 3232 | [Find if Digit Game Can Be Won](https://leetcode.com/problems/find-if-digit-game-can-be-won/) | Easy | Array, Math | 2024-08-01 | [Go](arrays/3232-find-if-digit-game-can-be-won.go)
+| 2678 | [Number of Senior Citizens](https://leetcode.com/problems/number-of-senior-citizens/) | Easy | Array, String | 2024-08-01 | [Go](strings/2678-number-of-senior-citizens.go)
+| 1105 | [Filling Bookcase Shelves](https://leetcode.com/problems/filling-bookcase-shelves/) | Medium | Array, Dynamic Programming | 2024-07-31 | [Go](dp/1105-filling-bookcase-shelves.go)
+| 1653 | [Minimum Deletions to Make String Balanced](https://leetcode.com/problems/minimum-deletions-to-make-string-balanced/) | Medium | String, Dynamic Programming, Stack | 2024-07-30 | [Go](dp/1653-minimum-deletions-to-make-string-balanced.go)
+| 1395 | [Count Number of Teams](https://leetcode.com/problems/count-number-of-teams/) | Medium | Array, Dynamic Programming, Binary Indexed Tree | 2024-07-29 | [Go](dp/1395-count-number-of-teams.go)
+| 2045 | [Second Minimum Time to Reach Destination](https://leetcode.com/problems/second-minimum-time-to-reach-destination/) | Hard | Breadth-First Search, Graph, Shortest Path | 2024-07-28 | [Go](graphs/2045-second-minimum-time-to-reach-destination.go)
 | 2976 | [Minimum Cost to Convert String I](https://leetcode.com/problems/minimum-cost-to-convert-string-i/) | Medium | Array, String, Graph, Shortest Path | 2024-07-27 | [Go](graphs/2976-minimum-cost-to-convert-string-i.go)
 | 1334 | [Find the City With the Smallest Number of Neighbors at a Threshold Distance](https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/) | Medium | Dynamic Programming, Graph, Shortest Path | 2024-07-26 | [Go](graphs/1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance.go)
 | 0123 | [Best Time to Buy and Sell Stock III](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/) | Hard | Array, Dynamic Programming | 2024-07-25 | [Go](dp/0123-best-time-to-buy-and-sell-stock-iii.go)

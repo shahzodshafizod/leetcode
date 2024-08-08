@@ -4,6 +4,14 @@ import (
 	"strings"
 )
 
+/*
+Top-Down approach follows the memorization technique.
+It consists of two distinct events: recursion and caching.
+
+The easiest way to remember them is that
+Bottom-Up is iterative and Top-Down is recursive.
+*/
+
 // Source: Dynamic Programming - Learn to Solve Algorithmic Problems & Coding Challenges
 // https://www.youtube.com/watch?v=oBt53YbR9Kk
 

@@ -108,91 +108,98 @@ func TestDungeon(t *testing.T) {
 	}
 }
 
-// // go test -v -count=1 ./graphs/ -run ^TestShortestPath$
-// func TestShortestPath(t *testing.T) {
-// 	for _, tc := range []struct {
-// 		negativeEdges bool
-// 		cyclic        bool
-// 		adjList       map[int][]*Edge
-// 		s             int
-// 		n             int
-// 		dist          []int
-// 	}{
-// 		{
-// 			negativeEdges: true,
-// 			cyclic:        false,
-// 			adjList: map[int][]*Edge{
-// 				0: {{To: 1, Weight: 3}, {To: 2, Weight: 6}},
-// 				1: {{To: 2, Weight: 4}, {To: 3, Weight: 4}, {To: 4, Weight: 11}},
-// 				2: {{To: 3, Weight: 8}, {To: 6, Weight: 11}},
-// 				3: {{To: 4, Weight: -4}, {To: 5, Weight: 5}, {To: 6, Weight: 2}},
-// 				4: {{To: 7, Weight: 9}},
-// 				5: {{To: 7, Weight: 1}},
-// 				6: {{To: 7, Weight: 2}},
-// 			},
-// 			s:    0,
-// 			n:    8,
-// 			dist: []int{0, 3, 6, 7, 3, 12, 9, 11},
-// 		},
-// 		{
-// 			negativeEdges: false,
-// 			cyclic:        false,
-// 			adjList: map[int][]*Edge{
-// 				0: {{To: 1, Weight: 4}, {To: 2, Weight: 1}},
-// 				1: {{To: 3, Weight: 1}},
-// 				2: {{To: 1, Weight: 2}, {To: 3, Weight: 5}},
-// 				3: {{To: 4, Weight: 3}},
-// 			},
-// 			s:    0,
-// 			n:    5,
-// 			dist: []int{0, 3, 1, 4, 7},
-// 		},
-// 		{
-// 			negativeEdges: false,
-// 			cyclic:        true,
-// 			adjList: map[int][]*Edge{
-// 				0: {{To: 1, Weight: 5}, {To: 2, Weight: 1}},
-// 				1: {{To: 2, Weight: 2}, {To: 3, Weight: 3}, {To: 4, Weight: 20}},
-// 				2: {{To: 1, Weight: 3}, {To: 4, Weight: 12}},
-// 				3: {{To: 2, Weight: 3}, {To: 4, Weight: 2}, {To: 5, Weight: 6}},
-// 				4: {{To: 5, Weight: 1}},
-// 			},
-// 			s:    0,
-// 			n:    6,
-// 			dist: []int{0, 4, 1, 7, 9, 10},
-// 		},
-// 		{
-// 			negativeEdges: true,
-// 			cyclic:        true,
-// 			adjList: map[int][]*Edge{
-// 				0: {{To: 1, Weight: 5}},
-// 				1: {{To: 2, Weight: 20}, {To: 5, Weight: 30}, {To: 6, Weight: 60}},
-// 				2: {{To: 3, Weight: 10}, {To: 4, Weight: 75}},
-// 				3: {{To: 2, Weight: -15}},
-// 				4: {{To: 9, Weight: 100}},
-// 				5: {{To: 4, Weight: 25}, {To: 6, Weight: 5}, {To: 8, Weight: 50}},
-// 				6: {{To: 7, Weight: -50}},
-// 				7: {{To: 8, Weight: -10}},
-// 			},
-// 			s:    0,
-// 			n:    10,
-// 			dist: []int{},
-// 		},
-// 	} {
-// 		var graph ShortestPath = &graph{}
-// 		var dist []int
+// go test -v -count=1 ./graphs/ -run ^TestShortestPath$
+func TestShortestPath(t *testing.T) {
+	for _, tc := range []struct {
+		cyclic         bool
+		negativeEdges  bool
+		negativeCycles bool
+		adjList        map[int][]*Edge
+		s              int
+		n              int
+		dist           []int
+	}{
+		{
+			cyclic:         false,
+			negativeEdges:  false,
+			negativeCycles: false,
+			adjList: map[int][]*Edge{
+				0: {{To: 1, Weight: 4}, {To: 2, Weight: 1}},
+				1: {{To: 3, Weight: 1}},
+				2: {{To: 1, Weight: 2}, {To: 3, Weight: 5}},
+				3: {{To: 4, Weight: 3}},
+			},
+			s:    0,
+			n:    5,
+			dist: []int{0, 3, 1, 4, 7},
+		},
+		{
+			cyclic:         false,
+			negativeEdges:  true,
+			negativeCycles: false,
+			adjList: map[int][]*Edge{
+				0: {{To: 1, Weight: 3}, {To: 2, Weight: 6}},
+				1: {{To: 2, Weight: 4}, {To: 3, Weight: 4}, {To: 4, Weight: 11}},
+				2: {{To: 3, Weight: 8}, {To: 6, Weight: 11}},
+				3: {{To: 4, Weight: -4}, {To: 5, Weight: 5}, {To: 6, Weight: 2}},
+				4: {{To: 7, Weight: 9}},
+				5: {{To: 7, Weight: 1}},
+				6: {{To: 7, Weight: 2}},
+			},
+			s:    0,
+			n:    8,
+			dist: []int{0, 3, 6, 7, 3, 12, 9, 11},
+		},
+		{
+			cyclic:         true,
+			negativeEdges:  false,
+			negativeCycles: false,
+			adjList: map[int][]*Edge{
+				0: {{To: 1, Weight: 5}, {To: 2, Weight: 1}},
+				1: {{To: 2, Weight: 2}, {To: 3, Weight: 3}, {To: 4, Weight: 20}},
+				2: {{To: 1, Weight: 3}, {To: 4, Weight: 12}},
+				3: {{To: 2, Weight: 3}, {To: 4, Weight: 2}, {To: 5, Weight: 6}},
+				4: {{To: 5, Weight: 1}},
+			},
+			s:    0,
+			n:    6,
+			dist: []int{0, 4, 1, 7, 9, 10},
+		},
+		{
+			cyclic:         true,
+			negativeEdges:  true,
+			negativeCycles: true,
+			adjList: map[int][]*Edge{
+				0: {{To: 1, Weight: 5}},
+				1: {{To: 2, Weight: 20}, {To: 5, Weight: 30}, {To: 6, Weight: 60}},
+				2: {{To: 3, Weight: 10}, {To: 4, Weight: 75}},
+				3: {{To: 2, Weight: -15}},
+				4: {{To: 9, Weight: 100}},
+				5: {{To: 4, Weight: 25}, {To: 6, Weight: 5}, {To: 8, Weight: 50}},
+				6: {{To: 7, Weight: -50}},
+				7: {{To: 8, Weight: -10}},
+			},
+			s:    0,
+			n:    10,
+			dist: []int{},
+		},
+	} {
+		var graph ShortestPath = &graph{}
+		var dist []int
 
-// 		if !tc.cyclic {
-// 			dist = graph.DAG(tc.adjList, tc.s, tc.n)
-// 			assert.Equal(t, tc.dist, dist)
-// 		}
+		if !tc.cyclic && !tc.negativeEdges && !tc.negativeCycles {
+			dist = graph.DAG(tc.adjList, tc.s, tc.n)
+			assert.Equal(t, tc.dist, dist)
+		}
 
-// 		if tc.negativeEdges {
-// 			dist = graph.Dijkstra(tc.adjList, tc.s, tc.n)
-// 			assert.Equal(t, tc.dist, dist)
-// 		}
+		if !tc.negativeEdges && !tc.negativeCycles {
+			dist = graph.Dijkstra(tc.adjList, tc.s, tc.n)
+			assert.Equal(t, tc.dist, dist)
+		}
 
-// 		dist = graph.BellmanFord(tc.adjList, tc.s, tc.n)
-// 		assert.Equal(t, tc.dist, dist)
-// 	}
-// }
+		if !tc.negativeCycles {
+			dist = graph.BellmanFord(tc.adjList, tc.s, tc.n)
+			assert.Equal(t, tc.dist, dist)
+		}
+	}
+}

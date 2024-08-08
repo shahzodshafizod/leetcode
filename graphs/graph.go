@@ -1221,7 +1221,207 @@ Let's define a few variables...
 
 === Floyd-Warshall Algorithm ===
 
-continue from 2:05:37
+FW algorithm overview
+
+In graph theory, the Floyd-Warshall (FW) algorithm is an All-Pairs Shortest Path
+(APSP) algorithm. This means it can find the shortest path between all pairs of
+nodes.
+
+The time complexity to run FW is O(V^3) which is ideal for graphs no larger
+than a couple hundred nodes.
+
+Graph setup
+
+With FW, the optimal way to represent our graph is with a 2D adjacency matrix m
+where cell m[i][j] represents the edge weight of going from node i to node j
+
+A->B: 4
+B->A: 3
+A->C: 1
+C->A: 4
+A->D: 9
+D->A: 6
+B->C: 6
+C->B: 1
+B->D: 11
+D->B: 5
+C->D: 2
+D->C: -4
+
+=>
+
++---+---+---+----+----+
+|   | A | B | C  | D  |
++---+---+---+----+----+
+| A | 0 | 4 |  1 |  9 |
++---+---+---+----+----+
+| B | 3 | 0 |  6 | 11 |
++---+---+---+----+----+
+| C | 4 | 1 |  0 |  2 |
++---+---+---+----+----+
+| D | 6 | 5 | -4 |  0 |
++---+---+---+----+----+
+
+NOTE: In the graph above, it is assumed that the distance from a node to itself
+is zero. This is why the diagonal is all zeros.
+
+If there is no edge from node i to node j then set the edge value for m[i][j]
+to be positive infinity.
+
+A->B: 4
+A->C: 1
+C->A: 4
+B->C: 6
+C->B: 1
+C->D: 2
+
++---+------+------+------+------+
+|   |   A  |   B  |   C  |   D  |
++---+------+------+------+------+
+| A |   0  |   4  |   1  | +inf |
++---+------+------+------+------+
+| B | +inf |   0  |   6  | +inf |
++---+------+------+------+------+
+| C |   4  |   1  |   0  |   2  |
++---+------+------+------+------+
+| D | +inf | +inf | +inf |   0  |
++---+------+------+------+------+
+
+IMPORTANT: If your programming language does not support a special constant for
++inf such that inf + inf = inf and x + inf = inf then avoid using (2^31)-1 as
+infinity! This will cause integer overflow; prefer to use a large constant such
+as 10^7 instead.
+
+The main idea behind the Floyd-Warshall algorithm is to gradually build up all
+intermediate routes between nodes i and j to find the optimal path.
+
+Suppose our adjacency matrix tells us that the distance from a to b is:
+m[a][b] = 11.
+Suppose there exists a third node, c. m[a][c] = 5, m[c][b] = 5
+If m[a][c] + m[c][b] < m[a][b] then it's better to route through c!
+
+The goal of Floyd-Warshall is to eventually consider going through all possible
+intermediate nodes on paths of different lengths.
+
+The Memo Table
+
+Let 'dp' (short for Dynamic Programming) be a 3D matrix of size n x n x n that
+acts as a memo table.
+
+dp[k][i][j] = shortest path from i to j routing through nodes {0,1,...,k-1,k}
+
+Start with k = 0, then k = 1, then k = 2, ... This gradually builds up the
+optimal solution routing through 0, then all optimal solutions routing through
+0 and 1, then all optimal solutions routing through 0, 1, 2, etc... up until
+n-1 which stores to APSP solution.
+Specially dp[n-1] is the 2D matrix solution we're after.
+
+In the beginning the optimal solution from i to j is simply the distance in the
+adjacency matrix.
+	dp[k][i][j] = m[i][j] if k = 0
+otherwise:
+	dp[k][i][j] = min(dp[k-1][i][j], dp[k-1][i][k]+dp[k-1][k][j])
+
+min(
+	Reuse the best distance from i to j with values routing through nodes
+	{0, 1, ..., k-1}
+	,
+	Find the best distance from i to j through node k reusing best solutions
+	from {0, 1, ..., k-1}.
+)
+
+The right side of the min function in english essentially says: "go from i to k"
+and the "go from k to j".
+
+Currently we're using O(V^3) memory since our memo table 'dp' has one dimension
+for each of k, i, j.
+
+Notice that we will be looping over k starting from 0, then 1, 2, ... and so
+fourth. The important thing to note here is that previous result builds off the
+last since we need state k-1 to compute state k. With that being said, it is
+possible to compute the solution for k in-place saving us a dimension of memory
+and reducing the space complexity to O(V^2)!
+
+The new recurrence relation is:
+	dp[i][j] = m[i][j] if k = 0
+otherwise:
+	dp[i][j] = min(dp[i][j], dp[i][k] + dp[k][j])
+
+```
+	# Global/class scope variables
+	n = size of the adjacency matrix
+	dp = the memo table that will contain APSP solution
+	next = matrix used to reconstruct shortest paths
+
+	function floydWarshall(m):
+		setup(m)
+
+		# Execute FW all pairs shortest path algorithm.
+		for (k := 0; k < n; k++):
+			for (j := 0; j < n; i++):
+				for (j := 0; j < n; j++):
+					if (dp[i][k] + dp[k][j] < dp[i][j]):
+						dp[i][j] = d[i][k] + dp[k][j]
+						next[i][j] = next[i][k]
+		# Detect and propagate negative cycles.
+		propagateNegativeCycles(dp, n) # Optional
+
+		# Return APSP matrix
+		return dp
+
+	function setup(m):
+		dp = empty matrix of size n x n
+
+		# Should contain null values by default
+		next = empty integer matrix of size n x n
+
+		# Do a deep copy of the input matrix and setup
+		# the 'next' matrix for path reconstruction.
+		for (i := 0; i < n; i++):
+			for (j := 0; j < n; j++):
+				dp[i][j] = m[i][j]
+				if m[i][j] != +inf:
+					next[i][j] = j
+
+	function propagateNegativeCycles(dp, n):
+		# Execute FW APSP algorithm a second time but
+		# this time if the distance can be improved
+		# set the optimal distance to be -inf.
+		# Every edge (i, j) marked with -inf is either
+		# part of or reaches into a negative cycle.
+		for (k := 0; k < n; k++):
+			for (i := 0; i < n; i++):
+				for (j := 0; j < n; j++):
+					if (dp[i][k] + dp[k][j] < d[i][j]):
+						dp[i][j] = -inf
+						next[i][j] =-1
+
+	# Reconstructs the shortest path between nodes
+	# 'start' and 'end'. You must run the
+	# floydWarshall solver before calling this method.
+	# Returns null if path affected by negative cycle.
+	function reconstructPath(start, end):
+		path = []
+		# Check if there exists a path between
+		# the start and the end node.
+		if dp[start][end] == +inf: return path
+
+		at := start
+		# Reconstruct path from next matrix
+		for (; at != -1; at = next[at][end]):
+			if at == -1: return null
+			path.add(at)
+
+		if next[at][end] == -1: return null
+		path.add(end)
+		return path
+```
+
+Negative Cycles
+
+What do we mean by a negative cycle?
+
+Continue from 2:29:22
 
 */
 
@@ -1232,67 +1432,75 @@ type ShortestPath interface {
 	FloydWarshall(adjList map[int][]*Edge, s int, n int) []int
 }
 
+/*
+#######################################################################################################################
+
+Shortest Path (SP) Algorithms
+|------------------+------------+--------------+--------------+----------------|
+|                  |    BFS     |  Dijkstra's  | Bellman-Ford | Floyd-Warshall |
+|------------------+------------+--------------+--------------+----------------|
+| Complexity       |   O(V+E)   | O((V+E)logV) |    O(VE)     |     O(V^3)     |
+|------------------+------------+--------------+--------------+----------------|
+| Recommended      |   Large    | Large/Medium | Medium/Small |     Small      |
+| graph size       |            |              |              |                |
+|------------------+------------+--------------+--------------+----------------|
+| Good for         |  Only for  |              |              |                |
+| APSP?            | unweighted |      Ok      |     Bad      |      Yes       |
+|                  |   graphs   |              |              |                |
+|------------------+------------+--------------+--------------+----------------|
+| Can detect       |     No     |      No      |     Yes      |      Yes       |
+| negative cycles? |            |              |              |                |
+|------------------+------------+--------------+--------------+----------------|
+| SP on graph with | Incorrect  |     Best     |    Works     | Bad in general |
+| weighted edges   | SP answer  |  algorithm   |              |                |
+|------------------+------------+--------------+--------------+----------------|
+| SP on graph with |    Best    |      Ok      |     Bad      | Bad in general |
+| unweighted edges | algorithm  |              |              |                |
+|------------------+------------+--------------+--------------+----------------|
+
+Reference: Competitive Programming 3, P. 161, Steven & Felix Halim
+
+#######################################################################################################################
+
+                      | Dijkstra | Bellman-Ford | Floyd-Warshall |
+Single Source         | SSSP*    | SSSP*        | APSP*          |
+Cyclic                | yes      | yes          | yes            |
+Negative Edge Weights | no       | yes          | yes            |
+Negative Cycles*      | no       | no           | no             |
+
+*Negative Cycles: where the sum of the edges in a cycle is negative
+*SSSP: Single Source Shortest Path
+*APSP: All Pairs Shortest Path
+
+Dijkstra's algorithm solves the shortest-path problem for any weighted,
+directed graph with non-negative weights.
+
+It can handle graphs consisting of cycles, but negative weights will cause
+this algorithm to produce incorrect results.
+
+Since Dijkstra follows a Greedy Approach, once a node is marked as visited
+it cannot be reconsidered even if there is another path with less cost or
+distance. This issue arises only if there exists a negative weight or edge in
+the graph.
+
+The Bellman-Ford algorithm is a way to find single source shortest paths
+in a graph with negative edge weights (but no negative cycles).
+The second for loop in this algorithm also detects negative cycles.
+The first for loop relaxes each of the edges in the graph n − 1 times.
+
+What is the best shortest path algorithm for unweighted graph?
+
+The most important fact we should know is that BFS traversal can be used to
+find the shortest path in an unweighted graph in O(|V| + |E|) time.
+
+Unlike Dijkstra's algorithm, Bellman-Ford can handle graphs with negative
+weight edges.
+
+*/
+
 type Edge struct {
 	To     int
 	Weight int
-}
-
-func (g *graph) DAG(adjList map[int][]*Edge, s int, n int) []int {
-	var topsort = g.TopologicalSortBFS(adjList, n)
-	var dist = make([]int, n)
-	var hasValue = make([]bool, n)
-	dist[s] = 0
-	hasValue[s] = true
-
-	for _, node := range topsort {
-		if hasValue[node] {
-			var adjacentEdges = adjList[node]
-			for _, edge := range adjacentEdges {
-				var newDist = dist[node] + edge.Weight
-				if !hasValue[edge.To] || newDist < dist[edge.To] {
-					dist[edge.To] = newDist
-					hasValue[edge.To] = true
-				}
-			}
-		}
-	}
-
-	return dist
-}
-
-// Lazy Dijkstra's Algorithm
-func (g *graph) Dijkstra(adjList map[int][]*Edge, s int, n int) []int {
-	var visited = make([]bool, n)
-	var dist = make([]int, n)
-	for idx := range dist {
-		dist[idx] = math.MaxInt
-	}
-	dist[s] = 0
-	var minPQ = design.NewPQ(make([]*Edge, 0), func(x, y *Edge) bool { return x.Weight > y.Weight })
-	minPQ.Push(&Edge{s, 0})
-	for minPQ.Len() > 0 {
-		var nodeId = minPQ.Pop().To // get the next minimal (promising) distance
-		visited[nodeId] = true
-		for _, edge := range adjList[nodeId] {
-			if visited[edge.To] {
-				continue
-			}
-			var newDist = dist[nodeId] + edge.Weight
-			if newDist < dist[edge.To] {
-				dist[edge.To] = newDist
-				minPQ.Push(&Edge{edge.To, newDist})
-			}
-		}
-	}
-	return dist
-}
-
-func (g *graph) BellmanFord(adjList map[int][]*Edge, s int, n int) []int {
-	return nil
-}
-
-func (g *graph) FloydWarshall(adjList map[int][]*Edge, s int, n int) []int {
-	return nil
 }
 
 type graph struct{}
@@ -1426,4 +1634,92 @@ func (g *graph) Dungeon(grid [][]byte) int {
 		}
 	}
 	return -1
+}
+
+func (g *graph) DAG(adjList map[int][]*Edge, s int, n int) []int {
+	var topsort = g.TopologicalSortBFS(adjList, n)
+	var dist = make([]int, n)
+	var hasValue = make([]bool, n)
+	dist[s] = 0
+	hasValue[s] = true
+
+	for _, node := range topsort {
+		if hasValue[node] {
+			var adjacentEdges = adjList[node]
+			for _, edge := range adjacentEdges {
+				var newDist = dist[node] + edge.Weight
+				if !hasValue[edge.To] || newDist < dist[edge.To] {
+					dist[edge.To] = newDist
+					hasValue[edge.To] = true
+				}
+			}
+		}
+	}
+
+	return dist
+}
+
+// Lazy Dijkstra's Algorithm
+func (g *graph) Dijkstra(adjList map[int][]*Edge, s int, n int) []int {
+	var visited = make([]bool, n)
+	var dist = make([]int, n)
+	for idx := range dist {
+		dist[idx] = math.MaxInt
+	}
+	dist[s] = 0
+	var minPQ = design.NewPQ(make([]*Edge, 0), func(x, y *Edge) bool { return x.Weight > y.Weight })
+	minPQ.Push(&Edge{s, 0})
+	for minPQ.Len() > 0 {
+		var nodeId = minPQ.Pop().To // get the next minimal (promising) distance
+		visited[nodeId] = true
+		for _, edge := range adjList[nodeId] {
+			if visited[edge.To] {
+				continue
+			}
+			var newDist = dist[nodeId] + edge.Weight
+			if newDist < dist[edge.To] {
+				dist[edge.To] = newDist
+				minPQ.Push(&Edge{edge.To, newDist})
+			}
+		}
+	}
+	return dist
+}
+
+func (g *graph) BellmanFord(adjList map[int][]*Edge, s int, n int) []int {
+	// step 1: initialization
+	var dist = make([]int, n)
+	for idx := range dist {
+		dist[idx] = math.MaxInt
+	}
+	dist[s] = 0
+	// step 2: relax edges
+	for i := 0; i < n-1; i++ {
+		for src, edges := range adjList {
+			for _, edge := range edges {
+				if dist[src] != math.MaxInt {
+					dist[edge.To] = min(dist[edge.To], dist[src]+edge.Weight)
+				}
+			}
+		}
+	}
+	// step 3: check for negative-weight cycles
+	for i := 0; i < n-1; i++ {
+		for src, edges := range adjList {
+			if dist[src] == math.MaxInt {
+				continue
+			}
+			for _, edge := range edges {
+				if dist[edge.To] > dist[src]+edge.Weight {
+					// Graph contains negative weight cycle
+					dist[edge.To] = math.MaxInt
+				}
+			}
+		}
+	}
+	return dist
+}
+
+func (g *graph) FloydWarshall(adjList map[int][]*Edge, s int, n int) []int {
+	return nil
 }
