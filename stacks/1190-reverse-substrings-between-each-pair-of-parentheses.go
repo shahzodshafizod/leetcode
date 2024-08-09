@@ -32,7 +32,7 @@ func reverseParentheses(s string) string {
 	return string(result)
 }
 
-// // Approach 1: Straightforward Way (Brute-Force)
+// // Approach 1: Straightforward Way (Brute Force)
 // func reverseParentheses(s string) string {
 // 	var stack = make([]rune, 0)
 // 	for _, r := range s {

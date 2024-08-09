@@ -43,7 +43,7 @@ func minDays(bloomDay []int, m int, k int) int {
 	return days
 }
 
-// // Approach #1: Brute-Force
+// // Approach #1: Brute Force
 // // time: O(n^2)
 // // space: O(1)
 // func minDays(bloomDay []int, m int, k int) int {

@@ -43,7 +43,7 @@ func mincostToHireWorkers(quality []int, wage []int, k int) float64 {
 	return money
 }
 
-// // brute-force
+// // Approach: Brute Force
 // // time: O(n^3 * log n)
 // // space: O(n)
 // func mincostToHireWorkers(quality []int, wage []int, k int) float64 {

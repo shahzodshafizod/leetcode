@@ -106,7 +106,7 @@ func numTeams(rating []int) int {
 // 	return teams
 // }
 
-// // Approach #1: Brute-Force
+// // Approach #1: Brute Force
 // // Time: O(N^3)
 // // Space: O(1)
 // func numTeams(rating []int) int {

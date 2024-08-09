@@ -21,7 +21,7 @@ func kthDistinct(arr []string, k int) string {
 	return ""
 }
 
-// // Approach: Brute-Force
+// // Approach: Brute Force
 // // Time: O(N^2)
 // // Space: O(1)
 // func kthDistinct(arr []string, k int) string {

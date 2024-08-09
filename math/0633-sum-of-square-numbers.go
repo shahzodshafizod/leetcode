@@ -63,7 +63,7 @@ func judgeSquareSum(c int) bool {
 // 	return false
 // }
 
-// // Approach #1: Brute-force
+// // Approach #1: Brute Force
 // // time: O(c^2)
 // // space: O(1)
 // func judgeSquareSum(c int) bool {

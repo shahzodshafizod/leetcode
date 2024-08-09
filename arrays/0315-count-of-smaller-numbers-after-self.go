@@ -85,7 +85,7 @@ func countSmaller(nums []int) []int {
 // 	return smallers
 // }
 
-// // Approach: Brute-Force (Time Limit Exceeded)
+// // Approach: Brute Force (Time Limit Exceeded)
 // // Time: O(N^2)
 // // Space: O(1)
 // func countSmaller(nums []int) []int {

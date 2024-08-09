@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2129 | [Capitalize the Title](https://leetcode.com/problems/capitalize-the-title/) | Easy | String | 2024-08-09 | [Go](strings/2129-capitalize-the-title.go)
 | 0724 | [Find Pivot Index](https://leetcode.com/problems/find-pivot-index/) | Easy | Array, Prefix Sum | 2024-08-08 | [Go](prefixsums/0724-find-pivot-index.go)
 | 0303 | [Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/) | Easy | Array, Design, Prefix Sum | 2024-08-07 | [Go](design/0303-range-sum-query-immutable.go)
 | 0084 | [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) | Hard | Array, Stack, Monotonic Stack | 2024-08-06 | [Go](stacks/0084-largest-rectangle-in-histogram.go)

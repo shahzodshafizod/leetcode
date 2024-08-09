@@ -60,7 +60,7 @@ func numSubarraysWithSum(nums []int, goal int) int {
 // 	return count
 // }
 
-// // brute-force (1244 ms, 6.54 MB)
+// // Approach: Brute Force (1244 ms, 6.54 MB)
 // func numSubarraysWithSum(nums []int, goal int) int {
 // 	var sum int
 // 	var count = 0

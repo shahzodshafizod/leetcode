@@ -125,7 +125,7 @@ func maximumValueSum(nums []int, k int, _ [][]int) int64 {
 // 	return maxSumOfNodes(0, 0)
 // }
 
-// // brute-force
+// // Approach: Brute Force
 // // time: O(n*k) ???
 // // space: O(1)
 // func maximumValueSum(nums []int, k int, edges [][]int) int64 {

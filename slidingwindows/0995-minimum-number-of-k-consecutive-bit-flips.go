@@ -47,7 +47,7 @@ func minKBitFlips(nums []int, k int) int {
 // 	return totalFlips
 // }
 
-// // Approach #1: Brute-Force
+// // Approach #1: Brute Force
 // // time: O(nk)
 // // space: O(1)
 // func minKBitFlips(nums []int, k int) int {

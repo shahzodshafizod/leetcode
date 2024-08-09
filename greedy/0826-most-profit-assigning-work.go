@@ -121,7 +121,7 @@ func maxProfitAssignment(difficulty []int, profit []int, worker []int) int {
 // 	return netProfit
 // }
 
-// // Approach #1: Brute-force
+// // Approach #1: Brute Force
 // // time: O(mxn)
 // // space: O(1)
 // func maxProfitAssignment(difficulty []int, profit []int, worker []int) int {

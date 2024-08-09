@@ -87,7 +87,7 @@ func kthSmallestPrimeFraction(arr []int, k int) []int {
 // 	return []int{arr[pq.Peek().numeratorIdx], arr[pq.Peek().denominatorIdx]}
 // }
 
-// // Approach: brute-force
+// // Approach: brute Force
 // // time: O(n x n)
 // // space: O(k)
 // func kthSmallestPrimeFraction(arr []int, k int) []int {

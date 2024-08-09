@@ -93,7 +93,7 @@ func longestSubarray(nums []int, limit int) int {
 // 	return size
 // }
 
-// // Approach #1: Brute-Force
+// // Approach #1: Brute Force
 // // time: O(n^2)
 // // space: O(1)
 // func longestSubarray(nums []int, limit int) int {
