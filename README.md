@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0009 | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | Easy | Math | 2024-08-10 | [Go](math/0009-palindrome-number.go)
 | 2129 | [Capitalize the Title](https://leetcode.com/problems/capitalize-the-title/) | Easy | String | 2024-08-09 | [Go](strings/2129-capitalize-the-title.go)
 | 0724 | [Find Pivot Index](https://leetcode.com/problems/find-pivot-index/) | Easy | Array, Prefix Sum | 2024-08-08 | [Go](prefixsums/0724-find-pivot-index.go)
 | 0303 | [Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/) | Easy | Array, Design, Prefix Sum | 2024-08-07 | [Go](design/0303-range-sum-query-immutable.go)

@@ -5,7 +5,7 @@ import "github.com/shahzodshafizod/alkhwarizmi/design"
 // https://leetcode.com/problems/find-if-path-exists-in-graph/
 
 func validPath(n int, edges [][]int, source int, destination int) bool {
-	var uf = design.NewUF(n)
+	var uf = design.NewDisjointSet(n)
 	for _, edge := range edges {
 		uf.Union(edge[0], edge[1])
 	}

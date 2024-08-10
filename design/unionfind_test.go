@@ -8,7 +8,7 @@ import (
 
 // go test -v -count=1 ./design/ -run ^TestUnionFind$
 func TestUnionFind(t *testing.T) {
-	var uf UF
+	var ds DisjointSet
 	var m, n = 4, 3
 	for _, tc := range []struct {
 		command string
@@ -40,12 +40,42 @@ func TestUnionFind(t *testing.T) {
 		var output any = nil
 		switch tc.command {
 		case "UnionFind":
-			uf = NewUF(tc.value[0])
+			ds = NewDisjointSet(tc.value[0])
 		case "Union":
-			uf.Union(tc.value[0], tc.value[1])
+			ds.Union(tc.value[0], tc.value[1])
 		case "Find":
-			output = uf.Find(tc.value[0])
+			output = ds.Find(tc.value[0])
 		}
 		assert.Equal(t, tc.output, output)
+	}
+}
+
+// go test -v -count=1 ./design/ -run ^TestDSQuickFind$
+func TestDSQuickFind(t *testing.T) {
+	for _, tc := range []struct {
+		commands []string
+		values   [][]int
+		output   []bool
+	}{
+		{
+			commands: []string{"NewQuickFind", "Union", "Union", "Union", "Union", "Union", "Union", "Connected", "Connected", "Connected", "Union", "Connected"},
+			values:   [][]int{{10}, {1, 2}, {2, 5}, {5, 6}, {6, 7}, {3, 8}, {8, 9}, {1, 5}, {5, 7}, {4, 9}, {9, 4}, {4, 9}},
+			output:   []bool{false, false, false, false, false, false, false, true, true, false, false, true},
+		},
+	} {
+		var ds DisjointSet
+		var output bool
+		for idx, command := range tc.commands {
+			output = false
+			switch command {
+			case "NewQuickFind":
+				ds = NewOptimizedDS(tc.values[idx][0])
+			case "Union":
+				ds.Union(tc.values[idx][0], tc.values[idx][1])
+			case "Connected":
+				output = ds.Connected(tc.values[idx][0], tc.values[idx][1])
+			}
+			assert.Equal(t, tc.output[idx], output)
+		}
 	}
 }

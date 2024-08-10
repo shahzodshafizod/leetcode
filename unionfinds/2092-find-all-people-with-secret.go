@@ -10,7 +10,7 @@ import (
 
 func findAllPeople(n int, meetings [][]int, firstPerson int) []int {
 	sort.Slice(meetings, func(i, j int) bool { return meetings[i][2] < meetings[j][2] })
-	var uf = design.NewUF(n)
+	var uf = design.NewDisjointSet(n)
 	uf.Union(0, firstPerson)
 	var told = make([]bool, n)
 	told[0] = true
