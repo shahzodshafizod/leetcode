@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1568 | [Minimum Number of Days to Disconnect Island](https://leetcode.com/problems/minimum-number-of-days-to-disconnect-island/) | Hard | Array, Depth-First Search, Breadth-First Search, Matrix, Strongly Connected Component | 2024-08-11 | [Go](matrices/1568-minimum-number-of-days-to-disconnect-island.go)
 | 0009 | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | Easy | Math | 2024-08-10 | [Go](math/0009-palindrome-number.go)
 | 2129 | [Capitalize the Title](https://leetcode.com/problems/capitalize-the-title/) | Easy | String | 2024-08-09 | [Go](strings/2129-capitalize-the-title.go)
 | 0724 | [Find Pivot Index](https://leetcode.com/problems/find-pivot-index/) | Easy | Array, Prefix Sum | 2024-08-08 | [Go](prefixsums/0724-find-pivot-index.go)
