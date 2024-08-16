@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0745 | [Prefix and Suffix Search](https://leetcode.com/problems/prefix-and-suffix-search/) | Hard | Array, Hash Table, String, Design, Trie | 2024-08-16 | [Go](design/0745-prefix-and-suffix-search.go) [Python](design/0745-prefix-and-suffix-search.py)
 | 0860 | [Lemonade Change](https://leetcode.com/problems/lemonade-change/) | Easy | Array, Greedy | 2024-08-15 | [Go](greedy/0860-lemonade-change.go) [Python](greedy/0860-lemonade-change.py)
 | 0719 | [Find K-th Smallest Pair Distance](https://leetcode.com/problems/find-k-th-smallest-pair-distance/) | Hard | Array, Two Pointers, Binary Search, Sorting | 2024-08-14 | [Go](slidingwindows/0719-find-k-th-smallest-pair-distance.go) [Python](slidingwindows/0719-find-k-th-smallest-pair-distance.py)
 | 0733 | [Flood Fill](https://leetcode.com/problems/flood-fill/) | Easy | Array, Depth-First Search, Breadth-First Search, Matrix | 2024-08-13 | [Go](matrices/0733-flood-fill.go) [Python](matrices/0733-flood-fill.py)
