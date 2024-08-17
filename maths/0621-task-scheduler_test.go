@@ -1,4 +1,4 @@
-package math
+package maths
 
 import (
 	"testing"
@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// go test -v -count=1 ./math/ -run ^TestLeastInterval$
+// go test -v -count=1 ./maths/ -run ^TestLeastInterval$
 func TestLeastInterval(t *testing.T) {
 	for _, tc := range []struct {
 		tasks     []byte

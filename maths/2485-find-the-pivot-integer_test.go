@@ -1,4 +1,4 @@
-package math
+package maths
 
 import (
 	"testing"
@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// go test -v -count=1 ./math/ -run ^TestPivotInteger$
+// go test -v -count=1 ./maths/ -run ^TestPivotInteger$
 func TestPivotInteger(t *testing.T) {
 	for _, tc := range []struct {
 		n     int

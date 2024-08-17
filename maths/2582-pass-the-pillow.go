@@ -1,4 +1,4 @@
-package math
+package maths
 
 // https://leetcode.com/problems/pass-the-pillow/
 
