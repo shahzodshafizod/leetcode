@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0136 | [Single Number](https://leetcode.com/problems/single-number/) | Easy | Array, Bit Manipulation | 2024-08-18 | [Go](bits/0136-single-number.go) [Python](bits/0136-single-number.py)
 | 0367 | [Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/) | Easy | Math, Binary Search | 2024-08-17 | [Go](maths/0367-valid-perfect-square.go) [Python](maths/0367-valid-perfect-square.py)
 | 0745 | [Prefix and Suffix Search](https://leetcode.com/problems/prefix-and-suffix-search/) | Hard | Array, Hash Table, String, Design, Trie | 2024-08-16 | [Go](design/0745-prefix-and-suffix-search.go) [Python](design/0745-prefix-and-suffix-search.py)
 | 0860 | [Lemonade Change](https://leetcode.com/problems/lemonade-change/) | Easy | Array, Greedy | 2024-08-15 | [Go](greedy/0860-lemonade-change.go) [Python](greedy/0860-lemonade-change.py)
