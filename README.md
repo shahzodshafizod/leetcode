@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0051 | [N-Queens](https://leetcode.com/problems/n-queens/) | Hard | Array, Backtracking | 2024-08-20 | [Go](backtracking/0051-n-queens.go) [Python](backtracking/0051-n-queens.py)
 | 0013 | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | Easy | Hash Table, Math, String | 2024-08-19 | [Go](hashes/0013-roman-to-integer.go) [Python](hashes/0013-roman-to-integer.py)
 | 0136 | [Single Number](https://leetcode.com/problems/single-number/) | Easy | Array, Bit Manipulation | 2024-08-18 | [Go](bits/0136-single-number.go) [Python](bits/0136-single-number.py)
 | 0367 | [Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/) | Easy | Math, Binary Search | 2024-08-17 | [Go](maths/0367-valid-perfect-square.go) [Python](maths/0367-valid-perfect-square.py)
