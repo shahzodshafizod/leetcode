@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0476 | [Number Complement](https://leetcode.com/problems/number-complement/) | Easy | Bit Manipulation | 2024-08-22 | [Go](bits/0476-number-complement.go) [Python](bits/0476-number-complement.py)
 | 0664 | [Strange Printer](https://leetcode.com/problems/strange-printer/) | Hard | String, Dynamic Programming | 2024-08-21 | [Go](dp/0664-strange-printer.go) [Python](dp/0664-strange-printer.py)
 | 0051 | [N-Queens](https://leetcode.com/problems/n-queens/) | Hard | Array, Backtracking | 2024-08-20 | [Go](backtracking/0051-n-queens.go) [Python](backtracking/0051-n-queens.py)
 | 0013 | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | Easy | Hash Table, Math, String | 2024-08-19 | [Go](hashes/0013-roman-to-integer.go) [Python](hashes/0013-roman-to-integer.py)
