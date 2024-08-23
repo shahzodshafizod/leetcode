@@ -14,6 +14,9 @@ func TestFindComplement(t *testing.T) {
 	}{
 		{num: 5, flipped: 2},
 		{num: 1, flipped: 0},
+		{num: 7, flipped: 0},
+		{num: 10, flipped: 5},
+		{num: 2147483647, flipped: 0},
 	} {
 		flipped := findComplement(tc.num)
 		assert.Equal(t, tc.flipped, flipped)

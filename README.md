@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0060 | [Permutation Sequence](https://leetcode.com/problems/permutation-sequence/) | Hard | Math, Recursion | 2024-08-23 | [Go](maths/0060-permutation-sequence.go) [Python](maths/0060-permutation-sequence.py)
 | 0476 | [Number Complement](https://leetcode.com/problems/number-complement/) | Easy | Bit Manipulation | 2024-08-22 | [Go](bits/0476-number-complement.go) [Python](bits/0476-number-complement.py)
 | 0664 | [Strange Printer](https://leetcode.com/problems/strange-printer/) | Hard | String, Dynamic Programming | 2024-08-21 | [Go](dp/0664-strange-printer.go) [Python](dp/0664-strange-printer.py)
 | 0051 | [N-Queens](https://leetcode.com/problems/n-queens/) | Hard | Array, Backtracking | 2024-08-20 | [Go](backtracking/0051-n-queens.go) [Python](backtracking/0051-n-queens.py)

@@ -18,6 +18,7 @@ class Solution(unittest.TestCase):
 		    (1, 0),
             (7, 0),
             (10, 5),
+            (2147483647, 0),
         ]:
             output = self.findComplement(num)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")
