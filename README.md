@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0145 | [Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/) | Easy | Stack, Tree, Depth-First Search, Binary Tree | 2024-08-25 | [Go](trees/0145-binary-tree-postorder-traversal.go) [Python](trees/0145-binary-tree-postorder-traversal.py)
 | 0564 | [Find the Closest Palindrome](https://leetcode.com/problems/find-the-closest-palindrome/) | Hard | Math, String | 2024-08-24 | [Go](strings/0564-find-the-closest-palindrome.go) [Python](strings/0564-find-the-closest-palindrome.py)
 | 0060 | [Permutation Sequence](https://leetcode.com/problems/permutation-sequence/) | Hard | Math, Recursion | 2024-08-23 | [Go](maths/0060-permutation-sequence.go) [Python](maths/0060-permutation-sequence.py)
 | 0476 | [Number Complement](https://leetcode.com/problems/number-complement/) | Easy | Bit Manipulation | 2024-08-22 | [Go](bits/0476-number-complement.go) [Python](bits/0476-number-complement.py)
