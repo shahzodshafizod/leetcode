@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0030 | [Substring with Concatenation of All Words](https://leetcode.com/problems/substring-with-concatenation-of-all-words/) | Hard | Hash Table, String, Sliding Window | 2024-08-27 | [Go](slidingwindows/0030-substring-with-concatenation-of-all-words.go) [Python](slidingwindows/0030-substring-with-concatenation-of-all-words.py)
 | 0590 | [N-ary Tree Postorder Traversal](https://leetcode.com/problems/n-ary-tree-postorder-traversal/) | Easy | Stack, Tree, Depth-First Search | 2024-08-26 | [Go](trees/0590-n-ary-tree-postorder-traversal.go) [Python](trees/0590-n-ary-tree-postorder-traversal.py)
 | 0145 | [Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/) | Easy | Stack, Tree, Depth-First Search, Binary Tree | 2024-08-25 | [Go](trees/0145-binary-tree-postorder-traversal.go) [Python](trees/0145-binary-tree-postorder-traversal.py)
 | 0564 | [Find the Closest Palindrome](https://leetcode.com/problems/find-the-closest-palindrome/) | Hard | Math, String | 2024-08-24 | [Go](strings/0564-find-the-closest-palindrome.go) [Python](strings/0564-find-the-closest-palindrome.py)
