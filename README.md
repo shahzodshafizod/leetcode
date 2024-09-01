@@ -2,6 +2,9 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2022 | [Convert 1D Array Into 2D Array](https://leetcode.com/problems/convert-1d-array-into-2d-array/) | Easy | Array, Matrix, Simulation | 2024-09-01 | [Go](matrices/2022-convert-1d-array-into-2d-array.go) [Python](matrices/2022-convert-1d-array-into-2d-array.py)
+| 0149 | [Max Points on a Line](https://leetcode.com/problems/max-points-on-a-line/) | Hard | Array, Hash Table, Math, Geometry | 2024-08-31 | [Go](hashes/0149-max-points-on-a-line.go) [Python](hashes/0149-max-points-on-a-line.py)
+| 2699 | [Modify Graph Edge Weights](https://leetcode.com/problems/modify-graph-edge-weights/) | Hard | Graph, Heap (Priority Queue), Shortest Path | 2024-08-30 | [Go](graphs/2699-modify-graph-edge-weights.go) [Python](graphs/2699-modify-graph-edge-weights.py)
 | 0014 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | Easy | String, Trie | 2024-08-29 | [Go](tries/0014-longest-common-prefix.go) [Python](tries/0014-longest-common-prefix.py)
 | 0052 | [N-Queens II](https://leetcode.com/problems/n-queens-ii/) | Hard | Backtracking | 2024-08-28 | [Go](backtracking/0052-n-queens-ii.go) [Python](backtracking/0052-n-queens-ii.py)
 | 0030 | [Substring with Concatenation of All Words](https://leetcode.com/problems/substring-with-concatenation-of-all-words/) | Hard | Hash Table, String, Sliding Window | 2024-08-27 | [Go](slidingwindows/0030-substring-with-concatenation-of-all-words.go) [Python](slidingwindows/0030-substring-with-concatenation-of-all-words.py)
