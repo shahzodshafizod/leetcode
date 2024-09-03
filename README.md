@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1945 | [Sum of Digits of String After Convert](https://leetcode.com/problems/sum-of-digits-of-string-after-convert/) | Easy | String, Simulation | 2024-09-03 | [Go](strings/1945-sum-of-digits-of-string-after-convert.go) [Python](strings/1945-sum-of-digits-of-string-after-convert.py)
 | 1383 | [Maximum Performance of a Team](https://leetcode.com/problems/maximum-performance-of-a-team/) | Hard | Array, Greedy, Sorting, Heap (Priority Queue) | 2024-09-02 | [Go](greedy/1383-maximum-performance-of-a-team.go) [Python](greedy/1383-maximum-performance-of-a-team.py)
 | 2022 | [Convert 1D Array Into 2D Array](https://leetcode.com/problems/convert-1d-array-into-2d-array/) | Easy | Array, Matrix, Simulation | 2024-09-01 | [Go](matrices/2022-convert-1d-array-into-2d-array.go) [Python](matrices/2022-convert-1d-array-into-2d-array.py)
 | 0149 | [Max Points on a Line](https://leetcode.com/problems/max-points-on-a-line/) | Hard | Array, Hash Table, Math, Geometry | 2024-08-31 | [Go](hashes/0149-max-points-on-a-line.go) [Python](hashes/0149-max-points-on-a-line.py)
