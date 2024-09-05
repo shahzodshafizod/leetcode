@@ -7,6 +7,7 @@ from typing import List
 
 class Solutin(unittest.TestCase):
     def maxTotalFruits(self, fruits: List[List[int]], startPos: int, k: int) -> int:
+        # to find left, could be used binary search approach
         left, n = 0, len(fruits)
         while left < n and fruits[left][0] < startPos-k:
             left += 1 # skip fruits before the left bound

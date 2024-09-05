@@ -3,6 +3,7 @@ package slidingwindows
 // https://leetcode.com/problems/maximum-fruits-harvested-after-at-most-k-steps/
 
 func maxTotalFruits(fruits [][]int, startPos int, k int) int {
+	// to find left, could be used binary search approach
 	var left, n = 0, len(fruits)
 	for left < n && fruits[left][0] < startPos-k {
 		left++
