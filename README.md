@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1340 | [Jump Game V](https://leetcode.com/problems/jump-game-v/) | Hard | Array, Dynamic Programming, Sorting | 2024-09-06 | [Go](graphs/1340-jump-game-v.go) [Python](graphs/1340-jump-game-v.py)
 | 1345 | [Jump Game IV](https://leetcode.com/problems/jump-game-iv/) | Hard | Array, Hash Table, Breadth-First Search | 2024-09-05 | [Go](graphs/1345-jump-game-iv.go) [Python](graphs/1345-jump-game-iv.py)
 | 2106 | [Maximum Fruits Harvested After at Most K Steps](https://leetcode.com/problems/maximum-fruits-harvested-after-at-most-k-steps/) | Hard | Array, Binary Search, Sliding Window, Prefix Sum | 2024-09-04 | [Go](slidingwindows/2106-maximum-fruits-harvested-after-at-most-k-steps.go) [Python](slidingwindows/2106-maximum-fruits-harvested-after-at-most-k-steps.py)
 | 1945 | [Sum of Digits of String After Convert](https://leetcode.com/problems/sum-of-digits-of-string-after-convert/) | Easy | String, Simulation | 2024-09-03 | [Go](strings/1945-sum-of-digits-of-string-after-convert.go) [Python](strings/1945-sum-of-digits-of-string-after-convert.py)
