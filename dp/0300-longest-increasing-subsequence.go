@@ -40,7 +40,7 @@ func lengthOfLIS(nums []int) int {
 	return size
 }
 
-// // Brute Force: O(n)
+// // Brute Force: O(n^2)
 // func lengthOfLIS(nums []int) int {
 // 	var lis = 0
 // 	var cache = make([]int, 0, len(nums))
