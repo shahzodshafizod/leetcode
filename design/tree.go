@@ -1,8 +1,4 @@
-package trees
-
-import (
-	"github.com/shahzodshafizod/alkhwarizmi/design"
-)
+package design
 
 // Definition for a binary tree node.
 type TreeNode struct {
@@ -11,15 +7,41 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-func makeTree(index int, vals []any) *TreeNode {
+func MakeTree(index int, vals []any) *TreeNode {
 	if len := len(vals); len == 0 || len <= index || vals[index] == nil {
 		return nil
 	}
 	return &TreeNode{
 		Val:   vals[index].(int),
-		Left:  makeTree(2*index+1, vals),
-		Right: makeTree(2*index+2, vals),
+		Left:  MakeTree(2*index+1, vals),
+		Right: MakeTree(2*index+2, vals),
 	}
+}
+
+func MakeTree2(vals []any) *TreeNode {
+	var root *TreeNode = nil
+	var queue = make([]*TreeNode, 0)
+	if len(vals) > 0 && vals[0] != nil {
+		root = &TreeNode{Val: vals[0].(int)}
+		queue = append(queue, root)
+	}
+	var curr *TreeNode = nil
+	for idx, n := 1, len(vals); idx < n; idx++ {
+		var child *TreeNode = nil
+		if vals[idx] != nil {
+			child = &TreeNode{Val: vals[idx].(int)}
+			queue = append(queue, child)
+		}
+		if curr == nil {
+			curr = queue[0]
+			queue = queue[1:]
+			curr.Left = child
+		} else {
+			curr.Right = child
+			curr = nil
+		}
+	}
+	return root
 }
 
 func traversalBFS(root *TreeNode) []int {
@@ -27,7 +49,7 @@ func traversalBFS(root *TreeNode) []int {
 		return []int{}
 	}
 	var values = make([]int, 0)
-	var queue = design.NewQueue[*TreeNode]()
+	var queue = NewQueue[*TreeNode]()
 	queue.Enqueue(root)
 	for queue.Size() > 0 {
 		current := queue.Dequeue()
@@ -84,24 +106,24 @@ func traversalMorris(root *TreeNode) []int {
 }
 
 // Definition for a n-ary tree node.
-type Node struct {
+type TNode struct {
 	Val      int
-	Children []*Node
+	Children []*TNode
 }
 
-func makeNAryTree(vals []any) *Node {
+func MakeNAryTree(vals []any) *TNode {
 	if len(vals) == 0 || vals[0] == nil {
 		return nil
 	}
-	var root = &Node{Val: vals[0].(int), Children: make([]*Node, 0)}
-	var parents = []*Node{root}
+	var root = &TNode{Val: vals[0].(int), Children: make([]*TNode, 0)}
+	var parents = []*TNode{root}
 	var index = 2
 	for length := len(parents); length > 0; length = len(parents) {
 		for i := 0; i < len(parents); i++ {
 			for index < len(vals) && vals[index] != nil {
-				var child = &Node{
+				var child = &TNode{
 					Val:      vals[index].(int),
-					Children: make([]*Node, 0),
+					Children: make([]*TNode, 0),
 				}
 				parents[i].Children = append(parents[i].Children, child)
 				parents = append(parents, child)

@@ -1,6 +1,10 @@
 package trees
 
-import "strings"
+import (
+	"strings"
+
+	"github.com/shahzodshafizod/alkhwarizmi/design"
+)
 
 // LCA - Lowest Common Ancestor
 
@@ -8,9 +12,9 @@ import "strings"
 
 // time: O(N)
 // space: O(N)
-func getDirections(root *TreeNode, startValue int, destValue int) string {
-	var dfs func(node *TreeNode, target int, level int, direction byte) []byte
-	dfs = func(node *TreeNode, target int, level int, direction byte) []byte {
+func getDirections(root *design.TreeNode, startValue int, destValue int) string {
+	var dfs func(node *design.TreeNode, target int, level int, direction byte) []byte
+	dfs = func(node *design.TreeNode, target int, level int, direction byte) []byte {
 		if node == nil {
 			return nil
 		}

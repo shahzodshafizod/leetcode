@@ -3,6 +3,7 @@ package trees
 import (
 	"testing"
 
+	"github.com/shahzodshafizod/alkhwarizmi/design"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -16,7 +17,7 @@ func TestPostorderTraversal(t *testing.T) {
 		{vals: []any{}, order: []int{}},
 		{vals: []any{1}, order: []int{1}},
 	} {
-		var root = makeTree(0, tc.vals)
+		var root = design.MakeTree(0, tc.vals)
 		var order = postorderTraversal(root)
 		assert.Equal(t, tc.order, order)
 	}

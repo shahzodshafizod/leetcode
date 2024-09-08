@@ -1,8 +1,10 @@
 package trees
 
+import "github.com/shahzodshafizod/alkhwarizmi/design"
+
 // https://leetcode.com/problems/binary-tree-postorder-traversal/
 
-func postorderTraversal(root *TreeNode) []int {
+func postorderTraversal(root *design.TreeNode) []int {
 	if root == nil {
 		return []int{}
 	}

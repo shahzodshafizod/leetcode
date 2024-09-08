@@ -1,9 +1,11 @@
 package linkedlists
 
+import "github.com/shahzodshafizod/alkhwarizmi/design"
+
 // https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 
-func removeNthFromEnd(head *ListNode, n int) *ListNode {
-	var before = &ListNode{Next: head}
+func removeNthFromEnd(head *design.ListNode, n int) *design.ListNode {
+	var before = &design.ListNode{Next: head}
 	var current = before
 	for n > 0 {
 		n--

@@ -1,4 +1,4 @@
-package linkedlists
+package design
 
 import (
 	"reflect"
@@ -10,7 +10,7 @@ type ListNode struct {
 	Next *ListNode
 }
 
-func makeLinkedList(vals ...int) *ListNode {
+func MakeLinkedList(vals ...int) *ListNode {
 	var head, tail *ListNode = nil, nil
 	for _, val := range vals {
 		newNode := &ListNode{Val: val, Next: nil}
@@ -25,7 +25,7 @@ func makeLinkedList(vals ...int) *ListNode {
 }
 
 // position starts from 0
-func getNode(head *ListNode, position int) *ListNode {
+func GetNode(head *ListNode, position int) *ListNode {
 	for node := head; node != nil && position >= 0; {
 		if position == 0 {
 			return node
@@ -36,7 +36,7 @@ func getNode(head *ListNode, position int) *ListNode {
 	return nil
 }
 
-func makeCycleLinkedList(position int, vals ...int) *ListNode {
+func MakeCycleLinkedList(position int, vals ...int) *ListNode {
 	var head, tail *ListNode = nil, nil
 	var cyclePoint *ListNode = nil
 	for index, val := range vals {
@@ -58,23 +58,23 @@ func makeCycleLinkedList(position int, vals ...int) *ListNode {
 }
 
 // Definition for a Node.
-type Node struct {
+type LNode struct {
 	Val   int
-	Prev  *Node
-	Next  *Node
-	Child *Node
+	Prev  *LNode
+	Next  *LNode
+	Child *LNode
 }
 
-func makeDoublyLinkedList(vals ...any) *Node {
-	var root, current *Node
+func MakeDoublyLinkedList(vals ...any) *LNode {
+	var root, current *LNode
 	for _, val := range vals {
 		if kind := reflect.TypeOf(val).Kind(); kind != reflect.Int {
 			if kind == reflect.Slice && current != nil {
-				current.Child = makeDoublyLinkedList(val.([]any)...)
+				current.Child = MakeDoublyLinkedList(val.([]any)...)
 			}
 			continue
 		}
-		newNode := &Node{Val: val.(int)}
+		newNode := &LNode{Val: val.(int)}
 		if root == nil {
 			root, current = newNode, newNode
 		} else {

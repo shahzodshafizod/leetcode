@@ -1,11 +1,13 @@
 package linkedlists
 
+import "github.com/shahzodshafizod/alkhwarizmi/design"
+
 // https://leetcode.com/problems/sort-list/
 
 // Approach#5: Merge Sort
 // time: O(n log n)
 // space: O(log n) - for recursion stack OR w/o: O(1)
-func sortList(head *ListNode) *ListNode {
+func sortList(head *design.ListNode) *design.ListNode {
 	if head == nil || head.Next == nil {
 		return head
 	}
@@ -25,7 +27,7 @@ func sortList(head *ListNode) *ListNode {
 // // Approach#4: Bucket (Count) Sort
 // // time: O(3n) = O(n)
 // // space: O(n)
-// func sortList(head *ListNode) *ListNode {
+// func sortList(head *design.ListNode) *design.ListNode {
 // 	if head == nil || head.Next == nil {
 // 		return head
 // 	}
@@ -52,7 +54,7 @@ func sortList(head *ListNode) *ListNode {
 // // Approach#3: Sorting
 // // time: O(n log n)
 // // space: O(n)
-// func sortList(head *ListNode) *ListNode {
+// func sortList(head *design.ListNode) *design.ListNode {
 // 	var vals = make([]int, 0)
 // 	for i := head; i != nil; i = i.Next {
 // 		vals = append(vals, i.Val)
@@ -69,7 +71,7 @@ func sortList(head *ListNode) *ListNode {
 // // Approach#2: Priority Queue
 // // time: O(n log n)
 // // space: O(n)
-// func sortList(head *ListNode) *ListNode {
+// func sortList(head *design.ListNode) *design.ListNode {
 // 	var pq = design.NewPQ[int](make([]int, 0), func(x, y int) bool { return x > y })
 // 	for node := head; node != nil; node = node.Next { // O(n)
 // 		pq.Push(node.Val) // O(log n)
@@ -83,7 +85,7 @@ func sortList(head *ListNode) *ListNode {
 // // Approach#1: Selection Sort
 // // time: O(n ^ 2) // Time Limit Exceeded
 // // space: O(1)
-// func sortList(head *ListNode) *ListNode {
+// func sortList(head *design.ListNode) *design.ListNode {
 // 	for i := head; i != nil; i = i.Next {
 // 		for j := i.Next; j != nil; j = j.Next {
 // 			if i.Val > j.Val {

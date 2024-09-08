@@ -1,6 +1,10 @@
 package trees
 
-import "math"
+import (
+	"math"
+
+	"github.com/shahzodshafizod/alkhwarizmi/design"
+)
 
 /*
 Binary Search Trees:
@@ -37,12 +41,12 @@ Step 2: Write out some test cases:
 
 // time: O(N)
 // space: O(N)
-func isValidBST(root *TreeNode) bool {
+func isValidBST(root *design.TreeNode) bool {
 	var prev = math.MinInt
 	return inOrderCheck(root, &prev)
 }
 
-func inOrderCheck(node *TreeNode, prev *int) bool {
+func inOrderCheck(node *design.TreeNode, prev *int) bool {
 	if node == nil {
 		return true
 	}

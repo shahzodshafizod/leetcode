@@ -1,10 +1,12 @@
 package trees
 
+import "github.com/shahzodshafizod/alkhwarizmi/design"
+
 // https://leetcode.com/problems/n-ary-tree-postorder-traversal/
 
 // // Iterative
-// func postorder(root *Node) []int {
-// 	var stack = []*Node{}
+// func postorder(root *design.TNode) []int {
+// 	var stack = []*design.TNode{}
 // 	if root != nil {
 // 		stack = append(stack, root)
 // 	}
@@ -19,7 +21,7 @@ package trees
 // }
 
 // Recursive
-func postorder(root *Node) []int {
+func postorder(root *design.TNode) []int {
 	if root == nil {
 		return []int{}
 	}

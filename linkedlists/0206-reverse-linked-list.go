@@ -1,5 +1,7 @@
 package linkedlists
 
+import "github.com/shahzodshafizod/alkhwarizmi/design"
+
 /*
 Problem:
 Given a linked list, return it in reverse.
@@ -18,10 +20,10 @@ Step 2: Write out some test cases
 
 // https://leetcode.com/problems/reverse-linked-list/
 
-func reverseList(head *ListNode) *ListNode {
+func reverseList(head *design.ListNode) *design.ListNode {
 	var node = head
 	head = nil
-	var next *ListNode
+	var next *design.ListNode
 	for node != nil {
 		next = node.Next
 		node.Next = head
@@ -31,10 +33,10 @@ func reverseList(head *ListNode) *ListNode {
 	return head
 }
 
-// func reverseList(head *ListNode) *ListNode {
-// 	var newHead *ListNode = nil
+// func reverseList(head *design.ListNode) *design.ListNode {
+// 	var newHead *design.ListNode = nil
 // 	for i := head; i != nil; i = i.Next {
-// 		newHead = &ListNode{Val: i.Val, Next: newHead}
+// 		newHead = &design.ListNode{Val: i.Val, Next: newHead}
 // 	}
 // 	return newHead
 // }

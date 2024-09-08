@@ -8,14 +8,34 @@ class TreeNode:
         self.left = left
         self.right = right
 
-def create_tree(vals: List[int], idx: int) -> Optional[TreeNode]:
-    if idx >= len(vals) or vals[idx] == None:
-        return None
-    return TreeNode(
-        val=vals[idx],
-        left=create_tree(vals, 2*idx+1),
-        right=create_tree(vals, 2*idx+2)
-    )
+# def create_tree(vals: List[int], idx: int) -> Optional[TreeNode]:
+#     if idx >= len(vals) or vals[idx] == None:
+#         return None
+#     return TreeNode(
+#         val=vals[idx],
+#         left=create_tree(vals, 2*idx+1),
+#         right=create_tree(vals, 2*idx+2)
+#     )
+
+def create_tree(vals: List[int]) -> Optional[TreeNode]:
+    root = None
+    queue = deque()
+    if len(vals) > 0 and vals[0] != None:
+        root = TreeNode(vals[0])
+        queue.append(root)
+    curr = None
+    for idx in range(1, len(vals)):
+        child = None
+        if vals[idx] != None:
+            child = TreeNode(vals[idx])
+            queue.append(child)
+        if not curr:
+            curr = queue.popleft()
+            curr.left = child
+        else:
+            curr.right = child
+            curr = None
+    return root
 
 # Definition for a n-ary tree node.
 class Node:

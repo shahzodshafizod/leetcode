@@ -15,9 +15,9 @@ class ListNode:
         curr = self
         vals = []
         while curr:
-            vals.append(curr.val)
+            vals.append(str(curr.val))
             curr = curr.next
-        return ",".join([str(val) for val in vals])
+        return ",".join(vals)
 
 def create_linked_list(vals: List[int]) -> Optional[ListNode]:
     tail = dummy = ListNode()

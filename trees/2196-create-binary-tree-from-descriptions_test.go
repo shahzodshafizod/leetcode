@@ -3,6 +3,7 @@ package trees
 import (
 	"testing"
 
+	"github.com/shahzodshafizod/alkhwarizmi/design"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -10,15 +11,15 @@ import (
 func TestCreateBinaryTree(t *testing.T) {
 	for _, tc := range []struct {
 		descriptions [][]int
-		root         *TreeNode
+		root         *design.TreeNode
 	}{
 		{
 			descriptions: [][]int{{20, 15, 1}, {20, 17, 0}, {50, 20, 1}, {50, 80, 0}, {80, 19, 1}},
-			root:         makeTree(0, []any{50, 20, 80, 15, 17, 19}),
+			root:         design.MakeTree(0, []any{50, 20, 80, 15, 17, 19}),
 		},
 		{
 			descriptions: [][]int{{1, 2, 1}, {2, 3, 0}, {3, 4, 1}},
-			root:         makeTree(0, []any{1, 2, nil, nil, 3, nil, nil, nil, nil, 4}),
+			root:         design.MakeTree(0, []any{1, 2, nil, nil, 3, nil, nil, nil, nil, 4}),
 		},
 	} {
 		root := createBinaryTree(tc.descriptions)

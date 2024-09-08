@@ -1,8 +1,10 @@
 package trees
 
+import "github.com/shahzodshafizod/alkhwarizmi/design"
+
 // https://leetcode.com/problems/evaluate-boolean-binary-tree/
 
-func evaluateTree(root *TreeNode) bool {
+func evaluateTree(root *design.TreeNode) bool {
 	if root.Left == nil {
 		return root.Val == 1
 	}

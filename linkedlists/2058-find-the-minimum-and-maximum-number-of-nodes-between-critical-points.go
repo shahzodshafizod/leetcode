@@ -1,8 +1,10 @@
 package linkedlists
 
+import "github.com/shahzodshafizod/alkhwarizmi/design"
+
 // https://leetcode.com/problems/find-the-minimum-and-maximum-number-of-nodes-between-critical-points/
 
-func nodesBetweenCriticalPoints(head *ListNode) []int {
+func nodesBetweenCriticalPoints(head *design.ListNode) []int {
 	var first, last = -1, -1
 	var minima = 100000
 	var prev = head

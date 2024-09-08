@@ -1,13 +1,15 @@
 package trees
 
+import "github.com/shahzodshafizod/alkhwarizmi/design"
+
 // https://leetcode.com/problems/add-one-row-to-tree/
 
-func addOneRow(root *TreeNode, val int, depth int) *TreeNode {
-	var dfs func(node *TreeNode, val int, depth int)
-	dfs = func(node *TreeNode, val int, depth int) {
+func addOneRow(root *design.TreeNode, val int, depth int) *design.TreeNode {
+	var dfs func(node *design.TreeNode, val int, depth int)
+	dfs = func(node *design.TreeNode, val int, depth int) {
 		if depth == 1 {
-			node.Left = &TreeNode{Val: val, Left: node.Left}
-			node.Right = &TreeNode{Val: val, Right: node.Right}
+			node.Left = &design.TreeNode{Val: val, Left: node.Left}
+			node.Right = &design.TreeNode{Val: val, Right: node.Right}
 			return
 		}
 		if node.Left != nil {
@@ -18,7 +20,7 @@ func addOneRow(root *TreeNode, val int, depth int) *TreeNode {
 		}
 	}
 	if depth == 1 {
-		root = &TreeNode{Val: val, Left: root}
+		root = &design.TreeNode{Val: val, Left: root}
 	} else {
 		dfs(root, val, depth-1)
 	}

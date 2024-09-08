@@ -1,25 +1,27 @@
 package trees
 
+import "github.com/shahzodshafizod/alkhwarizmi/design"
+
 // https://leetcode.com/problems/delete-nodes-and-return-forest/
 
 // time: O(N)
 // space: O(N)
-func delNodes(root *TreeNode, toDelete []int) []*TreeNode {
+func delNodes(root *design.TreeNode, toDelete []int) []*design.TreeNode {
 	var inDelMap = make(map[int]bool)
 	for _, val := range toDelete {
 		inDelMap[val] = true
 	}
-	var dfs func(node *TreeNode, isRoot bool) ([]*TreeNode, *TreeNode) // (roots, child)
-	dfs = func(node *TreeNode, isRoot bool) ([]*TreeNode, *TreeNode) {
+	var dfs func(node *design.TreeNode, isRoot bool) ([]*design.TreeNode, *design.TreeNode) // (roots, child)
+	dfs = func(node *design.TreeNode, isRoot bool) ([]*design.TreeNode, *design.TreeNode) {
 		if node == nil {
 			return nil, nil
 		}
-		var forest = make([]*TreeNode, 0)
+		var forest = make([]*design.TreeNode, 0)
 		if isRoot && !inDelMap[node.Val] {
 			forest = append(forest, node)
 		}
 
-		var roots []*TreeNode
+		var roots []*design.TreeNode
 		roots, node.Left = dfs(node.Left, inDelMap[node.Val])
 		forest = append(forest, roots...)
 
@@ -37,14 +39,14 @@ func delNodes(root *TreeNode, toDelete []int) []*TreeNode {
 
 // // time: O(N)
 // // space: O(N)
-// func delNodes(root *TreeNode, toDelete []int) []*TreeNode {
+// func delNodes(root *design.TreeNode, toDelete []int) []*design.TreeNode {
 // 	var inDelMap = make(map[int]bool)
 // 	for _, val := range toDelete {
 // 		inDelMap[val] = true
 // 	}
-// 	var dfs func(node *TreeNode, isRoot bool) []*TreeNode
-// 	dfs = func(node *TreeNode, isRoot bool) []*TreeNode {
-// 		var forest = make([]*TreeNode, 0)
+// 	var dfs func(node *design.TreeNode, isRoot bool) []*design.TreeNode
+// 	dfs = func(node *design.TreeNode, isRoot bool) []*design.TreeNode {
+// 		var forest = make([]*design.TreeNode, 0)
 // 		if isRoot && !inDelMap[node.Val] {
 // 			forest = append(forest, node)
 // 		}

@@ -1,4 +1,4 @@
-package trees
+package design
 
 import (
 	"testing"
@@ -6,27 +6,27 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// go test -v -count=1 ./trees/ -run ^TestTraversalBFS$
+// go test -v -count=1 ./design/ -run ^TestTraversalBFS$
 func TestTraversalBFS(t *testing.T) {
 	for _, tc := range []struct {
 		root   *TreeNode
 		values []int
 	}{
-		{root: makeTree(0, []any{9, 4, 20, 1, 6, 15, 170}), values: []int{9, 4, 20, 1, 6, 15, 170}},
+		{root: MakeTree(0, []any{9, 4, 20, 1, 6, 15, 170}), values: []int{9, 4, 20, 1, 6, 15, 170}},
 	} {
 		values := traversalBFS(tc.root)
 		assert.Equal(t, tc.values, values)
 	}
 }
 
-// go test -v -count=1 ./trees/ -run ^TestTraversalDFS$
+// go test -v -count=1 ./design/ -run ^TestTraversalDFS$
 func TestTraversalDFS(t *testing.T) {
 	for _, tc := range []struct {
 		root   *TreeNode
 		values []int
 	}{
 		{
-			root:   makeTree(0, []any{9, 4, 20, 1, 6, 15, 170}),
+			root:   MakeTree(0, []any{9, 4, 20, 1, 6, 15, 170}),
 			values: []int{1, 4, 6, 9, 15, 20, 170},
 		},
 	} {
@@ -35,14 +35,14 @@ func TestTraversalDFS(t *testing.T) {
 	}
 }
 
-// go test -v -count=1 ./trees/ -run ^TestTraversalMorris$
+// go test -v -count=1 ./design/ -run ^TestTraversalMorris$
 func TestTraversalMorris(t *testing.T) {
 	for _, tc := range []struct {
 		root   *TreeNode
 		values []int
 	}{
 		{
-			root:   makeTree(0, []any{9, 4, 20, 1, 6, 15, 170}),
+			root:   MakeTree(0, []any{9, 4, 20, 1, 6, 15, 170}),
 			values: []int{1, 4, 6, 9, 15, 20, 170},
 		},
 	} {

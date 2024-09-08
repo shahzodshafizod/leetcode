@@ -1,15 +1,17 @@
 package linkedlists
 
+import "github.com/shahzodshafizod/alkhwarizmi/design"
+
 // https://leetcode.com/problems/reverse-nodes-in-k-group/
 
-func reverseKGroup(head *ListNode, k int) *ListNode {
+func reverseKGroup(head *design.ListNode, k int) *design.ListNode {
 	var length = reverseKGroupLLLength(head, 0)
 	var node = head
-	var prevGroup *ListNode = nil
+	var prevGroup *design.ListNode = nil
 	var times = length / k
 	for times > 0 {
 		times--
-		var localHead, localTrail *ListNode = nil, node
+		var localHead, localTrail *design.ListNode = nil, node
 		var count = 1
 		for count <= k {
 			count++
@@ -35,7 +37,7 @@ func reverseKGroup(head *ListNode, k int) *ListNode {
 	return head
 }
 
-func reverseKGroupLLLength(node *ListNode, length int) int {
+func reverseKGroupLLLength(node *design.ListNode, length int) int {
 	if node == nil {
 		return length
 	}
@@ -43,7 +45,7 @@ func reverseKGroupLLLength(node *ListNode, length int) int {
 }
 
 // // If changing NEXT is not allowed, we'll change VAL
-// func reverseKGroup(head *ListNode, k int) *ListNode {
+// func reverseKGroup(head *design.ListNode, k int) *design.ListNode {
 // 	if reverseKGroupLLLength(head, 0) < k { // time: O(N), space: O(1) because of tail recursion
 // 		return head
 // 	}
@@ -71,9 +73,9 @@ func reverseKGroupLLLength(node *ListNode, length int) int {
 
 // // Follow-up: Can you solve the problem in O(1) extra memory space?
 // // But with time of O(N^2)
-// func reverseKGroup(head *ListNode, k int) *ListNode {
+// func reverseKGroup(head *design.ListNode, k int) *design.ListNode {
 // 	for node := head; node != nil; {
-// 		var next *ListNode = nil
+// 		var next *design.ListNode = nil
 // 		var counter = 1
 // 		for counter < k {
 // 			var pawn = node

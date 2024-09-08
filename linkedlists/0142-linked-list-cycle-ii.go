@@ -1,5 +1,7 @@
 package linkedlists
 
+import "github.com/shahzodshafizod/alkhwarizmi/design"
+
 /*
 Linked Lists: Cycle Detection.
 
@@ -9,7 +11,7 @@ tortoise=1_step, hare=2_steps.
 
 // https://leetcode.com/problems/linked-list-cycle-ii/
 
-func detectCycle(head *ListNode) *ListNode {
+func detectCycle(head *design.ListNode) *design.ListNode {
 	tortoise, hare := head, head
 	for hare != nil && hare.Next != nil {
 		tortoise = tortoise.Next
@@ -26,11 +28,11 @@ func detectCycle(head *ListNode) *ListNode {
 	return nil
 }
 
-// func detectCycle(head *ListNode) *ListNode {
+// func detectCycle(head *design.ListNode) *design.ListNode {
 // 	if head == nil {
 // 		return nil
 // 	}
-// 	var tortoise, hare *ListNode = head, head
+// 	var tortoise, hare *design.ListNode = head, head
 // 	for {
 // 		tortoise = tortoise.Next
 // 		hare = hare.Next
@@ -49,8 +51,8 @@ func detectCycle(head *ListNode) *ListNode {
 // 	return tortoise
 // }
 
-// func detectCycle(head *ListNode) *ListNode {
-// 	var seen = make(map[*ListNode]bool)
+// func detectCycle(head *design.ListNode) *design.ListNode {
+// 	var seen = make(map[*design.ListNode]bool)
 // 	for node := head; node != nil; node = node.Next {
 // 		if _, exists := seen[node]; exists {
 // 			return node
@@ -60,8 +62,8 @@ func detectCycle(head *ListNode) *ListNode {
 // 	return nil
 // }
 
-// func detectCycle(head *ListNode) *ListNode {
-// 	var seen = make(map[*ListNode]bool)
+// func detectCycle(head *design.ListNode) *design.ListNode {
+// 	var seen = make(map[*design.ListNode]bool)
 // 	node := head
 // 	for node != nil && !seen[node] {
 // 		seen[node] = true

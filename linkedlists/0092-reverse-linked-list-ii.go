@@ -1,5 +1,7 @@
 package linkedlists
 
+import "github.com/shahzodshafizod/alkhwarizmi/design"
+
 /*
 Problem:
 Given a linked list and numbers m and n, return it back with only positions m to n in reverse.
@@ -29,19 +31,19 @@ Steps to reverse linked list:
 
 // https://leetcode.com/problems/reverse-linked-list-ii/
 
-func reverseBetween(head *ListNode, left int, right int) *ListNode {
+func reverseBetween(head *design.ListNode, left int, right int) *design.ListNode {
 	if head == nil {
 		return nil
 	}
 	var position = 1
 	var node = head
-	var lastPrev *ListNode
+	var lastPrev *design.ListNode
 	for node != nil && position < left {
 		lastPrev = node
 		node = node.Next
 		position++
 	}
-	var localHead, localTail *ListNode = nil, node
+	var localHead, localTail *design.ListNode = nil, node
 	for node != nil && position <= right {
 		current := node
 		node = node.Next

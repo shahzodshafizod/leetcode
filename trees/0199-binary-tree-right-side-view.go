@@ -1,5 +1,7 @@
 package trees
 
+import "github.com/shahzodshafizod/alkhwarizmi/design"
+
 /*
 Problem:
 Given a binary tree, imagine you're standing to the right of the tree.
@@ -24,12 +26,12 @@ Depth-First Search:
 // https://leetcode.com/problems/binary-tree-right-side-view/
 
 // BFS Traversal
-func rightSideView(root *TreeNode) []int {
+func rightSideView(root *design.TreeNode) []int {
 	values := make([]int, 0)
 	if root == nil {
 		return values
 	}
-	queue := []*TreeNode{root}
+	queue := []*design.TreeNode{root}
 	for queueLen := len(queue); queueLen > 0; queueLen = len(queue) {
 		values = append(values, queue[queueLen-1].Val)
 		for count := 0; count < queueLen; count++ {
@@ -46,7 +48,7 @@ func rightSideView(root *TreeNode) []int {
 	return values
 }
 
-// func rightSideViewHelper(root *TreeNode, values *[]int, level int) {
+// func rightSideViewHelper(root *design.TreeNode, values *[]int, level int) {
 // 	/*
 // 		how to use:
 // 		values := make([]int, 0)

@@ -1,13 +1,15 @@
 package linkedlists
 
+import "github.com/shahzodshafizod/alkhwarizmi/design"
+
 // https://leetcode.com/problems/remove-nodes-from-linked-list/
 
 // Approach: Reverse Twice
 // time: O(3n) = O(n)
 // space: O(1)
-func removeNodes(head *ListNode) *ListNode {
-	var reverse = func(head *ListNode) *ListNode {
-		var prev, next *ListNode = nil, nil
+func removeNodes(head *design.ListNode) *design.ListNode {
+	var reverse = func(head *design.ListNode) *design.ListNode {
+		var prev, next *design.ListNode = nil, nil
 		var curr = head
 		for curr != nil {
 			next = curr.Next
@@ -20,7 +22,7 @@ func removeNodes(head *ListNode) *ListNode {
 	}
 	head = reverse(head)
 	var max = 0
-	var prev *ListNode = nil
+	var prev *design.ListNode = nil
 	for node := head; node != nil; node = node.Next {
 		if node.Val < max {
 			if prev == nil {
@@ -39,9 +41,9 @@ func removeNodes(head *ListNode) *ListNode {
 // // Approach: Stack
 // // time: O(2n)
 // // space: O(n)
-// func removeNodes(head *ListNode) *ListNode {
-// 	var stack = make([]*ListNode, 0)
-// 	var node *ListNode
+// func removeNodes(head *design.ListNode) *design.ListNode {
+// 	var stack = make([]*design.ListNode, 0)
+// 	var node *design.ListNode
 // 	for node = head; node != nil; node = node.Next {
 // 		stack = append(stack, node)
 // 	}
@@ -66,7 +68,7 @@ func removeNodes(head *ListNode) *ListNode {
 // // Approach: Monotonic Stack
 // // time: O(n)
 // // space: O(n) # for recursion stack
-// func removeNodes(head *ListNode) *ListNode {
+// func removeNodes(head *design.ListNode) *design.ListNode {
 // 	if head == nil {
 // 		return nil
 // 	}
@@ -80,9 +82,9 @@ func removeNodes(head *ListNode) *ListNode {
 // // Approach: Monotonic Stack
 // // time: O(n)
 // // space: O(n) # for recursion stack
-// func removeNodes(head *ListNode) *ListNode {
-// 	var monostack func(prev *ListNode, node *ListNode) int
-// 	monostack = func(prev *ListNode, node *ListNode) int {
+// func removeNodes(head *design.ListNode) *design.ListNode {
+// 	var monostack func(prev *design.ListNode, node *design.ListNode) int
+// 	monostack = func(prev *design.ListNode, node *design.ListNode) int {
 // 		if node == nil {
 // 			return 0
 // 		}

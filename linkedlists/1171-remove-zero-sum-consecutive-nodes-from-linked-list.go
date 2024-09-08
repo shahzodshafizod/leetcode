@@ -1,13 +1,15 @@
 package linkedlists
 
+import "github.com/shahzodshafizod/alkhwarizmi/design"
+
 // https://leetcode.com/problems/remove-zero-sum-consecutive-nodes-from-linked-list/
 
 // Prefix Sum + Hash Table
-func removeZeroSumSublists(head *ListNode) *ListNode {
-	var dummy = &ListNode{0, head}
+func removeZeroSumSublists(head *design.ListNode) *design.ListNode {
+	var dummy = &design.ListNode{Next: head}
 	var sum = 0
-	var hashset = make(map[int]*ListNode)
-	var start, node *ListNode
+	var hashset = make(map[int]*design.ListNode)
+	var start, node *design.ListNode
 	for end := dummy; end != nil; end = end.Next {
 		sum += end.Val
 		start = hashset[sum]

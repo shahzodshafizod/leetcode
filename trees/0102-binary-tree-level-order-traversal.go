@@ -1,5 +1,7 @@
 package trees
 
+import "github.com/shahzodshafizod/alkhwarizmi/design"
+
 /*
 Problem:
 Given a binary tree, return the level order traversal of the nodes' values as an array.
@@ -21,12 +23,12 @@ Step 2: Write out some test cases
 // https://leetcode.com/problems/binary-tree-level-order-traversal/
 
 // BFS Traversal
-func levelOrder(root *TreeNode) [][]int {
+func levelOrder(root *design.TreeNode) [][]int {
 	levels := make([][]int, 0)
 	if root == nil {
 		return levels
 	}
-	var queue = []*TreeNode{root}
+	var queue = []*design.TreeNode{root}
 	for queueLen := len(queue); queueLen > 0; queueLen = len(queue) {
 		levelElements := make([]int, 0)
 		for count := 0; count < queueLen; count++ {
@@ -45,7 +47,7 @@ func levelOrder(root *TreeNode) [][]int {
 	return levels
 }
 
-// func levelOrderHelper(root *TreeNode, levels *[][]int, level int) {
+// func levelOrderHelper(root *design.TreeNode, levels *[][]int, level int) {
 // 	/*
 // 		how to use:
 // 		var levels = make([][]int, 0)

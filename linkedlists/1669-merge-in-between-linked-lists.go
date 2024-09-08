@@ -1,13 +1,15 @@
 package linkedlists
 
+import "github.com/shahzodshafizod/alkhwarizmi/design"
+
 // https://leetcode.com/problems/merge-in-between-linked-lists/
 
-func mergeInBetween(list1 *ListNode, a int, b int, list2 *ListNode) *ListNode {
-	var start *ListNode
+func mergeInBetween(list1 *design.ListNode, a int, b int, list2 *design.ListNode) *design.ListNode {
+	var start *design.ListNode
 	for node, i := list1, 0; i < a; node, i = node.Next, i+1 {
 		start = node
 	}
-	var end *ListNode
+	var end *design.ListNode
 	for node, i := start, b-a+1; i >= 0; node, i = node.Next, i-1 {
 		end = node
 	}

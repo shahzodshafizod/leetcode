@@ -1,11 +1,13 @@
 package trees
 
+import "github.com/shahzodshafizod/alkhwarizmi/design"
+
 // https://leetcode.com/problems/n-ary-tree-preorder-traversal/
 
 // BFS
-func preorder(root *Node) []int {
+func preorder(root *design.TNode) []int {
 	var values = make([]int, 0)
-	var stack = make([]*Node, 0)
+	var stack = make([]*design.TNode, 0)
 	if root != nil {
 		stack = append(stack, root)
 	}
@@ -21,7 +23,7 @@ func preorder(root *Node) []int {
 }
 
 // // DFS
-// func preorder(root *Node) []int {
+// func preorder(root *design.TNode) []int {
 // 	var values = make([]int, 0)
 // 	if root == nil {
 // 		return values

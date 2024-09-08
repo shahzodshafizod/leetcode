@@ -1,8 +1,10 @@
 package trees
 
+import "github.com/shahzodshafizod/alkhwarizmi/design"
+
 // https://leetcode.com/problems/delete-leaves-with-a-given-value/
 
-func removeLeafNodes(root *TreeNode, target int) *TreeNode {
+func removeLeafNodes(root *design.TreeNode, target int) *design.TreeNode {
 	if root.Left != nil {
 		root.Left = removeLeafNodes(root.Left, target)
 	}

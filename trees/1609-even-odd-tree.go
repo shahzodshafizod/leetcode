@@ -1,9 +1,11 @@
 package trees
 
+import "github.com/shahzodshafizod/alkhwarizmi/design"
+
 // https://leetcode.com/problems/even-odd-tree/
 
-func isEvenOddTree(root *TreeNode) bool {
-	var queue = []*TreeNode{root}
+func isEvenOddTree(root *design.TreeNode) bool {
+	var queue = []*design.TreeNode{root}
 	var level = 0
 	var levelParity, factor int
 	for length := len(queue); length > 0; length = len(queue) {
