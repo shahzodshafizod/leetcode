@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0480 | [Sliding Window Median](https://leetcode.com/problems/sliding-window-median/) | Hard | Array, Hash Table, Sliding Window, Heap (Priority Queue) | 2024-09-09 | [Go](slidingwindows/0480-sliding-window-median.go) [Python](slidingwindows/0480-sliding-window-median.py)
 | 0572 | [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/) | Easy | Tree, Depth-First Search, String Matching, Binary Tree, Hash Function | 2024-09-08 | [Go](trees/0572-subtree-of-another-tree.go) [Python](trees/0572-subtree-of-another-tree.py)
 | 1425 | [Constrained Subsequence Sum](https://leetcode.com/problems/constrained-subsequence-sum/) | Hard | Array, Dynamic Programming, Queue, Sliding Window, Heap (Priority Queue), Monotonic Queue | 2024-09-07 | [Go](queues/1425-constrained-subsequence-sum.go) [Python](queues/1425-constrained-subsequence-sum.py)
 | 1340 | [Jump Game V](https://leetcode.com/problems/jump-game-v/) | Hard | Array, Dynamic Programming, Sorting | 2024-09-06 | [Go](graphs/1340-jump-game-v.go) [Python](graphs/1340-jump-game-v.py)
@@ -274,8 +275,8 @@
 | 0025 | [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) | Hard | Linked List, Recursion | 2024-02-08 | [Go](linkedlists/0025-reverse-nodes-in-k-group.go)
 | 0076 | [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | Hard | Hash Table, String, Sliding Window | 2024-02-08 | [Go](hashes/0076-minimum-window-substring.go)
 | 1093 | [Statistics from a Large Sample](https://leetcode.com/problems/statistics-from-a-large-sample/) | Medium | Array, Math, Probability and Statistics | 2024-02-07 | [Go](arrays/1093-statistics-from-a-large-sample.go)
-| 0295 | [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) | Hard | Two Pointers, Design, Sorting, Heap (Priority Queue), Data Stream | 2024-02-07 | [Go](design/0295-find-median-from-data-stream.go)
-| 0239 | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) | Hard | Array, Queue, Sliding Window, Heap (Priority Queue), Monotonic Queue | 2024-02-06 | [Go](queues/0239-sliding-window-maximum.go)
+| 0295 | [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) | Hard | Two Pointers, Design, Sorting, Heap (Priority Queue), Data Stream | 2024-02-07 | [Go](design/0295-find-median-from-data-stream.go) [Python](design/0295-find-median-from-data-stream.py)
+| 0239 | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) | Hard | Array, Queue, Sliding Window, Heap (Priority Queue), Monotonic Queue | 2024-02-06 | [Go](slidingwindows/0239-sliding-window-maximum.go) [Python](slidingwindows/0239-sliding-window-maximum.py)
 | 0355 | [Design Twitter](https://leetcode.com/problems/design-twitter/) | Medium | Hash Table, Linked List, Design, Heap (Priority Queue) | 2024-02-05 | [Go](design/0355-design-twitter.go)
 | 0208 | [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/) | Medium | Hash Table, String, Design, Trie | 2024-02-04 | [Go](design/0208-implement-trie-prefix-tree.go)
 | 0225 | [Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/) | Easy | Stack, Design, Queue | 2024-02-04 | [Go](design/0225-implement-stack-using-queues.go)

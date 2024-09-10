@@ -1,51 +1,41 @@
 package design
 
-import "container/heap"
-
 // https://leetcode.com/problems/find-median-from-data-stream/
 
 type MedianFinder struct {
-	minHeap *Heap[int] // right from median
-	maxHeap *Heap[int] // left from median
+	maxHeap PQ[int] // less that or equal to median
+	minHeap PQ[int] // greater that median
 }
 
 func NewMedianFinder() MedianFinder {
 	return MedianFinder{
-		minHeap: NewHeap(make([]int, 0), func(x, y int) bool { return x < y }),
-		maxHeap: NewHeap(make([]int, 0), func(x, y int) bool { return x > y }),
+		maxHeap: NewPQ(make([]int, 0), func(x, y int) bool { return x < y }),
+		minHeap: NewPQ(make([]int, 0), func(x, y int) bool { return x > y }),
 	}
 }
 
 func (m *MedianFinder) AddNum(num int) {
-	if float64(num) > m.FindMedian() {
-		heap.Push(m.minHeap, num)
+	// m.maxHeap.Push(num)
+	// m.minHeap.Push(m.maxHeap.Pop())
+	// if m.minHeap.Len() > m.maxHeap.Len() {
+	// 	m.maxHeap.Push(m.minHeap.Pop())
+	// }
+	if float64(num) <= m.FindMedian() {
+		m.maxHeap.Push(num)
 	} else {
-		heap.Push(m.maxHeap, num)
+		m.minHeap.Push(num)
 	}
-	m.rebalance()
-}
-
-func (m *MedianFinder) rebalance() {
-	// Every element in the min-heap is greater or equal to the median,
-	// and every element in the max-heap is less or equal to the median.
-	// THAT'S: maxHeap is in left side, minHeap is in right side.
-	for m.minHeap.Len() > 0 && (m.minHeap.Len() > m.maxHeap.Len()+1 || float64(m.minHeap.Peek()) < m.FindMedian()) {
-		heap.Push(m.maxHeap, heap.Pop(m.minHeap))
+	// rebalance
+	if m.maxHeap.Len() > m.minHeap.Len()+1 {
+		m.minHeap.Push(m.maxHeap.Pop())
 	}
-	for m.maxHeap.Len() > 0 && (m.maxHeap.Len() > m.minHeap.Len()+1 || float64(m.maxHeap.Peek()) > m.FindMedian()) {
-		heap.Push(m.minHeap, heap.Pop(m.maxHeap))
+	if m.minHeap.Len() > m.maxHeap.Len() {
+		m.maxHeap.Push(m.minHeap.Pop())
 	}
 }
 
 func (m *MedianFinder) FindMedian() float64 {
-	var minLen, maxLen = m.minHeap.Len(), m.maxHeap.Len()
-	if minLen == 0 && maxLen == 0 {
-		return 0
-	}
-	if minLen > maxLen {
-		return float64(m.minHeap.Peek())
-	}
-	if maxLen > minLen {
+	if m.maxHeap.Len() > m.minHeap.Len() {
 		return float64(m.maxHeap.Peek())
 	}
 	return float64(m.minHeap.Peek()+m.maxHeap.Peek()) / 2
