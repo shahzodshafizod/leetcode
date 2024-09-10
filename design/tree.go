@@ -18,7 +18,7 @@ func MakeTree(index int, vals []any) *TreeNode {
 	}
 }
 
-func MakeTree2(vals []any) *TreeNode {
+func MakeTree2(vals ...any) *TreeNode {
 	var root *TreeNode = nil
 	var queue = make([]*TreeNode, 0)
 	if len(vals) > 0 && vals[0] != nil {

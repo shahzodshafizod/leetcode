@@ -1,8 +1,6 @@
 package trees
 
 import (
-	"math"
-
 	"github.com/shahzodshafizod/alkhwarizmi/design"
 )
 
@@ -39,26 +37,45 @@ Step 2: Write out some test cases:
 
 // https://leetcode.com/problems/validate-binary-search-tree/
 
+// Approach: Iterative
+// N = # of tree nodes
+// H = tree height
 // time: O(N)
-// space: O(N)
+// space: O(H)
 func isValidBST(root *design.TreeNode) bool {
-	var prev = math.MinInt
-	return inOrderCheck(root, &prev)
+	var stack = make([]*design.TreeNode, 0)
+	var prev, node *design.TreeNode = nil, root
+	for len(stack) != 0 || node != nil {
+		for node != nil {
+			stack = append(stack, node)
+			node = node.Left
+		}
+		node = stack[len(stack)-1]
+		stack = stack[:len(stack)-1]
+		if prev != nil && node.Val <= prev.Val {
+			return false
+		}
+		prev, node = node, node.Right
+	}
+	return true
 }
 
-func inOrderCheck(node *design.TreeNode, prev *int) bool {
-	if node == nil {
-		return true
-	}
-
-	if !inOrderCheck(node.Left, prev) {
-		return false
-	}
-
-	if *prev >= node.Val {
-		return false
-	}
-	*prev = node.Val
-
-	return inOrderCheck(node.Right, prev)
-}
+// // Approach: Recursive
+// // N = # of tree nodes
+// // H = tree height
+// // time: O(N)
+// // space: O(H)
+// func isValidBST(root *design.TreeNode) bool {
+// 	var check func(node *design.TreeNode, minval int, maxval int) bool
+// 	check = func(node *design.TreeNode, minval int, maxval int) bool {
+// 		if node == nil {
+// 			return true
+// 		}
+// 		if node.Val <= minval || node.Val >= maxval {
+// 			return false
+// 		}
+// 		return check(node.Left, minval, node.Val) &&
+// 			check(node.Right, node.Val, maxval)
+// 	}
+// 	return check(root, math.MinInt, math.MaxInt)
+// }

@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0124 | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | Hard | Dynamic Programming, Tree, Depth-First Search, Binary Tree | 2024-09-10 | [Go](trees/0124-binary-tree-maximum-path-sum.go) [Python](trees/0124-binary-tree-maximum-path-sum.py)
 | 0480 | [Sliding Window Median](https://leetcode.com/problems/sliding-window-median/) | Hard | Array, Hash Table, Sliding Window, Heap (Priority Queue) | 2024-09-09 | [Go](slidingwindows/0480-sliding-window-median.go) [Python](slidingwindows/0480-sliding-window-median.py)
 | 0572 | [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/) | Easy | Tree, Depth-First Search, String Matching, Binary Tree, Hash Function | 2024-09-08 | [Go](trees/0572-subtree-of-another-tree.go) [Python](trees/0572-subtree-of-another-tree.py)
 | 1425 | [Constrained Subsequence Sum](https://leetcode.com/problems/constrained-subsequence-sum/) | Hard | Array, Dynamic Programming, Queue, Sliding Window, Heap (Priority Queue), Monotonic Queue | 2024-09-07 | [Go](queues/1425-constrained-subsequence-sum.go) [Python](queues/1425-constrained-subsequence-sum.py)
@@ -295,7 +296,7 @@
 | 0867 | [Transpose Matrix](https://leetcode.com/problems/transpose-matrix/) | Easy | Array, Matrix, Simulation | 2024-01-25 | [Go](matrices/0867-transpose-matrix.go)
 | 0994 | [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/) | Medium | Array, Breadth-First Search, Matrix | 2024-01-25 | [Go](matrices/0994-rotting-oranges.go)
 | 0200 | [Number of Islands](https://leetcode.com/problems/number-of-islands/) | Medium | Array, Depth-First Search, Breadth-First Search, Union Find, Matrix | 2024-01-24 | [Go](matrices/0200-number-of-islands.go)
-| 0098 | [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | Medium | Tree, Depth-First Search, Binary Search Tree, Binary Tree | 2024-01-23 | [Go](trees/0098-validate-binary-search-tree.go)
+| 0098 | [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | Medium | Tree, Depth-First Search, Binary Search Tree, Binary Tree | 2024-01-23 | [Go](trees/0098-validate-binary-search-tree.go) [Python](trees/0098-validate-binary-search-tree.py)
 | 0222 | [Count Complete Tree Nodes](https://leetcode.com/problems/count-complete-tree-nodes/) | Easy | Binary Search, Bit Manipulation, Tree, Binary Tree | 2024-01-22 | [Go](trees/0222-count-complete-tree-nodes.go)
 | 0199 | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) | Medium | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 2024-01-21 | [Go](trees/0199-binary-tree-right-side-view.go)
 | 0102 | [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | Medium | Tree, Breadth-First Search, Binary Tree | 2024-01-20 | [Go](trees/0102-binary-tree-level-order-traversal.go)
