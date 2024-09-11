@@ -47,21 +47,22 @@ func levelOrder(root *design.TreeNode) [][]int {
 	return levels
 }
 
-// func levelOrderHelper(root *design.TreeNode, levels *[][]int, level int) {
-// 	/*
-// 		how to use:
-// 		var levels = make([][]int, 0)
-// 		levelOrderHelper(root, &levels, 0)
-// 		return levels
-// 	*/
-// 	if root == nil {
-// 		return
+// // DFS
+// func levelOrder(root *design.TreeNode) [][]int {
+// 	var levels = make([][]int, 0)
+// 	var dfs func(root *design.TreeNode, level int)
+// 	dfs = func(root *design.TreeNode, level int) {
+// 		if root == nil {
+// 			return
+// 		}
+// 		if len(levels) <= level {
+// 			levels = append(levels, []int{root.Val})
+// 		} else {
+// 			levels[level] = append(levels[level], root.Val)
+// 		}
+// 		dfs(root.Left, level+1)
+// 		dfs(root.Right, level+1)
 // 	}
-// 	if len(*levels) < level+1 {
-// 		*levels = append(*levels, []int{root.Val})
-// 	} else {
-// 		(*levels)[level] = append((*levels)[level], root.Val)
-// 	}
-// 	levelOrderHelper(root.Left, levels, level+1)
-// 	levelOrderHelper(root.Right, levels, level+1)
+// 	dfs(root, 0)
+// 	return levels
 // }

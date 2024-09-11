@@ -21,3 +21,18 @@ func hasPathSum(root *design.TreeNode, targetSum int) bool {
 	}
 	return targetSum == 0 && isLeaf
 }
+
+// func hasPathSum(root *design.TreeNode, targetSum int) bool {
+// 	var dfs func(node *design.TreeNode, currSum int) bool
+// 	dfs = func(node *design.TreeNode, currSum int) bool {
+// 		if node == nil {
+// 			return false
+// 		}
+// 		currSum += node.Val
+// 		if node.Left == nil && node.Right == nil {
+// 			return currSum == targetSum
+// 		}
+// 		return dfs(node.Left, currSum) || dfs(node.Right, currSum)
+// 	}
+// 	return dfs(root, 0)
+// }

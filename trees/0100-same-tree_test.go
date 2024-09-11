@@ -14,9 +14,9 @@ func TestIsSameTree(t *testing.T) {
 		q    *design.TreeNode
 		same bool
 	}{
-		{p: design.MakeTree(0, []any{1, 2, 3}), q: design.MakeTree(0, []any{1, 2, 3}), same: true},
-		{p: design.MakeTree(0, []any{1, 2}), q: design.MakeTree(0, []any{1, nil, 2}), same: false},
-		{p: design.MakeTree(0, []any{1, 2, 1}), q: design.MakeTree(0, []any{1, 1, 2}), same: false},
+		{p: design.MakeTree2(1, 2, 3), q: design.MakeTree2(1, 2, 3), same: true},
+		{p: design.MakeTree2(1, 2), q: design.MakeTree2(1, nil, 2), same: false},
+		{p: design.MakeTree2(1, 2, 1), q: design.MakeTree2(1, 1, 2), same: false},
 	} {
 		same := isSameTree(tc.p, tc.q)
 		assert.Equal(t, tc.same, same)

@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2220 | [Minimum Bit Flips to Convert Number](https://leetcode.com/problems/minimum-bit-flips-to-convert-number/) | Easy | Bit Manipulation | 2024-09-11 | [Go](bits/2220-minimum-bit-flips-to-convert-number.go) [Python](bits/2220-minimum-bit-flips-to-convert-number.py)
 | 0124 | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | Hard | Dynamic Programming, Tree, Depth-First Search, Binary Tree | 2024-09-10 | [Go](trees/0124-binary-tree-maximum-path-sum.go) [Python](trees/0124-binary-tree-maximum-path-sum.py)
 | 0480 | [Sliding Window Median](https://leetcode.com/problems/sliding-window-median/) | Hard | Array, Hash Table, Sliding Window, Heap (Priority Queue) | 2024-09-09 | [Go](slidingwindows/0480-sliding-window-median.go) [Python](slidingwindows/0480-sliding-window-median.py)
 | 0572 | [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/) | Easy | Tree, Depth-First Search, String Matching, Binary Tree, Hash Function | 2024-09-08 | [Go](trees/0572-subtree-of-another-tree.go) [Python](trees/0572-subtree-of-another-tree.py)
@@ -217,7 +218,7 @@
 | 0121 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | Easy | Array, Dynamic Programming | 2024-02-27 | [Go](dp/0121-best-time-to-buy-and-sell-stock.go)
 | 0053 | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) | Medium | Array, Divide and Conquer, Dynamic Programming | 2024-02-27 | [Go](dp/0053-maximum-subarray.go)
 | 0516 | [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/) | Medium | String, Dynamic Programming | 2024-02-26 | [Go](dp/0516-longest-palindromic-subsequence.go)
-| 0100 | [Same Tree](https://leetcode.com/problems/same-tree/) | Easy | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 2024-02-26 | [Go](trees/0100-same-tree.go)
+| 0100 | [Same Tree](https://leetcode.com/problems/same-tree/) | Easy | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 2024-02-26 | [Go](trees/0100-same-tree.go) [Python](trees/0100-same-tree.py)
 | 2709 | [Greatest Common Divisor Traversal](https://leetcode.com/problems/greatest-common-divisor-traversal/) | Hard | Array, Math, Union Find, Number Theory | 2024-02-25 | [Go](unionfinds/2709-greatest-common-divisor-traversal.go)
 | 0322 | [Coin Change](https://leetcode.com/problems/coin-change/) | Medium | Array, Dynamic Programming, Breadth-First Search | 2024-02-25 | [Go](dp/0322-coin-change.go)
 | 0064 | [Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/) | Medium | Array, Dynamic Programming, Matrix | 2024-02-25 | [Go](dp/0064-minimum-path-sum.go)
@@ -242,7 +243,7 @@
 | 0705 | [Design HashSet](https://leetcode.com/problems/design-hashset/) | Easy | Array, Hash Table, Linked List, Design, Hash Function | 2024-02-19 | [Go](design/0705-design-hashset.go)
 | 0706 | [Design HashMap](https://leetcode.com/problems/design-hashmap/) | Easy | Array, Hash Table, Linked List, Design, Hash Function | 2024-02-19 | [Go](design/0706-design-hashmap.go)
 | 0217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | Easy | Array, Hash Table, Sorting | 2024-02-19 | [Go](hashes/0217-contains-duplicate.go)
-| 0112 | [Path Sum](https://leetcode.com/problems/path-sum/) | Easy | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 2024-02-18 | [Go](trees/0112-path-sum.go)
+| 0112 | [Path Sum](https://leetcode.com/problems/path-sum/) | Easy | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 2024-02-18 | [Go](trees/0112-path-sum.go) [Python](trees/0112-path-sum.py)
 | 0078 | [Subsets](https://leetcode.com/problems/subsets/) | Medium | Array, Backtracking, Bit Manipulation | 2024-02-18 | [Go](arrays/0078-subsets.go)
 | 0039 | [Combination Sum](https://leetcode.com/problems/combination-sum/) | Medium | Array, Backtracking | 2024-02-18 | [Go](backtracking/0039-combination-sum.go)
 | 0701 | [Insert into a Binary Search Tree](https://leetcode.com/problems/insert-into-a-binary-search-tree/) | Medium | Tree, Binary Search Tree, Binary Tree | 2024-02-18 | [Go](trees/0701-insert-into-a-binary-search-tree.go)
@@ -300,7 +301,7 @@
 | 0222 | [Count Complete Tree Nodes](https://leetcode.com/problems/count-complete-tree-nodes/) | Easy | Binary Search, Bit Manipulation, Tree, Binary Tree | 2024-01-22 | [Go](trees/0222-count-complete-tree-nodes.go)
 | 0199 | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) | Medium | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 2024-01-21 | [Go](trees/0199-binary-tree-right-side-view.go)
 | 0102 | [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | Medium | Tree, Breadth-First Search, Binary Tree | 2024-01-20 | [Go](trees/0102-binary-tree-level-order-traversal.go)
-| 0104 | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | Easy | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 2024-01-19 | [Go](trees/0104-maximum-depth-of-binary-tree.go)
+| 0104 | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | Easy | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 2024-01-19 | [Go](trees/0104-maximum-depth-of-binary-tree.go) [Python](trees/0104-maximum-depth-of-binary-tree.py)
 | 0034 | [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | Medium | Array, Binary Search | 2024-01-18 | [Go](arrays/0034-find-first-and-last-position-of-element-in-sorted-array.go)
 | 0215 | [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | Medium | Array, Divide and Conquer, Sorting, Heap (Priority Queue), Quickselect | 2024-01-17 | [Go](arrays/0215-kth-largest-element-in-an-array.go)
 | 0232 | [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/) | Easy | Stack, Design, Queue | 2024-01-16 | [Go](design/0232-implement-queue-using-stacks.go)

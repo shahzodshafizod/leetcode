@@ -48,19 +48,19 @@ func rightSideView(root *design.TreeNode) []int {
 	return values
 }
 
-// func rightSideViewHelper(root *design.TreeNode, values *[]int, level int) {
-// 	/*
-// 		how to use:
-// 		values := make([]int, 0)
-// 		rightSideViewHelper(root, &values, 1)
-// 		return values
-// 	*/
-// 	if root == nil {
-// 		return
+// func rightSideView(root *design.TreeNode) []int {
+// 	values := make([]int, 0)
+// 	var dfs func(root *design.TreeNode, level int)
+// 	dfs = func(root *design.TreeNode, level int) {
+// 		if root == nil {
+// 			return
+// 		}
+// 		if len(values) < level {
+// 			values = append(values, root.Val)
+// 		}
+// 		dfs(root.Right, level+1)
+// 		dfs(root.Left, level+1)
 // 	}
-// 	if len(*values) < level {
-// 		*values = append(*values, root.Val)
-// 	}
-// 	rightSideViewHelper(root.Right, values, level+1)
-// 	rightSideViewHelper(root.Left, values, level+1)
+// 	dfs(root, 1)
+// 	return values
 // }
