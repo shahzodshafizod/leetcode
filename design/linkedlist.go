@@ -57,16 +57,16 @@ func MakeCycleLinkedList(position int, vals ...int) *ListNode {
 	return head
 }
 
-// Definition for a Node.
-type LNode struct {
+// Definition for a Doubly Linked List Node.
+type DListNode struct {
 	Val   int
-	Prev  *LNode
-	Next  *LNode
-	Child *LNode
+	Prev  *DListNode
+	Next  *DListNode
+	Child *DListNode
 }
 
-func MakeDoublyLinkedList(vals ...any) *LNode {
-	var root, current *LNode
+func MakeDoublyLinkedList(vals ...any) *DListNode {
+	var root, current *DListNode
 	for _, val := range vals {
 		if kind := reflect.TypeOf(val).Kind(); kind != reflect.Int {
 			if kind == reflect.Slice && current != nil {
@@ -74,7 +74,7 @@ func MakeDoublyLinkedList(vals ...any) *LNode {
 			}
 			continue
 		}
-		newNode := &LNode{Val: val.(int)}
+		newNode := &DListNode{Val: val.(int)}
 		if root == nil {
 			root, current = newNode, newNode
 		} else {

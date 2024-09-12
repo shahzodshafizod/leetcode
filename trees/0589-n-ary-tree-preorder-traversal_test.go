@@ -10,7 +10,7 @@ import (
 // go test -v -count=1 ./trees/ -run ^TestPreorder$
 func TestPreorder(t *testing.T) {
 	for _, tc := range []struct {
-		root   *design.TNode
+		root   *design.NTreeNode
 		values []int
 	}{
 		{

@@ -5,9 +5,9 @@ import "github.com/shahzodshafizod/alkhwarizmi/design"
 // https://leetcode.com/problems/n-ary-tree-preorder-traversal/
 
 // BFS
-func preorder(root *design.TNode) []int {
+func preorder(root *design.NTreeNode) []int {
 	var values = make([]int, 0)
-	var stack = make([]*design.TNode, 0)
+	var stack = make([]*design.NTreeNode, 0)
 	if root != nil {
 		stack = append(stack, root)
 	}
@@ -23,7 +23,7 @@ func preorder(root *design.TNode) []int {
 }
 
 // // DFS
-// func preorder(root *design.TNode) []int {
+// func preorder(root *design.NTreeNode) []int {
 // 	var values = make([]int, 0)
 // 	if root == nil {
 // 		return values

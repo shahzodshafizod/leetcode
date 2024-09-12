@@ -10,7 +10,7 @@ import (
 // go test -v -count=1 ./trees/ -run ^TestPostorder$
 func TestPostorder(t *testing.T) {
 	for _, tc := range []struct {
-		root  *design.TNode
+		root  *design.NTreeNode
 		order []int
 	}{
 		{root: design.MakeNAryTree([]any{1, nil, 3, 2, 4, nil, 5, 6}), order: []int{5, 6, 3, 2, 4, 1}},

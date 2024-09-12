@@ -106,24 +106,24 @@ func traversalMorris(root *TreeNode) []int {
 }
 
 // Definition for a n-ary tree node.
-type TNode struct {
+type NTreeNode struct {
 	Val      int
-	Children []*TNode
+	Children []*NTreeNode
 }
 
-func MakeNAryTree(vals []any) *TNode {
+func MakeNAryTree(vals []any) *NTreeNode {
 	if len(vals) == 0 || vals[0] == nil {
 		return nil
 	}
-	var root = &TNode{Val: vals[0].(int), Children: make([]*TNode, 0)}
-	var parents = []*TNode{root}
+	var root = &NTreeNode{Val: vals[0].(int), Children: make([]*NTreeNode, 0)}
+	var parents = []*NTreeNode{root}
 	var index = 2
 	for length := len(parents); length > 0; length = len(parents) {
 		for i := 0; i < len(parents); i++ {
 			for index < len(vals) && vals[index] != nil {
-				var child = &TNode{
+				var child = &NTreeNode{
 					Val:      vals[index].(int),
-					Children: make([]*TNode, 0),
+					Children: make([]*NTreeNode, 0),
 				}
 				parents[i].Children = append(parents[i].Children, child)
 				parents = append(parents, child)

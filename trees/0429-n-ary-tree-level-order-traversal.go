@@ -4,9 +4,9 @@ import "github.com/shahzodshafizod/alkhwarizmi/design"
 
 // https://leetcode.com/problems/n-ary-tree-level-order-traversal/
 
-func levelOrder429(root *design.TNode) [][]int {
+func levelOrder429(root *design.NTreeNode) [][]int {
 	var values = make([][]int, 0)
-	var queue = make([]*design.TNode, 0)
+	var queue = make([]*design.NTreeNode, 0)
 	if root != nil {
 		queue = append(queue, root)
 	}

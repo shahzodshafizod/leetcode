@@ -8,6 +8,20 @@ class TreeNode:
         self.left = left
         self.right = right
 
+    def __str__(self) -> str:
+        if not self:
+            return "None"
+        return f"{self.val},{self.left.__str__()},{self.right.__str__()}"
+
+    def __eq__(self, __value: object) -> bool:
+        if not self or not __value:
+            return not self and not __value
+        return all([
+            self.val == __value.val,
+            self.left.__eq__(__value.left),
+            self.right.__eq__(__value.right),
+        ])
+
 # def create_tree(vals: List[int], idx: int) -> Optional[TreeNode]:
 #     if idx >= len(vals) or vals[idx] == None:
 #         return None

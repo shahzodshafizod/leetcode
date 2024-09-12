@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1684 | [Count the Number of Consistent Strings](https://leetcode.com/problems/count-the-number-of-consistent-strings/) | Easy | Array, Hash Table, String, Bit Manipulation, Counting | 2024-09-12 | [Go](bits/1684-count-the-number-of-consistent-strings.go) [Python](bits/1684-count-the-number-of-consistent-strings.py)
 | 2220 | [Minimum Bit Flips to Convert Number](https://leetcode.com/problems/minimum-bit-flips-to-convert-number/) | Easy | Bit Manipulation | 2024-09-11 | [Go](bits/2220-minimum-bit-flips-to-convert-number.go) [Python](bits/2220-minimum-bit-flips-to-convert-number.py)
 | 0124 | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | Hard | Dynamic Programming, Tree, Depth-First Search, Binary Tree | 2024-09-10 | [Go](trees/0124-binary-tree-maximum-path-sum.go) [Python](trees/0124-binary-tree-maximum-path-sum.py)
 | 0480 | [Sliding Window Median](https://leetcode.com/problems/sliding-window-median/) | Hard | Array, Hash Table, Sliding Window, Heap (Priority Queue) | 2024-09-09 | [Go](slidingwindows/0480-sliding-window-median.go) [Python](slidingwindows/0480-sliding-window-median.py)

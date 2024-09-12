@@ -29,7 +29,7 @@ Step 2: Write out some test cases
 
 // https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/
 
-func flatten(root *design.LNode) *design.LNode {
+func flatten(root *design.DListNode) *design.DListNode {
 	for node := root; node != nil; {
 		nextNode := node.Next
 		if node.Child != nil {
@@ -53,12 +53,12 @@ func flatten(root *design.LNode) *design.LNode {
 	return root
 }
 
-// func flatten(root *design.LNode) *design.LNode {
+// func flatten(root *design.DListNode) *design.DListNode {
 // 	flattenChild(root, nil, nil)
 // 	return root
 // }
 
-// func flattenChild(root *design.LNode, prev *design.LNode, next *design.LNode) *design.LNode {
+// func flattenChild(root *design.DListNode, prev *design.DListNode, next *design.DListNode) *design.DListNode {
 // 	if root == nil {
 // 		return nil
 // 	}

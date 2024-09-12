@@ -10,8 +10,8 @@ import (
 // go test -v -count=1 ./linkedlists/ -run ^TestFlatten$
 func TestFlatten(t *testing.T) {
 	for _, tc := range []struct {
-		root          *design.LNode
-		flattenedRoot *design.LNode
+		root          *design.DListNode
+		flattenedRoot *design.DListNode
 	}{
 		{root: design.MakeDoublyLinkedList(1, 2, []any{7, 8, []any{10, 11}, 9}, 3, 4, 5, []any{12, 13}, 6),
 			flattenedRoot: design.MakeDoublyLinkedList(1, 2, 7, 8, 10, 11, 9, 3, 4, 5, 12, 13, 6)},
