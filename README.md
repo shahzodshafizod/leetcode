@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0127 | [Word Ladder](https://leetcode.com/problems/word-ladder/) | Hard | Hash Table, String, Breadth-First Search | 2024-09-14 | [Go](graphs/0127-word-ladder.go) [Python](graphs/0127-word-ladder.py)
 | 0297 | [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | Hard | String, Tree, Depth-First Search, Breadth-First Search, Design, Binary Tree | 2024-09-13 | [Go](design/0297-serialize-and-deserialize-binary-tree.go) [Python](design/0297-serialize-and-deserialize-binary-tree.py)
 | 1684 | [Count the Number of Consistent Strings](https://leetcode.com/problems/count-the-number-of-consistent-strings/) | Easy | Array, Hash Table, String, Bit Manipulation, Counting | 2024-09-12 | [Go](bits/1684-count-the-number-of-consistent-strings.go) [Python](bits/1684-count-the-number-of-consistent-strings.py)
 | 2220 | [Minimum Bit Flips to Convert Number](https://leetcode.com/problems/minimum-bit-flips-to-convert-number/) | Easy | Bit Manipulation | 2024-09-11 | [Go](bits/2220-minimum-bit-flips-to-convert-number.go) [Python](bits/2220-minimum-bit-flips-to-convert-number.py)
