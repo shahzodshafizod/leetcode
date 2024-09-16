@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0329 | [Longest Increasing Path in a Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/) | Hard | Array, Dynamic Programming, Depth-First Search, Breadth-First Search, Graph, Topological Sort, Memoization, Matrix | 2024-09-16 | [Go](graphs/0329-longest-increasing-path-in-a-matrix.go) [Python](graphs/0329-longest-increasing-path-in-a-matrix.py)
 | 0126 | [Word Ladder II](https://leetcode.com/problems/word-ladder-ii/) | Hard | Hash Table, String, Backtracking, Breadth-First Search | 2024-09-15 | [Go](graphs/0126-word-ladder-ii.go) [Python](graphs/0126-word-ladder-ii.py)
 | 0127 | [Word Ladder](https://leetcode.com/problems/word-ladder/) | Hard | Hash Table, String, Breadth-First Search | 2024-09-14 | [Go](graphs/0127-word-ladder.go) [Python](graphs/0127-word-ladder.py)
 | 0297 | [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | Hard | String, Tree, Depth-First Search, Breadth-First Search, Design, Binary Tree | 2024-09-13 | [Go](design/0297-serialize-and-deserialize-binary-tree.go) [Python](design/0297-serialize-and-deserialize-binary-tree.py)
