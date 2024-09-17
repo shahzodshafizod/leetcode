@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0884 | [Uncommon Words from Two Sentences](https://leetcode.com/problems/uncommon-words-from-two-sentences/) | Easy | Hash Table, String, Counting | 2024-09-17 | [Go](hashes/0884-uncommon-words-from-two-sentences.go) [Python](hashes/0884-uncommon-words-from-two-sentences.py)
 | 0329 | [Longest Increasing Path in a Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/) | Hard | Array, Dynamic Programming, Depth-First Search, Breadth-First Search, Graph, Topological Sort, Memoization, Matrix | 2024-09-16 | [Go](graphs/0329-longest-increasing-path-in-a-matrix.go) [Python](graphs/0329-longest-increasing-path-in-a-matrix.py)
 | 0126 | [Word Ladder II](https://leetcode.com/problems/word-ladder-ii/) | Hard | Hash Table, String, Backtracking, Breadth-First Search | 2024-09-15 | [Go](graphs/0126-word-ladder-ii.go) [Python](graphs/0126-word-ladder-ii.py)
 | 0127 | [Word Ladder](https://leetcode.com/problems/word-ladder/) | Hard | Hash Table, String, Breadth-First Search | 2024-09-14 | [Go](graphs/0127-word-ladder.go) [Python](graphs/0127-word-ladder.py)
