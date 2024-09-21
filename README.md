@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0028 | [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | Easy | Two Pointers, String, String Matching | 2024-09-21 | [Go](strings/0028-find-the-index-of-the-first-occurrence-in-a-string.go) [Python](strings/0028-find-the-index-of-the-first-occurrence-in-a-string.py)
 | 0214 | [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) | Hard | String, Rolling Hash, String Matching, Hash Function | 2024-09-20 | [Go](strings/0214-shortest-palindrome.go) [Python](strings/0214-shortest-palindrome.py)
 | 1866 | [Number of Ways to Rearrange Sticks With K Sticks Visible](https://leetcode.com/problems/number-of-ways-to-rearrange-sticks-with-k-sticks-visible/) | Hard | Math, Dynamic Programming, Combinatorics | 2024-09-19 | [Go](dp/1866-number-of-ways-to-rearrange-sticks-with-k-sticks-visible.go) [Python](dp/1866-number-of-ways-to-rearrange-sticks-with-k-sticks-visible.py)
 | 2328 | [Number of Increasing Paths in a Grid](https://leetcode.com/problems/number-of-increasing-paths-in-a-grid/) | Hard | Array, Dynamic Programming, Depth-First Search, Breadth-First Search, Graph, Topological Sort, Memoization, Matrix | 2024-09-18 | [Go](graphs/2328-number-of-increasing-paths-in-a-grid.go) [Python](graphs/2328-number-of-increasing-paths-in-a-grid.py)
