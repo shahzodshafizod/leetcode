@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3093 | [Longest Common Suffix Queries](https://leetcode.com/problems/longest-common-suffix-queries/) | Hard | Array, String, Trie | 2024-09-24 | [Go](tries/3093-longest-common-suffix-queries.go) [Python](tries/3093-longest-common-suffix-queries.py)
+| 1643 | [Kth Smallest Instructions](https://leetcode.com/problems/kth-smallest-instructions/) | Hard | Array, Math, Dynamic Programming, Combinatorics | 2024-09-23 | [Go](maths/1643-kth-smallest-instructions.go) [Python](maths/1643-kth-smallest-instructions.py)
 | 0440 | [K-th Smallest in Lexicographical Order](https://leetcode.com/problems/k-th-smallest-in-lexicographical-order/) | Hard | Trie | 2024-09-22 | [Go](tries/0440-k-th-smallest-in-lexicographical-order.go) [Python](tries/0440-k-th-smallest-in-lexicographical-order.py)
 | 0028 | [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | Easy | Two Pointers, String, String Matching | 2024-09-21 | [Go](strings/0028-find-the-index-of-the-first-occurrence-in-a-string.go) [Python](strings/0028-find-the-index-of-the-first-occurrence-in-a-string.py)
 | 0214 | [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) | Hard | String, Rolling Hash, String Matching, Hash Function | 2024-09-20 | [Go](strings/0214-shortest-palindrome.go) [Python](strings/0214-shortest-palindrome.py)
