@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0691 | [Stickers to Spell Word](https://leetcode.com/problems/stickers-to-spell-word/) | Hard | Array, String, Dynamic Programming, Backtracking, Bit Manipulation, Bitmask | 2024-09-26 | [Go](dp/0691-stickers-to-spell-word.go) [Python](dp/0691-stickers-to-spell-word.py)
 | 2416 | [Sum of Prefix Scores of Strings](https://leetcode.com/problems/sum-of-prefix-scores-of-strings/) | Hard | Array, String, Trie, Counting | 2024-09-25 | [Go](tries/2416-sum-of-prefix-scores-of-strings.go) [Python](tries/2416-sum-of-prefix-scores-of-strings.py)
 | 3093 | [Longest Common Suffix Queries](https://leetcode.com/problems/longest-common-suffix-queries/) | Hard | Array, String, Trie | 2024-09-24 | [Go](tries/3093-longest-common-suffix-queries.go) [Python](tries/3093-longest-common-suffix-queries.py)
 | 1643 | [Kth Smallest Instructions](https://leetcode.com/problems/kth-smallest-instructions/) | Hard | Array, Math, Dynamic Programming, Combinatorics | 2024-09-23 | [Go](maths/1643-kth-smallest-instructions.go) [Python](maths/1643-kth-smallest-instructions.py)
