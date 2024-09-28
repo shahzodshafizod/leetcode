@@ -3,19 +3,19 @@ package design
 // https://leetcode.com/problems/lru-cache/
 
 type LRUCache struct {
-	head     *listNode[[2]int]
-	tail     *listNode[[2]int]
-	pointers map[int]*listNode[[2]int]
+	head     *dListNode[[2]int]
+	tail     *dListNode[[2]int]
+	pointers map[int]*dListNode[[2]int]
 	length   int
 	capacity int
 }
 
 func NewLRUCache(capacity int) LRUCache {
-	var dummy = &listNode[[2]int]{}
+	var dummy = &dListNode[[2]int]{}
 	return LRUCache{
 		head:     dummy,
 		tail:     dummy,
-		pointers: make(map[int]*listNode[[2]int]),
+		pointers: make(map[int]*dListNode[[2]int]),
 		capacity: capacity,
 	}
 }
@@ -39,7 +39,7 @@ func (l *LRUCache) Put(key int, value int) {
 	l.pushback(key, value)
 }
 
-func (l *LRUCache) unlink(node *listNode[[2]int]) int {
+func (l *LRUCache) unlink(node *dListNode[[2]int]) int {
 	if node.next != nil {
 		node.next.prev = node.prev
 	}
@@ -53,7 +53,7 @@ func (l *LRUCache) unlink(node *listNode[[2]int]) int {
 }
 
 func (l *LRUCache) pushback(key int, value int) {
-	l.tail.next = &listNode[[2]int]{val: [2]int{key, value}, prev: l.tail}
+	l.tail.next = NewDListNode([2]int{key, value}, l.tail, nil)
 	l.tail = l.tail.next
 	l.pointers[key] = l.tail
 	l.length++

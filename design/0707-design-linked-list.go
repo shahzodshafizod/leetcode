@@ -3,8 +3,8 @@ package design
 // https://leetcode.com/problems/design-linked-list/
 
 type MyLinkedList struct {
-	head *listNode[int]
-	tail *listNode[int]
+	head *dListNode[int]
+	tail *dListNode[int]
 	size int
 }
 
@@ -21,7 +21,7 @@ func (m *MyLinkedList) Get(index int) int {
 }
 
 func (m *MyLinkedList) AddAtHead(val int) {
-	newNode := &listNode[int]{val: val, next: m.head}
+	newNode := NewDListNode(val, nil, m.head)
 	if m.head == nil {
 		m.head, m.tail = newNode, newNode
 	} else {
@@ -32,7 +32,7 @@ func (m *MyLinkedList) AddAtHead(val int) {
 }
 
 func (m *MyLinkedList) AddAtTail(val int) {
-	newNode := &listNode[int]{val: val, prev: m.tail}
+	newNode := NewDListNode(val, m.tail, nil)
 	if m.head == nil {
 		m.head, m.tail = newNode, newNode
 	} else {
@@ -55,7 +55,7 @@ func (m *MyLinkedList) AddAtIndex(index int, val int) {
 	if before == nil {
 		return
 	}
-	var newNode = &listNode[int]{val: val, next: before, prev: before.prev}
+	var newNode = NewDListNode(val, before.prev, before)
 	if before.prev != nil {
 		before.prev.next = newNode
 	}
@@ -63,7 +63,7 @@ func (m *MyLinkedList) AddAtIndex(index int, val int) {
 	m.size++
 }
 
-func (m *MyLinkedList) getNodeAtIndex(index int) *listNode[int] {
+func (m *MyLinkedList) getNodeAtIndex(index int) *dListNode[int] {
 	if index < 0 || index >= m.size {
 		return nil
 	}

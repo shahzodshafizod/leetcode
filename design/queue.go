@@ -9,8 +9,8 @@ type Queue[T any] interface {
 }
 
 type queue[T any] struct {
-	head *node[T]
-	tail *node[T]
+	head *listNode[T]
+	tail *listNode[T]
 	size int
 }
 
@@ -19,7 +19,7 @@ func NewQueue[T any]() Queue[T] {
 }
 
 func (q *queue[T]) Enqueue(val T) {
-	var newNode = &node[T]{val: val}
+	var newNode = &listNode[T]{val: val}
 	if q.head == nil {
 		q.head, q.tail = newNode, newNode
 	} else {

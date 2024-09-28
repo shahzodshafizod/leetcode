@@ -1,14 +1,18 @@
 package design
 
-type node[T any] struct {
-	val  T
-	next *node[T]
-}
-
 type listNode[T any] struct {
 	val  T
 	next *listNode[T]
-	prev *listNode[T]
+}
+
+type dListNode[T any] struct {
+	val  T
+	prev *dListNode[T]
+	next *dListNode[T]
+}
+
+func NewDListNode[T any](val T, prev *dListNode[T], next *dListNode[T]) *dListNode[T] {
+	return &dListNode[T]{val: val, prev: prev, next: next}
 }
 
 type treeNode struct {

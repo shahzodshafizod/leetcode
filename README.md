@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1220 | [Count Vowels Permutation](https://leetcode.com/problems/count-vowels-permutation/) | Hard | Dynamic Programming | 2024-09-28 | [Go](dp/1220-count-vowels-permutation.go) [Python](dp/1220-count-vowels-permutation.py)
 | 0732 | [My Calendar III](https://leetcode.com/problems/my-calendar-iii/) | Hard | Binary Search, Design, Segment Tree, Prefix Sum, Ordered Set | 2024-09-27 | [Go](design/0732-my-calendar-iii.go) [Python](design/0732-my-calendar-iii.py)
 | 0691 | [Stickers to Spell Word](https://leetcode.com/problems/stickers-to-spell-word/) | Hard | Array, String, Dynamic Programming, Backtracking, Bit Manipulation, Bitmask | 2024-09-26 | [Go](dp/0691-stickers-to-spell-word.go) [Python](dp/0691-stickers-to-spell-word.py)
 | 2416 | [Sum of Prefix Scores of Strings](https://leetcode.com/problems/sum-of-prefix-scores-of-strings/) | Hard | Array, String, Trie, Counting | 2024-09-25 | [Go](tries/2416-sum-of-prefix-scores-of-strings.go) [Python](tries/2416-sum-of-prefix-scores-of-strings.py)

@@ -4,15 +4,15 @@ package design
 
 // 2. Chaining
 type MyHashMap struct {
-	array []*node[[2]int]
+	array []*listNode[[2]int]
 	cap   int
 }
 
 func NewMyHashMap() MyHashMap {
 	const cap = 997
-	var array = make([]*node[[2]int], cap)
+	var array = make([]*listNode[[2]int], cap)
 	for i := 0; i < cap; i++ {
-		array[i] = &node[[2]int]{} // dummy head node
+		array[i] = &listNode[[2]int]{} // dummy head node
 	}
 	return MyHashMap{array: array, cap: cap}
 }
@@ -26,7 +26,7 @@ func (m *MyHashMap) Put(key int, value int) {
 		}
 		curr = curr.next
 	}
-	curr.next = &node[[2]int]{val: [2]int{key, value}}
+	curr.next = &listNode[[2]int]{val: [2]int{key, value}}
 }
 
 func (m *MyHashMap) Get(key int) int {

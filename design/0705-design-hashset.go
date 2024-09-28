@@ -4,15 +4,15 @@ package design
 
 // 2. Chaining
 type MyHashSet struct {
-	array []*node[int]
+	array []*listNode[int]
 	cap   int
 }
 
 func NewMyHashSet() MyHashSet {
 	const cap = 997
-	var array = make([]*node[int], cap)
+	var array = make([]*listNode[int], cap)
 	for idx := range array {
-		array[idx] = &node[int]{} // dummy head node
+		array[idx] = &listNode[int]{} // dummy head node
 	}
 	return MyHashSet{array: array, cap: cap}
 }
@@ -25,7 +25,7 @@ func (m *MyHashSet) Add(key int) {
 		}
 		curr = curr.next
 	}
-	curr.next = &node[int]{val: key}
+	curr.next = &listNode[int]{val: key}
 }
 
 func (m *MyHashSet) Remove(key int) {

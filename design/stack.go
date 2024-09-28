@@ -9,7 +9,7 @@ type Stack[T any] interface {
 }
 
 type stack[T any] struct {
-	top  *node[T]
+	top  *listNode[T]
 	size int
 }
 
@@ -18,7 +18,7 @@ func NewStack[T any]() Stack[T] {
 }
 
 func (s *stack[T]) Push(val T) {
-	s.top = &node[T]{val: val, next: s.top}
+	s.top = &listNode[T]{val: val, next: s.top}
 	s.size++
 }
 
