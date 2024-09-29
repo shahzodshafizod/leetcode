@@ -2,11 +2,16 @@ package design
 
 // https://leetcode.com/problems/all-oone-data-structure/
 
+// Approach #2: Hash Map + Doubly Linked List
 type allOneNode struct {
 	key   string
 	count int
 	prev  *allOneNode
 	next  *allOneNode
+}
+
+func NewAllOneNode(key string, prev *allOneNode, next *allOneNode) *allOneNode {
+	return &allOneNode{key: key, prev: prev, next: next}
 }
 
 type AllOne struct {
@@ -16,72 +21,155 @@ type AllOne struct {
 }
 
 func NewAllOne() AllOne {
+	head := NewAllOneNode("", nil, nil)
+	head.count = 5e4
+	tail := NewAllOneNode("", head, nil)
+	head.next = tail
 	return AllOne{
 		keys: make(map[string]*allOneNode),
+		head: head,
+		tail: tail,
 	}
 }
 
 func (a *AllOne) Inc(key string) {
-	var current, exists = a.keys[key]
-	if !exists {
-		current = &allOneNode{key: key, next: a.head}
-		if a.head == nil {
-			a.head, a.tail = current, current
-		} else {
-			a.head.prev = current
-			a.head = current
-		}
-		a.keys[key] = current
+	var node = a.keys[key]
+	if node == nil {
+		node = NewAllOneNode(key, a.tail.prev, a.tail)
+		node.prev.next = node
+		node.next.prev = node
+		a.keys[key] = node
 	}
-	current.count++
-	for node := current; node != nil && node.next != nil && node.count > node.next.count; node = node.next {
+	node.count++
+	for node.prev.count < node.count {
+		a.swap(node.prev, node)
+	}
+}
+
+func (a *AllOne) Dec(key string) {
+	var node = a.keys[key]
+	node.count--
+	if node.count == 0 {
+		node.prev.next = node.next
+		node.next.prev = node.prev
+		a.keys[key] = nil
+		return
+	}
+	for node.count < node.next.count {
 		a.swap(node, node.next)
 	}
 }
 
-func (a *AllOne) swap(node1 *allOneNode, node2 *allOneNode) {
-	a.keys[node1.key], a.keys[node2.key] = a.keys[node2.key], a.keys[node1.key]
-	node1.count, node2.count = node2.count, node1.count
-	node1.key, node2.key = node2.key, node1.key
-}
-
-func (a *AllOne) Dec(key string) {
-	var current = a.keys[key]
-	current.count--
-	if current.count == 0 {
-		if current.next != nil {
-			current.next.prev = current.prev
-		}
-		if current.prev != nil {
-			current.prev.next = current.next
-		}
-		if a.head == current {
-			a.head = a.head.next
-		}
-		if a.tail == current {
-			a.tail = a.tail.prev
-		}
-		delete(a.keys, key)
-		return
-	}
-	for node := current; node != nil && node.prev != nil && node.prev.count > node.count; node = node.prev {
-		a.swap(node, node.prev)
-	}
-}
-
 func (a *AllOne) GetMaxKey() string {
-	if a.tail == nil {
+	if a.head.next == a.tail {
 		return ""
 	}
-	return a.tail.key
+	return a.head.next.key
 }
 
 func (a *AllOne) GetMinKey() string {
-	if a.head == nil {
+	if a.tail.prev == a.head {
 		return ""
 	}
-	return a.head.key
+	return a.tail.prev.key
 }
+
+func (a *AllOne) swap(node1 *allOneNode, node2 *allOneNode) {
+	prev := node1.prev
+	next := node2.next
+	node1.prev, node2.prev = node2, prev
+	node1.next, node2.next = next, node1
+	prev.next = node2
+	next.prev = node1
+}
+
+// // Approach #1: Trie
+// type allOneNode struct {
+// 	count    int
+// 	children map[rune]*allOneNode
+// }
+
+// func NewAllOneNode() *allOneNode {
+// 	return &allOneNode{children: make(map[rune]*allOneNode)}
+// }
+
+// type AllOne struct {
+// 	root *allOneNode
+// }
+
+// func NewAllOne() AllOne {
+// 	return AllOne{root: NewAllOneNode()}
+// }
+
+// func (a *AllOne) Inc(key string) {
+// 	curr := a.root
+// 	curr.count++
+// 	for _, c := range key {
+// 		if curr.children[c] == nil {
+// 			curr.children[c] = NewAllOneNode()
+// 		}
+// 		curr = curr.children[c]
+// 		curr.count++
+// 	}
+// }
+
+// func (a *AllOne) Dec(key string) {
+// 	curr := a.root
+// 	curr.count--
+// 	for _, c := range key {
+// 		curr = curr.children[c]
+// 		curr.count--
+// 	}
+// }
+
+// func (a *AllOne) GetMaxKey() string {
+// 	var key = ""
+// 	curr := a.root
+// 	var next *allOneNode
+// 	var nextc string
+// 	var count int
+// 	for curr != nil {
+// 		next = nil
+// 		nextc = ""
+// 		count = 0
+// 		for c, child := range curr.children {
+// 			if child.count > count {
+// 				count = child.count
+// 				next = child
+// 				nextc = string(c)
+// 			}
+// 		}
+// 		curr = next
+// 		key += nextc
+// 	}
+// 	return key
+// }
+
+// func (a *AllOne) GetMinKey() string {
+// 	var key = ""
+// 	var curr = a.root
+// 	var next *allOneNode
+// 	var nextc string
+// 	var count int
+// 	for curr != nil {
+// 		next = nil
+// 		nextc = ""
+// 		count = 5e4
+// 		for c, child := range curr.children {
+// 			if child.count == 0 {
+// 				continue
+// 			}
+// 			if child.count < count {
+// 				count = child.count
+// 				next = child
+// 				nextc = string(c)
+// 			}
+// 		}
+// 		curr = next
+// 		key += nextc
+// 	}
+// 	return key
+// }
 
 /**
  * Your AllOne object will be instantiated and called as such:

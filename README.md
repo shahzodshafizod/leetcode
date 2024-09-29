@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0879 | [Profitable Schemes](https://leetcode.com/problems/profitable-schemes/) | Hard | Array, Dynamic Programming | 2024-09-29 | [Go](dp/0879-profitable-schemes.go) [Python](dp/0879-profitable-schemes.py)
 | 1220 | [Count Vowels Permutation](https://leetcode.com/problems/count-vowels-permutation/) | Hard | Dynamic Programming | 2024-09-28 | [Go](dp/1220-count-vowels-permutation.go) [Python](dp/1220-count-vowels-permutation.py)
 | 0732 | [My Calendar III](https://leetcode.com/problems/my-calendar-iii/) | Hard | Binary Search, Design, Segment Tree, Prefix Sum, Ordered Set | 2024-09-27 | [Go](design/0732-my-calendar-iii.go) [Python](design/0732-my-calendar-iii.py)
 | 0691 | [Stickers to Spell Word](https://leetcode.com/problems/stickers-to-spell-word/) | Hard | Array, String, Dynamic Programming, Backtracking, Bit Manipulation, Bitmask | 2024-09-26 | [Go](dp/0691-stickers-to-spell-word.go) [Python](dp/0691-stickers-to-spell-word.py)
@@ -290,7 +291,7 @@
 | 0649 | [Dota2 Senate](https://leetcode.com/problems/dota2-senate/) | Medium | String, Greedy, Queue | 2024-02-09 | [Go](queues/0649-dota2-senate.go)
 | 0224 | [Basic Calculator](https://leetcode.com/problems/basic-calculator/) | Hard | Math, String, Stack, Recursion | 2024-02-09 | [Go](stacks/0224-basic-calculator.go)
 | 2551 | [Put Marbles in Bags](https://leetcode.com/problems/put-marbles-in-bags/) | Hard | Array, Greedy, Sorting, Heap (Priority Queue) | 2024-02-09 | [Go](arrays/2551-put-marbles-in-bags.go)
-| 0432 | [All O`one Data Structure](https://leetcode.com/problems/all-oone-data-structure/) | Hard | Hash Table, Linked List, Design, Doubly-Linked List | 2024-02-08 | [Go](design/0432-all-oone-data-structure.go)
+| 0432 | [All O`one Data Structure](https://leetcode.com/problems/all-oone-data-structure/) | Hard | Hash Table, Linked List, Design, Doubly-Linked List | 2024-02-08 | [Go](design/0432-all-oone-data-structure.go) [Python](design/0432-all-oone-data-structure.py)
 | 0025 | [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) | Hard | Linked List, Recursion | 2024-02-08 | [Go](linkedlists/0025-reverse-nodes-in-k-group.go)
 | 0076 | [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | Hard | Hash Table, String, Sliding Window | 2024-02-08 | [Go](hashes/0076-minimum-window-substring.go)
 | 1093 | [Statistics from a Large Sample](https://leetcode.com/problems/statistics-from-a-large-sample/) | Medium | Array, Math, Probability and Statistics | 2024-02-07 | [Go](arrays/1093-statistics-from-a-large-sample.go)

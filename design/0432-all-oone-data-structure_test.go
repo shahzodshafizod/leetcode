@@ -23,6 +23,11 @@ func TestAllOne(t *testing.T) {
 			values:   [][]string{{}, {"hello"}, {"goodbye"}, {"hello"}, {"hello"}, {}, {"leet"}, {"code"}, {"leet"}, {"hello"}, {"leet"}, {"code"}, {"code"}, {}},
 			output:   []any{nil, nil, nil, nil, nil, "hello", nil, nil, nil, nil, nil, nil, nil, "leet"},
 		},
+		{
+			commands: []string{"AllOne", "inc", "inc", "inc", "inc", "inc", "inc", "dec", "dec", "getMinKey", "dec", "getMaxKey", "getMinKey"},
+			values:   [][]string{{}, {"a"}, {"b"}, {"b"}, {"c"}, {"c"}, {"c"}, {"b"}, {"b"}, {}, {"a"}, {}, {}},
+			output:   []any{nil, nil, nil, nil, nil, nil, nil, nil, nil, "a", nil, "c", "c"},
+		},
 	} {
 		var allOne AllOne
 		for index, command := range tc.commands {
