@@ -18,10 +18,8 @@ func TestMaxHeap(t *testing.T) {
 			sorted: []int{0, 1, 1, 2, 2, 3, 4, 4, 4, 4, 5, 5, 5, 6, 6, 6, 6, 7, 7, 11, 45},
 		},
 	} {
-		maxHeap := NewHeap(make([]int, 0), func(x, y int) bool { return x < y })
-		for _, num := range tc.array {
-			heap.Push(maxHeap, num)
-		}
+		maxHeap := NewHeap(tc.array, func(x, y int) bool { return x < y })
+		heap.Init(maxHeap)
 		var sorted = make([]int, 0, maxHeap.Len())
 		for maxHeap.Len() > 0 {
 			sorted = append(sorted, heap.Pop(maxHeap).(int))

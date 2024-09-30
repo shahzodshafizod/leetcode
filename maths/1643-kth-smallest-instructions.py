@@ -78,7 +78,7 @@ class Solution(unittest.TestCase):
         path += 'H'*col + 'V'*row
         return path
 
-    def testKthSmallestPath(self) -> None:
+    def test(self) -> None:
         for destination, k, expected in [
             ([2,3], 1, "HHHVV"),
             ([2,3], 2, "HHVHV"),

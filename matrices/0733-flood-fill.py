@@ -23,7 +23,7 @@ class Solution(unittest.TestCase):
                     queue.append((r, c))
         return image
 
-    def testFloodFill(self) -> None:
+    def test(self) -> None:
         for image, sr, sc, color, expected in [
             ([[1, 1, 1], [1, 1, 0], [1, 0, 1]], 1, 1, 2, [[2, 2, 2], [2, 2, 0], [2, 0, 1]]),
             ([[0, 0, 0], [0, 0, 0]], 0, 0, 0, [[0, 0, 0], [0, 0, 0]]),

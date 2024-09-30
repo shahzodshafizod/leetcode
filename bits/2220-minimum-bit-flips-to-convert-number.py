@@ -38,7 +38,7 @@ class Solution(unittest.TestCase):
             flips += 1
         return flips
 
-    def testMinBitFlips(self) -> None:
+    def test(self) -> None:
         for start, goal, expected in [
             (10, 7, 3),
             (3, 4, 3),

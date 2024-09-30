@@ -17,7 +17,7 @@ class Solution(unittest.TestCase):
             return dfs(node.left, currSum) or dfs(node.right, currSum)
         return dfs(root, 0)
 
-    def testHasPathSum(self) -> None:
+    def test(self) -> None:
         for root, targetSum, expected in [
             ([5,4,8,11,None,13,4,7,2,None,None,None,1], 22, True),
             ([1,2,3], 5, False),

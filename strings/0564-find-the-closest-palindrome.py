@@ -50,7 +50,7 @@ class Solution(unittest.TestCase):
             return str(prev)
         return str(next)
 
-    def testNearestPalindromic(self) -> None:
+    def test(self) -> None:
         for n, expected in [
             ("123", "121"),
             ("1", "0"),

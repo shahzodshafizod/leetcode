@@ -20,7 +20,7 @@ class Solution(unittest.TestCase):
                 return True
         return False
 
-    def testIsPerfectSquare(self) -> None:
+    def test(self) -> None:
         for num, expected in [
             (16, True),
             (14, False),

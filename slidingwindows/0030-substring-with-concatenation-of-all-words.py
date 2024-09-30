@@ -61,7 +61,7 @@ class Solution(unittest.TestCase):
     #             result.append(idx)
     #     return result
 
-    def testFindSubstring(self) -> None:
+    def test(self) -> None:
         for s, words, expected in [
             ("barfoothefoobarman", ["foo","bar"], [0,9]),
             ("wordgoodgoodgoodbestword", ["word","good","best","word"], []),

@@ -35,15 +35,13 @@ func (t *Twitter) PostTweet(userId int, tweetId int) { // O(1)
 	}
 }
 
-func (t *Twitter) GetNewsFeed(userId int) []int { // O(N)
-	var tweets = NewHeap(
-		t.tweets[userId],
-		func(x, y *tweet) bool { return x.uniqueId > y.uniqueId },
-	)
+func (t *Twitter) GetNewsFeed(userId int) []int { // O(N Log N)
+	var posts = make([]*tweet, len(t.tweets[userId]))
 	for followeeId := range t.followees[userId] {
-		tweets.PushMany(t.tweets[followeeId]...)
+		posts = append(posts, t.tweets[followeeId]...)
 	}
-
+	copy(posts, t.tweets[userId])
+	var tweets = NewHeap(posts, func(x, y *tweet) bool { return x.uniqueId > y.uniqueId })
 	heap.Init(tweets)
 	var result = make([]int, 0)
 	var count = 10

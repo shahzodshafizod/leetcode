@@ -40,7 +40,7 @@ class Solution(unittest.TestCase):
             prev, node = node, node.right
         return True
 
-    def testIsValidBST(self) -> None:
+    def test(self) -> None:
         for root, expected in [
             ([2, 1, 3], True),
             ([5, 1, 4, None, None, 3, 6], False),

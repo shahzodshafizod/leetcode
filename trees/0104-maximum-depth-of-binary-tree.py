@@ -15,7 +15,7 @@ class Solution(unittest.TestCase):
             self.maxDepth(root.right),
         )
 
-    def testMaxDepth(self) -> None:
+    def test(self) -> None:
         for root, expected in [
             ([3,9,20,None,None,15,7], 3),
             ([1,None,2], 2),

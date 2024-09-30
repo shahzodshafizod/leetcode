@@ -52,7 +52,7 @@ class Solution(unittest.TestCase):
     #         return prefix
     #     return search(root, "", len(strs))
 
-    def testLongestCommonPrefix(self) -> None:
+    def test(self) -> None:
         for strs, expected in [
             (["flower","flow","flight"], "fl"),
             (["dog","racecar","car"], ""),

@@ -26,7 +26,7 @@ class Solution(unittest.TestCase):
                 length = max(length, dfs(row, col))
         return length
 
-    def testLongestIncreasingPath(self) -> None:
+    def test(self) -> None:
         for matrix, expected in [
             ([[9,9,4],[6,6,8],[2,1,1]], 4),
             ([[3,4,5],[3,2,6],[2,2,1]], 4),

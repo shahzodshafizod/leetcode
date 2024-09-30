@@ -43,7 +43,7 @@ class Solutin(unittest.TestCase):
     #         harvest = max(harvest, presum[right+1] - presum[(max(0, left))])
     #     return harvest
 
-    def testMaxTotalFruits(self) -> None:
+    def test(self) -> None:
         for fruits, startPos, k, expected in [
             ([[2,8],[6,3],[8,6]], 5, 4, 9),
             ([[0,9],[4,1],[5,7],[6,2],[7,4],[10,9]], 5, 4, 14),

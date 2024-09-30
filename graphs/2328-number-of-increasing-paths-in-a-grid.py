@@ -22,7 +22,7 @@ class Solution(unittest.TestCase):
             return count
         return sum([dfs(row, col) for row in range(m) for col in range(n)]) % int(1e9+7)
 
-    def testCountPaths(self) -> None:
+    def test(self) -> None:
         for grid, expected in [
             ([[1,1],[3,4]], 8),
 		    ([[1],[2]], 3),

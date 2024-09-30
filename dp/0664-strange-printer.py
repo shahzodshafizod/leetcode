@@ -53,7 +53,7 @@ class Solution(unittest.TestCase):
     #         return turns
     #     return minTurns(0, len(s)-1)
 
-    def testStrangePrinter(self) -> None:
+    def test(self) -> None:
         for s, expected in [
             ("aaabbb", 2),
             ("aba", 2),

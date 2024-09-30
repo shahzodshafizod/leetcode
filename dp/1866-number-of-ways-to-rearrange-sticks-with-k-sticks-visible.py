@@ -41,7 +41,7 @@ class Solution(unittest.TestCase):
             dp = tmp
         return dp[k]
 
-    def testRearrangeSticks(self) -> None:
+    def test(self) -> None:
         for n, k, expected in [
             (3, 2, 3),
             (5, 5, 1),

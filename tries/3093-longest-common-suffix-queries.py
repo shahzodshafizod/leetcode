@@ -47,7 +47,7 @@ class Solution(unittest.TestCase):
                 ans[idx] = curr.index
         return ans
 
-    def testStringIndices(self) -> None:
+    def test(self) -> None:
         for wordsContainer, wordsQuery, expected in [
             (["abcd","bcd","xbcd"], ["cd","bcd","xyz"], [1,1,1]),
             (["abcdefgh","poiuygh","ghghgh"], ["gh","acbfgh","acbfegh"], [2,0,2]),

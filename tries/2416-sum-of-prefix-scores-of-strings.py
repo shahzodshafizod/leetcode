@@ -45,7 +45,7 @@ class Solution(unittest.TestCase):
                 answer[idx] += curr['#']
         return answer
 
-    def testSumPrefixScores(self) -> None:
+    def test(self) -> None:
         for words, expected in [
             (["abc","ab","bc","b"], [5,4,3,2]),
 		    (["abcd"], [4]),

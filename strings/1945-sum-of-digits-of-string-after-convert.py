@@ -18,7 +18,7 @@ class Solution(unittest.TestCase):
             number = digit_sum
         return number
 
-    def testGetLucky(self) -> None:
+    def test(self) -> None:
         for s, k, expected in [
             ("iiii", 1, 36),
             ("leetcode", 2, 6),

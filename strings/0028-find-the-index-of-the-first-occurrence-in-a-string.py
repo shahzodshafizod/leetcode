@@ -63,7 +63,7 @@ class Solution(unittest.TestCase):
             s -= (digit * power) % mod
         return -1
 
-    def testStrStr(self) -> None:
+    def test(self) -> None:
         for haystack, needle, expected in [
             ("sadbutsad", "sad", 0),
             ("leetcode", "leeto", -1),

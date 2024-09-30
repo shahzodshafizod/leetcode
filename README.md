@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1851 | [Minimum Interval to Include Each Query](https://leetcode.com/problems/minimum-interval-to-include-each-query/) | Hard | Array, Binary Search, Line Sweep, Sorting, Heap (Priority Queue) | 2024-09-30 | [Go](arrays/1851-minimum-interval-to-include-each-query.go) [Python](arrays/1851-minimum-interval-to-include-each-query.py)
 | 0879 | [Profitable Schemes](https://leetcode.com/problems/profitable-schemes/) | Hard | Array, Dynamic Programming | 2024-09-29 | [Go](dp/0879-profitable-schemes.go) [Python](dp/0879-profitable-schemes.py)
 | 1220 | [Count Vowels Permutation](https://leetcode.com/problems/count-vowels-permutation/) | Hard | Dynamic Programming | 2024-09-28 | [Go](dp/1220-count-vowels-permutation.go) [Python](dp/1220-count-vowels-permutation.py)
 | 0732 | [My Calendar III](https://leetcode.com/problems/my-calendar-iii/) | Hard | Binary Search, Design, Segment Tree, Prefix Sum, Ordered Set | 2024-09-27 | [Go](design/0732-my-calendar-iii.go) [Python](design/0732-my-calendar-iii.py)

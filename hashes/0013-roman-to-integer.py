@@ -26,7 +26,7 @@ class Solution(unittest.TestCase):
             next = curr
         return num
 
-    def testRomanToInt(self) -> None:
+    def test(self) -> None:
         for s, expected in [
             ("III", 3),
             ("LVIII", 58),

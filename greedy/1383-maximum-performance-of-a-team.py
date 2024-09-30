@@ -36,7 +36,7 @@ class Solution(unittest.TestCase):
             performance = max(performance, total_speed * eff)
         return performance % (10**9+7)
 
-    def testMaxPerformance(self) -> None:
+    def test(self) -> None:
         for n, speed, efficiency, k, expected in [
             (6, [2,10,3,1,5,8], [5,4,3,9,7,2], 2, 60),
             (6, [2,10,3,1,5,8], [5,4,3,9,7,2], 3, 68),

@@ -44,7 +44,7 @@ class Solution(unittest.TestCase):
             a, e, i, o, u = next_a, next_e, next_i, next_o, next_u
         return (a + e + i + o + u) % mod
 
-    def testCountVowelPermutation(self) -> None:
+    def test(self) -> None:
         for n, expected in [
             (1, 5),
             (2, 10),

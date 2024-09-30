@@ -49,7 +49,7 @@ class Solution(unittest.TestCase):
             return sequences
         return dfs(endWord, [endWord])
 
-    def testFindLadders(self) -> None:
+    def test(self) -> None:
         for beginWord, endWord, wordList, expected in [
             ("hit", "cog", ["hot","dot","dog","lot","log","cog"], [["hit","hot","dot","dog","cog"],["hit","hot","lot","log","cog"]]),
             ("hit", "cog", ["hot","dot","dog","lot","log"], []),

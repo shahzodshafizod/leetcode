@@ -62,7 +62,7 @@ class Solution(unittest.TestCase):
             k %= fact # k -= idx * fact
         return "".join(permutations)
     
-    def testGetPermutation(self) -> None:
+    def test(self) -> None:
         for n, k, expected in [
             (3, 3, "213"),
             (4, 9, "2314"),

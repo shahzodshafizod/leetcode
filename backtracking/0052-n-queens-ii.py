@@ -32,7 +32,7 @@ class Solution(unittest.TestCase):
 
         return backtrack(0)
 
-    def testTotalNQueens(self) -> None:
+    def test(self) -> None:
         for n, expected in [
             (4, 2),
             (1, 1),

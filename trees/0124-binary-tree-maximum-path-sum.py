@@ -21,7 +21,7 @@ class Solution(unittest.TestCase):
         dfs(root)
         return max_path
 
-    def testMaxPathSum(self) -> None:
+    def test(self) -> None:
         for root, expected in [
             ([1,2,3], 6),
             ([-10,9,20,None,None,15,7], 42),

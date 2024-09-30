@@ -12,7 +12,7 @@ class Solution(unittest.TestCase):
             bit <<= 1
         return num
 
-    def testFindComplement(self) -> None:
+    def test(self) -> None:
         for num, expected in [
             (5, 2),
 		    (1, 0),

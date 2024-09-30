@@ -23,7 +23,7 @@ class Solution(unittest.TestCase):
                 count = max(count, slopes[slope]+1)
         return count
 
-    def testMaxPoints(self) -> None:
+    def test(self) -> None:
         for points, expected in [
             ([[1,1],[2,2],[3,3]], 3),
             ([[1,1],[3,2],[5,3],[4,1],[2,3],[1,4]], 4),

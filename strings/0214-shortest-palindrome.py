@@ -62,7 +62,7 @@ class Solution(unittest.TestCase):
             power = (power * base) % mod
         return s[length+1:][::-1] + s
 
-    def testShortestPalindrome(self) -> None:
+    def test(self) -> None:
         for s, expected in [
             ("aacecaaa", "aaacecaaa"),
             ("abcd", "dcbabcd"),
