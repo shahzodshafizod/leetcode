@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1331 | [Rank Transform of an Array](https://leetcode.com/problems/rank-transform-of-an-array/) | Easy | Array, Hash Table, Sorting | 2024-10-02 | [Go](arrays/1331-rank-transform-of-an-array.go) [Python](arrays/1331-rank-transform-of-an-array.py)
+| 0312 | [Burst Balloons](https://leetcode.com/problems/burst-balloons/) | Hard | Array, Dynamic Programming | 2024-10-01 | [Go](dp/0312-burst-balloons.go) [Python](dp/0312-burst-balloons.py)
 | 1851 | [Minimum Interval to Include Each Query](https://leetcode.com/problems/minimum-interval-to-include-each-query/) | Hard | Array, Binary Search, Line Sweep, Sorting, Heap (Priority Queue) | 2024-09-30 | [Go](arrays/1851-minimum-interval-to-include-each-query.go) [Python](arrays/1851-minimum-interval-to-include-each-query.py)
 | 0879 | [Profitable Schemes](https://leetcode.com/problems/profitable-schemes/) | Hard | Array, Dynamic Programming | 2024-09-29 | [Go](dp/0879-profitable-schemes.go) [Python](dp/0879-profitable-schemes.py)
 | 1220 | [Count Vowels Permutation](https://leetcode.com/problems/count-vowels-permutation/) | Hard | Dynamic Programming | 2024-09-28 | [Go](dp/1220-count-vowels-permutation.go) [Python](dp/1220-count-vowels-permutation.py)
