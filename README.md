@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2183 | [Count Array Pairs Divisible by K](https://leetcode.com/problems/count-array-pairs-divisible-by-k/) | Hard | Array, Math, Number Theory | 2024-10-03 | [Go](maths/2183-count-array-pairs-divisible-by-k.go) [Python](maths/2183-count-array-pairs-divisible-by-k.py)
 | 1331 | [Rank Transform of an Array](https://leetcode.com/problems/rank-transform-of-an-array/) | Easy | Array, Hash Table, Sorting | 2024-10-02 | [Go](arrays/1331-rank-transform-of-an-array.go) [Python](arrays/1331-rank-transform-of-an-array.py)
 | 0312 | [Burst Balloons](https://leetcode.com/problems/burst-balloons/) | Hard | Array, Dynamic Programming | 2024-10-01 | [Go](dp/0312-burst-balloons.go) [Python](dp/0312-burst-balloons.py)
 | 1851 | [Minimum Interval to Include Each Query](https://leetcode.com/problems/minimum-interval-to-include-each-query/) | Hard | Array, Binary Search, Line Sweep, Sorting, Heap (Priority Queue) | 2024-09-30 | [Go](arrays/1851-minimum-interval-to-include-each-query.go) [Python](arrays/1851-minimum-interval-to-include-each-query.py)
@@ -118,7 +119,7 @@
 | 0148 | [Sort List](https://leetcode.com/problems/sort-list/) | Medium | Linked List, Two Pointers, Divide and Conquer, Sorting, Merge Sort | 2024-06-12 | [Go](linkedlists/0148-sort-list.go)
 | 1122 | [Relative Sort Array](https://leetcode.com/problems/relative-sort-array/) | Easy | Array, Hash Table, Sorting, Counting Sort | 2024-06-11 | [Go](arrays/1122-relative-sort-array.go)
 | 1051 | [Height Checker](https://leetcode.com/problems/height-checker/) | Easy | Array, Sorting, Counting Sort | 2024-06-10 | [Go](arrays/1051-height-checker.go)
-| 0974 | [Subarray Sums Divisible by K](https://leetcode.com/problems/subarray-sums-divisible-by-k/) | Medium | Array, Hash Table, Prefix Sum | 2024-06-09 | [Go](hashes/0974-subarray-sums-divisible-by-k.go)
+| 0974 | [Subarray Sums Divisible by K](https://leetcode.com/problems/subarray-sums-divisible-by-k/) | Medium | Array, Hash Table, Prefix Sum | 2024-06-09 | [Go](hashes/0974-subarray-sums-divisible-by-k.go) [Python](hashes/0974-subarray-sums-divisible-by-k.py)
 | 0523 | [Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/) | Medium | Array, Hash Table, Math, Prefix Sum | 2024-06-08 | [Go](hashes/0523-continuous-subarray-sum.go)
 | 0648 | [Replace Words](https://leetcode.com/problems/replace-words/) | Medium | Array, Hash Table, String, Trie | 2024-06-07 | [Go](tries/0648-replace-words.go)
 | 0846 | [Hand of Straights](https://leetcode.com/problems/hand-of-straights/) | Medium | Array, Hash Table, Greedy, Sorting | 2024-06-06 | [Go](greedy/0846-hand-of-straights.go)

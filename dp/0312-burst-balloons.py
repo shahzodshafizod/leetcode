@@ -49,6 +49,7 @@ class Solution(unittest.TestCase):
         for nums, expected in [
             ([3,1,5,8], 167),
             ([1,5], 10),
+            ([9, 76, 64, 21, 97, 60], 1086136),
         ]:
             output = self.maxCoins(nums)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

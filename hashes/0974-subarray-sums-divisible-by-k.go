@@ -5,38 +5,17 @@ package hashes
 // time: O(n)
 // space: O(k)
 func subarraysDivByK(nums []int, k int) int {
-	var subarrays = 0
-	var modGroups = make([]int, k)
-	modGroups[0] = 1
-	var prefixMod = 0
+	var mods = make([]int, k)
+	mods[0] = 1
+	var count, prefmod = 0, 0
 	for _, num := range nums {
-		// take modulo twice to avoid negative remainders.
-		prefixMod = (prefixMod + num%k + k) % k
-		subarrays += modGroups[prefixMod]
-		modGroups[prefixMod]++
+		// take modulo twice to avoid -ve remainders (indices)
+		prefmod = ((prefmod+num)%k + k) % k
+		count += mods[prefmod]
+		mods[prefmod]++
 	}
-	return subarrays
+	return count
 }
-
-// // time: O(n)
-// // space: O(k)
-// func subarraysDivByK(nums []int, k int) int {
-// 	var subarrays = 0
-// 	var modGroups = make([]int, k)
-// 	modGroups[0] = 1
-// 	var prefixSum = 0
-// 	var mod int
-// 	for _, num := range nums {
-// 		prefixSum += num
-// 		mod = prefixSum % k
-// 		if mod < 0 {
-// 			mod += k
-// 		}
-// 		subarrays += modGroups[mod]
-// 		modGroups[mod]++
-// 	}
-// 	return subarrays
-// }
 
 // // time: O(n ^ 2)
 // // space: O(1)
