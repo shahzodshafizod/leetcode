@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0068 | [Text Justification](https://leetcode.com/problems/text-justification/) | Hard | Array, String, Simulation | 2024-10-05 | [Go](strings/0068-text-justification.go) [Python](strings/0068-text-justification.py)
+| 0410 | [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/) | Hard | Array, Binary Search, Dynamic Programming, Greedy, Prefix Sum | 2024-10-04 | [Go](dp/0410-split-array-largest-sum.go) [Python](dp/0410-split-array-largest-sum.py)
 | 2183 | [Count Array Pairs Divisible by K](https://leetcode.com/problems/count-array-pairs-divisible-by-k/) | Hard | Array, Math, Number Theory | 2024-10-03 | [Go](maths/2183-count-array-pairs-divisible-by-k.go) [Python](maths/2183-count-array-pairs-divisible-by-k.py)
 | 1331 | [Rank Transform of an Array](https://leetcode.com/problems/rank-transform-of-an-array/) | Easy | Array, Hash Table, Sorting | 2024-10-02 | [Go](arrays/1331-rank-transform-of-an-array.go) [Python](arrays/1331-rank-transform-of-an-array.py)
 | 0312 | [Burst Balloons](https://leetcode.com/problems/burst-balloons/) | Hard | Array, Dynamic Programming | 2024-10-01 | [Go](dp/0312-burst-balloons.go) [Python](dp/0312-burst-balloons.py)
