@@ -1,6 +1,6 @@
 package trees
 
-import "github.com/shahzodshafizod/alkhwarizmi/design"
+import "github.com/shahzodshafizod/leetcode/design"
 
 // https://leetcode.com/problems/binary-tree-maximum-path-sum/
 

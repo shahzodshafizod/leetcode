@@ -3,7 +3,7 @@ package graphs
 import (
 	"container/heap"
 
-	"github.com/shahzodshafizod/alkhwarizmi/design"
+	"github.com/shahzodshafizod/leetcode/design"
 )
 
 /*

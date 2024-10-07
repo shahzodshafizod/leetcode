@@ -3,7 +3,7 @@ package arrays
 import (
 	"math"
 
-	"github.com/shahzodshafizod/alkhwarizmi/design"
+	"github.com/shahzodshafizod/leetcode/design"
 )
 
 // https://leetcode.com/problems/k-closest-points-to-origin/

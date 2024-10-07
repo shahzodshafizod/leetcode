@@ -1,4 +1,4 @@
-module github.com/shahzodshafizod/alkhwarizmi
+module github.com/shahzodshafizod/leetcode
 
 go 1.21.0
 

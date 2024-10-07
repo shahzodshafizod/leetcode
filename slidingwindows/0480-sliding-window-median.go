@@ -1,6 +1,6 @@
 package slidingwindows
 
-import "github.com/shahzodshafizod/alkhwarizmi/design"
+import "github.com/shahzodshafizod/leetcode/design"
 
 // https://leetcode.com/problems/sliding-window-median/
 

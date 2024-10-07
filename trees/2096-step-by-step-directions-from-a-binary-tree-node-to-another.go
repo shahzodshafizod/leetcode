@@ -3,7 +3,7 @@ package trees
 import (
 	"strings"
 
-	"github.com/shahzodshafizod/alkhwarizmi/design"
+	"github.com/shahzodshafizod/leetcode/design"
 )
 
 // LCA - Lowest Common Ancestor

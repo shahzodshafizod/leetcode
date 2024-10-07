@@ -1,7 +1,7 @@
 package trees
 
 import (
-	"github.com/shahzodshafizod/alkhwarizmi/design"
+	"github.com/shahzodshafizod/leetcode/design"
 )
 
 /*

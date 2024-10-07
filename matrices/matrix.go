@@ -1,6 +1,6 @@
 package matrices
 
-import "github.com/shahzodshafizod/alkhwarizmi/design"
+import "github.com/shahzodshafizod/leetcode/design"
 
 /*
 2-D Arrays - Matrices (Matrixes)

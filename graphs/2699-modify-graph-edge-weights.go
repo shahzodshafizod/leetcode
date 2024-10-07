@@ -3,7 +3,7 @@ package graphs
 import (
 	"math"
 
-	"github.com/shahzodshafizod/alkhwarizmi/design"
+	"github.com/shahzodshafizod/leetcode/design"
 )
 
 // https://leetcode.com/problems/modify-graph-edge-weights/

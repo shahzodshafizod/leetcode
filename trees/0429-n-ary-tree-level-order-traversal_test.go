@@ -3,7 +3,7 @@ package trees
 import (
 	"testing"
 
-	"github.com/shahzodshafizod/alkhwarizmi/design"
+	"github.com/shahzodshafizod/leetcode/design"
 	"github.com/stretchr/testify/assert"
 )
 

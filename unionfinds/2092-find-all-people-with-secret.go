@@ -3,7 +3,7 @@ package unionfinds
 import (
 	"sort"
 
-	"github.com/shahzodshafizod/alkhwarizmi/design"
+	"github.com/shahzodshafizod/leetcode/design"
 )
 
 // https://leetcode.com/problems/find-all-people-with-secret/

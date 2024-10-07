@@ -3,7 +3,7 @@ package greedy
 import (
 	"slices"
 
-	"github.com/shahzodshafizod/alkhwarizmi/design"
+	"github.com/shahzodshafizod/leetcode/design"
 )
 
 // https://leetcode.com/problems/maximum-performance-of-a-team/

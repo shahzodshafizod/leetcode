@@ -1,7 +1,7 @@
 package matrices
 
 import (
-	"github.com/shahzodshafizod/alkhwarizmi/design"
+	"github.com/shahzodshafizod/leetcode/design"
 )
 
 // https://leetcode.com/problems/find-the-safest-path-in-a-grid/

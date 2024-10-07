@@ -3,7 +3,7 @@ package queues
 import (
 	"sort"
 
-	"github.com/shahzodshafizod/alkhwarizmi/design"
+	"github.com/shahzodshafizod/leetcode/design"
 )
 
 // https://leetcode.com/problems/reveal-cards-in-increasing-order/

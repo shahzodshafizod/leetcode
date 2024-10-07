@@ -1,6 +1,6 @@
 package linkedlists
 
-import "github.com/shahzodshafizod/alkhwarizmi/design"
+import "github.com/shahzodshafizod/leetcode/design"
 
 // https://leetcode.com/problems/merge-in-between-linked-lists/
 

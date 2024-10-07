@@ -1,6 +1,6 @@
 package linkedlists
 
-import "github.com/shahzodshafizod/alkhwarizmi/design"
+import "github.com/shahzodshafizod/leetcode/design"
 
 // https://leetcode.com/problems/find-the-minimum-and-maximum-number-of-nodes-between-critical-points/
 

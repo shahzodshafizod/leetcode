@@ -3,7 +3,7 @@ package greedy
 import (
 	"math"
 
-	"github.com/shahzodshafizod/alkhwarizmi/design"
+	"github.com/shahzodshafizod/leetcode/design"
 )
 
 // https://leetcode.com/problems/minimum-cost-to-hire-k-workers/
