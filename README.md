@@ -1,7 +1,10 @@
-[![LeetCode Badge](https://img.shields.io/badge/LeetCode-B3B3B3?logo=leetcode&logoColor=black&labelColor=FFA116&style=for-the-badge)](https://leetcode.com/shahzodshafizod/)
+[![LeetCode Badge](https://img.shields.io/badge/LeetCode-B3B3B3?logo=leetcode&logoColor=black&labelColor=FFA116&style=for-the-badge)](https://leetcode.com/u/shahzodshafizod/)
+[![Codeforces Badge](https://img.shields.io/badge/CodeForces-445f9d?logo=Codeforces&logoColor=yellow&labelColor=BA3F38&style=for-the-badge)](https://codeforces.com/profile/shahzodshafizod)
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2696 | [Minimum String Length After Removing Substrings](https://leetcode.com/problems/minimum-string-length-after-removing-substrings/) | Easy | String, Stack, Simulation | 2024-10-07 | [Go](stacks/2696-minimum-string-length-after-removing-substrings.go) [Python](stacks/2696-minimum-string-length-after-removing-substrings.py)
+| 0115 | [Distinct Subsequences](https://leetcode.com/problems/distinct-subsequences/) | Hard | String, Dynamic Programming | 2024-10-06 | [Go](dp/0115-distinct-subsequences.go) [Python](dp/0115-distinct-subsequences.py)
 | 0068 | [Text Justification](https://leetcode.com/problems/text-justification/) | Hard | Array, String, Simulation | 2024-10-05 | [Go](strings/0068-text-justification.go) [Python](strings/0068-text-justification.py)
 | 0410 | [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/) | Hard | Array, Binary Search, Dynamic Programming, Greedy, Prefix Sum | 2024-10-04 | [Go](dp/0410-split-array-largest-sum.go) [Python](dp/0410-split-array-largest-sum.py)
 | 2183 | [Count Array Pairs Divisible by K](https://leetcode.com/problems/count-array-pairs-divisible-by-k/) | Hard | Array, Math, Number Theory | 2024-10-03 | [Go](maths/2183-count-array-pairs-divisible-by-k.go) [Python](maths/2183-count-array-pairs-divisible-by-k.py)
