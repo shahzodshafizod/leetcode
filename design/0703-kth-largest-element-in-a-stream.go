@@ -1,29 +1,33 @@
 package design
 
-import "github.com/shahzodshafizod/leetcode/pkg"
+import (
+	"container/heap"
+
+	"github.com/shahzodshafizod/leetcode/pkg"
+)
 
 // https://leetcode.com/problems/kth-largest-element-in-a-stream/
 
 type KthLargest struct {
-	minHeap pkg.PQ[int]
+	minHeap *pkg.Heap[int]
 	len     int
 }
 
 func NewKthLargest(k int, nums []int) KthLargest {
 	var kth = KthLargest{len: k}
-	var compare = func(x, y int) bool { return x > y }
+	var compare = func(x, y int) bool { return x < y }
 	if len(nums) <= k {
-		kth.minHeap = pkg.NewPQ(nums, compare)
+		kth.minHeap = pkg.NewHeap(nums, compare)
 		nums = nil
 	} else {
-		kth.minHeap = pkg.NewPQ(nums[:k], compare)
+		kth.minHeap = pkg.NewHeap(nums[:k], compare)
 		nums = nums[k:]
 	}
-	kth.minHeap.Heapify()
+	heap.Init(kth.minHeap)
 	for _, num := range nums {
 		if num > kth.minHeap.Peek() {
-			kth.minHeap.Pop()
-			kth.minHeap.Push(num)
+			heap.Pop(kth.minHeap)
+			heap.Push(kth.minHeap, num)
 		}
 	}
 	return kth
@@ -33,9 +37,9 @@ func (k *KthLargest) Add(val int) int {
 	// take into account a case when heap_size is less than k
 	if heap_size := k.minHeap.Len(); heap_size < k.len || val > k.minHeap.Peek() {
 		if heap_size >= k.len {
-			k.minHeap.Pop()
+			heap.Pop(k.minHeap)
 		}
-		k.minHeap.Push(val)
+		heap.Push(k.minHeap, val)
 	}
 	return k.minHeap.Peek()
 }

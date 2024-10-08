@@ -1,5 +1,4 @@
 [![LeetCode Badge](https://img.shields.io/badge/LeetCode-B3B3B3?logo=leetcode&logoColor=black&labelColor=FFA116&style=for-the-badge)](https://leetcode.com/u/shahzodshafizod/)
-[![Codeforces Badge](https://img.shields.io/badge/CodeForces-445f9d?logo=Codeforces&logoColor=yellow&labelColor=BA3F38&style=for-the-badge)](https://codeforces.com/profile/shahzodshafizod)
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------

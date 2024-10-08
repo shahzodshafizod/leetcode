@@ -1,6 +1,7 @@
 package greedy
 
 import (
+	"container/heap"
 	"slices"
 
 	"github.com/shahzodshafizod/leetcode/pkg"
@@ -16,17 +17,17 @@ func maxPerformance(n int, speed []int, efficiency []int, k int) int {
 		engineers = append(engineers, [2]int{efficiency[idx], speed[idx]})
 	}
 	slices.SortFunc(engineers, func(a, b [2]int) int { return b[0] - a[0] })
-	var speeds = pkg.NewPQ(
+	var speeds = pkg.NewHeap(
 		make([]int, 0),
-		func(x, y int) bool { return x > y },
+		func(x, y int) bool { return x < y },
 	)
 	var performance, totalSpeed = 0, 0
 	for _, engineer := range engineers {
 		if speeds.Len() == k {
-			totalSpeed -= speeds.Pop()
+			totalSpeed -= heap.Pop(speeds).(int)
 		}
 		totalSpeed += engineer[1]
-		speeds.Push(engineer[1])
+		heap.Push(speeds, engineer[1])
 		performance = max(performance, totalSpeed*engineer[0])
 	}
 	return performance % (1e9 + 7)

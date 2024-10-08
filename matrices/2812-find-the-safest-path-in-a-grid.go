@@ -1,6 +1,8 @@
 package matrices
 
 import (
+	"container/heap"
+
 	"github.com/shahzodshafizod/leetcode/pkg"
 )
 
@@ -43,15 +45,12 @@ func maximumSafenessFactor(grid [][]int) int {
 		}
 		length = len(queue)
 	}
-	var newPQ = func() pkg.PQ[[3]int] {
-		return pkg.NewPQ(make([][3]int, 0), func(x, y [3]int) bool { return x[0] < y[0] })
-	}
-	var pq = newPQ()
-	pq.Push([3]int{grid[0][0], 0, 0})
+	var pq = pkg.NewHeap(make([][3]int, 0), func(x, y [3]int) bool { return x[0] > y[0] })
+	heap.Push(pq, [3]int{grid[0][0], 0, 0})
 	grid[0][0] = -1
 	var top [3]int
 	for pq.Len() > 0 {
-		top = pq.Pop()
+		top = heap.Pop(pq).([3]int)
 		dist = top[0]
 		row = top[1]
 		col = top[2]
@@ -63,7 +62,7 @@ func maximumSafenessFactor(grid [][]int) int {
 			var c = col + directions[dir+1]
 			if inBound(r, c) && grid[r][c] > 0 {
 				grid[r][c] = min(dist, grid[r][c])
-				pq.Push([3]int{grid[r][c], r, c})
+				heap.Push(pq, [3]int{grid[r][c], r, c})
 				grid[r][c] = -1
 			}
 		}

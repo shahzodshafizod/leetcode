@@ -1,6 +1,7 @@
 package graphs
 
 import (
+	"container/heap"
 	"math"
 
 	"github.com/shahzodshafizod/leetcode/pkg"
@@ -1667,10 +1668,10 @@ func (g *graph) Dijkstra(adjList map[int][]*Edge, s int, n int) []int {
 		dist[idx] = math.MaxInt
 	}
 	dist[s] = 0
-	var minPQ = pkg.NewPQ(make([]*Edge, 0), func(x, y *Edge) bool { return x.Weight > y.Weight })
-	minPQ.Push(&Edge{s, 0})
+	var minPQ = pkg.NewHeap(make([]*Edge, 0), func(x, y *Edge) bool { return x.Weight < y.Weight })
+	heap.Push(minPQ, &Edge{s, 0})
 	for minPQ.Len() > 0 {
-		var nodeId = minPQ.Pop().To // get the next minimal (promising) distance
+		var nodeId = heap.Pop(minPQ).(*Edge).To // get the next minimal (promising) distance
 		visited[nodeId] = true
 		for _, edge := range adjList[nodeId] {
 			if visited[edge.To] {
@@ -1679,7 +1680,7 @@ func (g *graph) Dijkstra(adjList map[int][]*Edge, s int, n int) []int {
 			var newDist = dist[nodeId] + edge.Weight
 			if newDist < dist[edge.To] {
 				dist[edge.To] = newDist
-				minPQ.Push(&Edge{edge.To, newDist})
+				heap.Push(minPQ, &Edge{edge.To, newDist})
 			}
 		}
 	}

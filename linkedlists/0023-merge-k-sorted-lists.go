@@ -1,25 +1,29 @@
 package linkedlists
 
-import "github.com/shahzodshafizod/leetcode/pkg"
+import (
+	"container/heap"
+
+	"github.com/shahzodshafizod/leetcode/pkg"
+)
 
 // https://leetcode.com/problems/merge-k-sorted-lists/
 
 func mergeKLists(lists []*pkg.ListNode) *pkg.ListNode {
-	var minHeap = pkg.NewPQ(
+	var minHeap = pkg.NewHeap(
 		make([]*pkg.ListNode, 0),
-		func(x, y *pkg.ListNode) bool { return x.Val > y.Val },
+		func(x, y *pkg.ListNode) bool { return x.Val < y.Val },
 	)
 	for _, list := range lists {
 		if list != nil {
-			minHeap.Push(list)
+			heap.Push(minHeap, list)
 		}
 	}
 	var list = &pkg.ListNode{}
 	var tail = list
 	for minHeap.Len() > 0 {
-		min := minHeap.Pop()
+		min := heap.Pop(minHeap).(*pkg.ListNode)
 		if min.Next != nil {
-			minHeap.Push(min.Next)
+			heap.Push(minHeap, min.Next)
 		}
 		tail.Next = min
 		tail = tail.Next

@@ -1,6 +1,7 @@
 package graphs
 
 import (
+	"container/heap"
 	"math"
 
 	"github.com/shahzodshafizod/leetcode/pkg"
@@ -28,16 +29,16 @@ func modifiedGraphEdges(n int, edges [][]int, source int, destination int, targe
 	}
 
 	var runDijkstra = func(index int, difference int) {
-		var pq = pkg.NewPQ(
+		var pq = pkg.NewHeap(
 			[][2]int{{source, 0}},
 			func(x, y [2]int) bool {
-				return x[1] > y[1]
+				return x[1] < y[1]
 			},
 		)
 		distances[source][index] = 0
 		var currNode, currDist, nextNode, egdeIndex, nextWeight int
 		for pq.Len() > 0 {
-			var curr = pq.Pop()
+			var curr = heap.Pop(pq).([2]int)
 			currNode, currDist = curr[0], curr[1]
 			if currDist > distances[currNode][index] {
 				continue
@@ -57,7 +58,7 @@ func modifiedGraphEdges(n int, edges [][]int, source int, destination int, targe
 				}
 				if distances[currNode][index]+nextWeight < distances[nextNode][index] {
 					distances[nextNode][index] = distances[currNode][index] + nextWeight
-					pq.Push([2]int{nextNode, distances[nextNode][index]})
+					heap.Push(pq, [2]int{nextNode, distances[nextNode][index]})
 				}
 			}
 		}

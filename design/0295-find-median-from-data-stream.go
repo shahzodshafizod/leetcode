@@ -1,38 +1,42 @@
 package design
 
-import "github.com/shahzodshafizod/leetcode/pkg"
+import (
+	"container/heap"
+
+	"github.com/shahzodshafizod/leetcode/pkg"
+)
 
 // https://leetcode.com/problems/find-median-from-data-stream/
 
 type MedianFinder struct {
-	maxHeap pkg.PQ[int] // less that or equal to median
-	minHeap pkg.PQ[int] // greater that median
+	maxHeap *pkg.Heap[int] // less that or equal to median
+	minHeap *pkg.Heap[int] // greater that median
 }
 
 func NewMedianFinder() MedianFinder {
 	return MedianFinder{
-		maxHeap: pkg.NewPQ(make([]int, 0), func(x, y int) bool { return x < y }),
-		minHeap: pkg.NewPQ(make([]int, 0), func(x, y int) bool { return x > y }),
+		maxHeap: pkg.NewHeap(make([]int, 0), func(x, y int) bool { return x > y }),
+		minHeap: pkg.NewHeap(make([]int, 0), func(x, y int) bool { return x < y }),
 	}
 }
 
 func (m *MedianFinder) AddNum(num int) {
-	// m.maxHeap.Push(num)
-	// m.minHeap.Push(m.maxHeap.Pop())
+	// heap.Push(m.maxHeap, num)
+	// heap.Push(m.minHeap, heap.Pop(m.maxHeap))
 	// if m.minHeap.Len() > m.maxHeap.Len() {
-	// 	m.maxHeap.Push(m.minHeap.Pop())
+	// 	heap.Push(m.maxHeap, heap.Pop(m.minHeap))
 	// }
 	if float64(num) <= m.FindMedian() {
-		m.maxHeap.Push(num)
+		heap.Push(m.maxHeap, num)
 	} else {
-		m.minHeap.Push(num)
+		heap.Push(m.minHeap, num)
 	}
 	// rebalance
 	if m.maxHeap.Len() > m.minHeap.Len()+1 {
-		m.minHeap.Push(m.maxHeap.Pop())
+		heap.Push(m.minHeap, heap.Pop(m.maxHeap))
 	}
 	if m.minHeap.Len() > m.maxHeap.Len() {
-		m.maxHeap.Push(m.minHeap.Pop())
+		heap.Push(m.maxHeap, heap.Pop(m.minHeap))
 	}
 }
 

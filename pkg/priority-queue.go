@@ -1,6 +1,6 @@
 package pkg
 
-type PQ[T any] interface {
+type priorityQueue[T any] interface {
 	Heapify()
 	Len() int
 	Peek() T
@@ -13,7 +13,7 @@ type pq[T any] struct {
 	less func(x T, y T) bool
 }
 
-func NewPQ[T any](data []T, less func(x T, y T) bool) PQ[T] {
+func newPriorityQueue[T any](data []T, less func(x T, y T) bool) priorityQueue[T] {
 	var pq = pq[T]{
 		data: data,
 		less: less,
@@ -21,7 +21,7 @@ func NewPQ[T any](data []T, less func(x T, y T) bool) PQ[T] {
 	return &pq
 }
 
-func (p *pq[T]) Heapify() { // O(N)
+func (p *pq[T]) Heapify() { // O(NLogN)
 	for parent := p.Len()/2 - 1; parent >= 0; parent-- {
 		p.shiftDown(parent, p.Len())
 	}

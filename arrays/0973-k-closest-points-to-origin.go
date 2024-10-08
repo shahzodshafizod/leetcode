@@ -1,6 +1,7 @@
 package arrays
 
 import (
+	"container/heap"
 	"math"
 
 	"github.com/shahzodshafizod/leetcode/pkg"
@@ -11,17 +12,17 @@ import (
 // Priority Queue
 func kClosest(points [][]int, k int) [][]int {
 	var distance = func(x int, y int) float64 { return math.Sqrt(float64(x*x + y*y)) }
-	var minHeap = pkg.NewPQ(
+	var minHeap = pkg.NewHeap(
 		make([][]int, 0),
-		func(x, y []int) bool { return distance(x[0], x[1]) > distance(y[0], y[1]) },
+		func(x, y []int) bool { return distance(x[0], x[1]) < distance(y[0], y[1]) },
 	)
 	for _, point := range points {
-		minHeap.Push(point)
+		heap.Push(minHeap, point)
 	}
 	var closestPoints = make([][]int, 0, k)
 	for k > 0 {
 		k--
-		point := minHeap.Pop()
+		point := heap.Pop(minHeap).([]int)
 		closestPoints = append(closestPoints, []int{point[0], point[1]})
 	}
 	return closestPoints

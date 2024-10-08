@@ -1,6 +1,7 @@
 package greedy
 
 import (
+	"container/heap"
 	"math"
 
 	"github.com/shahzodshafizod/leetcode/pkg"
@@ -15,12 +16,12 @@ func mincostToHireWorkers(quality []int, wage []int, k int) float64 {
 		quality int
 		ratio   float64
 	}
-	var candidates = pkg.NewPQ(
+	var candidates = pkg.NewHeap(
 		make([]*candidate, 0),
-		func(x, y *candidate) bool { return x.ratio > y.ratio },
+		func(x, y *candidate) bool { return x.ratio < y.ratio },
 	)
 	for idx := range quality { // O(n)
-		candidates.Push(&candidate{
+		heap.Push(candidates, &candidate{
 			quality: quality[idx],
 			ratio:   float64(wage[idx]) / float64(quality[idx]),
 		})
@@ -28,13 +29,13 @@ func mincostToHireWorkers(quality []int, wage []int, k int) float64 {
 	var money float64 = math.MaxFloat64
 	var top *candidate
 	var qualities float64 = 0
-	var maxheap = pkg.NewPQ(make([]int, 0), func(x, y int) bool { return x < y })
+	var maxheap = pkg.NewHeap(make([]int, 0), func(x, y int) bool { return x > y })
 	for candidates.Len() > 0 { // O(n log k)
-		top = candidates.Pop()
+		top = heap.Pop(candidates).(*candidate)
 		qualities += float64(top.quality)
-		maxheap.Push(top.quality)
+		heap.Push(maxheap, top.quality)
 		if maxheap.Len() > k {
-			qualities -= float64(maxheap.Pop())
+			qualities -= float64(heap.Pop(maxheap).(int))
 		}
 		if maxheap.Len() == k {
 			money = min(money, qualities*top.ratio)

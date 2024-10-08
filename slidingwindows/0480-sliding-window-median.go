@@ -1,6 +1,8 @@
 package slidingwindows
 
 import (
+	"container/heap"
+
 	"github.com/shahzodshafizod/leetcode/pkg"
 )
 
@@ -10,13 +12,13 @@ import (
 // Time: O(n log k)
 // Space: O(2k) = O(k)
 func medianSlidingWindow(nums []int, k int) []float64 {
-	var maxHeap = pkg.NewPQ(make([]int, 0), func(x, y int) bool { return x < y })
-	var minHeap = pkg.NewPQ(make([]int, 0), func(x, y int) bool { return x > y })
+	var maxHeap = pkg.NewHeap(make([]int, 0), func(x, y int) bool { return x > y })
+	var minHeap = pkg.NewHeap(make([]int, 0), func(x, y int) bool { return x < y })
 	for idx := 0; idx < k; idx++ {
-		maxHeap.Push(nums[idx])
-		minHeap.Push(maxHeap.Pop())
+		heap.Push(maxHeap, nums[idx])
+		heap.Push(minHeap, heap.Pop(maxHeap))
 		if minHeap.Len() > maxHeap.Len() {
-			maxHeap.Push(minHeap.Pop())
+			heap.Push(maxHeap, heap.Pop(minHeap))
 		}
 	}
 	var n = len(nums)
@@ -42,23 +44,23 @@ func medianSlidingWindow(nums []int, k int) []float64 {
 
 		if float64(nums[idx]) <= median {
 			balance++
-			maxHeap.Push(nums[idx])
+			heap.Push(maxHeap, nums[idx])
 		} else {
 			balance--
-			minHeap.Push(nums[idx])
+			heap.Push(minHeap, nums[idx])
 		}
 
 		if balance < 0 {
-			maxHeap.Push(minHeap.Pop())
+			heap.Push(maxHeap, heap.Pop(minHeap))
 		} else if balance > 0 {
-			minHeap.Push(maxHeap.Pop())
+			heap.Push(minHeap, heap.Pop(maxHeap))
 		}
 
 		for maxHeap.Len() > 0 && outbounds[maxHeap.Peek()] > 0 {
-			outbounds[maxHeap.Pop()]--
+			outbounds[heap.Pop(maxHeap).(int)]--
 		}
 		for minHeap.Len() > 0 && outbounds[minHeap.Peek()] > 0 {
-			outbounds[minHeap.Pop()]--
+			outbounds[heap.Pop(minHeap).(int)]--
 		}
 
 		if k&1 == 1 {
