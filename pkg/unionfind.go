@@ -1,4 +1,4 @@
-package design
+package pkg
 
 /*
 The main idea of a “disjoint set” is to have all connected vertices have

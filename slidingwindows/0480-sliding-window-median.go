@@ -1,6 +1,8 @@
 package slidingwindows
 
-import "github.com/shahzodshafizod/leetcode/design"
+import (
+	"github.com/shahzodshafizod/leetcode/pkg"
+)
 
 // https://leetcode.com/problems/sliding-window-median/
 
@@ -8,8 +10,8 @@ import "github.com/shahzodshafizod/leetcode/design"
 // Time: O(n log k)
 // Space: O(2k) = O(k)
 func medianSlidingWindow(nums []int, k int) []float64 {
-	var maxHeap = design.NewPQ(make([]int, 0), func(x, y int) bool { return x < y })
-	var minHeap = design.NewPQ(make([]int, 0), func(x, y int) bool { return x > y })
+	var maxHeap = pkg.NewPQ(make([]int, 0), func(x, y int) bool { return x < y })
+	var minHeap = pkg.NewPQ(make([]int, 0), func(x, y int) bool { return x > y })
 	for idx := 0; idx < k; idx++ {
 		maxHeap.Push(nums[idx])
 		minHeap.Push(maxHeap.Pop())

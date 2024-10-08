@@ -1,6 +1,6 @@
 package linkedlists
 
-import "github.com/shahzodshafizod/leetcode/design"
+import "github.com/shahzodshafizod/leetcode/pkg"
 
 /*
 Problem:
@@ -31,19 +31,19 @@ Steps to reverse linked list:
 
 // https://leetcode.com/problems/reverse-linked-list-ii/
 
-func reverseBetween(head *design.ListNode, left int, right int) *design.ListNode {
+func reverseBetween(head *pkg.ListNode, left int, right int) *pkg.ListNode {
 	if head == nil {
 		return nil
 	}
 	var position = 1
 	var node = head
-	var lastPrev *design.ListNode
+	var lastPrev *pkg.ListNode
 	for node != nil && position < left {
 		lastPrev = node
 		node = node.Next
 		position++
 	}
-	var localHead, localTail *design.ListNode = nil, node
+	var localHead, localTail *pkg.ListNode = nil, node
 	for node != nil && position <= right {
 		current := node
 		node = node.Next

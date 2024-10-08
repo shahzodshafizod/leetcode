@@ -1,6 +1,6 @@
 package arrays
 
-import "github.com/shahzodshafizod/leetcode/design"
+import "github.com/shahzodshafizod/leetcode/pkg"
 
 // https://leetcode.com/problems/sort-the-people/
 
@@ -16,7 +16,7 @@ func sortPeople(names []string, heights []int) []string {
 		names[i], names[j] = names[j], names[i]
 	}
 
-	var pq = design.NewPQSort(len(names), compare, swap)
+	var pq = pkg.NewPQSort(len(names), compare, swap)
 	pq.Sort() // O(N Log N)
 	return names
 }

@@ -3,7 +3,7 @@ package graphs
 import (
 	"math"
 
-	"github.com/shahzodshafizod/leetcode/design"
+	"github.com/shahzodshafizod/leetcode/pkg"
 )
 
 /*
@@ -1525,7 +1525,7 @@ func (g *graph) DFS(adjList [][]int) []int {
 
 func (g *graph) BFS(adjList [][]int) []int {
 	var nodes = make([]int, 0)
-	var queue = design.NewQueue[int]()
+	var queue = pkg.NewQueue[int]()
 	queue.Enqueue(0)
 	var visited = make(map[int]bool)
 	for !queue.Empty() {
@@ -1549,7 +1549,7 @@ func (g *graph) TopologicalSortBFS(adjList map[int][]*Edge, n int) []int {
 		}
 	}
 	var visited = make(map[int]bool)
-	var queue = design.NewQueue[int]()
+	var queue = pkg.NewQueue[int]()
 	for src := 0; src < n; src++ {
 		if indegrees[src] == 0 && !visited[src] {
 			queue.Enqueue(src)
@@ -1606,7 +1606,7 @@ func (g *graph) Dungeon(grid [][]byte) int {
 	for idx := range visited {
 		visited[idx] = make([]bool, n)
 	}
-	var queue = design.NewQueue[[3]int]()
+	var queue = pkg.NewQueue[[3]int]()
 	for row := 0; row < m && queue.Empty(); row++ {
 		for col := 0; col < n && queue.Empty(); col++ {
 			if grid[row][col] == 'S' {
@@ -1667,7 +1667,7 @@ func (g *graph) Dijkstra(adjList map[int][]*Edge, s int, n int) []int {
 		dist[idx] = math.MaxInt
 	}
 	dist[s] = 0
-	var minPQ = design.NewPQ(make([]*Edge, 0), func(x, y *Edge) bool { return x.Weight > y.Weight })
+	var minPQ = pkg.NewPQ(make([]*Edge, 0), func(x, y *Edge) bool { return x.Weight > y.Weight })
 	minPQ.Push(&Edge{s, 0})
 	for minPQ.Len() > 0 {
 		var nodeId = minPQ.Pop().To // get the next minimal (promising) distance

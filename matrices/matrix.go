@@ -1,6 +1,6 @@
 package matrices
 
-import "github.com/shahzodshafizod/leetcode/design"
+import "github.com/shahzodshafizod/leetcode/pkg"
 
 /*
 2-D Arrays - Matrices (Matrixes)
@@ -36,7 +36,7 @@ func (m *matrix) BFS() []int {
 		seen[i] = make([]bool, m.width)
 	}
 
-	var queue = design.NewQueue[[2]int]()
+	var queue = pkg.NewQueue[[2]int]()
 	queue.Enqueue([2]int{0, 0})
 	seen[0][0] = true
 

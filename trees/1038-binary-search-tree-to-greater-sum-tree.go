@@ -1,6 +1,6 @@
 package trees
 
-import "github.com/shahzodshafizod/leetcode/design"
+import "github.com/shahzodshafizod/leetcode/pkg"
 
 /*
 Note: This question is the same as 538:
@@ -12,9 +12,9 @@ https://leetcode.com/problems/convert-bst-to-greater-tree/
 // Approach #2: Morris Traversal
 // time: O(n)
 // space: O(1)
-func bstToGst(root *design.TreeNode) *design.TreeNode {
+func bstToGst(root *pkg.TreeNode) *pkg.TreeNode {
 	var sum = 0
-	var prev *design.TreeNode
+	var prev *pkg.TreeNode
 	var curr = root
 	for curr != nil {
 		if curr.Right == nil {
@@ -43,9 +43,9 @@ func bstToGst(root *design.TreeNode) *design.TreeNode {
 // // Approach #1: Reversed InOrder Depth-First Search Traversal
 // // time: O(n)
 // // space: O(n) for recursion stack
-// func bstToGst(root *design.TreeNode) *design.TreeNode {
-// 	var dfs func(node *design.TreeNode, sum int) int
-// 	dfs = func(node *design.TreeNode, sum int) int {
+// func bstToGst(root *pkg.TreeNode) *pkg.TreeNode {
+// 	var dfs func(node *pkg.TreeNode, sum int) int
+// 	dfs = func(node *pkg.TreeNode, sum int) int {
 // 		if node == nil {
 // 			return sum
 // 		}

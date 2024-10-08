@@ -3,7 +3,7 @@ package greedy
 import (
 	"math"
 
-	"github.com/shahzodshafizod/leetcode/design"
+	"github.com/shahzodshafizod/leetcode/pkg"
 )
 
 // https://leetcode.com/problems/minimum-cost-to-hire-k-workers/
@@ -15,7 +15,7 @@ func mincostToHireWorkers(quality []int, wage []int, k int) float64 {
 		quality int
 		ratio   float64
 	}
-	var candidates = design.NewPQ[*candidate](
+	var candidates = pkg.NewPQ(
 		make([]*candidate, 0),
 		func(x, y *candidate) bool { return x.ratio > y.ratio },
 	)
@@ -28,7 +28,7 @@ func mincostToHireWorkers(quality []int, wage []int, k int) float64 {
 	var money float64 = math.MaxFloat64
 	var top *candidate
 	var qualities float64 = 0
-	var maxheap = design.NewPQ(make([]int, 0), func(x, y int) bool { return x < y })
+	var maxheap = pkg.NewPQ(make([]int, 0), func(x, y int) bool { return x < y })
 	for candidates.Len() > 0 { // O(n log k)
 		top = candidates.Pop()
 		qualities += float64(top.quality)

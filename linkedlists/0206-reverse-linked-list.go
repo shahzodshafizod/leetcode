@@ -1,6 +1,6 @@
 package linkedlists
 
-import "github.com/shahzodshafizod/leetcode/design"
+import "github.com/shahzodshafizod/leetcode/pkg"
 
 /*
 Problem:
@@ -20,10 +20,10 @@ Step 2: Write out some test cases
 
 // https://leetcode.com/problems/reverse-linked-list/
 
-func reverseList(head *design.ListNode) *design.ListNode {
+func reverseList(head *pkg.ListNode) *pkg.ListNode {
 	var node = head
 	head = nil
-	var next *design.ListNode
+	var next *pkg.ListNode
 	for node != nil {
 		next = node.Next
 		node.Next = head
@@ -33,10 +33,10 @@ func reverseList(head *design.ListNode) *design.ListNode {
 	return head
 }
 
-// func reverseList(head *design.ListNode) *design.ListNode {
-// 	var newHead *design.ListNode = nil
+// func reverseList(head *pkg.ListNode) *pkg.ListNode {
+// 	var newHead *pkg.ListNode = nil
 // 	for i := head; i != nil; i = i.Next {
-// 		newHead = &design.ListNode{Val: i.Val, Next: newHead}
+// 		newHead = &pkg.ListNode{Val: i.Val, Next: newHead}
 // 	}
 // 	return newHead
 // }

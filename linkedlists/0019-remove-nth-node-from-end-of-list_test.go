@@ -3,20 +3,20 @@ package linkedlists
 import (
 	"testing"
 
-	"github.com/shahzodshafizod/leetcode/design"
+	"github.com/shahzodshafizod/leetcode/pkg"
 	"github.com/stretchr/testify/assert"
 )
 
 // go test -v -count=1 ./linkedlists/ -run ^TestRemoveNthFromEnd$
 func TestRemoveNthFromEnd(t *testing.T) {
 	for _, tc := range []struct {
-		head    *design.ListNode
+		head    *pkg.ListNode
 		n       int
-		newHead *design.ListNode
+		newHead *pkg.ListNode
 	}{
-		{head: design.MakeLinkedList(1, 2, 3, 4, 5), n: 2, newHead: design.MakeLinkedList(1, 2, 3, 5)},
-		{head: design.MakeLinkedList(1), n: 1, newHead: design.MakeLinkedList()},
-		{head: design.MakeLinkedList(1, 2), n: 1, newHead: design.MakeLinkedList(1)},
+		{head: pkg.MakeLinkedList(1, 2, 3, 4, 5), n: 2, newHead: pkg.MakeLinkedList(1, 2, 3, 5)},
+		{head: pkg.MakeLinkedList(1), n: 1, newHead: pkg.MakeLinkedList()},
+		{head: pkg.MakeLinkedList(1, 2), n: 1, newHead: pkg.MakeLinkedList(1)},
 	} {
 		newHead := removeNthFromEnd(tc.head, tc.n)
 		assert.Equal(t, tc.newHead, newHead)

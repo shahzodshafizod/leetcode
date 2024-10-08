@@ -1,10 +1,10 @@
 package trees
 
-import "github.com/shahzodshafizod/leetcode/design"
+import "github.com/shahzodshafizod/leetcode/pkg"
 
 // https://leetcode.com/problems/delete-node-in-a-bst/
 
-func deleteNode(root *design.TreeNode, key int) *design.TreeNode {
+func deleteNode(root *pkg.TreeNode, key int) *pkg.TreeNode {
 	if root == nil {
 		return nil
 	}

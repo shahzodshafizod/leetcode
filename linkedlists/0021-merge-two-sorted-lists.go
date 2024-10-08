@@ -1,11 +1,11 @@
 package linkedlists
 
-import "github.com/shahzodshafizod/leetcode/design"
+import "github.com/shahzodshafizod/leetcode/pkg"
 
 // https://leetcode.com/problems/merge-two-sorted-lists/
 
 // // recursion
-// func mergeTwoLists(list1 *design.ListNode, list2 *design.ListNode) *design.ListNode {
+// func mergeTwoLists(list1 *pkg.ListNode, list2 *pkg.ListNode) *pkg.ListNode {
 // 	if list1 == nil {
 // 		return list2
 // 	}
@@ -21,8 +21,8 @@ import "github.com/shahzodshafizod/leetcode/design"
 // }
 
 // space: O(1)
-func mergeTwoLists(list1 *design.ListNode, list2 *design.ListNode) *design.ListNode {
-	var dummy = &design.ListNode{} // to escape "if tail != nil"
+func mergeTwoLists(list1 *pkg.ListNode, list2 *pkg.ListNode) *pkg.ListNode {
+	var dummy = &pkg.ListNode{} // to escape "if tail != nil"
 	var tail = dummy
 	for list1 != nil && list2 != nil {
 		if list1.Val < list2.Val {

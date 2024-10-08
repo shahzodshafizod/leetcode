@@ -2,6 +2,8 @@ package design
 
 import (
 	"container/heap"
+
+	"github.com/shahzodshafizod/leetcode/pkg"
 )
 
 // https://leetcode.com/problems/design-twitter/
@@ -41,7 +43,7 @@ func (t *Twitter) GetNewsFeed(userId int) []int { // O(N Log N)
 		posts = append(posts, t.tweets[followeeId]...)
 	}
 	copy(posts, t.tweets[userId])
-	var tweets = NewHeap(posts, func(x, y *tweet) bool { return x.uniqueId > y.uniqueId })
+	var tweets = pkg.NewHeap(posts, func(x, y *tweet) bool { return x.uniqueId > y.uniqueId })
 	heap.Init(tweets)
 	var result = make([]int, 0)
 	var count = 10

@@ -1,7 +1,7 @@
 package greedy
 
 import (
-	"github.com/shahzodshafizod/leetcode/design"
+	"github.com/shahzodshafizod/leetcode/pkg"
 )
 
 /*
@@ -19,8 +19,8 @@ import (
 // time: O(k log n)
 // space: O(n)
 func findMaximizedCapital(k int, w int, profits []int, capital []int) int {
-	var maxHeap = design.NewPQ(make([]int, 0), func(x, y int) bool { return x < y })
-	var minHeap = design.NewPQ(
+	var maxHeap = pkg.NewPQ(make([]int, 0), func(x, y int) bool { return x < y })
+	var minHeap = pkg.NewPQ(
 		make([][2]int, 0),
 		func(x, y [2]int) bool {
 			if x[0] == y[0] {

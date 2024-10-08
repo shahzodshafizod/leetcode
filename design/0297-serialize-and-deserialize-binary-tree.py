@@ -1,6 +1,6 @@
 from typing import Optional
 import unittest
-from design.tree import TreeNode, create_tree
+from pkg.tree import TreeNode, create_tree
 
 # https://leetcode.com/problems/serialize-and-deserialize-binary-tree/
 

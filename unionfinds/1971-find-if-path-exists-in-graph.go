@@ -1,11 +1,11 @@
 package unionfinds
 
-import "github.com/shahzodshafizod/leetcode/design"
+import "github.com/shahzodshafizod/leetcode/pkg"
 
 // https://leetcode.com/problems/find-if-path-exists-in-graph/
 
 func validPath(n int, edges [][]int, source int, destination int) bool {
-	var uf = design.NewDisjointSet(n)
+	var uf = pkg.NewDisjointSet(n)
 	for _, edge := range edges {
 		uf.Union(edge[0], edge[1])
 	}

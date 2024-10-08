@@ -1,4 +1,4 @@
-package design
+package pkg
 
 import (
 	"container/heap"
@@ -7,7 +7,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// go test -v -count=1 ./design/ -run ^TestMaxHeap$
+// go test -v -count=1 ./pkg/ -run ^TestMaxHeap$
 func TestMaxHeap(t *testing.T) {
 	for _, tc := range []struct {
 		array  []int
@@ -28,7 +28,7 @@ func TestMaxHeap(t *testing.T) {
 	}
 }
 
-// go test -v -count=1 ./design/ -run ^TestMinHeap$
+// go test -v -count=1 ./pkg/ -run ^TestMinHeap$
 func TestMinHeap(t *testing.T) {
 	for _, tc := range []struct {
 		array  []int

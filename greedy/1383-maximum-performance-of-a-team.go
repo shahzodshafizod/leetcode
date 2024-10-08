@@ -3,7 +3,7 @@ package greedy
 import (
 	"slices"
 
-	"github.com/shahzodshafizod/leetcode/design"
+	"github.com/shahzodshafizod/leetcode/pkg"
 )
 
 // https://leetcode.com/problems/maximum-performance-of-a-team/
@@ -16,7 +16,7 @@ func maxPerformance(n int, speed []int, efficiency []int, k int) int {
 		engineers = append(engineers, [2]int{efficiency[idx], speed[idx]})
 	}
 	slices.SortFunc(engineers, func(a, b [2]int) int { return b[0] - a[0] })
-	var speeds = design.NewPQ(
+	var speeds = pkg.NewPQ(
 		make([]int, 0),
 		func(x, y int) bool { return x > y },
 	)

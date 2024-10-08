@@ -1,4 +1,4 @@
-package design
+package pkg
 
 type PQ[T any] interface {
 	Heapify()

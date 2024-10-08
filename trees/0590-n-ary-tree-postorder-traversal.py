@@ -1,6 +1,6 @@
 import unittest
 from typing import List, Optional
-from design.tree import Node, create_n_ary_tree
+from pkg.tree import Node, create_n_ary_tree
 
 # https://leetcode.com/problems/n-ary-tree-postorder-traversal/
 

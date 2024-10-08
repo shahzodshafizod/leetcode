@@ -1,20 +1,20 @@
 package linkedlists
 
-import "github.com/shahzodshafizod/leetcode/design"
+import "github.com/shahzodshafizod/leetcode/pkg"
 
 // https://leetcode.com/problems/merge-k-sorted-lists/
 
-func mergeKLists(lists []*design.ListNode) *design.ListNode {
-	var minHeap = design.NewPQ(
-		make([]*design.ListNode, 0),
-		func(x, y *design.ListNode) bool { return x.Val > y.Val },
+func mergeKLists(lists []*pkg.ListNode) *pkg.ListNode {
+	var minHeap = pkg.NewPQ(
+		make([]*pkg.ListNode, 0),
+		func(x, y *pkg.ListNode) bool { return x.Val > y.Val },
 	)
 	for _, list := range lists {
 		if list != nil {
 			minHeap.Push(list)
 		}
 	}
-	var list = &design.ListNode{}
+	var list = &pkg.ListNode{}
 	var tail = list
 	for minHeap.Len() > 0 {
 		min := minHeap.Pop()
@@ -28,20 +28,20 @@ func mergeKLists(lists []*design.ListNode) *design.ListNode {
 	return list.Next
 }
 
-// func mergeKLists(lists []*design.ListNode) *design.ListNode {
-// 	var minHeap = design.NewHeap[*design.ListNode](
-// 		make([]*design.ListNode, 0),
-// 		func(x, y *design.ListNode) bool { return x.Val < y.Val },
+// func mergeKLists(lists []*pkg.ListNode) *pkg.ListNode {
+// 	var minHeap = design.NewHeap[*pkg.ListNode](
+// 		make([]*pkg.ListNode, 0),
+// 		func(x, y *pkg.ListNode) bool { return x.Val < y.Val },
 // 	)
 // 	for _, list := range lists {
 // 		if list != nil {
 // 			heap.Push(minHeap, list)
 // 		}
 // 	}
-// 	var list = &design.ListNode{}
+// 	var list = &pkg.ListNode{}
 // 	var tail = list
 // 	for minHeap.Len() > 0 {
-// 		min := heap.Pop(minHeap).(*design.ListNode)
+// 		min := heap.Pop(minHeap).(*pkg.ListNode)
 // 		if min.Next != nil {
 // 			heap.Push(minHeap, min.Next)
 // 		}

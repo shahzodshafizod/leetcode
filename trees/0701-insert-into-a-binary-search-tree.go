@@ -1,12 +1,12 @@
 package trees
 
-import "github.com/shahzodshafizod/leetcode/design"
+import "github.com/shahzodshafizod/leetcode/pkg"
 
 // https://leetcode.com/problems/insert-into-a-binary-search-tree/
 
-func insertIntoBST(root *design.TreeNode, val int) *design.TreeNode {
+func insertIntoBST(root *pkg.TreeNode, val int) *pkg.TreeNode {
 	if root == nil {
-		return &design.TreeNode{Val: val}
+		return &pkg.TreeNode{Val: val}
 	}
 	if val > root.Val {
 		root.Right = insertIntoBST(root.Right, val)

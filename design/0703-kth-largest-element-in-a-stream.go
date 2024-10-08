@@ -1,9 +1,11 @@
 package design
 
+import "github.com/shahzodshafizod/leetcode/pkg"
+
 // https://leetcode.com/problems/kth-largest-element-in-a-stream/
 
 type KthLargest struct {
-	minHeap PQ[int]
+	minHeap pkg.PQ[int]
 	len     int
 }
 
@@ -11,10 +13,10 @@ func NewKthLargest(k int, nums []int) KthLargest {
 	var kth = KthLargest{len: k}
 	var compare = func(x, y int) bool { return x > y }
 	if len(nums) <= k {
-		kth.minHeap = NewPQ(nums, compare)
+		kth.minHeap = pkg.NewPQ(nums, compare)
 		nums = nil
 	} else {
-		kth.minHeap = NewPQ(nums[:k], compare)
+		kth.minHeap = pkg.NewPQ(nums[:k], compare)
 		nums = nums[k:]
 	}
 	kth.minHeap.Heapify()

@@ -1,11 +1,11 @@
 package linkedlists
 
-import "github.com/shahzodshafizod/leetcode/design"
+import "github.com/shahzodshafizod/leetcode/pkg"
 
 // https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 
-func removeNthFromEnd(head *design.ListNode, n int) *design.ListNode {
-	var before = &design.ListNode{Next: head}
+func removeNthFromEnd(head *pkg.ListNode, n int) *pkg.ListNode {
+	var before = &pkg.ListNode{Next: head}
 	var current = before
 	for n > 0 {
 		n--

@@ -3,7 +3,7 @@ package arrays
 import (
 	"container/heap"
 
-	"github.com/shahzodshafizod/leetcode/design"
+	"github.com/shahzodshafizod/leetcode/pkg"
 )
 
 /*
@@ -45,7 +45,7 @@ Algorithmic Paradigm: Divide & Conquer
 
 // Approach#1: Heap (Priority Queue)
 func findKthLargest(nums []int, k int) int {
-	numsHeap := design.NewHeap(nums, func(x, y int) bool { return x > y })
+	numsHeap := pkg.NewHeap(nums, func(x, y int) bool { return x > y })
 	heap.Init(numsHeap)
 	var kth int
 	for k > 0 {

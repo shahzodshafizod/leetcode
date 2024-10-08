@@ -4,7 +4,7 @@ import (
 	"container/heap"
 	"sort"
 
-	"github.com/shahzodshafizod/leetcode/design"
+	"github.com/shahzodshafizod/leetcode/pkg"
 )
 
 // https://leetcode.com/problems/minimum-interval-to-include-each-query/
@@ -29,7 +29,7 @@ func minInterval(intervals [][]int, queries []int) []int {
 		length int
 		right  int
 	}
-	inbound := design.NewHeap(
+	inbound := pkg.NewHeap(
 		make([]*interval, 0),
 		func(x, y *interval) bool { return x.length < y.length },
 	)

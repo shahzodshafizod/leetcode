@@ -1,11 +1,11 @@
 package linkedlists
 
-import "github.com/shahzodshafizod/leetcode/design"
+import "github.com/shahzodshafizod/leetcode/pkg"
 
 // https://leetcode.com/problems/double-a-number-represented-as-a-linked-list/
 
-func doubleIt(head *design.ListNode) *design.ListNode {
-	var dummy = &design.ListNode{Val: 0, Next: head}
+func doubleIt(head *pkg.ListNode) *pkg.ListNode {
+	var dummy = &pkg.ListNode{Val: 0, Next: head}
 	for node := dummy; node.Next != nil; node = node.Next {
 		node.Next.Val *= 2
 		node.Val += node.Next.Val / 10
@@ -19,9 +19,9 @@ func doubleIt(head *design.ListNode) *design.ListNode {
 
 // // time: O(2n) = O(n)
 // // space: O(n)
-// func doubleIt(head *design.ListNode) *design.ListNode {
-// 	var stack = make([]*design.ListNode, 0)
-// 	var node *design.ListNode
+// func doubleIt(head *pkg.ListNode) *pkg.ListNode {
+// 	var stack = make([]*pkg.ListNode, 0)
+// 	var node *pkg.ListNode
 // 	for node = head; node != nil; node = node.Next {
 // 		stack = append(stack, node)
 // 	}
@@ -35,16 +35,16 @@ func doubleIt(head *design.ListNode) *design.ListNode {
 // 		remainder /= 10
 // 	}
 // 	if remainder != 0 {
-// 		head = &design.ListNode{Val: remainder, Next: head}
+// 		head = &pkg.ListNode{Val: remainder, Next: head}
 // 	}
 // 	return head
 // }
 
 // // time: O(n)
 // // space: O(n)
-// func doubleIt(head *design.ListNode) *design.ListNode {
-// 	var double func(node *design.ListNode) int
-// 	double = func(node *design.ListNode) int {
+// func doubleIt(head *pkg.ListNode) *pkg.ListNode {
+// 	var double func(node *pkg.ListNode) int
+// 	double = func(node *pkg.ListNode) int {
 // 		if node == nil {
 // 			return 0
 // 		}
@@ -58,7 +58,7 @@ func doubleIt(head *design.ListNode) *design.ListNode {
 // 	}
 // 	var remainder = double(head)
 // 	if remainder != 0 {
-// 		head = &design.ListNode{Val: remainder, Next: head}
+// 		head = &pkg.ListNode{Val: remainder, Next: head}
 // 	}
 // 	return head
 // }

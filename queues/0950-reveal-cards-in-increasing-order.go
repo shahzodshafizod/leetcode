@@ -3,7 +3,7 @@ package queues
 import (
 	"sort"
 
-	"github.com/shahzodshafizod/leetcode/design"
+	"github.com/shahzodshafizod/leetcode/pkg"
 )
 
 // https://leetcode.com/problems/reveal-cards-in-increasing-order/
@@ -13,7 +13,7 @@ import (
 func deckRevealedIncreasing(deck []int) []int {
 	sort.Ints(deck) // O(n log n)
 	var revealed = make([]int, len(deck))
-	var queue = design.NewQueue[int]()
+	var queue = pkg.NewQueue[int]()
 	for idx := range deck { // O(n)
 		queue.Enqueue(idx)
 	}

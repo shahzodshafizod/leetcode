@@ -1,6 +1,6 @@
 package linkedlists
 
-import "github.com/shahzodshafizod/leetcode/design"
+import "github.com/shahzodshafizod/leetcode/pkg"
 
 /*
 Doubly Linked Lists
@@ -29,7 +29,7 @@ Step 2: Write out some test cases
 
 // https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/
 
-func flatten(root *design.DListNode) *design.DListNode {
+func flatten(root *pkg.NAryListNode) *pkg.NAryListNode {
 	for node := root; node != nil; {
 		nextNode := node.Next
 		if node.Child != nil {
@@ -53,12 +53,12 @@ func flatten(root *design.DListNode) *design.DListNode {
 	return root
 }
 
-// func flatten(root *design.DListNode) *design.DListNode {
+// func flatten(root *pkg.NAryListNode) *pkg.NAryListNode {
 // 	flattenChild(root, nil, nil)
 // 	return root
 // }
 
-// func flattenChild(root *design.DListNode, prev *design.DListNode, next *design.DListNode) *design.DListNode {
+// func flattenChild(root *pkg.NAryListNode, prev *pkg.NAryListNode, next *pkg.NAryListNode) *pkg.NAryListNode {
 // 	if root == nil {
 // 		return nil
 // 	}

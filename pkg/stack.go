@@ -1,4 +1,4 @@
-package design
+package pkg
 
 type Stack[T any] interface {
 	Push(T)
@@ -8,8 +8,13 @@ type Stack[T any] interface {
 	Size() int
 }
 
+type stackNode[T any] struct {
+	val  T
+	next *stackNode[T]
+}
+
 type stack[T any] struct {
-	top  *listNode[T]
+	top  *stackNode[T]
 	size int
 }
 
@@ -18,7 +23,7 @@ func NewStack[T any]() Stack[T] {
 }
 
 func (s *stack[T]) Push(val T) {
-	s.top = &listNode[T]{val: val, next: s.top}
+	s.top = &stackNode[T]{val: val, next: s.top}
 	s.size++
 }
 

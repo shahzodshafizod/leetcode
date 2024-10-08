@@ -3,7 +3,7 @@ package graphs
 import (
 	"math"
 
-	"github.com/shahzodshafizod/leetcode/design"
+	"github.com/shahzodshafizod/leetcode/pkg"
 )
 
 /*
@@ -222,7 +222,7 @@ func (s *structy) ShortestPath(edges [][]byte, nodeA byte, nodeB byte) int {
 		distance int
 	}
 	// BFS
-	var queue = design.NewQueue[*node]()
+	var queue = pkg.NewQueue[*node]()
 	var visited = make(map[byte]bool)
 	queue.Enqueue(&node{val: nodeA, distance: 0})
 	for !queue.Empty() {

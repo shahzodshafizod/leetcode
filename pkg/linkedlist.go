@@ -1,4 +1,4 @@
-package design
+package pkg
 
 import (
 	"reflect"
@@ -57,24 +57,24 @@ func MakeCycleLinkedList(position int, vals ...int) *ListNode {
 	return head
 }
 
-// Definition for a Doubly Linked List Node.
-type DListNode struct {
+// Definition for a Doubly Linked List Node with Children.
+type NAryListNode struct {
 	Val   int
-	Prev  *DListNode
-	Next  *DListNode
-	Child *DListNode
+	Prev  *NAryListNode
+	Next  *NAryListNode
+	Child *NAryListNode
 }
 
-func MakeDoublyLinkedList(vals ...any) *DListNode {
-	var root, current *DListNode
+func MakeNAryLinkedList(vals ...any) *NAryListNode {
+	var root, current *NAryListNode
 	for _, val := range vals {
 		if kind := reflect.TypeOf(val).Kind(); kind != reflect.Int {
 			if kind == reflect.Slice && current != nil {
-				current.Child = MakeDoublyLinkedList(val.([]any)...)
+				current.Child = MakeNAryLinkedList(val.([]any)...)
 			}
 			continue
 		}
-		newNode := &DListNode{Val: val.(int)}
+		newNode := &NAryListNode{Val: val.(int)}
 		if root == nil {
 			root, current = newNode, newNode
 		} else {

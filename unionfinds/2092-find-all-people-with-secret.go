@@ -3,14 +3,14 @@ package unionfinds
 import (
 	"sort"
 
-	"github.com/shahzodshafizod/leetcode/design"
+	"github.com/shahzodshafizod/leetcode/pkg"
 )
 
 // https://leetcode.com/problems/find-all-people-with-secret/
 
 func findAllPeople(n int, meetings [][]int, firstPerson int) []int {
 	sort.Slice(meetings, func(i, j int) bool { return meetings[i][2] < meetings[j][2] })
-	var uf = design.NewDisjointSet(n)
+	var uf = pkg.NewDisjointSet(n)
 	uf.Union(0, firstPerson)
 	var told = make([]bool, n)
 	told[0] = true

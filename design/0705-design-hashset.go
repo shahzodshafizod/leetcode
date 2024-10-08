@@ -1,51 +1,53 @@
 package design
 
+import "github.com/shahzodshafizod/leetcode/pkg"
+
 // https://leetcode.com/problems/design-hashset/
 
 // 2. Chaining
 type MyHashSet struct {
-	array []*listNode[int]
+	array []*pkg.ListNode
 	cap   int
 }
 
 func NewMyHashSet() MyHashSet {
 	const cap = 997
-	var array = make([]*listNode[int], cap)
+	var array = make([]*pkg.ListNode, cap)
 	for idx := range array {
-		array[idx] = &listNode[int]{} // dummy head node
+		array[idx] = &pkg.ListNode{} // dummy head node
 	}
 	return MyHashSet{array: array, cap: cap}
 }
 
 func (m *MyHashSet) Add(key int) {
 	curr := m.array[key%m.cap]
-	for curr.next != nil {
-		if curr.next.val == key {
+	for curr.Next != nil {
+		if curr.Next.Val == key {
 			return
 		}
-		curr = curr.next
+		curr = curr.Next
 	}
-	curr.next = &listNode[int]{val: key}
+	curr.Next = &pkg.ListNode{Val: key}
 }
 
 func (m *MyHashSet) Remove(key int) {
 	curr := m.array[key%m.cap]
-	for curr.next != nil {
-		if curr.next.val == key {
-			curr.next = curr.next.next
+	for curr.Next != nil {
+		if curr.Next.Val == key {
+			curr.Next = curr.Next.Next
 			return
 		}
-		curr = curr.next
+		curr = curr.Next
 	}
 }
 
 func (m *MyHashSet) Contains(key int) bool {
-	curr := m.array[key%m.cap].next
+	curr := m.array[key%m.cap].Next
 	for curr != nil {
-		if curr.val == key {
+		if curr.Val == key {
 			return true
 		}
-		curr = curr.next
+		curr = curr.Next
 	}
 	return false
 }

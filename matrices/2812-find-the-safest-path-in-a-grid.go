@@ -1,7 +1,7 @@
 package matrices
 
 import (
-	"github.com/shahzodshafizod/leetcode/design"
+	"github.com/shahzodshafizod/leetcode/pkg"
 )
 
 // https://leetcode.com/problems/find-the-safest-path-in-a-grid/
@@ -43,8 +43,8 @@ func maximumSafenessFactor(grid [][]int) int {
 		}
 		length = len(queue)
 	}
-	var newPQ = func() design.PQ[[3]int] {
-		return design.NewPQ(make([][3]int, 0), func(x, y [3]int) bool { return x[0] < y[0] })
+	var newPQ = func() pkg.PQ[[3]int] {
+		return pkg.NewPQ(make([][3]int, 0), func(x, y [3]int) bool { return x[0] < y[0] })
 	}
 	var pq = newPQ()
 	pq.Push([3]int{grid[0][0], 0, 0})

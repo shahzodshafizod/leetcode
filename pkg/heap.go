@@ -1,4 +1,4 @@
-package design
+package pkg
 
 type Heap[T any] struct {
 	array   []T

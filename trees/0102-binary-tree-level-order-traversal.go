@@ -1,6 +1,6 @@
 package trees
 
-import "github.com/shahzodshafizod/leetcode/design"
+import "github.com/shahzodshafizod/leetcode/pkg"
 
 /*
 Problem:
@@ -23,12 +23,12 @@ Step 2: Write out some test cases
 // https://leetcode.com/problems/binary-tree-level-order-traversal/
 
 // BFS Traversal
-func levelOrder(root *design.TreeNode) [][]int {
+func levelOrder(root *pkg.TreeNode) [][]int {
 	levels := make([][]int, 0)
 	if root == nil {
 		return levels
 	}
-	var queue = []*design.TreeNode{root}
+	var queue = []*pkg.TreeNode{root}
 	for queueLen := len(queue); queueLen > 0; queueLen = len(queue) {
 		levelElements := make([]int, 0)
 		for count := 0; count < queueLen; count++ {
@@ -48,10 +48,10 @@ func levelOrder(root *design.TreeNode) [][]int {
 }
 
 // // DFS
-// func levelOrder(root *design.TreeNode) [][]int {
+// func levelOrder(root *pkg.TreeNode) [][]int {
 // 	var levels = make([][]int, 0)
-// 	var dfs func(root *design.TreeNode, level int)
-// 	dfs = func(root *design.TreeNode, level int) {
+// 	var dfs func(root *pkg.TreeNode, level int)
+// 	dfs = func(root *pkg.TreeNode, level int) {
 // 		if root == nil {
 // 			return
 // 		}

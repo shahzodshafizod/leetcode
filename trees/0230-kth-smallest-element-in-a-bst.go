@@ -1,10 +1,10 @@
 package trees
 
-import "github.com/shahzodshafizod/leetcode/design"
+import "github.com/shahzodshafizod/leetcode/pkg"
 
 // https://leetcode.com/problems/kth-smallest-element-in-a-bst/
 
-func kthSmallest(root *design.TreeNode, k int) int {
+func kthSmallest(root *pkg.TreeNode, k int) int {
 	leftCount := kthSmallestCountNodes(root.Left)
 	if k <= leftCount {
 		return kthSmallest(root.Left, k)
@@ -15,19 +15,19 @@ func kthSmallest(root *design.TreeNode, k int) int {
 	return root.Val
 }
 
-func kthSmallestCountNodes(curr *design.TreeNode) int {
+func kthSmallestCountNodes(curr *pkg.TreeNode) int {
 	if curr == nil {
 		return 0
 	}
 	return 1 + kthSmallestCountNodes(curr.Left) + kthSmallestCountNodes(curr.Right)
 }
 
-// func kthSmallest(root *design.TreeNode, k int) int {
+// func kthSmallest(root *pkg.TreeNode, k int) int {
 // 	var idx = 0
 // 	return kthSmallestInOrder(root, &idx, k).Val
 // }
 
-// func kthSmallestInOrder(curr *design.TreeNode, idx *int, k int) *design.TreeNode {
+// func kthSmallestInOrder(curr *pkg.TreeNode, idx *int, k int) *pkg.TreeNode {
 // 	if curr == nil {
 // 		return nil
 // 	}
@@ -45,7 +45,7 @@ func kthSmallestCountNodes(curr *design.TreeNode) int {
 Follow up: If the BST is modified often (i.e., we can do insert and delete operations)
 and you need to find the kth smallest frequently, how would you optimize?
 
-1. Create a map of counts: map[*design.TreeNode]int.
+1. Create a map of counts: map[*pkg.TreeNode]int.
 	It means how many nodes there are in the subtree of the node.
 	Whatever you update or delete, you change the subtree until the min element,
 	at the same time change count of those nodes by +1/-1.
@@ -53,13 +53,13 @@ and you need to find the kth smallest frequently, how would you optimize?
 2. Then finding kth element takes O(Log(N)):
 */
 
-// func kthSmallest(root *design.TreeNode, k int) int {
-// 	var counts = make(map[*design.TreeNode]int)
+// func kthSmallest(root *pkg.TreeNode, k int) int {
+// 	var counts = make(map[*pkg.TreeNode]int)
 // 	kthSmallestCount(root, counts)
 // 	return kthSmallestFind(root, k, counts).Val
 // }
 
-// func kthSmallestFind(curr *design.TreeNode, k int, counts map[*design.TreeNode]int) *design.TreeNode {
+// func kthSmallestFind(curr *pkg.TreeNode, k int, counts map[*pkg.TreeNode]int) *pkg.TreeNode {
 // 	if curr == nil || k > counts[curr] {
 // 		return nil
 // 	}
@@ -76,7 +76,7 @@ and you need to find the kth smallest frequently, how would you optimize?
 // 	return curr
 // }
 
-// func kthSmallestCount(curr *design.TreeNode, counts map[*design.TreeNode]int) {
+// func kthSmallestCount(curr *pkg.TreeNode, counts map[*pkg.TreeNode]int) {
 // 	if curr == nil {
 // 		return
 // 	}

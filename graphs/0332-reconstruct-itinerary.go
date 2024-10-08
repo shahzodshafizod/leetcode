@@ -3,7 +3,7 @@ package graphs
 import (
 	"container/heap"
 
-	"github.com/shahzodshafizod/leetcode/design"
+	"github.com/shahzodshafizod/leetcode/pkg"
 )
 
 /*
@@ -15,11 +15,11 @@ For other vertex vi has indeg(vi)=outdeg(vi).
 // https://leetcode.com/problems/reconstruct-itinerary/
 
 func findItinerary(tickets [][]string) []string {
-	var adjList = make(map[string]*design.Heap[string])
+	var adjList = make(map[string]*pkg.Heap[string])
 	for _, ticket := range tickets {
 		var src, dst = ticket[0], ticket[1]
 		if adjList[src] == nil {
-			adjList[src] = design.NewHeap(make([]string, 0), func(x, y string) bool { return x < y })
+			adjList[src] = pkg.NewHeap(make([]string, 0), func(x, y string) bool { return x < y })
 		}
 		heap.Push(adjList[src], dst)
 	}
@@ -29,7 +29,7 @@ func findItinerary(tickets [][]string) []string {
 	return result
 }
 
-func findItineraryDFS(adjList map[string]*design.Heap[string], source string, result *[]string, index *int) {
+func findItineraryDFS(adjList map[string]*pkg.Heap[string], source string, result *[]string, index *int) {
 	for adjList[source] != nil && adjList[source].Len() > 0 {
 		next := heap.Pop(adjList[source]).(string)
 		findItineraryDFS(adjList, next, result, index)

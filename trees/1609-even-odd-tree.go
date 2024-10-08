@@ -1,11 +1,11 @@
 package trees
 
-import "github.com/shahzodshafizod/leetcode/design"
+import "github.com/shahzodshafizod/leetcode/pkg"
 
 // https://leetcode.com/problems/even-odd-tree/
 
-func isEvenOddTree(root *design.TreeNode) bool {
-	var queue = []*design.TreeNode{root}
+func isEvenOddTree(root *pkg.TreeNode) bool {
+	var queue = []*pkg.TreeNode{root}
 	var level = 0
 	var levelParity, factor int
 	for length := len(queue); length > 0; length = len(queue) {

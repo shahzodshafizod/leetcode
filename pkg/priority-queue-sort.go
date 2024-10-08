@@ -1,4 +1,4 @@
-package design
+package pkg
 
 type PQSort interface {
 	Sort()

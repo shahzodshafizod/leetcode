@@ -1,6 +1,6 @@
 package trees
 
-import "github.com/shahzodshafizod/leetcode/design"
+import "github.com/shahzodshafizod/leetcode/pkg"
 
 /*
 Problem:
@@ -26,12 +26,12 @@ Depth-First Search:
 // https://leetcode.com/problems/binary-tree-right-side-view/
 
 // BFS Traversal
-func rightSideView(root *design.TreeNode) []int {
+func rightSideView(root *pkg.TreeNode) []int {
 	values := make([]int, 0)
 	if root == nil {
 		return values
 	}
-	queue := []*design.TreeNode{root}
+	queue := []*pkg.TreeNode{root}
 	for queueLen := len(queue); queueLen > 0; queueLen = len(queue) {
 		values = append(values, queue[queueLen-1].Val)
 		for count := 0; count < queueLen; count++ {
@@ -48,10 +48,10 @@ func rightSideView(root *design.TreeNode) []int {
 	return values
 }
 
-// func rightSideView(root *design.TreeNode) []int {
+// func rightSideView(root *pkg.TreeNode) []int {
 // 	values := make([]int, 0)
-// 	var dfs func(root *design.TreeNode, level int)
-// 	dfs = func(root *design.TreeNode, level int) {
+// 	var dfs func(root *pkg.TreeNode, level int)
+// 	dfs = func(root *pkg.TreeNode, level int) {
 // 		if root == nil {
 // 			return
 // 		}

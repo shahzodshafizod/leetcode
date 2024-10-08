@@ -1,10 +1,10 @@
 package linkedlists
 
-import "github.com/shahzodshafizod/leetcode/design"
+import "github.com/shahzodshafizod/leetcode/pkg"
 
 // https://leetcode.com/problems/delete-node-in-a-linked-list/
 
-func deleteNode(node *design.ListNode) {
+func deleteNode(node *pkg.ListNode) {
 	node.Val = node.Next.Val
 	node.Next = node.Next.Next
 }

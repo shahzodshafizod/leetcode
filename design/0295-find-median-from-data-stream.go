@@ -1,16 +1,18 @@
 package design
 
+import "github.com/shahzodshafizod/leetcode/pkg"
+
 // https://leetcode.com/problems/find-median-from-data-stream/
 
 type MedianFinder struct {
-	maxHeap PQ[int] // less that or equal to median
-	minHeap PQ[int] // greater that median
+	maxHeap pkg.PQ[int] // less that or equal to median
+	minHeap pkg.PQ[int] // greater that median
 }
 
 func NewMedianFinder() MedianFinder {
 	return MedianFinder{
-		maxHeap: NewPQ(make([]int, 0), func(x, y int) bool { return x < y }),
-		minHeap: NewPQ(make([]int, 0), func(x, y int) bool { return x > y }),
+		maxHeap: pkg.NewPQ(make([]int, 0), func(x, y int) bool { return x < y }),
+		minHeap: pkg.NewPQ(make([]int, 0), func(x, y int) bool { return x > y }),
 	}
 }
 

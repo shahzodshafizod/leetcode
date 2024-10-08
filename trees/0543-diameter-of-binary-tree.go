@@ -1,6 +1,6 @@
 package trees
 
-import "github.com/shahzodshafizod/leetcode/design"
+import "github.com/shahzodshafizod/leetcode/pkg"
 
 /*
          +----------(1)
@@ -13,10 +13,10 @@ diameter: 4 [5,3,2,4,6]
 
 // https://leetcode.com/problems/diameter-of-binary-tree/
 
-func diameterOfBinaryTree(root *design.TreeNode) int {
+func diameterOfBinaryTree(root *pkg.TreeNode) int {
 	var diameter = 0
-	var dfs func(*design.TreeNode) int
-	dfs = func(node *design.TreeNode) int {
+	var dfs func(*pkg.TreeNode) int
+	dfs = func(node *pkg.TreeNode) int {
 		if node == nil {
 			return 0
 		}

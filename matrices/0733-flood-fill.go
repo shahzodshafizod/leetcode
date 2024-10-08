@@ -1,12 +1,12 @@
 package matrices
 
-import "github.com/shahzodshafizod/leetcode/design"
+import "github.com/shahzodshafizod/leetcode/pkg"
 
 // https://leetcode.com/problems/flood-fill/
 
 // Approach: Breadth-First Search
 func floodFill(image [][]int, sr int, sc int, color int) [][]int {
-	var queue = design.NewQueue[[2]int]()
+	var queue = pkg.NewQueue[[2]int]()
 	var srcColor = image[sr][sc]
 	if srcColor != color {
 		queue.Enqueue([2]int{sr, sc})

@@ -1,8 +1,6 @@
 package trees
 
-import (
-	"github.com/shahzodshafizod/leetcode/design"
-)
+import "github.com/shahzodshafizod/leetcode/pkg"
 
 /*
 Binary Search Trees:
@@ -42,9 +40,9 @@ Step 2: Write out some test cases:
 // H = tree height
 // time: O(N)
 // space: O(H)
-func isValidBST(root *design.TreeNode) bool {
-	var stack = make([]*design.TreeNode, 0)
-	var prev, node *design.TreeNode = nil, root
+func isValidBST(root *pkg.TreeNode) bool {
+	var stack = make([]*pkg.TreeNode, 0)
+	var prev, node *pkg.TreeNode = nil, root
 	for len(stack) != 0 || node != nil {
 		for node != nil {
 			stack = append(stack, node)
@@ -65,9 +63,9 @@ func isValidBST(root *design.TreeNode) bool {
 // // H = tree height
 // // time: O(N)
 // // space: O(H)
-// func isValidBST(root *design.TreeNode) bool {
-// 	var check func(node *design.TreeNode, minval int, maxval int) bool
-// 	check = func(node *design.TreeNode, minval int, maxval int) bool {
+// func isValidBST(root *pkg.TreeNode) bool {
+// 	var check func(node *pkg.TreeNode, minval int, maxval int) bool
+// 	check = func(node *pkg.TreeNode, minval int, maxval int) bool {
 // 		if node == nil {
 // 			return true
 // 		}

@@ -1,6 +1,6 @@
 package trees
 
-import "github.com/shahzodshafizod/leetcode/design"
+import "github.com/shahzodshafizod/leetcode/pkg"
 
 // https://leetcode.com/problems/binary-tree-maximum-path-sum/
 
@@ -9,9 +9,9 @@ import "github.com/shahzodshafizod/leetcode/design"
 // H: tree height
 // Time: O(N)
 // Space: O(H)
-func maxPathSum(root *design.TreeNode) int {
-	var dfs func(node *design.TreeNode) (int, int)
-	dfs = func(node *design.TreeNode) (int, int) {
+func maxPathSum(root *pkg.TreeNode) int {
+	var dfs func(node *pkg.TreeNode) (int, int)
+	dfs = func(node *pkg.TreeNode) (int, int) {
 		if node == nil {
 			return -1000, 0
 		}

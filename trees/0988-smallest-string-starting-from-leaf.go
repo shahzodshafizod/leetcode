@@ -1,12 +1,12 @@
 package trees
 
-import "github.com/shahzodshafizod/leetcode/design"
+import "github.com/shahzodshafizod/leetcode/pkg"
 
 // https://leetcode.com/problems/smallest-string-starting-from-leaf/
 
-func smallestFromLeaf(root *design.TreeNode) string {
-	var dfs func(node *design.TreeNode, str string) string
-	dfs = func(node *design.TreeNode, str string) string {
+func smallestFromLeaf(root *pkg.TreeNode) string {
+	var dfs func(node *pkg.TreeNode, str string) string
+	dfs = func(node *pkg.TreeNode, str string) string {
 		if node == nil {
 			return str
 		}

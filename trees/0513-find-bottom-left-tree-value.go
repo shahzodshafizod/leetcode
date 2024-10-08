@@ -1,15 +1,15 @@
 package trees
 
-import "github.com/shahzodshafizod/leetcode/design"
+import "github.com/shahzodshafizod/leetcode/pkg"
 
 // https://leetcode.com/problems/find-bottom-left-tree-value/
 
 // DFS
-func findBottomLeftValue(root *design.TreeNode) int {
+func findBottomLeftValue(root *pkg.TreeNode) int {
 	var value int
 	var maxLevel = -1
-	var dfs func(node *design.TreeNode, level int)
-	dfs = func(node *design.TreeNode, level int) {
+	var dfs func(node *pkg.TreeNode, level int)
+	dfs = func(node *pkg.TreeNode, level int) {
 		if node == nil {
 			return
 		}
@@ -25,9 +25,9 @@ func findBottomLeftValue(root *design.TreeNode) int {
 }
 
 // // BFS
-// func findBottomLeftValue(root *design.TreeNode) int {
+// func findBottomLeftValue(root *pkg.TreeNode) int {
 // 	var value int
-// 	var queue = []*design.TreeNode{root}
+// 	var queue = []*pkg.TreeNode{root}
 // 	for length := len(queue); length > 0; length = len(queue) {
 // 		value = queue[0].Val
 // 		for i := 0; i < length; i++ {

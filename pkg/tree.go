@@ -1,4 +1,4 @@
-package design
+package pkg
 
 // Definition for a binary tree node.
 type TreeNode struct {

@@ -1,4 +1,4 @@
-package design
+package pkg
 
 import (
 	"testing"
@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// go test -v -count=1 ./design/ -run ^TestUnionFind$
+// go test -v -count=1 ./pkg/ -run ^TestUnionFind$
 func TestUnionFind(t *testing.T) {
 	var ds DisjointSet
 	var m, n = 4, 3
@@ -50,7 +50,7 @@ func TestUnionFind(t *testing.T) {
 	}
 }
 
-// go test -v -count=1 ./design/ -run ^TestDSQuickFind$
+// go test -v -count=1 ./pkg/ -run ^TestDSQuickFind$
 func TestDSQuickFind(t *testing.T) {
 	for _, tc := range []struct {
 		commands []string

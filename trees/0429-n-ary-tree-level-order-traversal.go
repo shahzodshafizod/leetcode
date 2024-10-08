@@ -1,12 +1,12 @@
 package trees
 
-import "github.com/shahzodshafizod/leetcode/design"
+import "github.com/shahzodshafizod/leetcode/pkg"
 
 // https://leetcode.com/problems/n-ary-tree-level-order-traversal/
 
-func levelOrder429(root *design.NTreeNode) [][]int {
+func levelOrder429(root *pkg.NTreeNode) [][]int {
 	var values = make([][]int, 0)
-	var queue = make([]*design.NTreeNode, 0)
+	var queue = make([]*pkg.NTreeNode, 0)
 	if root != nil {
 		queue = append(queue, root)
 	}

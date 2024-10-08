@@ -1,10 +1,10 @@
 package trees
 
-import "github.com/shahzodshafizod/leetcode/design"
+import "github.com/shahzodshafizod/leetcode/pkg"
 
 // https://leetcode.com/problems/search-in-a-binary-search-tree/
 
-func searchBST(root *design.TreeNode, val int) *design.TreeNode {
+func searchBST(root *pkg.TreeNode, val int) *pkg.TreeNode {
 	for root != nil && root.Val != val {
 		if val > root.Val {
 			root = root.Right
@@ -15,7 +15,7 @@ func searchBST(root *design.TreeNode, val int) *design.TreeNode {
 	return root
 }
 
-// func searchBST(root *design.TreeNode, val int) *design.TreeNode {
+// func searchBST(root *pkg.TreeNode, val int) *pkg.TreeNode {
 // 	if root == nil || root.Val == val {
 // 		return root
 // 	}

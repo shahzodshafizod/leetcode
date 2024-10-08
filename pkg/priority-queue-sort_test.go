@@ -1,4 +1,4 @@
-package design
+package pkg
 
 import (
 	"testing"
@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// go test -v -count=1 ./design/ -run ^TestMaxPriorityQueueSort$
+// go test -v -count=1 ./pkg/ -run ^TestMaxPriorityQueueSort$
 func TestMaxPriorityQueueSort(t *testing.T) {
 	for _, tc := range []struct {
 		array  []int
@@ -27,7 +27,7 @@ func TestMaxPriorityQueueSort(t *testing.T) {
 	}
 }
 
-// go test -v -count=1 ./design/ -run ^TestMinPriorityQueueSort$
+// go test -v -count=1 ./pkg/ -run ^TestMinPriorityQueueSort$
 func TestMinPriorityQueueSort(t *testing.T) {
 	for _, tc := range []struct {
 		array  []int

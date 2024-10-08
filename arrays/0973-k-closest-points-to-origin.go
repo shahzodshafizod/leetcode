@@ -3,7 +3,7 @@ package arrays
 import (
 	"math"
 
-	"github.com/shahzodshafizod/leetcode/design"
+	"github.com/shahzodshafizod/leetcode/pkg"
 )
 
 // https://leetcode.com/problems/k-closest-points-to-origin/
@@ -11,7 +11,7 @@ import (
 // Priority Queue
 func kClosest(points [][]int, k int) [][]int {
 	var distance = func(x int, y int) float64 { return math.Sqrt(float64(x*x + y*y)) }
-	var minHeap = design.NewPQ[[]int](
+	var minHeap = pkg.NewPQ(
 		make([][]int, 0),
 		func(x, y []int) bool { return distance(x[0], x[1]) > distance(y[0], y[1]) },
 	)

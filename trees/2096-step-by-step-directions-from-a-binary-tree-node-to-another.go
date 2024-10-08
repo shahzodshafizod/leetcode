@@ -3,7 +3,7 @@ package trees
 import (
 	"strings"
 
-	"github.com/shahzodshafizod/leetcode/design"
+	"github.com/shahzodshafizod/leetcode/pkg"
 )
 
 // LCA - Lowest Common Ancestor
@@ -12,9 +12,9 @@ import (
 
 // time: O(N)
 // space: O(N)
-func getDirections(root *design.TreeNode, startValue int, destValue int) string {
-	var dfs func(node *design.TreeNode, target int, level int, direction byte) []byte
-	dfs = func(node *design.TreeNode, target int, level int, direction byte) []byte {
+func getDirections(root *pkg.TreeNode, startValue int, destValue int) string {
+	var dfs func(node *pkg.TreeNode, target int, level int, direction byte) []byte
+	dfs = func(node *pkg.TreeNode, target int, level int, direction byte) []byte {
 		if node == nil {
 			return nil
 		}

@@ -1,11 +1,13 @@
 package arrays
 
-import "github.com/shahzodshafizod/leetcode/design"
+import (
+	"github.com/shahzodshafizod/leetcode/pkg"
+)
 
 // https://leetcode.com/problems/last-stone-weight/
 
 func lastStoneWeight(stones []int) int {
-	var maxHeap = design.NewPQ[int](stones, func(x, y int) bool { return x < y })
+	var maxHeap = pkg.NewPQ(stones, func(x, y int) bool { return x < y })
 	maxHeap.Heapify()
 	for maxHeap.Len() > 1 {
 		y := maxHeap.Pop()

@@ -1,16 +1,16 @@
 package trees
 
-import "github.com/shahzodshafizod/leetcode/design"
+import "github.com/shahzodshafizod/leetcode/pkg"
 
 // https://leetcode.com/problems/binary-tree-inorder-traversal/
 
 // Approach: Morris Traversal
 // time: O(n)
 // space: O(1)
-func inorderTraversal(root *design.TreeNode) []int {
+func inorderTraversal(root *pkg.TreeNode) []int {
 	var result = make([]int, 0)
 	var curr = root
-	var prev *design.TreeNode
+	var prev *pkg.TreeNode
 	for curr != nil {
 		if curr.Left == nil {
 			result = append(result, curr.Val)
@@ -37,7 +37,7 @@ func inorderTraversal(root *design.TreeNode) []int {
 // // Approach: Depth-First Search
 // // time: O(n)
 // // space: O(1)
-// func inorderTraversal(root *design.TreeNode) []int {
+// func inorderTraversal(root *pkg.TreeNode) []int {
 // 	if root == nil {
 // 		return []int{}
 // 	}
@@ -48,8 +48,8 @@ func inorderTraversal(root *design.TreeNode) []int {
 // }
 
 // // Follow up: Recursive solution is trivial, could you do it iteratively?
-// func inorderTraversal(root *design.TreeNode) []int {
-// 	var stack = design.NewStack[*design.TreeNode]()
+// func inorderTraversal(root *pkg.TreeNode) []int {
+// 	var stack = design.NewStack[*pkg.TreeNode]()
 // 	if root != nil {
 // 		stack.Push(root)
 // 	}
@@ -63,7 +63,7 @@ func inorderTraversal(root *design.TreeNode) []int {
 // 			values = append(values, curr.Val)
 // 			continue
 // 		}
-// 		stack.Push(&design.TreeNode{Val: curr.Val})
+// 		stack.Push(&pkg.TreeNode{Val: curr.Val})
 // 		stack.Push(curr.Left)
 // 	}
 // 	return values

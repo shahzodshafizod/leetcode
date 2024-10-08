@@ -1,7 +1,7 @@
 package matrices
 
 import (
-	"github.com/shahzodshafizod/leetcode/design"
+	"github.com/shahzodshafizod/leetcode/pkg"
 )
 
 // https://leetcode.com/problems/swim-in-rising-water/
@@ -10,7 +10,7 @@ import (
 // space: O(n x n)
 func swimInWater(grid [][]int) int {
 	var n = len(grid)
-	var pq = design.NewPQ(
+	var pq = pkg.NewPQ(
 		make([][3]int, 0),
 		func(x, y [3]int) bool { return x[0] > y[0] },
 	)

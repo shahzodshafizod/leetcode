@@ -1,15 +1,15 @@
 package linkedlists
 
-import "github.com/shahzodshafizod/leetcode/design"
+import "github.com/shahzodshafizod/leetcode/pkg"
 
 // https://leetcode.com/problems/remove-nodes-from-linked-list/
 
 // Approach: Reverse Twice
 // time: O(3n) = O(n)
 // space: O(1)
-func removeNodes(head *design.ListNode) *design.ListNode {
-	var reverse = func(head *design.ListNode) *design.ListNode {
-		var prev, next *design.ListNode = nil, nil
+func removeNodes(head *pkg.ListNode) *pkg.ListNode {
+	var reverse = func(head *pkg.ListNode) *pkg.ListNode {
+		var prev, next *pkg.ListNode = nil, nil
 		var curr = head
 		for curr != nil {
 			next = curr.Next
@@ -22,7 +22,7 @@ func removeNodes(head *design.ListNode) *design.ListNode {
 	}
 	head = reverse(head)
 	var max = 0
-	var prev *design.ListNode = nil
+	var prev *pkg.ListNode = nil
 	for node := head; node != nil; node = node.Next {
 		if node.Val < max {
 			if prev == nil {
@@ -41,9 +41,9 @@ func removeNodes(head *design.ListNode) *design.ListNode {
 // // Approach: Stack
 // // time: O(2n)
 // // space: O(n)
-// func removeNodes(head *design.ListNode) *design.ListNode {
-// 	var stack = make([]*design.ListNode, 0)
-// 	var node *design.ListNode
+// func removeNodes(head *pkg.ListNode) *pkg.ListNode {
+// 	var stack = make([]*pkg.ListNode, 0)
+// 	var node *pkg.ListNode
 // 	for node = head; node != nil; node = node.Next {
 // 		stack = append(stack, node)
 // 	}
@@ -68,7 +68,7 @@ func removeNodes(head *design.ListNode) *design.ListNode {
 // // Approach: Monotonic Stack
 // // time: O(n)
 // // space: O(n) # for recursion stack
-// func removeNodes(head *design.ListNode) *design.ListNode {
+// func removeNodes(head *pkg.ListNode) *pkg.ListNode {
 // 	if head == nil {
 // 		return nil
 // 	}
@@ -82,9 +82,9 @@ func removeNodes(head *design.ListNode) *design.ListNode {
 // // Approach: Monotonic Stack
 // // time: O(n)
 // // space: O(n) # for recursion stack
-// func removeNodes(head *design.ListNode) *design.ListNode {
-// 	var monostack func(prev *design.ListNode, node *design.ListNode) int
-// 	monostack = func(prev *design.ListNode, node *design.ListNode) int {
+// func removeNodes(head *pkg.ListNode) *pkg.ListNode {
+// 	var monostack func(prev *pkg.ListNode, node *pkg.ListNode) int
+// 	monostack = func(prev *pkg.ListNode, node *pkg.ListNode) int {
 // 		if node == nil {
 // 			return 0
 // 		}

@@ -1,11 +1,11 @@
 package trees
 
-import "github.com/shahzodshafizod/leetcode/design"
+import "github.com/shahzodshafizod/leetcode/pkg"
 
 // https://leetcode.com/problems/same-tree/
 
 // DFS
-func isSameTree(p *design.TreeNode, q *design.TreeNode) bool {
+func isSameTree(p *pkg.TreeNode, q *pkg.TreeNode) bool {
 	if p == nil || q == nil {
 		return p == q
 	}
@@ -15,8 +15,8 @@ func isSameTree(p *design.TreeNode, q *design.TreeNode) bool {
 }
 
 // // BFS
-// func isSameTree(p *design.TreeNode, q *design.TreeNode) bool {
-// 	var queue = []*design.TreeNode{p, q}
+// func isSameTree(p *pkg.TreeNode, q *pkg.TreeNode) bool {
+// 	var queue = []*pkg.TreeNode{p, q}
 // 	for length := len(queue); length > 0; length = len(queue) {
 // 		p, q = queue[0], queue[1]
 // 		queue = queue[2:]

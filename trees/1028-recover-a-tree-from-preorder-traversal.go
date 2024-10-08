@@ -1,15 +1,15 @@
 package trees
 
-import "github.com/shahzodshafizod/leetcode/design"
+import "github.com/shahzodshafizod/leetcode/pkg"
 
 // https://leetcode.com/problems/recover-a-tree-from-preorder-traversal/
 
-func recoverFromPreorder(traversal string) *design.TreeNode {
+func recoverFromPreorder(traversal string) *pkg.TreeNode {
 	var idx = 0
 	return recoverFromPreorderRecur(traversal, &idx, len(traversal), 0)
 }
 
-func recoverFromPreorderRecur(traversal string, idx *int, n int, level int) *design.TreeNode {
+func recoverFromPreorderRecur(traversal string, idx *int, n int, level int) *pkg.TreeNode {
 	if *idx >= n {
 		return nil
 	}
@@ -26,7 +26,7 @@ func recoverFromPreorderRecur(traversal string, idx *int, n int, level int) *des
 		val = val*10 + int(traversal[*idx]-'0')
 		(*idx)++
 	}
-	var node = &design.TreeNode{Val: val}
+	var node = &pkg.TreeNode{Val: val}
 	node.Left = recoverFromPreorderRecur(traversal, idx, n, level+1)
 	node.Right = recoverFromPreorderRecur(traversal, idx, n, level+1)
 	return node

@@ -1,13 +1,13 @@
 package trees
 
-import "github.com/shahzodshafizod/leetcode/design"
+import "github.com/shahzodshafizod/leetcode/pkg"
 
 // https://leetcode.com/problems/n-ary-tree-preorder-traversal/
 
 // BFS
-func preorder(root *design.NTreeNode) []int {
+func preorder(root *pkg.NTreeNode) []int {
 	var values = make([]int, 0)
-	var stack = make([]*design.NTreeNode, 0)
+	var stack = make([]*pkg.NTreeNode, 0)
 	if root != nil {
 		stack = append(stack, root)
 	}
@@ -23,7 +23,7 @@ func preorder(root *design.NTreeNode) []int {
 }
 
 // // DFS
-// func preorder(root *design.NTreeNode) []int {
+// func preorder(root *pkg.NTreeNode) []int {
 // 	var values = make([]int, 0)
 // 	if root == nil {
 // 		return values

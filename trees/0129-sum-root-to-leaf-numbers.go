@@ -1,12 +1,12 @@
 package trees
 
-import "github.com/shahzodshafizod/leetcode/design"
+import "github.com/shahzodshafizod/leetcode/pkg"
 
 // https://leetcode.com/problems/sum-root-to-leaf-numbers/
 
-func sumNumbers(root *design.TreeNode) int {
-	var dfs func(node *design.TreeNode, number int) int
-	dfs = func(node *design.TreeNode, number int) int {
+func sumNumbers(root *pkg.TreeNode) int {
+	var dfs func(node *pkg.TreeNode, number int) int
+	dfs = func(node *pkg.TreeNode, number int) int {
 		number = number*10 + node.Val
 		if node.Left == nil && node.Right == nil {
 			return number

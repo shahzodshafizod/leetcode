@@ -1,5 +1,5 @@
 from typing import Optional
-from design.tree import TreeNode, create_tree
+from pkg.tree import TreeNode, create_tree
 import unittest
 
 # https://leetcode.com/problems/validate-binary-search-tree/

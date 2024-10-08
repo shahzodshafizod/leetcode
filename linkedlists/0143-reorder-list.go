@@ -1,10 +1,10 @@
 package linkedlists
 
-import "github.com/shahzodshafizod/leetcode/design"
+import "github.com/shahzodshafizod/leetcode/pkg"
 
 // https://leetcode.com/problems/reorder-list/
 
-func reorderList(head *design.ListNode) {
+func reorderList(head *pkg.ListNode) {
 	// 1, find middle
 	var tortoise, hare = head, head
 	for hare != nil && hare.Next != nil {
@@ -14,7 +14,7 @@ func reorderList(head *design.ListNode) {
 	var middle = tortoise
 
 	// 2. reverse the second part
-	var tail, next *design.ListNode
+	var tail, next *pkg.ListNode
 	for tortoise != nil {
 		next = tortoise.Next
 		tortoise.Next = tail
@@ -31,10 +31,10 @@ func reorderList(head *design.ListNode) {
 }
 
 // // recursion
-// func reorderList(head *design.ListNode) {
-// 	var middle, next *design.ListNode
-// 	var reorder func(*design.ListNode, *design.ListNode) *design.ListNode
-// 	reorder = func(left *design.ListNode, last *design.ListNode) *design.ListNode {
+// func reorderList(head *pkg.ListNode) {
+// 	var middle, next *pkg.ListNode
+// 	var reorder func(*pkg.ListNode, *pkg.ListNode) *pkg.ListNode
+// 	reorder = func(left *pkg.ListNode, last *pkg.ListNode) *pkg.ListNode {
 // 		if last == nil || last.Next == nil {
 // 			middle = left
 // 			if last != nil {

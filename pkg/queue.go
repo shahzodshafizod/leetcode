@@ -1,4 +1,4 @@
-package design
+package pkg
 
 type Queue[T any] interface {
 	Enqueue(T)
@@ -8,9 +8,14 @@ type Queue[T any] interface {
 	Size() int
 }
 
+type queueNode[T any] struct {
+	val  T
+	next *queueNode[T]
+}
+
 type queue[T any] struct {
-	head *listNode[T]
-	tail *listNode[T]
+	head *queueNode[T]
+	tail *queueNode[T]
 	size int
 }
 
@@ -19,7 +24,7 @@ func NewQueue[T any]() Queue[T] {
 }
 
 func (q *queue[T]) Enqueue(val T) {
-	var newNode = &listNode[T]{val: val}
+	var newNode = &queueNode[T]{val: val}
 	if q.head == nil {
 		q.head, q.tail = newNode, newNode
 	} else {

@@ -1,16 +1,16 @@
 package linkedlists
 
-import "github.com/shahzodshafizod/leetcode/design"
+import "github.com/shahzodshafizod/leetcode/pkg"
 
 // https://leetcode.com/problems/palindrome-linked-list/
 
 // time: O(n)
 // space: O(1)
 // modifying
-func isPalindrome(head *design.ListNode) bool {
+func isPalindrome(head *pkg.ListNode) bool {
 	tortoise, hare := head, head
 	// 1. find middle (prev,next) and reverse the first half
-	var prev, next *design.ListNode
+	var prev, next *pkg.ListNode
 	for hare != nil && hare.Next != nil {
 		hare = hare.Next.Next
 		next = tortoise.Next
@@ -35,9 +35,9 @@ func isPalindrome(head *design.ListNode) bool {
 // // time: O(n)
 // // space: O(n) (O(n/2))
 // // NOT modifying
-// func isPalindrome(head *design.ListNode) bool {
-// 	var check func(left *design.ListNode, last *design.ListNode) *design.ListNode
-// 	check = func(left *design.ListNode, last *design.ListNode) *design.ListNode {
+// func isPalindrome(head *pkg.ListNode) bool {
+// 	var check func(left *pkg.ListNode, last *pkg.ListNode) *pkg.ListNode
+// 	check = func(left *pkg.ListNode, last *pkg.ListNode) *pkg.ListNode {
 // 		if last == nil || last.Next == nil {
 // 			if last != nil && last != left {
 // 				left = left.Next

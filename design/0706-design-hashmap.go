@@ -1,53 +1,66 @@
 package design
 
+import "github.com/shahzodshafizod/leetcode/pkg"
+
 // https://leetcode.com/problems/design-hashmap/
 
 // 2. Chaining
 type MyHashMap struct {
-	array []*listNode[[2]int]
-	cap   int
+	keys []*pkg.ListNode
+	vals []*pkg.ListNode
+	cap  int
 }
 
 func NewMyHashMap() MyHashMap {
 	const cap = 997
-	var array = make([]*listNode[[2]int], cap)
+	var keys = make([]*pkg.ListNode, cap)
+	var vals = make([]*pkg.ListNode, cap)
 	for i := 0; i < cap; i++ {
-		array[i] = &listNode[[2]int]{} // dummy head node
+		keys[i] = &pkg.ListNode{} // dummy head node
+		vals[i] = &pkg.ListNode{} // dummy head node
 	}
-	return MyHashMap{array: array, cap: cap}
+	return MyHashMap{keys: keys, vals: vals, cap: cap}
 }
 
 func (m *MyHashMap) Put(key int, value int) {
-	curr := m.array[key%m.cap]
-	for curr.next != nil {
-		if curr.next.val[0] == key {
-			curr.next.val[1] = value
+	currKey := m.keys[key%m.cap]
+	currVal := m.vals[key%m.cap]
+	for currKey.Next != nil {
+		if currKey.Next.Val == key {
+			currVal.Next.Val = value
 			return
 		}
-		curr = curr.next
+		currKey = currKey.Next
+		currVal = currVal.Next
 	}
-	curr.next = &listNode[[2]int]{val: [2]int{key, value}}
+	currKey.Next = &pkg.ListNode{Val: key}
+	currVal.Next = &pkg.ListNode{Val: value}
 }
 
 func (m *MyHashMap) Get(key int) int {
-	curr := m.array[key%m.cap].next
-	for curr != nil {
-		if curr.val[0] == key {
-			return curr.val[1]
+	currKey := m.keys[key%m.cap].Next
+	currVal := m.vals[key%m.cap].Next
+	for currKey != nil {
+		if currKey.Val == key {
+			return currVal.Val
 		}
-		curr = curr.next
+		currKey = currKey.Next
+		currVal = currVal.Next
 	}
 	return -1
 }
 
 func (m *MyHashMap) Remove(key int) {
-	curr := m.array[key%m.cap]
-	for curr.next != nil {
-		if curr.next.val[0] == key {
-			curr.next = curr.next.next
+	currKey := m.keys[key%m.cap]
+	currVal := m.vals[key%m.cap]
+	for currKey.Next != nil {
+		if currKey.Next.Val == key {
+			currKey.Next = currKey.Next.Next
+			currVal.Next = currVal.Next.Next
 			return
 		}
-		curr = curr.next
+		currKey = currKey.Next
+		currVal = currVal.Next
 	}
 }
 

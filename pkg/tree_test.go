@@ -1,4 +1,4 @@
-package design
+package pkg
 
 import (
 	"testing"
@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// go test -v -count=1 ./design/ -run ^TestTraversalBFS$
+// go test -v -count=1 ./pkg/ -run ^TestTraversalBFS$
 func TestTraversalBFS(t *testing.T) {
 	for _, tc := range []struct {
 		root   *TreeNode
@@ -19,7 +19,7 @@ func TestTraversalBFS(t *testing.T) {
 	}
 }
 
-// go test -v -count=1 ./design/ -run ^TestTraversalDFS$
+// go test -v -count=1 ./pkg/ -run ^TestTraversalDFS$
 func TestTraversalDFS(t *testing.T) {
 	for _, tc := range []struct {
 		root   *TreeNode
@@ -35,7 +35,7 @@ func TestTraversalDFS(t *testing.T) {
 	}
 }
 
-// go test -v -count=1 ./design/ -run ^TestTraversalMorris$
+// go test -v -count=1 ./pkg/ -run ^TestTraversalMorris$
 func TestTraversalMorris(t *testing.T) {
 	for _, tc := range []struct {
 		root   *TreeNode

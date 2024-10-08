@@ -1,10 +1,12 @@
 package design
 
+import "github.com/shahzodshafizod/leetcode/pkg"
+
 // https://leetcode.com/problems/design-linked-list/
 
 type MyLinkedList struct {
-	head *dListNode[int]
-	tail *dListNode[int]
+	head *pkg.DListNode[int]
+	tail *pkg.DListNode[int]
 	size int
 }
 
@@ -17,26 +19,26 @@ func (m *MyLinkedList) Get(index int) int {
 	if node == nil {
 		return -1
 	}
-	return node.val
+	return node.Val
 }
 
 func (m *MyLinkedList) AddAtHead(val int) {
-	newNode := NewDListNode(val, nil, m.head)
+	newNode := pkg.NewDListNode(val, nil, m.head)
 	if m.head == nil {
 		m.head, m.tail = newNode, newNode
 	} else {
-		m.head.prev = newNode
+		m.head.Prev = newNode
 		m.head = newNode
 	}
 	m.size++
 }
 
 func (m *MyLinkedList) AddAtTail(val int) {
-	newNode := NewDListNode(val, m.tail, nil)
+	newNode := pkg.NewDListNode(val, m.tail, nil)
 	if m.head == nil {
 		m.head, m.tail = newNode, newNode
 	} else {
-		m.tail.next = newNode
+		m.tail.Next = newNode
 		m.tail = newNode
 	}
 	m.size++
@@ -55,28 +57,28 @@ func (m *MyLinkedList) AddAtIndex(index int, val int) {
 	if before == nil {
 		return
 	}
-	var newNode = NewDListNode(val, before.prev, before)
-	if before.prev != nil {
-		before.prev.next = newNode
+	var newNode = pkg.NewDListNode(val, before.Prev, before)
+	if before.Prev != nil {
+		before.Prev.Next = newNode
 	}
-	before.prev = newNode
+	before.Prev = newNode
 	m.size++
 }
 
-func (m *MyLinkedList) getNodeAtIndex(index int) *dListNode[int] {
+func (m *MyLinkedList) getNodeAtIndex(index int) *pkg.DListNode[int] {
 	if index < 0 || index >= m.size {
 		return nil
 	}
 	if index > m.size/2 {
 		node := m.tail
 		for i := m.size - 1; i > index; i-- {
-			node = node.prev
+			node = node.Prev
 		}
 		return node
 	}
 	node := m.head
 	for i := 0; i < index; i++ {
-		node = node.next
+		node = node.Next
 	}
 	return node
 }
@@ -86,17 +88,17 @@ func (m *MyLinkedList) DeleteAtIndex(index int) {
 	if node == nil {
 		return
 	}
-	if node.prev != nil {
-		node.prev.next = node.next
+	if node.Prev != nil {
+		node.Prev.Next = node.Next
 	}
-	if node.next != nil {
-		node.next.prev = node.prev
+	if node.Next != nil {
+		node.Next.Prev = node.Prev
 	}
 	if node == m.head {
-		m.head = m.head.next
+		m.head = m.head.Next
 	}
 	if node == m.tail {
-		m.tail = m.tail.prev
+		m.tail = m.tail.Prev
 	}
 	m.size--
 }

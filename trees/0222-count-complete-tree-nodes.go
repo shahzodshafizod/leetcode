@@ -3,7 +3,7 @@ package trees
 import (
 	"math"
 
-	"github.com/shahzodshafizod/leetcode/design"
+	"github.com/shahzodshafizod/leetcode/pkg"
 )
 
 /*
@@ -35,7 +35,7 @@ Step 2: Write out some test cases
 
 // https://leetcode.com/problems/count-complete-tree-nodes/
 
-func countNodes(root *design.TreeNode) int {
+func countNodes(root *pkg.TreeNode) int {
 	// find the tree height
 	var height = 0
 	for node := root; node != nil; node = node.Left {

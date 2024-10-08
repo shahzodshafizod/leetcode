@@ -3,7 +3,7 @@ package graphs
 import (
 	"math"
 
-	"github.com/shahzodshafizod/leetcode/design"
+	"github.com/shahzodshafizod/leetcode/pkg"
 )
 
 // https://leetcode.com/problems/modify-graph-edge-weights/
@@ -28,7 +28,7 @@ func modifiedGraphEdges(n int, edges [][]int, source int, destination int, targe
 	}
 
 	var runDijkstra = func(index int, difference int) {
-		var pq = design.NewPQ(
+		var pq = pkg.NewPQ(
 			[][2]int{{source, 0}},
 			func(x, y [2]int) bool {
 				return x[1] > y[1]

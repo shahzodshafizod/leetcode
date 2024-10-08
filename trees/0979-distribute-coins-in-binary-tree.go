@@ -1,10 +1,10 @@
 package trees
 
-import "github.com/shahzodshafizod/leetcode/design"
+import "github.com/shahzodshafizod/leetcode/pkg"
 
 // https://leetcode.com/problems/distribute-coins-in-binary-tree/
 
-func distributeCoins(root *design.TreeNode) int {
+func distributeCoins(root *pkg.TreeNode) int {
 	var abs = func(n int) int {
 		if n < 0 {
 			return -n
@@ -12,8 +12,8 @@ func distributeCoins(root *design.TreeNode) int {
 		return n
 	}
 	var moves = 0
-	var dfs func(node *design.TreeNode) int
-	dfs = func(node *design.TreeNode) int {
+	var dfs func(node *pkg.TreeNode) int
+	dfs = func(node *pkg.TreeNode) int {
 		var left, right = 0, 0
 		if node.Left != nil {
 			left = dfs(node.Left)

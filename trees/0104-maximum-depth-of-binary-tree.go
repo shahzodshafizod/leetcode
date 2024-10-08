@@ -1,6 +1,6 @@
 package trees
 
-import "github.com/shahzodshafizod/leetcode/design"
+import "github.com/shahzodshafizod/leetcode/pkg"
 
 /*
 Binary Tree and Binary Search Trees
@@ -42,7 +42,7 @@ Step 2: Write out some test cases
 
 // https://leetcode.com/problems/maximum-depth-of-binary-tree/
 
-func maxDepth(root *design.TreeNode) int {
+func maxDepth(root *pkg.TreeNode) int {
 	if root == nil {
 		return 0
 	}

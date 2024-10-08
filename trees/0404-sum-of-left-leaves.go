@@ -1,13 +1,13 @@
 package trees
 
-import "github.com/shahzodshafizod/leetcode/design"
+import "github.com/shahzodshafizod/leetcode/pkg"
 
 // https://leetcode.com/problems/sum-of-left-leaves/
 
 // DFS
-func sumOfLeftLeaves(root *design.TreeNode) int {
-	var dfs func(node *design.TreeNode, isLeft bool) int
-	dfs = func(node *design.TreeNode, isLeft bool) int {
+func sumOfLeftLeaves(root *pkg.TreeNode) int {
+	var dfs func(node *pkg.TreeNode, isLeft bool) int
+	dfs = func(node *pkg.TreeNode, isLeft bool) int {
 		if node == nil {
 			return 0
 		}
@@ -21,9 +21,9 @@ func sumOfLeftLeaves(root *design.TreeNode) int {
 }
 
 // // BFS
-// func sumOfLeftLeaves(root *design.TreeNode) int {
+// func sumOfLeftLeaves(root *pkg.TreeNode) int {
 // 	var sum = 0
-// 	var queue = []*design.TreeNode{root}
+// 	var queue = []*pkg.TreeNode{root}
 // 	for length := len(queue); length > 0; length = len(queue) {
 // 		for idx := 0; idx < length; idx++ {
 // 			var node = queue[idx]

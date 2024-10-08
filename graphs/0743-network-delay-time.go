@@ -3,7 +3,7 @@ package graphs
 import (
 	"container/heap"
 
-	"github.com/shahzodshafizod/leetcode/design"
+	"github.com/shahzodshafizod/leetcode/pkg"
 )
 
 /*
@@ -60,7 +60,7 @@ func networkDelayTime(times [][]int, n int, k int) int {
 		var source, target, weight = time[0], time[1], time[2]
 		graph[source] = append(graph[source], &distance{target: target, weight: weight})
 	}
-	var minHeap = design.NewHeap[*distance](
+	var minHeap = pkg.NewHeap(
 		[]*distance{{target: k, weight: 0}},
 		func(x, y *distance) bool { return x.weight < y.weight },
 	)

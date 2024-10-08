@@ -1,6 +1,6 @@
 package trees
 
-import "github.com/shahzodshafizod/leetcode/design"
+import "github.com/shahzodshafizod/leetcode/pkg"
 
 // https://leetcode.com/problems/balance-a-binary-search-tree/
 
@@ -8,26 +8,26 @@ import "github.com/shahzodshafizod/leetcode/design"
 // // Approach 3: Day-Stout-Warren Algorithm / In-Place Balancing
 // // time: O(n)
 // // space: O(n) for recursion stack
-// func balanceBST(root *design.TreeNode) *design.TreeNode {
+// func balanceBST(root *pkg.TreeNode) *pkg.TreeNode {
 // 	if root == nil {
 // 		return nil
 // 	}
 // 	// Function to perform a right rotation
-// 	var rightRotate = func(parent *design.TreeNode, right *design.TreeNode) {
+// 	var rightRotate = func(parent *pkg.TreeNode, right *pkg.TreeNode) {
 // 		var tmp = right.Left
 // 		right.Left = tmp.Right
 // 		tmp.Right = right
 // 		parent.Right = tmp
 // 	}
 // 	// Function to perform a left rotation
-// 	var leftRotate = func(parent *design.TreeNode, right *design.TreeNode) {
+// 	var leftRotate = func(parent *pkg.TreeNode, right *pkg.TreeNode) {
 // 		var tmp = right.Right
 // 		right.Right = tmp.Left
 // 		tmp.Left = right
 // 		parent.Right = tmp
 // 	}
 // 	// Function to perform a series of left rotations to balance the vine
-// 	var makeRotations = func(vineHead *design.TreeNode, count int) {
+// 	var makeRotations = func(vineHead *pkg.TreeNode, count int) {
 // 		var curr = vineHead
 // 		for count > 0 {
 // 			count--
@@ -38,7 +38,7 @@ import "github.com/shahzodshafizod/leetcode/design"
 // 	}
 // 	// Step 1: Create the backbone (vine) - DLL (doubly linked list)
 // 	// Temporary dummy node
-// 	var vineHead = &design.TreeNode{Right: root}
+// 	var vineHead = &pkg.TreeNode{Right: root}
 // 	var curr = vineHead
 // 	for curr.Right != nil {
 // 		if curr.Right.Left != nil {
@@ -70,9 +70,9 @@ import "github.com/shahzodshafizod/leetcode/design"
 // Approach #2: Morris Traversal + Recursive Construction
 // time: O(2n) = O(n)
 // space: O(2n) = O(n): 1*recursion+nodes
-func balanceBST(root *design.TreeNode) *design.TreeNode {
-	var getNodes = func(root *design.TreeNode) []*design.TreeNode {
-		var nodes = make([]*design.TreeNode, 0)
+func balanceBST(root *pkg.TreeNode) *pkg.TreeNode {
+	var getNodes = func(root *pkg.TreeNode) []*pkg.TreeNode {
+		var nodes = make([]*pkg.TreeNode, 0)
 		var curr = root
 		for curr != nil {
 			if curr.Left == nil {
@@ -95,8 +95,8 @@ func balanceBST(root *design.TreeNode) *design.TreeNode {
 		}
 		return nodes
 	}
-	var balance func(nodes []*design.TreeNode, left int, right int) *design.TreeNode
-	balance = func(nodes []*design.TreeNode, left int, right int) *design.TreeNode {
+	var balance func(nodes []*pkg.TreeNode, left int, right int) *pkg.TreeNode
+	balance = func(nodes []*pkg.TreeNode, left int, right int) *pkg.TreeNode {
 		if left > right {
 			return nil
 		}
@@ -114,19 +114,19 @@ func balanceBST(root *design.TreeNode) *design.TreeNode {
 // // Approach #1: Inorder Traversal + Recursive Construction
 // // time: O(2n) = O(n)
 // // space: O(3n) = O(n): 2*recursions+nodes
-// func balanceBST(root *design.TreeNode) *design.TreeNode {
-// 	var getNodes func(node *design.TreeNode) []*design.TreeNode
-// 	getNodes = func(node *design.TreeNode) []*design.TreeNode {
+// func balanceBST(root *pkg.TreeNode) *pkg.TreeNode {
+// 	var getNodes func(node *pkg.TreeNode) []*pkg.TreeNode
+// 	getNodes = func(node *pkg.TreeNode) []*pkg.TreeNode {
 // 		if node == nil {
-// 			return []*design.TreeNode{}
+// 			return []*pkg.TreeNode{}
 // 		}
 // 		var nodes = getNodes(node.Left)
 // 		nodes = append(nodes, node)
 // 		nodes = append(nodes, getNodes(node.Right)...)
 // 		return nodes
 // 	}
-// 	var balance func(nodes []*design.TreeNode, left int, right int) *design.TreeNode
-// 	balance = func(nodes []*design.TreeNode, left int, right int) *design.TreeNode {
+// 	var balance func(nodes []*pkg.TreeNode, left int, right int) *pkg.TreeNode
+// 	balance = func(nodes []*pkg.TreeNode, left int, right int) *pkg.TreeNode {
 // 		if left > right {
 // 			return nil
 // 		}
