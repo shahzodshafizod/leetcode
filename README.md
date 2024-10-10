@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1611 | [Minimum One Bit Operations to Make Integers Zero](https://leetcode.com/problems/minimum-one-bit-operations-to-make-integers-zero/) | Hard | Dynamic Programming, Bit Manipulation, Memoization | 2024-10-09 | [Go](bits/1611-minimum-one-bit-operations-to-make-integers-zero.go) [Python](bits/1611-minimum-one-bit-operations-to-make-integers-zero.py)
+| 0805 | [Split Array With Same Average](https://leetcode.com/problems/split-array-with-same-average/) | Hard | Array, Math, Dynamic Programming, Bit Manipulation, Bitmask | 2024-10-08 | [Go](dp/0805-split-array-with-same-average.go) [Python](dp/0805-split-array-with-same-average.py)
 | 2696 | [Minimum String Length After Removing Substrings](https://leetcode.com/problems/minimum-string-length-after-removing-substrings/) | Easy | String, Stack, Simulation | 2024-10-07 | [Go](stacks/2696-minimum-string-length-after-removing-substrings.go) [Python](stacks/2696-minimum-string-length-after-removing-substrings.py)
 | 0115 | [Distinct Subsequences](https://leetcode.com/problems/distinct-subsequences/) | Hard | String, Dynamic Programming | 2024-10-06 | [Go](dp/0115-distinct-subsequences.go) [Python](dp/0115-distinct-subsequences.py)
 | 0068 | [Text Justification](https://leetcode.com/problems/text-justification/) | Hard | Array, String, Simulation | 2024-10-05 | [Go](strings/0068-text-justification.go) [Python](strings/0068-text-justification.py)
