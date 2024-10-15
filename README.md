@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0741 | [Cherry Pickup](https://leetcode.com/problems/cherry-pickup/) | Hard | Array, Dynamic Programming, Matrix | 2024-10-15 | [Go](dp/0741-cherry-pickup.go) [Python](dp/0741-cherry-pickup.py)
 | 1793 | [Maximum Score of a Good Subarray](https://leetcode.com/problems/maximum-score-of-a-good-subarray/) | Hard | Array, Two Pointers, Binary Search, Stack, Monotonic Stack | 2024-10-14 | [Go](greedy/1793-maximum-score-of-a-good-subarray.go) [Python](greedy/1793-maximum-score-of-a-good-subarray.py)
 | 0632 | [Smallest Range Covering Elements from K Lists](https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/) | Hard | Array, Hash Table, Greedy, Sliding Window, Sorting, Heap (Priority Queue) | 2024-10-13 | [Go](heaps/0632-smallest-range-covering-elements-from-k-lists.go) [Python](heaps/0632-smallest-range-covering-elements-from-k-lists.py)
 | 0352 | [Data Stream as Disjoint Intervals](https://leetcode.com/problems/data-stream-as-disjoint-intervals/) | Hard | Binary Search, Design, Ordered Set | 2024-10-12 | [Go](design/0352-data-stream-as-disjoint-intervals.go) [Python](design/0352-data-stream-as-disjoint-intervals.py)

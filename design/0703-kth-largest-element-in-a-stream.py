@@ -51,9 +51,9 @@ class TestKthLargest(unittest.TestCase):
                 [None, -3, -2, -2, 0, 4],
             )
         ]:
-            for idx in range(len(commands)):
+            for idx, command in enumerate(commands):
                 output = None
-                match commands[idx]:
+                match command:
                     case "KthLargest":
                         heap = KthLargest(values[idx][0], values[idx][1])
                     case "add":

@@ -19,55 +19,55 @@ import unittest
 """
 
 class Solution(unittest.TestCase):
-    # # Approach: Heap (Priority Queue)
-    # # Time: O(N+KLogN), N=len(nums), K=count(all nums)
-    # # Space: O(N)
+    # # Approach: Two Pointer
+    # # Time: O(KLogK), K=count(all nums)
+    # # Space: O(K)
     # def smallestRange(self, nums: List[List[int]]) -> List[int]:
     #     n = len(nums)
-    #     length = 2 * int(1e5)
-    #     pq = [] # (num,row,col), nums[row][col]
-    #     end = int(-1e5)
-    #     for idx in range(n): # O(N)
-    #         heapq.heappush(pq, (nums[idx][0], idx, 0))
-    #         end = max(end, nums[idx][0])
-    #     while True: # O(min(len(nums[i])))
-    #         start, row, col = pq[0]
-    #         if end-start < length:
-    #             length = end-start
-    #             interval = [start,end]
-    #         if col+1 == len(nums[row]):
-    #             break
-    #         col += 1
-    #         end = max(end, nums[row][col])
-    #         heapq.heapreplace(pq, (nums[row][col], row, col)) # O(LogN)
+    #     merged = []
+    #     for idx in range(n):
+    #         for num in nums[idx]:
+    #             merged.append((num,idx))
+    #     merged.sort()
+    #     freq = [0] * n
+    #     min_length = 2*int(1e5)
+    #     left = count = 0
+    #     for right in range(len(merged)):
+    #         freq[merged[right][1]] += 1
+    #         if freq[merged[right][1]] == 1:
+    #             count += 1
+    #         while count == n:
+    #             length = merged[right][0] - merged[left][0]
+    #             if length < min_length:
+    #                 min_length = length
+    #                 interval = [merged[left][0], merged[right][0]]
+    #             freq[merged[left][1]] -= 1
+    #             if freq[merged[left][1]] == 0:
+    #                 count -= 1
+    #             left += 1
     #     return interval
 
-    # Approach: Two Pointer
-    # Time: O(KLogK), K=count(all nums)
-    # Space: O(K)
+    # Approach: Heap (Priority Queue)
+    # Time: O(N+KLogN), N=len(nums), K=count(all nums)
+    # Space: O(N)
     def smallestRange(self, nums: List[List[int]]) -> List[int]:
         n = len(nums)
-        merged = []
-        for idx in range(n):
-            for num in nums[idx]:
-                merged.append((num,idx))
-        merged.sort()
-        freq = [0] * n
-        min_length = 2*int(1e5)
-        left = count = 0
-        for right in range(len(merged)):
-            freq[merged[right][1]] += 1
-            if freq[merged[right][1]] == 1:
-                count += 1
-            while count == n:
-                length = merged[right][0] - merged[left][0]
-                if length < min_length:
-                    min_length = length
-                    interval = [merged[left][0], merged[right][0]]
-                freq[merged[left][1]] -= 1
-                if freq[merged[left][1]] == 0:
-                    count -= 1
-                left += 1
+        length = 2 * int(1e5)
+        pq = [] # (num,row,col), nums[row][col]
+        end = int(-1e5)
+        for idx in range(n): # O(N)
+            heapq.heappush(pq, (nums[idx][0], idx, 0))
+            end = max(end, nums[idx][0])
+        while True: # O(min(len(nums[i])))
+            start, row, col = pq[0]
+            if end-start < length:
+                length = end-start
+                interval = [start,end]
+            if col+1 == len(nums[row]):
+                break
+            col += 1
+            end = max(end, nums[row][col])
+            heapq.heapreplace(pq, (nums[row][col], row, col)) # O(LogN)
         return interval
 
     def test(self) -> None:

@@ -49,9 +49,9 @@ class TestWordFilter(unittest.TestCase):
             (["WordFilter", "f", "f", "f"], [["apple", "app", "ape"], ["a", "e"], ["appl", "pple"], ["apple", "apple"]], [None, 2, 0, 0]),
             (["WordFilter","f"], [["abbba","abba"],["ab","ba"]], [None,1]),
         ]:
-            for idx in range(len(commands)):
+            for idx, command in enumerate(commands):
                 output = None
-                match commands[idx]:
+                match command:
                     case "WordFilter":
                         filter = WordFilter(values[idx])
                     case "f":
