@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1463 | [Cherry Pickup II](https://leetcode.com/problems/cherry-pickup-ii/) | Hard | Array, Dynamic Programming, Matrix | 2024-10-16 | [Go](dp/1463-cherry-pickup-ii.go) [Python](dp/1463-cherry-pickup-ii.py)
 | 0741 | [Cherry Pickup](https://leetcode.com/problems/cherry-pickup/) | Hard | Array, Dynamic Programming, Matrix | 2024-10-15 | [Go](dp/0741-cherry-pickup.go) [Python](dp/0741-cherry-pickup.py)
 | 1793 | [Maximum Score of a Good Subarray](https://leetcode.com/problems/maximum-score-of-a-good-subarray/) | Hard | Array, Two Pointers, Binary Search, Stack, Monotonic Stack | 2024-10-14 | [Go](greedy/1793-maximum-score-of-a-good-subarray.go) [Python](greedy/1793-maximum-score-of-a-good-subarray.py)
 | 0632 | [Smallest Range Covering Elements from K Lists](https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/) | Hard | Array, Hash Table, Greedy, Sliding Window, Sorting, Heap (Priority Queue) | 2024-10-13 | [Go](heaps/0632-smallest-range-covering-elements-from-k-lists.go) [Python](heaps/0632-smallest-range-covering-elements-from-k-lists.py)
