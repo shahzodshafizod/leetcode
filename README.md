@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0174 | [Dungeon Game](https://leetcode.com/problems/dungeon-game/) | Hard | Array, Dynamic Programming, Matrix | 2024-10-18 | [Go](dp/0174-dungeon-game.go) [Python](dp/0174-dungeon-game.py)
+| 0412 | [Fizz Buzz](https://leetcode.com/problems/fizz-buzz/) | Easy | Math, String, Simulation | 2024-10-17 | [Go](strings/0412-fizz-buzz.go) [Python](strings/0412-fizz-buzz.py)
 | 1463 | [Cherry Pickup II](https://leetcode.com/problems/cherry-pickup-ii/) | Hard | Array, Dynamic Programming, Matrix | 2024-10-16 | [Go](dp/1463-cherry-pickup-ii.go) [Python](dp/1463-cherry-pickup-ii.py)
 | 0741 | [Cherry Pickup](https://leetcode.com/problems/cherry-pickup/) | Hard | Array, Dynamic Programming, Matrix | 2024-10-15 | [Go](dp/0741-cherry-pickup.go) [Python](dp/0741-cherry-pickup.py)
 | 1793 | [Maximum Score of a Good Subarray](https://leetcode.com/problems/maximum-score-of-a-good-subarray/) | Hard | Array, Two Pointers, Binary Search, Stack, Monotonic Stack | 2024-10-14 | [Go](greedy/1793-maximum-score-of-a-good-subarray.go) [Python](greedy/1793-maximum-score-of-a-good-subarray.py)
