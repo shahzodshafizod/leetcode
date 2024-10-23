@@ -1,13 +1,15 @@
 package graphs
 
+import "github.com/shahzodshafizod/leetcode/pkg"
+
 // https://leetcode.com/problems/clone-graph/
 
 // DFS
-func cloneGraph(node *Node) *Node {
-	var seen [101]*Node
-	var newNode = func(val int) *Node { return &Node{Val: val, Neighbors: make([]*Node, 0)} }
-	var dfs func(curr *Node) *Node
-	dfs = func(curr *Node) *Node {
+func cloneGraph(node *pkg.Node) *pkg.Node {
+	var seen [101]*pkg.Node
+	var newNode = func(val int) *pkg.Node { return &pkg.Node{Val: val, Neighbors: make([]*pkg.Node, 0)} }
+	var dfs func(curr *pkg.Node) *pkg.Node
+	dfs = func(curr *pkg.Node) *pkg.Node {
 		if curr == nil {
 			return nil
 		}
@@ -24,14 +26,14 @@ func cloneGraph(node *Node) *Node {
 }
 
 // // BFS
-// func cloneGraph(node *Node) *Node {
+// func cloneGraph(node *pkg.Node) *pkg.Node {
 // 	if node == nil {
 // 		return nil
 // 	}
-// 	var newNode = func(val int) *Node { return &Node{Val: val, Neighbors: make([]*Node, 0)} }
-// 	var queue = []*Node{node}
-// 	var seen [101]*Node
-// 	var root *Node
+// 	var newNode = func(val int) *pkg.Node { return &pkg.Node{Val: val, Neighbors: make([]*pkg.Node, 0)} }
+// 	var queue = []*pkg.Node{node}
+// 	var seen [101]*pkg.Node
+// 	var root *pkg.Node
 // 	for length := len(queue); length > 0; length = len(queue) {
 // 		curr := queue[0]
 // 		queue = queue[1:]

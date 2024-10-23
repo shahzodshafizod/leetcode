@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0629 | [K Inverse Pairs Array](https://leetcode.com/problems/k-inverse-pairs-array/) | Hard | Dynamic Programming | 2024-10-22 | [Go](dp/0629-k-inverse-pairs-array.go) [Python](dp/0629-k-inverse-pairs-array.py)
+| 3235 | [Check if the Rectangle Corner Is Reachable](https://leetcode.com/problems/check-if-the-rectangle-corner-is-reachable/) | Hard | Array, Math, Depth-First Search, Breadth-First Search, Union Find, Geometry | 2024-10-21 | [Go](unionfinds/3235-check-if-the-rectangle-corner-is-reachable.go) [Python](unionfinds/3235-check-if-the-rectangle-corner-is-reachable.py)
 | 1106 | [Parsing A Boolean Expression](https://leetcode.com/problems/parsing-a-boolean-expression/) | Hard | String, Stack, Recursion | 2024-10-20 | [Go](stacks/1106-parsing-a-boolean-expression.go) [Python](stacks/1106-parsing-a-boolean-expression.py)
 | 2147 | [Number of Ways to Divide a Long Corridor](https://leetcode.com/problems/number-of-ways-to-divide-a-long-corridor/) | Hard | Math, String, Dynamic Programming | 2024-10-19 | [Go](maths/2147-number-of-ways-to-divide-a-long-corridor.go) [Python](maths/2147-number-of-ways-to-divide-a-long-corridor.py)
 | 0174 | [Dungeon Game](https://leetcode.com/problems/dungeon-game/) | Hard | Array, Dynamic Programming, Matrix | 2024-10-18 | [Go](dp/0174-dungeon-game.go) [Python](dp/0174-dungeon-game.py)

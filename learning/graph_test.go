@@ -1,4 +1,4 @@
-package graphs
+package learning
 
 import (
 	"testing"
@@ -6,8 +6,8 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// go test -v -count=1 ./graphs/ -run ^TestBFS$
-func TestBFS(t *testing.T) {
+// go test -v -count=1 ./learning/ -run ^TestGraphBFS$
+func TestGraphBFS(t *testing.T) {
 	for _, tc := range []struct {
 		adjList [][]int
 		values  []int
@@ -27,8 +27,8 @@ func TestBFS(t *testing.T) {
 	}
 }
 
-// go test -v -count=1 ./graphs/ -run ^TestDFS$
-func TestDFS(t *testing.T) {
+// go test -v -count=1 ./learning/ -run ^TestGraphDFS$
+func TestGraphDFS(t *testing.T) {
 	for _, tc := range []struct {
 		adjList [][]int
 		values  []int
@@ -48,7 +48,7 @@ func TestDFS(t *testing.T) {
 	}
 }
 
-// go test -v -count=1 ./graphs/ -run ^TestTopologicalSort$
+// go test -v -count=1 ./learning/ -run ^TestTopologicalSort$
 func TestTopologicalSort(t *testing.T) {
 	for _, tc := range []struct {
 		adjList   map[int][]*Edge
@@ -85,7 +85,7 @@ func TestTopologicalSort(t *testing.T) {
 	}
 }
 
-// go test -v -count=1 ./graphs/ -run ^TestDungeon$
+// go test -v -count=1 ./learning/ -run ^TestDungeon$
 func TestDungeon(t *testing.T) {
 	for _, tc := range []struct {
 		grid [][]byte
@@ -108,7 +108,7 @@ func TestDungeon(t *testing.T) {
 	}
 }
 
-// go test -v -count=1 ./graphs/ -run ^TestShortestPath$
+// go test -v -count=1 ./learning/ -run ^TestShortestPath$
 func TestShortestPath(t *testing.T) {
 	for _, tc := range []struct {
 		cyclic         bool

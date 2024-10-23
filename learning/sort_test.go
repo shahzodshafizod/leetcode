@@ -1,4 +1,4 @@
-package arrays
+package learning
 
 import (
 	"slices"
@@ -37,7 +37,7 @@ var sortingTestCases = []struct {
 	},
 }
 
-// go test -v -count=1 ./arrays/ -run ^TestBubleSort$
+// go test -v -count=1 ./learning/ -run ^TestBubleSort$
 func TestBubleSort(t *testing.T) {
 	for _, tc := range sortingTestCases {
 		var copied = append([]int{}, tc.array...)
@@ -46,7 +46,7 @@ func TestBubleSort(t *testing.T) {
 	}
 }
 
-// go test -v -count=1 ./arrays/ -run ^TestSelectionSort$
+// go test -v -count=1 ./learning/ -run ^TestSelectionSort$
 func TestSelectionSort(t *testing.T) {
 	for _, tc := range sortingTestCases {
 		var copied = append([]int{}, tc.array...)
@@ -55,7 +55,7 @@ func TestSelectionSort(t *testing.T) {
 	}
 }
 
-// go test -v -count=1 ./arrays/ -run ^TestInsertionSort$
+// go test -v -count=1 ./learning/ -run ^TestInsertionSort$
 func TestInsertionSort(t *testing.T) {
 	for _, tc := range sortingTestCases {
 		var copied = append([]int{}, tc.array...)
@@ -64,7 +64,7 @@ func TestInsertionSort(t *testing.T) {
 	}
 }
 
-// go test -v -count=1 ./arrays/ -run ^TestBucketSort$
+// go test -v -count=1 ./learning/ -run ^TestBucketSort$
 func TestBucketSort(t *testing.T) {
 	for _, tc := range sortingTestCases {
 		if slices.Min(tc.array) < 0 {
@@ -76,7 +76,7 @@ func TestBucketSort(t *testing.T) {
 	}
 }
 
-// go test -v -count=1 ./arrays/ -run ^TestMergeSort$
+// go test -v -count=1 ./learning/ -run ^TestMergeSort$
 func TestMergeSort(t *testing.T) {
 	for _, tc := range sortingTestCases {
 		var copied = append([]int{}, tc.array...)
@@ -85,7 +85,7 @@ func TestMergeSort(t *testing.T) {
 	}
 }
 
-// go test -v -count=1 ./arrays/ -run ^TestQuickSort$
+// go test -v -count=1 ./learning/ -run ^TestQuickSort$
 func TestQuickSort(t *testing.T) {
 	for _, tc := range sortingTestCases {
 		var copied = append([]int{}, tc.array...)
@@ -94,7 +94,7 @@ func TestQuickSort(t *testing.T) {
 	}
 }
 
-// go test -v -count=1 ./arrays/ -run ^TestHeapSort$
+// go test -v -count=1 ./learning/ -run ^TestHeapSort$
 func TestHeapSort(t *testing.T) {
 	for _, tc := range sortingTestCases {
 		var copied = append([]int{}, tc.array...)

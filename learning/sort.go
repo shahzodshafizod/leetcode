@@ -1,4 +1,4 @@
-package arrays
+package learning
 
 import "slices"
 
@@ -132,15 +132,15 @@ func quickSort(array []int) []int {
 		array[right], array[mid] = array[mid], array[right]
 		return mid
 	}
-	var quickSortRecur func(array []int, left int, right int)
-	quickSortRecur = func(array []int, left int, right int) {
+	var helper func(left int, right int)
+	helper = func(left int, right int) {
 		if left < right {
 			mid := partition(array, left, right)
-			quickSortRecur(array, left, mid-1)
-			quickSortRecur(array, mid+1, right)
+			helper(left, mid-1)
+			helper(mid+1, right)
 		}
 	}
-	quickSortRecur(array, 0, len(array)-1)
+	helper(0, len(array)-1)
 	return array
 }
 

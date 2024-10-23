@@ -1,5 +1,5 @@
 from collections import deque
-from typing import List, Optional
+from typing import List, Optional, Any
 
 # Definition for a binary tree node.
 class TreeNode:
@@ -31,7 +31,7 @@ class TreeNode:
 #         right=create_tree(vals, 2*idx+2)
 #     )
 
-def create_tree(vals: List[int]) -> Optional[TreeNode]:
+def create_tree(vals: List[Any]) -> Optional[TreeNode]:
     root = None
     queue = deque()
     if len(vals) > 0 and vals[0] != None:
@@ -57,7 +57,7 @@ class Node:
         self.val = val
         self.children = children or []
 
-def create_n_ary_tree(vals: List[int]) -> Optional[Node]:
+def create_n_ary_tree(vals: List[Any]) -> Optional[Node]:
     if len(vals) == 0 or vals[0] == None:
         return None
     root = Node(vals[0])

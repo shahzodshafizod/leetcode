@@ -1,4 +1,4 @@
-package bits
+package learning
 
 import (
 	"testing"
@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// go test -v -count=1 ./bits/ -run ^TestTricks$
+// go test -v -count=1 ./learning/ -run ^TestTricks$
 func TestTricks(t *testing.T) {
 	assert := assert.New(t)
 
@@ -26,7 +26,7 @@ func TestTricks(t *testing.T) {
 	}
 }
 
-// go test -v -count=1 ./bits/ -run ^TestBits$
+// go test -v -count=1 ./learning/ -run ^TestBits$
 func TestBits(t *testing.T) {
 	// bitwise operators: "&", "|", "^", "~", "<<", ">>"
 	var assert = assert.New(t)

@@ -1,4 +1,4 @@
-package matrices
+package learning
 
 import (
 	"testing"
@@ -6,8 +6,8 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// go test -v -count=1 ./matrices/ -run ^TestDFS$
-func TestDFS(t *testing.T) {
+// go test -v -count=1 ./learning/ -run ^TestMatrixDFS$
+func TestMatrixDFS(t *testing.T) {
 	for _, tc := range []struct {
 		matrix [][]int
 		values []int
@@ -16,14 +16,6 @@ func TestDFS(t *testing.T) {
 			matrix: [][]int{{1, 2, 3, 4, 5}, {6, 7, 8, 9, 10}, {11, 12, 13, 14, 15}, {16, 17, 18, 19, 20}},
 			values: []int{1, 2, 3, 4, 5, 10, 15, 20, 19, 14, 9, 8, 13, 18, 17, 12, 7, 6, 11, 16},
 		},
-		// {
-		// 	matrix: nil,
-		// 	values: nil,
-		// },
-		// {
-		// 	matrix: [][]int{},
-		// 	values: nil,
-		// },
 		{
 			matrix: [][]int{{-1, 2, 3}, {0, 9, 8}, {1, 0, 1}},
 			values: []int{-1, 2, 3, 8, 1, 0, 9, 0, 1},
@@ -39,8 +31,8 @@ func TestDFS(t *testing.T) {
 	}
 }
 
-// go test -v -count=1 ./matrices/ -run ^TestBFS$
-func TestBFS(t *testing.T) {
+// go test -v -count=1 ./learning/ -run ^TestMatrixBFS$
+func TestMatrixBFS(t *testing.T) {
 	for _, tc := range []struct {
 		matrix [][]int
 		values []int

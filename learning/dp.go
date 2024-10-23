@@ -1,4 +1,4 @@
-package dp
+package learning
 
 import (
 	"strings"

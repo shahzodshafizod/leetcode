@@ -1,4 +1,4 @@
-package matrices
+package learning
 
 import "github.com/shahzodshafizod/leetcode/pkg"
 
