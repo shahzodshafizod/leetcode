@@ -14,12 +14,11 @@ class TreeNode:
         return f"{self.val},{self.left.__str__()},{self.right.__str__()}"
 
     def __eq__(self, __value: object) -> bool:
-        if not self or not __value:
-            return not self and not __value
+        if not __value: return False
         return all([
             self.val == __value.val,
-            self.left.__eq__(__value.left),
-            self.right.__eq__(__value.right),
+            self.left and self.left.__eq__(__value.left),
+            self.right and self.right.__eq__(__value.right),
         ])
 
 # def create_tree(vals: List[int], idx: int) -> Optional[TreeNode]:

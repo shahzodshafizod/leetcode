@@ -7,9 +7,11 @@ class ListNode:
         self.next = next
     
     def __eq__(self, __value: object) -> bool:
-        if not self or not __value:
-            return not self and not __value
-        return self.val == __value.val and self.next.__eq__(__value.next)
+        if not __value: return False
+        return all([
+            self.val == __value.val,
+            self.next and self.next.__eq__(__value.next),
+        ])
     
     def __str__(self) -> str:
         curr = self
