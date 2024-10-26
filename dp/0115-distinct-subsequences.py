@@ -38,7 +38,7 @@ class Solution(unittest.TestCase):
     #                 dp[i][j] = dp[i-1][j]
     #     return dp[ns][nt]
 
-    # Approach: Bottom-UP Dynamic Programming (Memory Optimized)
+    # Approach: Bottom-UP Dynamic Programming (Space Optimized)
     # Time: O(ns * nt), ns=len(s), nt=len(t)
     # Space: O(nt)
     def numDistinct(self, s: str, t: str) -> int:

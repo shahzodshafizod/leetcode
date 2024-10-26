@@ -13,7 +13,7 @@ n=3, k=2
 dp[n][k] - # of arrays with k inverse pairs, given n elements
 */
 
-// Approach #3: Bottom-Up Dynamic Programming (Time & Memory Optimized)
+// Approach #3: Bottom-Up Dynamic Programming (Time & Space Optimized)
 // Time: O(N * K)
 // Space: O(K)
 func kInversePairs(n int, k int) int {

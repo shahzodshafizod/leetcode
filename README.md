@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0446 | [Arithmetic Slices II - Subsequence](https://leetcode.com/problems/arithmetic-slices-ii-subsequence/) | Hard | Array, Dynamic Programming | 2024-10-24 | [Go](dp/0446-arithmetic-slices-ii-subsequence.go) [Python](dp/0446-arithmetic-slices-ii-subsequence.py)
 | 1335 | [Minimum Difficulty of a Job Schedule](https://leetcode.com/problems/minimum-difficulty-of-a-job-schedule/) | Hard | Array, Dynamic Programming | 2024-10-23 | [Go](dp/1335-minimum-difficulty-of-a-job-schedule.go) [Python](dp/1335-minimum-difficulty-of-a-job-schedule.py)
 | 0629 | [K Inverse Pairs Array](https://leetcode.com/problems/k-inverse-pairs-array/) | Hard | Dynamic Programming | 2024-10-22 | [Go](dp/0629-k-inverse-pairs-array.go) [Python](dp/0629-k-inverse-pairs-array.py)
 | 3235 | [Check if the Rectangle Corner Is Reachable](https://leetcode.com/problems/check-if-the-rectangle-corner-is-reachable/) | Hard | Array, Math, Depth-First Search, Breadth-First Search, Union Find, Geometry | 2024-10-21 | [Go](unionfinds/3235-check-if-the-rectangle-corner-is-reachable.go) [Python](unionfinds/3235-check-if-the-rectangle-corner-is-reachable.py)

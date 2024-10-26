@@ -48,7 +48,7 @@ class Solution(unittest.TestCase):
     #                 count[ni][ki] = (count[ni][ki] + count[ni-1][ki-pairs]) % MOD
     #     return count[n][k]
 
-    # Approach #3: Bottom-Up Dynamic Programming (Time & Memory Optimized)
+    # Approach #3: Bottom-Up Dynamic Programming (Time & Space Optimized)
     # Time: O(N * K)
     # Space: O(K)
     def kInversePairs(self, n: int, k: int) -> int:

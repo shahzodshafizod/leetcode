@@ -2,7 +2,7 @@ package dp
 
 // https://leetcode.com/problems/distinct-subsequences/
 
-// Approach #3: Bottom-Up Dynamic Programming (Memory Optimized)
+// Approach #3: Bottom-Up Dynamic Programming (Space Optimized)
 // Time: O(ns * nt), ns=len(s), nt=len(t)
 // Space: O(nt)
 func numDistinct(s string, t string) int {

@@ -54,7 +54,7 @@ class Solution(unittest.TestCase):
     #                 dp[idx][day] = min(dp[idx][day], max_diff + dp[j-1][day-1])
     #     return dp[n-1][d-1]
 
-    # # Approach #3: Bottom-Up Dynamic Programming (Optimized Memory)
+    # # Approach #3: Bottom-Up Dynamic Programming (Space Optimized)
     # # Time: O(N^2 * D)
     # # Space: O(N)
     # def minDifficulty(self, jobDifficulty: List[int], d: int) -> int:

@@ -39,7 +39,7 @@ func minDifficulty(jobDifficulty []int, d int) int {
 	return curr[n-1]
 }
 
-// // Approach #3: Bottom-Up Dynamic Programming (Optimized Memory)
+// // Approach #3: Bottom-Up Dynamic Programming (Space Optimized)
 // // Time: O(N^2 * D)
 // // Space: O(N)
 // func minDifficulty(jobDifficulty []int, d int) int {
