@@ -2,6 +2,10 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1510 | [Stone Game IV](https://leetcode.com/problems/stone-game-iv/) | Hard | Math, Dynamic Programming, Game Theory | 2024-10-28 | [Go](dp/1510-stone-game-iv.go) [Python](dp/1510-stone-game-iv.py)
+| 1406 | [Stone Game III](https://leetcode.com/problems/stone-game-iii/) | Hard | Array, Math, Dynamic Programming, Game Theory | 2024-10-27 | [Go](dp/1406-stone-game-iii.go) [Python](dp/1406-stone-game-iii.py)
+| 2458 | [Height of Binary Tree After Subtree Removal Queries](https://leetcode.com/problems/height-of-binary-tree-after-subtree-removal-queries/) | Hard | Array, Tree, Depth-First Search, Breadth-First Search, Binary Tree | 2024-10-26 | [Go](trees/2458-height-of-binary-tree-after-subtree-removal-queries.go) [Python](trees/2458-height-of-binary-tree-after-subtree-removal-queries.py)
+| 1359 | [Count All Valid Pickup and Delivery Options](https://leetcode.com/problems/count-all-valid-pickup-and-delivery-options/) | Hard | Math, Dynamic Programming, Combinatorics | 2024-10-25 | [Go](maths/1359-count-all-valid-pickup-and-delivery-options.go) [Python](maths/1359-count-all-valid-pickup-and-delivery-options.py)
 | 0446 | [Arithmetic Slices II - Subsequence](https://leetcode.com/problems/arithmetic-slices-ii-subsequence/) | Hard | Array, Dynamic Programming | 2024-10-24 | [Go](dp/0446-arithmetic-slices-ii-subsequence.go) [Python](dp/0446-arithmetic-slices-ii-subsequence.py)
 | 1335 | [Minimum Difficulty of a Job Schedule](https://leetcode.com/problems/minimum-difficulty-of-a-job-schedule/) | Hard | Array, Dynamic Programming | 2024-10-23 | [Go](dp/1335-minimum-difficulty-of-a-job-schedule.go) [Python](dp/1335-minimum-difficulty-of-a-job-schedule.py)
 | 0629 | [K Inverse Pairs Array](https://leetcode.com/problems/k-inverse-pairs-array/) | Hard | Dynamic Programming | 2024-10-22 | [Go](dp/0629-k-inverse-pairs-array.go) [Python](dp/0629-k-inverse-pairs-array.py)
