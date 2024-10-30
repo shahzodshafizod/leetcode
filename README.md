@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1671 | [Minimum Number of Removals to Make Mountain Array](https://leetcode.com/problems/minimum-number-of-removals-to-make-mountain-array/) | Hard | Array, Binary Search, Dynamic Programming, Greedy | 2024-10-30 | [Go](dp/1671-minimum-number-of-removals-to-make-mountain-array.go) [Python](dp/1671-minimum-number-of-removals-to-make-mountain-array.py)
+| 1563 | [Stone Game V](https://leetcode.com/problems/stone-game-v/) | Hard | Array, Math, Dynamic Programming, Game Theory | 2024-10-29 | [Go](dp/1563-stone-game-v.go) [Python](dp/1563-stone-game-v.py)
 | 1510 | [Stone Game IV](https://leetcode.com/problems/stone-game-iv/) | Hard | Math, Dynamic Programming, Game Theory | 2024-10-28 | [Go](dp/1510-stone-game-iv.go) [Python](dp/1510-stone-game-iv.py)
 | 1406 | [Stone Game III](https://leetcode.com/problems/stone-game-iii/) | Hard | Array, Math, Dynamic Programming, Game Theory | 2024-10-27 | [Go](dp/1406-stone-game-iii.go) [Python](dp/1406-stone-game-iii.py)
 | 2458 | [Height of Binary Tree After Subtree Removal Queries](https://leetcode.com/problems/height-of-binary-tree-after-subtree-removal-queries/) | Hard | Array, Tree, Depth-First Search, Breadth-First Search, Binary Tree | 2024-10-26 | [Go](trees/2458-height-of-binary-tree-after-subtree-removal-queries.go) [Python](trees/2458-height-of-binary-tree-after-subtree-removal-queries.py)
@@ -276,7 +278,7 @@
 | 0338 | [Counting Bits](https://leetcode.com/problems/counting-bits/) | Easy | Dynamic Programming, Bit Manipulation | 2024-02-22 | [Go](bits/0338-counting-bits.go)
 | 0191 | [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | Easy | Divide and Conquer, Bit Manipulation | 2024-02-22 | [Go](bits/0191-number-of-1-bits.go)
 | 0190 | [Reverse Bits](https://leetcode.com/problems/reverse-bits/) | Easy | Divide and Conquer, Bit Manipulation | 2024-02-22 | [Go](bits/0190-reverse-bits.go)
-| 0300 | [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) | Medium | Array, Binary Search, Dynamic Programming | 2024-02-21 | [Go](dp/0300-longest-increasing-subsequence.go)
+| 0300 | [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) | Medium | Array, Binary Search, Dynamic Programming | 2024-02-21 | [Go](dp/0300-longest-increasing-subsequence.go) [Python](dp/0300-longest-increasing-subsequence.py)
 | 0198 | [House Robber](https://leetcode.com/problems/house-robber/) | Medium | Array, Dynamic Programming | 2024-02-21 | [Go](dp/0198-house-robber.go)
 | 0063 | [Unique Paths II](https://leetcode.com/problems/unique-paths-ii/) | Medium | Array, Dynamic Programming, Matrix | 2024-02-21 | [Go](dp/0063-unique-paths-ii.go)
 | 0062 | [Unique Paths](https://leetcode.com/problems/unique-paths/) | Medium | Math, Dynamic Programming, Combinatorics | 2024-02-21 | [Go](dp/0062-unique-paths.go)

@@ -12,50 +12,51 @@ Dynamic Programming
 
 // https://leetcode.com/problems/longest-increasing-subsequence/
 
-// O(n log n)
+// Approach: Binary Search
+// Time: O(nlogn)
+// Space: O(n)
 // CACHE - does not keep the real subsequence
 // its length is the length of the longest increasing subsequence
 // we'll keep many subsequences in the same array by replacing previous values
 func lengthOfLIS(nums []int) int {
-	var cache = make([]int, 0)
-	var size = 0
+	var lis = make([]int, 0)
 	for _, num := range nums {
-		if size == 0 || num > cache[size-1] {
-			cache = append(cache, num)
-			size++
+		if len(lis) == 0 || num > lis[len(lis)-1] {
+			lis = append(lis, num)
 			continue
 		}
 		// it's not a binary search, it's building blocks to the full solution
-		idx, right := 0, size
-		for idx < right {
-			mid := (idx + right) / 2
-			if cache[mid] < num {
-				idx = mid + 1
+		left, right := 0, len(lis)
+		for left < right {
+			mid := left + (right-left)/2
+			if lis[mid] < num {
+				left = mid + 1
 			} else {
 				right = mid
 			}
 		}
-		cache[idx] = num
+		// the current element (num) is either equal to or smaller than
+		// the existing element (lis[left]), and this allows for potentially
+		// more elements to be added to the subsequence in the future.
+		lis[left] = num
 	}
-	return size
+	return len(lis)
 }
 
-// // Brute Force: O(n^2)
+// // Approach: Dynamic Programming (Bottom-Up)
+// // Time: O(nn)
+// // Space: O(n)
 // func lengthOfLIS(nums []int) int {
-// 	var lis = 0
-// 	var cache = make([]int, 0, len(nums))
-// 	for idx, num := range nums {
-// 		var max = 0
-// 		for j := 0; j < idx; j++ {
-// 			if nums[j] < num && cache[j] > max {
-// 				max = cache[j]
+// 	var length = 0
+// 	var dp = make([]int, len(nums))
+// 	for curr := range nums {
+// 		dp[curr] = 1
+// 		for prev := 0; prev < curr; prev++ {
+// 			if nums[prev] < nums[curr] {
+// 				dp[curr] = max(dp[curr], 1+dp[prev])
 // 			}
 // 		}
-// 		max++
-// 		if max > lis {
-// 			lis = max
-// 		}
-// 		cache = append(cache, max)
+// 		length = max(length, dp[curr])
 // 	}
-// 	return lis
+// 	return length
 // }

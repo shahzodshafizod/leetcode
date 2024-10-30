@@ -20,6 +20,7 @@ func TestLengthOfLIS(t *testing.T) {
 		{nums: []int{4, 10, 4, 3, 8, 9}, length: 3},
 		{nums: []int{0, 1, 0, 3, 2, 3}, length: 4},
 		{nums: []int{3, 5, 6, 2, 5, 4, 19, 5, 6, 7, 12}, length: 6},
+		{nums: []int{1, 4, 2, 3}, length: 3},
 	} {
 		length := lengthOfLIS(tc.nums)
 		assert.Equal(t, tc.length, length)
