@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2463 | [Minimum Total Distance Traveled](https://leetcode.com/problems/minimum-total-distance-traveled/) | Hard | Array, Dynamic Programming, Sorting | 2024-10-31 | [Go](dp/2463-minimum-total-distance-traveled.go) [Python](dp/2463-minimum-total-distance-traveled.py)
 | 1671 | [Minimum Number of Removals to Make Mountain Array](https://leetcode.com/problems/minimum-number-of-removals-to-make-mountain-array/) | Hard | Array, Binary Search, Dynamic Programming, Greedy | 2024-10-30 | [Go](dp/1671-minimum-number-of-removals-to-make-mountain-array.go) [Python](dp/1671-minimum-number-of-removals-to-make-mountain-array.py)
 | 1563 | [Stone Game V](https://leetcode.com/problems/stone-game-v/) | Hard | Array, Math, Dynamic Programming, Game Theory | 2024-10-29 | [Go](dp/1563-stone-game-v.go) [Python](dp/1563-stone-game-v.py)
 | 1510 | [Stone Game IV](https://leetcode.com/problems/stone-game-iv/) | Hard | Math, Dynamic Programming, Game Theory | 2024-10-28 | [Go](dp/1510-stone-game-iv.go) [Python](dp/1510-stone-game-iv.py)
