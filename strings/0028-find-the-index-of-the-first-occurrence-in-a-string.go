@@ -37,6 +37,7 @@ func strStr(haystack string, needle string) int {
 // // Time: O(M+N)
 // // Space: O(N)
 // func strStr(haystack string, needle string) int {
+//	// 1. LPS setup: O(2xn)
 // 	var m = len(needle)
 // 	lps := make([]int, m) // longest prefix suffix
 // 	lps[0] = 0            // there's no prefix for first char
@@ -53,6 +54,7 @@ func strStr(haystack string, needle string) int {
 // 			prevLPS = lps[prevLPS-1]
 // 		}
 // 	}
+//	// 2. KMP: O(2xn)
 // 	var n = len(haystack)
 // 	var hi, ni = 0, 0
 // 	for hi < n {

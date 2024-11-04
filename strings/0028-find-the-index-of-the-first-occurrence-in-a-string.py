@@ -12,6 +12,7 @@ class Solution(unittest.TestCase):
     # # Time: O(M+N)
     # # Space: O(N)
     # def strStr(self, haystack: str, needle: str) -> int:
+    #     # 1. LPS setup: O(2xn)
     #     m = len(needle)
     #     lps = [0] * m
     #     lps[0] = 0
@@ -26,6 +27,7 @@ class Solution(unittest.TestCase):
     #             idx += 1
     #         else:
     #             prevLPS = lps[prevLPS-1]
+    #     # 2. KMP: O(2xn)
     #     n = len(haystack)
     #     hi, ni = 0, 0
     #     while hi < n:

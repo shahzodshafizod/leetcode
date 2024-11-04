@@ -2,6 +2,9 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1872 | [Stone Game VIII](https://leetcode.com/problems/stone-game-viii/) | Hard | Array, Math, Dynamic Programming, Prefix Sum, Game Theory | 2024-11-04 | [Go](dp/1872-stone-game-viii.go) [Python](dp/1872-stone-game-viii.py)
+| 0796 | [Rotate String](https://leetcode.com/problems/rotate-string/) | Easy | String, String Matching | 2024-11-03 | [Go](strings/0796-rotate-string.go) [Python](strings/0796-rotate-string.py)
+| 2490 | [Circular Sentence](https://leetcode.com/problems/circular-sentence/) | Easy | String | 2024-11-02 | [Go](strings/2490-circular-sentence.go) [Python](strings/2490-circular-sentence.py)
 | 1957 | [Delete Characters to Make Fancy String](https://leetcode.com/problems/delete-characters-to-make-fancy-string/) | Easy | String | 2024-11-01 | [Go](strings/1957-delete-characters-to-make-fancy-string.go) [Python](strings/1957-delete-characters-to-make-fancy-string.py)
 | 2463 | [Minimum Total Distance Traveled](https://leetcode.com/problems/minimum-total-distance-traveled/) | Hard | Array, Dynamic Programming, Sorting | 2024-10-31 | [Go](dp/2463-minimum-total-distance-traveled.go) [Python](dp/2463-minimum-total-distance-traveled.py)
 | 1671 | [Minimum Number of Removals to Make Mountain Array](https://leetcode.com/problems/minimum-number-of-removals-to-make-mountain-array/) | Hard | Array, Binary Search, Dynamic Programming, Greedy | 2024-10-30 | [Go](dp/1671-minimum-number-of-removals-to-make-mountain-array.go) [Python](dp/1671-minimum-number-of-removals-to-make-mountain-array.py)
