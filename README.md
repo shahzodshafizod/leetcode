@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1531 | [String Compression II](https://leetcode.com/problems/string-compression-ii/) | Hard | String, Dynamic Programming | 2024-11-06 | [Go](dp/1531-string-compression-ii.go) [Python](dp/1531-string-compression-ii.py)
+| 0203 | [Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/) | Easy | Linked List, Recursion | 2024-11-05 | [Go](linkedlists/0203-remove-linked-list-elements.go) [Python](linkedlists/0203-remove-linked-list-elements.py)
 | 1872 | [Stone Game VIII](https://leetcode.com/problems/stone-game-viii/) | Hard | Array, Math, Dynamic Programming, Prefix Sum, Game Theory | 2024-11-04 | [Go](dp/1872-stone-game-viii.go) [Python](dp/1872-stone-game-viii.py)
 | 0796 | [Rotate String](https://leetcode.com/problems/rotate-string/) | Easy | String, String Matching | 2024-11-03 | [Go](strings/0796-rotate-string.go) [Python](strings/0796-rotate-string.py)
 | 2490 | [Circular Sentence](https://leetcode.com/problems/circular-sentence/) | Easy | String | 2024-11-02 | [Go](strings/2490-circular-sentence.go) [Python](strings/2490-circular-sentence.py)
