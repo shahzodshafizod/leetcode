@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1269 | [Number of Ways to Stay in the Same Place After Some Steps](https://leetcode.com/problems/number-of-ways-to-stay-in-the-same-place-after-some-steps/) | Hard | Dynamic Programming | 2024-11-07 | [Go](dp/1269-number-of-ways-to-stay-in-the-same-place-after-some-steps.go) [Python](dp/1269-number-of-ways-to-stay-in-the-same-place-after-some-steps.py)
 | 1531 | [String Compression II](https://leetcode.com/problems/string-compression-ii/) | Hard | String, Dynamic Programming | 2024-11-06 | [Go](dp/1531-string-compression-ii.go) [Python](dp/1531-string-compression-ii.py)
 | 0203 | [Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/) | Easy | Linked List, Recursion | 2024-11-05 | [Go](linkedlists/0203-remove-linked-list-elements.go) [Python](linkedlists/0203-remove-linked-list-elements.py)
 | 1872 | [Stone Game VIII](https://leetcode.com/problems/stone-game-viii/) | Hard | Array, Math, Dynamic Programming, Prefix Sum, Game Theory | 2024-11-04 | [Go](dp/1872-stone-game-viii.go) [Python](dp/1872-stone-game-viii.py)

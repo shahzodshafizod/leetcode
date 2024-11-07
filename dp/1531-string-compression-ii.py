@@ -32,6 +32,8 @@ class Solution(unittest.TestCase):
     # Time: O(nnk)
     # Space: O(nk)
     def getLengthOfOptimalCompression(self, s: str, k: int) -> int:
+        # ''->'a', 'a'->'a2', 'a9'->'a10', 'a99'->'a100'
+        incr = {1:1,2:1,10:1,100:1}
         n = len(s)
         memo = [[None] * (k+1) for _ in range(n)]
         def dp(idx: int, k: int) -> int:
@@ -39,17 +41,17 @@ class Solution(unittest.TestCase):
             if k < 0: return 101
             if memo[idx][k] != None:
                 return memo[idx][k]
-            # skip this character
+            # delete s[idx]
             res = dp(idx+1, k-1)
-            same, diff, length = 0, 0, 0
-            # for all continuous s[i] characters (can skip k characters)
+            # keep s[idx] and same characters
+            same, length, diff = 0, 0, 0
             for j in range(idx, n):
                 if s[j] == s[idx]:
                     same += 1
-                    if same <= 2 or same == 10 or same == 100:
-                        length += 1
+                    length += incr.get(same, 0)
                 else:
                     diff += 1
+                    if diff > k: break
                 res = min(res, length + dp(j+1, k-diff))
             memo[idx][k] = res
             return res

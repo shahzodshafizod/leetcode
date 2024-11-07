@@ -6,6 +6,8 @@ package dp
 // Time: O(nnk)
 // Space: O(nk)
 func getLengthOfOptimalCompression(s string, k int) int {
+	// ''->'a', 'a'->'a2', 'a9'->'a10', 'a99'->'a100'
+	var incr = map[int]int{1: 1, 2: 1, 10: 1, 100: 1}
 	var n = len(s)
 	var memo = make([][]*int, n)
 	for idx := range memo {
@@ -22,21 +24,19 @@ func getLengthOfOptimalCompression(s string, k int) int {
 		if memo[idx][k] != nil {
 			return *memo[idx][k]
 		}
-		// skip this character
+		// delete s[idx]
 		var res = dp(idx+1, k-1)
+		// keep s[idx] and same characters
 		var diff, same, length = 0, 0, 0
-		// for all continuous s[i] characters (can skip k characters)
 		for j := idx; j < n; j++ {
-			if k-diff < 0 {
-				break
-			}
 			if s[j] == s[idx] {
 				same++
-				if same <= 2 || same == 10 || same == 100 {
-					length++
-				}
+				length += incr[same]
 			} else {
 				diff++
+				if diff > k {
+					break
+				}
 			}
 			res = min(res, length+dp(j+1, k-diff))
 		}
