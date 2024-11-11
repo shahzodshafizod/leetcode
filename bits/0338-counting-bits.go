@@ -19,7 +19,7 @@ func countBits(n int) []int {
 // func countBits(n int) []int {
 // 	var bits = make([]int, n+1)
 // 	for i := 1; i <= n; i++ {
-// 		bits[i] = bits[i/2] + i%2 // OR bits[i/2]+i&1
+// 		bits[i] = bits[i/2] + i%2 // OR bits[i/2] + (i&1)
 // 	}
 // 	return bits
 // }

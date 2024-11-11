@@ -51,7 +51,7 @@ class Solution(unittest.TestCase):
         arrLen = min(arrLen, steps) # cannot move further than "steps" steps
         prev, curr = [0]*arrLen, [0]*arrLen
         curr[0] = 1
-        for st in range(1, steps+1):
+        for _ in range(steps):
             prev, curr = curr, prev
             for pos in range(arrLen-1,-1,-1):
                 curr[pos] = prev[pos]
