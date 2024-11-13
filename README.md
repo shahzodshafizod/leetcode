@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2742 | [Painting the Walls](https://leetcode.com/problems/painting-the-walls/) | Hard | Array, Dynamic Programming | 2024-11-13 | [Go](dp/2742-painting-the-walls.go) [Python](dp/2742-painting-the-walls.py)
 | 1494 | [Parallel Courses II](https://leetcode.com/problems/parallel-courses-ii/) | Hard | Dynamic Programming, Bit Manipulation, Graph, Bitmask | 2024-11-12 | [Go](graphs/1494-parallel-courses-ii.go) [Python](graphs/1494-parallel-courses-ii.py)
 | 0862 | [Shortest Subarray with Sum at Least K](https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/) | Hard | Array, Binary Search, Queue, Sliding Window, Heap (Priority Queue), Prefix Sum, Monotonic Queue | 2024-11-11 | [Go](queues/0862-shortest-subarray-with-sum-at-least-k.go) [Python](queues/0862-shortest-subarray-with-sum-at-least-k.py)
 | 0643 | [Maximum Average Subarray I](https://leetcode.com/problems/maximum-average-subarray-i/) | Easy | Array, Sliding Window | 2024-11-10 | [Go](./slidingwindows/0643-maximum-average-subarray-i.go) [Python](slidingwindows/0643-maximum-average-subarray-i.py)
