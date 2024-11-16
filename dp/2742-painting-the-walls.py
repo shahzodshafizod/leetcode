@@ -48,6 +48,8 @@ class Solution(unittest.TestCase):
             curr, next = next, curr
             for wall in range(1,n+1):
                 curr[wall] = min(
+                    # while paid painter paints 1 wall
+                    # the free one paints time[idx] walls
                     cost[idx] + next[max(0, wall-1-time[idx])],
                     next[wall],
                 )

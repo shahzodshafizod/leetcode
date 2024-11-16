@@ -19,6 +19,8 @@ func paintWalls(cost []int, time []int) int {
 		curr, next = next, curr
 		for wall := 1; wall <= n; wall++ {
 			curr[wall] = min(
+				// while paid painter paints 1 wall
+				// the free one paints time[idx] walls
 				cost[idx]+next[max(0, wall-1-time[idx])],
 				next[wall],
 			)

@@ -2,6 +2,9 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0283 | [Move Zeroes](https://leetcode.com/problems/move-zeroes/) | Easy | Array, Two Pointers | 2024-11-16 | [Go](twopointers/0283-move-zeroes.go) [Python](twopointers/0283-move-zeroes.py)
+| 1639 | [Number of Ways to Form a Target String Given a Dictionary](https://leetcode.com/problems/number-of-ways-to-form-a-target-string-given-a-dictionary/) | Hard | Array, String, Dynamic Programming | 2024-11-15 | [Go](dp/1639-number-of-ways-to-form-a-target-string-given-a-dictionary.go) [Python](dp/1639-number-of-ways-to-form-a-target-string-given-a-dictionary.py)
+| 1547 | [Minimum Cost to Cut a Stick](https://leetcode.com/problems/minimum-cost-to-cut-a-stick/) | Hard | Array, Dynamic Programming, Sorting | 2024-11-14 | [Go](dp/1547-minimum-cost-to-cut-a-stick.go) [Python](dp/1547-minimum-cost-to-cut-a-stick.py)
 | 2742 | [Painting the Walls](https://leetcode.com/problems/painting-the-walls/) | Hard | Array, Dynamic Programming | 2024-11-13 | [Go](dp/2742-painting-the-walls.go) [Python](dp/2742-painting-the-walls.py)
 | 1494 | [Parallel Courses II](https://leetcode.com/problems/parallel-courses-ii/) | Hard | Dynamic Programming, Bit Manipulation, Graph, Bitmask | 2024-11-12 | [Go](graphs/1494-parallel-courses-ii.go) [Python](graphs/1494-parallel-courses-ii.py)
 | 0862 | [Shortest Subarray with Sum at Least K](https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/) | Hard | Array, Binary Search, Queue, Sliding Window, Heap (Priority Queue), Prefix Sum, Monotonic Queue | 2024-11-11 | [Go](queues/0862-shortest-subarray-with-sum-at-least-k.go) [Python](queues/0862-shortest-subarray-with-sum-at-least-k.py)
