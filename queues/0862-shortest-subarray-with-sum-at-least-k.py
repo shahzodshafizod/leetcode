@@ -26,9 +26,9 @@ class Solution(unittest.TestCase):
     # # Time: O(nlogn)
     # # Space: O(n)
     # def shortestSubarray(self, nums: List[int], k: int) -> int:
-    #     pq = []
-    #     presum, n = 0, len(nums)
     #     length = n+1
+    #     presum, n = 0, len(nums)
+    #     pq = []
     #     for idx in range(n):
     #         presum += nums[idx]
     #         if presum >= k:
@@ -48,12 +48,14 @@ class Solution(unittest.TestCase):
             presum[idx+1] = presum[idx] + nums[idx]
         queue = deque([0])
         length = n+1
-        for idx in range(1, n+1):
-            while queue and presum[idx] - presum[queue[0]] >= k:
-                length = min(length, idx-queue.popleft())
-            while queue and presum[idx] <= presum[queue[-1]]:
+        for end in range(1, n+1):
+            # Find the minimum valid window ending at 'end'
+            while queue and presum[end] - presum[queue[0]] >= k:
+                length = min(length, end-queue.popleft())
+            # Validate the Monotonic Increasing Queue
+            while queue and presum[end] <= presum[queue[-1]]:
                 queue.pop()
-            queue.append(idx)
+            queue.append(end)
         return -1 if length > n else length
 
     def test(self) -> None:

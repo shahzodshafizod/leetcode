@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0258 | [Add Digits](https://leetcode.com/problems/add-digits/) | Easy | Math, Simulation, Number Theory | 2024-11-17 | [Go](maths/0258-add-digits.go) [Python](maths/0258-add-digits.py)
 | 0283 | [Move Zeroes](https://leetcode.com/problems/move-zeroes/) | Easy | Array, Two Pointers | 2024-11-16 | [Go](twopointers/0283-move-zeroes.go) [Python](twopointers/0283-move-zeroes.py)
 | 1639 | [Number of Ways to Form a Target String Given a Dictionary](https://leetcode.com/problems/number-of-ways-to-form-a-target-string-given-a-dictionary/) | Hard | Array, String, Dynamic Programming | 2024-11-15 | [Go](dp/1639-number-of-ways-to-form-a-target-string-given-a-dictionary.go) [Python](dp/1639-number-of-ways-to-form-a-target-string-given-a-dictionary.py)
 | 1547 | [Minimum Cost to Cut a Stick](https://leetcode.com/problems/minimum-cost-to-cut-a-stick/) | Hard | Array, Dynamic Programming, Sorting | 2024-11-14 | [Go](dp/1547-minimum-cost-to-cut-a-stick.go) [Python](dp/1547-minimum-cost-to-cut-a-stick.py)

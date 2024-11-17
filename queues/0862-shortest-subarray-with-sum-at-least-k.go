@@ -13,16 +13,18 @@ func shortestSubarray(nums []int, k int) int {
 	}
 	var queue = make([]int, n+1)
 	var left, right, length = 0, 0, n + 1
-	for idx := 1; idx <= n; idx++ {
-		for left <= right && presum[idx]-presum[queue[left]] >= k {
-			length = min(length, idx-queue[left])
+	for end := 1; end <= n; end++ {
+		// Find the minimum valid window ending at 'end'
+		for left <= right && presum[end]-presum[queue[left]] >= k {
+			length = min(length, end-queue[left])
 			left++
 		}
-		for left <= right && presum[idx] <= presum[queue[right]] {
+		// Validate the Monotonic Increasing Queue
+		for left <= right && presum[end] <= presum[queue[right]] {
 			right--
 		}
 		right++
-		queue[right] = idx
+		queue[right] = end
 	}
 	if length > n {
 		return -1
