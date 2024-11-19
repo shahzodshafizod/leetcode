@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0920 | [Number of Music Playlists](https://leetcode.com/problems/number-of-music-playlists/) | Hard | Math, Dynamic Programming, Combinatorics | 2024-11-19 | [Go](dp/0920-number-of-music-playlists.go) [Python](dp/0920-number-of-music-playlists.py)
 | 1652 | [Defuse the Bomb](https://leetcode.com/problems/defuse-the-bomb/) | Easy | Array, Sliding Window | 2024-11-18 | [Go](slidingwindows/1652-defuse-the-bomb.go) [Python](slidingwindows/1652-defuse-the-bomb.py)
 | 0258 | [Add Digits](https://leetcode.com/problems/add-digits/) | Easy | Math, Simulation, Number Theory | 2024-11-17 | [Go](maths/0258-add-digits.go) [Python](maths/0258-add-digits.py)
 | 0283 | [Move Zeroes](https://leetcode.com/problems/move-zeroes/) | Easy | Array, Two Pointers | 2024-11-16 | [Go](twopointers/0283-move-zeroes.go) [Python](twopointers/0283-move-zeroes.py)
