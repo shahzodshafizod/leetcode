@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0940 | [Distinct Subsequences II](https://leetcode.com/problems/distinct-subsequences-ii/) | Hard | String, Dynamic Programming | 2024-11-21 | [Go](dp/0940-distinct-subsequences-ii.go) [Python](dp/0940-distinct-subsequences-ii.py)
 | 2218 | [Maximum Value of K Coins From Piles](https://leetcode.com/problems/maximum-value-of-k-coins-from-piles/) | Hard | Array, Dynamic Programming, Prefix Sum | 2024-11-20 | [Go](dp/2218-maximum-value-of-k-coins-from-piles.go) [Python](dp/2218-maximum-value-of-k-coins-from-piles.py)
 | 0920 | [Number of Music Playlists](https://leetcode.com/problems/number-of-music-playlists/) | Hard | Math, Dynamic Programming, Combinatorics | 2024-11-19 | [Go](dp/0920-number-of-music-playlists.go) [Python](dp/0920-number-of-music-playlists.py)
 | 1652 | [Defuse the Bomb](https://leetcode.com/problems/defuse-the-bomb/) | Easy | Array, Sliding Window | 2024-11-18 | [Go](slidingwindows/1652-defuse-the-bomb.go) [Python](slidingwindows/1652-defuse-the-bomb.py)
