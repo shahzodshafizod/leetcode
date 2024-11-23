@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1235 | [Maximum Profit in Job Scheduling](https://leetcode.com/problems/maximum-profit-in-job-scheduling/) | Hard | Array, Binary Search, Dynamic Programming, Sorting | 2024-11-23 | [Go](dp/1235-maximum-profit-in-job-scheduling.go) [Python](dp/1235-maximum-profit-in-job-scheduling.py)
 | 1751 | [Maximum Number of Events That Can Be Attended II](https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended-ii/) | Hard | Array, Binary Search, Dynamic Programming, Sorting | 2024-11-22 | [Go](dp/1751-maximum-number-of-events-that-can-be-attended-ii.go) [Python](dp/1751-maximum-number-of-events-that-can-be-attended-ii.py)
 | 0940 | [Distinct Subsequences II](https://leetcode.com/problems/distinct-subsequences-ii/) | Hard | String, Dynamic Programming | 2024-11-21 | [Go](dp/0940-distinct-subsequences-ii.go) [Python](dp/0940-distinct-subsequences-ii.py)
 | 2218 | [Maximum Value of K Coins From Piles](https://leetcode.com/problems/maximum-value-of-k-coins-from-piles/) | Hard | Array, Dynamic Programming, Prefix Sum | 2024-11-20 | [Go](dp/2218-maximum-value-of-k-coins-from-piles.go) [Python](dp/2218-maximum-value-of-k-coins-from-piles.py)
