@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0101 | [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/) | Easy | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 2024-11-24 | [Go](trees/0101-symmetric-tree.go) [Python](trees/0101-symmetric-tree.py)
 | 1235 | [Maximum Profit in Job Scheduling](https://leetcode.com/problems/maximum-profit-in-job-scheduling/) | Hard | Array, Binary Search, Dynamic Programming, Sorting | 2024-11-23 | [Go](dp/1235-maximum-profit-in-job-scheduling.go) [Python](dp/1235-maximum-profit-in-job-scheduling.py)
 | 1751 | [Maximum Number of Events That Can Be Attended II](https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended-ii/) | Hard | Array, Binary Search, Dynamic Programming, Sorting | 2024-11-22 | [Go](dp/1751-maximum-number-of-events-that-can-be-attended-ii.go) [Python](dp/1751-maximum-number-of-events-that-can-be-attended-ii.py)
 | 0940 | [Distinct Subsequences II](https://leetcode.com/problems/distinct-subsequences-ii/) | Hard | String, Dynamic Programming | 2024-11-21 | [Go](dp/0940-distinct-subsequences-ii.go) [Python](dp/0940-distinct-subsequences-ii.py)
