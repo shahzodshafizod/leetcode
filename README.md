@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1346 | [Check If N and Its Double Exist](https://leetcode.com/problems/check-if-n-and-its-double-exist/) | Easy | Array, Hash Table, Two Pointers, Binary Search, Sorting | 2024-11-27 | [Go](hashes/1346-check-if-n-and-its-double-exist.go) [Python](hashes/1346-check-if-n-and-its-double-exist.py)
+| 0066 | [Plus One](https://leetcode.com/problems/plus-one/) | Easy | Array, Math | 2024-11-26 | [Go](maths/0066-plus-one.go) [Python](maths/0066-plus-one.py)
 | 0773 | [Sliding Puzzle](https://leetcode.com/problems/sliding-puzzle/) | Hard | Array, Breadth-First Search, Matrix | 2024-11-25 | [Go](matrices/0773-sliding-puzzle.go) [Python](matrices/0773-sliding-puzzle.py)
 | 0101 | [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/) | Easy | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 2024-11-24 | [Go](trees/0101-symmetric-tree.go) [Python](trees/0101-symmetric-tree.py)
 | 1235 | [Maximum Profit in Job Scheduling](https://leetcode.com/problems/maximum-profit-in-job-scheduling/) | Hard | Array, Binary Search, Dynamic Programming, Sorting | 2024-11-23 | [Go](dp/1235-maximum-profit-in-job-scheduling.go) [Python](dp/1235-maximum-profit-in-job-scheduling.py)
