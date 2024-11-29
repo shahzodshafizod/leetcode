@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2577 | [Minimum Time to Visit a Cell In a Grid](https://leetcode.com/problems/minimum-time-to-visit-a-cell-in-a-grid/) | Hard | Array, Breadth-First Search, Graph, Heap (Priority Queue), Matrix, Shortest Path | 2024-11-29 | [Go](graphs/2577-minimum-time-to-visit-a-cell-in-a-grid.go) [Python](graphs/2577-minimum-time-to-visit-a-cell-in-a-grid.py)
+| 2290 | [Minimum Obstacle Removal to Reach Corner](https://leetcode.com/problems/minimum-obstacle-removal-to-reach-corner/) | Hard | Array, Breadth-First Search, Graph, Heap (Priority Queue), Matrix, Shortest Path | 2024-11-28 | [Go](graphs/2290-minimum-obstacle-removal-to-reach-corner.go) [Python](graphs/2290-minimum-obstacle-removal-to-reach-corner.py)
 | 1346 | [Check If N and Its Double Exist](https://leetcode.com/problems/check-if-n-and-its-double-exist/) | Easy | Array, Hash Table, Two Pointers, Binary Search, Sorting | 2024-11-27 | [Go](hashes/1346-check-if-n-and-its-double-exist.go) [Python](hashes/1346-check-if-n-and-its-double-exist.py)
 | 0066 | [Plus One](https://leetcode.com/problems/plus-one/) | Easy | Array, Math | 2024-11-26 | [Go](maths/0066-plus-one.go) [Python](maths/0066-plus-one.py)
 | 0773 | [Sliding Puzzle](https://leetcode.com/problems/sliding-puzzle/) | Hard | Array, Breadth-First Search, Matrix | 2024-11-25 | [Go](matrices/0773-sliding-puzzle.go) [Python](matrices/0773-sliding-puzzle.py)
