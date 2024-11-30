@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2097 | [Valid Arrangement of Pairs](https://leetcode.com/problems/valid-arrangement-of-pairs/) | Hard | Depth-First Search, Graph, Eulerian Circuit | 2024-11-30 | [Go](graphs/2097-valid-arrangement-of-pairs.go) [Python](graphs/2097-valid-arrangement-of-pairs.py)
 | 2577 | [Minimum Time to Visit a Cell In a Grid](https://leetcode.com/problems/minimum-time-to-visit-a-cell-in-a-grid/) | Hard | Array, Breadth-First Search, Graph, Heap (Priority Queue), Matrix, Shortest Path | 2024-11-29 | [Go](graphs/2577-minimum-time-to-visit-a-cell-in-a-grid.go) [Python](graphs/2577-minimum-time-to-visit-a-cell-in-a-grid.py)
 | 2290 | [Minimum Obstacle Removal to Reach Corner](https://leetcode.com/problems/minimum-obstacle-removal-to-reach-corner/) | Hard | Array, Breadth-First Search, Graph, Heap (Priority Queue), Matrix, Shortest Path | 2024-11-28 | [Go](graphs/2290-minimum-obstacle-removal-to-reach-corner.go) [Python](graphs/2290-minimum-obstacle-removal-to-reach-corner.py)
 | 1346 | [Check If N and Its Double Exist](https://leetcode.com/problems/check-if-n-and-its-double-exist/) | Easy | Array, Hash Table, Two Pointers, Binary Search, Sorting | 2024-11-27 | [Go](hashes/1346-check-if-n-and-its-double-exist.go) [Python](hashes/1346-check-if-n-and-its-double-exist.py)
