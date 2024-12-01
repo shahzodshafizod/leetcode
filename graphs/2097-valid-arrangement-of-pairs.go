@@ -10,6 +10,7 @@ Eulerian paths have a couple of conditions:
 		- Each node’s degree matches its degree.
 		- Or, exactly one node has one more outgoing edge
 			(degree = degree + 1), which indicates our starting point.
+https://www.youtube.com/watch?v=8MpoO2zA2l4
 */
 
 // Approach 2: Hierholzer's Algorithm (Iterative)
