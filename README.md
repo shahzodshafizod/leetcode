@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1455 | [Check If a Word Occurs As a Prefix of Any Word in a Sentence](https://leetcode.com/problems/check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence/) | Easy | Two Pointers, String, String Matching | 2024-12-02 | [Go](strings/1455-check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence.go) [Python](strings/1455-check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence.py)
 | 3244 | [Shortest Distance After Road Addition Queries II](https://leetcode.com/problems/shortest-distance-after-road-addition-queries-ii/) | Hard | Array, Greedy, Graph, Ordered Set | 2024-12-01 | [Go](graphs/3244-shortest-distance-after-road-addition-queries-ii.go) [Python](graphs/3244-shortest-distance-after-road-addition-queries-ii.py)
 | 2097 | [Valid Arrangement of Pairs](https://leetcode.com/problems/valid-arrangement-of-pairs/) | Hard | Depth-First Search, Graph, Eulerian Circuit | 2024-11-30 | [Go](graphs/2097-valid-arrangement-of-pairs.go) [Python](graphs/2097-valid-arrangement-of-pairs.py)
 | 2577 | [Minimum Time to Visit a Cell In a Grid](https://leetcode.com/problems/minimum-time-to-visit-a-cell-in-a-grid/) | Hard | Array, Breadth-First Search, Graph, Heap (Priority Queue), Matrix, Shortest Path | 2024-11-29 | [Go](graphs/2577-minimum-time-to-visit-a-cell-in-a-grid.go) [Python](graphs/2577-minimum-time-to-visit-a-cell-in-a-grid.py)
