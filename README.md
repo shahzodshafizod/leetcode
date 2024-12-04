@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0118 | [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) | Easy | Array, Dynamic Programming | 2024-12-04 | [Go](dp/0118-pascals-triangle.go) [Python](dp/0118-pascals-triangle.py)
 | 1799 | [Maximize Score After N Operations](https://leetcode.com/problems/maximize-score-after-n-operations/) | Hard | Array, Math, Dynamic Programming, Backtracking, Bit Manipulation, Number Theory, Bitmask | 2024-12-04 | [Go](dp/1799-maximize-score-after-n-operations.go) [Python](dp/1799-maximize-score-after-n-operations.py)
 | 1964 | [Find the Longest Valid Obstacle Course at Each Position](https://leetcode.com/problems/find-the-longest-valid-obstacle-course-at-each-position/) | Hard | Array, Binary Search, Binary Indexed Tree | 2024-12-03 | [Go](binarysearch/1964-find-the-longest-valid-obstacle-course-at-each-position.go) [Python](binarysearch/1964-find-the-longest-valid-obstacle-course-at-each-position.py)
 | 1455 | [Check If a Word Occurs As a Prefix of Any Word in a Sentence](https://leetcode.com/problems/check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence/) | Easy | Two Pointers, String, String Matching | 2024-12-02 | [Go](strings/1455-check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence.go) [Python](strings/1455-check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence.py)
