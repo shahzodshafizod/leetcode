@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0472 | [Concatenated Words](https://leetcode.com/problems/concatenated-words/) | Hard | Array, String, Dynamic Programming, Depth-First Search, Trie | 2024-12-05 | [Go](dp/0472-concatenated-words.go) [Python](dp/0472-concatenated-words.py)
+| 0069 | [Sqrt(x)](https://leetcode.com/problems/sqrtx/) | Easy | Math, Binary Search | 2024-12-05 | [Go](binarysearch/0069-sqrtx.go) [Python](binarysearch/0069-sqrtx.py)
 | 0118 | [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) | Easy | Array, Dynamic Programming | 2024-12-04 | [Go](dp/0118-pascals-triangle.go) [Python](dp/0118-pascals-triangle.py)
 | 1799 | [Maximize Score After N Operations](https://leetcode.com/problems/maximize-score-after-n-operations/) | Hard | Array, Math, Dynamic Programming, Backtracking, Bit Manipulation, Number Theory, Bitmask | 2024-12-04 | [Go](dp/1799-maximize-score-after-n-operations.go) [Python](dp/1799-maximize-score-after-n-operations.py)
 | 1964 | [Find the Longest Valid Obstacle Course at Each Position](https://leetcode.com/problems/find-the-longest-valid-obstacle-course-at-each-position/) | Hard | Array, Binary Search, Binary Indexed Tree | 2024-12-03 | [Go](binarysearch/1964-find-the-longest-valid-obstacle-course-at-each-position.go) [Python](binarysearch/1964-find-the-longest-valid-obstacle-course-at-each-position.py)
