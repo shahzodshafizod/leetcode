@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1489 | [Find Critical and Pseudo-Critical Edges in Minimum Spanning Tree](https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/) | Hard | Union Find, Graph, Sorting, Minimum Spanning Tree, Strongly Connected Component | 2024-12-06 | [Go](unionfinds/1489-find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree.go) [Python](unionfinds/1489-find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree.py)
+| 1295 | [Find Numbers with Even Number of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/) | Easy | Array, Math | 2024-12-06 | [Go](maths/1295-find-numbers-with-even-number-of-digits.go) [Python](maths/1295-find-numbers-with-even-number-of-digits.py)
 | 0472 | [Concatenated Words](https://leetcode.com/problems/concatenated-words/) | Hard | Array, String, Dynamic Programming, Depth-First Search, Trie | 2024-12-05 | [Go](dp/0472-concatenated-words.go) [Python](dp/0472-concatenated-words.py)
 | 0069 | [Sqrt(x)](https://leetcode.com/problems/sqrtx/) | Easy | Math, Binary Search | 2024-12-05 | [Go](binarysearch/0069-sqrtx.go) [Python](binarysearch/0069-sqrtx.py)
 | 0118 | [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) | Easy | Array, Dynamic Programming | 2024-12-04 | [Go](dp/0118-pascals-triangle.go) [Python](dp/0118-pascals-triangle.py)
