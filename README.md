@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2421 | [Number of Good Paths](https://leetcode.com/problems/number-of-good-paths/) | Hard | Array, Hash Table, Tree, Union Find, Graph, Sorting | 2024-12-07 | [Go](unionfinds/2421-number-of-good-paths.go) [Python](unionfinds/2421-number-of-good-paths.py)
+| 0389 | [Find the Difference](https://leetcode.com/problems/find-the-difference/description/) | Easy | Hash Table, String, Bit Manipulation, Sorting | 2024-12-07 | [Go](hashes/0389-find-the-difference.go) [Python](hashes/0389-find-the-difference.py)
 | 1489 | [Find Critical and Pseudo-Critical Edges in Minimum Spanning Tree](https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/) | Hard | Union Find, Graph, Sorting, Minimum Spanning Tree, Strongly Connected Component | 2024-12-06 | [Go](unionfinds/1489-find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree.go) [Python](unionfinds/1489-find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree.py)
 | 1295 | [Find Numbers with Even Number of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/) | Easy | Array, Math | 2024-12-06 | [Go](maths/1295-find-numbers-with-even-number-of-digits.go) [Python](maths/1295-find-numbers-with-even-number-of-digits.py)
 | 0472 | [Concatenated Words](https://leetcode.com/problems/concatenated-words/) | Hard | Array, String, Dynamic Programming, Depth-First Search, Trie | 2024-12-05 | [Go](dp/0472-concatenated-words.go) [Python](dp/0472-concatenated-words.py)
