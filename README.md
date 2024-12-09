@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1553 | [Minimum Number of Days to Eat N Oranges](https://leetcode.com/problems/minimum-number-of-days-to-eat-n-oranges/) | Hard | Dynamic Programming, Memoization | 2024-12-08 | [Go](dp/1553-minimum-number-of-days-to-eat-n-oranges.go) [Python](dp/1553-minimum-number-of-days-to-eat-n-oranges.py)
+| 1047 | [Remove All Adjacent Duplicates In String](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/) | Easy | String, Stack | 2024-12-08 | [Go](stacks/1047-remove-all-adjacent-duplicates-in-string.go) [Python](stacks/1047-remove-all-adjacent-duplicates-in-string.py)
 | 2421 | [Number of Good Paths](https://leetcode.com/problems/number-of-good-paths/) | Hard | Array, Hash Table, Tree, Union Find, Graph, Sorting | 2024-12-07 | [Go](unionfinds/2421-number-of-good-paths.go) [Python](unionfinds/2421-number-of-good-paths.py)
 | 0389 | [Find the Difference](https://leetcode.com/problems/find-the-difference/description/) | Easy | Hash Table, String, Bit Manipulation, Sorting | 2024-12-07 | [Go](hashes/0389-find-the-difference.go) [Python](hashes/0389-find-the-difference.py)
 | 1489 | [Find Critical and Pseudo-Critical Edges in Minimum Spanning Tree](https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/) | Hard | Union Find, Graph, Sorting, Minimum Spanning Tree, Strongly Connected Component | 2024-12-06 | [Go](unionfinds/1489-find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree.go) [Python](unionfinds/1489-find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree.py)
