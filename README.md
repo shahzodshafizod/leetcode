@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1857 | [Largest Color Value in a Directed Graph](https://leetcode.com/problems/largest-color-value-in-a-directed-graph/) | Hard | Hash Table, Dynamic Programming, Graph, Topological Sort, Memoization, Counting | 2024-12-09 | [Go](graphs/1857-largest-color-value-in-a-directed-graph.go) [Python](graphs/1857-largest-color-value-in-a-directed-graph.py)
+| 0557 | [Reverse Words in a String III](https://leetcode.com/problems/reverse-words-in-a-string-iii/) | Easy | Two Pointers, String | 2024-12-09 | [Go](twopointers/0557-reverse-words-in-a-string-iii.go) [Python](twopointers/0557-reverse-words-in-a-string-iii.py)
 | 1553 | [Minimum Number of Days to Eat N Oranges](https://leetcode.com/problems/minimum-number-of-days-to-eat-n-oranges/) | Hard | Dynamic Programming, Memoization | 2024-12-08 | [Go](dp/1553-minimum-number-of-days-to-eat-n-oranges.go) [Python](dp/1553-minimum-number-of-days-to-eat-n-oranges.py)
 | 1047 | [Remove All Adjacent Duplicates In String](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/) | Easy | String, Stack | 2024-12-08 | [Go](stacks/1047-remove-all-adjacent-duplicates-in-string.go) [Python](stacks/1047-remove-all-adjacent-duplicates-in-string.py)
 | 2421 | [Number of Good Paths](https://leetcode.com/problems/number-of-good-paths/) | Hard | Array, Hash Table, Tree, Union Find, Graph, Sorting | 2024-12-07 | [Go](unionfinds/2421-number-of-good-paths.go) [Python](unionfinds/2421-number-of-good-paths.py)
