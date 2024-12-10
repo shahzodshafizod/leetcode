@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2251 | [Number of Flowers in Full Bloom](https://leetcode.com/problems/number-of-flowers-in-full-bloom/) | Hard | Array, Hash Table, Binary Search, Sorting, Prefix Sum, Ordered Set | 2024-12-10 | [Go](heaps/2251-number-of-flowers-in-full-bloom.go) [Python](heaps/2251-number-of-flowers-in-full-bloom.py)
+| 0541 | [Reverse String II](https://leetcode.com/problems/reverse-string-ii/) | Easy | Two Pointers, String | 2024-12-10 | [Go](twopointers/0541-reverse-string-ii.go) [Python](twopointers/0541-reverse-string-ii.py)
 | 1857 | [Largest Color Value in a Directed Graph](https://leetcode.com/problems/largest-color-value-in-a-directed-graph/) | Hard | Hash Table, Dynamic Programming, Graph, Topological Sort, Memoization, Counting | 2024-12-09 | [Go](graphs/1857-largest-color-value-in-a-directed-graph.go) [Python](graphs/1857-largest-color-value-in-a-directed-graph.py)
 | 0557 | [Reverse Words in a String III](https://leetcode.com/problems/reverse-words-in-a-string-iii/) | Easy | Two Pointers, String | 2024-12-09 | [Go](twopointers/0557-reverse-words-in-a-string-iii.go) [Python](twopointers/0557-reverse-words-in-a-string-iii.py)
 | 1553 | [Minimum Number of Days to Eat N Oranges](https://leetcode.com/problems/minimum-number-of-days-to-eat-n-oranges/) | Hard | Dynamic Programming, Memoization | 2024-12-08 | [Go](dp/1553-minimum-number-of-days-to-eat-n-oranges.go) [Python](dp/1553-minimum-number-of-days-to-eat-n-oranges.py)
