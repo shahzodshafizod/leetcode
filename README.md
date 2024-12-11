@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1675 | [Minimize Deviation in Array](https://leetcode.com/problems/minimize-deviation-in-array/) | Hard | Array, Greedy, Heap (Priority Queue), Ordered Set | 2024-12-11 | [Go](heaps/1675-minimize-deviation-in-array.go) [Python](heaps/1675-minimize-deviation-in-array.py)
+| 0278 | [First Bad Version](https://leetcode.com/problems/first-bad-version/) | Easy | Binary Search, Interactive | 2024-12-11 | [Go](binarysearch/0278-first-bad-version.go) [Python](binarysearch/0278-first-bad-version.py)
 | 2251 | [Number of Flowers in Full Bloom](https://leetcode.com/problems/number-of-flowers-in-full-bloom/) | Hard | Array, Hash Table, Binary Search, Sorting, Prefix Sum, Ordered Set | 2024-12-10 | [Go](heaps/2251-number-of-flowers-in-full-bloom.go) [Python](heaps/2251-number-of-flowers-in-full-bloom.py)
 | 0541 | [Reverse String II](https://leetcode.com/problems/reverse-string-ii/) | Easy | Two Pointers, String | 2024-12-10 | [Go](twopointers/0541-reverse-string-ii.go) [Python](twopointers/0541-reverse-string-ii.py)
 | 1857 | [Largest Color Value in a Directed Graph](https://leetcode.com/problems/largest-color-value-in-a-directed-graph/) | Hard | Hash Table, Dynamic Programming, Graph, Topological Sort, Memoization, Counting | 2024-12-09 | [Go](graphs/1857-largest-color-value-in-a-directed-graph.go) [Python](graphs/1857-largest-color-value-in-a-directed-graph.py)
