@@ -2,6 +2,9 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0374 | [Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/) | Easy | Binary Search | 2024-12-13 | [Go](binarysearch/0374-guess-number-higher-or-lower.go) [Python](binarysearch/0374-guess-number-higher-or-lower.py)
+| 0460 | [LFU Cache](https://leetcode.com/problems/lfu-cache/) | Hard | Hash Table, Linked List, Design, Doubly-Linked List | 2024-12-13 | [Go](design/0460-lfu-cache.go) [Python](design/0460-lfu-cache.py)
+| 2558 | [Take Gifts From the Richest Pile](https://leetcode.com/problems/take-gifts-from-the-richest-pile/) | Easy | Array, Heap (Priority Queue), Simulation | 2024-12-12 | [Go](heaps/2558-take-gifts-from-the-richest-pile.go) [Python](heaps/2558-take-gifts-from-the-richest-pile.py)
 | 1675 | [Minimize Deviation in Array](https://leetcode.com/problems/minimize-deviation-in-array/) | Hard | Array, Greedy, Heap (Priority Queue), Ordered Set | 2024-12-11 | [Go](heaps/1675-minimize-deviation-in-array.go) [Python](heaps/1675-minimize-deviation-in-array.py)
 | 0278 | [First Bad Version](https://leetcode.com/problems/first-bad-version/) | Easy | Binary Search, Interactive | 2024-12-11 | [Go](binarysearch/0278-first-bad-version.go) [Python](binarysearch/0278-first-bad-version.py)
 | 2251 | [Number of Flowers in Full Bloom](https://leetcode.com/problems/number-of-flowers-in-full-bloom/) | Hard | Array, Hash Table, Binary Search, Sorting, Prefix Sum, Ordered Set | 2024-12-10 | [Go](heaps/2251-number-of-flowers-in-full-bloom.go) [Python](heaps/2251-number-of-flowers-in-full-bloom.py)
@@ -337,7 +340,7 @@
 | 0133 | [Clone Graph](https://leetcode.com/problems/clone-graph/) | Medium | Hash Table, Depth-First Search, Breadth-First Search, Graph | 2024-02-20 | [Go](graphs/0133-clone-graph.go)
 | 1046 | [Last Stone Weight](https://leetcode.com/problems/last-stone-weight/) | Easy | Array, Heap (Priority Queue) | 2024-02-19 | [Go](arrays/1046-last-stone-weight.go)
 | 0973 | [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/) | Medium | Array, Math, Divide and Conquer, Geometry, Sorting, Heap (Priority Queue), Quickselect | 2024-02-19 | [Go](arrays/0973-k-closest-points-to-origin.go)
-| 0146 | [LRU Cache](https://leetcode.com/problems/lru-cache/) | Medium | Hash Table, Linked List, Design, Doubly-Linked List | 2024-02-19 | [Go](design/0146-lru-cache.go)
+| 0146 | [LRU Cache](https://leetcode.com/problems/lru-cache/) | Medium | Hash Table, Linked List, Design, Doubly-Linked List | 2024-02-19 | [Go](design/0146-lru-cache.go) [Python](design/0146-lru-cache.py)
 | 0703 | [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/) | Easy | Tree, Design, Binary Search Tree, Heap (Priority Queue), Binary Tree, Data Stream | 2024-02-19 | [Go](design/0703-kth-largest-element-in-a-stream.go) [Python](design/0703-kth-largest-element-in-a-stream.py)
 | 0705 | [Design HashSet](https://leetcode.com/problems/design-hashset/) | Easy | Array, Hash Table, Linked List, Design, Hash Function | 2024-02-19 | [Go](design/0705-design-hashset.go)
 | 0706 | [Design HashMap](https://leetcode.com/problems/design-hashmap/) | Easy | Array, Hash Table, Linked List, Design, Hash Function | 2024-02-19 | [Go](design/0706-design-hashmap.go)
@@ -361,7 +364,7 @@
 | 1700 | [Number of Students Unable to Eat Lunch](https://leetcode.com/problems/number-of-students-unable-to-eat-lunch/) | Easy | Array, Stack, Queue, Simulation | 2024-02-14 | [Go](queues/1700-number-of-students-unable-to-eat-lunch.go)
 | 0021 | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Easy | Linked List, Recursion | 2024-02-14 | [Go](linkedlists/0021-merge-two-sorted-lists.go)
 | 1472 | [Design Browser History](https://leetcode.com/problems/design-browser-history/) | Medium | Array, Linked List, Stack, Design, Doubly-Linked List, Data Stream | 2024-02-14 | [Go](design/1472-design-browser-history.go)
-| 0707 | [Design Linked List](https://leetcode.com/problems/design-linked-list/) | Medium | Linked List, Design | 2024-02-14 | [Go](design/0707-design-linked-list.go)
+| 0707 | [Design Linked List](https://leetcode.com/problems/design-linked-list/) | Medium | Linked List, Design | 2024-02-14 | [Go](design/0707-design-linked-list.go) [Python](design/0707-design-linked-list.py)
 | 1470 | [Shuffle the Array](https://leetcode.com/problems/shuffle-the-array/) | Easy | Array | 2024-02-13 | [Go](arrays/1470-shuffle-the-array.go)
 | 0027 | [Remove Element](https://leetcode.com/problems/remove-element/) | Easy | Array, Two Pointers | 2024-02-13 | [Go](arrays/0027-remove-element.go)
 | 0026 | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | Easy | Array, Two Pointers | 2024-02-13 | [Go](arrays/0026-remove-duplicates-from-sorted-array.go)

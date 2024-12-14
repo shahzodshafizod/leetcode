@@ -28,6 +28,11 @@ func TestLRUCache(t *testing.T) {
 			values:   [][]int{{2}, {2, 1}, {1, 1}, {2, 3}, {4, 1}, {1}, {2}},
 			output:   []any{nil, nil, nil, nil, nil, -1, 3},
 		},
+		{
+			commands: []string{"LRUCache", "get", "put", "get", "put", "put", "get", "get"},
+			values:   [][]int{{2}, {2}, {2, 6}, {1}, {1, 5}, {1, 2}, {1}, {2}},
+			output:   []any{nil, -1, nil, -1, nil, nil, 2, 6},
+		},
 	} {
 		var cache LRUCache
 		for index, command := range tc.commands {

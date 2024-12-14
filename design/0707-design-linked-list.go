@@ -5,78 +5,69 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 // https://leetcode.com/problems/design-linked-list/
 
 type MyLinkedList struct {
-	head *pkg.DListNode[int]
-	tail *pkg.DListNode[int]
+	head *pkg.DListNode
+	tail *pkg.DListNode
 	size int
 }
 
 func NewMyLinkedList() MyLinkedList {
-	return MyLinkedList{}
+	var ll = MyLinkedList{
+		head: &pkg.DListNode{Val: -1},
+		tail: &pkg.DListNode{Val: -1},
+	}
+	ll.head.Next = ll.tail
+	ll.tail.Prev = ll.head
+	return ll
 }
 
 func (m *MyLinkedList) Get(index int) int {
-	node := m.getNodeAtIndex(index)
-	if node == nil {
-		return -1
+	if node := m.getNodeAtIndex(index); node != nil {
+		return node.Val
 	}
-	return node.Val
+	return -1
 }
 
 func (m *MyLinkedList) AddAtHead(val int) {
-	newNode := pkg.NewDListNode(val, nil, m.head)
-	if m.head == nil {
-		m.head, m.tail = newNode, newNode
-	} else {
-		m.head.Prev = newNode
-		m.head = newNode
-	}
+	var node = &pkg.DListNode{Val: val, Prev: m.head, Next: m.head.Next}
+	node.Prev.Next = node
+	node.Next.Prev = node
 	m.size++
 }
 
 func (m *MyLinkedList) AddAtTail(val int) {
-	newNode := pkg.NewDListNode(val, m.tail, nil)
-	if m.head == nil {
-		m.head, m.tail = newNode, newNode
-	} else {
-		m.tail.Next = newNode
-		m.tail = newNode
-	}
+	var node = &pkg.DListNode{Val: val, Prev: m.tail.Prev, Next: m.tail}
+	node.Prev.Next = node
+	node.Next.Prev = node
 	m.size++
 }
 
 func (m *MyLinkedList) AddAtIndex(index int, val int) {
-	if index <= 0 {
-		m.AddAtHead(val)
-		return
-	}
 	if index == m.size {
 		m.AddAtTail(val)
 		return
 	}
-	before := m.getNodeAtIndex(index)
-	if before == nil {
+	var next = m.getNodeAtIndex(index)
+	if next == nil {
 		return
 	}
-	var newNode = pkg.NewDListNode(val, before.Prev, before)
-	if before.Prev != nil {
-		before.Prev.Next = newNode
-	}
-	before.Prev = newNode
+	var node = &pkg.DListNode{Val: val, Prev: next.Prev, Next: next}
+	node.Prev.Next = node
+	node.Next.Prev = node
 	m.size++
 }
 
-func (m *MyLinkedList) getNodeAtIndex(index int) *pkg.DListNode[int] {
+func (m *MyLinkedList) getNodeAtIndex(index int) *pkg.DListNode {
 	if index < 0 || index >= m.size {
 		return nil
 	}
 	if index > m.size/2 {
-		node := m.tail
+		node := m.tail.Prev
 		for i := m.size - 1; i > index; i-- {
 			node = node.Prev
 		}
 		return node
 	}
-	node := m.head
+	node := m.head.Next
 	for i := 0; i < index; i++ {
 		node = node.Next
 	}
@@ -88,36 +79,26 @@ func (m *MyLinkedList) DeleteAtIndex(index int) {
 	if node == nil {
 		return
 	}
-	if node.Prev != nil {
-		node.Prev.Next = node.Next
-	}
-	if node.Next != nil {
-		node.Next.Prev = node.Prev
-	}
-	if node == m.head {
-		m.head = m.head.Next
-	}
-	if node == m.tail {
-		m.tail = m.tail.Prev
-	}
+	node.Prev.Next = node.Next
+	node.Next.Prev = node.Prev
 	m.size--
 }
 
 // type MyLinkedList struct {
-// 	head     *node[int]
-// 	pointers []*node[int]
+// 	head     *pkg.ListNode
+// 	pointers []*pkg.ListNode
 // 	size     int
 // }
 
 // func NewMyLinkedList() MyLinkedList {
-// 	return MyLinkedList{pointers: make([]*node[int], 0)}
+// 	return MyLinkedList{pointers: make([]*pkg.ListNode, 0)}
 // }
 
 // func (m *MyLinkedList) Get(index int) int {
 // 	if !m.validIndex(index) {
 // 		return -1
 // 	}
-// 	return m.pointers[index].val
+// 	return m.pointers[index].Val
 // }
 
 // func (m *MyLinkedList) validIndex(index int) bool {
@@ -125,15 +106,15 @@ func (m *MyLinkedList) DeleteAtIndex(index int) {
 // }
 
 // func (m *MyLinkedList) AddAtHead(val int) {
-// 	m.head = &node[int]{val: val, next: m.head}
-// 	m.pointers = append([]*node[int]{m.head}, m.pointers...)
+// 	m.head = &pkg.ListNode{Val: val, Next: m.head}
+// 	m.pointers = append([]*pkg.ListNode{m.head}, m.pointers...)
 // 	m.size++
 // }
 
 // func (m *MyLinkedList) AddAtTail(val int) {
-// 	newNode := &node[int]{val: val, next: nil}
+// 	newNode := &pkg.ListNode{Val: val, Next: nil}
 // 	if m.size > 0 {
-// 		m.pointers[m.size-1].next = newNode
+// 		m.pointers[m.size-1].Next = newNode
 // 	} else {
 // 		m.head = newNode
 // 	}
@@ -154,8 +135,8 @@ func (m *MyLinkedList) DeleteAtIndex(index int) {
 // 		return
 // 	}
 // 	before := m.pointers[index-1]
-// 	before.next = &node[int]{val: val, next: before.next}
-// 	m.pointers = append(m.pointers[:index], append([]*node[int]{before.next}, m.pointers[index:]...)...)
+// 	before.Next = &pkg.ListNode{Val: val, Next: before.Next}
+// 	m.pointers = append(m.pointers[:index], append([]*pkg.ListNode{before.Next}, m.pointers[index:]...)...)
 // 	m.size++
 // }
 
@@ -164,10 +145,10 @@ func (m *MyLinkedList) DeleteAtIndex(index int) {
 // 		return
 // 	}
 // 	if index == 0 {
-// 		m.head = m.head.next
+// 		m.head = m.head.Next
 // 	} else {
 // 		before := m.pointers[index-1]
-// 		before.next = before.next.next
+// 		before.Next = before.Next.Next
 // 	}
 // 	m.pointers = append(m.pointers[:index], m.pointers[index+1:]...)
 // 	m.size--
