@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1095 | [Find in Mountain Array](https://leetcode.com/problems/find-in-mountain-array/) | Hard | Binary Search, Recursion, Two Pointers, Dynamic Programming, Greedy, Memoization, Backtracking | 2024-12-14 | [Go](binarysearch/1095-find-in-mountain-array.go) [Python](binarysearch/1095-find-in-mountain-array.py)
+| 0035 | [Search Insert Position](https://leetcode.com/problems/search-insert-position/) | Easy | Binary Search | 2024-12-14 | [Go](binarysearch/0035-search-insert-position.go) [Python](binarysearch/0035-search-insert-position.py)
 | 0374 | [Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/) | Easy | Binary Search | 2024-12-13 | [Go](binarysearch/0374-guess-number-higher-or-lower.go) [Python](binarysearch/0374-guess-number-higher-or-lower.py)
 | 0460 | [LFU Cache](https://leetcode.com/problems/lfu-cache/) | Hard | Hash Table, Linked List, Design, Doubly-Linked List | 2024-12-13 | [Go](design/0460-lfu-cache.go) [Python](design/0460-lfu-cache.py)
 | 2558 | [Take Gifts From the Richest Pile](https://leetcode.com/problems/take-gifts-from-the-richest-pile/) | Easy | Array, Heap (Priority Queue), Simulation | 2024-12-12 | [Go](heaps/2558-take-gifts-from-the-richest-pile.go) [Python](heaps/2558-take-gifts-from-the-richest-pile.py)

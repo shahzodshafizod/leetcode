@@ -44,17 +44,17 @@ class LFUCache:
     def __init__(self, capacity: int):
         self.capacity = capacity
         self.nodes = {}
-        self.counts = defaultdict(LRUCache)
+        self.buckets = defaultdict(LRUCache)
         self.min_cnt = 1
 
     def get(self, key: int) -> int:
         node = self.nodes.get(key, None)
         if not node: return -1
         node.unlink() # removes from the current counts[node.cnt]
-        if self.counts[node.cnt].empty() and node.cnt == self.min_cnt:
+        if self.buckets[node.cnt].empty() and node.cnt == self.min_cnt:
             self.min_cnt += 1
         node.cnt += 1
-        self.counts[node.cnt].insert(node)
+        self.buckets[node.cnt].insert(node)
         return node.val
 
     def put(self, key: int, value: int) -> None:
@@ -62,11 +62,11 @@ class LFUCache:
             self.nodes[key].val = value
             return
         if self.capacity == 0:
-            node = self.counts[self.min_cnt].pop()
+            node = self.buckets[self.min_cnt].pop()
             del self.nodes[node.key]
             self.capacity += 1
         self.nodes[key] = node = Node(key, value)
-        self.counts[node.cnt].insert(node)
+        self.buckets[node.cnt].insert(node)
         self.min_cnt = 1
         self.capacity -= 1
 

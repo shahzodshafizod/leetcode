@@ -11,7 +11,7 @@ import (
 type LFUCache struct {
 	capacity int
 	nodes    map[int]*list.Element
-	counts   map[int]*list.List
+	buckets  map[int]*list.List
 	minCnt   int
 }
 
@@ -19,7 +19,7 @@ func NewLFUCache(capacity int) LFUCache {
 	return LFUCache{
 		capacity: capacity,
 		nodes:    make(map[int]*list.Element),
-		counts:   map[int]*list.List{1: {}},
+		buckets:  map[int]*list.List{1: {}},
 		minCnt:   1,
 	}
 }
@@ -30,15 +30,15 @@ func (l *LFUCache) Get(key int) int {
 	}
 	var node = l.nodes[key]
 	var pair = node.Value.(*pkg.Pair)
-	l.counts[pair.Cnt].Remove(node)
-	if l.counts[pair.Cnt].Len() == 0 && l.minCnt == pair.Cnt {
+	l.buckets[pair.Cnt].Remove(node)
+	if l.buckets[pair.Cnt].Len() == 0 && l.minCnt == pair.Cnt {
 		l.minCnt++
 	}
 	pair.Cnt++
-	if l.counts[pair.Cnt] == nil {
-		l.counts[pair.Cnt] = &list.List{}
+	if l.buckets[pair.Cnt] == nil {
+		l.buckets[pair.Cnt] = &list.List{}
 	}
-	l.nodes[key] = l.counts[pair.Cnt].PushFront(pair)
+	l.nodes[key] = l.buckets[pair.Cnt].PushFront(pair)
 	return pair.Val
 }
 
@@ -50,13 +50,13 @@ func (l *LFUCache) Put(key int, value int) {
 		return
 	}
 	if l.capacity == 0 {
-		var node = l.counts[l.minCnt].Back()
+		var node = l.buckets[l.minCnt].Back()
 		var pair = node.Value.(*pkg.Pair)
 		delete(l.nodes, pair.Key)
-		l.counts[l.minCnt].Remove(node)
+		l.buckets[l.minCnt].Remove(node)
 		l.capacity++
 	}
-	l.nodes[key] = l.counts[1].PushFront(&pkg.Pair{Key: key, Val: value, Cnt: 1})
+	l.nodes[key] = l.buckets[1].PushFront(&pkg.Pair{Key: key, Val: value, Cnt: 1})
 	l.minCnt = 1
 	l.capacity--
 }
