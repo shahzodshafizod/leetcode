@@ -62,7 +62,7 @@ class Solution(unittest.TestCase):
                 mountain = max(mountain, length)
         return n-mountain
 
-    def test(self) -> None:
+    def test(self):
         for nums, expected in [
             ([1,3,1], 0),
             ([2,1,1,5,6,2,3,1], 3),

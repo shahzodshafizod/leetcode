@@ -51,7 +51,7 @@ class Solution(unittest.TestCase):
                 )
         return dp[0][0]
 
-    def test(self) -> None:
+    def test(self):
         for events, k, expected in [
             ([[1,2,4],[3,4,3],[2,3,1]], 2, 7),
             ([[1,2,4],[3,4,3],[2,3,10]], 2, 10),

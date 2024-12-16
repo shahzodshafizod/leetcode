@@ -52,7 +52,7 @@ class Solution(unittest.TestCase):
                 )
         return dp[0][0]
 
-    def test(self) -> None:
+    def test(self):
         for robot, factory, expected in [
             ([7], [[0,1]], 7),
 		    ([1,-1], [[-2,1],[2,1]], 2),

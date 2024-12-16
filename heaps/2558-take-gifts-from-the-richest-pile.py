@@ -31,7 +31,7 @@ class Solution(unittest.TestCase):
             heapq.heapreplace(max_heap, -int(sqrt(-max_heap[0])))
         return -sum(max_heap)
 
-    def test(self) -> None:
+    def test(self):
         for gifts, k, expected in [
             ([1,1,1,1], 4, 4),
             ([25,64,9,4,100], 4, 29),

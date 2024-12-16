@@ -41,7 +41,7 @@ class Solution(unittest.TestCase):
             dp = tmp
         return dp[k]
 
-    def test(self) -> None:
+    def test(self):
         for n, k, expected in [
             (3, 2, 3),
             (5, 5, 1),

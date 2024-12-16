@@ -44,7 +44,7 @@ class Solution(unittest.TestCase):
                     )
         return dp[0][m-1]
     
-    def test(self) -> None:
+    def test(self):
         for n, cuts, expected in [
             (7, [1,3,4,5], 16),
             (9, [5,6,1,4,2], 22),

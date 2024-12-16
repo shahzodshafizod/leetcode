@@ -45,7 +45,7 @@ class Solution(unittest.TestCase):
             start, end = start+1, end+1
         return decrypted
 
-    def test(self) -> None:
+    def test(self):
         for code, k, expected in [
             ([56], 0, [0]),
             ([45,52], 1, [52,45]),

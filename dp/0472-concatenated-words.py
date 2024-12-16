@@ -93,7 +93,7 @@ class Solution(unittest.TestCase):
             word_set.add(word)
         return concatenated
 
-    def test(self) -> None:
+    def test(self):
         for words, expected in [
             (["cat","dog","catdog"], ["catdog"]),
             (["cat","cats","catsdogcats","dog","dogcatsdog","hippopotamuses","rat","ratcatdogcat"], ["catsdogcats","dogcatsdog","ratcatdogcat"]),

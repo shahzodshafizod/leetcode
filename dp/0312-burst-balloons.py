@@ -45,7 +45,7 @@ class Solution(unittest.TestCase):
         # [0] and [n-1] are not part of the nums
         return dp[1][n-2]
 
-    def test(self) -> None:
+    def test(self):
         for nums, expected in [
             ([3,1,5,8], 167),
             ([1,5], 10),

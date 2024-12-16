@@ -50,7 +50,7 @@ class Solution(unittest.TestCase):
             return str(prev)
         return str(next)
 
-    def test(self) -> None:
+    def test(self):
         for n, expected in [
             ("123", "121"),
             ("1", "0"),

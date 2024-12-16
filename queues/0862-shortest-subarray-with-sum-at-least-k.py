@@ -58,7 +58,7 @@ class Solution(unittest.TestCase):
             queue.append(end)
         return -1 if length > n else length
 
-    def test(self) -> None:
+    def test(self):
         for nums, k, expected in [
             ([1], 1, 1),
             ([1,2], 4, -1),

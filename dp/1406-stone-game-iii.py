@@ -52,7 +52,7 @@ class Solution(unittest.TestCase):
             dp[0], dp[1], dp[2] = best, dp[0], dp[1]
         return "Alice" if dp[0] > 0 else ("Bob" if dp[0] < 0 else "Tie")
 
-    def test(self) -> None:
+    def test(self):
         for stoneValue, expected in [
             ([1,2,3,7], "Bob"),
             ([1,2,3,-9], "Alice"),

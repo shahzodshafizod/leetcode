@@ -12,7 +12,7 @@ class Solution(unittest.TestCase):
             single ^= num
         return single
 
-    def test(self) -> None:
+    def test(self):
         for nums, expected in [
             ([2,2,1], 1),
             ([4,1,2,1,2], 4),

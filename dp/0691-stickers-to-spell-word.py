@@ -36,7 +36,7 @@ class Solution(unittest.TestCase):
         count = dfs(target)
         return count if count != MAX_INT else -1
 
-    def test(self) -> None:
+    def test(self):
         for stickers, target, expected in [
             (["with","example","science"], "thehat", 3),
             (["notice","possible"], "basicbasic", -1),

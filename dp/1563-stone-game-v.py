@@ -55,7 +55,7 @@ class Solution(unittest.TestCase):
                         dp[left][right] = max(dp[left][right], rsum + dp[idx+1][right])
         return dp[0][n-1]
 
-    def test(self) -> None:
+    def test(self):
         for stoneValue, expected in [
             ([6,2,3,4,5,5], 18),
             ([7,7,7,7,7,7,7], 28),

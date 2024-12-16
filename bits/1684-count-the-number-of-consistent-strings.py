@@ -19,7 +19,7 @@ class Solution(unittest.TestCase):
                     break
         return count
 
-    def test(self) -> None:
+    def test(self):
         for allowed, words, expected in [
             ("ab", ["ad","bd","aaab","baa","badab"], 2),
             ("abc", ["a","b","c","ab","ac","bc","abc"], 7),

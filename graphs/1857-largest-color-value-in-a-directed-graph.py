@@ -71,7 +71,7 @@ class Solution(unittest.TestCase):
                     queue.append(next)
         return result if n == 0 else -1
 
-    def test(self) -> None:
+    def test(self):
         for colors, edges, expected in [
             ("a", [[0,0]], -1),
             ("ab", [[0,1],[1,1]], -1),

@@ -50,7 +50,7 @@ class Solution(unittest.TestCase):
                     )
         return dp[limit-1]
 
-    def test(self) -> None:
+    def test(self):
         for nums, expected in [
             ([1,2], 1),
             ([2,3,4,6], 8),

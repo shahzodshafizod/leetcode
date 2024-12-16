@@ -104,7 +104,7 @@ class Solution(unittest.TestCase):
                     return True
         return False
 
-    def test(self) -> None:
+    def test(self):
         for nums, expected in [
             ([1,2,3,4,5,6,7,8], True),
 		    ([3,1], False),

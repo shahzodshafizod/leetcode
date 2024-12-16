@@ -32,7 +32,7 @@ class Solution(unittest.TestCase):
 
         return backtrack(0)
 
-    def test(self) -> None:
+    def test(self):
         for n, expected in [
             (4, 2),
             (1, 1),

@@ -42,7 +42,7 @@ class Solution(unittest.TestCase):
             lis[left] = num
         return len(lis)
     
-    def test(self) -> None:
+    def test(self):
         for nums, expected in [
             ([10,9,2,5,3,7,101,18], 4),
             ([0,1,0,3,2,3], 4),

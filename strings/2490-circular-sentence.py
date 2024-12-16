@@ -24,7 +24,7 @@ class Solution(unittest.TestCase):
                 return False
         return True
     
-    def test(self) -> None:
+    def test(self):
         for sentence, expected in [
             ("L", True),
             ("sus", True),

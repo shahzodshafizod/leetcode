@@ -70,7 +70,7 @@ class Solution(unittest.TestCase):
                     )
         return curr[k]
 
-    def test(self) -> None:
+    def test(self):
         for piles, k, expected in [
             ([[1,100,3],[7,8,9]], 2, 101),
             ([[1],[100],[100],[100],[100],[100],[10,1,1,1,1,1,700]], 5, 500),

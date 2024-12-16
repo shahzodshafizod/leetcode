@@ -31,7 +31,7 @@ class Solution(unittest.TestCase):
             lookup[arr[curr]].clear()
         return n-1
 
-    def test(self) -> None:
+    def test(self):
         for arr, expected in [
             ([100,-23,-23,404,100,23,23,23,3,404], 3),
             ([7], 0),

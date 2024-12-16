@@ -35,7 +35,7 @@ class Solution(unittest.TestCase):
         lines.append(last_line)
         return lines
 
-    def test(self) -> None:
+    def test(self):
         for words, maxWidth, expected in [
             (
                 ["This","is","an","example","of","text","justification."],

@@ -102,7 +102,7 @@ class SummaryRanges:
         return res
 
 class Test(unittest.TestCase):
-    def test(self) -> None:
+    def test(self):
         for commands, values, expected in [
             (
                 ["SummaryRanges","addNum","getIntervals","addNum","getIntervals","addNum","getIntervals","addNum","getIntervals","addNum","getIntervals"],

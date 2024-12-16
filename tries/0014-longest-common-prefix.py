@@ -52,7 +52,7 @@ class Solution(unittest.TestCase):
     #         return prefix
     #     return search(root, "", len(strs))
 
-    def test(self) -> None:
+    def test(self):
         for strs, expected in [
             (["flower","flow","flight"], "fl"),
             (["dog","racecar","car"], ""),

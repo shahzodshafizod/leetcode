@@ -146,7 +146,7 @@ class Solution(unittest.TestCase):
                         return False
         return True
 
-    def test(self) -> None:
+    def test(self):
         for xCorner, yCorner, circles, expected in [
             (3, 4, [[2,1,1]], True),
             (3, 3, [[1,1,2]], False),

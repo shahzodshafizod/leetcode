@@ -22,7 +22,7 @@ class Solution(unittest.TestCase):
         if seats != 2: return 0
         return ways
 
-    def test(self) -> None:
+    def test(self):
         for corridor, expected in [
             ("SSPPSPS", 3),
             ("PPSPSP", 1),

@@ -24,7 +24,7 @@ class Solution(unittest.TestCase):
                 return False
         return True
 
-    def test(self) -> None:
+    def test(self):
         for bills, expected in [
             ([5, 5, 5, 10, 20], True),
             ([5, 5, 10, 10, 20], False),

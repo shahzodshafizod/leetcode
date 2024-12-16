@@ -33,7 +33,7 @@ class Solution(unittest.TestCase):
             return f"S{node.val}L{serialize(node.left)}R{serialize(node.right)}E"
         return serialize(subRoot) in serialize(root)
 
-    def test(self) -> None:
+    def test(self):
         for root, subRoot, expected in [
             ([3,4,5,1,2], [4,1,2], True),
             ([3,4,5,1,2,None,None,None,None,0], [4,1,2], False),

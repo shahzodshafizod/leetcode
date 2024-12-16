@@ -80,7 +80,7 @@ class Solution(unittest.TestCase):
                     queue.append((newState, semesters+1))
         return result
 
-    def test(self) -> None:
+    def test(self):
         for n, relations, k, expected in [
             (11, [], 2, 6),
             (4, [[2,1],[3,1],[1,4]], 2, 3),

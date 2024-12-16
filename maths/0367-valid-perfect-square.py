@@ -20,7 +20,7 @@ class Solution(unittest.TestCase):
                 return True
         return False
 
-    def test(self) -> None:
+    def test(self):
         for num, expected in [
             (16, True),
             (14, False),

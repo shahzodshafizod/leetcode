@@ -52,7 +52,7 @@ class Solution(unittest.TestCase):
                     answer[idx] -= 1
         return answer
 
-    def test(self) -> None:
+    def test(self):
         for n, edges, queries, expected in [
             (4, [[1,2],[2,4],[1,3],[2,3],[2,1]], [2,3], [6,5]),
 		    (5, [[1,5],[1,5],[3,4],[2,5],[1,3],[5,1],[2,3],[2,5]], [1,2,3,4,5], [10,10,9,8,6]),

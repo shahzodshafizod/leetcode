@@ -23,7 +23,7 @@ class Solution(unittest.TestCase):
             score = max(score, minimum*(right-left+1))
         return score
 
-    def test(self) -> None:
+    def test(self):
         for nums, k, expected in [
             ([1,4,3,7,4,5], 3, 15),
 		    ([5,5,4,5,4,1,1,1], 0, 20),

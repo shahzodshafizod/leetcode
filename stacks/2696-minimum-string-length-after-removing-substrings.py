@@ -17,7 +17,7 @@ class Solution(unittest.TestCase):
                 stack.append(c)
         return len(stack)
 
-    def test(self) -> None:
+    def test(self):
         for s, expected in [
             ("ABFCACDB", 2),
 		    ("ACBBD", 5),

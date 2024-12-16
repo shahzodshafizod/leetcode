@@ -27,7 +27,7 @@ class Solution(unittest.TestCase):
                 node = node.next
         return dummy.next
 
-    def test(self) -> None:
+    def test(self):
         for head, val, expected in [
             ([1,2,6,3,4,5,6], 6, [1,2,3,4,5]),
             ([], 1, []),

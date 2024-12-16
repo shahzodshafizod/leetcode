@@ -72,7 +72,7 @@ class Solution(unittest.TestCase):
                 ) % MOD
         return curr[0]
 
-    def test(self) -> None:
+    def test(self):
         for words, target, expected in [
             (["acca","bbbb","caca"], "aba", 6),
             (["abba","baab"], "bab", 4),

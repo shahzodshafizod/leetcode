@@ -46,7 +46,7 @@ class Solution(unittest.TestCase):
             counter[curr] += 1
         return count
 
-    def test(self) -> None:
+    def test(self):
         for nums, k, expected in [
             ([1,2,3,4,5], 2, 7),
             ([1,2,3,4], 5, 0),

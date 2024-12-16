@@ -32,7 +32,7 @@ class Solution(unittest.TestCase):
                 seen[nr][nc] = True
         return -1
 
-    def test(self) -> None:
+    def test(self):
         for grid, expected in [
 		    ([[0,2,4],[0,5,5],[5,4,3]], 6),
             ([[0,2,4],[3,2,1],[1,0,4]], -1),

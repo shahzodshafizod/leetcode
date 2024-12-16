@@ -31,7 +31,7 @@ class Solution(unittest.TestCase):
         ranks = {num:idx+1 for idx,num in enumerate(sorted(set(arr)))}
         return [ranks[num] for num in arr]
 
-    def test(self) -> None:
+    def test(self):
         for arr, expected in [
             ([40,10,20,30], [4,1,2,3]),
             ([100,100,100], [1,1,1]),

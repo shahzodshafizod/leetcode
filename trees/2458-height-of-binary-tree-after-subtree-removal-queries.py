@@ -72,7 +72,7 @@ class Solution(unittest.TestCase):
         dfs(root, 0)
         return [heights[queries[idx]] for idx in range(len(queries))]
 
-    def test(self) -> None:
+    def test(self):
         for root, queries, expected in [
             ([5,8,9,2,1,3,7,4,6], [3,2,4,8], [3,2,3,2]),
             ([1,None,5,3,None,2,4], [3,5,4,2,4], [1,0,3,3,3]),

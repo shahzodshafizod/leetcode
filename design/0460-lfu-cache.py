@@ -71,7 +71,7 @@ class LFUCache:
         self.capacity -= 1
 
 class Solution(unittest.TestCase):
-    def test(self) -> None:
+    def test(self):
         for commands, values, expected in [
             (
                 ["LFUCache","put","put","get","put","get","get","put","get","get","get"],

@@ -66,7 +66,7 @@ class Solution(unittest.TestCase):
                 order.append(stack.pop())
         return [[order[i], order[i-1]] for i in range(len(order)-1,0,-1)]
 
-    def test(self) -> None:
+    def test(self):
         for pairs, expected in [
             ([[1,3],[3,2],[2,1]], [[1,3],[3,2],[2,1]]),
             ([[1,2],[1,3],[2,1]], [[1,2],[2,1],[1,3]]),

@@ -22,7 +22,7 @@ class MedianFinder():
         return (self.min_heap[0]-self.max_heap[0])/2
 
 class TestMedianFinder(unittest.TestCase):
-    def test(self) -> None:
+    def test(self):
         for commands, values, expected in [
             (
                 ["MedianFinder", "addNum", "addNum", "findMedian", "addNum", "findMedian"],

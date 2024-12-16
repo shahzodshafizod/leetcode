@@ -71,7 +71,7 @@ class Solution(unittest.TestCase):
                 return words_index+1
         return -1
 
-    def test(self) -> None:
+    def test(self):
         for sentence, searchWord, expected in [
             ("love", "lov", 1),
             ("i am tired", "you", -1),

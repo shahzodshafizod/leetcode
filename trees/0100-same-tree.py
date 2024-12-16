@@ -34,7 +34,7 @@ class Solution(unittest.TestCase):
             queue.append((p.right, q.right))
         return True
 
-    def test(self) -> None:
+    def test(self):
         for p, q, expected in [
             ([1,2,3], [1,2,3], True),
             ([1,2], [1,None,2], False),

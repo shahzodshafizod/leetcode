@@ -61,7 +61,7 @@ class Solution(unittest.TestCase):
         
         return edges
 
-    def test(self) -> None:
+    def test(self):
         for n, edges, source, destination, target, expected in [
             (5, [[4,1,-1],[2,0,-1],[0,3,-1],[4,3,-1]], 0, 1, 5, [[4,1,1],[2,0,3],[0,3,3],[4,3,1]]),
             (3, [[0,1,-1],[0,2,5]], 0, 2, 6, []),

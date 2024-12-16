@@ -70,7 +70,7 @@ class Solution(unittest.TestCase):
             heapq.heapreplace(pq, (nums[row][col], row, col)) # O(LogN)
         return interval
 
-    def test(self) -> None:
+    def test(self):
         for nums, expected in [
             ([[10],[11]], [10,11]),
             ([[1,2,3],[1,2,3],[1,2,3]], [1,1]),

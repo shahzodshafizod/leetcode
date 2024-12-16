@@ -39,7 +39,7 @@ class Solution(unittest.TestCase):
                 if indegree[dst] == 0: queue.append(dst)
         return max(dist)
 
-    def test(self) -> None:
+    def test(self):
         for n, relations, time, expected in [
             (1, [], [10], 10),
             (2, [], [3,5], 5),

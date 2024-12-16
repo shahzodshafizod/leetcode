@@ -57,7 +57,7 @@ class Solution(unittest.TestCase):
             return res
         return dp(0, k)
 
-    def test(self) -> None:
+    def test(self):
         for s, k, expected in [
             ("x", 1, 0),
             ("aaabcccd", 2, 4),

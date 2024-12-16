@@ -64,7 +64,7 @@ class Solution(unittest.TestCase):
                 count[px] += count[py]
         return result
 
-    def test(self) -> None:
+    def test(self):
         for vals, edges, expected in [
             ([1], [], 1),
             ([2,1,1], [[0,1],[2,0]], 3),

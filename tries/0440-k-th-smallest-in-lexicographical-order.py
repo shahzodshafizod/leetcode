@@ -29,7 +29,7 @@ class Solution(unittest.TestCase):
                 k -= 1
         return curr
 
-    def test(self) -> None:
+    def test(self):
         for n, k, expected in [
             (13, 2, 10),
 		    (1, 1, 1),

@@ -71,7 +71,7 @@ class Solution(unittest.TestCase):
             dp = max(dp, presum[idx] - dp)
         return dp
 
-    def test(self) -> None:
+    def test(self):
         for stones, expected in [
             ([-10,-12], -22),
             ([-1,2,-3,4,-5], 5),

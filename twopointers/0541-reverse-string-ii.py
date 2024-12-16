@@ -18,7 +18,7 @@ class Solution(unittest.TestCase):
                 right -= 1
         return "".join(b)
 
-    def test(self) -> None:
+    def test(self):
         for s, k, expected in [
             ("abcd", 2, "bacd"),
             ("abcdefg", 2, "bacdfeg"),

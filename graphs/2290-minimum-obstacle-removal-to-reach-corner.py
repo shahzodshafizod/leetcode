@@ -71,7 +71,7 @@ class Solution(unittest.TestCase):
                     seen[r][c] = True
         return m+n-1
 
-    def test(self) -> None:
+    def test(self):
         for grid, expected in [
             ([[0,0],[0,0]], 0),
             ([[0,1],[1,0]], 1),

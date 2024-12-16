@@ -30,7 +30,7 @@ class Solution(unittest.TestCase):
             j += 1
         return "".join(res[:j])
 
-    def test(self) -> None:
+    def test(self):
         for s, expected in [
             ("abbaca", "ca"),
             ("azxxzy", "ay"),

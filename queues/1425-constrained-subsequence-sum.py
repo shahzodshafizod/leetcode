@@ -68,7 +68,7 @@ class Solution(unittest.TestCase):
             queue.append(idx)
         return result
 
-    def test(self) -> None:
+    def test(self):
         for nums, k, expected in [
             ([10,2,-10,5,20], 2, 37),
             ([-1,-2,-3], 1, -1),

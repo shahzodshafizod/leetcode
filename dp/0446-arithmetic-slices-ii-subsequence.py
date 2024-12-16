@@ -59,7 +59,7 @@ class Solution(unittest.TestCase):
                 count += dp[prev][difference]
         return count
 
-    def test(self) -> None:
+    def test(self):
         for nums, expected in [
             ([-104], 0),
 		    ([7,7,7,7,7], 16),

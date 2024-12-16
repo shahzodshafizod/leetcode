@@ -32,7 +32,7 @@ class Codec:
         return root
 
 class TestCodec(unittest.TestCase):
-    def test(self) -> None:
+    def test(self):
         ser = Codec()
         deser = Codec()
         for root, expected in [

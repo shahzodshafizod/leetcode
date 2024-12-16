@@ -51,7 +51,7 @@ class Solution(unittest.TestCase):
             if gid == n: return True
         return False
 
-    def test(self) -> None:
+    def test(self):
         for s, goal, expected in [
             ("a", "a", True),
             ("bcad", "cdba", False),

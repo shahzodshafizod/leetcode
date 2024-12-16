@@ -20,7 +20,7 @@ class Solution(unittest.TestCase):
         #     matrix[idx//n][idx%n] = original[idx]
         return matrix
 
-    def test(self) -> None:
+    def test(self):
         for original, m, n, expected in [
             ([1,2,3,4], 2, 2, [[1,2],[3,4]]),
             ([1,2,3], 1, 3, [[1,2,3]]),

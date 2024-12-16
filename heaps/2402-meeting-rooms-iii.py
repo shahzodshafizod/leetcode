@@ -28,7 +28,7 @@ class Solution(unittest.TestCase):
             heapq.heappush(used, (end, room))
         return count.index(max(count))
 
-    def test(self) -> None:
+    def test(self):
         for n, meetings, expected in [
             (2, [[0,10],[1,5],[2,7],[3,4]], 0),
             (3, [[1,20],[2,10],[3,5],[4,9],[6,8]], 1),

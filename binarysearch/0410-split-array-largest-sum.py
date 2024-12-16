@@ -53,7 +53,7 @@ class Solution(unittest.TestCase):
                 left = mid + 1
         return minmaxsum
 
-    def test(self) -> None:
+    def test(self):
         for nums, k, expected in [
             ([7,2,5,10,8], 2, 18),
             ([1,2,3,4,5], 2, 9),

@@ -57,7 +57,7 @@ class Solution(unittest.TestCase):
                 res += (len(seta) - same) * (len(setb) - same)
         return res * 2
 
-    def test(self) -> None:
+    def test(self):
         for ideas, expected in [
             (["coffee","donuts","time","toffee"], 6),
 		    (["lack","back"], 0),

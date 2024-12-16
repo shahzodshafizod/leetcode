@@ -44,7 +44,7 @@ class Solution(unittest.TestCase):
                     dp[curr][col1][col2] += grid[row][col1] + grid[row][col2]
         return dp[curr][0][n-1]
 
-    def test(self) -> None:
+    def test(self):
         for grid, expected in [
             ([[3,1,1],[2,5,1],[1,5,5],[2,1,1]], 24),
             ([[13,14,37,49,64,98,4,11,47,81],[71,46,50,50,10,14,35,35,52,69]], 234),

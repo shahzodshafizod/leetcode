@@ -65,7 +65,7 @@ class Solution(unittest.TestCase):
                 curr[ki] = total
         return curr[k]
 
-    def test(self) -> None:
+    def test(self):
         for n, k, expected in [
             (3, 0, 1),
 		    (3, 1, 2),

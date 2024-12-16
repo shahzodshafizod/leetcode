@@ -52,7 +52,7 @@ class Solution(unittest.TestCase):
                 answer[idx-1] = str(idx)
         return answer
 
-    def test(self) -> None:
+    def test(self):
         for n, expected in [
             (3, ["1","2","Fizz"]),
             (5, ["1","2","Fizz","4","Buzz"]),

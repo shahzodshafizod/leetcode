@@ -28,7 +28,7 @@ class KthLargest:
 # param_1 = obj.add(val)
 
 class TestKthLargest(unittest.TestCase):
-    def test(self) -> None:
+    def test(self):
         for commands, values, expected in [
             (
                 ["KthLargest", "add", "add", "add", "add", "add"],

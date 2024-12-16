@@ -117,7 +117,7 @@ class AllOne:
         return self.tail.prev.key
 
 class TestAllOne(unittest.TestCase):
-    def test(self) -> None:
+    def test(self):
         for commands, values, expected in [
             (
                 ["AllOne","inc","inc","getMaxKey","getMinKey","inc","getMaxKey","getMinKey"],

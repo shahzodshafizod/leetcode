@@ -63,7 +63,7 @@ class Solution(unittest.TestCase):
                 stack.append(c)
         return stack[-1] == 't'
 
-    def test(self) -> None:
+    def test(self):
         for expression, expected in [
             ("&(|(f))", False),
             ("|(f,f,f,t)", True),

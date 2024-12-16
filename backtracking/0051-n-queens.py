@@ -36,7 +36,7 @@ class Solution(unittest.TestCase):
         backtrack(0)
         return solutions
 
-    def test(self) -> None:
+    def test(self):
         for n, expected in [
             (4, [[".Q..","...Q","Q...","..Q."],["..Q.","Q...","...Q",".Q.."]]),
             (1, [["Q"]]),

@@ -58,7 +58,7 @@ class Solution(unittest.TestCase):
 			)
         return dp[n]
 
-    def test(self) -> None:
+    def test(self):
         for startTime, endTime, profit, expected in [
             ([1,1,1], [2,3,4], [5,6,4], 6),
             ([7779], [13973], [4658], 4658),

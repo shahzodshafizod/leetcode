@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0895 | [Maximum Frequency Stack](https://leetcode.com/problems/maximum-frequency-stack/) | Hard | Hash Table, Stack, Design, Ordered Set | 2024-12-16 | [Go](design/0895-maximum-frequency-stack.go) [Python](design/0895-maximum-frequency-stack.py)
+| 3264 | [Final Array State After K Multiplication Operations I](https://leetcode.com/problems/final-array-state-after-k-multiplication-operations-i/) | Easy | Array, Math, Heap (Priority Queue), Simulation | 2024-12-16 | [Go](heaps/3264-final-array-state-after-k-multiplication-operations-i.go) [Python](heaps/3264-final-array-state-after-k-multiplication-operations-i.py)
 | 1782 | [Count Pairs Of Nodes](https://leetcode.com/problems/count-pairs-of-nodes/) | Hard | Array, Two Pointers, Binary Search, Graph, Sorting | 2024-12-15 | [Go](twopointers/1782-count-pairs-of-nodes.go) [Python](twopointers/1782-count-pairs-of-nodes.py)
 | 0342 | [Power of Four](https://leetcode.com/problems/power-of-four/) | Easy | Math, Bit Manipulation, Recursion | 2024-12-15 | [Go](maths/0342-power-of-four.go) [Python](maths/0342-power-of-four.py)
 | 1095 | [Find in Mountain Array](https://leetcode.com/problems/find-in-mountain-array/) | Hard | Binary Search, Recursion, Two Pointers, Dynamic Programming, Greedy, Memoization, Backtracking | 2024-12-14 | [Go](binarysearch/1095-find-in-mountain-array.go) [Python](binarysearch/1095-find-in-mountain-array.py)

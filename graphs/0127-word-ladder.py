@@ -38,7 +38,7 @@ class Solution(unittest.TestCase):
             steps += 1
         return 0
 
-    def test(self) -> None:
+    def test(self):
         for beginWord, endWord, wordList, expected in [
             ("hit", "cog", ["hot","dot","dog","lot","log","cog"], 5),
             ("hit", "cog", ["hot","dot","dog","lot","log"], 0),

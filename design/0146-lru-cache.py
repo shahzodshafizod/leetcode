@@ -56,7 +56,7 @@ class LRUCache:
         node.next.prev = node
 
 class Solution(unittest.TestCase):
-    def test(self) -> None:
+    def test(self):
         for commands, values, expected in [
             (
                 ["LRUCache", "put", "put", "get", "put", "get", "put", "get", "get", "get"],

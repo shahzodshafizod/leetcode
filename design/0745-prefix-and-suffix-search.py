@@ -44,7 +44,7 @@ class WordFilter:
         return self.trie.find(word)
 
 class TestWordFilter(unittest.TestCase):
-    def test(self) -> None:
+    def test(self):
         for commands, values, expected in [
             (["WordFilter", "f", "f", "f"], [["apple", "app", "ape"], ["a", "e"], ["appl", "pple"], ["apple", "apple"]], [None, 2, 0, 0]),
             (["WordFilter","f"], [["abbba","abba"],["ab","ba"]], [None,1]),

@@ -48,7 +48,7 @@ class Solution(unittest.TestCase):
                 b[curr], b[next] = b[next], b[curr]
         return -1
 
-    def test(self) -> None:
+    def test(self):
         for board, expected in [
             ([[1,2,3],[4,0,5]], 1),
             ([[1,2,3],[5,4,0]], -1),

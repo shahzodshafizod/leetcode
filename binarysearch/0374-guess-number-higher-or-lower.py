@@ -33,7 +33,7 @@ class Solution(unittest.TestCase):
             else: break
         return num
 
-    def test(self) -> None:
+    def test(self):
         for n, picked, expected in [
             (10, 6, 6),
             (1, 1, 1),

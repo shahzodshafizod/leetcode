@@ -56,7 +56,7 @@ class Solution(unittest.TestCase):
         # -1, excluding the empty subsequence
         return (dp - 1 + MOD) % MOD
 
-    def test(self) -> None:
+    def test(self):
         for s, expected in [
             ("abc", 7),
             ("aba", 6),

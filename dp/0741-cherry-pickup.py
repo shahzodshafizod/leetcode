@@ -89,7 +89,7 @@ class Solution(unittest.TestCase):
                     if dp[i][j] >= 0: dp[i][j] += grid[i][t-i] + (grid[j][t-j] if i != j else 0)
         return max(0, dp[n-1][n-1])
 
-    def test(self) -> None:
+    def test(self):
         for grid, expected in [
             ([[0,1,-1],[1,0,-1],[1,1,1]], 5),
 		    ([[1,1,-1],[1,-1,1],[-1,1,1]], 0),

@@ -53,7 +53,7 @@ class Solution(unittest.TestCase):
     #         return turns
     #     return minTurns(0, len(s)-1)
 
-    def test(self) -> None:
+    def test(self):
         for s, expected in [
             ("aaabbb", 2),
             ("aba", 2),

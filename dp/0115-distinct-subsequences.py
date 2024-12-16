@@ -51,7 +51,7 @@ class Solution(unittest.TestCase):
                     dp[j] += dp[j-1]
         return dp[nt]
 
-    def test(self) -> None:
+    def test(self):
         for s, t, expected in [
             ("rabbbit", "rabbit", 3),
             ("babgbag", "bag", 5),

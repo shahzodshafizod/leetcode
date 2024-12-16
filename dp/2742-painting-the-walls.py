@@ -55,7 +55,7 @@ class Solution(unittest.TestCase):
                 )
         return curr[n]
 
-    def test(self) -> None:
+    def test(self):
         for cost, time, expected in [
             ([2,2], [1,1], 2),
             ([1,2,3,2], [1,2,3,2], 3),

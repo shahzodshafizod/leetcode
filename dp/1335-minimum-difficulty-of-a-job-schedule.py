@@ -98,7 +98,7 @@ class Solution(unittest.TestCase):
                 stack.append(idx)
         return curr[n-1]
 
-    def test(self) -> None:
+    def test(self):
         for jobDifficulty, d, expected in [
             ([6,5,4,3,2,1], 2, 7),
             ([9,9,9], 4, -1),

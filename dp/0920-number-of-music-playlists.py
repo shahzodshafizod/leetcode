@@ -65,7 +65,7 @@ class Solution(unittest.TestCase):
                     ) % MOD
         return curr[n]
 
-    def test(self) -> None:
+    def test(self):
         for n, goal, k, expected in [
             (3, 3, 1, 6),
             (2, 3, 0, 6),

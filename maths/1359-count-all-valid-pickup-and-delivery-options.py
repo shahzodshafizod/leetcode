@@ -74,7 +74,7 @@ class Solution(unittest.TestCase):
         # return int(math.factorial(2*n) / (2 ** n)) % int(1e9+7)
         return (math.factorial(2*n) >> n) % (10**9+7)
 
-    def test(self) -> None:
+    def test(self):
         for n, expected in [
             (1, 1),
             (2, 6),

@@ -37,7 +37,7 @@ class Solution(unittest.TestCase):
                 dp[row][col] = max(1, min(dp[row][col+1], dp[row+1][col]) - dungeon[row][col])
         return dp[0][0]
 
-    def test(self) -> None:
+    def test(self):
         for dungeon, expected in [
             ([[-2,-3,3],[-5,-10,1],[10,30,-5]], 7),
 		    ([[0]], 1),

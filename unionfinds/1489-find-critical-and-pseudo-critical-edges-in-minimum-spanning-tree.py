@@ -54,7 +54,7 @@ class Solution(unittest.TestCase):
                 pseudoc.append(edges[idx][3])
         return [critical, pseudoc]
 
-    def test(self) -> None:
+    def test(self):
         for n, edges, expected in [
             (2, [[0,1,3]], [[0],[]]),
             (3, [[0,1,1],[0,2,2],[1,2,3]], [[0,1],[]]),

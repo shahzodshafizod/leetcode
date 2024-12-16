@@ -63,7 +63,7 @@ class MyLinkedList:
         return node
 
 class Solution(unittest.TestCase):
-    def test(self) -> None:
+    def test(self):
         for commands, values, expected in [
             (
                 ["MyLinkedList","addAtHead","addAtTail","addAtIndex","get","deleteAtIndex","get"],

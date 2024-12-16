@@ -57,7 +57,7 @@ class Solution(unittest.TestCase):
                 heapq.heappop(max_heap)
         return deviation
 
-    def test(self) -> None:
+    def test(self):
         for nums, expected in [
             ([1,2,3,4], 1),
             ([4,1,5,20,3], 3),

@@ -37,7 +37,7 @@ class Solution(unittest.TestCase):
                 x += 1
         return dp[n]
 
-    def test(self) -> None:
+    def test(self):
         for n, expected in [
             (1, True),
             (2, False),

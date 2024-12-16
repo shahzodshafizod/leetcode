@@ -27,7 +27,7 @@ class Solution(unittest.TestCase):
                 stack.append(c)
         return "".join(stack)
 
-    def test(self) -> None:
+    def test(self):
         for s, expected in [
             ("a", "a"),
             ("aab", "aab"),

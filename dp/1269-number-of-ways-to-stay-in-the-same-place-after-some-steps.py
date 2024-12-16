@@ -61,7 +61,7 @@ class Solution(unittest.TestCase):
                     curr[pos] = (curr[pos] + prev[pos+1]) % MOD
         return curr[0]
 
-    def test(self) -> None:
+    def test(self):
         for steps, arrLen, expected in [
             (3, 2, 4),
             (2, 4, 2),

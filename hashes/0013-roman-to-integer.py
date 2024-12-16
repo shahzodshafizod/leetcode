@@ -26,7 +26,7 @@ class Solution(unittest.TestCase):
             next = curr
         return num
 
-    def test(self) -> None:
+    def test(self):
         for s, expected in [
             ("III", 3),
             ("LVIII", 58),

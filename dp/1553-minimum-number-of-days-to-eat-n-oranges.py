@@ -49,7 +49,7 @@ class Solution(unittest.TestCase):
             return memo[n]
         return dp(n)
 
-    def test(self) -> None:
+    def test(self):
         for n, expected in [
 		    (6, 3),
             (10, 4),

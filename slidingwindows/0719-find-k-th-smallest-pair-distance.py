@@ -23,7 +23,7 @@ class Solution(unittest.TestCase):
                 left = distance + 1
         return right
 
-    def test(self) -> None:
+    def test(self):
         for nums, k, expected in [
             ([1,3,1], 1, 0),
             ([1,1,1], 2, 0),

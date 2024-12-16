@@ -50,7 +50,7 @@ class Solution(unittest.TestCase):
             answer[idx] = distance
         return answer
 
-    def test(self) -> None:
+    def test(self):
         for n, queries, expected in [
             (5, [[2,4],[0,2],[0,4]], [3,2,1]),
 		    (4, [[0,3],[0,2]], [1,1]),

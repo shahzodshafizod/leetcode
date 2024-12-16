@@ -34,7 +34,7 @@ class Solution(unittest.TestCase):
             mods[prefmod] += 1
         return count
 
-    def test(self) -> None:
+    def test(self):
         for nums, k, expected in [
             ([4,5,0,-2,-3,1], 5, 7),
             ([5], 9, 0),

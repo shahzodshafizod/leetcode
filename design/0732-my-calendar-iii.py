@@ -20,7 +20,7 @@ class MyCalendarThree:
         return max_overlap
 
 class TestMyCalendarThree(unittest.TestCase):
-    def test(self) -> None:
+    def test(self):
         for commands, values, expected in [
             (
                 ["MyCalendarThree","book","book","book","book","book","book"],

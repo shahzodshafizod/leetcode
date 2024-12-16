@@ -62,7 +62,7 @@ class Solution(unittest.TestCase):
             steps = max(steps, dfs(idx))
         return steps
 
-    def test(self) -> None:
+    def test(self):
         for arr, d, expected in [
             ([6,4,14,6,8,13,9,7,10,6,12], 2, 4),
             ([3,3,3,3,3], 3, 1),

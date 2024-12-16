@@ -53,7 +53,7 @@ class Solution(unittest.TestCase):
             else: return mid
         return -1
 
-    def test(self) -> None:
+    def test(self):
         for mountainArr, target, expected in [
             ([6,7,2], 2, 2),
             ([0,1,2,4,2,1], 3, -1),

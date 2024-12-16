@@ -43,7 +43,7 @@ class Solution(unittest.TestCase):
                     dp[min(minProfit, i+p)][j+g] %= mod
         return sum(dp[minProfit]) % mod
 
-    def test(self) -> None:
+    def test(self):
         for n, minProfit, group, profit, expected in [
             (5, 3, [2,2], [2,3], 2),
             (10, 5, [2,3,5], [6,7,8], 7),

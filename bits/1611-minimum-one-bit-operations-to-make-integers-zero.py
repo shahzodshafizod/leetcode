@@ -50,7 +50,7 @@ class Solution(unittest.TestCase):
             n //= 2
         return operations
 
-    def test(self) -> None:
+    def test(self):
         for n, expected in [
             (3, 2),
 		    (6, 4),
