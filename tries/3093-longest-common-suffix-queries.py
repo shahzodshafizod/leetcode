@@ -15,7 +15,7 @@ class Solution(unittest.TestCase):
     # Space: O(M*C)
     def stringIndices(self, wordsContainer: List[str], wordsQuery: List[str]) -> List[int]:
         class Trie:
-            def __init__(self) -> None:
+            def __init__(self):
                 self.children = defaultdict(Trie)
                 self.index = -1
                 self.length = 5001

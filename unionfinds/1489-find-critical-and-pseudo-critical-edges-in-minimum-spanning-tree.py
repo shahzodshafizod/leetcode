@@ -6,7 +6,7 @@ import unittest
 # python3 -m unittest unionfinds/1489-find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree.py
 
 class UnionFind:
-    def __init__(self, n: int) -> None:
+    def __init__(self, n: int):
         self.size = n
         self.parent = [None] * n
     def Reset(self) -> None:

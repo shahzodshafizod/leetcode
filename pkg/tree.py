@@ -3,7 +3,7 @@ from typing import List, Optional, Any
 
 # Definition for a binary tree node.
 class TreeNode:
-    def __init__(self, val: int = 0, left = None, right = None) -> None:
+    def __init__(self, val: int = 0, left = None, right = None):
         self.val = val
         self.left = left
         self.right = right
@@ -17,8 +17,12 @@ class TreeNode:
         if not __value: return False
         return all([
             self.val == __value.val,
-            self.left and self.left.__eq__(__value.left),
-            self.right and self.right.__eq__(__value.right),
+
+            (not self.left and not __value.left or
+             self.left and self.left.__eq__(__value.left)),
+
+            (not self.right and not __value.right or
+             self.right and self.right.__eq__(__value.right)),
         ])
 
 # def create_tree(vals: List[int], idx: int) -> Optional[TreeNode]:
@@ -52,7 +56,7 @@ def create_tree(vals: List[Any]) -> Optional[TreeNode]:
 
 # Definition for a n-ary tree node.
 class Node:
-    def __init__(self, val: int = 0, children: List = None) -> None:
+    def __init__(self, val: int = 0, children: List = None):
         self.val = val
         self.children = children or []
 

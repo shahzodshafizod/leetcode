@@ -8,10 +8,10 @@ class ListNode:
     
     def __eq__(self, __value: object) -> bool:
         if not __value: return False
-        if self.val != __value.val: return False
-        if not self.next or not __value.next:
-            return self.next == __value.next
-        return self.next.__eq__(__value.next)
+        return all([
+            self.val == __value.val,
+            not self.next and not __value.next or self.next.__eq__(__value.next),
+        ])
 
     def __str__(self) -> str:
         curr = self

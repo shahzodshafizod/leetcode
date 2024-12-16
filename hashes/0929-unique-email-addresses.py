@@ -11,7 +11,7 @@ class Solution(unittest.TestCase):
     # # Space: O(n*m)
     # def numUniqueEmails(self, emails: List[str]) -> int:
     #     class TrieNode:
-    #         def __init__(self) -> None:
+    #         def __init__(self):
     #             self.children = {}
     #             self.end = False
     #     LOCAL, SKIP, DOMAIN = 0, 1, 2

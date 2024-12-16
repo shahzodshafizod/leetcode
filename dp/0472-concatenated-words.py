@@ -11,7 +11,7 @@ class Solution(unittest.TestCase):
     # # Space: O(n*w)
     # def findAllConcatenatedWordsInADict(self, words: List[str]) -> List[str]:
     #     class TrieNode:
-    #         def __init__(self) -> None:
+    #         def __init__(self):
     #             self.children = {}
     #             self.end = False
     #     root = TrieNode()

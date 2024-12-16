@@ -12,7 +12,7 @@ class Solution(unittest.TestCase):
     # # Space: O(N)
     # def distinctNames(self, ideas: List[str]) -> int:
     #     class Node:
-    #         def __init__(self) -> None:
+    #         def __init__(self):
     #             self.children = {}
     #             self.start = False
     #     orda = ord('a')

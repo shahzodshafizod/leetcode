@@ -27,7 +27,7 @@ class Solution(unittest.TestCase):
     # # Trie
     # def longestCommonPrefix(self, strs: List[str]) -> str:
     #     class TrieNode:
-    #         def __init__(self) -> None:
+    #         def __init__(self):
     #             self.words = 0
     #             self.children = {}
     #     # insert

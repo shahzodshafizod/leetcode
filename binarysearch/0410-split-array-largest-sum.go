@@ -1,4 +1,4 @@
-package dp
+package binarysearch
 
 // https://leetcode.com/problems/split-array-largest-sum/
 
@@ -11,7 +11,7 @@ func splitArray(nums []int, k int) int {
 		left = max(left, num)
 		right += num
 	}
-	var largest = right
+	var minmaxSum = right
 	var mid, subarrays, currSum int
 	for left <= right {
 		mid = left + (right-left)/2
@@ -27,13 +27,13 @@ func splitArray(nums []int, k int) int {
 		}
 
 		if subarrays <= k {
-			largest = mid
+			minmaxSum = mid
 			right = mid - 1
 		} else {
 			left = mid + 1
 		}
 	}
-	return largest
+	return minmaxSum
 }
 
 // // Approach: Dynamic Programming
@@ -57,17 +57,17 @@ func splitArray(nums []int, k int) int {
 // 		if dp[idx][k-1] != nil {
 // 			return *dp[idx][k-1]
 // 		}
-// 		var largest = math.MaxInt
+// 		var minmaxSum = math.MaxInt
 // 		var sum = 0
 // 		for j := idx; j <= n-k; j++ {
 // 			sum += nums[j]
-// 			largest = min(largest, max(sum, dfs(j+1, k-1)))
-// 			if sum > largest { // optimization
+// 			minmaxSum = min(minmaxSum, max(sum, dfs(j+1, k-1)))
+// 			if sum > minmaxSum { // optimization
 // 				break
 // 			}
 // 		}
-// 		dp[idx][k-1] = &largest
-// 		return largest
+// 		dp[idx][k-1] = &minmaxSum
+// 		return minmaxSum
 // 	}
 // 	return dfs(0, k)
 // }

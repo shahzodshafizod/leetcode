@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1782 | [Count Pairs Of Nodes](https://leetcode.com/problems/count-pairs-of-nodes/) | Hard | Array, Two Pointers, Binary Search, Graph, Sorting | 2024-12-15 | [Go](twopointers/1782-count-pairs-of-nodes.go) [Python](twopointers/1782-count-pairs-of-nodes.py)
+| 0342 | [Power of Four](https://leetcode.com/problems/power-of-four/) | Easy | Math, Bit Manipulation, Recursion | 2024-12-15 | [Go](maths/0342-power-of-four.go) [Python](maths/0342-power-of-four.py)
 | 1095 | [Find in Mountain Array](https://leetcode.com/problems/find-in-mountain-array/) | Hard | Binary Search, Recursion, Two Pointers, Dynamic Programming, Greedy, Memoization, Backtracking | 2024-12-14 | [Go](binarysearch/1095-find-in-mountain-array.go) [Python](binarysearch/1095-find-in-mountain-array.py)
 | 0035 | [Search Insert Position](https://leetcode.com/problems/search-insert-position/) | Easy | Binary Search | 2024-12-14 | [Go](binarysearch/0035-search-insert-position.go) [Python](binarysearch/0035-search-insert-position.py)
 | 0374 | [Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/) | Easy | Binary Search | 2024-12-13 | [Go](binarysearch/0374-guess-number-higher-or-lower.go) [Python](binarysearch/0374-guess-number-higher-or-lower.py)
@@ -83,7 +85,7 @@
 | 2696 | [Minimum String Length After Removing Substrings](https://leetcode.com/problems/minimum-string-length-after-removing-substrings/) | Easy | String, Stack, Simulation | 2024-10-07 | [Go](stacks/2696-minimum-string-length-after-removing-substrings.go) [Python](stacks/2696-minimum-string-length-after-removing-substrings.py)
 | 0115 | [Distinct Subsequences](https://leetcode.com/problems/distinct-subsequences/) | Hard | String, Dynamic Programming | 2024-10-06 | [Go](dp/0115-distinct-subsequences.go) [Python](dp/0115-distinct-subsequences.py)
 | 0068 | [Text Justification](https://leetcode.com/problems/text-justification/) | Hard | Array, String, Simulation | 2024-10-05 | [Go](strings/0068-text-justification.go) [Python](strings/0068-text-justification.py)
-| 0410 | [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/) | Hard | Array, Binary Search, Dynamic Programming, Greedy, Prefix Sum | 2024-10-04 | [Go](dp/0410-split-array-largest-sum.go) [Python](dp/0410-split-array-largest-sum.py)
+| 0410 | [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/) | Hard | Array, Binary Search, Dynamic Programming, Greedy, Prefix Sum | 2024-10-04 | [Go](binarysearch/0410-split-array-largest-sum.go) [Python](binarysearch/0410-split-array-largest-sum.py)
 | 2183 | [Count Array Pairs Divisible by K](https://leetcode.com/problems/count-array-pairs-divisible-by-k/) | Hard | Array, Math, Number Theory | 2024-10-03 | [Go](maths/2183-count-array-pairs-divisible-by-k.go) [Python](maths/2183-count-array-pairs-divisible-by-k.py)
 | 1331 | [Rank Transform of an Array](https://leetcode.com/problems/rank-transform-of-an-array/) | Easy | Array, Hash Table, Sorting | 2024-10-02 | [Go](arrays/1331-rank-transform-of-an-array.go) [Python](arrays/1331-rank-transform-of-an-array.py)
 | 0312 | [Burst Balloons](https://leetcode.com/problems/burst-balloons/) | Hard | Array, Dynamic Programming | 2024-10-01 | [Go](dp/0312-burst-balloons.go) [Python](dp/0312-burst-balloons.py)

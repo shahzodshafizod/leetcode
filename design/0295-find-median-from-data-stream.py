@@ -6,7 +6,7 @@ import unittest
 # python3 -m unittest design/0295-find-median-from-data-stream.py
 
 class MedianFinder():
-    def __init__(self) -> None:
+    def __init__(self):
         self.max_heap = [] # less that or equal to median
         self.min_heap = [] # greate that median
     

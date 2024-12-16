@@ -11,7 +11,7 @@ class Solution(unittest.TestCase):
     # # Space: O(n)
     # def shortestDistanceAfterQueries(self, n: int, queries: List[List[int]]) -> List[int]:
     #     class UnionFind:
-    #         def __init__(self, n: int) -> None:
+    #         def __init__(self, n: int):
     #             self.root = [x for x in range(n)]
     #             self.n = n
     #         def find(self, x: int) -> int:

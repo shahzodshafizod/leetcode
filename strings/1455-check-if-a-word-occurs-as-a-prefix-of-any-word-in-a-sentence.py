@@ -10,7 +10,7 @@ class Solution(unittest.TestCase):
     # # Space: O(n)
     # def isPrefixOfWord(self, sentence: str, searchWord: str) -> int:
     #     class TrieNode:
-    #         def __init__(self, index: int) -> None:
+    #         def __init__(self, index: int):
     #             self.children = {}
     #             self.index = index
     #     root = TrieNode(-1)

@@ -17,7 +17,7 @@ from sortedcontainers import SortedDict
 # # Time: O(N^2)
 # # Space: O(N)
 # class SummaryRanges:
-#     def __init__(self) -> None:
+#     def __init__(self):
 #         self.MAX = int(1e4)
 #         self.parent = [None] * (self.MAX+2)
 #     def addNum(self, value: int) -> None:
@@ -50,7 +50,7 @@ from sortedcontainers import SortedDict
 # # Time: O(NLogN)
 # # Space: O(N)
 # class SummaryRanges:
-#     def __init__(self) -> None:
+#     def __init__(self):
 #         self.ranges = []
 #     def addNum(self, value: int) -> None:
 #         n = len(self.ranges)

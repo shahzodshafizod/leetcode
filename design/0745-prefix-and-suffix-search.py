@@ -6,12 +6,12 @@ from typing import List
 # python3 -m unittest design/0745-prefix-and-suffix-search.py
 
 class TrieNode:
-    def __init__(self) -> None:
+    def __init__(self):
         self.index = -1
         self.children = {}
 
 class Trie:
-    def __init__(self) -> None:
+    def __init__(self):
         self.root = TrieNode()
     
     def insert(self, word: str, index: int) -> None:
