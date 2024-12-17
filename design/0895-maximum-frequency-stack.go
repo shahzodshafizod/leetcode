@@ -25,8 +25,8 @@ func NewFreqStack() FreqStack {
 }
 
 func (f *FreqStack) Push(val int) {
-	cnt := f.counts[val] + 1
 	f.counts[val]++
+	cnt := f.counts[val]
 	f.buckets[cnt] = &pkg.ListNode{Val: val, Next: f.buckets[cnt]}
 	f.maxCnt = max(f.maxCnt, cnt)
 }

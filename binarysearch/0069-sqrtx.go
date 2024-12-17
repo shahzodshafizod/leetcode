@@ -1,6 +1,6 @@
 package binarysearch
 
-// https://leetcode.com/problems/sqrtx/description/
+// https://leetcode.com/problems/sqrtx/
 
 func mySqrt(x int) int {
 	var left, right = 1, x

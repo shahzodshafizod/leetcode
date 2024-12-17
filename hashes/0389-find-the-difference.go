@@ -1,6 +1,6 @@
 package hashes
 
-// https://leetcode.com/problems/find-the-difference/description/
+// https://leetcode.com/problems/find-the-difference/
 
 // Approach: Bit Manipulation
 // Time: O(n)
