@@ -15,6 +15,7 @@ func TestPivotIndex(t *testing.T) {
 		{nums: []int{1, 7, 3, 6, 5, 6}, index: 3},
 		{nums: []int{1, 2, 3}, index: -1},
 		{nums: []int{2, 1, -1}, index: 0},
+		{nums: []int{-1, -1, -1, 0, 1, 1}, index: 0},
 	} {
 		index := pivotIndex(tc.nums)
 		assert.Equal(t, tc.index, index)

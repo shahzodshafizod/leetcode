@@ -2,6 +2,9 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0605 | [Can Place Flowers](https://leetcode.com/problems/can-place-flowers/) | Easy | Array, Greedy | 2024-12-19 | [Go](arrays/0605-can-place-flowers.go) [Python](arrays/0605-can-place-flowers.py)
+| 1591 | [Strange Printer II](https://leetcode.com/problems/strange-printer-ii/) | Hard | Array, Graph, Topological Sort, Matrix | 2024-12-19 | [Go](graphs/1591-strange-printer-ii.go) [Python](graphs/1591-strange-printer-ii.py)
+| 1475 | [Final Prices With a Special Discount in a Shop](https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/) | Easy | Array, Stack, Monotonic Stack | 2024-12-18 | [Go](stacks/monotonic/1475-final-prices-with-a-special-discount-in-a-shop.go) [Python](stacks/monotonic/1475-final-prices-with-a-special-discount-in-a-shop.py)
 | 2448 | [Minimum Cost to Make Array Equal](https://leetcode.com/problems/minimum-cost-to-make-array-equal/) | Hard | Array, Binary Search, Greedy, Sorting, Prefix Sum | 2024-12-17 | [Go](prefixsums/2448-minimum-cost-to-make-array-equal.go) [Python](prefixsums/2448-minimum-cost-to-make-array-equal.py)
 | 0242 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | Easy | Hash Table, String, Sorting | 2024-12-17 | [Go](hashes/0242-valid-anagram.go) [Python](hashes/0242-valid-anagram.py)
 | 0895 | [Maximum Frequency Stack](https://leetcode.com/problems/maximum-frequency-stack/) | Hard | Hash Table, Stack, Design, Ordered Set | 2024-12-16 | [Go](design/0895-maximum-frequency-stack.go) [Python](design/0895-maximum-frequency-stack.py)
@@ -146,7 +149,7 @@
 | 1568 | [Minimum Number of Days to Disconnect Island](https://leetcode.com/problems/minimum-number-of-days-to-disconnect-island/) | Hard | Array, Depth-First Search, Breadth-First Search, Matrix, Strongly Connected Component | 2024-08-11 | [Go](matrices/1568-minimum-number-of-days-to-disconnect-island.go)
 | 0009 | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | Easy | Math | 2024-08-10 | [Go](maths/0009-palindrome-number.go) [Python](maths/0009-palindrome-number.py)
 | 2129 | [Capitalize the Title](https://leetcode.com/problems/capitalize-the-title/) | Easy | String | 2024-08-09 | [Go](strings/2129-capitalize-the-title.go)
-| 0724 | [Find Pivot Index](https://leetcode.com/problems/find-pivot-index/) | Easy | Array, Prefix Sum | 2024-08-08 | [Go](prefixsums/0724-find-pivot-index.go)
+| 0724 | [Find Pivot Index](https://leetcode.com/problems/find-pivot-index/) | Easy | Array, Prefix Sum | 2024-08-08 | [Go](prefixsums/0724-find-pivot-index.go) [Python](prefixsums/0724-find-pivot-index.go)
 | 0303 | [Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/) | Easy | Array, Design, Prefix Sum | 2024-08-07 | [Go](design/0303-range-sum-query-immutable.go)
 | 0084 | [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) | Hard | Array, Stack, Monotonic Stack | 2024-08-06 | [Go](stacks/0084-largest-rectangle-in-histogram.go)
 | 2053 | [Kth Distinct String in an Array](https://leetcode.com/problems/kth-distinct-string-in-an-array/) | Easy | Array, Hash Table, String, Counting | 2024-08-05 | [Go](hashes/2053-kth-distinct-string-in-an-array.go)

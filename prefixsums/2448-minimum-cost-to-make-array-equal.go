@@ -46,16 +46,13 @@ func minCost(nums []int, cost []int) int64 {
 // 		}
 // 		return n
 // 	}
-// 	var calc = func(target int) int64 {
+// 	var minTotal int64 = math.MaxInt64
+// 	for _, target := range nums {
 // 		var total int64 = 0
 // 		for idx := range nums {
 // 			total += int64(abs(nums[idx]-target)) * int64(cost[idx])
 // 		}
-// 		return total
+// 		minTotal = min(minTotal, total)
 // 	}
-// 	var total int64 = math.MaxInt64
-// 	for target, limit := slices.Min(nums), slices.Max(nums); target <= limit; target++ {
-// 		total = min(total, calc(target))
-// 	}
-// 	return total
+// 	return minTotal
 // }

@@ -10,7 +10,7 @@ class Solution(unittest.TestCase):
     # # Time: O(N*C), N=len(nums), C=max(cost[i])
     # # Space: O(1)
     # def minCost(self, nums: List[int], cost: List[int]) -> int:
-    #     return min(sum(abs(nums[idx]-target) * cost[idx] for idx in range(len(nums))) for target in range(min(nums), max(nums)+1))
+    #     return min(sum(abs(nums[idx]-target)*cost[idx] for idx in range(len(nums))) for target in nums)
 
     # Approach: Sorting + Prefix Sum
     # Time: O(nlogn + c), n=len(nums), c=max(cost[i])
