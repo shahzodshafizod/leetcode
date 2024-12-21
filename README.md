@@ -2,6 +2,10 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0231 | [Power of Two](https://leetcode.com/problems/power-of-two/) | Easy | Math, Bit Manipulation, Recursion | 2024-12-21 | [Go](bits/0231-power-of-two.go) [Python](bits/0231-power-of-two.py)
+| 2872 | [Maximum Number of K-Divisible Components](https://leetcode.com/problems/maximum-number-of-k-divisible-components/) | Hard | Tree, Depth-First Search | 2024-12-21 | [Go](graphs/2872-maximum-number-of-k-divisible-components.go) [Python](graphs/2872-maximum-number-of-k-divisible-components.py)
+| 1074 | [Number of Submatrices That Sum to Target](https://leetcode.com/problems/number-of-submatrices-that-sum-to-target/) | Hard | Array, Hash Table, Matrix, Prefix Sum | 2024-12-20 | [Go](prefixsums/1074-number-of-submatrices-that-sum-to-target.go) [Python](prefixsums/1074-number-of-submatrices-that-sum-to-target.py)
+| 0111 | [Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/) | Easy | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 2024-12-20 | [Go](trees/0111-minimum-depth-of-binary-tree.go) [Python](trees/0111-minimum-depth-of-binary-tree.py)
 | 0605 | [Can Place Flowers](https://leetcode.com/problems/can-place-flowers/) | Easy | Array, Greedy | 2024-12-19 | [Go](arrays/0605-can-place-flowers.go) [Python](arrays/0605-can-place-flowers.py)
 | 1591 | [Strange Printer II](https://leetcode.com/problems/strange-printer-ii/) | Hard | Array, Graph, Topological Sort, Matrix | 2024-12-19 | [Go](graphs/1591-strange-printer-ii.go) [Python](graphs/1591-strange-printer-ii.py)
 | 1475 | [Final Prices With a Special Discount in a Shop](https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/) | Easy | Array, Stack, Monotonic Stack | 2024-12-18 | [Go](stacks/monotonic/1475-final-prices-with-a-special-discount-in-a-shop.go) [Python](stacks/monotonic/1475-final-prices-with-a-special-discount-in-a-shop.py)
