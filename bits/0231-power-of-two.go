@@ -3,7 +3,7 @@ package bits
 // https://leetcode.com/problems/power-of-two/
 
 // Approach #3: Bit Manipulation
-// Time: O(logn)
+// Time: O(1)
 // Space: O(1)
 func isPowerOfTwo(n int) bool {
 	// return bits.OnesCount(uint(n)) == 1

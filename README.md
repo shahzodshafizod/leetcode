@@ -2,6 +2,9 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0257 | [Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/) | Easy | String, Backtracking, Tree, Depth-First Search, Binary Tree | 2024-12-23 | [Go](trees/0257-binary-tree-paths.go) [Python](trees/0257-binary-tree-paths.py)
+| 2940 | [Find Building Where Alice and Bob Can Meet](https://leetcode.com/problems/find-building-where-alice-and-bob-can-meet/) | Hard | Array, Binary Search, Stack, Binary Indexed Tree, Segment Tree, Heap (Priority Queue), Monotonic Stack | 2024-12-23 | [Go](stacks/monotonic/2940-find-building-where-alice-and-bob-can-meet.go) [Python](stacks/monotonic/2940-find-building-where-alice-and-bob-can-meet.py)
+| 0461 | [Hamming Distance](https://leetcode.com/problems/hamming-distance/) | Easy | Bit Manipulation | 2024-12-22 | [Go](bits/0461-hamming-distance.go) [Python](bits/0461-hamming-distance.py)
 | 0231 | [Power of Two](https://leetcode.com/problems/power-of-two/) | Easy | Math, Bit Manipulation, Recursion | 2024-12-21 | [Go](bits/0231-power-of-two.go) [Python](bits/0231-power-of-two.py)
 | 2872 | [Maximum Number of K-Divisible Components](https://leetcode.com/problems/maximum-number-of-k-divisible-components/) | Hard | Tree, Depth-First Search | 2024-12-21 | [Go](graphs/2872-maximum-number-of-k-divisible-components.go) [Python](graphs/2872-maximum-number-of-k-divisible-components.py)
 | 1074 | [Number of Submatrices That Sum to Target](https://leetcode.com/problems/number-of-submatrices-that-sum-to-target/) | Hard | Array, Hash Table, Matrix, Prefix Sum | 2024-12-20 | [Go](prefixsums/1074-number-of-submatrices-that-sum-to-target.go) [Python](prefixsums/1074-number-of-submatrices-that-sum-to-target.py)

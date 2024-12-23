@@ -24,7 +24,7 @@ class Solution(unittest.TestCase):
     #     return count == 1
 
     # Approach #3: Bit Manipulation
-    # Time: O(logn)
+    # Time: O(1)
     # Space: O(1)
     def isPowerOfTwo(self, n: int) -> bool:
         # return n > 0 and str(bin(n)).count('1') == 1

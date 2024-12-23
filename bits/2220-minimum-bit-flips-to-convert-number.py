@@ -4,6 +4,8 @@ import unittest
 
 # python3 -m unittest bits/2220-minimum-bit-flips-to-convert-number.py
 
+# Note: This question is the same as 461: Hamming Distance.
+
 class Solution(unittest.TestCase):
     # # Approach: Iterative
     # # Time: O(max bits)

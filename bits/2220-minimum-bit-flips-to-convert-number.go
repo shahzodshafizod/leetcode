@@ -2,6 +2,8 @@ package bits
 
 // https://leetcode.com/problems/minimum-bit-flips-to-convert-number/
 
+// Note: This question is the same as 461: Hamming Distance.
+
 // Approach #3: Brian Kernighan’s Algorithm
 // Time: O(number of set bits)
 // Space: O(1)
