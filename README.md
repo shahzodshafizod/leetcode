@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3203 | [Find Minimum Diameter After Merging Two Trees](https://leetcode.com/problems/find-minimum-diameter-after-merging-two-trees/) | Hard | Tree, Depth-First Search, Breadth-First Search, Graph | 2024-12-24 | [Go](graphs/3203-find-minimum-diameter-after-merging-two-trees.go) [Python](graphs/3203-find-minimum-diameter-after-merging-two-trees.py)
+| 0108 | [Convert Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/) | Easy | Array, Divide and Conquer, Tree, Binary Search Tree, Binary Tree | 2024-12-24 | [Go](trees/0108-convert-sorted-array-to-binary-search-tree.go) [Python](trees/0108-convert-sorted-array-to-binary-search-tree.py)
 | 0257 | [Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/) | Easy | String, Backtracking, Tree, Depth-First Search, Binary Tree | 2024-12-23 | [Go](trees/0257-binary-tree-paths.go) [Python](trees/0257-binary-tree-paths.py)
 | 2940 | [Find Building Where Alice and Bob Can Meet](https://leetcode.com/problems/find-building-where-alice-and-bob-can-meet/) | Hard | Array, Binary Search, Stack, Binary Indexed Tree, Segment Tree, Heap (Priority Queue), Monotonic Stack | 2024-12-23 | [Go](stacks/monotonic/2940-find-building-where-alice-and-bob-can-meet.go) [Python](stacks/monotonic/2940-find-building-where-alice-and-bob-can-meet.py)
 | 0461 | [Hamming Distance](https://leetcode.com/problems/hamming-distance/) | Easy | Bit Manipulation | 2024-12-22 | [Go](bits/0461-hamming-distance.go) [Python](bits/0461-hamming-distance.py)
