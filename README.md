@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0515 | [Find Largest Value in Each Tree Row](https://leetcode.com/problems/find-largest-value-in-each-tree-row/) | Medium | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 2024-12-25 | [Go](trees/0515-find-largest-value-in-each-tree-row.go) [Python](trees/0515-find-largest-value-in-each-tree-row.py)
 | 3203 | [Find Minimum Diameter After Merging Two Trees](https://leetcode.com/problems/find-minimum-diameter-after-merging-two-trees/) | Hard | Tree, Depth-First Search, Breadth-First Search, Graph | 2024-12-24 | [Go](graphs/3203-find-minimum-diameter-after-merging-two-trees.go) [Python](graphs/3203-find-minimum-diameter-after-merging-two-trees.py)
 | 0108 | [Convert Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/) | Easy | Array, Divide and Conquer, Tree, Binary Search Tree, Binary Tree | 2024-12-24 | [Go](trees/0108-convert-sorted-array-to-binary-search-tree.go) [Python](trees/0108-convert-sorted-array-to-binary-search-tree.py)
 | 0257 | [Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/) | Easy | String, Backtracking, Tree, Depth-First Search, Binary Tree | 2024-12-23 | [Go](trees/0257-binary-tree-paths.go) [Python](trees/0257-binary-tree-paths.py)
