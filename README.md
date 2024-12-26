@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0494 | [Target Sum](https://leetcode.com/problems/target-sum/) | Medium | Array, Dynamic Programming, Backtracking | 2024-12-26 | [Go](dp/0494-target-sum.go) [Python](dp/0494-target-sum.py)
+| 0617 | [Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/) | Easy | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 2024-12-26 | [Go](trees/0617-merge-two-binary-trees.go) [Python](trees/0617-merge-two-binary-trees.py)
 | 0515 | [Find Largest Value in Each Tree Row](https://leetcode.com/problems/find-largest-value-in-each-tree-row/) | Medium | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 2024-12-25 | [Go](trees/0515-find-largest-value-in-each-tree-row.go) [Python](trees/0515-find-largest-value-in-each-tree-row.py)
 | 3203 | [Find Minimum Diameter After Merging Two Trees](https://leetcode.com/problems/find-minimum-diameter-after-merging-two-trees/) | Hard | Tree, Depth-First Search, Breadth-First Search, Graph | 2024-12-24 | [Go](graphs/3203-find-minimum-diameter-after-merging-two-trees.go) [Python](graphs/3203-find-minimum-diameter-after-merging-two-trees.py)
 | 0108 | [Convert Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/) | Easy | Array, Divide and Conquer, Tree, Binary Search Tree, Binary Tree | 2024-12-24 | [Go](trees/0108-convert-sorted-array-to-binary-search-tree.go) [Python](trees/0108-convert-sorted-array-to-binary-search-tree.py)
