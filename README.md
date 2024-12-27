@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1014 | [Best Sightseeing Pair](https://leetcode.com/problems/best-sightseeing-pair/) | Medium | Array, Dynamic Programming | 2024-12-27 | [Go](dp/1014-best-sightseeing-pair.go) [Python](dp/1014-best-sightseeing-pair.py)
 | 0494 | [Target Sum](https://leetcode.com/problems/target-sum/) | Medium | Array, Dynamic Programming, Backtracking | 2024-12-26 | [Go](dp/0494-target-sum.go) [Python](dp/0494-target-sum.py)
 | 0617 | [Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/) | Easy | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 2024-12-26 | [Go](trees/0617-merge-two-binary-trees.go) [Python](trees/0617-merge-two-binary-trees.py)
 | 0515 | [Find Largest Value in Each Tree Row](https://leetcode.com/problems/find-largest-value-in-each-tree-row/) | Medium | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 2024-12-25 | [Go](trees/0515-find-largest-value-in-each-tree-row.go) [Python](trees/0515-find-largest-value-in-each-tree-row.py)
