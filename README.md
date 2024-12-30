@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0560 | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) | Medium | Array, Hash Table, Prefix Sum | 2024-12-30 | [Go](prefixsums/0560-subarray-sum-equals-k.go) [Python](prefixsums/0560-subarray-sum-equals-k.py)
+| 2466 | [Count Ways To Build Good Strings](https://leetcode.com/problems/count-ways-to-build-good-strings/) | Medium | Dynamic Programming | 2024-12-30 | [Go](dp/2466-count-ways-to-build-good-strings.go) [Python](dp/2466-count-ways-to-build-good-strings.py)
 | 0941 | [Valid Mountain Array](https://leetcode.com/problems/valid-mountain-array/) | Easy | Array | 2024-12-29 | [Go](arrays/0941-valid-mountain-array.go) [Python](arrays/0941-valid-mountain-array.py)
 | 0953 | [Verifying an Alien Dictionary](https://leetcode.com/problems/verifying-an-alien-dictionary/) | Easy | Array, Hash Table, String | 2024-12-29 | [Go](hashes/0953-verifying-an-alien-dictionary.go) [Python](hashes/0953-verifying-an-alien-dictionary.py)
 | 0689 | [Maximum Sum of 3 Non-Overlapping Subarrays](https://leetcode.com/problems/maximum-sum-of-3-non-overlapping-subarrays/) | Hard | Array, Dynamic Programming | 2024-12-28 | [Go](dp/0689-maximum-sum-of-3-non-overlapping-subarrays.go) [Python](dp/0689-maximum-sum-of-3-non-overlapping-subarrays.py)
