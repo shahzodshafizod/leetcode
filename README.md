@@ -2,6 +2,9 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0941 | [Valid Mountain Array](https://leetcode.com/problems/valid-mountain-array/) | Easy | Array | 2024-12-29 | [Go](arrays/0941-valid-mountain-array.go) [Python](arrays/0941-valid-mountain-array.py)
+| 0953 | [Verifying an Alien Dictionary](https://leetcode.com/problems/verifying-an-alien-dictionary/) | Easy | Array, Hash Table, String | 2024-12-29 | [Go](hashes/0953-verifying-an-alien-dictionary.go) [Python](hashes/0953-verifying-an-alien-dictionary.py)
+| 0689 | [Maximum Sum of 3 Non-Overlapping Subarrays](https://leetcode.com/problems/maximum-sum-of-3-non-overlapping-subarrays/) | Hard | Array, Dynamic Programming | 2024-12-28 | [Go](dp/0689-maximum-sum-of-3-non-overlapping-subarrays.go) [Python](dp/0689-maximum-sum-of-3-non-overlapping-subarrays.py)
 | 1014 | [Best Sightseeing Pair](https://leetcode.com/problems/best-sightseeing-pair/) | Medium | Array, Dynamic Programming | 2024-12-27 | [Go](dp/1014-best-sightseeing-pair.go) [Python](dp/1014-best-sightseeing-pair.py)
 | 0494 | [Target Sum](https://leetcode.com/problems/target-sum/) | Medium | Array, Dynamic Programming, Backtracking | 2024-12-26 | [Go](dp/0494-target-sum.go) [Python](dp/0494-target-sum.py)
 | 0617 | [Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/) | Easy | Tree, Depth-First Search, Breadth-First Search, Binary Tree | 2024-12-26 | [Go](trees/0617-merge-two-binary-trees.go) [Python](trees/0617-merge-two-binary-trees.py)
