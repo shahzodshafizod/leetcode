@@ -2,6 +2,9 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0983 | [Minimum Cost For Tickets](https://leetcode.com/problems/minimum-cost-for-tickets/) | Medium | Array, Dynamic Programming | 2024-12-31 | [Go](dp/0983-minimum-cost-for-tickets.go) [Python](dp/0983-minimum-cost-for-tickets.py)
+| 0067 | [Add Binary](https://leetcode.com/problems/add-binary/) | Easy | Math, String, Bit Manipulation, Simulation | 2024-12-31 | [Go](bits/0067-add-binary.go) [Python](bits/0067-add-binary.py)
+| 2009 | [Minimum Number of Operations to Make Array Continuous](https://leetcode.com/problems/minimum-number-of-operations-to-make-array-continuous/) | Hard | Array, Hash Table, Binary Search, Sliding Window | 2024-12-31 | [Go](slidingwindows/2009-minimum-number-of-operations-to-make-array-continuous.go) [Python](slidingwindows/2009-minimum-number-of-operations-to-make-array-continuous.py)
 | 0560 | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) | Medium | Array, Hash Table, Prefix Sum | 2024-12-30 | [Go](prefixsums/0560-subarray-sum-equals-k.go) [Python](prefixsums/0560-subarray-sum-equals-k.py)
 | 2466 | [Count Ways To Build Good Strings](https://leetcode.com/problems/count-ways-to-build-good-strings/) | Medium | Dynamic Programming | 2024-12-30 | [Go](dp/2466-count-ways-to-build-good-strings.go) [Python](dp/2466-count-ways-to-build-good-strings.py)
 | 0941 | [Valid Mountain Array](https://leetcode.com/problems/valid-mountain-array/) | Easy | Array | 2024-12-29 | [Go](arrays/0941-valid-mountain-array.go) [Python](arrays/0941-valid-mountain-array.py)
