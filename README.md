@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1930 | [Unique Length-3 Palindromic Subsequences](https://leetcode.com/problems/unique-length-3-palindromic-subsequences/) | Medium | Hash Table, String, Bit Manipulation, Prefix Sum | 2025-01-04 | [Go](prefixsums/1930-unique-length-3-palindromic-subsequences.go) [Python](prefixsums/1930-unique-length-3-palindromic-subsequences.py)
 | 2270 | [Number of Ways to Split Array](https://leetcode.com/problems/number-of-ways-to-split-array/) | Medium | Array, Prefix Sum | 2025-01-03 | [Go](prefixsums/2270-number-of-ways-to-split-array.go) [Python](prefixsums/2270-number-of-ways-to-split-array.py)
 | 2559 | [Count Vowel Strings in Ranges](https://leetcode.com/problems/count-vowel-strings-in-ranges/) | Medium | Array, String, Prefix Sum | 2025-01-02 | [Go](prefixsums/2559-count-vowel-strings-in-ranges.go) [Python](prefixsums/2559-count-vowel-strings-in-ranges.py)
 | 1422 | [Maximum Score After Splitting a String](https://leetcode.com/problems/maximum-score-after-splitting-a-string/) | Easy | String, Prefix Sum | 2025-01-01 | [Go](prefixsums/1422-maximum-score-after-splitting-a-string.go) [Python](prefixsums/1422-maximum-score-after-splitting-a-string.py)
