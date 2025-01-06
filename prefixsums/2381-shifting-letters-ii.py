@@ -34,7 +34,7 @@ class Solution(unittest.TestCase):
 
     # Approach: Line Sweep
     # Time: O(n+m), n=len(s), m=len(shifts)
-    # Space: O(m)
+    # Space: O(n)
     def shiftingLetters(self, s: str, shifts: List[List[int]]) -> str:
         line = [0]*(len(s)+1)
         for start, end, direction in shifts:
