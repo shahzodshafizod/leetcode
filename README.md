@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1408 | [String Matching in an Array](https://leetcode.com/problems/string-matching-in-an-array/) | Easy | Array, String, String Matching | 2025-01-07 | [Go](strings/1408-string-matching-in-an-array.go) [Python](strings/1408-string-matching-in-an-array.py)
 | 1769 | [Minimum Number of Operations to Move All Balls to Each Box](https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box/) | Medium | Array, String, Prefix Sum | 2025-01-06 | [Go](prefixsums/1769-minimum-number-of-operations-to-move-all-balls-to-each-box.go) [Python](prefixsums/1769-minimum-number-of-operations-to-move-all-balls-to-each-box.py)
 | 2381 | [Shifting Letters II](https://leetcode.com/problems/shifting-letters-ii/) | Medium | Array, String, Prefix Sum | 2025-01-05 | [Go](prefixsums/2381-shifting-letters-ii.go) [Python](prefixsums/2381-shifting-letters-ii.py)
 | 1930 | [Unique Length-3 Palindromic Subsequences](https://leetcode.com/problems/unique-length-3-palindromic-subsequences/) | Medium | Hash Table, String, Bit Manipulation, Prefix Sum | 2025-01-04 | [Go](prefixsums/1930-unique-length-3-palindromic-subsequences.go) [Python](prefixsums/1930-unique-length-3-palindromic-subsequences.py)
