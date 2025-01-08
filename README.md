@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+3042 | [Count Prefix and Suffix Pairs I](https://leetcode.com/problems/count-prefix-and-suffix-pairs-i/) | Easy | Array, String, Trie, Rolling Hash, String Matching, Hash Function | 2025-01-08 | [Go](tries/3042-count-prefix-and-suffix-pairs-i.go) [Python](tries/3042-count-prefix-and-suffix-pairs-i.go)
 | 1408 | [String Matching in an Array](https://leetcode.com/problems/string-matching-in-an-array/) | Easy | Array, String, String Matching | 2025-01-07 | [Go](strings/1408-string-matching-in-an-array.go) [Python](strings/1408-string-matching-in-an-array.py)
 | 1769 | [Minimum Number of Operations to Move All Balls to Each Box](https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box/) | Medium | Array, String, Prefix Sum | 2025-01-06 | [Go](prefixsums/1769-minimum-number-of-operations-to-move-all-balls-to-each-box.go) [Python](prefixsums/1769-minimum-number-of-operations-to-move-all-balls-to-each-box.py)
 | 2381 | [Shifting Letters II](https://leetcode.com/problems/shifting-letters-ii/) | Medium | Array, String, Prefix Sum | 2025-01-05 | [Go](prefixsums/2381-shifting-letters-ii.go) [Python](prefixsums/2381-shifting-letters-ii.py)
