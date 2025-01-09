@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2185 | [Counting Words With a Given Prefix](https://leetcode.com/problems/counting-words-with-a-given-prefix/) | Easy | Array, String, String Matching | 2025-01-09 | [Go](tries/2185-counting-words-with-a-given-prefix.go) [Python](tries/2185-counting-words-with-a-given-prefix.py)
 | 3045 | [Count Prefix and Suffix Pairs II](https://leetcode.com/problems/count-prefix-and-suffix-pairs-ii/) | Hard | Array, String, Trie, Rolling Hash, String Matching, Hash Function | 2025-01-08 | [Go](tries/3045-count-prefix-and-suffix-pairs-ii.go) [Python](tries/3045-count-prefix-and-suffix-pairs-ii.py)
 | 3042 | [Count Prefix and Suffix Pairs I](https://leetcode.com/problems/count-prefix-and-suffix-pairs-i/) | Easy | Array, String, Trie, Rolling Hash, String Matching, Hash Function | 2025-01-08 | [Go](tries/3042-count-prefix-and-suffix-pairs-i.go) [Python](tries/3042-count-prefix-and-suffix-pairs-i.py)
 | 1408 | [String Matching in an Array](https://leetcode.com/problems/string-matching-in-an-array/) | Easy | Array, String, String Matching | 2025-01-07 | [Go](strings/1408-string-matching-in-an-array.go) [Python](strings/1408-string-matching-in-an-array.py)
