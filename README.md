@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1400 | [Construct K Palindrome Strings](https://leetcode.com/problems/construct-k-palindrome-strings/) | Medium | Hash Table, String, Greedy, Counting | 2025-01-11 | [Go](hashes/1400-construct-k-palindrome-strings.go) [Python](hashes/1400-construct-k-palindrome-strings.py)
 | 0916 | [Word Subsets](https://leetcode.com/problems/word-subsets/) | Medium | Array, Hash Table, String | 2025-01-10 | [Go](hashes/0916-word-subsets.go) [Python](hashes/0916-word-subsets.py)
 | 2185 | [Counting Words With a Given Prefix](https://leetcode.com/problems/counting-words-with-a-given-prefix/) | Easy | Array, String, String Matching | 2025-01-09 | [Go](tries/2185-counting-words-with-a-given-prefix.go) [Python](tries/2185-counting-words-with-a-given-prefix.py)
 | 3045 | [Count Prefix and Suffix Pairs II](https://leetcode.com/problems/count-prefix-and-suffix-pairs-ii/) | Hard | Array, String, Trie, Rolling Hash, String Matching, Hash Function | 2025-01-08 | [Go](tries/3045-count-prefix-and-suffix-pairs-ii.go) [Python](tries/3045-count-prefix-and-suffix-pairs-ii.py)
