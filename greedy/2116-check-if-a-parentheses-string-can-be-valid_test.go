@@ -1,4 +1,4 @@
-package stacks
+package greedy
 
 import (
 	"testing"
@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// go test -v -count=1 ./stacks/ -run ^TestCanBeValid$
+// go test -v -count=1 ./greedy/ -run ^TestCanBeValid$
 func TestCanBeValid(t *testing.T) {
 	for _, tc := range []struct {
 		s      string
