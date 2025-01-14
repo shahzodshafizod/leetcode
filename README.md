@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2657 | [Find the Prefix Common Array of Two Arrays](https://leetcode.com/problems/find-the-prefix-common-array-of-two-arrays/) | Medium | Array, Hash Table, Bit Manipulation | 2025-01-14 | [Go](bits/2657-find-the-prefix-common-array-of-two-arrays.go) [Python](bits/2657-find-the-prefix-common-array-of-two-arrays.py)
 | 3223 | [Minimum Length of String After Operations](https://leetcode.com/problems/minimum-length-of-string-after-operations/) | Medium | Hash Table, String, Counting | 2025-01-13 | [Go](greedy/3223-minimum-length-of-string-after-operations.go) [Python](greedy/3223-minimum-length-of-string-after-operations.py)
 | 2116 | [Check if a Parentheses String Can Be Valid](https://leetcode.com/problems/check-if-a-parentheses-string-can-be-valid/) | Medium | String, Stack, Greedy | 2025-01-12 | [Go](greedy/2116-check-if-a-parentheses-string-can-be-valid.go) [Python](greedy/2116-check-if-a-parentheses-string-can-be-valid.py)
 | 1400 | [Construct K Palindrome Strings](https://leetcode.com/problems/construct-k-palindrome-strings/) | Medium | Hash Table, String, Greedy, Counting | 2025-01-11 | [Go](hashes/1400-construct-k-palindrome-strings.go) [Python](hashes/1400-construct-k-palindrome-strings.py)
