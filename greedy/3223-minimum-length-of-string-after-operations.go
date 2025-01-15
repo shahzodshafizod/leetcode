@@ -7,16 +7,16 @@ package greedy
 // Space: O(1)
 func minimumLength(s string) int {
 	var count [26]int
-	var length = len(s)
-	var key int
 	for _, c := range s {
-		key = int(c - 'a')
-		count[key]++
-		if count[key] > 2 {
-			count[key] -= 2
-			length -= 2
+		count[int(c-'a')]++
+	}
+	var length = 0
+	for _, cnt := range count {
+		if cnt&1 == 1 {
+			length += 1
+		} else if cnt != 0 {
+			length += 2
 		}
 	}
 	return length
 }
-
