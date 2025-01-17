@@ -14,5 +14,5 @@ func xorAllNums(nums1 []int, nums2 []int) int {
 	for _, num := range nums2 {
 		num2 ^= num
 	}
-	return ((len(nums2) & 1) * num1) ^ ((len(nums1) & 1) * num2)
+	return (len(nums2) % 2 * num1) ^ (len(nums1) % 2 * num2)
 }
