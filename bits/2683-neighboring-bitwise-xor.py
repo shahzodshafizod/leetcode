@@ -5,6 +5,14 @@ import unittest
 
 # python3 -m unittest bits/2683-neighboring-bitwise-xor.py
 
+# Imagine the original array is: [a, b, c, d]
+# The derived array should be: [a^b, b^c, c^d, d^a]
+# So, if we XOR all elements of the derived array once more
+# the result should be equal to zero:
+# a^b ^ b^c ^ c^d ^ d^a
+# = a^a ^ b^b ^ c^c ^ d^d
+# = 0 ^ 0 ^ 0 ^ 0 = 0
+
 class Solution(unittest.TestCase):
     # Approach: Bit Manipulation
     # Time: O(n)

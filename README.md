@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1368 | [Minimum Cost to Make at Least One Valid Path in a Grid](https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/) | Hard | Array, Breadth-First Search, Graph, Heap (Priority Queue), Matrix, Shortest Path | 2025-01-18 | [Go](matrices/1368-minimum-cost-to-make-at-least-one-valid-path-in-a-grid.go) [Python](matrices/1368-minimum-cost-to-make-at-least-one-valid-path-in-a-grid.py)
 | 2683 | [Neighboring Bitwise XOR](https://leetcode.com/problems/neighboring-bitwise-xor/) | Medium | Array, Bit Manipulation | 2025-01-17 | [Go](bits/2683-neighboring-bitwise-xor.go) [Python](bits/2683-neighboring-bitwise-xor.py)
 | 2425 | [Bitwise XOR of All Pairings](https://leetcode.com/problems/bitwise-xor-of-all-pairings/) | Medium | Array, Bit Manipulation, Brainteaser | 2025-01-16 | [Go](bits/2425-bitwise-xor-of-all-pairings.go) [Python](bits/2425-bitwise-xor-of-all-pairings.py)
 | 2429 | [Minimize XOR](https://leetcode.com/problems/minimize-xor/) | Medium | Greedy, Bit Manipulation | 2025-01-15 | [Go](bits/2429-minimize-xor.go) [Python](bits/2429-minimize-xor.py)
