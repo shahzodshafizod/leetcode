@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2017 | [Grid Game](https://leetcode.com/problems/grid-game/) | Medium | Array, Matrix, Prefix Sum | 2025-01-21 | [Go](prefixsums/2017-grid-game.go) [Python](prefixsums/2017-grid-game.py)
 | 2661 | [First Completely Painted Row or Column](https://leetcode.com/problems/first-completely-painted-row-or-column/) | Medium | Array, Hash Table, Matrix | 2025-01-20 | [Go](matrices/2661-first-completely-painted-row-or-column.go) [Python](matrices/2661-first-completely-painted-row-or-column.py)
 | 0407 | [Trapping Rain Water II](https://leetcode.com/problems/trapping-rain-water-ii/) | Hard | Array, Breadth-First Search, Heap (Priority Queue), Matrix | 2025-01-19 | [Go](heaps/0407-trapping-rain-water-ii.go) [Python](heaps/0407-trapping-rain-water-ii.py)
 | 1368 | [Minimum Cost to Make at Least One Valid Path in a Grid](https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/) | Hard | Array, Breadth-First Search, Graph, Heap (Priority Queue), Matrix, Shortest Path | 2025-01-18 | [Go](matrices/1368-minimum-cost-to-make-at-least-one-valid-path-in-a-grid.go) [Python](matrices/1368-minimum-cost-to-make-at-least-one-valid-path-in-a-grid.py)

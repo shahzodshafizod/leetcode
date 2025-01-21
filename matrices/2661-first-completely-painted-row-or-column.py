@@ -6,6 +6,9 @@ import unittest
 # python3 -m unittest matrices/2661-first-completely-painted-row-or-column.py
 
 class Solution(unittest.TestCase):
+    # Approach: Counting
+    # Time: O(mn)
+    # Space: O(mn)
     def firstCompleteIndex(self, arr: List[int], mat: List[List[int]]) -> int:
         m, n = len(mat), len(mat[0])
         rcount = [n] * m
