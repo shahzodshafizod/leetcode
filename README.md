@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1267 | [Count Servers that Communicate](https://leetcode.com/problems/count-servers-that-communicate/) | Medium | Array, Depth-First Search, Breadth-First Search, Union Find, Matrix, Counting | 2025-01-23 | [Go](matrices/1267-count-servers-that-communicate.go) [Python](matrices/1267-count-servers-that-communicate.py)
 | 1765 | [Map of Highest Peak](https://leetcode.com/problems/map-of-highest-peak/) | Medium | Array, Breadth-First Search, Matrix | 2025-01-22 | [Go](matrices/1765-map-of-highest-peak.go) [Python](matrices/1765-map-of-highest-peak.py)
 | 2017 | [Grid Game](https://leetcode.com/problems/grid-game/) | Medium | Array, Matrix, Prefix Sum | 2025-01-21 | [Go](prefixsums/2017-grid-game.go) [Python](prefixsums/2017-grid-game.py)
 | 2661 | [First Completely Painted Row or Column](https://leetcode.com/problems/first-completely-painted-row-or-column/) | Medium | Array, Hash Table, Matrix | 2025-01-20 | [Go](matrices/2661-first-completely-painted-row-or-column.go) [Python](matrices/2661-first-completely-painted-row-or-column.py)
