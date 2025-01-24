@@ -19,7 +19,7 @@ class Solution(unittest.TestCase):
         count = 0
         for row in range(m):
             for col in range(n):
-                if grid[row][col] and (rcount[row] + ccount[col] > 2):
+                if grid[row][col] and rcount[row] + ccount[col] > 2:
                     count += 1
         return count
 
