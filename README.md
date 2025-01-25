@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2948 | [Make Lexicographically Smallest Array by Swapping Elements](https://leetcode.com/problems/make-lexicographically-smallest-array-by-swapping-elements/) | Medium | Array, Union Find, Sorting | 2025-01-25 | [Go](greedy/2948-make-lexicographically-smallest-array-by-swapping-elements.go) [Python](greedy/2948-make-lexicographically-smallest-array-by-swapping-elements.py)
 | 0802 | [Find Eventual Safe States](https://leetcode.com/problems/find-eventual-safe-states/) | Medium | Depth-First Search, Breadth-First Search, Graph, Topological Sort | 2025-01-24 | [Go](graphs/0802-find-eventual-safe-states.go) [Python](graphs/0802-find-eventual-safe-states.py)
 | 1267 | [Count Servers that Communicate](https://leetcode.com/problems/count-servers-that-communicate/) | Medium | Array, Depth-First Search, Breadth-First Search, Union Find, Matrix, Counting | 2025-01-23 | [Go](matrices/1267-count-servers-that-communicate.go) [Python](matrices/1267-count-servers-that-communicate.py)
 | 1765 | [Map of Highest Peak](https://leetcode.com/problems/map-of-highest-peak/) | Medium | Array, Breadth-First Search, Matrix | 2025-01-22 | [Go](matrices/1765-map-of-highest-peak.go) [Python](matrices/1765-map-of-highest-peak.py)

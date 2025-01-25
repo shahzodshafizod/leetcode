@@ -8,23 +8,19 @@ package graphs
 func eventualSafeNodes(graph [][]int) []int {
 	var n = len(graph)
 	var safe = make([]*bool, n)
-	var seen = make([]bool, n)
 	var dfs func(int) bool
 	dfs = func(node int) bool {
-		if seen[node] {
-			return false
-		}
 		if safe[node] != nil {
 			return *safe[node]
 		}
-		seen[node] = true
 		safe[node] = new(bool)
-		*safe[node] = true
 		for _, next := range graph[node] {
-			*safe[node] = *safe[node] && dfs(next)
+			if !dfs(next) {
+				return false
+			}
 		}
-		seen[node] = false
-		return *safe[node]
+		*safe[node] = true
+		return true
 	}
 	var result = make([]int, 0)
 	for node := 0; node < n; node++ {
@@ -34,4 +30,3 @@ func eventualSafeNodes(graph [][]int) []int {
 	}
 	return result
 }
-

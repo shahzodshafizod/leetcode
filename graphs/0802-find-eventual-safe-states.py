@@ -12,18 +12,15 @@ class Solution(unittest.TestCase):
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
         n = len(graph)
         safe = [None] * n
-        seen = [False] * n
         def dfs(node: int) -> bool:
-            if seen[node]:
-                return False
             if safe[node] != None:
                 return safe[node]
-            seen[node] = True
-            safe[node] = True
+            safe[node] = False
             for next in graph[node]:
-                safe[node] = safe[node] and dfs(next)
-            seen[node] = False
-            return safe[node]
+                if not dfs(next):
+                    return False
+            safe[node] = True
+            return True
         return [node for node in range(n) if dfs(node)]
 
     def test(self):
