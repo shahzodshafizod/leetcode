@@ -7,7 +7,7 @@ import unittest
 
 class Solution(unittest.TestCase):
     # Approach: Depth-First Search
-    # Time: O(v+e), v=# of nodes, e=# of edges
+    # Time: O(v+e), v=# of vertices (nodes), e=# of edges
     # Space: O(v)
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
         n = len(graph)

@@ -3,7 +3,7 @@ package graphs
 // https://leetcode.com/problems/find-eventual-safe-states/
 
 // Approach: Depth-First Search
-// Time: O(v+e), v=# of nodes, e=# of edges
+// Time: O(v+e), v=# of vertices (nodes), e=# of edges
 // Space: O(v)
 func eventualSafeNodes(graph [][]int) []int {
 	var n = len(graph)

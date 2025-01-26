@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2127 | [Maximum Employees to Be Invited to a Meeting](https://leetcode.com/problems/maximum-employees-to-be-invited-to-a-meeting/) | Hard | Depth-First Search, Graph, Topological Sort | 2025-01-26 | [Go](graphs/2127-maximum-employees-to-be-invited-to-a-meeting.go) [Python](graphs/2127-maximum-employees-to-be-invited-to-a-meeting.py)
 | 2948 | [Make Lexicographically Smallest Array by Swapping Elements](https://leetcode.com/problems/make-lexicographically-smallest-array-by-swapping-elements/) | Medium | Array, Union Find, Sorting | 2025-01-25 | [Go](greedy/2948-make-lexicographically-smallest-array-by-swapping-elements.go) [Python](greedy/2948-make-lexicographically-smallest-array-by-swapping-elements.py)
 | 0802 | [Find Eventual Safe States](https://leetcode.com/problems/find-eventual-safe-states/) | Medium | Depth-First Search, Breadth-First Search, Graph, Topological Sort | 2025-01-24 | [Go](graphs/0802-find-eventual-safe-states.go) [Python](graphs/0802-find-eventual-safe-states.py)
 | 1267 | [Count Servers that Communicate](https://leetcode.com/problems/count-servers-that-communicate/) | Medium | Array, Depth-First Search, Breadth-First Search, Union Find, Matrix, Counting | 2025-01-23 | [Go](matrices/1267-count-servers-that-communicate.go) [Python](matrices/1267-count-servers-that-communicate.py)
