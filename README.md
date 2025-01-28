@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2658 | [Maximum Number of Fish in a Grid](https://leetcode.com/problems/maximum-number-of-fish-in-a-grid/) | Medium | Array, Depth-First Search, Breadth-First Search, Union Find, Matrix | 2025-01-28 | [Go](matrices/2658-maximum-number-of-fish-in-a-grid.go) [Python](matrices/2658-maximum-number-of-fish-in-a-grid.py)
 | 1462 | [Course Schedule IV](https://leetcode.com/problems/course-schedule-iv/) | Medium | Depth-First Search, Breadth-First Search, Graph, Topological Sort | 2025-01-27 | [Go](graphs/1462-course-schedule-iv.go) [Python](graphs/1462-course-schedule-iv.py)
 | 2127 | [Maximum Employees to Be Invited to a Meeting](https://leetcode.com/problems/maximum-employees-to-be-invited-to-a-meeting/) | Hard | Depth-First Search, Graph, Topological Sort | 2025-01-26 | [Go](graphs/2127-maximum-employees-to-be-invited-to-a-meeting.go) [Python](graphs/2127-maximum-employees-to-be-invited-to-a-meeting.py)
 | 2948 | [Make Lexicographically Smallest Array by Swapping Elements](https://leetcode.com/problems/make-lexicographically-smallest-array-by-swapping-elements/) | Medium | Array, Union Find, Sorting | 2025-01-25 | [Go](greedy/2948-make-lexicographically-smallest-array-by-swapping-elements.go) [Python](greedy/2948-make-lexicographically-smallest-array-by-swapping-elements.py)
