@@ -2,6 +2,9 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0827 | [Making A Large Island](https://leetcode.com/problems/making-a-large-island/) | Hard | Array, Depth-First Search, Breadth-First Search, Union Find, Matrix | 2025-01-31 | [Go](graphs/0827-making-a-large-island.go) [Python](graphs/0827-making-a-large-island.py)
+| 0785 | [Is Graph Bipartite?](https://leetcode.com/problems/is-graph-bipartite/) | Medium | Depth-First Search, Breadth-First Search, Union Find, Graph | 2025-01-31 | [Go](graphs/0785-is-graph-bipartite.go) [Python](graphs/0785-is-graph-bipartite.py)
+| 2493 | [Divide Nodes Into the Maximum Number of Groups](https://leetcode.com/problems/divide-nodes-into-the-maximum-number-of-groups/) | Hard | Breadth-First Search, Union Find, Graph | 2025-01-30 | [Go](graphs/2493-divide-nodes-into-the-maximum-number-of-groups.go) [Python](graphs/2493-divide-nodes-into-the-maximum-number-of-groups.py)
 | 0684 | [Redundant Connection](https://leetcode.com/problems/redundant-connection/) | Medium | Depth-First Search, Breadth-First Search, Union Find, Graph | 2025-01-29 | [Go](unionfinds/0684-redundant-connection.go) [Python](unionfinds/0684-redundant-connection.py)
 | 2658 | [Maximum Number of Fish in a Grid](https://leetcode.com/problems/maximum-number-of-fish-in-a-grid/) | Medium | Array, Depth-First Search, Breadth-First Search, Union Find, Matrix | 2025-01-28 | [Go](matrices/2658-maximum-number-of-fish-in-a-grid.go) [Python](matrices/2658-maximum-number-of-fish-in-a-grid.py)
 | 1462 | [Course Schedule IV](https://leetcode.com/problems/course-schedule-iv/) | Medium | Depth-First Search, Breadth-First Search, Graph, Topological Sort | 2025-01-27 | [Go](graphs/1462-course-schedule-iv.go) [Python](graphs/1462-course-schedule-iv.py)
