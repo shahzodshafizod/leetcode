@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3151 | [Special Array I](https://leetcode.com/problems/special-array-i/) | Easy | Array | 2025-02-01 | [Go](arrays/3151-special-array-i.go) [Python](arrays/3151-special-array-i.py)
 | 0827 | [Making A Large Island](https://leetcode.com/problems/making-a-large-island/) | Hard | Array, Depth-First Search, Breadth-First Search, Union Find, Matrix | 2025-01-31 | [Go](graphs/0827-making-a-large-island.go) [Python](graphs/0827-making-a-large-island.py)
 | 0785 | [Is Graph Bipartite?](https://leetcode.com/problems/is-graph-bipartite/) | Medium | Depth-First Search, Breadth-First Search, Union Find, Graph | 2025-01-31 | [Go](graphs/0785-is-graph-bipartite.go) [Python](graphs/0785-is-graph-bipartite.py)
 | 2493 | [Divide Nodes Into the Maximum Number of Groups](https://leetcode.com/problems/divide-nodes-into-the-maximum-number-of-groups/) | Hard | Breadth-First Search, Union Find, Graph | 2025-01-30 | [Go](graphs/2493-divide-nodes-into-the-maximum-number-of-groups.go) [Python](graphs/2493-divide-nodes-into-the-maximum-number-of-groups.py)
