@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3105 | [Longest Strictly Increasing or Strictly Decreasing Subarray](https://leetcode.com/problems/longest-strictly-increasing-or-strictly-decreasing-subarray/) | Easy | Array | 2025-02-03 | [Go](arrays/3105-longest-strictly-increasing-or-strictly-decreasing-subarray.go) [Python](arrays/3105-longest-strictly-increasing-or-strictly-decreasing-subarray.py)
 | 1752 | [Check if Array Is Sorted and Rotated](https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/) | Easy | Array | 2025-02-02 | [Go](arrays/1752-check-if-array-is-sorted-and-rotated.go) [Python](arrays/1752-check-if-array-is-sorted-and-rotated.py)
 | 3151 | [Special Array I](https://leetcode.com/problems/special-array-i/) | Easy | Array | 2025-02-01 | [Go](arrays/3151-special-array-i.go) [Python](arrays/3151-special-array-i.py)
 | 0827 | [Making A Large Island](https://leetcode.com/problems/making-a-large-island/) | Hard | Array, Depth-First Search, Breadth-First Search, Union Find, Matrix | 2025-01-31 | [Go](graphs/0827-making-a-large-island.go) [Python](graphs/0827-making-a-large-island.py)
