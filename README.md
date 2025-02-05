@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1790 | [Check if One String Swap Can Make Strings Equal](https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal/) | Easy | Hash Table, String, Counting | 2025-02-05 | [Go](strings/1790-check-if-one-string-swap-can-make-strings-equal.go) [Python](strings/1790-check-if-one-string-swap-can-make-strings-equal.py)
 | 1800 | [Maximum Ascending Subarray Sum](https://leetcode.com/problems/maximum-ascending-subarray-sum/) | Easy | Array | 2025-02-04 | [Go](arrays/1800-maximum-ascending-subarray-sum.go) [Python](arrays/1800-maximum-ascending-subarray-sum.py)
 | 3105 | [Longest Strictly Increasing or Strictly Decreasing Subarray](https://leetcode.com/problems/longest-strictly-increasing-or-strictly-decreasing-subarray/) | Easy | Array | 2025-02-03 | [Go](arrays/3105-longest-strictly-increasing-or-strictly-decreasing-subarray.go) [Python](arrays/3105-longest-strictly-increasing-or-strictly-decreasing-subarray.py)
 | 1752 | [Check if Array Is Sorted and Rotated](https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/) | Easy | Array | 2025-02-02 | [Go](arrays/1752-check-if-array-is-sorted-and-rotated.go) [Python](arrays/1752-check-if-array-is-sorted-and-rotated.py)
