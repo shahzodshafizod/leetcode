@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2349 | [Design a Number Container System](https://leetcode.com/problems/design-a-number-container-system/) | Medium | Hash Table, Design, Heap (Priority Queue), Ordered Set | 2025-02-08 | [Go](design/2349-design-a-number-container-system.go) [Python](design/2349-design-a-number-container-system.py)
 | 3160 | [Find the Number of Distinct Colors Among the Balls](https://leetcode.com/problems/find-the-number-of-distinct-colors-among-the-balls/) | Medium | Array, Hash Table, Simulation | 2025-02-07 | [Go](hashes/3160-find-the-number-of-distinct-colors-among-the-balls.go) [Python](hashes/3160-find-the-number-of-distinct-colors-among-the-balls.py)
 | 1726 | [Tuple with Same Product](https://leetcode.com/problems/tuple-with-same-product/) | Medium | Array, Hash Table, Counting | 2025-02-06 | [Go](hashes/1726-tuple-with-same-product.go) [Python](hashes/1726-tuple-with-same-product.py)
 | 1790 | [Check if One String Swap Can Make Strings Equal](https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal/) | Easy | Hash Table, String, Counting | 2025-02-05 | [Go](strings/1790-check-if-one-string-swap-can-make-strings-equal.go) [Python](strings/1790-check-if-one-string-swap-can-make-strings-equal.py)
