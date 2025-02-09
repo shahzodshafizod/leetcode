@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2364 | [Count Number of Bad Pairs](https://leetcode.com/problems/count-number-of-bad-pairs/) | Medium | Array, Hash Table, Math, Counting | 2025-02-09 | [Go](hashes/2364-count-number-of-bad-pairs.go) [Python](hashes/2364-count-number-of-bad-pairs.py)
 | 2349 | [Design a Number Container System](https://leetcode.com/problems/design-a-number-container-system/) | Medium | Hash Table, Design, Heap (Priority Queue), Ordered Set | 2025-02-08 | [Go](design/2349-design-a-number-container-system.go) [Python](design/2349-design-a-number-container-system.py)
 | 3160 | [Find the Number of Distinct Colors Among the Balls](https://leetcode.com/problems/find-the-number-of-distinct-colors-among-the-balls/) | Medium | Array, Hash Table, Simulation | 2025-02-07 | [Go](hashes/3160-find-the-number-of-distinct-colors-among-the-balls.go) [Python](hashes/3160-find-the-number-of-distinct-colors-among-the-balls.py)
 | 1726 | [Tuple with Same Product](https://leetcode.com/problems/tuple-with-same-product/) | Medium | Array, Hash Table, Counting | 2025-02-06 | [Go](hashes/1726-tuple-with-same-product.go) [Python](hashes/1726-tuple-with-same-product.py)
