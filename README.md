@@ -2,6 +2,9 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3066 | [Minimum Operations to Exceed Threshold Value II](https://leetcode.com/problems/minimum-operations-to-exceed-threshold-value-ii/) | Medium | Array, Heap (Priority Queue), Simulation | 2025-02-13 | [Go](heaps/3066-minimum-operations-to-exceed-threshold-value-ii.go) [Python](heaps/3066-minimum-operations-to-exceed-threshold-value-ii.py)
+| 2342 | [Max Sum of a Pair With Equal Sum of Digits](https://leetcode.com/problems/max-sum-of-a-pair-with-equal-sum-of-digits/) | Medium | Array, Hash Table, Sorting, Heap (Priority Queue) | 2025-02-12 | [Go](hashes/2342-max-sum-of-a-pair-with-equal-sum-of-digits.go) [Python](hashes/2342-max-sum-of-a-pair-with-equal-sum-of-digits.py)
+| 1910 | [Remove All Occurrences of a Substring](https://leetcode.com/problems/remove-all-occurrences-of-a-substring/) | Medium | String, Stack, Simulation | 2025-02-11 | [Go](stacks/1910-remove-all-occurrences-of-a-substring.go) [Python](stacks/1910-remove-all-occurrences-of-a-substring.py)
 | 3174 | [Clear Digits](https://leetcode.com/problems/clear-digits/) | Easy | String, Stack, Simulation | 2025-02-10 | [Go](stacks/3174-clear-digits.go) [Python](stacks/3174-clear-digits.py)
 | 2364 | [Count Number of Bad Pairs](https://leetcode.com/problems/count-number-of-bad-pairs/) | Medium | Array, Hash Table, Math, Counting | 2025-02-09 | [Go](hashes/2364-count-number-of-bad-pairs.go) [Python](hashes/2364-count-number-of-bad-pairs.py)
 | 2349 | [Design a Number Container System](https://leetcode.com/problems/design-a-number-container-system/) | Medium | Hash Table, Design, Heap (Priority Queue), Ordered Set | 2025-02-08 | [Go](design/2349-design-a-number-container-system.go) [Python](design/2349-design-a-number-container-system.py)
