@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2698 | [Find the Punishment Number of an Integer](https://leetcode.com/problems/find-the-punishment-number-of-an-integer/) | Medium | Math, Backtracking | 2025-02-15 | [Go](backtracking/2698-find-the-punishment-number-of-an-integer.go) [Python](backtracking/2698-find-the-punishment-number-of-an-integer.py)
 | 1352 | [Product of the Last K Numbers](https://leetcode.com/problems/product-of-the-last-k-numbers/) | Medium | Array, Math, Design, Data Stream, Prefix Sum | 2025-02-14 | [Go](design/1352-product-of-the-last-k-numbers.go) [Python](design/1352-product-of-the-last-k-numbers.py)
 | 3066 | [Minimum Operations to Exceed Threshold Value II](https://leetcode.com/problems/minimum-operations-to-exceed-threshold-value-ii/) | Medium | Array, Heap (Priority Queue), Simulation | 2025-02-13 | [Go](heaps/3066-minimum-operations-to-exceed-threshold-value-ii.go) [Python](heaps/3066-minimum-operations-to-exceed-threshold-value-ii.py)
 | 2342 | [Max Sum of a Pair With Equal Sum of Digits](https://leetcode.com/problems/max-sum-of-a-pair-with-equal-sum-of-digits/) | Medium | Array, Hash Table, Sorting, Heap (Priority Queue) | 2025-02-12 | [Go](hashes/2342-max-sum-of-a-pair-with-equal-sum-of-digits.go) [Python](hashes/2342-max-sum-of-a-pair-with-equal-sum-of-digits.py)
