@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1718 | [Construct the Lexicographically Largest Valid Sequence](https://leetcode.com/problems/construct-the-lexicographically-largest-valid-sequence/) | Medium | Array, Backtracking | 2025-02-16 | [Go](backtracking/1718-construct-the-lexicographically-largest-valid-sequence.go) [Python](backtracking/1718-construct-the-lexicographically-largest-valid-sequence.py)
 | 2698 | [Find the Punishment Number of an Integer](https://leetcode.com/problems/find-the-punishment-number-of-an-integer/) | Medium | Math, Backtracking | 2025-02-15 | [Go](backtracking/2698-find-the-punishment-number-of-an-integer.go) [Python](backtracking/2698-find-the-punishment-number-of-an-integer.py)
 | 1352 | [Product of the Last K Numbers](https://leetcode.com/problems/product-of-the-last-k-numbers/) | Medium | Array, Math, Design, Data Stream, Prefix Sum | 2025-02-14 | [Go](design/1352-product-of-the-last-k-numbers.go) [Python](design/1352-product-of-the-last-k-numbers.py)
 | 3066 | [Minimum Operations to Exceed Threshold Value II](https://leetcode.com/problems/minimum-operations-to-exceed-threshold-value-ii/) | Medium | Array, Heap (Priority Queue), Simulation | 2025-02-13 | [Go](heaps/3066-minimum-operations-to-exceed-threshold-value-ii.go) [Python](heaps/3066-minimum-operations-to-exceed-threshold-value-ii.py)
