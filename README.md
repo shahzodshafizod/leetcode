@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2375 | [Construct Smallest Number From DI String](https://leetcode.com/problems/construct-smallest-number-from-di-string/) | Medium | String, Backtracking, Stack, Greedy | 2025-02-18 | [Go](stacks/2375-construct-smallest-number-from-di-string.go) [Python](stacks/2375-construct-smallest-number-from-di-string.py)
 | 1079 | [Letter Tile Possibilities](https://leetcode.com/problems/letter-tile-possibilities/) | Medium | Hash Table, String, Backtracking, Counting | 2025-02-17 | [Go](backtracking/1079-letter-tile-possibilities.go) [Python](backtracking/1079-letter-tile-possibilities.py)
 | 1718 | [Construct the Lexicographically Largest Valid Sequence](https://leetcode.com/problems/construct-the-lexicographically-largest-valid-sequence/) | Medium | Array, Backtracking | 2025-02-16 | [Go](backtracking/1718-construct-the-lexicographically-largest-valid-sequence.go) [Python](backtracking/1718-construct-the-lexicographically-largest-valid-sequence.py)
 | 2698 | [Find the Punishment Number of an Integer](https://leetcode.com/problems/find-the-punishment-number-of-an-integer/) | Medium | Math, Backtracking | 2025-02-15 | [Go](backtracking/2698-find-the-punishment-number-of-an-integer.go) [Python](backtracking/2698-find-the-punishment-number-of-an-integer.py)
