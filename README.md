@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1980 | [Find Unique Binary String](https://leetcode.com/problems/find-unique-binary-string/) | Medium | Array, Hash Table, String, Backtracking | 2025-02-20 | [Go](tries/1980-find-unique-binary-string.go) [Python](tries/1980-find-unique-binary-string.py)
 | 1415 | [The k-th Lexicographical String of All Happy Strings of Length n](https://leetcode.com/problems/the-k-th-lexicographical-string-of-all-happy-strings-of-length-n/) | Medium | String, Backtracking | 2025-02-19 | [Go](greedy/1415-the-k-th-lexicographical-string-of-all-happy-strings-of-length-n.go) [Python](greedy/1415-the-k-th-lexicographical-string-of-all-happy-strings-of-length-n.py)
 | 2375 | [Construct Smallest Number From DI String](https://leetcode.com/problems/construct-smallest-number-from-di-string/) | Medium | String, Backtracking, Stack, Greedy | 2025-02-18 | [Go](stacks/2375-construct-smallest-number-from-di-string.go) [Python](stacks/2375-construct-smallest-number-from-di-string.py)
 | 1079 | [Letter Tile Possibilities](https://leetcode.com/problems/letter-tile-possibilities/) | Medium | Hash Table, String, Backtracking, Counting | 2025-02-17 | [Go](backtracking/1079-letter-tile-possibilities.go) [Python](backtracking/1079-letter-tile-possibilities.py)
