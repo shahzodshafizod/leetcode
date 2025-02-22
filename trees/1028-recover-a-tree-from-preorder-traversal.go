@@ -4,30 +4,33 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 
 // https://leetcode.com/problems/recover-a-tree-from-preorder-traversal/
 
+// Approach: Depth-First Search
+// Time: O(n)
+// Space: O(n)
 func recoverFromPreorder(traversal string) *pkg.TreeNode {
-	var idx = 0
-	return recoverFromPreorderRecur(traversal, &idx, len(traversal), 0)
-}
-
-func recoverFromPreorderRecur(traversal string, idx *int, n int, level int) *pkg.TreeNode {
-	if *idx >= n {
-		return nil
-	}
-	var i = *idx
-	for dashes := 0; dashes < level; dashes++ {
-		if traversal[i] != '-' {
-			return nil
+	var n = len(traversal)
+	var recover func(idx int, depth int) (*pkg.TreeNode, int)
+	recover = func(idx int, depth int) (*pkg.TreeNode, int) {
+		if idx >= n {
+			return nil, idx
 		}
-		i++
+		var dashes = 0
+		for idx < n && traversal[idx] == '-' {
+			idx++
+			dashes++
+		}
+		if dashes != depth {
+			return nil, idx - dashes
+		}
+		var val = 0
+		for ; idx < n && traversal[idx] != '-'; idx++ {
+			val = val*10 + int(traversal[idx]-'0')
+		}
+		var node = &pkg.TreeNode{Val: val}
+		node.Left, idx = recover(idx, depth+1)
+		node.Right, idx = recover(idx, depth+1)
+		return node, idx
 	}
-	*idx = i
-	var val = 0
-	for *idx < n && traversal[*idx] != '-' {
-		val = val*10 + int(traversal[*idx]-'0')
-		(*idx)++
-	}
-	var node = &pkg.TreeNode{Val: val}
-	node.Left = recoverFromPreorderRecur(traversal, idx, n, level+1)
-	node.Right = recoverFromPreorderRecur(traversal, idx, n, level+1)
-	return node
+	var root, _ = recover(0, 0)
+	return root
 }

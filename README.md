@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0832 | [Flipping an Image](https://leetcode.com/problems/flipping-an-image/) | Easy | Array, Two Pointers, Bit Manipulation, Matrix, Simulation | 2025-02-22 | [Go](twopointers/0832-flipping-an-image.go) [Python](twopointers/0832-flipping-an-image.py)
 | 1261 | [Find Elements in a Contaminated Binary Tree](https://leetcode.com/problems/find-elements-in-a-contaminated-binary-tree/) | Medium | Hash Table, Tree, Depth-First Search, Breadth-First Search, Design, Binary Tree | 2025-02-21 | [Go](design/1261-find-elements-in-a-contaminated-binary-tree.go) [Python](design/1261-find-elements-in-a-contaminated-binary-tree.py)
 | 1980 | [Find Unique Binary String](https://leetcode.com/problems/find-unique-binary-string/) | Medium | Array, Hash Table, String, Backtracking | 2025-02-20 | [Go](tries/1980-find-unique-binary-string.go) [Python](tries/1980-find-unique-binary-string.py)
 | 1415 | [The k-th Lexicographical String of All Happy Strings of Length n](https://leetcode.com/problems/the-k-th-lexicographical-string-of-all-happy-strings-of-length-n/) | Medium | String, Backtracking | 2025-02-19 | [Go](greedy/1415-the-k-th-lexicographical-string-of-all-happy-strings-of-length-n.go) [Python](greedy/1415-the-k-th-lexicographical-string-of-all-happy-strings-of-length-n.py)
@@ -457,7 +458,7 @@
 | 1632 | [Rank Transform of a Matrix](https://leetcode.com/problems/rank-transform-of-a-matrix/) | Hard | Array, Union Find, Graph, Topological Sort, Sorting, Matrix | 2024-02-12 | [Go](unionfinds/1632-rank-transform-of-a-matrix.go)
 | 0273 | [Integer to English Words](https://leetcode.com/problems/integer-to-english-words/) | Hard | Math, String, Recursion | 2024-02-11 | [Go](strings/0273-integer-to-english-words.go)
 | 0332 | [Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/) | Hard | Depth-First Search, Graph, Eulerian Circuit | 2024-02-10 | [Go](graphs/0332-reconstruct-itinerary.go)
-| 1028 | [Recover a Tree From Preorder Traversal](https://leetcode.com/problems/recover-a-tree-from-preorder-traversal/) | Hard | String, Tree, Depth-First Search, Binary Tree | 2024-02-10 | [Go](trees/1028-recover-a-tree-from-preorder-traversal.go)
+| 1028 | [Recover a Tree From Preorder Traversal](https://leetcode.com/problems/recover-a-tree-from-preorder-traversal/) | Hard | String, Tree, Depth-First Search, Binary Tree | 2024-02-10 | [Go](trees/1028-recover-a-tree-from-preorder-traversal.go) [Python](trees/1028-recover-a-tree-from-preorder-traversal.py)
 | 0649 | [Dota2 Senate](https://leetcode.com/problems/dota2-senate/) | Medium | String, Greedy, Queue | 2024-02-09 | [Go](queues/0649-dota2-senate.go)
 | 0224 | [Basic Calculator](https://leetcode.com/problems/basic-calculator/) | Hard | Math, String, Stack, Recursion | 2024-02-09 | [Go](stacks/0224-basic-calculator.go)
 | 2551 | [Put Marbles in Bags](https://leetcode.com/problems/put-marbles-in-bags/) | Hard | Array, Greedy, Sorting, Heap (Priority Queue) | 2024-02-09 | [Go](arrays/2551-put-marbles-in-bags.go)
