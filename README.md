@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1749 | [Maximum Absolute Sum of Any Subarray](https://leetcode.com/problems/maximum-absolute-sum-of-any-subarray/) | Medium | Array, Dynamic Programming | 2025-02-26 | [Go](prefixsums/1749-maximum-absolute-sum-of-any-subarray.go) [Python](prefixsums/1749-maximum-absolute-sum-of-any-subarray.py)
+| 1524 | [Number of Sub-arrays With Odd Sum](https://leetcode.com/problems/number-of-sub-arrays-with-odd-sum/) | Medium | Array, Math, Dynamic Programming, Prefix Sum | 2025-02-25 | [Go](prefixsums/1524-number-of-sub-arrays-with-odd-sum.go) [Python](prefixsums/1524-number-of-sub-arrays-with-odd-sum.py)
 | 2467 | [Most Profitable Path in a Tree](https://leetcode.com/problems/most-profitable-path-in-a-tree/) | Medium | Array, Tree, Depth-First Search, Breadth-First Search, Graph | 2025-02-24 | [Go](graphs/2467-most-profitable-path-in-a-tree.go) [Python](graphs/2467-most-profitable-path-in-a-tree.py)
 | 0889 | [Construct Binary Tree from Preorder and Postorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/) | Medium | Array, Hash Table, Divide and Conquer, Tree, Binary Tree | 2025-02-23 | [Go](trees/0889-construct-binary-tree-from-preorder-and-postorder-traversal.go) [Python](trees/0889-construct-binary-tree-from-preorder-and-postorder-traversal.py)
 | 0832 | [Flipping an Image](https://leetcode.com/problems/flipping-an-image/) | Easy | Array, Two Pointers, Bit Manipulation, Matrix, Simulation | 2025-02-22 | [Go](twopointers/0832-flipping-an-image.go) [Python](twopointers/0832-flipping-an-image.py)
