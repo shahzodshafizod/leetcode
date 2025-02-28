@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1092 | [Shortest Common Supersequence](https://leetcode.com/problems/shortest-common-supersequence/) | Hard | String, Dynamic Programming | 2025-02-28 | [Go](dp/1092-shortest-common-supersequence.go) [Python](dp/1092-shortest-common-supersequence.py)
+| 0873 | [Length of Longest Fibonacci Subsequence](https://leetcode.com/problems/length-of-longest-fibonacci-subsequence/) | Medium | Array, Hash Table, Dynamic Programming | 2025-02-27 | [Go](hashes/0873-length-of-longest-fibonacci-subsequence.go) [Python](hashes/0873-length-of-longest-fibonacci-subsequence.py)
 | 1749 | [Maximum Absolute Sum of Any Subarray](https://leetcode.com/problems/maximum-absolute-sum-of-any-subarray/) | Medium | Array, Dynamic Programming | 2025-02-26 | [Go](prefixsums/1749-maximum-absolute-sum-of-any-subarray.go) [Python](prefixsums/1749-maximum-absolute-sum-of-any-subarray.py)
 | 1524 | [Number of Sub-arrays With Odd Sum](https://leetcode.com/problems/number-of-sub-arrays-with-odd-sum/) | Medium | Array, Math, Dynamic Programming, Prefix Sum | 2025-02-25 | [Go](prefixsums/1524-number-of-sub-arrays-with-odd-sum.go) [Python](prefixsums/1524-number-of-sub-arrays-with-odd-sum.py)
 | 2467 | [Most Profitable Path in a Tree](https://leetcode.com/problems/most-profitable-path-in-a-tree/) | Medium | Array, Tree, Depth-First Search, Breadth-First Search, Graph | 2025-02-24 | [Go](graphs/2467-most-profitable-path-in-a-tree.go) [Python](graphs/2467-most-profitable-path-in-a-tree.py)
