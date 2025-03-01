@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2460 | [Apply Operations to an Array](https://leetcode.com/problems/apply-operations-to-an-array/) | Easy | Array, Two Pointers, Simulation | 2025-03-01 | [Go](twopointers/2460-apply-operations-to-an-array.go) [Python](twopointers/2460-apply-operations-to-an-array.py)
 | 1092 | [Shortest Common Supersequence](https://leetcode.com/problems/shortest-common-supersequence/) | Hard | String, Dynamic Programming | 2025-02-28 | [Go](dp/1092-shortest-common-supersequence.go) [Python](dp/1092-shortest-common-supersequence.py)
 | 0873 | [Length of Longest Fibonacci Subsequence](https://leetcode.com/problems/length-of-longest-fibonacci-subsequence/) | Medium | Array, Hash Table, Dynamic Programming | 2025-02-27 | [Go](hashes/0873-length-of-longest-fibonacci-subsequence.go) [Python](hashes/0873-length-of-longest-fibonacci-subsequence.py)
 | 1749 | [Maximum Absolute Sum of Any Subarray](https://leetcode.com/problems/maximum-absolute-sum-of-any-subarray/) | Medium | Array, Dynamic Programming | 2025-02-26 | [Go](prefixsums/1749-maximum-absolute-sum-of-any-subarray.go) [Python](prefixsums/1749-maximum-absolute-sum-of-any-subarray.py)
