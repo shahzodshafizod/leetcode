@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2570 | [Merge Two 2D Arrays by Summing Values](https://leetcode.com/problems/merge-two-2d-arrays-by-summing-values/) | Easy | Array, Hash Table, Two Pointers | 2025-03-02 | [Go](twopointers/2570-merge-two-2d-arrays-by-summing-values.go) [Python](twopointers/2570-merge-two-2d-arrays-by-summing-values.py)
 | 2460 | [Apply Operations to an Array](https://leetcode.com/problems/apply-operations-to-an-array/) | Easy | Array, Two Pointers, Simulation | 2025-03-01 | [Go](twopointers/2460-apply-operations-to-an-array.go) [Python](twopointers/2460-apply-operations-to-an-array.py)
 | 1092 | [Shortest Common Supersequence](https://leetcode.com/problems/shortest-common-supersequence/) | Hard | String, Dynamic Programming | 2025-02-28 | [Go](dp/1092-shortest-common-supersequence.go) [Python](dp/1092-shortest-common-supersequence.py)
 | 0873 | [Length of Longest Fibonacci Subsequence](https://leetcode.com/problems/length-of-longest-fibonacci-subsequence/) | Medium | Array, Hash Table, Dynamic Programming | 2025-02-27 | [Go](hashes/0873-length-of-longest-fibonacci-subsequence.go) [Python](hashes/0873-length-of-longest-fibonacci-subsequence.py)
