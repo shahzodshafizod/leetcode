@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2161 | [Partition Array According to Given Pivot](https://leetcode.com/problems/partition-array-according-to-given-pivot/) | Medium | Array, Two Pointers, Simulation | 2025-03-03 | [Go](twopointers/2161-partition-array-according-to-given-pivot.go) [Python](twopointers/2161-partition-array-according-to-given-pivot.py)
 | 2570 | [Merge Two 2D Arrays by Summing Values](https://leetcode.com/problems/merge-two-2d-arrays-by-summing-values/) | Easy | Array, Hash Table, Two Pointers | 2025-03-02 | [Go](twopointers/2570-merge-two-2d-arrays-by-summing-values.go) [Python](twopointers/2570-merge-two-2d-arrays-by-summing-values.py)
 | 2460 | [Apply Operations to an Array](https://leetcode.com/problems/apply-operations-to-an-array/) | Easy | Array, Two Pointers, Simulation | 2025-03-01 | [Go](twopointers/2460-apply-operations-to-an-array.go) [Python](twopointers/2460-apply-operations-to-an-array.py)
 | 1092 | [Shortest Common Supersequence](https://leetcode.com/problems/shortest-common-supersequence/) | Hard | String, Dynamic Programming | 2025-02-28 | [Go](dp/1092-shortest-common-supersequence.go) [Python](dp/1092-shortest-common-supersequence.py)
