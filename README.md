@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2579 | [Count Total Number of Colored Cells](https://leetcode.com/problems/count-total-number-of-colored-cells/) | Medium | Math | 2025-03-05 | [Go](maths/2579-count-total-number-of-colored-cells.go) [Python](maths/2579-count-total-number-of-colored-cells.py)
+| 1780 | [Check if Number is a Sum of Powers of Three](https://leetcode.com/problems/check-if-number-is-a-sum-of-powers-of-three/) | Medium | Math | 2025-03-04 | [Go](maths/1780-check-if-number-is-a-sum-of-powers-of-three.go) [Python](maths/1780-check-if-number-is-a-sum-of-powers-of-three.py)
 | 2161 | [Partition Array According to Given Pivot](https://leetcode.com/problems/partition-array-according-to-given-pivot/) | Medium | Array, Two Pointers, Simulation | 2025-03-03 | [Go](twopointers/2161-partition-array-according-to-given-pivot.go) [Python](twopointers/2161-partition-array-according-to-given-pivot.py)
 | 2570 | [Merge Two 2D Arrays by Summing Values](https://leetcode.com/problems/merge-two-2d-arrays-by-summing-values/) | Easy | Array, Hash Table, Two Pointers | 2025-03-02 | [Go](twopointers/2570-merge-two-2d-arrays-by-summing-values.go) [Python](twopointers/2570-merge-two-2d-arrays-by-summing-values.py)
 | 2460 | [Apply Operations to an Array](https://leetcode.com/problems/apply-operations-to-an-array/) | Easy | Array, Two Pointers, Simulation | 2025-03-01 | [Go](twopointers/2460-apply-operations-to-an-array.go) [Python](twopointers/2460-apply-operations-to-an-array.py)
