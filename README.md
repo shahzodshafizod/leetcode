@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2965 | [Find Missing and Repeated Values](https://leetcode.com/problems/find-missing-and-repeated-values/) | Easy | Array, Hash Table, Math, Matrix | 2025-03-06 | [Go](matrices/2965-find-missing-and-repeated-values.go) [Python](matrices/2965-find-missing-and-repeated-values.py)
 | 2579 | [Count Total Number of Colored Cells](https://leetcode.com/problems/count-total-number-of-colored-cells/) | Medium | Math | 2025-03-05 | [Go](maths/2579-count-total-number-of-colored-cells.go) [Python](maths/2579-count-total-number-of-colored-cells.py)
 | 1780 | [Check if Number is a Sum of Powers of Three](https://leetcode.com/problems/check-if-number-is-a-sum-of-powers-of-three/) | Medium | Math | 2025-03-04 | [Go](maths/1780-check-if-number-is-a-sum-of-powers-of-three.go) [Python](maths/1780-check-if-number-is-a-sum-of-powers-of-three.py)
 | 2161 | [Partition Array According to Given Pivot](https://leetcode.com/problems/partition-array-according-to-given-pivot/) | Medium | Array, Two Pointers, Simulation | 2025-03-03 | [Go](twopointers/2161-partition-array-according-to-given-pivot.go) [Python](twopointers/2161-partition-array-according-to-given-pivot.py)
