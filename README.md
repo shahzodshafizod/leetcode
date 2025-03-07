@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2523 | [Closest Prime Numbers in Range](https://leetcode.com/problems/closest-prime-numbers-in-range/) | Medium | Math, Number Theory | 2025-03-07 | [Go](maths/2523-closest-prime-numbers-in-range.go) [Python](maths/2523-closest-prime-numbers-in-range.py)
 | 2965 | [Find Missing and Repeated Values](https://leetcode.com/problems/find-missing-and-repeated-values/) | Easy | Array, Hash Table, Math, Matrix | 2025-03-06 | [Go](matrices/2965-find-missing-and-repeated-values.go) [Python](matrices/2965-find-missing-and-repeated-values.py)
 | 2579 | [Count Total Number of Colored Cells](https://leetcode.com/problems/count-total-number-of-colored-cells/) | Medium | Math | 2025-03-05 | [Go](maths/2579-count-total-number-of-colored-cells.go) [Python](maths/2579-count-total-number-of-colored-cells.py)
 | 1780 | [Check if Number is a Sum of Powers of Three](https://leetcode.com/problems/check-if-number-is-a-sum-of-powers-of-three/) | Medium | Math | 2025-03-04 | [Go](maths/1780-check-if-number-is-a-sum-of-powers-of-three.go) [Python](maths/1780-check-if-number-is-a-sum-of-powers-of-three.py)
