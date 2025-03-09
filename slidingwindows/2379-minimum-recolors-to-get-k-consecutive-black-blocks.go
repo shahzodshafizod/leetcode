@@ -23,27 +23,3 @@ func minimumRecolors(blocks string, k int) int {
 	}
 	return res
 }
-
-// // Approach: Backtracking
-// // Time: O(2^k)
-// // Space: O(2^k)
-// func minimumRecolors(blocks string, k int) int {
-// 	var n = len(blocks)
-// 	var backtrack func(idx int, length int) int
-// 	backtrack = func(idx int, length int) int {
-// 		if length == k {
-// 			return 0
-// 		}
-// 		if idx == n || length+(n-idx-1) < k {
-// 			return 100
-// 		}
-// 		if blocks[idx] == 'B' {
-// 			return backtrack(idx+1, length+1)
-// 		}
-// 		return min(
-// 			1+backtrack(idx+1, length+1),
-// 			backtrack(idx+1, 0),
-// 		)
-// 	}
-// 	return backtrack(0, 0)
-// }
