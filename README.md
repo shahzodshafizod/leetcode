@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3306 | [Count of Substrings Containing Every Vowel and K Consonants II](https://leetcode.com/problems/count-of-substrings-containing-every-vowel-and-k-consonants-ii/) | Medium | Hash Table, String, Sliding Window | 2025-03-10 | [Go](slidingwindows/3306-count-of-substrings-containing-every-vowel-and-k-consonants-ii.go) [Python](slidingwindows/3306-count-of-substrings-containing-every-vowel-and-k-consonants-ii.py)
 | 3208 | [Alternating Groups II](https://leetcode.com/problems/alternating-groups-ii/) | Medium | Array, Sliding Window | 2025-03-09 | [Go](slidingwindows/3208-alternating-groups-ii.go) [Python](slidingwindows/3208-alternating-groups-ii.py)
 | 2379 | [Minimum Recolors to Get K Consecutive Black Blocks](https://leetcode.com/problems/minimum-recolors-to-get-k-consecutive-black-blocks/) | Easy | String, Sliding Window | 2025-03-08 | [Go](slidingwindows/2379-minimum-recolors-to-get-k-consecutive-black-blocks.go) [Python](slidingwindows/2379-minimum-recolors-to-get-k-consecutive-black-blocks.py)
 | 2523 | [Closest Prime Numbers in Range](https://leetcode.com/problems/closest-prime-numbers-in-range/) | Medium | Math, Number Theory | 2025-03-07 | [Go](maths/2523-closest-prime-numbers-in-range.go) [Python](maths/2523-closest-prime-numbers-in-range.py)
