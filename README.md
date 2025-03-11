@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1358 | [Number of Substrings Containing All Three Characters](https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/) | Medium | Hash Table, String, Sliding Window | 2025-03-11 | [Go](slidingwindows/1358-number-of-substrings-containing-all-three-characters.go) [Python](slidingwindows/1358-number-of-substrings-containing-all-three-characters.py)
 | 3306 | [Count of Substrings Containing Every Vowel and K Consonants II](https://leetcode.com/problems/count-of-substrings-containing-every-vowel-and-k-consonants-ii/) | Medium | Hash Table, String, Sliding Window | 2025-03-10 | [Go](slidingwindows/3306-count-of-substrings-containing-every-vowel-and-k-consonants-ii.go) [Python](slidingwindows/3306-count-of-substrings-containing-every-vowel-and-k-consonants-ii.py)
 | 3208 | [Alternating Groups II](https://leetcode.com/problems/alternating-groups-ii/) | Medium | Array, Sliding Window | 2025-03-09 | [Go](slidingwindows/3208-alternating-groups-ii.go) [Python](slidingwindows/3208-alternating-groups-ii.py)
 | 2379 | [Minimum Recolors to Get K Consecutive Black Blocks](https://leetcode.com/problems/minimum-recolors-to-get-k-consecutive-black-blocks/) | Easy | String, Sliding Window | 2025-03-08 | [Go](slidingwindows/2379-minimum-recolors-to-get-k-consecutive-black-blocks.go) [Python](slidingwindows/2379-minimum-recolors-to-get-k-consecutive-black-blocks.py)
