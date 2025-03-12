@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2529 | [Maximum Count of Positive Integer and Negative Integer](https://leetcode.com/problems/maximum-count-of-positive-integer-and-negative-integer/) | Easy | Array, Binary Search, Counting | 2025-03-12 | [Go](binarysearch/2529-maximum-count-of-positive-integer-and-negative-integer.go) [Python](binarysearch/2529-maximum-count-of-positive-integer-and-negative-integer.py)
 | 1358 | [Number of Substrings Containing All Three Characters](https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/) | Medium | Hash Table, String, Sliding Window | 2025-03-11 | [Go](slidingwindows/1358-number-of-substrings-containing-all-three-characters.go) [Python](slidingwindows/1358-number-of-substrings-containing-all-three-characters.py)
 | 3306 | [Count of Substrings Containing Every Vowel and K Consonants II](https://leetcode.com/problems/count-of-substrings-containing-every-vowel-and-k-consonants-ii/) | Medium | Hash Table, String, Sliding Window | 2025-03-10 | [Go](slidingwindows/3306-count-of-substrings-containing-every-vowel-and-k-consonants-ii.go) [Python](slidingwindows/3306-count-of-substrings-containing-every-vowel-and-k-consonants-ii.py)
 | 3208 | [Alternating Groups II](https://leetcode.com/problems/alternating-groups-ii/) | Medium | Array, Sliding Window | 2025-03-09 | [Go](slidingwindows/3208-alternating-groups-ii.go) [Python](slidingwindows/3208-alternating-groups-ii.py)
