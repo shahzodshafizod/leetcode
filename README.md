@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2560 | [House Robber IV](https://leetcode.com/problems/house-robber-iv/) | Medium | Array, Binary Search | 2025-03-15 | [Go](binarysearch/2560-house-robber-iv.go) [Python](binarysearch/2560-house-robber-iv.py)
 | 2226 | [Maximum Candies Allocated to K Children](https://leetcode.com/problems/maximum-candies-allocated-to-k-children/) | Medium | Array, Binary Search | 2025-03-14 | [Go](binarysearch/2226-maximum-candies-allocated-to-k-children.go) [Python](binarysearch/2226-maximum-candies-allocated-to-k-children.py)
 | 3356 | [Zero Array Transformation II](https://leetcode.com/problems/zero-array-transformation-ii/) | Medium | Array, Binary Search, Prefix Sum | 2025-03-13 | [Go](prefixsums/3356-zero-array-transformation-ii.go) [Python](prefixsums/3356-zero-array-transformation-ii.py)
 | 3355 | [Zero Array Transformation I](https://leetcode.com/problems/zero-array-transformation-i/) | Medium | Array, Prefix Sum | 2025-03-13 | [Go](prefixsums/3355-zero-array-transformation-i.go) [Python](prefixsums/3355-zero-array-transformation-i.py)
