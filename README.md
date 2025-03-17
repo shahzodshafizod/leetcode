@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2206 | [Divide Array Into Equal Pairs](https://leetcode.com/problems/divide-array-into-equal-pairs/) | Easy | Array, Hash Table, Bit Manipulation, Counting | 2025-03-17 | [Go](hashes/2206-divide-array-into-equal-pairs.go) [Python](hashes/2206-divide-array-into-equal-pairs.py)
 | 2594 | [Minimum Time to Repair Cars](https://leetcode.com/problems/minimum-time-to-repair-cars/) | Medium | Array, Binary Search | 2025-03-16 | [Go](binarysearch/2594-minimum-time-to-repair-cars.go) [Python](binarysearch/2594-minimum-time-to-repair-cars.py)
 | 2560 | [House Robber IV](https://leetcode.com/problems/house-robber-iv/) | Medium | Array, Binary Search | 2025-03-15 | [Go](binarysearch/2560-house-robber-iv.go) [Python](binarysearch/2560-house-robber-iv.py)
 | 2226 | [Maximum Candies Allocated to K Children](https://leetcode.com/problems/maximum-candies-allocated-to-k-children/) | Medium | Array, Binary Search | 2025-03-14 | [Go](binarysearch/2226-maximum-candies-allocated-to-k-children.go) [Python](binarysearch/2226-maximum-candies-allocated-to-k-children.py)
