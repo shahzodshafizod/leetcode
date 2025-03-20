@@ -17,224 +17,166 @@ There are two ways to implement a “disjoint set”.
 		time in this case.
 */
 
-type DisjointSet interface {
-	Union(int, int)
+type UnionFind interface {
+	Union(int, int) bool
 	Find(int) int
-	Connected(int, int) bool
 	Reset(int)
 }
 
-type disjointSet struct {
+type unionFind struct {
 	parent []int
 }
 
-func (d *disjointSet) Reset(x int) {
-	d.parent[x] = x
+func (u *unionFind) Reset(x int) {
+	u.parent[x] = x
 }
 
-func NewDisjointSet(size int) DisjointSet {
-	var d = &disjointSet{parent: make([]int, size)}
+func NewUnionFind(size int) UnionFind {
+	var uf = &unionFind{parent: make([]int, size)}
 	for i := 0; i < size; i++ {
 		// each node's root is the node itself,
 		// so nodes are disconnected
-		d.Reset(i)
+		uf.Reset(i)
 	}
-	return d
+	return uf
 }
 
-func (d *disjointSet) Union(x int, y int) {
-	d.parent[d.Find(y)] = d.Find(x)
-}
-
-func (d *disjointSet) Find(x int) int {
-	if d.parent[x] != x {
-		d.parent[x] = d.Find(d.parent[x])
+func (u *unionFind) Union(x int, y int) bool {
+	var px = u.Find(x)
+	var py = u.Find(y)
+	if px == py {
+		return false
 	}
-	return d.parent[x]
+	u.parent[py] = px
+	return true
 }
 
-func (d *disjointSet) Connected(x int, y int) bool {
-	return d.Find(x) == d.Find(y)
+func (u *unionFind) Find(x int) int {
+	if u.parent[x] != x {
+		u.parent[x] = u.Find(u.parent[x])
+	}
+	return u.parent[x]
 }
 
 // QUICK FIND /////////////////////////////////////////////////////////////////
 
-type quickFind struct {
+type unionFindQuickFind struct {
 	root []int
 }
 
-func NewQuickFind(size int) DisjointSet {
-	var quickFind = &quickFind{make([]int, size)}
-	for idx := range quickFind.root {
-		quickFind.Reset(idx)
+func NewUnionFindQuickFind(size int) UnionFind {
+	var uf = &unionFindQuickFind{make([]int, size)}
+	for idx := 0; idx < size; idx++ {
+		uf.Reset(idx)
 	}
-	return quickFind
+	return uf
 }
 
 // O(N)
-func (f *quickFind) Union(x int, y int) {
-	var rootX = f.Find(x)
-	var rootY = f.Find(y)
-	if rootX != rootY {
-		for i := range f.root {
-			if f.root[i] == rootY {
-				f.root[i] = rootX
-			}
+func (u *unionFindQuickFind) Union(x int, y int) bool {
+	var rootX = u.Find(x)
+	var rootY = u.Find(y)
+	if rootX == rootY {
+		return false
+	}
+	for i := range u.root {
+		if u.root[i] == rootY {
+			u.root[i] = rootX
 		}
 	}
+	return true
 }
 
 // O(1)
-func (f *quickFind) Find(x int) int {
-	return f.root[x]
+func (u *unionFindQuickFind) Find(x int) int {
+	return u.root[x]
 }
 
-// O(1)
-func (f *quickFind) Connected(x int, y int) bool {
-	return f.Find(x) == f.Find(y)
-}
-
-func (f *quickFind) Reset(idx int) {
-	f.root[idx] = idx
+func (u *unionFindQuickFind) Reset(idx int) {
+	u.root[idx] = idx
 }
 
 // QUICK UNION ////////////////////////////////////////////////////////////////
 
-type quickUnion struct {
+type unionFindQuickUnion struct {
 	root []int
 }
 
-func NewQuickUnion(size int) DisjointSet {
-	var quickUnion = &quickUnion{make([]int, size)}
-	for idx := range quickUnion.root {
-		quickUnion.Reset(idx)
+func NewUnionFindQuickUnion(size int) UnionFind {
+	var uf = &unionFindQuickUnion{make([]int, size)}
+	for idx := 0; idx < size; idx++ {
+		uf.Reset(idx)
 	}
-	return quickUnion
+	return uf
+}
+
+// O(1)
+func (u *unionFindQuickUnion) Union(x int, y int) bool {
+	var rootX = u.root[x]
+	var rootY = u.root[y]
+	if rootX == rootY {
+		return false
+	}
+	u.root[rootY] = rootX
+	return true
 }
 
 // O(N)
-func (u *quickUnion) Union(x int, y int) {
-	var rootX = u.Find(x) // O(N)
-	var rootY = u.Find(y) // O(N)
-	if rootX != rootY {
-		u.root[rootY] = rootX
+func (u *unionFindQuickUnion) Find(x int) int {
+	if x != u.root[x] {
+		u.root[x] = u.Find(u.root[x])
 	}
+	return u.root[x]
 }
 
-// O(N)
-func (u *quickUnion) Find(x int) int {
-	for x != u.root[x] {
-		x = u.root[x] // optimize?
-	}
-	return x
-}
-
-// O(N)
-func (u *quickUnion) Connected(x int, y int) bool {
-	return u.Find(x) == u.Find(y)
-}
-
-func (u *quickUnion) Reset(idx int) {
+func (u *unionFindQuickUnion) Reset(idx int) {
 	u.root[idx] = idx
 }
 
 // RANK UNION /////////////////////////////////////////////////////////////////
 
-type rankUnion struct {
+type unionFindRanked struct {
 	root []int
 	rank []int // tree hight
 }
 
-func NewRankUnion(size int) DisjointSet {
-	var rankUnion = &rankUnion{
+func NewUnionFindRanked(size int) UnionFind {
+	var uf = &unionFindRanked{
 		root: make([]int, size),
 		rank: make([]int, size),
 	}
-	for idx := range rankUnion.root {
-		rankUnion.Reset(idx)
+	for idx := 0; idx < size; idx++ {
+		uf.Reset(idx)
 	}
-	return rankUnion
+	return uf
 }
 
 // O(Log N)
-func (r *rankUnion) Union(x int, y int) {
-	var rootX = r.Find(x)
-	var rootY = r.Find(y)
-	if rootX != rootY {
-		if r.rank[rootX] > r.rank[rootY] {
-			r.root[rootY] = rootX
-		} else if r.rank[rootX] < r.rank[rootY] {
-			r.root[rootX] = rootY
-		} else {
-			r.root[rootY] = rootX
-			r.rank[rootX]++
-		}
+func (u *unionFindRanked) Find(x int) int {
+	if x != u.root[x] {
+		u.root[x] = u.Find(u.root[x])
 	}
+	return u.root[x]
 }
 
 // O(Log N)
-func (r *rankUnion) Find(x int) int {
-	for x != r.root[x] {
-		x = r.root[x]
+func (u *unionFindRanked) Union(x int, y int) bool {
+	var rootX = u.Find(x)
+	var rootY = u.Find(y)
+	if rootX == rootY {
+		return false
 	}
-	return x
-}
-
-// O(Log N)
-func (r *rankUnion) Connected(x int, y int) bool {
-	return r.Find(x) == r.Find(y)
-}
-
-func (r *rankUnion) Reset(idx int) {
-	r.root[idx] = idx
-	r.rank[idx] = 1
-}
-
-// OPTIMIZED DISJOINT SET /////////////////////////////////////////////////////
-
-type optimizedDS struct {
-	root []int
-	rank []int
-}
-
-func NewOptimizedDS(size int) DisjointSet {
-	var optimized = &optimizedDS{
-		root: make([]int, size),
-		rank: make([]int, size),
+	if u.rank[rootX] < u.rank[rootY] {
+		u.root[rootX] = rootY
+		u.rank[rootY] += u.rank[rootX]
+	} else {
+		u.root[rootY] = rootX
+		u.rank[rootX] += u.rank[rootY]
 	}
-	for idx := range optimized.root {
-		optimized.Reset(idx)
-	}
-	return optimized
+	return true
 }
 
-func (o *optimizedDS) Find(x int) int {
-	if x != o.root[x] {
-		o.root[x] = o.Find(o.root[x])
-	}
-	return o.root[x]
-}
-
-func (o *optimizedDS) Union(x int, y int) {
-	rootX := o.Find(x)
-	rootY := o.Find(y)
-	if rootX != rootY {
-		if o.rank[rootX] > o.rank[rootY] {
-			o.root[rootY] = rootX
-		} else if o.rank[rootX] < o.rank[rootY] {
-			o.root[rootX] = rootY
-		} else {
-			o.root[rootY] = rootX
-			o.rank[rootX]++
-		}
-	}
-}
-
-func (o *optimizedDS) Connected(x int, y int) bool {
-	return o.Find(x) == o.Find(y)
-}
-
-func (o *optimizedDS) Reset(idx int) {
-	o.root[idx] = idx
-	o.rank[idx] = 1
+func (u *unionFindRanked) Reset(idx int) {
+	u.root[idx] = idx
+	u.rank[idx] = 1
 }

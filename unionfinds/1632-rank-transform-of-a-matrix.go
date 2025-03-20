@@ -32,7 +32,7 @@ func matrixRankTransform(matrix [][]int) [][]int {
 	sort.Ints(vals)
 	var rowRanks = make([]int, m)
 	var colRanks = make([]int, n)
-	var groups = pkg.NewDisjointSet(m + n)
+	var groups = pkg.NewUnionFind(m + n)
 	var ranks = make(map[int]int)
 	for _, val := range vals {
 		var cells = list[val]

@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3108 | [Minimum Cost Walk in Weighted Graph](https://leetcode.com/problems/minimum-cost-walk-in-weighted-graph/) | Hard | Array, Bit Manipulation, Union Find, Graph | 2025-03-20 | [Go](unionfinds/3108-minimum-cost-walk-in-weighted-graph.go) [Python](unionfinds/3108-minimum-cost-walk-in-weighted-graph.py)
 | 3191 | [Minimum Operations to Make Binary Array Elements Equal to One I](https://leetcode.com/problems/minimum-operations-to-make-binary-array-elements-equal-to-one-i/) | Medium | Array, Bit Manipulation, Queue, Sliding Window, Prefix Sum | 2025-03-19 | [Go](slidingwindows/3191-minimum-operations-to-make-binary-array-elements-equal-to-one-i.go) [Python](slidingwindows/3191-minimum-operations-to-make-binary-array-elements-equal-to-one-i.py)
 | 2401 | [Longest Nice Subarray](https://leetcode.com/problems/longest-nice-subarray/) | Medium | Array, Bit Manipulation, Sliding Window | 2025-03-18 | [Go](slidingwindows/2401-longest-nice-subarray.go) [Python](slidingwindows/2401-longest-nice-subarray.py)
 | 2206 | [Divide Array Into Equal Pairs](https://leetcode.com/problems/divide-array-into-equal-pairs/) | Easy | Array, Hash Table, Bit Manipulation, Counting | 2025-03-17 | [Go](hashes/2206-divide-array-into-equal-pairs.go) [Python](hashes/2206-divide-array-into-equal-pairs.py)
