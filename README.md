@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1976 | [Number of Ways to Arrive at Destination](https://leetcode.com/problems/number-of-ways-to-arrive-at-destination/) | Medium | Dynamic Programming, Graph, Topological Sort, Shortest Path | 2025-03-23 | [Go](graphs/1976-number-of-ways-to-arrive-at-destination.go) [Python](graphs/1976-number-of-ways-to-arrive-at-destination.py)
 | 2685 | [Count the Number of Complete Components](https://leetcode.com/problems/count-the-number-of-complete-components/) | Medium | Depth-First Search, Breadth-First Search, Union Find, Graph | 2025-03-22 | [Go](graphs/2685-count-the-number-of-complete-components.go) [Python](graphs/2685-count-the-number-of-complete-components.py)
 | 2115 | [Find All Possible Recipes from Given Supplies](https://leetcode.com/problems/find-all-possible-recipes-from-given-supplies/) | Medium | Array, Hash Table, String, Graph, Topological Sort | 2025-03-21 | [Go](graphs/2115-find-all-possible-recipes-from-given-supplies.go) [Python](graphs/2115-find-all-possible-recipes-from-given-supplies.py)
 | 3108 | [Minimum Cost Walk in Weighted Graph](https://leetcode.com/problems/minimum-cost-walk-in-weighted-graph/) | Hard | Array, Bit Manipulation, Union Find, Graph | 2025-03-20 | [Go](unionfinds/3108-minimum-cost-walk-in-weighted-graph.go) [Python](unionfinds/3108-minimum-cost-walk-in-weighted-graph.py)
