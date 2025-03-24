@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3169 | [Count Days Without Meetings](https://leetcode.com/problems/count-days-without-meetings/) | Medium | Array, Sorting | 2025-03-24 | [Go](intervals/3169-count-days-without-meetings.go) [Python](intervals/3169-count-days-without-meetings.py)
 | 1976 | [Number of Ways to Arrive at Destination](https://leetcode.com/problems/number-of-ways-to-arrive-at-destination/) | Medium | Dynamic Programming, Graph, Topological Sort, Shortest Path | 2025-03-23 | [Go](graphs/1976-number-of-ways-to-arrive-at-destination.go) [Python](graphs/1976-number-of-ways-to-arrive-at-destination.py)
 | 2685 | [Count the Number of Complete Components](https://leetcode.com/problems/count-the-number-of-complete-components/) | Medium | Depth-First Search, Breadth-First Search, Union Find, Graph | 2025-03-22 | [Go](graphs/2685-count-the-number-of-complete-components.go) [Python](graphs/2685-count-the-number-of-complete-components.py)
 | 2115 | [Find All Possible Recipes from Given Supplies](https://leetcode.com/problems/find-all-possible-recipes-from-given-supplies/) | Medium | Array, Hash Table, String, Graph, Topological Sort | 2025-03-21 | [Go](graphs/2115-find-all-possible-recipes-from-given-supplies.go) [Python](graphs/2115-find-all-possible-recipes-from-given-supplies.py)
@@ -449,7 +450,7 @@
 | 0191 | [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | Easy | Divide and Conquer, Bit Manipulation | 2024-02-22 | [Go](bits/0191-number-of-1-bits.go)
 | 0190 | [Reverse Bits](https://leetcode.com/problems/reverse-bits/) | Easy | Divide and Conquer, Bit Manipulation | 2024-02-22 | [Go](bits/0190-reverse-bits.go)
 | 0300 | [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) | Medium | Array, Binary Search, Dynamic Programming | 2024-02-21 | [Go](dp/0300-longest-increasing-subsequence.go) [Python](dp/0300-longest-increasing-subsequence.py)
-| 0198 | [House Robber](https://leetcode.com/problems/house-robber/) | Medium | Array, Dynamic Programming | 2024-02-21 | [Go](dp/0198-house-robber.go)
+| 0198 | [House Robber](https://leetcode.com/problems/house-robber/) | Medium | Array, Dynamic Programming | 2024-02-21 | [Go](dp/0198-house-robber.go) [Python](dp/0198-house-robber.py)
 | 0063 | [Unique Paths II](https://leetcode.com/problems/unique-paths-ii/) | Medium | Array, Dynamic Programming, Matrix | 2024-02-21 | [Go](dp/0063-unique-paths-ii.go)
 | 0062 | [Unique Paths](https://leetcode.com/problems/unique-paths/) | Medium | Math, Dynamic Programming, Combinatorics | 2024-02-21 | [Go](dp/0062-unique-paths.go)
 | 1091 | [Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/) | Medium | Array, Breadth-First Search, Matrix | 2024-02-20 | [Go](matrices/1091-shortest-path-in-binary-matrix.go)
