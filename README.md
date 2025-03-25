@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3394 | [Check if Grid can be Cut into Sections](https://leetcode.com/problems/check-if-grid-can-be-cut-into-sections/) | Medium | Array, Sorting | 2025-03-25 | [Go](intervals/3394-check-if-grid-can-be-cut-into-sections.go) [Python](intervals/3394-check-if-grid-can-be-cut-into-sections.py)
 | 3169 | [Count Days Without Meetings](https://leetcode.com/problems/count-days-without-meetings/) | Medium | Array, Sorting | 2025-03-24 | [Go](intervals/3169-count-days-without-meetings.go) [Python](intervals/3169-count-days-without-meetings.py)
 | 1976 | [Number of Ways to Arrive at Destination](https://leetcode.com/problems/number-of-ways-to-arrive-at-destination/) | Medium | Dynamic Programming, Graph, Topological Sort, Shortest Path | 2025-03-23 | [Go](graphs/1976-number-of-ways-to-arrive-at-destination.go) [Python](graphs/1976-number-of-ways-to-arrive-at-destination.py)
 | 2685 | [Count the Number of Complete Components](https://leetcode.com/problems/count-the-number-of-complete-components/) | Medium | Depth-First Search, Breadth-First Search, Union Find, Graph | 2025-03-22 | [Go](graphs/2685-count-the-number-of-complete-components.go) [Python](graphs/2685-count-the-number-of-complete-components.py)
