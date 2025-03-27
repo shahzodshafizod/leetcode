@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2780 | [Minimum Index of a Valid Split](https://leetcode.com/problems/minimum-index-of-a-valid-split/) | Medium | Array, Hash Table, Sorting | 2025-03-27 | [Go](hashes/2780-minimum-index-of-a-valid-split.go) [Python](hashes/2780-minimum-index-of-a-valid-split.py)
 | 2033 | [Minimum Operations to Make a Uni-Value Grid](https://leetcode.com/problems/minimum-operations-to-make-a-uni-value-grid/) | Medium | Array, Math, Sorting, Matrix | 2025-03-26 | [Go](matrices/2033-minimum-operations-to-make-a-uni-value-grid.go) [Python](matrices/2033-minimum-operations-to-make-a-uni-value-grid.py)
 | 3394 | [Check if Grid can be Cut into Sections](https://leetcode.com/problems/check-if-grid-can-be-cut-into-sections/) | Medium | Array, Sorting | 2025-03-25 | [Go](intervals/3394-check-if-grid-can-be-cut-into-sections.go) [Python](intervals/3394-check-if-grid-can-be-cut-into-sections.py)
 | 3169 | [Count Days Without Meetings](https://leetcode.com/problems/count-days-without-meetings/) | Medium | Array, Sorting | 2025-03-24 | [Go](intervals/3169-count-days-without-meetings.go) [Python](intervals/3169-count-days-without-meetings.py)
