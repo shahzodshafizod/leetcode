@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0763 | [Partition Labels](https://leetcode.com/problems/partition-labels/) | Medium | Hash Table, Two Pointers, String, Greedy | 2025-03-30 | [Go](intervals/0763-partition-labels.go) [Python](intervals/0763-partition-labels.py)
+| 2818 | [Apply Operations to Maximize Score](https://leetcode.com/problems/apply-operations-to-maximize-score/) | Hard | Array, Math, Stack, Greedy, Sorting, Monotonic Stack, Number Theory | 2025-03-29 | [Go](stacks/monotonic/2818-apply-operations-to-maximize-score.go) [Python](stacks/monotonic/2818-apply-operations-to-maximize-score.py)
 | 2503 | [Maximum Number of Points From Grid Queries](https://leetcode.com/problems/maximum-number-of-points-from-grid-queries/) | Hard | Array, Two Pointers, Breadth-First Search, Union Find, Sorting, Heap (Priority Queue), Matrix | 2025-03-28 | [Go](heaps/2503-maximum-number-of-points-from-grid-queries.go) [Python](heaps/2503-maximum-number-of-points-from-grid-queries.py)
 | 2780 | [Minimum Index of a Valid Split](https://leetcode.com/problems/minimum-index-of-a-valid-split/) | Medium | Array, Hash Table, Sorting | 2025-03-27 | [Go](hashes/2780-minimum-index-of-a-valid-split.go) [Python](hashes/2780-minimum-index-of-a-valid-split.py)
 | 2033 | [Minimum Operations to Make a Uni-Value Grid](https://leetcode.com/problems/minimum-operations-to-make-a-uni-value-grid/) | Medium | Array, Math, Sorting, Matrix | 2025-03-26 | [Go](matrices/2033-minimum-operations-to-make-a-uni-value-grid.go) [Python](matrices/2033-minimum-operations-to-make-a-uni-value-grid.py)
