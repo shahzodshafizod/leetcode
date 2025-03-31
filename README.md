@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0290 | [Word Pattern](https://leetcode.com/problems/word-pattern/) | Easy | Hash Table, String | 2025-03-31 | [Go](hashes/0290-word-pattern.go) [Python](hashes/0290-word-pattern.py)
 | 0763 | [Partition Labels](https://leetcode.com/problems/partition-labels/) | Medium | Hash Table, Two Pointers, String, Greedy | 2025-03-30 | [Go](intervals/0763-partition-labels.go) [Python](intervals/0763-partition-labels.py)
 | 2818 | [Apply Operations to Maximize Score](https://leetcode.com/problems/apply-operations-to-maximize-score/) | Hard | Array, Math, Stack, Greedy, Sorting, Monotonic Stack, Number Theory | 2025-03-29 | [Go](stacks/monotonic/2818-apply-operations-to-maximize-score.go) [Python](stacks/monotonic/2818-apply-operations-to-maximize-score.py)
 | 2503 | [Maximum Number of Points From Grid Queries](https://leetcode.com/problems/maximum-number-of-points-from-grid-queries/) | Hard | Array, Two Pointers, Breadth-First Search, Union Find, Sorting, Heap (Priority Queue), Matrix | 2025-03-28 | [Go](heaps/2503-maximum-number-of-points-from-grid-queries.go) [Python](heaps/2503-maximum-number-of-points-from-grid-queries.py)
@@ -498,7 +499,7 @@
 | 1028 | [Recover a Tree From Preorder Traversal](https://leetcode.com/problems/recover-a-tree-from-preorder-traversal/) | Hard | String, Tree, Depth-First Search, Binary Tree | 2024-02-10 | [Go](trees/1028-recover-a-tree-from-preorder-traversal.go) [Python](trees/1028-recover-a-tree-from-preorder-traversal.py)
 | 0649 | [Dota2 Senate](https://leetcode.com/problems/dota2-senate/) | Medium | String, Greedy, Queue | 2024-02-09 | [Go](queues/0649-dota2-senate.go)
 | 0224 | [Basic Calculator](https://leetcode.com/problems/basic-calculator/) | Hard | Math, String, Stack, Recursion | 2024-02-09 | [Go](stacks/0224-basic-calculator.go)
-| 2551 | [Put Marbles in Bags](https://leetcode.com/problems/put-marbles-in-bags/) | Hard | Array, Greedy, Sorting, Heap (Priority Queue) | 2024-02-09 | [Go](arrays/2551-put-marbles-in-bags.go)
+| 2551 | [Put Marbles in Bags](https://leetcode.com/problems/put-marbles-in-bags/) | Hard | Array, Greedy, Sorting, Heap (Priority Queue) | 2024-02-09 | [Go](heaps/2551-put-marbles-in-bags.go) [Python](heaps/2551-put-marbles-in-bags.py)
 | 0432 | [All O`one Data Structure](https://leetcode.com/problems/all-oone-data-structure/) | Hard | Hash Table, Linked List, Design, Doubly-Linked List | 2024-02-08 | [Go](design/0432-all-oone-data-structure.go) [Python](design/0432-all-oone-data-structure.py)
 | 0025 | [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) | Hard | Linked List, Recursion | 2024-02-08 | [Go](linkedlists/0025-reverse-nodes-in-k-group.go)
 | 0076 | [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | Hard | Hash Table, String, Sliding Window | 2024-02-08 | [Go](hashes/0076-minimum-window-substring.go)

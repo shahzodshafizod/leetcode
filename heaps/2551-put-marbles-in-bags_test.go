@@ -1,4 +1,4 @@
-package arrays
+package heaps
 
 import (
 	"testing"
@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// go test -v -count=1 ./arrays/ -run ^TestPutMarbles$
+// go test -v -count=1 ./heaps/ -run ^TestPutMarbles$
 func TestPutMarbles(t *testing.T) {
 	for _, tc := range []struct {
 		weights    []int
