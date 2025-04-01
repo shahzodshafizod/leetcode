@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2140 | [Solving Questions With Brainpower](https://leetcode.com/problems/solving-questions-with-brainpower/) | Medium | Array, Dynamic Programming | 2025-04-01 | [Go](dp/2140-solving-questions-with-brainpower.go) [Python](dp/2140-solving-questions-with-brainpower.py)
 | 0290 | [Word Pattern](https://leetcode.com/problems/word-pattern/) | Easy | Hash Table, String | 2025-03-31 | [Go](hashes/0290-word-pattern.go) [Python](hashes/0290-word-pattern.py)
 | 0763 | [Partition Labels](https://leetcode.com/problems/partition-labels/) | Medium | Hash Table, Two Pointers, String, Greedy | 2025-03-30 | [Go](intervals/0763-partition-labels.go) [Python](intervals/0763-partition-labels.py)
 | 2818 | [Apply Operations to Maximize Score](https://leetcode.com/problems/apply-operations-to-maximize-score/) | Hard | Array, Math, Stack, Greedy, Sorting, Monotonic Stack, Number Theory | 2025-03-29 | [Go](stacks/monotonic/2818-apply-operations-to-maximize-score.go) [Python](stacks/monotonic/2818-apply-operations-to-maximize-score.py)
