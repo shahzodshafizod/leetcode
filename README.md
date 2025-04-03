@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2874 | [Maximum Value of an Ordered Triplet II](https://leetcode.com/problems/maximum-value-of-an-ordered-triplet-ii/) | Medium | Array | 2025-04-03 | [Go](greedy/2874-maximum-value-of-an-ordered-triplet-ii.go) [Python](greedy/2874-maximum-value-of-an-ordered-triplet-ii.py)
 | 2873 | [Maximum Value of an Ordered Triplet I](https://leetcode.com/problems/maximum-value-of-an-ordered-triplet-i/) | Easy | Array | 2025-04-02 | [Go](greedy/2873-maximum-value-of-an-ordered-triplet-i.go) [Python](greedy/2873-maximum-value-of-an-ordered-triplet-i.py)
 | 2140 | [Solving Questions With Brainpower](https://leetcode.com/problems/solving-questions-with-brainpower/) | Medium | Array, Dynamic Programming | 2025-04-01 | [Go](dp/2140-solving-questions-with-brainpower.go) [Python](dp/2140-solving-questions-with-brainpower.py)
 | 0290 | [Word Pattern](https://leetcode.com/problems/word-pattern/) | Easy | Hash Table, String | 2025-03-31 | [Go](hashes/0290-word-pattern.go) [Python](hashes/0290-word-pattern.py)
