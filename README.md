@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0383 | [Ransom Note](https://leetcode.com/problems/ransom-note/) | Easy | Hash Table, String, Counting | 2025-04-05 | [Go](hashes/0383-ransom-note.go) [Python](hashes/0383-ransom-note.py)
 | 1123 | [Lowest Common Ancestor of Deepest Leaves](https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/) | Medium | Hash Table, Tree, Depth-First Search, Breadth-First Search, Binary Tree | 2025-04-04 | [Go](trees/1123-lowest-common-ancestor-of-deepest-leaves.go) [Python](trees/1123-lowest-common-ancestor-of-deepest-leaves.py)
 | 2874 | [Maximum Value of an Ordered Triplet II](https://leetcode.com/problems/maximum-value-of-an-ordered-triplet-ii/) | Medium | Array | 2025-04-03 | [Go](greedy/2874-maximum-value-of-an-ordered-triplet-ii.go) [Python](greedy/2874-maximum-value-of-an-ordered-triplet-ii.py)
 | 2873 | [Maximum Value of an Ordered Triplet I](https://leetcode.com/problems/maximum-value-of-an-ordered-triplet-i/) | Easy | Array | 2025-04-02 | [Go](greedy/2873-maximum-value-of-an-ordered-triplet-i.go) [Python](greedy/2873-maximum-value-of-an-ordered-triplet-i.py)
@@ -352,7 +353,7 @@
 | 2597 | [The Number of Beautiful Subsets](https://leetcode.com/problems/the-number-of-beautiful-subsets/) | Medium | Array, Dynamic Programming, Backtracking, Sorting | 2024-05-23 | [Go](backtracking/2597-the-number-of-beautiful-subsets.go)
 | 0131 | [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/) | Medium | String, Dynamic Programming, Backtracking | 2024-05-22 | [Go](backtracking/0131-palindrome-partitioning.go)
 | 1982 | [Find Array Given Subset Sums](https://leetcode.com/problems/find-array-given-subset-sums/) | Hard | Array, Divide and Conquer | 2024-05-21 | [Go](arrays/1982-find-array-given-subset-sums.go)
-| 1863 | [Sum of All Subset XOR Totals](https://leetcode.com/problems/sum-of-all-subset-xor-totals/) | Easy | Array, Math, Backtracking, Bit Manipulation, Combinatorics, Enumeration | 2024-05-20 | [Go](bits/1863-sum-of-all-subset-xor-totals.go)
+| 1863 | [Sum of All Subset XOR Totals](https://leetcode.com/problems/sum-of-all-subset-xor-totals/) | Easy | Array, Math, Backtracking, Bit Manipulation, Combinatorics, Enumeration | 2024-05-20 | [Go](bits/1863-sum-of-all-subset-xor-totals.go) [Python](bits/1863-sum-of-all-subset-xor-totals.py)
 | 3068 | [Find the Maximum Sum of Node Values](https://leetcode.com/problems/find-the-maximum-sum-of-node-values/) | Hard | Array, Dynamic Programming, Greedy, Bit Manipulation, Tree, Sorting | 2024-05-19 | [Go](dp/3068-find-the-maximum-sum-of-node-values.go)
 | 0979 | [Distribute Coins in Binary Tree](https://leetcode.com/problems/distribute-coins-in-binary-tree/) | Medium | Tree, Depth-First Search, Binary Tree | 2024-05-18 | [Go](trees/0979-distribute-coins-in-binary-tree.go)
 | 1325 | [Delete Leaves With a Given Value](https://leetcode.com/problems/delete-leaves-with-a-given-value/) | Medium | Tree, Depth-First Search, Binary Tree | 2024-05-17 | [Go](trees/1325-delete-leaves-with-a-given-value.go)

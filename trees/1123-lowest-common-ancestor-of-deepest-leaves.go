@@ -4,6 +4,9 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 
 // https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/
 
+// Note: This question is the same as 865:
+// https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/
+
 func lcaDeepestLeaves(root *pkg.TreeNode) *pkg.TreeNode {
 	var dfs func(node *pkg.TreeNode) (*pkg.TreeNode, int)
 	dfs = func(node *pkg.TreeNode) (*pkg.TreeNode, int) {
