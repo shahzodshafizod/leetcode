@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0416 | [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/) | Medium | Array, Dynamic Programming | 2025-04-07 | [Go](dp/0416-partition-equal-subset-sum.go) [Python](dp/0416-partition-equal-subset-sum.py)
 | 0368 | [Largest Divisible Subset](https://leetcode.com/problems/largest-divisible-subset/) | Medium | Array, Math, Dynamic Programming, Sorting | 2025-04-06 | [Go](dp/0368-largest-divisible-subset.go) [Python](dp/0368-largest-divisible-subset.py)
 | 0383 | [Ransom Note](https://leetcode.com/problems/ransom-note/) | Easy | Hash Table, String, Counting | 2025-04-05 | [Go](hashes/0383-ransom-note.go) [Python](hashes/0383-ransom-note.py)
 | 1123 | [Lowest Common Ancestor of Deepest Leaves](https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/) | Medium | Hash Table, Tree, Depth-First Search, Breadth-First Search, Binary Tree | 2025-04-04 | [Go](trees/1123-lowest-common-ancestor-of-deepest-leaves.go) [Python](trees/1123-lowest-common-ancestor-of-deepest-leaves.py)
