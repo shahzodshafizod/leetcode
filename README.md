@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3396 | [Minimum Number of Operations to Make Elements in Array Distinct](https://leetcode.com/problems/minimum-number-of-operations-to-make-elements-in-array-distinct/) | Easy | Array, Hash Table | 2025-04-08 | [Go](hashes/3396-minimum-number-of-operations-to-make-elements-in-array-distinct.go) [Python](hashes/3396-minimum-number-of-operations-to-make-elements-in-array-distinct.py)
 | 0416 | [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/) | Medium | Array, Dynamic Programming | 2025-04-07 | [Go](dp/0416-partition-equal-subset-sum.go) [Python](dp/0416-partition-equal-subset-sum.py)
 | 0368 | [Largest Divisible Subset](https://leetcode.com/problems/largest-divisible-subset/) | Medium | Array, Math, Dynamic Programming, Sorting | 2025-04-06 | [Go](dp/0368-largest-divisible-subset.go) [Python](dp/0368-largest-divisible-subset.py)
 | 0383 | [Ransom Note](https://leetcode.com/problems/ransom-note/) | Easy | Hash Table, String, Counting | 2025-04-05 | [Go](hashes/0383-ransom-note.go) [Python](hashes/0383-ransom-note.py)
