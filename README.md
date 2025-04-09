@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3375 | [Minimum Operations to Make Array Values Equal to K](https://leetcode.com/problems/minimum-operations-to-make-array-values-equal-to-k/) | Easy | Array, Hash Table | 2025-04-09 | [Go](hashes/3375-minimum-operations-to-make-array-values-equal-to-k.go) [Python](hashes/3375-minimum-operations-to-make-array-values-equal-to-k.py)
 | 3396 | [Minimum Number of Operations to Make Elements in Array Distinct](https://leetcode.com/problems/minimum-number-of-operations-to-make-elements-in-array-distinct/) | Easy | Array, Hash Table | 2025-04-08 | [Go](hashes/3396-minimum-number-of-operations-to-make-elements-in-array-distinct.go) [Python](hashes/3396-minimum-number-of-operations-to-make-elements-in-array-distinct.py)
 | 0416 | [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/) | Medium | Array, Dynamic Programming | 2025-04-07 | [Go](dp/0416-partition-equal-subset-sum.go) [Python](dp/0416-partition-equal-subset-sum.py)
 | 0368 | [Largest Divisible Subset](https://leetcode.com/problems/largest-divisible-subset/) | Medium | Array, Math, Dynamic Programming, Sorting | 2025-04-06 | [Go](dp/0368-largest-divisible-subset.go) [Python](dp/0368-largest-divisible-subset.py)
