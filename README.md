@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3272 | [Find the Count of Good Integers](https://leetcode.com/problems/find-the-count-of-good-integers/) | Hard | Hash Table, Math, Combinatorics, Enumeration | 2025-04-12 | [Go](backtracking/3272-find-the-count-of-good-integers.go) [Python](backtracking/3272-find-the-count-of-good-integers.py)
 | 2843 | [Count Symmetric Integers](https://leetcode.com/problems/count-symmetric-integers/) | Easy | Math, Enumeration | 2025-04-11 | [Go](maths/2843-count-symmetric-integers.go) [Python](maths/2843-count-symmetric-integers.py)
 | 2999 | [Count the Number of Powerful Integers](https://leetcode.com/problems/count-the-number-of-powerful-integers/) | Hard | Math, String, Dynamic Programming | 2025-04-10 | [Go](dp/2999-count-the-number-of-powerful-integers.go) [Python](dp/2999-count-the-number-of-powerful-integers.py)
 | 3375 | [Minimum Operations to Make Array Values Equal to K](https://leetcode.com/problems/minimum-operations-to-make-array-values-equal-to-k/) | Easy | Array, Hash Table | 2025-04-09 | [Go](hashes/3375-minimum-operations-to-make-array-values-equal-to-k.go) [Python](hashes/3375-minimum-operations-to-make-array-values-equal-to-k.py)
