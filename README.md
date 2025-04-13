@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1922 | [Count Good Numbers](https://leetcode.com/problems/count-good-numbers/) | Medium | Math, Recursion | 2025-04-13 | [Go](maths/1922-count-good-numbers.go) [Python](maths/1922-count-good-numbers.py)
 | 3272 | [Find the Count of Good Integers](https://leetcode.com/problems/find-the-count-of-good-integers/) | Hard | Hash Table, Math, Combinatorics, Enumeration | 2025-04-12 | [Go](backtracking/3272-find-the-count-of-good-integers.go) [Python](backtracking/3272-find-the-count-of-good-integers.py)
 | 2843 | [Count Symmetric Integers](https://leetcode.com/problems/count-symmetric-integers/) | Easy | Math, Enumeration | 2025-04-11 | [Go](maths/2843-count-symmetric-integers.go) [Python](maths/2843-count-symmetric-integers.py)
 | 2999 | [Count the Number of Powerful Integers](https://leetcode.com/problems/count-the-number-of-powerful-integers/) | Hard | Math, String, Dynamic Programming | 2025-04-10 | [Go](dp/2999-count-the-number-of-powerful-integers.go) [Python](dp/2999-count-the-number-of-powerful-integers.py)
