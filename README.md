@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2179 | [Count Good Triplets in an Array](https://leetcode.com/problems/count-good-triplets-in-an-array/) | Hard | Array, Binary Search, Divide and Conquer, Binary Indexed Tree, Segment Tree, Merge Sort, Ordered Set | 2025-04-15 | [Go](fenwicks/2179-count-good-triplets-in-an-array.go) [Python](fenwicks/2179-count-good-triplets-in-an-array.py)
 | 1534 | [Count Good Triplets](https://leetcode.com/problems/count-good-triplets/) | Easy | Array, Enumeration | 2025-04-14 | [Go](arrays/1534-count-good-triplets.go) [Python](arrays/1534-count-good-triplets.py)
 | 1922 | [Count Good Numbers](https://leetcode.com/problems/count-good-numbers/) | Medium | Math, Recursion | 2025-04-13 | [Go](maths/1922-count-good-numbers.go) [Python](maths/1922-count-good-numbers.py)
 | 3272 | [Find the Count of Good Integers](https://leetcode.com/problems/find-the-count-of-good-integers/) | Hard | Hash Table, Math, Combinatorics, Enumeration | 2025-04-12 | [Go](backtracking/3272-find-the-count-of-good-integers.go) [Python](backtracking/3272-find-the-count-of-good-integers.py)
@@ -278,12 +279,12 @@
 | 0009 | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | Easy | Math | 2024-08-10 | [Go](maths/0009-palindrome-number.go) [Python](maths/0009-palindrome-number.py)
 | 2129 | [Capitalize the Title](https://leetcode.com/problems/capitalize-the-title/) | Easy | String | 2024-08-09 | [Go](strings/2129-capitalize-the-title.go)
 | 0724 | [Find Pivot Index](https://leetcode.com/problems/find-pivot-index/) | Easy | Array, Prefix Sum | 2024-08-08 | [Go](prefixsums/0724-find-pivot-index.go) [Python](prefixsums/0724-find-pivot-index.go)
-| 0303 | [Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/) | Easy | Array, Design, Prefix Sum | 2024-08-07 | [Go](design/0303-range-sum-query-immutable.go)
+| 0303 | [Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/) | Easy | Array, Design, Prefix Sum | 2024-08-07 | [Go](design/0303-range-sum-query-immutable.go) [Python](design/0303-range-sum-query-immutable.py)
 | 0084 | [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) | Hard | Array, Stack, Monotonic Stack | 2024-08-06 | [Go](stacks/0084-largest-rectangle-in-histogram.go)
 | 2053 | [Kth Distinct String in an Array](https://leetcode.com/problems/kth-distinct-string-in-an-array/) | Easy | Array, Hash Table, String, Counting | 2024-08-05 | [Go](hashes/2053-kth-distinct-string-in-an-array.go)
 | 1827 | [Minimum Operations to Make the Array Increasing](https://leetcode.com/problems/minimum-operations-to-make-the-array-increasing/) | Easy | Array, Greedy | 2024-08-04 | [Go](greedy/1827-minimum-operations-to-make-the-array-increasing.go)
 | 1460 | [Make Two Arrays Equal by Reversing Subarrays](https://leetcode.com/problems/make-two-arrays-equal-by-reversing-subarrays/) | Easy | Array, Hash Table, Sorting | 2024-08-03 | [Go](hashes/1460-make-two-arrays-equal-by-reversing-subarrays.go)
-| 0315 | [Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/) | Hard | Array, Binary Search, Divide and Conquer, Binary Indexed Tree, Segment Tree, Merge Sort, Ordered Set | 2024-08-02 | [Go](arrays/0315-count-of-smaller-numbers-after-self.go)
+| 0315 | [Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/) | Hard | Array, Binary Search, Divide and Conquer, Binary Indexed Tree, Segment Tree, Merge Sort, Ordered Set | 2024-08-02 | [Go](arrays/0315-count-of-smaller-numbers-after-self.go) [Python](arrays/0315-count-of-smaller-numbers-after-self.py)
 | 3232 | [Find if Digit Game Can Be Won](https://leetcode.com/problems/find-if-digit-game-can-be-won/) | Easy | Array, Math | 2024-08-01 | [Go](arrays/3232-find-if-digit-game-can-be-won.go)
 | 2678 | [Number of Senior Citizens](https://leetcode.com/problems/number-of-senior-citizens/) | Easy | Array, String | 2024-08-01 | [Go](strings/2678-number-of-senior-citizens.go)
 | 1105 | [Filling Bookcase Shelves](https://leetcode.com/problems/filling-bookcase-shelves/) | Medium | Array, Dynamic Programming | 2024-07-31 | [Go](dp/1105-filling-bookcase-shelves.go)

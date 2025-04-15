@@ -1,4 +1,4 @@
-package arrays
+package fenwicks
 
 import "slices"
 
@@ -9,8 +9,7 @@ import "slices"
 // Space: O(N)
 func countSmaller(nums []int) []int {
 	var min = slices.Min(nums)
-	var max = slices.Max(nums)
-	var bitree = make([]int, max-min+1+1)
+	var bitree = make([]int, slices.Max(nums)-min+2) // 1-indexed
 	var update = func(idx int, delta int) {
 		idx -= min - 1
 		for n := len(bitree); idx < n; idx += idx & -idx {
@@ -38,51 +37,41 @@ func countSmaller(nums []int) []int {
 }
 
 // // Approach: Merge Sort
-// // Time: O(N Log N)
+// // Time: O(NLogN)
 // // Space: O(N)
 // func countSmaller(nums []int) []int {
 // 	var n = len(nums)
 // 	var indices = make([]int, n)
-// 	for idx := range indices {
+// 	for idx := 0; idx < n; idx++ {
 // 		indices[idx] = idx
 // 	}
-// 	var smallers = make([]int, n)
-// 	var mergeSort func(low int, high int)
-// 	mergeSort = func(low int, high int) {
-// 		if high-low <= 1 {
+// 	var counts = make([]int, n)
+// 	var merge func(left int, right int)
+// 	merge = func(left int, right int) {
+// 		if right-left <= 1 {
 // 			return
 // 		}
-// 		var mid = low + (high-low)/2
-// 		mergeSort(low, mid)
-// 		mergeSort(mid, high)
-// 		var temp = make([]int, high-low)
-// 		var i, j, k = low, mid, 0
-// 		for i < mid && j < high {
-// 			if nums[indices[i]] <= nums[indices[j]] {
-// 				temp[k] = indices[i]
-// 				smallers[indices[i]] += j - mid
-// 				i++
+// 		var mid = left + (right-left)/2
+// 		merge(left, mid)
+// 		merge(mid, right)
+// 		var count = 0
+// 		var merged = make([]int, right-left)
+// 		var left1, left2 = left, mid
+// 		for idx := 0; left1 < mid || left2 < right; idx++ {
+// 			if left1 == mid || left2 < right && nums[indices[left2]] < nums[indices[left1]] {
+// 				merged[idx] = indices[left2]
+// 				left2++
+// 				count++
 // 			} else {
-// 				temp[k] = indices[j]
-// 				j++
+// 				merged[idx] = indices[left1]
+// 				counts[indices[left1]] += count
+// 				left1++
 // 			}
-// 			k++
 // 		}
-// 		for i < mid {
-// 			temp[k] = indices[i]
-// 			smallers[indices[i]] += j - mid
-// 			k++
-// 			i++
-// 		}
-// 		for j < high {
-// 			temp[k] = indices[j]
-// 			k++
-// 			j++
-// 		}
-// 		copy(indices[low:high], temp)
+// 		copy(indices[left:right], merged)
 // 	}
-// 	mergeSort(0, n)
-// 	return smallers
+// 	merge(0, n)
+// 	return counts
 // }
 
 // // Approach: Brute Force (Time Limit Exceeded)

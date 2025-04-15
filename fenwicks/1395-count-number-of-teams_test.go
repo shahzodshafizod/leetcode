@@ -1,4 +1,4 @@
-package dp
+package fenwicks
 
 import (
 	"testing"
@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// go test -v -count=1 ./dp/ -run ^TestNumTeams$
+// go test -v -count=1 ./fenwicks/ -run ^TestNumTeams$
 func TestNumTeams(t *testing.T) {
 	for _, tc := range []struct {
 		rating []int

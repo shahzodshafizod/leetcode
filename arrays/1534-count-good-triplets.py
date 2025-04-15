@@ -10,16 +10,14 @@ class Solution(unittest.TestCase):
     # Time: O(nnn)
     # Space: O(1)
     def countGoodTriplets(self, arr: List[int], a: int, b: int, c: int) -> int:
-        count, n = 0, len(arr)
-        for i in range(n-2):
-            x = arr[i]
-            for j in range(i+1, n-1):
-                y = arr[j]
-                if abs(x-y) > a: continue
-                for k in range(j+1, n):
-                    z = arr[k]
-                    count += 1 if abs(y-z)<=b and abs(z-x)<=c else 0
-        return count
+        return sum(
+            abs(arr[i]-arr[j]) <= a
+            and abs(arr[j]-arr[k]) <= b
+            and abs(arr[k]-arr[i]) <= c
+            for i in range(len(arr))
+            for j in range(i+1,len(arr))
+            for k in range(j+1,len(arr))
+        )
 
     def test(self):
         for arr, a, b, c, expected in [
