@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2537 | [Count the Number of Good Subarrays](https://leetcode.com/problems/count-the-number-of-good-subarrays/) | Medium | Array, Hash Table, Sliding Window | 2025-04-16 | [Go](slidingwindows/2537-count-the-number-of-good-subarrays.go) [Python](slidingwindows/2537-count-the-number-of-good-subarrays.py)
 | 2179 | [Count Good Triplets in an Array](https://leetcode.com/problems/count-good-triplets-in-an-array/) | Hard | Array, Binary Search, Divide and Conquer, Binary Indexed Tree, Segment Tree, Merge Sort, Ordered Set | 2025-04-15 | [Go](fenwicks/2179-count-good-triplets-in-an-array.go) [Python](fenwicks/2179-count-good-triplets-in-an-array.py)
 | 1534 | [Count Good Triplets](https://leetcode.com/problems/count-good-triplets/) | Easy | Array, Enumeration | 2025-04-14 | [Go](arrays/1534-count-good-triplets.go) [Python](arrays/1534-count-good-triplets.py)
 | 1922 | [Count Good Numbers](https://leetcode.com/problems/count-good-numbers/) | Medium | Math, Recursion | 2025-04-13 | [Go](maths/1922-count-good-numbers.go) [Python](maths/1922-count-good-numbers.py)
