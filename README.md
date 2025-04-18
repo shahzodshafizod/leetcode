@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0038 | [Count and Say](https://leetcode.com/problems/count-and-say/) | Medium | String | 2025-04-18 | [Go](strings/0038-count-and-say.go) [Python](strings/0038-count-and-say.py)
 | 2176 | [Count Equal and Divisible Pairs in an Array](https://leetcode.com/problems/count-equal-and-divisible-pairs-in-an-array/) | Easy | Array | 2025-04-17 | [Go](hashes/2176-count-equal-and-divisible-pairs-in-an-array.go) [Python](hashes/2176-count-equal-and-divisible-pairs-in-an-array.py)
 | 2537 | [Count the Number of Good Subarrays](https://leetcode.com/problems/count-the-number-of-good-subarrays/) | Medium | Array, Hash Table, Sliding Window | 2025-04-16 | [Go](slidingwindows/2537-count-the-number-of-good-subarrays.go) [Python](slidingwindows/2537-count-the-number-of-good-subarrays.py)
 | 2179 | [Count Good Triplets in an Array](https://leetcode.com/problems/count-good-triplets-in-an-array/) | Hard | Array, Binary Search, Divide and Conquer, Binary Indexed Tree, Segment Tree, Merge Sort, Ordered Set | 2025-04-15 | [Go](fenwicks/2179-count-good-triplets-in-an-array.go) [Python](fenwicks/2179-count-good-triplets-in-an-array.py)
