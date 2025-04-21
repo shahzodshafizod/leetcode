@@ -42,9 +42,9 @@ func (m *MedianFinder) AddNum(num int) {
 
 func (m *MedianFinder) FindMedian() float64 {
 	if m.maxHeap.Len() > m.minHeap.Len() {
-		return float64(m.maxHeap.Peek())
+		return float64(m.maxHeap.Peak())
 	}
-	return float64(m.minHeap.Peek()+m.maxHeap.Peek()) / 2
+	return float64(m.minHeap.Peak()+m.maxHeap.Peak()) / 2
 }
 
 /**

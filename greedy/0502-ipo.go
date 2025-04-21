@@ -41,7 +41,7 @@ func findMaximizedCapital(k int, w int, profits []int, capital []int) int {
 	for k > 0 && maxHeap.Len() > 0 { // O(k)
 		k--
 		w += heap.Pop(maxHeap).(int)
-		for minHeap.Len() > 0 && minHeap.Peek()[0] <= w {
+		for minHeap.Len() > 0 && minHeap.Peak()[0] <= w {
 			heap.Push(maxHeap, heap.Pop(minHeap).([2]int)[1]) // O(log n)
 		}
 	}

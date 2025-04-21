@@ -26,7 +26,7 @@ func fullBloomFlowers(flowers [][]int, people []int) []int {
 	sort.Slice(peopids, func(i, j int) bool {
 		return peopids[i][0] < peopids[j][0]
 	})
-	var ends = pkg.NewHeap[int](make([]int, 0), func(x, y int) bool { return x < y })
+	var ends = pkg.NewHeap(make([]int, 0), func(x, y int) bool { return x < y })
 	var person, pid int
 	var fid = 0
 	for idx := range peopids {
@@ -35,7 +35,7 @@ func fullBloomFlowers(flowers [][]int, people []int) []int {
 			heap.Push(ends, flowers[fid][1])
 			fid++
 		}
-		for ends.Len() > 0 && ends.Peek() < person {
+		for ends.Len() > 0 && ends.Peak() < person {
 			heap.Pop(ends)
 		}
 		answer[pid] = ends.Len()

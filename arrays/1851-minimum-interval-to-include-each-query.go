@@ -44,12 +44,12 @@ func minInterval(intervals [][]int, queries []int) []int {
 			heap.Push(inbound, &interval{right - left + 1, right})
 			iid++
 		}
-		for inbound.Len() > 0 && inbound.Peek().right < query {
+		for inbound.Len() > 0 && inbound.Peak().right < query {
 			heap.Pop(inbound)
 		}
 		var value = -1
 		if inbound.Len() > 0 {
-			value = inbound.Peek().length
+			value = inbound.Peak().length
 		}
 		qmap[query] = value
 	}

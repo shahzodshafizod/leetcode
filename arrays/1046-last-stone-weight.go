@@ -21,5 +21,5 @@ func lastStoneWeight(stones []int) int {
 	if maxHeap.Len() == 0 {
 		return 0
 	}
-	return maxHeap.Peek()
+	return maxHeap.Peak()
 }

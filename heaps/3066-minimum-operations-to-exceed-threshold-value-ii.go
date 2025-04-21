@@ -13,7 +13,7 @@ func minOperations(nums []int, k int) int {
 	heap.Init(pq)
 	var first, second int
 	var count = 0
-	for pq.Len() >= 2 && pq.Peek() < k {
+	for pq.Len() >= 2 && pq.Peak() < k {
 		first = heap.Pop(pq).(int)
 		second = heap.Pop(pq).(int)
 		heap.Push(pq, first*2+second)

@@ -53,7 +53,7 @@ func findKthLargest(nums []int, k int) int {
 			heap.Pop(minHeap)
 		}
 	}
-	return minHeap.Peek()
+	return minHeap.Peak()
 
 	// // Time: O(N+KLogN)
 	// maxHeap := pkg.NewHeap(nums, func(x, y int) bool { return x > y })

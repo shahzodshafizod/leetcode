@@ -31,7 +31,7 @@ func mostBooked(n int, meetings [][]int) int {
 	var start, end, room int
 	for _, meeting := range meetings {
 		start, end = meeting[0], meeting[1]
-		for used.Len() > 0 && used.Peek()[0] <= start {
+		for used.Len() > 0 && used.Peak()[0] <= start {
 			mroom := heap.Pop(used).([2]int)
 			heap.Push(available, mroom[1])
 		}

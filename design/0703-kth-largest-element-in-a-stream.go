@@ -25,7 +25,7 @@ func NewKthLargest(k int, nums []int) KthLargest {
 	}
 	heap.Init(kth.minHeap)
 	for _, num := range nums {
-		if num > kth.minHeap.Peek() {
+		if num > kth.minHeap.Peak() {
 			heap.Pop(kth.minHeap)
 			heap.Push(kth.minHeap, num)
 		}
@@ -35,13 +35,13 @@ func NewKthLargest(k int, nums []int) KthLargest {
 
 func (k *KthLargest) Add(val int) int {
 	// take into account a case when heap_size is less than k
-	if heap_size := k.minHeap.Len(); heap_size < k.len || val > k.minHeap.Peek() {
+	if heap_size := k.minHeap.Len(); heap_size < k.len || val > k.minHeap.Peak() {
 		if heap_size >= k.len {
 			heap.Pop(k.minHeap)
 		}
 		heap.Push(k.minHeap, val)
 	}
-	return k.minHeap.Peek()
+	return k.minHeap.Peak()
 }
 
 /**

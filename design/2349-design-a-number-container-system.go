@@ -29,11 +29,11 @@ func (n *NumberContainers) Change(index int, number int) {
 }
 
 func (n *NumberContainers) Find(number int) int {
-	for n.num2idx[number] != nil && n.num2idx[number].Len() > 0 && n.idx2num[n.num2idx[number].Peek()] != number {
+	for n.num2idx[number] != nil && n.num2idx[number].Len() > 0 && n.idx2num[n.num2idx[number].Peak()] != number {
 		heap.Pop(n.num2idx[number])
 	}
 	if n.num2idx[number] != nil && n.num2idx[number].Len() > 0 {
-		return n.num2idx[number].Peek()
+		return n.num2idx[number].Peak()
 	}
 	return -1
 }

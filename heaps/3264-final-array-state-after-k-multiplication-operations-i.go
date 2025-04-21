@@ -22,7 +22,7 @@ func getFinalState(nums []int, k int, multiplier int) []int {
 	})
 	heap.Init(pq)
 	for ; k > 0; k-- {
-		nums[pq.Peek()] *= multiplier
+		nums[pq.Peak()] *= multiplier
 		heap.Fix(pq, 0)
 	}
 	return nums

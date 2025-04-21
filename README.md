@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2145 | [Count the Hidden Sequences](https://leetcode.com/problems/count-the-hidden-sequences/) | Medium | Array, Prefix Sum | 2025-04-21 | [Go](slidingwindows/2145-count-the-hidden-sequences.go) [Python](slidingwindows/2145-count-the-hidden-sequences.py)
 | 0781 | [Rabbits in Forest](https://leetcode.com/problems/rabbits-in-forest/) | Medium | Array, Hash Table, Math, Greedy | 2025-04-20 | [Go](greedy/0781-rabbits-in-forest.go) [Python](greedy/0781-rabbits-in-forest.py)
 | 2563 | [Count the Number of Fair Pairs](https://leetcode.com/problems/count-the-number-of-fair-pairs/) | Medium | Array, Two Pointers, Binary Search, Sorting | 2025-04-19 | [Go](twopointers/2563-count-the-number-of-fair-pairs.go) [Python](twopointers/2563-count-the-number-of-fair-pairs.py)
 | 0038 | [Count and Say](https://leetcode.com/problems/count-and-say/) | Medium | String | 2025-04-18 | [Go](strings/0038-count-and-say.go) [Python](strings/0038-count-and-say.py)
