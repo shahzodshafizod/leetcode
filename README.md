@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1399 | [Count Largest Group](https://leetcode.com/problems/count-largest-group/) | Easy | Hash Table, Math | 2025-04-23 | [Go](hashes/1399-count-largest-group.go) [Python](hashes/1399-count-largest-group.py)
+| 2338 | [Count the Number of Ideal Arrays](https://leetcode.com/problems/count-the-number-of-ideal-arrays/) | Hard | Math, Dynamic Programming, Combinatorics, Number Theory | 2025-04-22 | [Go](dp/2338-count-the-number-of-ideal-arrays.go) [Python](dp/2338-count-the-number-of-ideal-arrays.py)
 | 2145 | [Count the Hidden Sequences](https://leetcode.com/problems/count-the-hidden-sequences/) | Medium | Array, Prefix Sum | 2025-04-21 | [Go](slidingwindows/2145-count-the-hidden-sequences.go) [Python](slidingwindows/2145-count-the-hidden-sequences.py)
 | 0781 | [Rabbits in Forest](https://leetcode.com/problems/rabbits-in-forest/) | Medium | Array, Hash Table, Math, Greedy | 2025-04-20 | [Go](greedy/0781-rabbits-in-forest.go) [Python](greedy/0781-rabbits-in-forest.py)
 | 2563 | [Count the Number of Fair Pairs](https://leetcode.com/problems/count-the-number-of-fair-pairs/) | Medium | Array, Two Pointers, Binary Search, Sorting | 2025-04-19 | [Go](twopointers/2563-count-the-number-of-fair-pairs.go) [Python](twopointers/2563-count-the-number-of-fair-pairs.py)
