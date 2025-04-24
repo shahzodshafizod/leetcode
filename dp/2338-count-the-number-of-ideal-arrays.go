@@ -34,8 +34,7 @@ func idealArrays(n int, maxValue int) int {
 		for mult := num * 2; mult <= maxValue; mult += num {
 			res = (res + dp(mult, k+1)) % MOD
 		}
-		memo[num][k] = new(int)
-		*memo[num][k] = res
+		memo[num][k] = &res
 		return res
 	}
 	var total = 0
