@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2845 | [Count of Interesting Subarrays](https://leetcode.com/problems/count-of-interesting-subarrays/) | Medium | Array, Hash Table, Prefix Sum | 2025-04-25 | [Go](prefixsums/2845-count-of-interesting-subarrays.go) [Python](prefixsums/2845-count-of-interesting-subarrays.py)
 | 2799 | [Count Complete Subarrays in an Array](https://leetcode.com/problems/count-complete-subarrays-in-an-array/) | Medium | Array, Hash Table, Sliding Window | 2025-04-24 | [Go](slidingwindows/2799-count-complete-subarrays-in-an-array.go) [Python](slidingwindows/2799-count-complete-subarrays-in-an-array.py)
 | 1399 | [Count Largest Group](https://leetcode.com/problems/count-largest-group/) | Easy | Hash Table, Math | 2025-04-23 | [Go](hashes/1399-count-largest-group.go) [Python](hashes/1399-count-largest-group.py)
 | 2338 | [Count the Number of Ideal Arrays](https://leetcode.com/problems/count-the-number-of-ideal-arrays/) | Hard | Math, Dynamic Programming, Combinatorics, Number Theory | 2025-04-22 | [Go](dp/2338-count-the-number-of-ideal-arrays.go) [Python](dp/2338-count-the-number-of-ideal-arrays.py)
