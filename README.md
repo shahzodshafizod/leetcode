@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3113 | [Find the Number of Subarrays Where Boundary Elements Are Maximum](https://leetcode.com/problems/find-the-number-of-subarrays-where-boundary-elements-are-maximum/) | Hard | Array, Binary Search, Stack, Monotonic Stack | 2025-04-26 | [Go](stacks/monotonic/3113-find-the-number-of-subarrays-where-boundary-elements-are-maximum.go) [Python](stacks/monotonic/3113-find-the-number-of-subarrays-where-boundary-elements-are-maximum.py)
 | 2845 | [Count of Interesting Subarrays](https://leetcode.com/problems/count-of-interesting-subarrays/) | Medium | Array, Hash Table, Prefix Sum | 2025-04-25 | [Go](prefixsums/2845-count-of-interesting-subarrays.go) [Python](prefixsums/2845-count-of-interesting-subarrays.py)
 | 2799 | [Count Complete Subarrays in an Array](https://leetcode.com/problems/count-complete-subarrays-in-an-array/) | Medium | Array, Hash Table, Sliding Window | 2025-04-24 | [Go](slidingwindows/2799-count-complete-subarrays-in-an-array.go) [Python](slidingwindows/2799-count-complete-subarrays-in-an-array.py)
 | 1399 | [Count Largest Group](https://leetcode.com/problems/count-largest-group/) | Easy | Hash Table, Math | 2025-04-23 | [Go](hashes/1399-count-largest-group.go) [Python](hashes/1399-count-largest-group.py)
@@ -428,7 +429,7 @@
 | 0058 | [Length of Last Word](https://leetcode.com/problems/length-of-last-word/) | Easy | String | 2024-04-01 | [Go](strings/0058-length-of-last-word.go)
 | 0765 | [Couples Holding Hands](https://leetcode.com/problems/couples-holding-hands/) | Hard | Greedy, Depth-First Search, Breadth-First Search, Union Find, Graph | 2024-03-31 | [Go](unionfinds/0765-couples-holding-hands.go)
 | 0268 | [Missing Number](https://leetcode.com/problems/missing-number/) | Easy | Array, Hash Table, Math, Binary Search, Bit Manipulation, Sorting | 2024-03-31 | [Go](arrays/0268-missing-number.go)
-| 2444 | [Count Subarrays With Fixed Bounds](https://leetcode.com/problems/count-subarrays-with-fixed-bounds/) | Hard | Array, Queue, Sliding Window, Monotonic Queue | 2024-03-31 | [Go](arrays/2444-count-subarrays-with-fixed-bounds.go)
+| 2444 | [Count Subarrays With Fixed Bounds](https://leetcode.com/problems/count-subarrays-with-fixed-bounds/) | Hard | Array, Queue, Sliding Window, Monotonic Queue | 2024-03-31 | [Go](slidingwindows/2444-count-subarrays-with-fixed-bounds.go) [Python](slidingwindows/2444-count-subarrays-with-fixed-bounds.py)
 | 0004 | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | Hard | Array, Binary Search, Divide and Conquer | 2024-03-30 | [Go](arrays/0004-median-of-two-sorted-arrays.go)
 | 0992 | [Subarrays with K Different Integers](https://leetcode.com/problems/subarrays-with-k-different-integers/) | Hard | Array, Hash Table, Sliding Window, Counting | 2024-03-29 | [Go](hashes/0992-subarrays-with-k-different-integers.go)
 | 2962 | [Count Subarrays Where Max Element Appears at Least K Times](https://leetcode.com/problems/count-subarrays-where-max-element-appears-at-least-k-times/) | Medium | Array, Sliding Window | 2024-03-29 | [Go](arrays/2962-count-subarrays-where-max-element-appears-at-least-k-times.go)

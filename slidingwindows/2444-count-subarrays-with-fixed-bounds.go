@@ -1,8 +1,8 @@
-package arrays
+package slidingwindows
 
 // https://leetcode.com/problems/count-subarrays-with-fixed-bounds/
 
-func countSubarrays2444(nums []int, minK int, maxK int) int64 {
+func countSubarrays(nums []int, minK int, maxK int) int64 {
 	var count int64 = 0
 	var badid, minid, maxid = -1, -1, -1
 	for idx, num := range nums {

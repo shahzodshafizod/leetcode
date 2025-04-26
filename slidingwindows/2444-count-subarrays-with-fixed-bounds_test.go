@@ -1,4 +1,4 @@
-package arrays
+package slidingwindows
 
 import (
 	"testing"
@@ -6,8 +6,8 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// go test -v -count=1 ./arrays/ -run ^TestCountSubarrays2444$
-func TestCountSubarrays2444(t *testing.T) {
+// go test -v -count=1 ./slidingwindows/ -run ^TestCountSubarrays$
+func TestCountSubarrays(t *testing.T) {
 	for _, tc := range []struct {
 		nums  []int
 		minK  int
@@ -19,7 +19,7 @@ func TestCountSubarrays2444(t *testing.T) {
 		{nums: []int{1, 2, 1, 4, 1, 3, 4}, minK: 1, maxK: 4, count: 16},
 		{nums: []int{1, 3, 2, 2, 1, 3, 2, 2}, minK: 1, maxK: 3, count: 20},
 	} {
-		count := countSubarrays2444(tc.nums, tc.minK, tc.maxK)
+		count := countSubarrays(tc.nums, tc.minK, tc.maxK)
 		assert.Equal(t, tc.count, count)
 	}
 }
