@@ -1,7 +1,6 @@
 package dp
 
 import (
-	"sort"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -17,8 +16,6 @@ func TestFindAllConcatenatedWordsInADict(t *testing.T) {
 		{words: []string{"cat", "cats", "catsdogcats", "dog", "dogcatsdog", "hippopotamuses", "rat", "ratcatdogcat"}, concatenated: []string{"catsdogcats", "dogcatsdog", "ratcatdogcat"}},
 	} {
 		concatenated := findAllConcatenatedWordsInADict(tc.words)
-		sort.Strings(tc.concatenated)
-		sort.Strings(concatenated)
-		assert.Equal(t, tc.concatenated, concatenated)
+		assert.ElementsMatch(t, tc.concatenated, concatenated)
 	}
 }

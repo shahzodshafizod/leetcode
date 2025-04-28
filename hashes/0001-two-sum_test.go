@@ -24,6 +24,6 @@ func TestTwoSum(t *testing.T) {
 		{nums: []int{3, 3}, target: 6, result: []int{0, 1}},
 	} {
 		result := twoSum(tc.nums, tc.target)
-		assert.Equal(t, tc.result, result)
+		assert.ElementsMatch(t, tc.result, result)
 	}
 }

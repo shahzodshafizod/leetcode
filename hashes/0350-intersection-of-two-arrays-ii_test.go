@@ -1,7 +1,6 @@
 package hashes
 
 import (
-	"sort"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -18,7 +17,6 @@ func TestIntersect(t *testing.T) {
 		{nums1: []int{4, 9, 5}, nums2: []int{9, 4, 9, 8, 4}, intersection: []int{4, 9}},
 	} {
 		intersection := intersect(tc.nums1, tc.nums2)
-		sort.Ints(intersection)
-		assert.Equal(t, tc.intersection, intersection)
+		assert.ElementsMatch(t, tc.intersection, intersection)
 	}
 }

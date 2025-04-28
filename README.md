@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3405 | [Count the Number of Arrays with K Matching Adjacent Elements](https://leetcode.com/problems/count-the-number-of-arrays-with-k-matching-adjacent-elements/) | Hard | Math, Combinatorics | 2025-04-28 | [Go](maths/3405-count-the-number-of-arrays-with-k-matching-adjacent-elements.go) [Python](maths/3405-count-the-number-of-arrays-with-k-matching-adjacent-elements.py)
 | 3392 | [Count Subarrays of Length Three With a Condition](https://leetcode.com/problems/count-subarrays-of-length-three-with-a-condition/) | Easy | Array | 2025-04-27 | [Go](arrays/3392-count-subarrays-of-length-three-with-a-condition.go) [Python](arrays/3392-count-subarrays-of-length-three-with-a-condition.py)
 | 3113 | [Find the Number of Subarrays Where Boundary Elements Are Maximum](https://leetcode.com/problems/find-the-number-of-subarrays-where-boundary-elements-are-maximum/) | Hard | Array, Binary Search, Stack, Monotonic Stack | 2025-04-26 | [Go](stacks/monotonic/3113-find-the-number-of-subarrays-where-boundary-elements-are-maximum.go) [Python](stacks/monotonic/3113-find-the-number-of-subarrays-where-boundary-elements-are-maximum.py)
 | 2845 | [Count of Interesting Subarrays](https://leetcode.com/problems/count-of-interesting-subarrays/) | Medium | Array, Hash Table, Prefix Sum | 2025-04-25 | [Go](prefixsums/2845-count-of-interesting-subarrays.go) [Python](prefixsums/2845-count-of-interesting-subarrays.py)
@@ -571,4 +572,4 @@
 | 0844 | [Backspace String Compare](https://leetcode.com/problems/backspace-string-compare/) | Easy | Two Pointers, String, Stack, Simulation | 2024-01-07 | [Go](strings/0844-backspace-string-compare.go)
 | 0042 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | Hard | Array, Two Pointers, Dynamic Programming, Stack | 2024-01-06 | [Go](arrays/0042-trapping-rain-water.go)
 | 0011 | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | Medium | Array, Two Pointers, Greedy | 2024-01-05 | [Go](arrays/0011-container-with-most-water.go)
-| 0001 | [Two Sum](https://leetcode.com/problems/two-sum/) | Easy | Array, Hash Table | 2024-01-04 | [Go](hashes/0001-two-sum.go)
+| 0001 | [Two Sum](https://leetcode.com/problems/two-sum/) | Easy | Array, Hash Table | 2024-01-04 | [Go](hashes/0001-two-sum.go) [Python](hashes/0001-two-sum.py)

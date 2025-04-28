@@ -1,7 +1,6 @@
 package hashes
 
 import (
-	"sort"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -21,8 +20,6 @@ func TestUncommonFromSentences(t *testing.T) {
 		{s1: "s z z z s", s2: "s z ejt", uncommon: []string{"ejt"}},
 	} {
 		uncommon := uncommonFromSentences(tc.s1, tc.s2)
-		sort.Strings(tc.uncommon)
-		sort.Strings(uncommon)
-		assert.Equal(t, tc.uncommon, uncommon)
+		assert.ElementsMatch(t, tc.uncommon, uncommon)
 	}
 }

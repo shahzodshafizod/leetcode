@@ -1,7 +1,6 @@
 package slidingwindows
 
 import (
-	"sort"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -30,7 +29,6 @@ func TestFindSubstring(t *testing.T) {
 		{s: "ababaab", words: []string{"ab", "ba", "ba"}, substrings: []int{1}},
 	} {
 		substrings := findSubstring(tc.s, tc.words)
-		sort.Ints(substrings)
-		assert.Equal(t, tc.substrings, substrings)
+		assert.ElementsMatch(t, tc.substrings, substrings)
 	}
 }

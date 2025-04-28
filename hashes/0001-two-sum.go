@@ -31,6 +31,9 @@ Step 8: Can we optimize the solution?
 
 // https://leetcode.com/problems/two-sum/
 
+// Approach: Hash Table
+// Time: O(n)
+// Space: O(n)
 func twoSum(nums []int, target int) []int {
 	var hash = make(map[int]int)
 	for i := len(nums) - 1; i >= 0; i-- {
@@ -42,18 +45,26 @@ func twoSum(nums []int, target int) []int {
 	return nil
 }
 
+// // Approach: Two Pointers
+// // Time: O(n log n)
+// // Space: O(1)
 // func twoSum(nums []int, target int) []int {
-// 	var numberToFind int
-// 	var length = len(nums)
-// 	for i := 0; i < length; i++ {
-// 		numberToFind = target - nums[i]
-// 		if numberToFind < 0 {
-// 			continue
-// 		}
-// 		for j := i + 1; j < length; j++ {
-// 			if numberToFind == nums[j] {
-// 				return []int{i, j}
-// 			}
+// 	var n = len(nums)
+// 	var indices = make([]int, n)
+// 	for idx := 0; idx < n; idx++ {
+// 		indices[idx] = idx
+// 	}
+// 	sort.Slice(indices, func(i int, j int) bool {
+// 		return nums[indices[i]] < nums[indices[j]]
+// 	})
+// 	var lo, hi = 0, n - 1
+// 	for lo < hi {
+// 		if nums[indices[lo]]+nums[indices[hi]] > target {
+// 			hi--
+// 		} else if nums[indices[lo]]+nums[indices[hi]] < target {
+// 			lo++
+// 		} else {
+// 			return []int{indices[lo], indices[hi]}
 // 		}
 // 	}
 // 	return nil
