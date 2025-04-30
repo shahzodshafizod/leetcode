@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0459 | [Repeated Substring Pattern](https://leetcode.com/problems/repeated-substring-pattern/) | Easy | String, String Matching | 2025-04-30 | [Go](strings/0459-repeated-substring-pattern.go) [Python](strings/0459-repeated-substring-pattern.py)
 | 0434 | [Number of Segments in a String](https://leetcode.com/problems/number-of-segments-in-a-string/) | Easy | String | 2025-04-29 | [Go](strings/0434-number-of-segments-in-a-string.go) [Python](strings/0434-number-of-segments-in-a-string.py)
 | 3405 | [Count the Number of Arrays with K Matching Adjacent Elements](https://leetcode.com/problems/count-the-number-of-arrays-with-k-matching-adjacent-elements/) | Hard | Math, Combinatorics | 2025-04-28 | [Go](maths/3405-count-the-number-of-arrays-with-k-matching-adjacent-elements.go) [Python](maths/3405-count-the-number-of-arrays-with-k-matching-adjacent-elements.py)
 | 3392 | [Count Subarrays of Length Three With a Condition](https://leetcode.com/problems/count-subarrays-of-length-three-with-a-condition/) | Easy | Array | 2025-04-27 | [Go](arrays/3392-count-subarrays-of-length-three-with-a-condition.go) [Python](arrays/3392-count-subarrays-of-length-three-with-a-condition.py)

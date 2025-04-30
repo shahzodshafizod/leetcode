@@ -6,7 +6,7 @@ import unittest
 # python3 -m unittest stacks/1910-remove-all-occurrences-of-a-substring.py
 
 class Solution(unittest.TestCase):
-    # Approach: MKP (Knuth-Morris-Pratt) Algorithm
+    # Approach: KMP (Knuth-Morris-Pratt) Algorithm
     # Time: O(n+m), n=len(s), m=len(part)
     # Space: O(n+m)
     def removeOccurrences(self, s: str, part: str) -> str:

@@ -6,24 +6,24 @@ from typing import List
 # python3 -m unittest maths/1295-find-numbers-with-even-number-of-digits.py
 
 class Solution(unittest.TestCase):
-    # # Approach: Convert to String
+    # # Approach: Extract Digits
     # # Time: O(NxM), N=len(nums), M=max(len(nums[i]))
-    # # Space: O(M)
+    # # Space: O(1)
     # def findNumbers(self, nums: List[int]) -> int:
-    #     return sum(1 if len(str(num))&1==0 else 0 for num in nums)
+    #     count = 0
+    #     for num in nums:
+    #         digits = 0
+    #         while num > 0:
+    #             num //= 10
+    #             digits += 1
+    #         count += 1 if digits&1==0 else 0
+    #     return count
 
-    # Approach: Extract Digits
+    # Approach: Convert to String
     # Time: O(NxM), N=len(nums), M=max(len(nums[i]))
-    # Space: O(1)
+    # Space: O(M)
     def findNumbers(self, nums: List[int]) -> int:
-        count = 0
-        for num in nums:
-            digits = 0
-            while num > 0:
-                num //= 10
-                digits += 1
-            count += 1 if digits&1==0 else 0
-        return count
+        return sum(len(str(num))&1==0 for num in nums)
 
     def testFindNumbers(self) -> None:
         for nums, expected in [

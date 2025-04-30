@@ -2,7 +2,7 @@ package stacks
 
 // https://leetcode.com/problems/remove-all-occurrences-of-a-substring/
 
-// Approach: MKP (Knuth-Morris-Pratt) Algorithm
+// Approach: KMP (Knuth-Morris-Pratt) Algorithm
 // Time: O(n+m), n=len(s), m=len(part)
 // Space: O(n+m)
 func removeOccurrences(s string, part string) string {
