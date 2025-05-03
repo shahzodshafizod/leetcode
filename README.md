@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1007 | [Minimum Domino Rotations For Equal Row](https://leetcode.com/problems/minimum-domino-rotations-for-equal-row/) | Medium | Array, Greedy | 2025-05-03 | [Go](greedy/1007-minimum-domino-rotations-for-equal-row.go) [Python](greedy/1007-minimum-domino-rotations-for-equal-row.py)
 | 0838 | [Push Dominoes](https://leetcode.com/problems/push-dominoes/) | Medium | Two Pointers, String, Dynamic Programming | 2025-05-02 | [Go](twopointers/0838-push-dominoes.go) [Python](twopointers/0838-push-dominoes.py)
 | 2071 | [Maximum Number of Tasks You Can Assign](https://leetcode.com/problems/maximum-number-of-tasks-you-can-assign/) | Hard | Array, Binary Search, Greedy, Queue, Sorting, Monotonic Queue | 2025-05-01 | [Go](binarysearch/2071-maximum-number-of-tasks-you-can-assign.go) [Python](binarysearch/2071-maximum-number-of-tasks-you-can-assign.py)
 | 0459 | [Repeated Substring Pattern](https://leetcode.com/problems/repeated-substring-pattern/) | Easy | String, String Matching | 2025-04-30 | [Go](strings/0459-repeated-substring-pattern.go) [Python](strings/0459-repeated-substring-pattern.py)
