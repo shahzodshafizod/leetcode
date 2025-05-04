@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1128 | [Number of Equivalent Domino Pairs](https://leetcode.com/problems/number-of-equivalent-domino-pairs/) | Easy | Array, Hash Table, Counting | 2025-05-04 | [Go](hashes/1128-number-of-equivalent-domino-pairs.go) [Python](hashes/1128-number-of-equivalent-domino-pairs.py)
 | 1007 | [Minimum Domino Rotations For Equal Row](https://leetcode.com/problems/minimum-domino-rotations-for-equal-row/) | Medium | Array, Greedy | 2025-05-03 | [Go](greedy/1007-minimum-domino-rotations-for-equal-row.go) [Python](greedy/1007-minimum-domino-rotations-for-equal-row.py)
 | 0838 | [Push Dominoes](https://leetcode.com/problems/push-dominoes/) | Medium | Two Pointers, String, Dynamic Programming | 2025-05-02 | [Go](twopointers/0838-push-dominoes.go) [Python](twopointers/0838-push-dominoes.py)
 | 2071 | [Maximum Number of Tasks You Can Assign](https://leetcode.com/problems/maximum-number-of-tasks-you-can-assign/) | Hard | Array, Binary Search, Greedy, Queue, Sorting, Monotonic Queue | 2025-05-01 | [Go](binarysearch/2071-maximum-number-of-tasks-you-can-assign.go) [Python](binarysearch/2071-maximum-number-of-tasks-you-can-assign.py)
