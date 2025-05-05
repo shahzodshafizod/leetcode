@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0790 | [Domino and Tromino Tiling](https://leetcode.com/problems/domino-and-tromino-tiling/) | Medium | Dynamic Programming | 2025-05-05 | [Go](dp/0790-domino-and-tromino-tiling.go) [Python](dp/0790-domino-and-tromino-tiling.py)
 | 1128 | [Number of Equivalent Domino Pairs](https://leetcode.com/problems/number-of-equivalent-domino-pairs/) | Easy | Array, Hash Table, Counting | 2025-05-04 | [Go](hashes/1128-number-of-equivalent-domino-pairs.go) [Python](hashes/1128-number-of-equivalent-domino-pairs.py)
 | 1007 | [Minimum Domino Rotations For Equal Row](https://leetcode.com/problems/minimum-domino-rotations-for-equal-row/) | Medium | Array, Greedy | 2025-05-03 | [Go](greedy/1007-minimum-domino-rotations-for-equal-row.go) [Python](greedy/1007-minimum-domino-rotations-for-equal-row.py)
 | 0838 | [Push Dominoes](https://leetcode.com/problems/push-dominoes/) | Medium | Two Pointers, String, Dynamic Programming | 2025-05-02 | [Go](twopointers/0838-push-dominoes.go) [Python](twopointers/0838-push-dominoes.py)
