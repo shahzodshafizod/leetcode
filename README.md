@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1920 | [Build Array from Permutation](https://leetcode.com/problems/build-array-from-permutation/) | Easy | Array, Simulation | 2025-05-06 | [Go](arrays/1920-build-array-from-permutation.go) [Python](arrays/1920-build-array-from-permutation.py)
 | 0790 | [Domino and Tromino Tiling](https://leetcode.com/problems/domino-and-tromino-tiling/) | Medium | Dynamic Programming | 2025-05-05 | [Go](dp/0790-domino-and-tromino-tiling.go) [Python](dp/0790-domino-and-tromino-tiling.py)
 | 1128 | [Number of Equivalent Domino Pairs](https://leetcode.com/problems/number-of-equivalent-domino-pairs/) | Easy | Array, Hash Table, Counting | 2025-05-04 | [Go](hashes/1128-number-of-equivalent-domino-pairs.go) [Python](hashes/1128-number-of-equivalent-domino-pairs.py)
 | 1007 | [Minimum Domino Rotations For Equal Row](https://leetcode.com/problems/minimum-domino-rotations-for-equal-row/) | Medium | Array, Greedy | 2025-05-03 | [Go](greedy/1007-minimum-domino-rotations-for-equal-row.go) [Python](greedy/1007-minimum-domino-rotations-for-equal-row.py)
