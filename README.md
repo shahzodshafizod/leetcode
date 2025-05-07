@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3341 | [Find Minimum Time to Reach Last Room I](https://leetcode.com/problems/find-minimum-time-to-reach-last-room-i/) | Medium | Array, Graph, Heap (Priority Queue), Matrix, Shortest Path | 2025-05-07 | [Go](graphs/3341-find-minimum-time-to-reach-last-room-i.go) [Python](graphs/3341-find-minimum-time-to-reach-last-room-i.py)
 | 1920 | [Build Array from Permutation](https://leetcode.com/problems/build-array-from-permutation/) | Easy | Array, Simulation | 2025-05-06 | [Go](arrays/1920-build-array-from-permutation.go) [Python](arrays/1920-build-array-from-permutation.py)
 | 0790 | [Domino and Tromino Tiling](https://leetcode.com/problems/domino-and-tromino-tiling/) | Medium | Dynamic Programming | 2025-05-05 | [Go](dp/0790-domino-and-tromino-tiling.go) [Python](dp/0790-domino-and-tromino-tiling.py)
 | 1128 | [Number of Equivalent Domino Pairs](https://leetcode.com/problems/number-of-equivalent-domino-pairs/) | Easy | Array, Hash Table, Counting | 2025-05-04 | [Go](hashes/1128-number-of-equivalent-domino-pairs.go) [Python](hashes/1128-number-of-equivalent-domino-pairs.py)
