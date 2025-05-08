@@ -9,7 +9,7 @@ import (
 // https://leetcode.com/problems/find-minimum-time-to-reach-last-room-i/
 
 // Approach: Shortest Path + Dijkstra
-// Time: O(nmlog(nm))
+// Time: O(nm log nm)
 // Space: O(nm)
 func minTimeToReach(moveTime [][]int) int {
 	var m, n = len(moveTime), len(moveTime[0])
