@@ -22,22 +22,23 @@ func minTimeToReach3342(moveTime [][]int) int {
 		func(x, y [3]int) bool { return x[2] < y[2] },
 	)
 	var directions = [5]int{1, 0, -1, 0, 1}
-	var row, col, time, newr, newc, step int
+	var row, col, time, newr, newc, newt, step int
 	for minheap.Len() > 0 {
 		top := heap.Pop(minheap).([3]int)
 		row, col, time = top[0], top[1], top[2]
-		if row == n-1 && col == m-1 {
-			break
-		}
 		step = (row+col)%2 + 1
 		for dir := 1; dir < 5; dir++ {
 			newr = row + directions[dir-1]
 			newc = col + directions[dir]
 			if min(newr, newc) >= 0 && newr < n && newc < m && !seen[newr][newc] {
-				heap.Push(minheap, [3]int{newr, newc, max(time, moveTime[newr][newc]) + step})
+				newt = max(time, moveTime[newr][newc]) + step
+				if newr == n-1 && newc == m-1 {
+					return newt
+				}
+				heap.Push(minheap, [3]int{newr, newc, newt})
 				seen[newr][newc] = true
 			}
 		}
 	}
-	return time
+	return -1
 }

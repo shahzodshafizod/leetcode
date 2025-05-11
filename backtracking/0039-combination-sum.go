@@ -1,6 +1,9 @@
 package backtracking
 
-import "sort"
+import (
+	"slices"
+	"sort"
+)
 
 // https://leetcode.com/problems/combination-sum/
 
@@ -15,7 +18,7 @@ func combinationSum(candidates []int, target int) [][]int {
 			return
 		}
 		if target == 0 {
-			combinations = append(combinations, append([]int{}, combination...))
+			combinations = append(combinations, slices.Clone(combination))
 			return
 		}
 		// decision to include candidates[idx]
