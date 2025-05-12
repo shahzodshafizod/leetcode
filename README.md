@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2094 | [Finding 3-Digit Even Numbers](https://leetcode.com/problems/finding-3-digit-even-numbers/) | Easy | Array, Hash Table, Sorting, Enumeration | 2025-05-12 | [Go](hashes/2094-finding-3-digit-even-numbers.go) [Python](hashes/2094-finding-3-digit-even-numbers.py)
 | 0482 | [License Key Formatting](https://leetcode.com/problems/license-key-formatting/) | Easy | String | 2025-05-11 | [Go](strings/0482-license-key-formatting.go) [Python](strings/0482-license-key-formatting.py)
 | 2918 | [Minimum Equal Sum of Two Arrays After Replacing Zeros](https://leetcode.com/problems/minimum-equal-sum-of-two-arrays-after-replacing-zeros/) | Medium | Array, Greedy | 2025-05-10 | [Go](greedy/2918-minimum-equal-sum-of-two-arrays-after-replacing-zeros.go) [Python](greedy/2918-minimum-equal-sum-of-two-arrays-after-replacing-zeros.py)
 | 3343 | [Count Number of Balanced Permutations](https://leetcode.com/problems/count-number-of-balanced-permutations/) | Hard | Math, String, Dynamic Programming, Combinatorics | 2025-05-09 | [Go](dp/3343-count-number-of-balanced-permutations.go) [Python](dp/3343-count-number-of-balanced-permutations.py)
