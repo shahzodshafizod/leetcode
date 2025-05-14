@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3337 | [Total Characters in String After Transformations II](https://leetcode.com/problems/total-characters-in-string-after-transformations-ii/) | Hard | Hash Table, Math, String, Dynamic Programming, Counting | 2025-05-14 | [Go](maths/3337-total-characters-in-string-after-transformations-ii.go) [Python](maths/3337-total-characters-in-string-after-transformations-ii.py)
 | 3335 | [Total Characters in String After Transformations I](https://leetcode.com/problems/total-characters-in-string-after-transformations-i/) | Medium | Hash Table, Math, String, Dynamic Programming, Counting | 2025-05-13 | [Go](strings/3335-total-characters-in-string-after-transformations-i.go) [Python](strings/3335-total-characters-in-string-after-transformations-i.py)
 | 2094 | [Finding 3-Digit Even Numbers](https://leetcode.com/problems/finding-3-digit-even-numbers/) | Easy | Array, Hash Table, Sorting, Enumeration | 2025-05-12 | [Go](hashes/2094-finding-3-digit-even-numbers.go) [Python](hashes/2094-finding-3-digit-even-numbers.py)
 | 0482 | [License Key Formatting](https://leetcode.com/problems/license-key-formatting/) | Easy | String | 2025-05-11 | [Go](strings/0482-license-key-formatting.go) [Python](strings/0482-license-key-formatting.py)
