@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2901 | [Longest Unequal Adjacent Groups Subsequence II](https://leetcode.com/problems/longest-unequal-adjacent-groups-subsequence-ii/) | Medium | Array, String, Dynamic Programming | 2025-05-16 | [Go](dp/2901-longest-unequal-adjacent-groups-subsequence-ii.go) [Python](dp/2901-longest-unequal-adjacent-groups-subsequence-ii.py)
 | 2900 | [Longest Unequal Adjacent Groups Subsequence I](https://leetcode.com/problems/longest-unequal-adjacent-groups-subsequence-i/) | Easy | Array, String, Dynamic Programming, Greedy | 2025-05-15 | [Go](greedy/2900-longest-unequal-adjacent-groups-subsequence-i.go) [Python](greedy/2900-longest-unequal-adjacent-groups-subsequence-i.py)
 | 3337 | [Total Characters in String After Transformations II](https://leetcode.com/problems/total-characters-in-string-after-transformations-ii/) | Hard | Hash Table, Math, String, Dynamic Programming, Counting | 2025-05-14 | [Go](maths/3337-total-characters-in-string-after-transformations-ii.go) [Python](maths/3337-total-characters-in-string-after-transformations-ii.py)
 | 3335 | [Total Characters in String After Transformations I](https://leetcode.com/problems/total-characters-in-string-after-transformations-i/) | Medium | Hash Table, Math, String, Dynamic Programming, Counting | 2025-05-13 | [Go](strings/3335-total-characters-in-string-after-transformations-i.go) [Python](strings/3335-total-characters-in-string-after-transformations-i.py)
