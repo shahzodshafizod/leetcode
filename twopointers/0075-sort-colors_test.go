@@ -1,4 +1,4 @@
-package arrays
+package twopointers
 
 import (
 	"testing"
@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// go test -v -count=1 ./arrays/ -run ^TestSortColors$
+// go test -v -count=1 ./twopointers/ -run ^TestSortColors$
 func TestSortColors(t *testing.T) {
 	for _, tc := range []struct {
 		nums   []int

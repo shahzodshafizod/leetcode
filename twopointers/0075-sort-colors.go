@@ -1,4 +1,4 @@
-package arrays
+package twopointers
 
 /*
 DNF algorithm 🇳🇱
@@ -9,6 +9,9 @@ to sorting an array containing three distinct elements.
 
 // https://leetcode.com/problems/sort-colors/
 
+// Approach: Three Pointers (DNF Algorithm)
+// Time: O(n)
+// Space: O(1)
 func sortColors(nums []int) {
 	for idx, left, right := 0, 0, len(nums)-1; idx <= right; idx++ {
 		switch nums[idx] {
@@ -23,8 +26,11 @@ func sortColors(nums []int) {
 	}
 }
 
+// // Approach: Count Sort
+// // Time: O(n)
+// // Space: O(3)
 // func sortColors(nums []int) {
-// 	var buckets = make([]int, 3)
+// 	var buckets [3]int
 // 	for _, num := range nums {
 // 		buckets[num]++
 // 	}

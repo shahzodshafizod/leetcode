@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0500 | [Keyboard Row](https://leetcode.com/problems/keyboard-row/) | Easy | Array, Hash Table, String | 2025-05-17 | [Go](hashes/0500-keyboard-row.go) [Python](hashes/0500-keyboard-row.py)
 | 2901 | [Longest Unequal Adjacent Groups Subsequence II](https://leetcode.com/problems/longest-unequal-adjacent-groups-subsequence-ii/) | Medium | Array, String, Dynamic Programming | 2025-05-16 | [Go](dp/2901-longest-unequal-adjacent-groups-subsequence-ii.go) [Python](dp/2901-longest-unequal-adjacent-groups-subsequence-ii.py)
 | 2900 | [Longest Unequal Adjacent Groups Subsequence I](https://leetcode.com/problems/longest-unequal-adjacent-groups-subsequence-i/) | Easy | Array, String, Dynamic Programming, Greedy | 2025-05-15 | [Go](greedy/2900-longest-unequal-adjacent-groups-subsequence-i.go) [Python](greedy/2900-longest-unequal-adjacent-groups-subsequence-i.py)
 | 3337 | [Total Characters in String After Transformations II](https://leetcode.com/problems/total-characters-in-string-after-transformations-ii/) | Hard | Hash Table, Math, String, Dynamic Programming, Counting | 2025-05-14 | [Go](maths/3337-total-characters-in-string-after-transformations-ii.go) [Python](maths/3337-total-characters-in-string-after-transformations-ii.py)
@@ -529,7 +530,7 @@
 | 0704 | [Binary Search](https://leetcode.com/problems/binary-search/) | Easy | Array, Binary Search | 2024-02-17 | [Go](arrays/0704-binary-search.go)
 | 0023 | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | Hard | Linked List, Divide and Conquer, Heap (Priority Queue), Merge Sort | 2024-02-16 | [Go](linkedlists/0023-merge-k-sorted-lists.go)
 | 0912 | [Sort an Array](https://leetcode.com/problems/sort-an-array/) | Medium | Array, Divide and Conquer, Sorting, Heap (Priority Queue), Merge Sort, Bucket Sort, Radix Sort, Counting Sort | 2024-02-16 | [Go](arrays/0912-sort-an-array.go)
-| 0075 | [Sort Colors](https://leetcode.com/problems/sort-colors/) | Medium | Array, Two Pointers, Sorting | 2024-02-16 | [Go](arrays/0075-sort-colors.go)
+| 0075 | [Sort Colors](https://leetcode.com/problems/sort-colors/) | Medium | Array, Two Pointers, Sorting | 2024-02-16 | [Go](twopointers/0075-sort-colors.go) [Python](twopointers/0075-sort-colors.py)
 | 0070 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | Easy | Math, Dynamic Programming, Memoization | 2024-02-15 | [Go](dp/0070-climbing-stairs.go)
 | 0509 | [Fibonacci Number](https://leetcode.com/problems/fibonacci-number/) | Easy | Math, Dynamic Programming, Recursion, Memoization | 2024-02-15 | [Go](dp/0509-fibonacci-number.go)
 | 1700 | [Number of Students Unable to Eat Lunch](https://leetcode.com/problems/number-of-students-unable-to-eat-lunch/) | Easy | Array, Stack, Queue, Simulation | 2024-02-14 | [Go](queues/1700-number-of-students-unable-to-eat-lunch.go)
