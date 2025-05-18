@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1931 | [Painting a Grid With Three Different Colors](https://leetcode.com/problems/painting-a-grid-with-three-different-colors/) | Hard | Dynamic Programming | 2025-05-18 | [Go](dp/1931-painting-a-grid-with-three-different-colors.go) [Python](dp/1931-painting-a-grid-with-three-different-colors.py)
 | 0500 | [Keyboard Row](https://leetcode.com/problems/keyboard-row/) | Easy | Array, Hash Table, String | 2025-05-17 | [Go](hashes/0500-keyboard-row.go) [Python](hashes/0500-keyboard-row.py)
 | 2901 | [Longest Unequal Adjacent Groups Subsequence II](https://leetcode.com/problems/longest-unequal-adjacent-groups-subsequence-ii/) | Medium | Array, String, Dynamic Programming | 2025-05-16 | [Go](dp/2901-longest-unequal-adjacent-groups-subsequence-ii.go) [Python](dp/2901-longest-unequal-adjacent-groups-subsequence-ii.py)
 | 2900 | [Longest Unequal Adjacent Groups Subsequence I](https://leetcode.com/problems/longest-unequal-adjacent-groups-subsequence-i/) | Easy | Array, String, Dynamic Programming, Greedy | 2025-05-15 | [Go](greedy/2900-longest-unequal-adjacent-groups-subsequence-i.go) [Python](greedy/2900-longest-unequal-adjacent-groups-subsequence-i.py)
