@@ -11,6 +11,7 @@ func colorTheGrid(m int, n int) int {
 	for idx := range memo {
 		memo[idx] = make([][1023]*int, n)
 	}
+	var shiftpos = (m - 1) * 2
 	var dp func(mask int, row int, col int) int
 	dp = func(mask int, row int, col int) int {
 		if row == m {
@@ -24,7 +25,7 @@ func colorTheGrid(m int, n int) int {
 		}
 		var up = 0
 		if row > 0 {
-			up = mask >> ((m - 1) * 2)
+			up = mask >> shiftpos
 		}
 		var left = 0
 		if col > 0 {
@@ -32,13 +33,11 @@ func colorTheGrid(m int, n int) int {
 		}
 		var newMask = mask >> 2
 		var res = 0
-		var newColor int
 		for color := 1; color <= 3; color++ {
 			if color == up || color == left {
 				continue
 			}
-			newColor = color << ((m - 1) * 2)
-			res = (res + dp(newMask|newColor, row+1, col)) % MOD
+			res = (res + dp(newMask|(color<<shiftpos), row+1, col)) % MOD
 		}
 		memo[row][col][mask] = &res
 		return res
