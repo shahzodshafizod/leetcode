@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1434 | [Number of Ways to Wear Different Hats to Each Other](https://leetcode.com/problems/number-of-ways-to-wear-different-hats-to-each-other/) | Hard | Array, Dynamic Programming, Bit Manipulation, Bitmask | 2025-05-21 | [Go](dp/1434-number-of-ways-to-wear-different-hats-to-each-other.go) [Python](dp/1434-number-of-ways-to-wear-different-hats-to-each-other.py)
 | 3355 | [Zero Array Transformation I](https://leetcode.com/problems/zero-array-transformation-i/) | Medium | Array, Prefix Sum | 2025-05-20 | [Go](prefixsums/3355-zero-array-transformation-i.go) [Python](prefixsums/3355-zero-array-transformation-i.py)
 | 3024 | [Type of Triangle](https://leetcode.com/problems/type-of-triangle/) | Easy | Array, Math, Sorting | 2025-05-19 | [Go](maths/3024-type-of-triangle.go) [Python](maths/3024-type-of-triangle.py)
 | 1931 | [Painting a Grid With Three Different Colors](https://leetcode.com/problems/painting-a-grid-with-three-different-colors/) | Hard | Dynamic Programming | 2025-05-18 | [Go](dp/1931-painting-a-grid-with-three-different-colors.go) [Python](dp/1931-painting-a-grid-with-three-different-colors.py)
@@ -569,7 +570,7 @@
 | 0207 | [Course Schedule](https://leetcode.com/problems/course-schedule/) | Medium | Depth-First Search, Breadth-First Search, Graph, Topological Sort | 2024-01-28 | [Go](graphs/0207-course-schedule.go)
 | 1376 | [Time Needed to Inform All Employees](https://leetcode.com/problems/time-needed-to-inform-all-employees/) | Medium | Tree, Depth-First Search, Breadth-First Search | 2024-01-27 | [Go](graphs/1376-time-needed-to-inform-all-employees.go)
 | 0074 | [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/) | Medium | Array, Binary Search, Matrix | 2024-01-26 | [Go](matrices/0074-search-a-2d-matrix.go)
-| 0073 | [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) | Medium | Array, Hash Table, Matrix | 2024-01-26 | [Go](matrices/0073-set-matrix-zeroes.go)
+| 0073 | [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) | Medium | Array, Hash Table, Matrix | 2024-01-26 | [Go](matrices/0073-set-matrix-zeroes.go) [Python](matrices/0073-set-matrix-zeroes.py)
 | 0867 | [Transpose Matrix](https://leetcode.com/problems/transpose-matrix/) | Easy | Array, Matrix, Simulation | 2024-01-25 | [Go](matrices/0867-transpose-matrix.go)
 | 0994 | [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/) | Medium | Array, Breadth-First Search, Matrix | 2024-01-25 | [Go](matrices/0994-rotting-oranges.go)
 | 0200 | [Number of Islands](https://leetcode.com/problems/number-of-islands/) | Medium | Array, Depth-First Search, Breadth-First Search, Union Find, Matrix | 2024-01-24 | [Go](matrices/0200-number-of-islands.go)
