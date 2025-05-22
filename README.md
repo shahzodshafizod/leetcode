@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3362 | [Zero Array Transformation III](https://leetcode.com/problems/zero-array-transformation-iii/) | Medium | Array, Greedy, Sorting, Heap (Priority Queue), Prefix Sum | 2025-05-22 | [Go](greedy/3362-zero-array-transformation-iii.go) [Python](greedy/3362-zero-array-transformation-iii.py)
 | 1434 | [Number of Ways to Wear Different Hats to Each Other](https://leetcode.com/problems/number-of-ways-to-wear-different-hats-to-each-other/) | Hard | Array, Dynamic Programming, Bit Manipulation, Bitmask | 2025-05-21 | [Go](dp/1434-number-of-ways-to-wear-different-hats-to-each-other.go) [Python](dp/1434-number-of-ways-to-wear-different-hats-to-each-other.py)
 | 3355 | [Zero Array Transformation I](https://leetcode.com/problems/zero-array-transformation-i/) | Medium | Array, Prefix Sum | 2025-05-20 | [Go](prefixsums/3355-zero-array-transformation-i.go) [Python](prefixsums/3355-zero-array-transformation-i.py)
 | 3024 | [Type of Triangle](https://leetcode.com/problems/type-of-triangle/) | Easy | Array, Math, Sorting | 2025-05-19 | [Go](maths/3024-type-of-triangle.go) [Python](maths/3024-type-of-triangle.py)
