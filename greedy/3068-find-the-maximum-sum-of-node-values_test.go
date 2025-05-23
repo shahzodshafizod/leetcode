@@ -1,4 +1,4 @@
-package dp
+package greedy
 
 import (
 	"testing"
@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// go test -v -count=1 ./dp/ -run ^TestMaximumValueSum$
+// go test -v -count=1 ./greedy/ -run ^TestMaximumValueSum$
 func TestMaximumValueSum(t *testing.T) {
 	for _, tc := range []struct {
 		nums  []int

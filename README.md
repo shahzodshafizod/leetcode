@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2973 | [Find Number of Coins to Place in Tree Nodes](https://leetcode.com/problems/find-number-of-coins-to-place-in-tree-nodes/) | Hard | Dynamic Programming, Tree, Depth-First Search, Sorting, Heap (Priority Queue) | 2025-05-23 | [Go](heaps/2973-find-number-of-coins-to-place-in-tree-nodes.go) [Python](heaps/2973-find-number-of-coins-to-place-in-tree-nodes.py)
 | 3362 | [Zero Array Transformation III](https://leetcode.com/problems/zero-array-transformation-iii/) | Medium | Array, Greedy, Sorting, Heap (Priority Queue), Prefix Sum | 2025-05-22 | [Go](greedy/3362-zero-array-transformation-iii.go) [Python](greedy/3362-zero-array-transformation-iii.py)
 | 1434 | [Number of Ways to Wear Different Hats to Each Other](https://leetcode.com/problems/number-of-ways-to-wear-different-hats-to-each-other/) | Hard | Array, Dynamic Programming, Bit Manipulation, Bitmask | 2025-05-21 | [Go](dp/1434-number-of-ways-to-wear-different-hats-to-each-other.go) [Python](dp/1434-number-of-ways-to-wear-different-hats-to-each-other.py)
 | 3355 | [Zero Array Transformation I](https://leetcode.com/problems/zero-array-transformation-i/) | Medium | Array, Prefix Sum | 2025-05-20 | [Go](prefixsums/3355-zero-array-transformation-i.go) [Python](prefixsums/3355-zero-array-transformation-i.py)
@@ -400,7 +401,7 @@
 | 0131 | [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/) | Medium | String, Dynamic Programming, Backtracking | 2024-05-22 | [Go](backtracking/0131-palindrome-partitioning.go)
 | 1982 | [Find Array Given Subset Sums](https://leetcode.com/problems/find-array-given-subset-sums/) | Hard | Array, Divide and Conquer | 2024-05-21 | [Go](arrays/1982-find-array-given-subset-sums.go)
 | 1863 | [Sum of All Subset XOR Totals](https://leetcode.com/problems/sum-of-all-subset-xor-totals/) | Easy | Array, Math, Backtracking, Bit Manipulation, Combinatorics, Enumeration | 2024-05-20 | [Go](bits/1863-sum-of-all-subset-xor-totals.go) [Python](bits/1863-sum-of-all-subset-xor-totals.py)
-| 3068 | [Find the Maximum Sum of Node Values](https://leetcode.com/problems/find-the-maximum-sum-of-node-values/) | Hard | Array, Dynamic Programming, Greedy, Bit Manipulation, Tree, Sorting | 2024-05-19 | [Go](dp/3068-find-the-maximum-sum-of-node-values.go)
+| 3068 | [Find the Maximum Sum of Node Values](https://leetcode.com/problems/find-the-maximum-sum-of-node-values/) | Hard | Array, Dynamic Programming, Greedy, Bit Manipulation, Tree, Sorting | 2024-05-19 | [Go](greedy/3068-find-the-maximum-sum-of-node-values.go) [Python](greedy/3068-find-the-maximum-sum-of-node-values.py)
 | 0979 | [Distribute Coins in Binary Tree](https://leetcode.com/problems/distribute-coins-in-binary-tree/) | Medium | Tree, Depth-First Search, Binary Tree | 2024-05-18 | [Go](trees/0979-distribute-coins-in-binary-tree.go)
 | 1325 | [Delete Leaves With a Given Value](https://leetcode.com/problems/delete-leaves-with-a-given-value/) | Medium | Tree, Depth-First Search, Binary Tree | 2024-05-17 | [Go](trees/1325-delete-leaves-with-a-given-value.go)
 | 2331 | [Evaluate Boolean Binary Tree](https://leetcode.com/problems/evaluate-boolean-binary-tree/) | Easy | Tree, Depth-First Search, Binary Tree | 2024-05-16 | [Go](trees/2331-evaluate-boolean-binary-tree.go)

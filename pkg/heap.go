@@ -24,4 +24,4 @@ func (h *Heap[T]) Peak() T {
 // type hp struct{ sort.IntSlice }
 // func (h *hp) Less(i, j int) bool { return h.IntSlice[i] > h.IntSlice[j] }
 // func (h *hp) Push(x any)         { h.IntSlice = append(h.IntSlice, x.(int)) }
-// func (h *hp) Pop() any           { v := h.IntSlice[h.Len()-1]; h.IntSlice = h.IntSlice[:h.Len()-1]; return v }
+// func (h *hp) Pop() any           { v := h.IntSlice[h.IntSlice.Len()-1]; h.IntSlice = h.IntSlice[:h.IntSlice.Len()-1]; return v }
