@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0520 | [Detect Capital](https://leetcode.com/problems/detect-capital/) | Easy | String | 2025-05-26 | [Go](strings/0520-detect-capital.go) [Python](strings/0520-detect-capital.py)
 | 2131 | [Longest Palindrome by Concatenating Two Letter Words](https://leetcode.com/problems/longest-palindrome-by-concatenating-two-letter-words/) | Medium | Array, Hash Table, String, Greedy, Counting | 2025-05-25 | [Go](hashes/2131-longest-palindrome-by-concatenating-two-letter-words.go) [Python](hashes/2131-longest-palindrome-by-concatenating-two-letter-words.py)
 | 2942 | [Find Words Containing Character](https://leetcode.com/problems/find-words-containing-character/) | Easy | Array, String | 2025-05-24 | [Go](strings/2942-find-words-containing-character.go) [Python](strings/2942-find-words-containing-character.py)
 | 2973 | [Find Number of Coins to Place in Tree Nodes](https://leetcode.com/problems/find-number-of-coins-to-place-in-tree-nodes/) | Hard | Dynamic Programming, Tree, Depth-First Search, Sorting, Heap (Priority Queue) | 2025-05-23 | [Go](heaps/2973-find-number-of-coins-to-place-in-tree-nodes.go) [Python](heaps/2973-find-number-of-coins-to-place-in-tree-nodes.py)
