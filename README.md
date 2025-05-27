@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2894 | [Divisible and Non-divisible Sums Difference](https://leetcode.com/problems/divisible-and-non-divisible-sums-difference/) | Easy | Math | 2025-05-27 | [Go](maths/2894-divisible-and-non-divisible-sums-difference.go) [Python](maths/2894-divisible-and-non-divisible-sums-difference.py)
 | 0520 | [Detect Capital](https://leetcode.com/problems/detect-capital/) | Easy | String | 2025-05-26 | [Go](strings/0520-detect-capital.go) [Python](strings/0520-detect-capital.py)
 | 2131 | [Longest Palindrome by Concatenating Two Letter Words](https://leetcode.com/problems/longest-palindrome-by-concatenating-two-letter-words/) | Medium | Array, Hash Table, String, Greedy, Counting | 2025-05-25 | [Go](hashes/2131-longest-palindrome-by-concatenating-two-letter-words.go) [Python](hashes/2131-longest-palindrome-by-concatenating-two-letter-words.py)
 | 2942 | [Find Words Containing Character](https://leetcode.com/problems/find-words-containing-character/) | Easy | Array, String | 2025-05-24 | [Go](strings/2942-find-words-containing-character.go) [Python](strings/2942-find-words-containing-character.py)
