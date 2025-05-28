@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3372 | [Maximize the Number of Target Nodes After Connecting Trees I](https://leetcode.com/problems/maximize-the-number-of-target-nodes-after-connecting-trees-i/) | Medium | Tree, Depth-First Search, Breadth-First Search | 2025-05-28 | [Go](graphs/3372-maximize-the-number-of-target-nodes-after-connecting-trees-i.go) [Python](graphs/3372-maximize-the-number-of-target-nodes-after-connecting-trees-i.py)
 | 2894 | [Divisible and Non-divisible Sums Difference](https://leetcode.com/problems/divisible-and-non-divisible-sums-difference/) | Easy | Math | 2025-05-27 | [Go](maths/2894-divisible-and-non-divisible-sums-difference.go) [Python](maths/2894-divisible-and-non-divisible-sums-difference.py)
 | 0520 | [Detect Capital](https://leetcode.com/problems/detect-capital/) | Easy | String | 2025-05-26 | [Go](strings/0520-detect-capital.go) [Python](strings/0520-detect-capital.py)
 | 2131 | [Longest Palindrome by Concatenating Two Letter Words](https://leetcode.com/problems/longest-palindrome-by-concatenating-two-letter-words/) | Medium | Array, Hash Table, String, Greedy, Counting | 2025-05-25 | [Go](hashes/2131-longest-palindrome-by-concatenating-two-letter-words.go) [Python](hashes/2131-longest-palindrome-by-concatenating-two-letter-words.py)
