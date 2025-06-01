@@ -2,6 +2,9 @@ package matrices
 
 // https://leetcode.com/problems/snakes-and-ladders/
 
+// Approach: Breadth-First Search
+// Time: O(nn)
+// Space: O(nn)
 func snakesAndLadders(board [][]int) int {
 	var n = len(board)
 	var getPos = func(square int) (int, int) {

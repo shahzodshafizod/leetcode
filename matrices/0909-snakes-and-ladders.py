@@ -7,6 +7,9 @@ import unittest
 # python3 -m unittest matrices/0909-snakes-and-ladders.py
 
 class Solution(unittest.TestCase):
+    # Approach: Breadth-First Search
+    # Time: O(nn)
+    # Space: O(nn)
     def snakesAndLadders(self, board: List[List[int]]) -> int:
         n = len(board)
         def get_pos(square: int) -> tuple[int, int]:
