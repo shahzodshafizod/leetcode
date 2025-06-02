@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0135 | [Candy](https://leetcode.com/problems/candy/) | Hard | Array, Greedy | 2025-06-02 | [Go](greedy/0135-candy.go) [Python](greedy/0135-candy.py)
 | 2929 | [Distribute Candies Among Children II](https://leetcode.com/problems/distribute-candies-among-children-ii/) | Medium | Math, Combinatorics, Enumeration | 2025-06-01 | [Go](maths/2929-distribute-candies-among-children-ii.go) [Python](maths/2929-distribute-candies-among-children-ii.py)
 | 0909 | [Snakes and Ladders](https://leetcode.com/problems/snakes-and-ladders/) | Medium | Array, Breadth-First Search, Matrix | 2025-05-31 | [Go](matrices/0909-snakes-and-ladders.go) [Python](matrices/0909-snakes-and-ladders.py)
 | 2359 | [Find Closest Node to Given Two Nodes](https://leetcode.com/problems/find-closest-node-to-given-two-nodes/) | Medium | Depth-First Search, Graph | 2025-05-30 | [Go](graphs/2359-find-closest-node-to-given-two-nodes.go) [Python](graphs/2359-find-closest-node-to-given-two-nodes.py)
