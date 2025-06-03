@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1298 | [Maximum Candies You Can Get from Boxes](https://leetcode.com/problems/maximum-candies-you-can-get-from-boxes/) | Hard | Array, Breadth-First Search, Graph | 2025-06-03 | [Go](graphs/1298-maximum-candies-you-can-get-from-boxes.go) [Python](graphs/1298-maximum-candies-you-can-get-from-boxes.py)
 | 0135 | [Candy](https://leetcode.com/problems/candy/) | Hard | Array, Greedy | 2025-06-02 | [Go](greedy/0135-candy.go) [Python](greedy/0135-candy.py)
 | 2929 | [Distribute Candies Among Children II](https://leetcode.com/problems/distribute-candies-among-children-ii/) | Medium | Math, Combinatorics, Enumeration | 2025-06-01 | [Go](maths/2929-distribute-candies-among-children-ii.go) [Python](maths/2929-distribute-candies-among-children-ii.py)
 | 0909 | [Snakes and Ladders](https://leetcode.com/problems/snakes-and-ladders/) | Medium | Array, Breadth-First Search, Matrix | 2025-05-31 | [Go](matrices/0909-snakes-and-ladders.go) [Python](matrices/0909-snakes-and-ladders.py)
