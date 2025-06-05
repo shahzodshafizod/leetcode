@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1061 | [Lexicographically Smallest Equivalent String](https://leetcode.com/problems/lexicographically-smallest-equivalent-string/) | Medium | String, Union Find | 2025-06-05 | [Go](unionfinds/1061-lexicographically-smallest-equivalent-string.go) [Python](unionfinds/1061-lexicographically-smallest-equivalent-string.py)
 | 3403 | [Find the Lexicographically Largest String From the Box I](https://leetcode.com/problems/find-the-lexicographically-largest-string-from-the-box-i/) | Medium | Two Pointers, String, Enumeration | 2025-06-04 | [Go](strings/3403-find-the-lexicographically-largest-string-from-the-box-i.go) [Python](strings/3403-find-the-lexicographically-largest-string-from-the-box-i.py)
 | 1298 | [Maximum Candies You Can Get from Boxes](https://leetcode.com/problems/maximum-candies-you-can-get-from-boxes/) | Hard | Array, Breadth-First Search, Graph | 2025-06-03 | [Go](graphs/1298-maximum-candies-you-can-get-from-boxes.go) [Python](graphs/1298-maximum-candies-you-can-get-from-boxes.py)
 | 0135 | [Candy](https://leetcode.com/problems/candy/) | Hard | Array, Greedy | 2025-06-02 | [Go](greedy/0135-candy.go) [Python](greedy/0135-candy.py)
