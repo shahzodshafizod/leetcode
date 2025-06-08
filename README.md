@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0386 | [Lexicographical Numbers](https://leetcode.com/problems/lexicographical-numbers/) | Medium | Depth-First Search, Trie | 2025-06-08 | [Go](strings/0386-lexicographical-numbers.go) [Python](strings/0386-lexicographical-numbers.py)
 | 3170 | [Lexicographically Minimum String After Removing Stars](https://leetcode.com/problems/lexicographically-minimum-string-after-removing-stars/) | Medium | Hash Table, String, Stack, Greedy, Heap (Priority Queue) | 2025-06-07 | [Go](greedy/3170-lexicographically-minimum-string-after-removing-stars.go) [Python](greedy/3170-lexicographically-minimum-string-after-removing-stars.py)
 | 2434 | [Using a Robot to Print the Lexicographically Smallest String](https://leetcode.com/problems/using-a-robot-to-print-the-lexicographically-smallest-string/) | Medium | Hash Table, String, Stack, Greedy | 2025-06-06 | [Go](stacks/2434-using-a-robot-to-print-the-lexicographically-smallest-string.go) [Python](stacks/2434-using-a-robot-to-print-the-lexicographically-smallest-string.py)
 | 1061 | [Lexicographically Smallest Equivalent String](https://leetcode.com/problems/lexicographically-smallest-equivalent-string/) | Medium | String, Union Find | 2025-06-05 | [Go](unionfinds/1061-lexicographically-smallest-equivalent-string.go) [Python](unionfinds/1061-lexicographically-smallest-equivalent-string.py)
