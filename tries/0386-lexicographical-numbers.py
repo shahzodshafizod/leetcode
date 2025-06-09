@@ -3,7 +3,7 @@ import unittest
 
 # https://leetcode.com/problems/lexicographical-numbers/
 
-# python3 -m unittest strings/0386-lexicographical-numbers.py
+# python3 -m unittest tries/0386-lexicographical-numbers.py
 
 class Solution(unittest.TestCase):
     # # Approach #1: Python One Liner

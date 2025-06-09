@@ -6,10 +6,10 @@ import unittest
 
 class Solution(unittest.TestCase):
     # Approach: Prefix Tree
-    # Time: O((Log N)^2)
+    # Time: O((log(10)n)^2)
     # Space: O(1)
     def findKthNumber(self, n: int, k: int) -> int:
-        def count(curr: int) -> int: # Time: O(Log N)
+        def count(curr: int) -> int: # Time: O(log(10)n)
             neighbor = curr+1
             cnt = 0
             while curr <= n:
@@ -19,7 +19,7 @@ class Solution(unittest.TestCase):
             return cnt
         curr = 1
         k -= 1
-        while k > 0: # Time: O(Log N)
+        while k > 0: # Time: O(log(10)n)
             cnt = count(curr)
             if k >= cnt:
                 curr += 1

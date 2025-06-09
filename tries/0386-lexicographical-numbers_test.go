@@ -1,4 +1,4 @@
-package strings
+package tries
 
 import (
 	"testing"
@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// go test -v -count=1 ./strings/ -run ^TestLexicalOrder$
+// go test -v -count=1 ./tries/ -run ^TestLexicalOrder$
 func TestLexicalOrder(t *testing.T) {
 	for _, tc := range []struct {
 		n    int

@@ -1,4 +1,4 @@
-package strings
+package tries
 
 // https://leetcode.com/problems/lexicographical-numbers/
 

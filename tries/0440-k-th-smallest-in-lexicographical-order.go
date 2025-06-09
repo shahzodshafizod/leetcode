@@ -3,31 +3,30 @@ package tries
 // https://leetcode.com/problems/k-th-smallest-in-lexicographical-order/
 
 // Approach: Prefix Tree
-// Time: O((Log N)^2)
+// Time: O((log(10)n)^2)
 // Space: O(1)
 func findKthNumber(n int, k int) int {
-	var count = func(curr int) int { // O(Log N)
-		neighbor := curr + 1 // neighboring branch of tree
-		items := 0
+	var count = func(curr int) int { // O(log(10)n)
+		var nei = curr + 1 // neighboring branch of tree
+		var cnt = 0
 		for curr <= n {
-			// n+1: means include the last element
-			// if it's in the left side, it works only once
-			items += min(n+1, neighbor) - curr
+			cnt += min(n+1, nei) - curr
 			curr *= 10
-			neighbor *= 10
+			nei *= 10
 		}
-		return items
+		return cnt
 	}
 	var curr = 1
-	k--         // account for first element: curr=1
-	for k > 0 { // O(Log N)
-		items := count(curr)
-		if k >= items {
+	k-- // account for first element: curr=1
+	var cnt int
+	for k > 0 { // O(log(10)n)
+		cnt = count(curr)
+		if cnt <= k {
 			curr++ // go to the next branch of tree
-			k -= items
+			k -= cnt
 		} else {
-			curr *= 10
-			k--
+			curr *= 10 // go down deeper in this branch
+			k--        // accouting this node (curr)
 		}
 	}
 	return curr
