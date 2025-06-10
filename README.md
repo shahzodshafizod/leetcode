@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3442 | [Maximum Difference Between Even and Odd Frequency I](https://leetcode.com/problems/maximum-difference-between-even-and-odd-frequency-i/) | Easy | Hash Table, String, Counting | 2025-06-10 | [Go](strings/3442-maximum-difference-between-even-and-odd-frequency-i.go) [Python](strings/3442-maximum-difference-between-even-and-odd-frequency-i.py)
 | 0657 | [Robot Return to Origin](https://leetcode.com/problems/robot-return-to-origin/) | Easy | String, Simulation | 2025-06-09 | [Go](strings/0657-robot-return-to-origin.go) [Python](strings/0657-robot-return-to-origin.py)
 | 0386 | [Lexicographical Numbers](https://leetcode.com/problems/lexicographical-numbers/) | Medium | Depth-First Search, Trie | 2025-06-08 | [Go](tries/0386-lexicographical-numbers.go) [Python](tries/0386-lexicographical-numbers.py)
 | 3170 | [Lexicographically Minimum String After Removing Stars](https://leetcode.com/problems/lexicographically-minimum-string-after-removing-stars/) | Medium | Hash Table, String, Stack, Greedy, Heap (Priority Queue) | 2025-06-07 | [Go](greedy/3170-lexicographically-minimum-string-after-removing-stars.go) [Python](greedy/3170-lexicographically-minimum-string-after-removing-stars.py)
