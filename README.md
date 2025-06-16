@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2016 | [Maximum Difference Between Increasing Elements](https://leetcode.com/problems/maximum-difference-between-increasing-elements/) | Easy | Array | 2025-06-16 | [Go](arrays/2016-maximum-difference-between-increasing-elements.go) [Python](arrays/2016-maximum-difference-between-increasing-elements.py)
 | 1432 | [Max Difference You Can Get From Changing an Integer](https://leetcode.com/problems/max-difference-you-can-get-from-changing-an-integer/) | Medium | Math, Greedy | 2025-06-15 | [Go](greedy/1432-max-difference-you-can-get-from-changing-an-integer.go) [Python](greedy/1432-max-difference-you-can-get-from-changing-an-integer.py)
 | 2566 | [Maximum Difference by Remapping a Digit](https://leetcode.com/problems/maximum-difference-by-remapping-a-digit/) | Easy | Math, Greedy | 2025-06-14 | [Go](greedy/2566-maximum-difference-by-remapping-a-digit.go) [Python](greedy/2566-maximum-difference-by-remapping-a-digit.py)
 | 2616 | [Minimize the Maximum Difference of Pairs](https://leetcode.com/problems/minimize-the-maximum-difference-of-pairs/) | Medium | Array, Binary Search, Greedy | 2025-06-13 | [Go](binarysearch/2616-minimize-the-maximum-difference-of-pairs.go) [Python](binarysearch/2616-minimize-the-maximum-difference-of-pairs.py)
