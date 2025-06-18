@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2966 | [Divide Array Into Arrays With Max Difference](https://leetcode.com/problems/divide-array-into-arrays-with-max-difference/) | Medium | Array, Greedy, Sorting | 2025-06-18 | [Go](greedy/2966-divide-array-into-arrays-with-max-difference.go) [Python](greedy/2966-divide-array-into-arrays-with-max-difference.py)
+| 0824 | [Goat Latin](https://leetcode.com/problems/goat-latin/) | Easy | String | 2025-06-17 | [Go](strings/0824-goat-latin.go) [Python](strings/0824-goat-latin.py)
 | 2016 | [Maximum Difference Between Increasing Elements](https://leetcode.com/problems/maximum-difference-between-increasing-elements/) | Easy | Array | 2025-06-16 | [Go](arrays/2016-maximum-difference-between-increasing-elements.go) [Python](arrays/2016-maximum-difference-between-increasing-elements.py)
 | 1432 | [Max Difference You Can Get From Changing an Integer](https://leetcode.com/problems/max-difference-you-can-get-from-changing-an-integer/) | Medium | Math, Greedy | 2025-06-15 | [Go](greedy/1432-max-difference-you-can-get-from-changing-an-integer.go) [Python](greedy/1432-max-difference-you-can-get-from-changing-an-integer.py)
 | 2566 | [Maximum Difference by Remapping a Digit](https://leetcode.com/problems/maximum-difference-by-remapping-a-digit/) | Easy | Math, Greedy | 2025-06-14 | [Go](greedy/2566-maximum-difference-by-remapping-a-digit.go) [Python](greedy/2566-maximum-difference-by-remapping-a-digit.py)
