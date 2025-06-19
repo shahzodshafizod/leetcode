@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2294 | [Partition Array Such That Maximum Difference Is K](https://leetcode.com/problems/partition-array-such-that-maximum-difference-is-k/) | Medium | Array, Greedy, Sorting | 2025-06-19 | [Go](greedy/2294-partition-array-such-that-maximum-difference-is-k.go) [Python](greedy/2294-partition-array-such-that-maximum-difference-is-k.py)
 | 2966 | [Divide Array Into Arrays With Max Difference](https://leetcode.com/problems/divide-array-into-arrays-with-max-difference/) | Medium | Array, Greedy, Sorting | 2025-06-18 | [Go](greedy/2966-divide-array-into-arrays-with-max-difference.go) [Python](greedy/2966-divide-array-into-arrays-with-max-difference.py)
 | 0824 | [Goat Latin](https://leetcode.com/problems/goat-latin/) | Easy | String | 2025-06-17 | [Go](strings/0824-goat-latin.go) [Python](strings/0824-goat-latin.py)
 | 2016 | [Maximum Difference Between Increasing Elements](https://leetcode.com/problems/maximum-difference-between-increasing-elements/) | Easy | Array | 2025-06-16 | [Go](arrays/2016-maximum-difference-between-increasing-elements.go) [Python](arrays/2016-maximum-difference-between-increasing-elements.py)
