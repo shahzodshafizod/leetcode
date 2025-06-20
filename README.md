@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3443 | [Maximum Manhattan Distance After K Changes](https://leetcode.com/problems/maximum-manhattan-distance-after-k-changes/) | Medium | Hash Table, Math, String, Counting | 2025-06-20 | [Go](maths/3443-maximum-manhattan-distance-after-k-changes.go) [Python](maths/3443-maximum-manhattan-distance-after-k-changes.py)
 | 2294 | [Partition Array Such That Maximum Difference Is K](https://leetcode.com/problems/partition-array-such-that-maximum-difference-is-k/) | Medium | Array, Greedy, Sorting | 2025-06-19 | [Go](greedy/2294-partition-array-such-that-maximum-difference-is-k.go) [Python](greedy/2294-partition-array-such-that-maximum-difference-is-k.py)
 | 2966 | [Divide Array Into Arrays With Max Difference](https://leetcode.com/problems/divide-array-into-arrays-with-max-difference/) | Medium | Array, Greedy, Sorting | 2025-06-18 | [Go](greedy/2966-divide-array-into-arrays-with-max-difference.go) [Python](greedy/2966-divide-array-into-arrays-with-max-difference.py)
 | 0824 | [Goat Latin](https://leetcode.com/problems/goat-latin/) | Easy | String | 2025-06-17 | [Go](strings/0824-goat-latin.go) [Python](strings/0824-goat-latin.py)
