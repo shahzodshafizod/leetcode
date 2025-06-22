@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2138 | [Divide a String Into Groups of Size k](https://leetcode.com/problems/divide-a-string-into-groups-of-size-k/) | Easy | String, Simulation | 2025-06-22 | [Go](strings/2138-divide-a-string-into-groups-of-size-k.go) [Python](strings/2138-divide-a-string-into-groups-of-size-k.py)
+| 3085 | [Minimum Deletions to Make String K-Special](https://leetcode.com/problems/minimum-deletions-to-make-string-k-special/) | Medium | Hash Table, String, Greedy, Sorting, Counting | 2025-06-21 | [Go](greedy/3085-minimum-deletions-to-make-string-k-special.go) [Python](greedy/3085-minimum-deletions-to-make-string-k-special.py)
 | 3443 | [Maximum Manhattan Distance After K Changes](https://leetcode.com/problems/maximum-manhattan-distance-after-k-changes/) | Medium | Hash Table, Math, String, Counting | 2025-06-20 | [Go](maths/3443-maximum-manhattan-distance-after-k-changes.go) [Python](maths/3443-maximum-manhattan-distance-after-k-changes.py)
 | 2294 | [Partition Array Such That Maximum Difference Is K](https://leetcode.com/problems/partition-array-such-that-maximum-difference-is-k/) | Medium | Array, Greedy, Sorting | 2025-06-19 | [Go](greedy/2294-partition-array-such-that-maximum-difference-is-k.go) [Python](greedy/2294-partition-array-such-that-maximum-difference-is-k.py)
 | 2966 | [Divide Array Into Arrays With Max Difference](https://leetcode.com/problems/divide-array-into-arrays-with-max-difference/) | Medium | Array, Greedy, Sorting | 2025-06-18 | [Go](greedy/2966-divide-array-into-arrays-with-max-difference.go) [Python](greedy/2966-divide-array-into-arrays-with-max-difference.py)
