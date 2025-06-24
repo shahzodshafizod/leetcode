@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2200 | [Find All K-Distant Indices in an Array](https://leetcode.com/problems/find-all-k-distant-indices-in-an-array/) | Easy | Array, Two Pointers | 2025-06-24 | [Go](twopointers/2200-find-all-k-distant-indices-in-an-array.go) [Python](twopointers/2200-find-all-k-distant-indices-in-an-array.py)
 | 2081 | [Sum of k-Mirror Numbers](https://leetcode.com/problems/sum-of-k-mirror-numbers/) | Hard | Math, Enumeration | 2025-06-23 | [Go](maths/2081-sum-of-k-mirror-numbers.go) [Python](maths/2081-sum-of-k-mirror-numbers.py)
 | 2138 | [Divide a String Into Groups of Size k](https://leetcode.com/problems/divide-a-string-into-groups-of-size-k/) | Easy | String, Simulation | 2025-06-22 | [Go](strings/2138-divide-a-string-into-groups-of-size-k.go) [Python](strings/2138-divide-a-string-into-groups-of-size-k.py)
 | 3085 | [Minimum Deletions to Make String K-Special](https://leetcode.com/problems/minimum-deletions-to-make-string-k-special/) | Medium | Hash Table, String, Greedy, Sorting, Counting | 2025-06-21 | [Go](greedy/3085-minimum-deletions-to-make-string-k-special.go) [Python](greedy/3085-minimum-deletions-to-make-string-k-special.py)
