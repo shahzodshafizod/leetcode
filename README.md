@@ -2,6 +2,9 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2014 | [Longest Subsequence Repeated k Times](https://leetcode.com/problems/longest-subsequence-repeated-k-times/) | Hard | String, Backtracking, Greedy, Counting, Enumeration | 2025-06-27 | [Go](strings/2014-longest-subsequence-repeated-k-times.go) [Python](strings/2014-longest-subsequence-repeated-k-times.py)
+| 2311 | [Longest Binary Subsequence Less Than or Equal to K](https://leetcode.com/problems/longest-binary-subsequence-less-than-or-equal-to-k/) | Medium | String, Dynamic Programming, Greedy, Memoization | 2025-06-26 | [Go](greedy/2311-longest-binary-subsequence-less-than-or-equal-to-k.go) [Python](greedy/2311-longest-binary-subsequence-less-than-or-equal-to-k.py)
+| 2040 | [Kth Smallest Product of Two Sorted Arrays](https://leetcode.com/problems/kth-smallest-product-of-two-sorted-arrays/) | Hard | Array, Binary Search | 2025-06-25 | [Go](binarysearch/2040-kth-smallest-product-of-two-sorted-arrays.go) [Python](binarysearch/2040-kth-smallest-product-of-two-sorted-arrays.py)
 | 2200 | [Find All K-Distant Indices in an Array](https://leetcode.com/problems/find-all-k-distant-indices-in-an-array/) | Easy | Array, Two Pointers | 2025-06-24 | [Go](twopointers/2200-find-all-k-distant-indices-in-an-array.go) [Python](twopointers/2200-find-all-k-distant-indices-in-an-array.py)
 | 2081 | [Sum of k-Mirror Numbers](https://leetcode.com/problems/sum-of-k-mirror-numbers/) | Hard | Math, Enumeration | 2025-06-23 | [Go](maths/2081-sum-of-k-mirror-numbers.go) [Python](maths/2081-sum-of-k-mirror-numbers.py)
 | 2138 | [Divide a String Into Groups of Size k](https://leetcode.com/problems/divide-a-string-into-groups-of-size-k/) | Easy | String, Simulation | 2025-06-22 | [Go](strings/2138-divide-a-string-into-groups-of-size-k.go) [Python](strings/2138-divide-a-string-into-groups-of-size-k.py)
