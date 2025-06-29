@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1498 | [Number of Subsequences That Satisfy the Given Sum Condition](https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition/) | Medium | Array, Two Pointers, Binary Search, Sorting | 2025-06-29 | [Go](twopointers/1498-number-of-subsequences-that-satisfy-the-given-sum-condition.go) [Python](twopointers/1498-number-of-subsequences-that-satisfy-the-given-sum-condition.py)
 | 2099 | [Find Subsequence of Length K With the Largest Sum](https://leetcode.com/problems/find-subsequence-of-length-k-with-the-largest-sum/) | Easy | Array, Hash Table, Sorting, Heap (Priority Queue) | 2025-06-28 | [Go](greedy/2099-find-subsequence-of-length-k-with-the-largest-sum.go) [Python](greedy/2099-find-subsequence-of-length-k-with-the-largest-sum.py)
 | 2014 | [Longest Subsequence Repeated k Times](https://leetcode.com/problems/longest-subsequence-repeated-k-times/) | Hard | String, Backtracking, Greedy, Counting, Enumeration | 2025-06-27 | [Go](strings/2014-longest-subsequence-repeated-k-times.go) [Python](strings/2014-longest-subsequence-repeated-k-times.py)
 | 2311 | [Longest Binary Subsequence Less Than or Equal to K](https://leetcode.com/problems/longest-binary-subsequence-less-than-or-equal-to-k/) | Medium | String, Dynamic Programming, Greedy, Memoization | 2025-06-26 | [Go](greedy/2311-longest-binary-subsequence-less-than-or-equal-to-k.go) [Python](greedy/2311-longest-binary-subsequence-less-than-or-equal-to-k.py)
