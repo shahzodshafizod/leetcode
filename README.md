@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3330 | [Find the Original Typed String I](https://leetcode.com/problems/find-the-original-typed-string-i/) | Easy | String | 2025-07-01 | [Go](strings/3330-find-the-original-typed-string-i.go) [Python](strings/3330-find-the-original-typed-string-i.py)
 | 0594 | [Longest Harmonious Subsequence](https://leetcode.com/problems/longest-harmonious-subsequence/) | Easy | Array, Hash Table, Sliding Window, Sorting, Counting | 2025-06-30 | [Go](slidingwindows/0594-longest-harmonious-subsequence.go) [Python](slidingwindows/0594-longest-harmonious-subsequence.py)
 | 1498 | [Number of Subsequences That Satisfy the Given Sum Condition](https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition/) | Medium | Array, Two Pointers, Binary Search, Sorting | 2025-06-29 | [Go](twopointers/1498-number-of-subsequences-that-satisfy-the-given-sum-condition.go) [Python](twopointers/1498-number-of-subsequences-that-satisfy-the-given-sum-condition.py)
 | 2099 | [Find Subsequence of Length K With the Largest Sum](https://leetcode.com/problems/find-subsequence-of-length-k-with-the-largest-sum/) | Easy | Array, Hash Table, Sorting, Heap (Priority Queue) | 2025-06-28 | [Go](greedy/2099-find-subsequence-of-length-k-with-the-largest-sum.go) [Python](greedy/2099-find-subsequence-of-length-k-with-the-largest-sum.py)
