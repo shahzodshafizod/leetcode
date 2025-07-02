@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3333 | [Find the Original Typed String II](https://leetcode.com/problems/find-the-original-typed-string-ii/) | Hard | String, Dynamic Programming, Prefix Sum | 2025-07-02 | [Go](dp/3333-find-the-original-typed-string-ii.go) [Python](dp/3333-find-the-original-typed-string-ii.py)
 | 3330 | [Find the Original Typed String I](https://leetcode.com/problems/find-the-original-typed-string-i/) | Easy | String | 2025-07-01 | [Go](strings/3330-find-the-original-typed-string-i.go) [Python](strings/3330-find-the-original-typed-string-i.py)
 | 0594 | [Longest Harmonious Subsequence](https://leetcode.com/problems/longest-harmonious-subsequence/) | Easy | Array, Hash Table, Sliding Window, Sorting, Counting | 2025-06-30 | [Go](slidingwindows/0594-longest-harmonious-subsequence.go) [Python](slidingwindows/0594-longest-harmonious-subsequence.py)
 | 1498 | [Number of Subsequences That Satisfy the Given Sum Condition](https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition/) | Medium | Array, Two Pointers, Binary Search, Sorting | 2025-06-29 | [Go](twopointers/1498-number-of-subsequences-that-satisfy-the-given-sum-condition.go) [Python](twopointers/1498-number-of-subsequences-that-satisfy-the-given-sum-condition.py)
