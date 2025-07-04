@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3307 | [Find the K-th Character in String Game II](https://leetcode.com/problems/find-the-k-th-character-in-string-game-ii/) | Hard | Math, Bit Manipulation, Recursion | 2025-07-04 | [Go](bits/3307-find-the-k-th-character-in-string-game-ii.go) [Python](bits/3307-find-the-k-th-character-in-string-game-ii.py)
 | 3304 | [Find the K-th Character in String Game I](https://leetcode.com/problems/find-the-k-th-character-in-string-game-i/) | Easy | Math, Bit Manipulation, Recursion, Simulation | 2025-07-03 | [Go](strings/3304-find-the-k-th-character-in-string-game-i.go) [Python](strings/3304-find-the-k-th-character-in-string-game-i.py)
 | 3333 | [Find the Original Typed String II](https://leetcode.com/problems/find-the-original-typed-string-ii/) | Hard | String, Dynamic Programming, Prefix Sum | 2025-07-02 | [Go](dp/3333-find-the-original-typed-string-ii.go) [Python](dp/3333-find-the-original-typed-string-ii.py)
 | 3330 | [Find the Original Typed String I](https://leetcode.com/problems/find-the-original-typed-string-i/) | Easy | String | 2025-07-01 | [Go](strings/3330-find-the-original-typed-string-i.go) [Python](strings/3330-find-the-original-typed-string-i.py)
