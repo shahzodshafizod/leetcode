@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1865 | [Finding Pairs With a Certain Sum](https://leetcode.com/problems/finding-pairs-with-a-certain-sum/) | Medium | Array, Hash Table, Design | 2025-07-06 | [Go](design/1865-finding-pairs-with-a-certain-sum.go) [Python](design/1865-finding-pairs-with-a-certain-sum.py)
 | 1394 | [Find Lucky Integer in an Array](https://leetcode.com/problems/find-lucky-integer-in-an-array/) | Easy | Array, Hash Table, Counting | 2025-07-05 | [Go](hashes/1394-find-lucky-integer-in-an-array.go) [Python](hashes/1394-find-lucky-integer-in-an-array.py)
 | 3307 | [Find the K-th Character in String Game II](https://leetcode.com/problems/find-the-k-th-character-in-string-game-ii/) | Hard | Math, Bit Manipulation, Recursion | 2025-07-04 | [Go](bits/3307-find-the-k-th-character-in-string-game-ii.go) [Python](bits/3307-find-the-k-th-character-in-string-game-ii.py)
 | 3304 | [Find the K-th Character in String Game I](https://leetcode.com/problems/find-the-k-th-character-in-string-game-i/) | Easy | Math, Bit Manipulation, Recursion, Simulation | 2025-07-03 | [Go](strings/3304-find-the-k-th-character-in-string-game-i.go) [Python](strings/3304-find-the-k-th-character-in-string-game-i.py)

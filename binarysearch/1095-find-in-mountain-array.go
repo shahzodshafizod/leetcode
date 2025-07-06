@@ -8,8 +8,8 @@ package binarysearch
  * type MountainArray struct {
  * }
  *
- * func (this *MountainArray) get(index int) int {}
- * func (this *MountainArray) length() int {}
+ * func (m *MountainArray) get(index int) int {}
+ * func (m *MountainArray) length() int {}
  */
 
 type MountainArray struct {
