@@ -5,6 +5,7 @@ import unittest
 
 # python3 -m unittest binarysearch/2594-minimum-time-to-repair-cars.py
 
+
 class Solution(unittest.TestCase):
     def repairCars(self, ranks: List[int], cars: int) -> int:
         low, high = 1, max(ranks) * cars * cars
@@ -19,13 +20,13 @@ class Solution(unittest.TestCase):
             if remained <= 0:
                 high = mid
             else:
-                low = mid+1
+                low = mid + 1
         return high
 
     def test(self):
         for ranks, cars, expected in [
-            ([4,2,3,1], 10, 16),
-            ([5,1,8], 6, 16),
+            ([4, 2, 3, 1], 10, 16),
+            ([5, 1, 8], 6, 16),
         ]:
             output = self.repairCars(ranks, cars)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

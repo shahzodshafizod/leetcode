@@ -4,6 +4,7 @@ import unittest
 
 # python3 -m unittest template/template.py
 
+
 class Solution(unittest.TestCase):
     def a(self):
         pass

@@ -4,6 +4,7 @@ import unittest
 
 # python3 -m unittest stacks/2375-construct-smallest-number-from-di-string.py
 
+
 class Solution(unittest.TestCase):
     # # Approach #1: Backtracking
     # # Time: O()
@@ -35,15 +36,15 @@ class Solution(unittest.TestCase):
     #             break
     #         used[num] = False
     #     return "".join(str(num) for num in nums)
-    
+
     # Approach #1: Backtracking
     # Time: O()
     # Space: O(n)
     def smallestNumber(self, pattern: str) -> str:
         n = len(pattern)
         stack, num = [], []
-        for idx in range(n+1):
-            stack.append(idx+1)
+        for idx in range(n + 1):
+            stack.append(idx + 1)
             if idx == n or pattern[idx] == 'I':
                 while stack:
                     num.append(str(stack.pop()))

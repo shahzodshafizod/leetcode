@@ -4,6 +4,7 @@ import unittest
 
 # python3 -m unittest hashes/0013-roman-to-integer.py
 
+
 class Solution(unittest.TestCase):
     def romanToInt(self, s: str) -> int:
         table = {
@@ -16,14 +17,14 @@ class Solution(unittest.TestCase):
             'M': 1000,
         }
         num = 0
-        next = 'I'
-        for idx in range(len(s)-1, -1, -1):
+        nxt = 'I'
+        for idx in range(len(s) - 1, -1, -1):
             curr = s[idx]
-            if table[curr] < table[next]:
+            if table[curr] < table[nxt]:
                 num -= table[curr]
             else:
                 num += table[curr]
-            next = curr
+            nxt = curr
         return num
 
     def test(self):

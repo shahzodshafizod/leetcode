@@ -5,9 +5,11 @@ import unittest
 
 # python3 -m unittest backtracking/1079-letter-tile-possibilities.py
 
+
 class Solution(unittest.TestCase):
     def numTilePossibilities(self, tiles: str) -> int:
         counter = Counter(tiles)
+
         def backtrack() -> int:
             res = 0
             for letter, cnt in counter.items():
@@ -17,6 +19,7 @@ class Solution(unittest.TestCase):
                 res += 1 + backtrack()
                 counter[letter] += 1
             return res
+
         return backtrack()
 
     def test(self):

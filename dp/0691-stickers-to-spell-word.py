@@ -6,6 +6,7 @@ import unittest
 
 # python3 -m unittest dp/0691-stickers-to-spell-word.py
 
+
 class Solution(unittest.TestCase):
     # Approach: Top-Down Dynamic Programming
     # N=len(stickers)
@@ -18,6 +19,7 @@ class Solution(unittest.TestCase):
         MAX_INT = 16
         stickers = [Counter(sticker) for sticker in stickers]
         memo = defaultdict(int)
+
         def dfs(target: str) -> int:
             if not target:
                 return 0
@@ -28,20 +30,21 @@ class Solution(unittest.TestCase):
             for sticker in stickers:
                 if target[0] not in sticker:
                     continue
-                next = target_map - sticker & target_map
-                next = "".join([ch*cnt for ch,cnt in next.items()])
-                count = min(count, 1 + dfs(next)) # +1 mean we chose this sticker
+                nxt = target_map - sticker & target_map
+                nxt = "".join([ch * cnt for ch, cnt in nxt.items()])
+                count = min(count, 1 + dfs(nxt))  # +1 mean we chose this sticker
             memo[target] = count
             return count
+
         count = dfs(target)
         return count if count != MAX_INT else -1
 
     def test(self):
         for stickers, target, expected in [
-            (["with","example","science"], "thehat", 3),
-            (["notice","possible"], "basicbasic", -1),
-            (["charge","mind","bottom"], "centorder", 4),
-            (["fly","me","charge","mind","bottom"], "centorder", 4),
+            (["with", "example", "science"], "thehat", 3),
+            (["notice", "possible"], "basicbasic", -1),
+            (["charge", "mind", "bottom"], "centorder", 4),
+            (["fly", "me", "charge", "mind", "bottom"], "centorder", 4),
             (["these", "guess", "about", "garden", "him"], "atomher", 3),
         ]:
             output = self.minStickers(stickers, target)

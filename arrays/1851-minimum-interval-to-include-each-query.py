@@ -6,6 +6,7 @@ import unittest
 
 # python3 -m unittest arrays/1851-minimum-interval-to-include-each-query.py
 
+
 class Solution(unittest.TestCase):
     # # Approach: Brute-Force (Time Limit Exceeded)
     # # Time: O(NxQ), N=len(intervals), Q=len(queries)
@@ -57,11 +58,11 @@ class Solution(unittest.TestCase):
         intervals.sort()
         qmap = {}
         idx, n = 0, len(intervals)
-        inbound = [] # (length, right)
+        inbound = []  # (length, right)
         for query in sorted(queries):
             while idx < n and intervals[idx][0] <= query:
                 left, right = intervals[idx][0], intervals[idx][1]
-                heapq.heappush(inbound, (right-left+1, right))
+                heapq.heappush(inbound, (right - left + 1, right))
                 idx += 1
             while inbound and inbound[0][1] < query:
                 heapq.heappop(inbound)
@@ -72,8 +73,8 @@ class Solution(unittest.TestCase):
 
     def test(self):
         for intervals, queries, expected in [
-            ([[1,4],[2,4],[3,6],[4,4]], [2,3,4,5], [3,3,1,4]),
-            ([[2,3],[2,5],[1,8],[20,25]], [2,19,5,22], [2,-1,4,6]),
+            ([[1, 4], [2, 4], [3, 6], [4, 4]], [2, 3, 4, 5], [3, 3, 1, 4]),
+            ([[2, 3], [2, 5], [1, 8], [20, 25]], [2, 19, 5, 22], [2, -1, 4, 6]),
         ]:
             output = self.minInterval(intervals, queries)
             self.assertListEqual(expected, output, f"expected: {expected}, output: {output}")

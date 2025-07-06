@@ -5,6 +5,7 @@ import unittest
 
 # python3 -m unittest matrices/2658-maximum-number-of-fish-in-a-grid.py
 
+
 class Solution(unittest.TestCase):
     # # Approach: Depth-First Search (Immutable Input)
     # # Time: O(mn)
@@ -34,18 +35,20 @@ class Solution(unittest.TestCase):
     # Time: O(mn)
     # Space: O(1)
     def findMaxFish(self, grid: List[List[int]]) -> int:
-        directions = [1, 0, -1, 0, 1]
+        dirs = [1, 0, -1, 0, 1]
         m, n = len(grid), len(grid[0])
+
         def dfs(row: int, col: int) -> int:
             fish = grid[row][col]
             grid[row][col] = 0
-            for dir in range(1, 5):
-                r = row + directions[dir-1]
-                c = col + directions[dir]
+            for d in range(1, 5):
+                r = row + dirs[d - 1]
+                c = col + dirs[d]
                 if min(r, c) < 0 or r == m or c == n or grid[r][c] == 0:
                     continue
                 fish += dfs(r, c)
             return fish
+
         maxfish = 0
         for row in range(m):
             for col in range(n):
@@ -55,14 +58,14 @@ class Solution(unittest.TestCase):
 
     def test(self):
         for grid, expected in [
-            ([[0,2,1,0],[4,0,0,3],[1,0,0,4],[0,3,2,0]], 7),
-            ([[1,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,1]], 1),
+            ([[0, 2, 1, 0], [4, 0, 0, 3], [1, 0, 0, 4], [0, 3, 2, 0]], 7),
+            ([[1, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 1]], 1),
             ([[0]], 0),
             ([[4]], 4),
-            ([[0,0]], 0),
-            ([[0,6,0,9]], 9),
-            ([[4,5,5],[0,10,0]], 24),
-            ([[3],[4],[0],[4],[8],[9],[0]], 21),
+            ([[0, 0]], 0),
+            ([[0, 6, 0, 9]], 9),
+            ([[4, 5, 5], [0, 10, 0]], 24),
+            ([[3], [4], [0], [4], [8], [9], [0]], 21),
         ]:
             output = self.findMaxFish(grid)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

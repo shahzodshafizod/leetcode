@@ -5,6 +5,7 @@ import unittest
 
 # python3 -m unittest tries/0386-lexicographical-numbers.py
 
+
 class Solution(unittest.TestCase):
     # # Approach #1: Python One Liner
     # # Time: O(nlogn)
@@ -34,18 +35,18 @@ class Solution(unittest.TestCase):
         num = 1
         for idx in range(n):
             nums[idx] = num
-            if num*10 <= n:
+            if num * 10 <= n:
                 num *= 10
             else:
-                while num == n or num%10 == 9:
+                while num == n or num % 10 == 9:
                     num //= 10
                 num += 1
         return nums
 
     def test(self):
         for n, expected in [
-            (13, [1,10,11,12,13,2,3,4,5,6,7,8,9]),
-            (2, [1,2]),
+            (13, [1, 10, 11, 12, 13, 2, 3, 4, 5, 6, 7, 8, 9]),
+            (2, [1, 2]),
         ]:
             output = self.lexicalOrder(n)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

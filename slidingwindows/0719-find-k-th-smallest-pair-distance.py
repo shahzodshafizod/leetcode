@@ -3,6 +3,7 @@ import unittest
 
 # python3 -m unittest slidingwindows/0719-find-k-th-smallest-pair-distance.py
 
+
 class Solution(unittest.TestCase):
     def smallestDistancePair(self, nums: List[int], k: int) -> int:
         def countPairDistances(distance: int) -> int:
@@ -25,9 +26,9 @@ class Solution(unittest.TestCase):
 
     def test(self):
         for nums, k, expected in [
-            ([1,3,1], 1, 0),
-            ([1,1,1], 2, 0),
-            ([1,6,1], 3, 5),
+            ([1, 3, 1], 1, 0),
+            ([1, 1, 1], 2, 0),
+            ([1, 6, 1], 3, 5),
         ]:
             output = self.smallestDistancePair(nums, k)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

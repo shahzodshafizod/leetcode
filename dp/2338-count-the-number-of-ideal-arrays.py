@@ -5,26 +5,29 @@ import unittest
 
 # python3 -m unittest dp/2338-count-the-number-of-ideal-arrays.py
 
+
 class Solution(unittest.TestCase):
     def idealArrays(self, n: int, maxValue: int) -> int:
         combs = [0] * 15
         for k in range(1, 15):
-            combs[k] = math.comb(n-1,k-1)
-        memo = [[None]*15 for _ in range(maxValue+1)]
+            combs[k] = math.comb(n - 1, k - 1)
+        memo = [[None] * 15 for _ in range(maxValue + 1)]
+
         def dp(num: int, k: int) -> int:
-            if memo[num][k] != None:
+            if memo[num][k] is not None:
                 return memo[num][k]
-            # num is in the last pos, combs[k] is the 
+            # num is in the last pos, combs[k] is the
             # combination of n-1 previous positions
             # k is the number of items to be chosen
             res = combs[k]
             nxt = num * 2
             while nxt <= maxValue:
-                res += dp(nxt, k+1)
+                res += dp(nxt, k + 1)
                 nxt += num
             memo[num][k] = res
             return res
-        return sum(dp(i,1) for i in range(1, maxValue+1)) % (10**9 + 7)
+
+        return sum(dp(i, 1) for i in range(1, maxValue + 1)) % (10**9 + 7)
 
     def test(self):
         for n, maxValue, expected in [

@@ -5,10 +5,11 @@ from typing import List
 
 # python3 -m unittest hashes/0217-contains-duplicate.py
 
+
 class Solution(unittest.TestCase):
     def containsDuplicate(self, nums: List[int]) -> bool:
         return len(nums) != len(set(nums))
-    
+
     def testContainsDuplicate(self) -> None:
         for nums, expected in [
             ([1, 2, 3, 1], True),

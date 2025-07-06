@@ -5,6 +5,7 @@ import unittest
 
 # python3 -m unittest strings/0412-fizz-buzz.py
 
+
 class Solution(unittest.TestCase):
     # # Approach #1
     # # Time: O(N)
@@ -41,22 +42,25 @@ class Solution(unittest.TestCase):
     def fizzBuzz(self, n: int) -> List[str]:
         fizz, buzz = 3, 5
         answer = [""] * n
-        for idx in range(1, n+1):
+        for idx in range(1, n + 1):
             if idx == fizz:
-                answer[idx-1] = "Fizz"
+                answer[idx - 1] = "Fizz"
                 fizz += 3
             if idx == buzz:
-                answer[idx-1] += "Buzz"
+                answer[idx - 1] += "Buzz"
                 buzz += 5
-            if not answer[idx-1]:
-                answer[idx-1] = str(idx)
+            if not answer[idx - 1]:
+                answer[idx - 1] = str(idx)
         return answer
 
     def test(self):
         for n, expected in [
-            (3, ["1","2","Fizz"]),
-            (5, ["1","2","Fizz","4","Buzz"]),
-            (15, ["1","2","Fizz","4","Buzz","Fizz","7","8","Fizz","Buzz","11","Fizz","13","14","FizzBuzz"]),
+            (3, ["1", "2", "Fizz"]),
+            (5, ["1", "2", "Fizz", "4", "Buzz"]),
+            (
+                15,
+                ["1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz"],
+            ),
         ]:
             output = self.fizzBuzz(n)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

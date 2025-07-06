@@ -4,6 +4,7 @@ import unittest
 
 # python3 -m unittest strings/0796-rotate-string.py
 
+
 class Solution(unittest.TestCase):
     # # Approach #1: Brute-Force
     # # Time: O(nn)
@@ -31,24 +32,27 @@ class Solution(unittest.TestCase):
     # Time: O(n)
     # Space: O(n)
     def rotateString(self, s: str, goal: str) -> bool:
-        if len(s) != len(goal): return False
+        if len(s) != len(goal):
+            return False
         # 1. LPS setup: O(2xn)
         n = len(goal)
         lps = [0] * n
         prev_lps = 0
         for gid in range(1, n):
             while prev_lps > 0 and goal[prev_lps] != goal[gid]:
-                prev_lps = lps[prev_lps-1]
+                prev_lps = lps[prev_lps - 1]
             if goal[prev_lps] == goal[gid]:
                 prev_lps += 1
             lps[gid] = prev_lps
         # 2. KMP: O(2xn)
         gid = 0
-        for c in s+s:
+        for c in s + s:
             while gid > 0 and goal[gid] != c:
-                gid = lps[gid-1]
-            if goal[gid] == c: gid += 1
-            if gid == n: return True
+                gid = lps[gid - 1]
+            if goal[gid] == c:
+                gid += 1
+            if gid == n:
+                return True
         return False
 
     def test(self):
@@ -59,7 +63,7 @@ class Solution(unittest.TestCase):
             ("abcd", "cdeab", False),
             ("abcde", "abce", False),
             ("abcde", "cdeab", True),
-		    ("abcde", "abced", False),
+            ("abcde", "abced", False),
             ("aaaaaaaaaa", "aaaaaaaaaaaa", False),
             ("bbbacddceeb", "ceebbbbacdd", True),
             ("bbbacddceeb", "ceebbbbacdd", True),

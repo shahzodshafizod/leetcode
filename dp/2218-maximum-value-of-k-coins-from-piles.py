@@ -5,6 +5,7 @@ import unittest
 
 # python3 -m unittest dp/2218-maximum-value-of-k-coins-from-piles.py
 
+
 class Solution(unittest.TestCase):
     # # Approach: Top-Down Dynamic Programming
     # # Time: O(nkp), n=len(piles), p=len(piles[i])
@@ -53,29 +54,67 @@ class Solution(unittest.TestCase):
     # Space: O(k)
     def maxValueOfCoins(self, piles: List[List[int]], k: int) -> int:
         n = len(piles)
-        curr, next = [0] * (k+1), [0] * (k+1)
+        curr, nxt = [0] * (k + 1), [0] * (k + 1)
         curr[1] = 1
-        for i in range(n-1,-1,-1):
-            curr, next = next, curr
-            for coins in range(1, k+1):
+        for i in range(n - 1, -1, -1):
+            curr, nxt = nxt, curr
+            for coins in range(1, k + 1):
                 # skip curr pile
-                curr[coins] = next[coins]
+                curr[coins] = nxt[coins]
                 # take from curr pile
                 total = 0
                 for j in range(min(coins, len(piles[i]))):
                     total += piles[i][j]
-                    curr[coins] = max(
-                        curr[coins],
-                        total + next[coins-j-1]
-                    )
+                    curr[coins] = max(curr[coins], total + nxt[coins - j - 1])
         return curr[k]
 
     def test(self):
         for piles, k, expected in [
-            ([[1,100,3],[7,8,9]], 2, 101),
-            ([[1],[100],[100],[100],[100],[100],[10,1,1,1,1,1,700]], 5, 500),
-		    ([[100],[100],[100],[100],[100],[100],[1,1,1,1,1,1,700]], 7, 706),
-            ([[80,62,78,78,40,59,98,35],[79,19,100,15],[79,2,27,73,12,13,11,37,27,55,54,55,87,10,97,26,78,20,75,23,46,94,56,32,14,70,70,37,60,46,1,53]], 25, 1332),
+            ([[1, 100, 3], [7, 8, 9]], 2, 101),
+            ([[1], [100], [100], [100], [100], [100], [10, 1, 1, 1, 1, 1, 700]], 5, 500),
+            ([[100], [100], [100], [100], [100], [100], [1, 1, 1, 1, 1, 1, 700]], 7, 706),
+            (
+                [
+                    [80, 62, 78, 78, 40, 59, 98, 35],
+                    [79, 19, 100, 15],
+                    [
+                        79,
+                        2,
+                        27,
+                        73,
+                        12,
+                        13,
+                        11,
+                        37,
+                        27,
+                        55,
+                        54,
+                        55,
+                        87,
+                        10,
+                        97,
+                        26,
+                        78,
+                        20,
+                        75,
+                        23,
+                        46,
+                        94,
+                        56,
+                        32,
+                        14,
+                        70,
+                        70,
+                        37,
+                        60,
+                        46,
+                        1,
+                        53,
+                    ],
+                ],
+                25,
+                1332,
+            ),
         ]:
             output = self.maxValueOfCoins(piles, k)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

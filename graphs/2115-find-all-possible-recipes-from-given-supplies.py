@@ -6,6 +6,7 @@ import unittest
 
 # python3 -m unittest graphs/2115-find-all-possible-recipes-from-given-supplies.py
 
+
 class Solution(unittest.TestCase):
     # Approach: Topological Sort (Kahn's Algorithm)
     # Time: O(n+m+s), n=n=len(recipes), m=len(ingrediends), s=len(supplies)
@@ -31,13 +32,23 @@ class Solution(unittest.TestCase):
 
     def test(self):
         for recipes, ingredients, supplies, expected in [
-            (["bread"], [["yeast","flour"]], ["yeast","flour","corn"], ["bread"]),
-            (["bread","sandwich"], [["yeast","flour"],["bread","meat"]], ["yeast","flour","meat"], ["bread","sandwich"]),
-            # (["bread","sandwich","burger"], [["yeast","flour"],["bread","meat"],["sandwich","meat","bread"]], ["yeast","flour","meat"], ["bread","sandwich","burger"]),
+            (["bread"], [["yeast", "flour"]], ["yeast", "flour", "corn"], ["bread"]),
+            (
+                ["bread", "sandwich"],
+                [["yeast", "flour"], ["bread", "meat"]],
+                ["yeast", "flour", "meat"],
+                ["bread", "sandwich"],
+            ),
+            # (["bread","sandwich","burger"], [["yeast","flour"],["bread","meat"],["sandwich","meat","bread"]], ["yeast","flour","meat"], ["bread","sandwich","burger"]), # pylint: disable=line-too-long
             # (["ju","fzjnm","x","e","zpmcz","h","q"], [["d"],["hveml","f","cpivl"],["cpivl","zpmcz","h","e","fzjnm","ju"],["cpivl","hveml","zpmcz","ju","h"],["h","fzjnm","e","q","x"],["d","hveml","cpivl","q","zpmcz","ju","e","x"],["f","hveml","cpivl"]], ["f","hveml","cpivl","d"], ["fzjnm","q","ju"]),
-            (["bread","sandwich"], [["bread","flour"],["bread","flour"]], ["yeast","flour","meat"], []),
+            (["bread", "sandwich"], [["bread", "flour"], ["bread", "flour"]], ["yeast", "flour", "meat"], []),
             # (["qxyj","vawos","nkov","bec","qiabz"], [["mxf"],["iy","qxyj","nkov","qiabz","bec"],["nw","xutnl","e"],["eep","km","nw","xutnl","e","iy","vawos","qxyj","qiabz"],["nyhyc"]], ["nw","eep","iy","e","xutnl","km"], ["nkov"]),
-            (["bread","sandwich"], [["yeast","flour"],["bread","flour"]], ["yeast","flour","meat"], ["bread","sandwich"]),
+            (
+                ["bread", "sandwich"],
+                [["yeast", "flour"], ["bread", "flour"]],
+                ["yeast", "flour", "meat"],
+                ["bread", "sandwich"],
+            ),
         ]:
             output = self.findAllRecipes(recipes, ingredients, supplies)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

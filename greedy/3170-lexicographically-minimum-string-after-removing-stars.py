@@ -4,6 +4,7 @@ import unittest
 
 # python3 -m unittest greedy/3170-lexicographically-minimum-string-after-removing-stars.py
 
+
 class Solution(unittest.TestCase):
     # Approach: Greedy with Stack
     # Time: O(n)
@@ -11,9 +12,9 @@ class Solution(unittest.TestCase):
     def clearStars(self, s: str) -> str:
         stack = [[] for _ in range(26)]
         cleared = list(s)
-        for idx in range(len(s)):
-            if s[idx] != '*':
-                stack[ord(s[idx])-ord('a')].append(idx)
+        for idx, c in enumerate(s):
+            if c != '*':
+                stack[ord(c) - ord('a')].append(idx)
             else:
                 cleared[idx] = ''
                 for letter in range(26):
@@ -32,7 +33,7 @@ class Solution(unittest.TestCase):
             ("abc*", "bc"),
             ("aaaa***", "a"),
             ("de*", "e"),
-            ("d*yed", "yed")
+            ("d*yed", "yed"),
         ]:
             output = self.clearStars(s)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

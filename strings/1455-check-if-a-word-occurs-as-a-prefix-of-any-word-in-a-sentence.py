@@ -4,6 +4,7 @@ import unittest
 
 # python3 -m unittest strings/1455-check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence.py
 
+
 class Solution(unittest.TestCase):
     # # Approach #1: Trie
     # # Time: O(n+m), n=len(sentence), m=len(searchWord)
@@ -55,20 +56,20 @@ class Solution(unittest.TestCase):
         idx, m = 0, len(searchWord)
         words_index = 0
         block = False
-        for i in range(len(sentence)):
-            if sentence[i] == ' ':
+        for word in sentence:
+            if word == ' ':
                 words_index += 1
                 idx = 0
                 block = False
                 continue
             if block:
                 continue
-            if searchWord[idx] != sentence[i]:
+            if searchWord[idx] != word:
                 block = True
                 continue
             idx += 1
             if idx == m:
-                return words_index+1
+                return words_index + 1
         return -1
 
     def test(self):

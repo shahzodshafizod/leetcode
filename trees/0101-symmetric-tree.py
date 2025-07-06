@@ -6,6 +6,7 @@ from pkg.tree import TreeNode, create_tree
 
 # python3 -m unittest trees/0101-symmetric-tree.py
 
+
 class Solution(unittest.TestCase):
     # # Approach: Recursively
     # # Time: O(n), n=# of tree nodes
@@ -41,14 +42,14 @@ class Solution(unittest.TestCase):
 
     def testIsSymmetric(self) -> None:
         for root, expected in [
-            ([1,2,2,3,4,4,3], True),
-            ([1,2,2,None,3,None,3], False),
-            ([1,2,2,5,None,None,5,6,None,None,6], True),
-            ([1,2,2,2,None,2], False),
-            ([1,2,3], False),
+            ([1, 2, 2, 3, 4, 4, 3], True),
+            ([1, 2, 2, None, 3, None, 3], False),
+            ([1, 2, 2, 5, None, None, 5, 6, None, None, 6], True),
+            ([1, 2, 2, 2, None, 2], False),
+            ([1, 2, 3], False),
             ([1], True),
-            ([2,3,3,4,5,5,4,None,None,8,9,9,8], True),
-            ([1,2,2,None,3,2], False),
+            ([2, 3, 3, 4, 5, 5, 4, None, None, 8, 9, 9, 8], True),
+            ([1, 2, 2, None, 3, 2], False),
         ]:
             root = create_tree(root)
             output = self.isSymmetric(root)

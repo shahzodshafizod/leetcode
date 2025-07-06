@@ -4,6 +4,7 @@ import unittest
 
 # python3 -m unittest greedy/2116-check-if-a-parentheses-string-can-be-valid.py
 
+
 class Solution(unittest.TestCase):
     def canBeValid(self, s: str, locked: str) -> bool:
         def valid(start: int, end: int, step: int, bracket: str) -> bool:
@@ -20,8 +21,9 @@ class Solution(unittest.TestCase):
                 else:
                     return False
             return True
+
         n = len(s)
-        return n&1 == 0 and valid(0,n,1,'(') and valid(n-1,-1,-1,')')
+        return n & 1 == 0 and valid(0, n, 1, '(') and valid(n - 1, -1, -1, ')')
 
     def test(self):
         for s, locked, expected in [

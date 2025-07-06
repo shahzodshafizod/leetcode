@@ -5,6 +5,7 @@ import unittest
 
 # python3 -m unittest fenwicks/0315-count-of-smaller-numbers-after-self.py
 
+
 class Solution(unittest.TestCase):
     # # Approach: Merge (Sort) Count
     # # Time: O(nlogn)
@@ -41,38 +42,41 @@ class Solution(unittest.TestCase):
     # Space: O(n)
     def countSmaller(self, nums: List[int]) -> List[int]:
         small = min(nums)
-        bitree = [0] * (max(nums)-small+2) # 1-indexed
+        bitree = [0] * (max(nums) - small + 2)  # 1-indexed
+
         def update(num: int, delta: int):
             num += 1
             while num < len(bitree):
                 bitree[num] += delta
                 num += num & -num
+
         def query(num: int) -> int:
             total = 0
             while num > 0:
                 total += bitree[num]
                 num -= num & -num
             return total
+
         n = len(nums)
         for idx in range(n):
-            num = nums[idx]-small
+            num = nums[idx] - small
             update(num, 1)
         counts = [0] * n
         for idx in range(n):
-            num = nums[idx]-small
+            num = nums[idx] - small
             update(num, -1)
             counts[idx] = query(num)
         return counts
 
     def test(self):
         for nums, expected in [
-            ([5,2,6,1], [2,1,1,0]),
+            ([5, 2, 6, 1], [2, 1, 1, 0]),
             ([-1], [0]),
-            ([-1,-1], [0,0]),
-            ([9,11,15], [0,0,0]),
-            ([15,11,9], [2,1,0]),
-            ([2,0,1], [2,0,0]),
-            # ([26,78,27,100,33,67,90,23,66,5,38,7,35,23,52,22,83,51,98,69,81,32,78,28,94,13,2,97,3,76,99,51,9,21,84,66,65,36,100,41], [10,27,10,35,12,22,28,8,19,2,12,2,9,6,12,5,17,9,19,12,14,6,12,5,12,3,0,10,0,7,8,4,0,0,4,3,2,0,1,0]),
+            ([-1, -1], [0, 0]),
+            ([9, 11, 15], [0, 0, 0]),
+            ([15, 11, 9], [2, 1, 0]),
+            ([2, 0, 1], [2, 0, 0]),
+            # ([26,78,27,100,33,67,90,23,66,5,38,7,35,23,52,22,83,51,98,69,81,32,78,28,94,13,2,97,3,76,99,51,9,21,84,66,65,36,100,41], [10,27,10,35,12,22,28,8,19,2,12,2,9,6,12,5,17,9,19,12,14,6,12,5,12,3,0,10,0,7,8,4,0,0,4,3,2,0,1,0]), # pylint: disable=line-too-long
         ]:
             output = self.countSmaller(nums)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

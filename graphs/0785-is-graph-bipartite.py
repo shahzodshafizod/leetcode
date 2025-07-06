@@ -1,10 +1,11 @@
-from collections import deque
+from collections import deque  # pylint: disable=unused-import
 from typing import List
 import unittest
 
 # https://leetcode.com/problems/is-graph-bipartite/
 
 # python3 -m unittest graphs/0785-is-graph-bipartite.py
+
 
 class Solution(unittest.TestCase):
     # # Approach #1: Union Find
@@ -58,6 +59,7 @@ class Solution(unittest.TestCase):
     def isBipartite(self, graph: List[List[int]]) -> bool:
         n = len(graph)
         colors = [0] * n
+
         def dfs(node: int, color: int) -> bool:
             colors[node] = color
             for neighbor in graph[node]:
@@ -66,6 +68,7 @@ class Solution(unittest.TestCase):
                 if colors[neighbor] == color or not dfs(neighbor, -color):
                     return False
             return True
+
         for node in range(n):
             if colors[node] == 0 and not dfs(node, 1):
                 return False
@@ -73,14 +76,28 @@ class Solution(unittest.TestCase):
 
     def test(self):
         for graph, expected in [
-            ([[1],[0]], True),
-            ([[1,2,3],[0,2],[0,1,3],[0,2]], False),
-            ([[1,3],[0,2],[1,3],[0,2]], True),
-            ([[4],[],[4],[4],[0,2,3]], True),
-            ([[],[2,4,6],[1,4,8,9],[7,8],[1,2,8,9],[6,9],[1,5,7,8,9],[3,6,9],[2,3,4,6,9],[2,4,5,6,7,8]], False),
-            ([[3,4,6],[3,6],[3,6],[0,1,2,5],[0,7,8],[3],[0,1,2,7],[4,6],[4],[]], True),
-            ([[1,2,3],[0,3,4],[0,3],[0,1,2],[1]], False),
-            ([[1,2,3,4],[0,2,3],[0,1,3,4],[0,1,2,4],[0,2,3]], False),
+            ([[1], [0]], True),
+            ([[1, 2, 3], [0, 2], [0, 1, 3], [0, 2]], False),
+            ([[1, 3], [0, 2], [1, 3], [0, 2]], True),
+            ([[4], [], [4], [4], [0, 2, 3]], True),
+            (
+                [
+                    [],
+                    [2, 4, 6],
+                    [1, 4, 8, 9],
+                    [7, 8],
+                    [1, 2, 8, 9],
+                    [6, 9],
+                    [1, 5, 7, 8, 9],
+                    [3, 6, 9],
+                    [2, 3, 4, 6, 9],
+                    [2, 4, 5, 6, 7, 8],
+                ],
+                False,
+            ),
+            ([[3, 4, 6], [3, 6], [3, 6], [0, 1, 2, 5], [0, 7, 8], [3], [0, 1, 2, 7], [4, 6], [4], []], True),
+            ([[1, 2, 3], [0, 3, 4], [0, 3], [0, 1, 2], [1]], False),
+            ([[1, 2, 3, 4], [0, 2, 3], [0, 1, 3, 4], [0, 1, 2, 4], [0, 2, 3]], False),
         ]:
             output = self.isBipartite(graph)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

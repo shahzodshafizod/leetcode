@@ -6,6 +6,7 @@ import unittest
 
 # python3 -m unittest prefixsums/1074-number-of-submatrices-that-sum-to-target.py
 
+
 class Solution(unittest.TestCase):
     # # Approach: Prefix Sum
     # # Time: O(nnmm)
@@ -37,6 +38,7 @@ class Solution(unittest.TestCase):
     # Space: O(m)
     def numSubmatrixSumTarget(self, matrix: List[List[int]], target: int) -> int:
         m, n = len(matrix), len(matrix[0])
+
         # 560. Subarray Sum Equals K
         # https://leetcode.com/problems/subarray-sum-equals-k/
         def subarraySum(nums: List[int], k: int) -> int:
@@ -48,6 +50,7 @@ class Solution(unittest.TestCase):
                 count += counter[presum - k]
                 counter[presum] += 1
             return count
+
         count = 0
         for start in range(n):
             presum = [0] * m
@@ -59,8 +62,8 @@ class Solution(unittest.TestCase):
 
     def test(self):
         for matrix, target, expected in [
-            ([[0,1,0],[1,1,1],[0,1,0]], 0, 4),
-            ([[1,-1],[-1,1]], 0, 5),
+            ([[0, 1, 0], [1, 1, 1], [0, 1, 0]], 0, 4),
+            ([[1, -1], [-1, 1]], 0, 5),
             ([[904]], 0, 0),
         ]:
             output = self.numSubmatrixSumTarget(matrix, target)

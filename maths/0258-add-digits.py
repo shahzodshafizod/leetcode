@@ -4,6 +4,7 @@ import unittest
 
 # python3 -m unittest maths/0258-add-digits.py
 
+
 class Solution(unittest.TestCase):
     # # Approach #1: Recursive
     # # Time: O(D), D=# of digits
@@ -15,7 +16,7 @@ class Solution(unittest.TestCase):
     #         num, digit = divmod(num, 10)
     #         sum += digit
     #     return self.addDigits(sum)
-    
+
     # # Approach #2: Iterative
     # # Time: O(D), D=# of digits
     # # Space: O(1)

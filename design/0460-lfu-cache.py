@@ -5,17 +5,21 @@ import unittest
 
 # python3 -m unittest design/0460-lfu-cache.py
 
+
 class Node:
 
-    def __init__(self, key:int = 0, val:int = 0):
+    def __init__(self, key: int = 0, val: int = 0):
         self.key = key
         self.val = val
         self.cnt = 1
         self.prev = self.next = None
 
     def unlink(self) -> None:
-        if self.prev: self.prev.next = self.next
-        if self.next: self.next.prev = self.prev
+        if self.prev:
+            self.prev.next = self.next
+        if self.next:
+            self.next.prev = self.prev
+
 
 class LRUCache:
 
@@ -39,6 +43,7 @@ class LRUCache:
     def empty(self) -> bool:
         return self.head.next == self.tail
 
+
 class LFUCache:
 
     def __init__(self, capacity: int):
@@ -49,8 +54,9 @@ class LFUCache:
 
     def get(self, key: int) -> int:
         node = self.nodes.get(key, None)
-        if not node: return -1
-        node.unlink() # removes from the current counts[node.cnt]
+        if not node:
+            return -1
+        node.unlink()  # removes from the current counts[node.cnt]
         if self.buckets[node.cnt].empty() and node.cnt == self.min_cnt:
             self.min_cnt += 1
         node.cnt += 1
@@ -70,13 +76,14 @@ class LFUCache:
         self.min_cnt = 1
         self.capacity -= 1
 
+
 class Solution(unittest.TestCase):
     def test(self):
         for commands, values, expected in [
             (
-                ["LFUCache","put","put","get","put","get","get","put","get","get","get"],
-                [[2],       [1,1],[2,2],[1],  [3,3],[2],  [3],  [4,4], [1], [3],  [4]],
-                [None,       None, None, 1,    None,-1,    3,    None,  -1,  3,    4],
+                ["LFUCache", "put", "put", "get", "put", "get", "get", "put", "get", "get", "get"],
+                [[2], [1, 1], [2, 2], [1], [3, 3], [2], [3], [4, 4], [1], [3], [4]],
+                [None, None, None, 1, None, -1, 3, None, -1, 3, 4],
             ),
         ]:
             for idx, command in enumerate(commands):

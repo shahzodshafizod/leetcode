@@ -5,9 +5,10 @@ import unittest
 
 # python3 -m unittest hashes/0500-keyboard-row.py
 
+
 class Solution(unittest.TestCase):
     def findWords(self, words: List[str]) -> List[str]:
-        codes = {c:idx for idx, row in enumerate(["qwertyuiop", "asdfghjkl", "zxcvbnm"]) for c in row}
+        codes = {c: idx for idx, row in enumerate(["qwertyuiop", "asdfghjkl", "zxcvbnm"]) for c in row}
         res = []
         for word in words:
             code = codes[word[0].lower()]
@@ -22,9 +23,9 @@ class Solution(unittest.TestCase):
 
     def test(self):
         for words, expected in [
-            (["Hello","Alaska","Dad","Peace"], ["Alaska","Dad"]),
+            (["Hello", "Alaska", "Dad", "Peace"], ["Alaska", "Dad"]),
             (["omk"], []),
-            (["adsdf","sfd"], ["adsdf","sfd"]),
+            (["adsdf", "sfd"], ["adsdf", "sfd"]),
         ]:
             output = self.findWords(words)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

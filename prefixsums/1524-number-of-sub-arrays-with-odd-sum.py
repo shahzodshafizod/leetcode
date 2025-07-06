@@ -5,6 +5,7 @@ import unittest
 
 # python3 -m unittest prefixsums/1524-number-of-sub-arrays-with-odd-sum.py
 
+
 class Solution(unittest.TestCase):
     # Approach: Prefix Sum
     # Time: O(n)
@@ -25,9 +26,9 @@ class Solution(unittest.TestCase):
 
     def test(self):
         for arr, expected in [
-            ([1,3,5], 4),
-            ([2,4,6], 0),
-            ([1,2,3,4,5,6,7], 16),
+            ([1, 3, 5], 4),
+            ([2, 4, 6], 0),
+            ([1, 2, 3, 4, 5, 6, 7], 16),
         ]:
             output = self.numOfSubarrays(arr)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

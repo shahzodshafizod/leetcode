@@ -4,6 +4,7 @@ import unittest
 
 # python3 -m unittest stacks/1106-parsing-a-boolean-expression.py
 
+
 class Solution(unittest.TestCase):
     # # Approach: Recursive
     # # Time: O(N)
@@ -47,15 +48,19 @@ class Solution(unittest.TestCase):
                 has_true, has_false = False, False
                 while stack[-1] != '(':
                     value = stack.pop()
-                    if value == 't': has_true = True
-                    else: has_false = True
-                stack.pop() # remove '('
+                    if value == 't':
+                        has_true = True
+                    else:
+                        has_false = True
+                stack.pop()  # remove '('
                 oper = stack.pop()
-                if any([
-                    oper == '!' and value == 'f',
-                    oper == '&' and not has_false,
-                    oper == '|' and has_true,
-                ]):
+                if any(
+                    [
+                        oper == '!' and value == 'f',
+                        oper == '&' and not has_false,
+                        oper == '|' and has_true,
+                    ]
+                ):
                     stack.append('t')
                 else:
                     stack.append('f')

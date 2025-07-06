@@ -9,6 +9,7 @@ import unittest
 # "If there is a tie for the most frequent element,
 # the element closest to the stack's top is removed and returned."
 
+
 class FreqStack:
 
     def __init__(self):
@@ -31,18 +32,41 @@ class FreqStack:
             self.max_cnt -= 1
         return val
 
+
 class Solution(unittest.TestCase):
     def test(self):
         for commands, values, expected in [
             (
-                ["FreqStack","push","push","push","push","push","push","pop","pop","pop","pop"],
-                [[],[5],[7],[5],[7],[4],[5],[],[],[],[]],
-                [None,None,None,None,None,None,None,5,7,5,4],
+                ["FreqStack", "push", "push", "push", "push", "push", "push", "pop", "pop", "pop", "pop"],
+                [[], [5], [7], [5], [7], [4], [5], [], [], [], []],
+                [None, None, None, None, None, None, None, 5, 7, 5, 4],
             ),
             (
-                ["FreqStack","push","push","push","push","push","push","pop","push","pop","push","pop","push","pop","push","pop","pop","pop","pop","pop","pop"],
-                [[],[4],[0],[9],[3],[4],[2],[],[6],[],[1],[],[1],[],[4],[],[],[],[],[],[]],
-                [None,None,None,None,None,None,None,4,None,6,None,1,None,1,None,4,2,3,9,0,4],
+                [
+                    "FreqStack",
+                    "push",
+                    "push",
+                    "push",
+                    "push",
+                    "push",
+                    "push",
+                    "pop",
+                    "push",
+                    "pop",
+                    "push",
+                    "pop",
+                    "push",
+                    "pop",
+                    "push",
+                    "pop",
+                    "pop",
+                    "pop",
+                    "pop",
+                    "pop",
+                    "pop",
+                ],
+                [[], [4], [0], [9], [3], [4], [2], [], [6], [], [1], [], [1], [], [4], [], [], [], [], [], []],
+                [None, None, None, None, None, None, None, 4, None, 6, None, 1, None, 1, None, 4, 2, 3, 9, 0, 4],
             ),
         ]:
             for idx, command in enumerate(commands):
@@ -55,6 +79,7 @@ class Solution(unittest.TestCase):
                     case "pop":
                         output = f.pop()
                 self.assertEqual(expected[idx], output, f"expected: {expected[idx]}, output: {output}")
+
 
 # Your FreqStack object will be instantiated and called as such:
 # obj = FreqStack()

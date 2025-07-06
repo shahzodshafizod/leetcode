@@ -4,6 +4,7 @@ import unittest
 
 # python3 -m unittest maths/2081-sum-of-k-mirror-numbers.py
 
+
 class Solution(unittest.TestCase):
     # Time: O(sqrt(10))
     # Space: O(1)
@@ -11,24 +12,28 @@ class Solution(unittest.TestCase):
         def base_k_mirror(num: int) -> bool:
             digits = []
             while num > 0:
-                digits.append(num%k)
+                digits.append(num % k)
                 num //= k
             return digits == digits[::-1]
-        sum, left = 0, 1
+
+        total, left = 0, 1
         while n:
             right = left * 10
-            for p in [1,0]: # first odd-length, then even-length
+            for p in [1, 0]:  # first odd-length, then even-length
                 for i in range(left, right):
-                    if n == 0: break
+                    if n == 0:
+                        break
                     copy = str(i)
-                    if p == 0: copy = copy + copy[::-1]
-                    else: copy = copy[:-1] + copy[::-1]
+                    if p == 0:
+                        copy = copy + copy[::-1]
+                    else:
+                        copy = copy[:-1] + copy[::-1]
                     copy = int(copy)
                     if base_k_mirror(copy):
-                        sum += copy
+                        total += copy
                         n -= 1
             left = right
-        return sum
+        return total
 
     def test(self):
         for k, n, expected in [

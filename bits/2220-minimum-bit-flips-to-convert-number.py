@@ -6,6 +6,7 @@ import unittest
 
 # Note: This question is the same as 461: Hamming Distance.
 
+
 class Solution(unittest.TestCase):
     # # Approach: Iterative
     # # Time: O(max bits)
@@ -36,7 +37,7 @@ class Solution(unittest.TestCase):
         flips = 0
         xor_result = start ^ goal
         while xor_result:
-            xor_result &= xor_result-1
+            xor_result &= xor_result - 1
             flips += 1
         return flips
 

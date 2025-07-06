@@ -5,6 +5,7 @@ import unittest
 
 # python3 -m unittest dp/0416-partition-equal-subset-sum.py
 
+
 class Solution(unittest.TestCase):
     # # Approach #1: Top-Down Dynamic Programming
     # # Time: O(n*sum)
@@ -33,14 +34,14 @@ class Solution(unittest.TestCase):
     # Space: O(sum)
     def canPartition(self, nums: List[int]) -> bool:
         total = sum(nums)
-        if total&1:
+        if total & 1:
             return False
         target = total // 2
         dp = set([0])
         for num in nums:
             next_dp = dp.copy()
             for t in dp:
-                if t+num == target:
+                if t + num == target:
                     return True
                 next_dp.add(t + num)
             dp = next_dp
@@ -48,8 +49,8 @@ class Solution(unittest.TestCase):
 
     def test(self):
         for nums, expected in [
-            ([1,5,11,5], True),
-            ([1,2,3,5], False),
+            ([1, 5, 11, 5], True),
+            ([1, 2, 3, 5], False),
         ]:
             output = self.canPartition(nums)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

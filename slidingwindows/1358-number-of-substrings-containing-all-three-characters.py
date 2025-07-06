@@ -4,6 +4,7 @@ import unittest
 
 # python3 -m unittest slidingwindows/1358-number-of-substrings-containing-all-three-characters.py
 
+
 class Solution(unittest.TestCase):
     def numberOfSubstrings(self, s: str) -> int:
         count = 0

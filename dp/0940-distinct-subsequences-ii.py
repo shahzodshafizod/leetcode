@@ -1,10 +1,12 @@
 import unittest
-import sys
-sys.setrecursionlimit(3001)
+
+# import sys
+# sys.setrecursionlimit(3001)
 
 # https://leetcode.com/problems/distinct-subsequences-ii/
 
 # python3 -m unittest dp/0940-distinct-subsequences-ii.py
+
 
 class Solution(unittest.TestCase):
     # # Approach: Top-Down Dynamic Programming
@@ -41,12 +43,12 @@ class Solution(unittest.TestCase):
     #         last[key] = idx
     #     # -1, excluding the empty subsequence
     #     return (dp[n] - 1 + MOD) % MOD
-    
+
     # Approach: Bottom-Up Dynamic Programming (Space-Optimized)
     # Time: O(n)
     # Space: O(1)
     def distinctSubseqII(self, s: str) -> int:
-        MOD = int(1e9+7)
+        MOD = int(1e9 + 7)
         n = len(s)
         dp = 1
         last = [0] * 26
@@ -117,7 +119,7 @@ class Solution(unittest.TestCase):
             # ("jqasojtrigivhwtxajfvrfpycgjufd", 858575627),
             # ("qhfwbsrchpiauesezsorqlmcarknhw", 861037815),
             # ("ahbhubuqlyzesrqfrkririgtadlwha", 439400831),
-            # ("zchmliaqdgvwncfatcfivphddpzjkgyygueikthqzyeeiebczqbqhdytkoawkehkbizdmcnilcjjlpoeoqqoqpswtqdpvszfaksn", 97915677),
+            # ("zchmliaqdgvwncfatcfivphddpzjkgyygueikthqzyeeiebczqbqhdytkoawkehkbizdmcnilcjjlpoeoqqoqpswtqdpvszfaksn", 97915677), # pylint: disable=line-too-long
             # ("knqmywztzgalovcyitifjmllyltjjnwbehsqaofidwzygekdylwmwxtsnhowpyuwkxomdqsldbcuseojgyimebpvqyzmvubgwhku", 208740189),
             # ("blljuffdyfrkqtwfyfztpdiyktrhftgtabxxoibcclbjvirnqyynkyaqlxgyybkgyzvcahmytjdqqtctirnxfjpktxmjkojlvvrr", 589192369),
             # ("ajxjagdwzxxehvwbxhenrxtoydfobqrlugeuklytwonkrilsthwokzobvtraitboxlsazxstwnjnwnouzuzsskwteuapmmyexvdj", 584215525),

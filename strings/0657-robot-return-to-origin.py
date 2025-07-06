@@ -4,6 +4,7 @@ import unittest
 
 # python3 -m unittest strings/0657-robot-return-to-origin.py
 
+
 class Solution(unittest.TestCase):
     def judgeCircle(self, moves: str) -> bool:
         return moves.count('R') == moves.count('L') and moves.count('U') == moves.count('D')

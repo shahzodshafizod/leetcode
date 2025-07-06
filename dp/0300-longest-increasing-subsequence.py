@@ -5,6 +5,7 @@ import unittest
 
 # python3 -m unittest dp/0300-longest-increasing-subsequence.py
 
+
 class Solution(unittest.TestCase):
     # # Approach: Dynamic Programming (Bottom-Up)
     # # Time: O(nn)
@@ -31,7 +32,7 @@ class Solution(unittest.TestCase):
                 continue
             left, right = 0, len(lis)
             while left < right:
-                mid = left + (right-left) // 2
+                mid = left + (right - left) // 2
                 if lis[mid] < num:
                     left = mid + 1
                 else:
@@ -41,18 +42,18 @@ class Solution(unittest.TestCase):
             # more elements to be added to the subsequence in the future.
             lis[left] = num
         return len(lis)
-    
+
     def test(self):
         for nums, expected in [
-            ([10,9,2,5,3,7,101,18], 4),
-            ([0,1,0,3,2,3], 4),
-            ([7,7,7,7,7,7,7], 1),
-            ([3,1,8,2,5], 3),
-            ([5,2,8,6,3,6,9,5], 4),
-            ([4,10,4,3,8,9], 3),
-            ([0,1,0,3,2,3], 4),
-            ([3,5,6,2,5,4,19,5,6,7,12], 6),
-            ([1,4,2,3], 3),
+            ([10, 9, 2, 5, 3, 7, 101, 18], 4),
+            ([0, 1, 0, 3, 2, 3], 4),
+            ([7, 7, 7, 7, 7, 7, 7], 1),
+            ([3, 1, 8, 2, 5], 3),
+            ([5, 2, 8, 6, 3, 6, 9, 5], 4),
+            ([4, 10, 4, 3, 8, 9], 3),
+            ([0, 1, 0, 3, 2, 3], 4),
+            ([3, 5, 6, 2, 5, 4, 19, 5, 6, 7, 12], 6),
+            ([1, 4, 2, 3], 3),
         ]:
             output = self.lengthOfLIS(nums)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

@@ -5,6 +5,7 @@ import unittest
 
 # python3 -m unittest dp/1639-number-of-ways-to-form-a-target-string-given-a-dictionary.py
 
+
 class Solution(unittest.TestCase):
     # # Approach: Top-Down Dynamic Programming
     # # Time: O(W*T + W*w), W=len(words[i]), T=len(target), w=len(words)
@@ -56,27 +57,24 @@ class Solution(unittest.TestCase):
     # Time: O(W*T + W*w), W=len(words[i]), T=len(target), w=len(words)
     # Space: O(T)
     def numWays(self, words: List[str], target: str) -> int:
-        MOD = int(1e9+7)
+        MOD = int(1e9 + 7)
         tlen, wlen = len(target), len(words[0])
         count = [[0] * 26 for _ in range(wlen)]
         for word in words:
             for wid in range(wlen):
-                count[wid][ord(word[wid])-ord('a')] += 1
-        curr, next = [0]*tlen + [1], [0]*tlen + [1]
-        for wid in range(wlen-1, -1, -1):
-            curr, next = next, curr
-            for tid in range(tlen-1, -1, -1):
-                curr[tid] = (
-                    next[tid] +
-                    count[wid][ord(target[tid])-ord('a')] * next[tid+1]
-                ) % MOD
+                count[wid][ord(word[wid]) - ord('a')] += 1
+        curr, nxt = [0] * tlen + [1], [0] * tlen + [1]
+        for wid in range(wlen - 1, -1, -1):
+            curr, nxt = nxt, curr
+            for tid in range(tlen - 1, -1, -1):
+                curr[tid] = (nxt[tid] + count[wid][ord(target[tid]) - ord('a')] * nxt[tid + 1]) % MOD
         return curr[0]
 
     def test(self):
         for words, target, expected in [
-            (["acca","bbbb","caca"], "aba", 6),
-            (["abba","baab"], "bab", 4),
-            # (["cbabddddbc","addbaacbbd","cccbacdccd","cdcaccacac","dddbacabbd","bdbdadbccb","ddadbacddd","bbccdddadd","dcabaccbbd","ddddcddadc","bdcaaaabdd","adacdcdcdd","cbaaadbdbb","bccbabcbab","accbdccadd","dcccaaddbc","cccccacabd","acacdbcbbc","dbbdbaccca","bdbddbddda","daabadbacb","baccdbaada","ccbabaabcb","dcaabccbbb","bcadddaacc","acddbbdccb","adbddbadab","dbbcdcbcdd","ddbabbadbb","bccbcbbbab","dabbbdbbcb","dacdabadbb","addcbbabab","bcbbccadda","abbcacadac","ccdadcaada","bcacdbccdb"], "bcbbcccc", 677452090),
+            (["acca", "bbbb", "caca"], "aba", 6),
+            (["abba", "baab"], "bab", 4),
+            # (["cbabddddbc","addbaacbbd","cccbacdccd","cdcaccacac","dddbacabbd","bdbdadbccb","ddadbacddd","bbccdddadd","dcabaccbbd","ddddcddadc","bdcaaaabdd","adacdcdcdd","cbaaadbdbb","bccbabcbab","accbdccadd","dcccaaddbc","cccccacabd","acacdbcbbc","dbbdbaccca","bdbddbddda","daabadbacb","baccdbaada","ccbabaabcb","dcaabccbbb","bcadddaacc","acddbbdccb","adbddbadab","dbbcdcbcdd","ddbabbadbb","bccbcbbbab","dabbbdbbcb","dacdabadbb","addcbbabab","bcbbccadda","abbcacadac","ccdadcaada","bcacdbccdb"], "bcbbcccc", 677452090), # pylint: disable=line-too-long
         ]:
             output = self.numWays(words, target)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

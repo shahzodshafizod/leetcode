@@ -4,6 +4,7 @@ import unittest
 
 # python3 -m unittest dp/0920-number-of-music-playlists.py
 
+
 class Solution(unittest.TestCase):
     # # Approach #1: Top-Down Dynamic Programming
     # # Time: O(gn), g=goal
@@ -48,21 +49,18 @@ class Solution(unittest.TestCase):
     # Time: O(gn), g=goal
     # Space: O(n)
     def numMusicPlaylists(self, n: int, goal: int, k: int) -> int:
-        MOD = int(1e9+7)
-        prev, curr = [0]*(n+1), [0]*(n+1)
+        MOD = int(1e9 + 7)
+        prev, curr = [0] * (n + 1), [0] * (n + 1)
         curr[0] = 1
-        for slots in range(1, goal+1):
+        for slots in range(1, goal + 1):
             prev, curr = curr, prev
             curr[0] = 0
-            for songs in range(1, min(slots,n)+1):
+            for songs in range(1, min(slots, n) + 1):
                 # add a new song: n-songs+1 = # of choices
-                curr[songs] = (n-songs+1) * prev[songs-1] % MOD
+                curr[songs] = (n - songs + 1) * prev[songs - 1] % MOD
                 # replay an old song: songs-k = # of choices
                 if songs > k:
-                    curr[songs] = (
-                        curr[songs] +
-                        (songs-k) * prev[songs]
-                    ) % MOD
+                    curr[songs] = (curr[songs] + (songs - k) * prev[songs]) % MOD
         return curr[n]
 
     def test(self):

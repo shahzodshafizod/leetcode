@@ -4,13 +4,14 @@ import unittest
 
 # python3 -m unittest strings/0564-find-the-closest-palindrome.py
 
+
 class Solution(unittest.TestCase):
     def nearestPalindromic(self, n: str) -> str:
         def makePalindrome(num: int) -> int:
             s = str(num)
             palindrome = list(s)
             n = len(s)
-            left, right = (n-1)//2, n//2
+            left, right = (n - 1) // 2, n // 2
             while left >= 0:
                 palindrome[right] = palindrome[left]
                 left -= 1
@@ -18,37 +19,37 @@ class Solution(unittest.TestCase):
             return int("".join(palindrome))
 
         def prevPalindrome(num: int) -> int:
-            left, right = 0, num-1
+            left, right = 0, num - 1
             prev = 0
             while left <= right:
                 mid = (right - left) // 2 + left
                 palindrome = makePalindrome(mid)
                 if palindrome < num:
                     prev = palindrome
-                    left = mid+1
+                    left = mid + 1
                 else:
-                    right = mid-1
+                    right = mid - 1
             return prev
 
         def nextPalindrome(num: int) -> int:
-            left, right = num+1, int(10e17+1)
-            next = 0
+            left, right = num + 1, int(10e17 + 1)
+            nxt = 0
             while left <= right:
                 mid = (right - left) // 2 + left
                 palindrome = makePalindrome(mid)
                 if palindrome > num:
-                    next = palindrome
-                    right = mid-1
+                    nxt = palindrome
+                    right = mid - 1
                 else:
-                    left = mid+1
-            return next
+                    left = mid + 1
+            return nxt
 
         num = int(n)
         prev = prevPalindrome(num)
-        next = nextPalindrome(num)
-        if (num - prev) <= (next - num):
+        nxt = nextPalindrome(num)
+        if (num - prev) <= (nxt - num):
             return str(prev)
-        return str(next)
+        return str(nxt)
 
     def test(self):
         for n, expected in [

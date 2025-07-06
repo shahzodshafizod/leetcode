@@ -7,6 +7,7 @@ import unittest
 
 # python3 -m unittest trees/0100-same-tree.py
 
+
 class Solution(unittest.TestCase):
     # # Approach: DFS
     # def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
@@ -36,9 +37,9 @@ class Solution(unittest.TestCase):
 
     def test(self):
         for p, q, expected in [
-            ([1,2,3], [1,2,3], True),
-            ([1,2], [1,None,2], False),
-            ([1,2,1], [1,1,2], False),
+            ([1, 2, 3], [1, 2, 3], True),
+            ([1, 2], [1, None, 2], False),
+            ([1, 2, 1], [1, 1, 2], False),
         ]:
             p = create_tree(p)
             q = create_tree(q)

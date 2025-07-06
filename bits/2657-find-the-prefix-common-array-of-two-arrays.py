@@ -5,6 +5,7 @@ import unittest
 
 # python3 -m unittest bits/2657-find-the-prefix-common-array-of-two-arrays.py
 
+
 class Solution(unittest.TestCase):
     # # Approach: Counting
     # # Time: O(n)
@@ -36,11 +37,11 @@ class Solution(unittest.TestCase):
             bmask |= 1 << B[idx]
             C[idx] = (amask & bmask).bit_count()
         return C
-    
+
     def test(self):
         for A, B, expected in [
-            ([1,3,2,4], [3,1,2,4], [0,2,3,4]),
-            ([2,3,1], [3,1,2], [0,1,3]),
+            ([1, 3, 2, 4], [3, 1, 2, 4], [0, 2, 3, 4]),
+            ([2, 3, 1], [3, 1, 2], [0, 1, 3]),
         ]:
             output = self.findThePrefixCommonArray(A, B)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

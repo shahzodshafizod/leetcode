@@ -5,6 +5,7 @@ import unittest
 
 # python3 -m unittest dp/0472-concatenated-words.py
 
+
 class Solution(unittest.TestCase):
     # # Approach #1: Depth-First Search + Trie
     # # Time: O(n*www), n=len(words), w=max(len(words[i]))
@@ -81,10 +82,10 @@ class Solution(unittest.TestCase):
         concatenated = []
         for word in words:
             n = len(word)
-            dp = [False] * (n+1)
+            dp = [False] * (n + 1)
             dp[0] = True
-            for length in range(1, n+1):
-                for j in range(length-1,-1,-1):
+            for length in range(1, n + 1):
+                for j in range(length - 1, -1, -1):
                     if dp[j] and word[j:length] in word_set:
                         dp[length] = True
                         break
@@ -95,8 +96,11 @@ class Solution(unittest.TestCase):
 
     def test(self):
         for words, expected in [
-            (["cat","dog","catdog"], ["catdog"]),
-            (["cat","cats","catsdogcats","dog","dogcatsdog","hippopotamuses","rat","ratcatdogcat"], ["catsdogcats","dogcatsdog","ratcatdogcat"]),
+            (["cat", "dog", "catdog"], ["catdog"]),
+            (
+                ["cat", "cats", "catsdogcats", "dog", "dogcatsdog", "hippopotamuses", "rat", "ratcatdogcat"],
+                ["catsdogcats", "dogcatsdog", "ratcatdogcat"],
+            ),
         ]:
             output = self.findAllConcatenatedWordsInADict(words)
             expected.sort()

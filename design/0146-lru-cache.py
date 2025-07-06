@@ -4,6 +4,7 @@ import unittest
 
 # python3 -m unittest design/0146-lru-cache.py
 
+
 class ListNode:
     def __init__(self, key: int, val: int):
         self.key = key
@@ -15,13 +16,14 @@ class ListNode:
         self.prev.next = self.next
         self.next.prev = self.prev
 
+
 class LRUCache:
 
     def __init__(self, capacity: int):
         self.ptrs = {}
         self.capacity = capacity
-        self.head = ListNode(-1,-1)
-        self.tail = ListNode(-1,-1)
+        self.head = ListNode(-1, -1)
+        self.tail = ListNode(-1, -1)
         self.head.next = self.tail
         self.tail.prev = self.head
 
@@ -55,6 +57,7 @@ class LRUCache:
         node.prev.next = node
         node.next.prev = node
 
+
 class Solution(unittest.TestCase):
     def test(self):
         for commands, values, expected in [
@@ -74,9 +77,9 @@ class Solution(unittest.TestCase):
                 [None, None, None, None, None, -1, 3],
             ),
             (
-                ["LRUCache","get","put","get","put","put","get","get"],
-                [[2],[2],[2,6],[1],[1,5],[1,2],[1],[2]],
-                [None,-1,None,-1,None,None,2,6],
+                ["LRUCache", "get", "put", "get", "put", "put", "get", "get"],
+                [[2], [2], [2, 6], [1], [1, 5], [1, 2], [1], [2]],
+                [None, -1, None, -1, None, None, 2, 6],
             ),
         ]:
             for idx, command in enumerate(commands):
@@ -89,6 +92,7 @@ class Solution(unittest.TestCase):
                     case "put":
                         lru.put(values[idx][0], values[idx][1])
                 self.assertEqual(expected[idx], output, f"expected: {expected[idx]}, output: {output}")
+
 
 # Your LRUCache object will be instantiated and called as such:
 # obj = LRUCache(capacity)

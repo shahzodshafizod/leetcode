@@ -6,6 +6,7 @@ import unittest
 
 # python3 -m unittest dp/3343-count-number-of-balanced-permutations.py
 
+
 class Solution(unittest.TestCase):
     def countBalancedPermutations(self, num: str) -> int:
         cnt = [0] * 10
@@ -17,27 +18,26 @@ class Solution(unittest.TestCase):
             return 0
 
         post_cnt = [0] * 11
-        for i in range(9,-1,-1):
-            post_cnt[i] = cnt[i] + post_cnt[i+1]
+        for i in range(9, -1, -1):
+            post_cnt[i] = cnt[i] + post_cnt[i + 1]
 
         n = len(num)
+
         @cache
         def dfs(digit: int, odd: int, balance: int) -> int:
-            even = n - odd - post_cnt[digit+1]
+            even = n - odd - post_cnt[digit + 1]
             if odd == 0 and even == 0 and balance == 0:
                 return 1
             if digit < 0 or odd < 0 or even < 0 or balance < 0:
                 return 0
             res = 0
-            for freq in range(cnt[digit]+1):
-                res += comb(odd, freq) * comb(even, cnt[digit]-freq) * dfs(
-                    digit - 1,
-                    odd - freq,
-                    balance - digit*freq
+            for freq in range(cnt[digit] + 1):
+                res += (
+                    comb(odd, freq) * comb(even, cnt[digit] - freq) * dfs(digit - 1, odd - freq, balance - digit * freq)
                 )
             return res % 1000000007
 
-        return dfs(9, (n+1)//2, total >> 1)
+        return dfs(9, (n + 1) // 2, total >> 1)
 
     def test(self):
         for num, expected in [

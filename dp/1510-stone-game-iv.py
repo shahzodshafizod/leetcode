@@ -1,9 +1,10 @@
-import math
+import math  # pylint: disable=unused-import
 import unittest
 
 # https://leetcode.com/problems/stone-game-iv/
 
 # python3 -m unittest dp/1510-stone-game-iv.py
+
 
 class Solution(unittest.TestCase):
     # # Approach: Top-Down Dynamic Programming
@@ -27,13 +28,14 @@ class Solution(unittest.TestCase):
     # Time: O(n*sqrt(n))
     # Space: O(n)
     def winnerSquareGame(self, n: int) -> bool:
-        dp = [False] * (n+1)
+        dp = [False] * (n + 1)
         dp[0] = False
-        for curr in range(1, n+1):
+        for curr in range(1, n + 1):
             x = 1
-            while x*x <= curr:
-                if not dp[curr - x*x]:
-                    dp[curr] = True; break
+            while x * x <= curr:
+                if not dp[curr - x * x]:
+                    dp[curr] = True
+                    break
                 x += 1
         return dp[n]
 

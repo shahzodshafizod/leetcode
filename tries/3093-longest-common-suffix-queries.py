@@ -6,6 +6,7 @@ import unittest
 
 # python3 -m unittest tries/3093-longest-common-suffix-queries.py
 
+
 class Solution(unittest.TestCase):
     # M=len(wordsContainer)
     # C=len(wordsContainer[i])
@@ -19,6 +20,7 @@ class Solution(unittest.TestCase):
                 self.children = defaultdict(Trie)
                 self.index = -1
                 self.length = 5001
+
         def buildTrie() -> Optional[Trie]:
             root = Trie()
             for idx, word in enumerate(wordsContainer):
@@ -35,6 +37,7 @@ class Solution(unittest.TestCase):
                         curr.length = length
                         curr.index = idx
             return root
+
         root = buildTrie()
         ans = [0] * len(wordsQuery)
         for idx, word in enumerate(wordsQuery):
@@ -49,10 +52,10 @@ class Solution(unittest.TestCase):
 
     def test(self):
         for wordsContainer, wordsQuery, expected in [
-            (["abcd","bcd","xbcd"], ["cd","bcd","xyz"], [1,1,1]),
-            (["abcdefgh","poiuygh","ghghgh"], ["gh","acbfgh","acbfegh"], [2,0,2]),
+            (["abcd", "bcd", "xbcd"], ["cd", "bcd", "xyz"], [1, 1, 1]),
+            (["abcdefgh", "poiuygh", "ghghgh"], ["gh", "acbfgh", "acbfegh"], [2, 0, 2]),
             (["abcde", "abcde"], ["abcde", "bcde", "cde", "de", "e"], [0, 0, 0, 0, 0]),
-		    (["abcd", "bcda"], ["cdf", "afa"], [0, 1]),
+            (["abcd", "bcda"], ["cdf", "afa"], [0, 1]),
         ]:
             output = self.stringIndices(wordsContainer, wordsQuery)
             self.assertListEqual(expected, output, f"expected: {expected}, output: {output}")

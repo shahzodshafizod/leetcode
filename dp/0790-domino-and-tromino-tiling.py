@@ -4,25 +4,24 @@ import unittest
 
 # python3 -m unittest dp/0790-domino-and-tromino-tiling.py
 
-"""
-Full[n] = Full[n-1] + Full[n-2] + TopMissing[n-1] + BottomMissing[n-1]
+# Full[n] = Full[n-1] + Full[n-2] + TopMissing[n-1] + BottomMissing[n-1]
 
-  F[n-1]      F[n-2]        T[n-1]       B[n-1]
-|#######+|  |#######--|  |#######-+|  |########-|
-|#######+|  |#######--|  |########-|  |#######-+|
-
-
-TopMissing[n] = Full[n-2] + BottomMissing[n-1]
-  F[n-2]        B[n-1]
-|#######- |  |######## |
-|#######+-|  |#######--|
+#   F[n-1]      F[n-2]        T[n-1]       B[n-1]
+# |#######+|  |#######--|  |#######-+|  |########-|
+# |#######+|  |#######--|  |########-|  |#######-+|
 
 
-BottomMissing[n] = Full[n-2] + TopMissing[n-1]
-  F[n-2]        T[n-1]
-|#######+-|  |#######--|
-|#######- |  |######## |
-"""
+# TopMissing[n] = Full[n-2] + BottomMissing[n-1]
+#   F[n-2]        B[n-1]
+# |#######- |  |######## |
+# |#######+-|  |#######--|
+
+
+# BottomMissing[n] = Full[n-2] + TopMissing[n-1]
+#   F[n-2]        T[n-1]
+# |#######+-|  |#######--|
+# |#######- |  |######## |
+
 
 class Solution(unittest.TestCase):
     # # Approach: Bottom-Up Dynamic Programming
@@ -44,12 +43,12 @@ class Solution(unittest.TestCase):
     # Space: O(1)
     def numTilings(self, n: int) -> int:
         tm, bm = 0, 0
-        preprev, prev, curr = 1, 1, 1 # [n-2], [n-1], [n]
-        for i in range(2, n+1):
+        preprev, prev, curr = 1, 1, 1  # [n-2], [n-1], [n]
+        for _ in range(2, n + 1):
             curr = curr + preprev + tm + bm
             tm, bm = preprev + bm, preprev + tm
             preprev, prev = prev, curr
-        return curr % (10**9+7)
+        return curr % (10**9 + 7)
 
     def test(self):
         for n, expected in [

@@ -4,6 +4,7 @@ import unittest
 
 # python3 -m unittest maths/0367-valid-perfect-square.py
 
+
 class Solution(unittest.TestCase):
     def isPerfectSquare(self, num: int) -> bool:
         if num == 1:

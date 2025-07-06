@@ -13,6 +13,7 @@ import unittest
 # = a^a ^ b^b ^ c^c ^ d^d
 # = 0 ^ 0 ^ 0 ^ 0 = 0
 
+
 class Solution(unittest.TestCase):
     # Approach: Bit Manipulation
     # Time: O(n)
@@ -25,9 +26,9 @@ class Solution(unittest.TestCase):
 
     def test(self):
         for derived, expected in [
-            ([1,1,0], True),
-            ([1,1,0], True),
-            ([1,0], False),
+            ([1, 1, 0], True),
+            ([1, 1, 0], True),
+            ([1, 0], False),
         ]:
             output = self.doesValidArrayExist(derived)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

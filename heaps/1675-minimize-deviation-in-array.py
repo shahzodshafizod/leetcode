@@ -6,6 +6,7 @@ import unittest
 
 # python3 -m unittest heaps/1675-minimize-deviation-in-array.py
 
+
 class Solution(unittest.TestCase):
     # # Approach: Heap (Priority Queue)
     # # Time: O(n x logm x logn), n=len(nums), m=max(nums[i])
@@ -37,33 +38,33 @@ class Solution(unittest.TestCase):
     # Space: O(n)
     def minimumDeviation(self, nums: List[int]) -> int:
         n = len(nums)
-        max_heap = [0]*n
+        max_heap = [0] * n
         smallest = int(1e9)
-        for idx, num in enumerate(nums): # O(n)
-            if num&1:
+        for idx, num in enumerate(nums):  # O(n)
+            if num & 1:
                 num *= 2
             max_heap[idx] = -num
             smallest = min(smallest, num)
-        heapq.heapify(max_heap) # O(n)
+        heapq.heapify(max_heap)  # O(n)
         deviation = int(1e9)
-        while len(max_heap) == n: # O(logm)
-            num = -max_heap[0] # O(logn)
-            deviation = min(deviation, num-smallest)
-            if num&1 == 0:
+        while len(max_heap) == n:  # O(logm)
+            num = -max_heap[0]  # O(logn)
+            deviation = min(deviation, num - smallest)
+            if num & 1 == 0:
                 num //= 2
                 smallest = min(smallest, num)
-                heapq.heapreplace(max_heap, -num) # O(logn)
+                heapq.heapreplace(max_heap, -num)  # O(logn)
             else:
                 heapq.heappop(max_heap)
         return deviation
 
     def test(self):
         for nums, expected in [
-            ([1,2,3,4], 1),
-            ([4,1,5,20,3], 3),
-            ([2,10,8], 3),
-            ([2,2,3,2], 1),
-            ([3,5], 1),
+            ([1, 2, 3, 4], 1),
+            ([4, 1, 5, 20, 3], 3),
+            ([2, 10, 8], 3),
+            ([2, 2, 3, 2], 1),
+            ([3, 5], 1),
         ]:
             output = self.minimumDeviation(nums)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

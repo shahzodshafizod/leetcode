@@ -1,9 +1,10 @@
-from typing import List, Optional
+from typing import List
 import unittest
 
 # https://leetcode.com/problems/string-matching-in-an-array/
 
 # python3 -m unittest strings/1408-string-matching-in-an-array.py
+
 
 class Solution(unittest.TestCase):
     # # Approach: Trie
@@ -45,38 +46,40 @@ class Solution(unittest.TestCase):
                 elif p == 0:
                     s += 1
                 else:
-                    p = lps[p-1]
+                    p = lps[p - 1]
             return lps
 
         n = len(words)
+
         def check(curr: str, start: int) -> bool:
             m = len(curr)
             lps = getLPS(curr)
             for idx in range(start, n):
-                next = words[idx]
-                nlen = len(next)
-                if nlen == m: continue
+                nxt = words[idx]
+                nlen = len(nxt)
+                if nlen == m:
+                    continue
                 cid, nid = 0, 0
                 while cid < m and nid < nlen:
-                    if curr[cid] == next[nid]:
+                    if curr[cid] == nxt[nid]:
                         cid += 1
                         nid += 1
                     elif cid == 0:
                         nid += 1
                     else:
-                        cid = lps[cid-1]
+                        cid = lps[cid - 1]
                 if cid == m:
                     return True
             return False
 
-        words.sort(key=lambda word: len(word))
+        words.sort(key=lambda word: len(word))  # pylint: disable=unnecessary-lambda
         return [w for i, w in enumerate(words) if check(w, i)]
 
     def test(self):
         for words, expected in [
-            (["mass","as","hero","superhero"], ["as","hero"]),
-            (["leetcode","et","code"], ["et","code"]),
-            (["blue","green","bu"], []),
+            (["mass", "as", "hero", "superhero"], ["as", "hero"]),
+            (["leetcode", "et", "code"], ["et", "code"]),
+            (["blue", "green", "bu"], []),
         ]:
             output = self.stringMatching(words)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

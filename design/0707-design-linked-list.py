@@ -4,18 +4,20 @@ import unittest
 
 # python3 -m unittest design/0707-design-linked-list.py
 
+
 class ListNode:
-    def __init__(self, val, prev, next):
+    def __init__(self, val, prev, nxt):
         self.val = val
         self.prev = prev
-        self.next = next
+        self.nxt = nxt
+
 
 class MyLinkedList:
 
     def __init__(self):
-        self.head = ListNode(-1, None,None)
+        self.head = ListNode(-1, None, None)
         self.tail = ListNode(-1, self.head, None)
-        self.head.next = self.tail
+        self.head.nxt = self.tail
         self.size = 0
 
     def get(self, index: int) -> int:
@@ -23,7 +25,7 @@ class MyLinkedList:
         return node.val if node else -1
 
     def addAtHead(self, val: int) -> None:
-        self.add_node(val, self.head, self.head.next)
+        self.add_node(val, self.head, self.head.nxt)
 
     def addAtTail(self, val: int) -> None:
         self.add_node(val, self.tail.prev, self.tail)
@@ -32,68 +34,97 @@ class MyLinkedList:
         if index == self.size:
             self.addAtTail(val)
             return
-        next = self.get_node(index)
-        if not next: return
-        self.add_node(val, next.prev, next)
+        nxt = self.get_node(index)
+        if not nxt:
+            return
+        self.add_node(val, nxt.prev, nxt)
 
-    def add_node(self, val: int, prev: ListNode, next: ListNode) -> None:
-        node = ListNode(val, prev, next)
-        node.prev.next = node
-        node.next.prev = node
+    def add_node(self, val: int, prev: ListNode, nxt: ListNode) -> None:
+        node = ListNode(val, prev, nxt)
+        node.prev.nxt = node
+        node.nxt.prev = node
         self.size += 1
 
     def deleteAtIndex(self, index: int) -> None:
         node = self.get_node(index)
-        if not node: return
-        node.prev.next = node.next
-        node.next.prev = node.prev
+        if not node:
+            return
+        node.prev.nxt = node.nxt
+        node.nxt.prev = node.prev
         self.size -= 1
 
     def get_node(self, index: int) -> ListNode:
         if index < 0 or index >= self.size:
             return None
-        if index > self.size//2:
+        if index > self.size // 2:
             node = self.tail
             for _ in range(index, self.size):
                 node = node.prev
             return node
-        node = self.head.next
+        node = self.head.nxt
         for _ in range(index):
-            node = node.next
+            node = node.nxt
         return node
+
 
 class Solution(unittest.TestCase):
     def test(self):
         for commands, values, expected in [
             (
-                ["MyLinkedList","addAtHead","addAtTail","addAtIndex","get","deleteAtIndex","get"],
-                [[],[1],[3],[1,2],[1],[1],[1]],
-                [None,None,None,None,2,None,3],
+                ["MyLinkedList", "addAtHead", "addAtTail", "addAtIndex", "get", "deleteAtIndex", "get"],
+                [[], [1], [3], [1, 2], [1], [1], [1]],
+                [None, None, None, None, 2, None, 3],
             ),
             (
-                ["MyLinkedList","addAtHead","addAtHead","addAtHead","addAtIndex","deleteAtIndex","addAtHead","addAtTail","get","addAtHead","addAtIndex","addAtHead"],
-                [[],[7],[2],[1],[3,0],[2],[6],[4],[4],[4],[5,0],[6]],
-                [None,None,None,None,None,None,None,None,4,None,None,None],
+                [
+                    "MyLinkedList",
+                    "addAtHead",
+                    "addAtHead",
+                    "addAtHead",
+                    "addAtIndex",
+                    "deleteAtIndex",
+                    "addAtHead",
+                    "addAtTail",
+                    "get",
+                    "addAtHead",
+                    "addAtIndex",
+                    "addAtHead",
+                ],
+                [[], [7], [2], [1], [3, 0], [2], [6], [4], [4], [4], [5, 0], [6]],
+                [None, None, None, None, None, None, None, None, 4, None, None, None],
             ),
             (
-                ["MyLinkedList","addAtHead","addAtIndex","get","get","get"],
-                [[],[1],[1,2],[1],[0],[2]],
-                [None,None,None,2,1,-1],
+                ["MyLinkedList", "addAtHead", "addAtIndex", "get", "get", "get"],
+                [[], [1], [1, 2], [1], [0], [2]],
+                [None, None, None, 2, 1, -1],
             ),
             (
-                ["MyLinkedList","addAtHead","get","addAtHead","addAtHead","deleteAtIndex","addAtHead","get","get","get","addAtHead","deleteAtIndex"],
-                [[],[4],[1],[1],[5],[3],[7],[3],[3],[3],[1],[4]],
-                [None,None,-1,None,None,None,None,4,4,4,None,None],
+                [
+                    "MyLinkedList",
+                    "addAtHead",
+                    "get",
+                    "addAtHead",
+                    "addAtHead",
+                    "deleteAtIndex",
+                    "addAtHead",
+                    "get",
+                    "get",
+                    "get",
+                    "addAtHead",
+                    "deleteAtIndex",
+                ],
+                [[], [4], [1], [1], [5], [3], [7], [3], [3], [3], [1], [4]],
+                [None, None, -1, None, None, None, None, 4, 4, 4, None, None],
             ),
             (
-                ["MyLinkedList","addAtHead","addAtTail","addAtIndex","get","deleteAtIndex","get"],
-                [[],[1],[3],[1,2],[1],[0],[0]],
-                [None,None,None,None,2,None,2],
+                ["MyLinkedList", "addAtHead", "addAtTail", "addAtIndex", "get", "deleteAtIndex", "get"],
+                [[], [1], [3], [1, 2], [1], [0], [0]],
+                [None, None, None, None, 2, None, 2],
             ),
             (
-                ["MyLinkedList","addAtIndex","addAtIndex","addAtIndex","get"],
-                [[],[0,10],[0,20],[1,30],[0]],
-                [None,None,None,None,20],
+                ["MyLinkedList", "addAtIndex", "addAtIndex", "addAtIndex", "get"],
+                [[], [0, 10], [0, 20], [1, 30], [0]],
+                [None, None, None, None, 20],
             ),
         ]:
             for idx, command in enumerate(commands):
@@ -112,6 +143,7 @@ class Solution(unittest.TestCase):
                     case "deleteAtIndex":
                         ll.deleteAtIndex(values[idx][0])
                 self.assertEqual(expected[idx], output, f"expected: {expected[idx]}, output: {output}")
+
 
 # Your MyLinkedList object will be instantiated and called as such:
 # obj = MyLinkedList()

@@ -4,6 +4,7 @@ import unittest
 
 # python3 -m unittest dp/1269-number-of-ways-to-stay-in-the-same-place-after-some-steps.py
 
+
 class Solution(unittest.TestCase):
     # # Approach #1: Top-Down Dynamic Programming
     # # Time: O(S⋅min(S,A)), S=steps, A=arrLen
@@ -47,18 +48,18 @@ class Solution(unittest.TestCase):
     # Time: O(S⋅min(S,A)), S=steps, A=arrLen
     # Space: O(min(S,A))
     def numWays(self, steps: int, arrLen: int) -> int:
-        MOD = int(1e9+7)
-        arrLen = min(arrLen, steps) # cannot move further than "steps" steps
-        prev, curr = [0]*arrLen, [0]*arrLen
+        MOD = int(1e9 + 7)
+        arrLen = min(arrLen, steps)  # cannot move further than "steps" steps
+        prev, curr = [0] * arrLen, [0] * arrLen
         curr[0] = 1
         for _ in range(steps):
             prev, curr = curr, prev
-            for pos in range(arrLen-1,-1,-1):
+            for pos in range(arrLen - 1, -1, -1):
                 curr[pos] = prev[pos]
                 if pos > 0:
-                    curr[pos] = (curr[pos] + prev[pos-1]) % MOD
-                if pos+1 < arrLen:
-                    curr[pos] = (curr[pos] + prev[pos+1]) % MOD
+                    curr[pos] = (curr[pos] + prev[pos - 1]) % MOD
+                if pos + 1 < arrLen:
+                    curr[pos] = (curr[pos] + prev[pos + 1]) % MOD
         return curr[0]
 
     def test(self):

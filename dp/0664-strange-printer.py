@@ -5,33 +5,31 @@ import unittest
 
 # python3 -m unittest dp/0664-strange-printer.py
 
+
 class Solution(unittest.TestCase):
     # # Bottom Up Dynamic Programming (Tabulation)
     # # Time: O(N^3)
     # # Space: O(N^2)
     def strangePrinter(self, s: str) -> int:
-        s = "".join(c for c,_ in itertools.groupby(s))
+        s = "".join(c for c, _ in itertools.groupby(s))
         n = len(s)
         indexes = {}
-        next = [n] * n
-        for idx in range(n-1, -1, -1):
+        nxt = [n] * n
+        for idx in range(n - 1, -1, -1):
             if s[idx] in indexes:
-                next[idx] = indexes[s[idx]]
+                nxt[idx] = indexes[s[idx]]
             indexes[s[idx]] = idx
         dp = [[0] * n for _ in range(n + 1)]
         for idx in range(n):
             dp[idx][idx] = 1
-        for start in range(n-2, -1, -1):
-            for end in range(start+1, n):
-                dp[start][end] = 1 + dp[start+1][end]
-                k = next[start]
+        for start in range(n - 2, -1, -1):
+            for end in range(start + 1, n):
+                dp[start][end] = 1 + dp[start + 1][end]
+                k = nxt[start]
                 while k <= end:
-                    dp[start][end] = min(
-                        dp[start][end],
-                        dp[start][k-1]+dp[k+1][end]
-                    )
-                    k = next[k]
-        return dp[0][n-1]
+                    dp[start][end] = min(dp[start][end], dp[start][k - 1] + dp[k + 1][end])
+                    k = nxt[k]
+        return dp[0][n - 1]
 
     # # Top Down Dynamic Programming (Memoization)
     # # Time: O(N^3)

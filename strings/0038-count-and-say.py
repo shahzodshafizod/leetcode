@@ -4,6 +4,7 @@ import unittest
 
 # python3 -m unittest strings/0038-count-and-say.py
 
+
 class Solution(unittest.TestCase):
     # # Approach: Recursive
     # # Time: O(nxm), m=max(len(RLE))
@@ -24,10 +25,10 @@ class Solution(unittest.TestCase):
     # Space: O(n)
     def countAndSay(self, n: int) -> str:
         rle = "1"
-        for _ in range(n-1):
+        for _ in range(n - 1):
             new_rle, count = "", 1
             for idx in range(1, len(rle)):
-                if rle[idx] != rle[idx-1]:
+                if rle[idx] != rle[idx - 1]:
                     new_rle = f"{new_rle}{count}{rle[idx-1]}"
                     count = 0
                 count += 1

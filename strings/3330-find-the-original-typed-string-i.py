@@ -4,9 +4,10 @@ import unittest
 
 # python3 -m unittest strings/3330-find-the-original-typed-string-i.py
 
+
 class Solution(unittest.TestCase):
     def possibleStringCount(self, word: str) -> int:
-        return sum(word[i-1]==word[i] for i in range(1,len(word)))+1
+        return sum(word[i - 1] == word[i] for i in range(1, len(word))) + 1
 
     def test(self):
         for word, expected in [

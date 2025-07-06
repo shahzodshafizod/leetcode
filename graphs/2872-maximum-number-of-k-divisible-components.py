@@ -1,10 +1,11 @@
-from collections import defaultdict, deque
+from collections import deque  # pylint: disable=unused-import
 from typing import List
 import unittest
 
 # https://leetcode.com/problems/maximum-number-of-k-divisible-components/
 
 # python3 -m unittest graphs/2872-maximum-number-of-k-divisible-components.py
+
 
 class Solution(unittest.TestCase):
     # # Approach: Depth-First Search (Graph)
@@ -17,7 +18,7 @@ class Solution(unittest.TestCase):
     #         graph[b].append(a)
     #     count = 0
     #     def dfs(parent: int, node: int) -> int:
-    #         total = (values[node] + 
+    #         total = (values[node] +
     #             sum(dfs(node, next) for next in graph[node] if next != parent))
     #         if total % k == 0:
     #             nonlocal count
@@ -30,7 +31,8 @@ class Solution(unittest.TestCase):
     # Time: O(n+e), n=# of nodes, e=# of edges
     # Space: O(n+e)
     def maxKDivisibleComponents(self, n: int, edges: List[List[int]], values: List[int], k: int) -> int:
-        if n < 2: return 1
+        if n < 2:
+            return 1
         graph = [[] for _ in range(n)]
         indegree = [0] * n
         for a, b in edges:
@@ -44,27 +46,36 @@ class Solution(unittest.TestCase):
             node = queue.popleft()
             indegree[node] -= 1
             total = 0
-            if values[node] % k == 0: count += 1
-            else: total = values[node]
-            for next in graph[node]:
-                if indegree[next] == 0: continue
-                indegree[next] -= 1
-                values[next] += total
-                if indegree[next] == 1:
-                    queue.append(next)
+            if values[node] % k == 0:
+                count += 1
+            else:
+                total = values[node]
+            for nei in graph[node]:
+                if indegree[nei] == 0:
+                    continue
+                indegree[nei] -= 1
+                values[nei] += total
+                if indegree[nei] == 1:
+                    queue.append(nei)
         return count
 
     def test(self):
         for n, edges, values, k, expected in [
             (1, [], [0], 1, 1),
             (1, [], [100], 100, 1),
-            (5, [[0,2],[1,2],[1,3],[2,4]], [1,8,1,4,4], 6, 2),
-		    (7, [[0,1],[0,2],[1,3],[1,4],[2,5],[2,6]], [3,0,6,1,5,2,1], 3, 3),
-            (4, [[0,1],[1,2],[1,3]], [176968959,450655404,922326524,897145068], 5, 1),
-            (4, [[3,0],[0,2],[0,1]], [742593846,612800589,813572140,813559096], 47, 2),
-            (5, [[1,2],[1,3],[0,2],[2,4]], [999999999,999999999,999999999,999999999,999999999], 5, 1),
-            (7, [[2,0],[0,4],[2,5],[1,2],[5,3],[4,6]], [12154284,649536765,974051464,821507385,392654193,770357917,37707285], 11, 2),
-            # (20, [[17,4],[4,2],[3,15],[15,19],[19,7],[7,12],[15,16],[19,18],[18,13],[19,9],[19,1],[12,8],[1,11],[7,6],[9,0],[15,10],[13,14],[18,5],[4,5]], [900160,891774,2283737,414736,265741,212260,2983538,280834,17654,221822,996740,1517078,374434,43488,610048,241798,611382,3234714,1156844,93794], 5784192, 2),
+            (5, [[0, 2], [1, 2], [1, 3], [2, 4]], [1, 8, 1, 4, 4], 6, 2),
+            (7, [[0, 1], [0, 2], [1, 3], [1, 4], [2, 5], [2, 6]], [3, 0, 6, 1, 5, 2, 1], 3, 3),
+            (4, [[0, 1], [1, 2], [1, 3]], [176968959, 450655404, 922326524, 897145068], 5, 1),
+            (4, [[3, 0], [0, 2], [0, 1]], [742593846, 612800589, 813572140, 813559096], 47, 2),
+            (5, [[1, 2], [1, 3], [0, 2], [2, 4]], [999999999, 999999999, 999999999, 999999999, 999999999], 5, 1),
+            (
+                7,
+                [[2, 0], [0, 4], [2, 5], [1, 2], [5, 3], [4, 6]],
+                [12154284, 649536765, 974051464, 821507385, 392654193, 770357917, 37707285],
+                11,
+                2,
+            ),
+            # (20, [[17,4],[4,2],[3,15],[15,19],[19,7],[7,12],[15,16],[19,18],[18,13],[19,9],[19,1],[12,8],[1,11],[7,6],[9,0],[15,10],[13,14],[18,5],[4,5]], [900160,891774,2283737,414736,265741,212260,2983538,280834,17654,221822,996740,1517078,374434,43488,610048,241798,611382,3234714,1156844,93794], 5784192, 2), # pylint: disable=line-too-long
         ]:
             output = self.maxKDivisibleComponents(n, edges, values, k)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

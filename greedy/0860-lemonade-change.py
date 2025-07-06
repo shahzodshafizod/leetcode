@@ -5,6 +5,7 @@ import unittest
 
 # python3 -m unittest greedy/0860-lemonade-change.py
 
+
 class Solution(unittest.TestCase):
     def lemonadeChange(self, bills: List[int]) -> bool:
         tenStack, fiveStack = 0, 0

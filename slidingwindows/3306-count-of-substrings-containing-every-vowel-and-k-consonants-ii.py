@@ -4,11 +4,13 @@ import unittest
 
 # python3 -m unittest slidingwindows/3306-count-of-substrings-containing-every-vowel-and-k-consonants-ii.py
 
+
 class Solution(unittest.TestCase):
     def countOfSubstrings(self, word: str, k: int) -> int:
         n = len(word)
+
         def at_least(k: int) -> int:
-            vowels = set(['a','e','i','o','u'])
+            vowels = set(['a', 'e', 'i', 'o', 'u'])
             result = 0
             count = [0] * 26
             vcount, ccount = 0, 0
@@ -30,7 +32,8 @@ class Solution(unittest.TestCase):
                         vcount -= 1
                     left += 1
             return result
-        return at_least(k) - at_least(k+1)
+
+        return at_least(k) - at_least(k + 1)
 
     def test(self):
         for word, k, expected in [

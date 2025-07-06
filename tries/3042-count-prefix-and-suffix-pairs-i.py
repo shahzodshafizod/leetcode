@@ -5,6 +5,7 @@ import unittest
 
 # python3 -m unittest tries/3042-count-prefix-and-suffix-pairs-i.py
 
+
 class Solution(unittest.TestCase):
     # def countPrefixSuffixPairs(self, words: List[str]) -> int:
     #     n = len(words)
@@ -21,6 +22,7 @@ class Solution(unittest.TestCase):
                 self.prefix = 0
                 self.suffix = 0
                 self.children = {}
+
         root = TrieNode()
         count = 0
         for wid, word in enumerate(words[::-1]):
@@ -46,9 +48,9 @@ class Solution(unittest.TestCase):
 
     def test(self):
         for words, expected in [
-            (["a","aba","ababa","aa"], 4),
-            (["pa","papa","ma","mama"], 2),
-            (["abab","ab"], 0),
+            (["a", "aba", "ababa", "aa"], 4),
+            (["pa", "papa", "ma", "mama"], 2),
+            (["abab", "ab"], 0),
         ]:
             output = self.countPrefixSuffixPairs(words)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

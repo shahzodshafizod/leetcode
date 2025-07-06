@@ -5,6 +5,7 @@ import unittest
 
 # python3 -m unittest binarysearch/1964-find-the-longest-valid-obstacle-course-at-each-position.py
 
+
 class Solution(unittest.TestCase):
     # # Approach: Brute-Force
     # # Time: O(nn)
@@ -43,15 +44,15 @@ class Solution(unittest.TestCase):
                 size += 1
             else:
                 lis[right] = obstacles[idx]
-            ans[idx] = right+1
+            ans[idx] = right + 1
         return ans
 
     def test(self):
         for obstacles, expected in [
-            ([1,2,3,2], [1,2,3,3]),
-            ([2,2,1], [1,2,1]),
-            ([3,1,5,6,4,2], [1,1,2,3,2,2]),
-            ([5,1,5,5,1,3,4,5,1,4], [1,1,2,3,2,3,4,5,3,5]),
+            ([1, 2, 3, 2], [1, 2, 3, 3]),
+            ([2, 2, 1], [1, 2, 1]),
+            ([3, 1, 5, 6, 4, 2], [1, 1, 2, 3, 2, 2]),
+            ([5, 1, 5, 5, 1, 3, 4, 5, 1, 4], [1, 1, 2, 3, 2, 3, 4, 5, 3, 5]),
         ]:
             output = self.longestObstacleCourseAtEachPosition(obstacles)
             self.assertListEqual(expected, output, f"expected: {expected}, output: {output}")

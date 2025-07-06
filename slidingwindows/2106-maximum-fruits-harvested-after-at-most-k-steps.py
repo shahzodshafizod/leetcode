@@ -5,18 +5,24 @@ from typing import List
 
 # python3 -m unittest slidingwindows/2106-maximum-fruits-harvested-after-at-most-k-steps.py
 
+
 class Solutin(unittest.TestCase):
     def maxTotalFruits(self, fruits: List[List[int]], startPos: int, k: int) -> int:
         # to find left, could be used binary search approach
         left, n = 0, len(fruits)
-        while left < n and fruits[left][0] < startPos-k:
-            left += 1 # skip fruits before the left bound
+        while left < n and fruits[left][0] < startPos - k:
+            left += 1  # skip fruits before the left bound
         total, max_total = 0, 0
         for right in range(left, n):
-            if fruits[right][0] > startPos+k:
-                break # skip fruits after the right bound
+            if fruits[right][0] > startPos + k:
+                break  # skip fruits after the right bound
             total += fruits[right][1]
-            while min(startPos-2*fruits[left][0] + fruits[right][0], 2*fruits[right][0] - fruits[left][0] - startPos) > k:
+            while (
+                min(
+                    startPos - 2 * fruits[left][0] + fruits[right][0], 2 * fruits[right][0] - fruits[left][0] - startPos
+                )
+                > k
+            ):
                 total -= fruits[left][1]
                 left += 1
             max_total = max(max_total, total)
@@ -45,9 +51,9 @@ class Solutin(unittest.TestCase):
 
     def test(self):
         for fruits, startPos, k, expected in [
-            ([[2,8],[6,3],[8,6]], 5, 4, 9),
-            ([[0,9],[4,1],[5,7],[6,2],[7,4],[10,9]], 5, 4, 14),
-            ([[0,3],[6,4],[8,5]], 3, 2, 0),
+            ([[2, 8], [6, 3], [8, 6]], 5, 4, 9),
+            ([[0, 9], [4, 1], [5, 7], [6, 2], [7, 4], [10, 9]], 5, 4, 14),
+            ([[0, 3], [6, 4], [8, 5]], 3, 2, 0),
             ([[200000, 10000]], 200000, 0, 10000),
         ]:
             output = self.maxTotalFruits(fruits, startPos, k)

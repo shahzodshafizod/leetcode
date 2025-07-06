@@ -5,7 +5,8 @@ import unittest
 
 # python3 -m unittest unionfinds/3235-check-if-the-rectangle-corner-is-reachable.py
 
-# TODO: Solve this problem by yourself
+# TODO: Solve this problem by yourself # pylint: disable=fixme
+
 
 class Solution(unittest.TestCase):
     # # Approach #1: Graph
@@ -102,33 +103,35 @@ class Solution(unittest.TestCase):
     # Space: O(N)
     def canReachCorner(self, xCorner: int, yCorner: int, circles: List[List[int]]) -> bool:
         n = len(circles)
-        parent = list(range(n+2))
+        parent = list(range(n + 2))
+
         def find(x: int) -> int:
             if parent[x] != x:
                 parent[x] = find(parent[x])
             return parent[x]
+
         for idx in range(n):
             x, y, r = circles[idx]
             # if the circle overlaps right-top
-            if (x-xCorner)*(x-xCorner)+(y-yCorner)*(y-yCorner) <= r*r:
+            if (x - xCorner) * (x - xCorner) + (y - yCorner) * (y - yCorner) <= r * r:
                 return False
             # # if the circle overlaps left-bottom
             # if x*x+y*y <= r*r:
             # 	return False
-            if x <= r and y <= yCorner or y+r >= yCorner and x <= xCorner:
+            if x <= r and y <= yCorner or y + r >= yCorner and x <= xCorner:
                 parent[find(n)] = find(idx)
-            if y <= r and x <= xCorner or x+r >= xCorner and y <= yCorner:
-                parent[find(n+1)] = find(idx)
+            if y <= r and x <= xCorner or x + r >= xCorner and y <= yCorner:
+                parent[find(n + 1)] = find(idx)
             # if the circle touches both borders
-            if find(n) == find(n+1):
+            if find(n) == find(n + 1):
                 return False
         # if either border is untouched
-        if find(n) == n or find(n+1) == n+1:
+        if find(n) == n or find(n + 1) == n + 1:
             return True
         for i in range(n):
             x, y, r = circles[i]
             # if circle 1 is out of usable range
-            if x-r >= xCorner or y-r >= yCorner or x >= xCorner and y >= yCorner:
+            if x - r >= xCorner or y - r >= yCorner or x >= xCorner and y >= yCorner:
                 continue
             for j in range(i):
                 # if already unioned
@@ -136,29 +139,43 @@ class Solution(unittest.TestCase):
                     continue
                 x2, y2, r2 = circles[j]
                 # if pair is out of usable range
-                if (x+x2)/2 >= xCorner and (y+y2)/2 >= yCorner:
+                if (x + x2) / 2 >= xCorner and (y + y2) / 2 >= yCorner:
                     continue
                 # if circles intersect
-                if (x-x2)*(x-x2)+(y-y2)*(y-y2) <= (r+r2)*(r+r2):
+                if (x - x2) * (x - x2) + (y - y2) * (y - y2) <= (r + r2) * (r + r2):
                     parent[find(i)] = find(j)
                     # if both borders are unioned
-                    if find(n) == find(n+1):
+                    if find(n) == find(n + 1):
                         return False
         return True
 
     def test(self):
         for xCorner, yCorner, circles, expected in [
-            (3, 4, [[2,1,1]], True),
-            (3, 3, [[1,1,2]], False),
-            (3, 3, [[2,1,1],[1,2,1]], False),
-            (4, 4, [[5,5,1]], True),
-            (3, 3, [[2,1000,997],[1000,2,997]], True),
-            (3, 4, [[5,6,2]], True),
-            (3, 3, [[1,100,2],[3,100,2]], True),
-            (4, 4, [[2,6,2],[6,2,2],[6,6,2]], True),
-            (3, 3, [[4,4,2]], False),
-            (22742157, 210809967, [[22741186,210810964,200],[22741869,210809432,165],[22742256,210810275,182],[22742089,210809693,129],[22741912,210810128,196],[22741658,210809205,144],[22741648,210809094,118],[22741920,210809808,128]], False),
-            (8, 10, [[5,2,2],[6,7,2],[3,1,1],[7,5,1],[5,3,1],[3,7,3],[1,7,1]], False),
+            (3, 4, [[2, 1, 1]], True),
+            (3, 3, [[1, 1, 2]], False),
+            (3, 3, [[2, 1, 1], [1, 2, 1]], False),
+            (4, 4, [[5, 5, 1]], True),
+            (3, 3, [[2, 1000, 997], [1000, 2, 997]], True),
+            (3, 4, [[5, 6, 2]], True),
+            (3, 3, [[1, 100, 2], [3, 100, 2]], True),
+            (4, 4, [[2, 6, 2], [6, 2, 2], [6, 6, 2]], True),
+            (3, 3, [[4, 4, 2]], False),
+            (
+                22742157,
+                210809967,
+                [
+                    [22741186, 210810964, 200],
+                    [22741869, 210809432, 165],
+                    [22742256, 210810275, 182],
+                    [22742089, 210809693, 129],
+                    [22741912, 210810128, 196],
+                    [22741658, 210809205, 144],
+                    [22741648, 210809094, 118],
+                    [22741920, 210809808, 128],
+                ],
+                False,
+            ),
+            (8, 10, [[5, 2, 2], [6, 7, 2], [3, 1, 1], [7, 5, 1], [5, 3, 1], [3, 7, 3], [1, 7, 1]], False),
         ]:
             output = self.canReachCorner(xCorner, yCorner, circles)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

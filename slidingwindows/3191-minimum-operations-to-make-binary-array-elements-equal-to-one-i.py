@@ -5,6 +5,7 @@ import unittest
 
 # python3 -m unittest slidingwindows/3191-minimum-operations-to-make-binary-array-elements-equal-to-one-i.py
 
+
 class Solution(unittest.TestCase):
     def minOperations(self, nums: List[int]) -> int:
         flips = 0
@@ -21,8 +22,8 @@ class Solution(unittest.TestCase):
 
     def test(self):
         for nums, expected in [
-            ([0,1,1,1,0,0], 3),
-            ([0,1,1,1], -1),
+            ([0, 1, 1, 1, 0, 0], 3),
+            ([0, 1, 1, 1], -1),
         ]:
             output = self.minOperations(nums)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

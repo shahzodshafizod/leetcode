@@ -2,18 +2,17 @@ import unittest
 
 # https://leetcode.com/problems/minimum-one-bit-operations-to-make-integers-zero/
 
-"""
-n = 6
-Output: 4
-bin(6) = 110
+# n = 6
+# Output: 4
+# bin(6) = 110
 
-[1]10 -> 010
-01[0] -> 011
-0[1]1 -> 001
-00[1] -> 000
-"""
+# [1]10 -> 010
+# 01[0] -> 011
+# 0[1]1 -> 001
+# 00[1] -> 000
 
 # python3 -m unittest bits/1611-minimum-one-bit-operations-to-make-integers-zero.py
+
 
 class Solution(unittest.TestCase):
     # # Approach: Recursive
@@ -53,7 +52,7 @@ class Solution(unittest.TestCase):
     def test(self):
         for n, expected in [
             (3, 2),
-		    (6, 4),
+            (6, 4),
             (333, 393),
         ]:
             output = self.minimumOneBitOperations(n)

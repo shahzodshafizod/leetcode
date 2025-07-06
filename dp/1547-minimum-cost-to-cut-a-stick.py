@@ -5,6 +5,7 @@ import unittest
 
 # python3 -m unittest dp/1547-minimum-cost-to-cut-a-stick.py
 
+
 class Solution(unittest.TestCase):
     # # Approach: Top-Down Dynamic Programming
     # # Time: O(mmm), m=len(cuts)
@@ -37,17 +38,15 @@ class Solution(unittest.TestCase):
             for start in range(m - diff):
                 end = start + diff
                 dp[start][end] = float("inf")
-                cost = cuts[end]-cuts[start]
-                for mid in range(start+1, end):
-                    dp[start][end] = min(dp[start][end],
-                        cost + dp[start][mid] + dp[mid][end]
-                    )
-        return dp[0][m-1]
-    
+                cost = cuts[end] - cuts[start]
+                for mid in range(start + 1, end):
+                    dp[start][end] = min(dp[start][end], cost + dp[start][mid] + dp[mid][end])
+        return dp[0][m - 1]
+
     def test(self):
         for n, cuts, expected in [
-            (7, [1,3,4,5], 16),
-            (9, [5,6,1,4,2], 22),
+            (7, [1, 3, 4, 5], 16),
+            (9, [5, 6, 1, 4, 2], 22),
         ]:
             output = self.minCost(n, cuts)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

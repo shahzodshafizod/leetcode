@@ -6,6 +6,7 @@ import unittest
 
 # python3 -m unittest matrices/1765-map-of-highest-peak.py
 
+
 class Solution(unittest.TestCase):
     # Approach: Breadth-First Search
     # Time: O(mn)
@@ -19,11 +20,11 @@ class Solution(unittest.TestCase):
                 if isWater[row][col] == 1:
                     height[row][col] = 0
                     queue.append((row, col))
-        directions = [-1,0,1,0,-1]
+        dirs = [-1, 0, 1, 0, -1]
         while queue:
             row, col = queue.popleft()
-            for dir in range(1, 5):
-                r, c = row + directions[dir-1], col + directions[dir]
+            for d in range(1, 5):
+                r, c = row + dirs[d - 1], col + dirs[d]
                 if min(r, c) < 0 or r == m or c == n or height[r][c] != -1:
                     continue
                 height[r][c] = height[row][col] + 1
@@ -33,10 +34,10 @@ class Solution(unittest.TestCase):
     def test(self):
         for isWater, expected in [
             ([[1]], [[0]]),
-            ([[1],[0]], [[0],[1]]),
-            ([[0,1],[0,0]], [[1,0],[2,1]]),
-            ([[0,0,1],[1,0,0],[0,0,0]], [[1,1,0],[0,1,1],[1,2,2]]),
-            ([[0],[0],[0],[0],[1],[0],[0],[1],[1]], [[4],[3],[2],[1],[0],[1],[1],[0],[0]]),
+            ([[1], [0]], [[0], [1]]),
+            ([[0, 1], [0, 0]], [[1, 0], [2, 1]]),
+            ([[0, 0, 1], [1, 0, 0], [0, 0, 0]], [[1, 1, 0], [0, 1, 1], [1, 2, 2]]),
+            ([[0], [0], [0], [0], [1], [0], [0], [1], [1]], [[4], [3], [2], [1], [0], [1], [1], [0], [0]]),
         ]:
             output = self.highestPeak(isWater)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

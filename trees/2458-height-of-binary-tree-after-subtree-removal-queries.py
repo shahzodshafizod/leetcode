@@ -1,11 +1,12 @@
-from collections import defaultdict, deque
+from collections import defaultdict, deque  # pylint: disable=unused-import
 from typing import List, Optional
-from pkg.tree import TreeNode, create_tree
 import unittest
+from pkg.tree import TreeNode, create_tree
 
 # https://leetcode.com/problems/height-of-binary-tree-after-subtree-removal-queries/
 
 # python3 -m unittest trees/2458-height-of-binary-tree-after-subtree-removal-queries.py
+
 
 class Solution(unittest.TestCase):
     # # Approach: Brute-Force
@@ -59,28 +60,39 @@ class Solution(unittest.TestCase):
     def treeQueries(self, root: Optional[TreeNode], queries: List[int]) -> List[int]:
         heights = defaultdict(int)
         max_height = 0
+
         def dfs(node: Optional[TreeNode], height: int) -> None:
-            if not node: return
+            if not node:
+                return
             nonlocal max_height
             heights[node.val] = max(heights[node.val], max_height)
             max_height = max(max_height, height)
-            dfs(node.left, height+1)
-            dfs(node.right, height+1)
+            dfs(node.left, height + 1)
+            dfs(node.right, height + 1)
             node.left, node.right = node.right, node.left
+
         dfs(root, 0)
-        max_height = 0 # reset for the second traversal
+        max_height = 0  # reset for the second traversal
         dfs(root, 0)
         return [heights[queries[idx]] for idx in range(len(queries))]
 
     def test(self):
         for root, queries, expected in [
-            ([5,8,9,2,1,3,7,4,6], [3,2,4,8], [3,2,3,2]),
-            ([1,None,5,3,None,2,4], [3,5,4,2,4], [1,0,3,3,3]),
-            ([2,None,5,3,1,None,4], [1,5,5,3,4,5], [3,0,0,2,2,0]),
-            ([1,3,4,2,None,6,5,None,None,None,None,None,7], [4], [2]),
-            ([2,1,5,None,None,3,6,None,4], [1,5,5,6,4,5], [3,1,1,3,2,1]),
-            ([7,2,9,1,3,8,12,None,None,None,6,None,None,10,None,4,None,None,11,None,5], [3,8,9,10,10,5,6,12,2,6,1,11], [4,5,5,5,5,4,4,5,4,4,5,5]),
-            ([1,2,None,3,None,4,None,5,None,6,None,7,None,8,None,9,None,10,None,11,None,12], [2,3,4,5,6,7,8,9,10,11,12], [0,1,2,3,4,5,6,7,8,9,10]),
+            ([5, 8, 9, 2, 1, 3, 7, 4, 6], [3, 2, 4, 8], [3, 2, 3, 2]),
+            ([1, None, 5, 3, None, 2, 4], [3, 5, 4, 2, 4], [1, 0, 3, 3, 3]),
+            ([2, None, 5, 3, 1, None, 4], [1, 5, 5, 3, 4, 5], [3, 0, 0, 2, 2, 0]),
+            ([1, 3, 4, 2, None, 6, 5, None, None, None, None, None, 7], [4], [2]),
+            ([2, 1, 5, None, None, 3, 6, None, 4], [1, 5, 5, 6, 4, 5], [3, 1, 1, 3, 2, 1]),
+            (
+                [7, 2, 9, 1, 3, 8, 12, None, None, None, 6, None, None, 10, None, 4, None, None, 11, None, 5],
+                [3, 8, 9, 10, 10, 5, 6, 12, 2, 6, 1, 11],
+                [4, 5, 5, 5, 5, 4, 4, 5, 4, 4, 5, 5],
+            ),
+            (
+                [1, 2, None, 3, None, 4, None, 5, None, 6, None, 7, None, 8, None, 9, None, 10, None, 11, None, 12],
+                [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+                [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+            ),
         ]:
             root = create_tree(root)
             output = self.treeQueries(root, queries)

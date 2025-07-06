@@ -4,6 +4,7 @@ import unittest
 
 # python3 -m unittest strings/0434-number-of-segments-in-a-string.py
 
+
 class Solution(unittest.TestCase):
     def countSegments(self, s: str) -> int:
         return len(s.split())

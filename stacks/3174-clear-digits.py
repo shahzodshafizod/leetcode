@@ -4,6 +4,7 @@ import unittest
 
 # python3 -m unittest stacks/3174-clear-digits.py
 
+
 class Solution(unittest.TestCase):
     def clearDigits(self, s: str) -> str:
         push, pop = (stack := []).append, stack.pop

@@ -5,6 +5,7 @@ import unittest
 
 # python3 -m unittest tries/0014-longest-common-prefix.py
 
+
 class Solution(unittest.TestCase):
     # Frute-Force
     # N = len(strs)
@@ -12,13 +13,13 @@ class Solution(unittest.TestCase):
     # Space: O(1)
     def longestCommonPrefix(self, strs: List[str]) -> str:
         idx = 0
-        n = min([len(word) for word in strs])
-        exit = False
-        while not exit and idx < n:
+        n = min(len(word) for word in strs)
+        done = False
+        while not done and idx < n:
             c = strs[0][idx]
             for word in strs:
                 if word[idx] != c:
-                    exit = True
+                    done = True
                     idx -= 1
                     break
             idx += 1
@@ -54,14 +55,14 @@ class Solution(unittest.TestCase):
 
     def test(self):
         for strs, expected in [
-            (["flower","flow","flight"], "fl"),
-            (["dog","racecar","car"], ""),
-            (["reflower","flow","flight"], ""),
-            (["",""], ""),
-            (["aaaa","aa","aaa","aaaaaaaaaaaaaaaaaaaaaaaaaaa"], "aa"),
-            (["flower","fkow"], "f"),
-            (["spoiler","flower","flow","flight"], ""),
-            (["c","acc","ccc"], ""),
+            (["flower", "flow", "flight"], "fl"),
+            (["dog", "racecar", "car"], ""),
+            (["reflower", "flow", "flight"], ""),
+            (["", ""], ""),
+            (["aaaa", "aa", "aaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaa"], "aa"),
+            (["flower", "fkow"], "f"),
+            (["spoiler", "flower", "flow", "flight"], ""),
+            (["c", "acc", "ccc"], ""),
         ]:
             output = self.longestCommonPrefix(strs)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

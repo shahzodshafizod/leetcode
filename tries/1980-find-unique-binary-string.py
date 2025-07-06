@@ -5,6 +5,7 @@ import unittest
 
 # python3 -m unittest tries/1980-find-unique-binary-string.py
 
+
 class TrieNode:
     def __init__(self):
         self.children = {}
@@ -17,6 +18,7 @@ class TrieNode:
                 curr.children[c] = TrieNode()
             curr = curr.children[c]
             curr.count += 1
+
 
 class Solution(unittest.TestCase):
     # # Approach: Trie
@@ -53,9 +55,9 @@ class Solution(unittest.TestCase):
 
     def test(self):
         for nums, expected in [
-            (["01","10"], "11"),
-            (["00","01"], "10"),
-            (["111","011","001"], "000"),
+            (["01", "10"], "11"),
+            (["00", "01"], "10"),
+            (["111", "011", "001"], "000"),
         ]:
             output = self.findDifferentBinaryString(nums)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

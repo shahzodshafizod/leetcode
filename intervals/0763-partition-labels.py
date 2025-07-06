@@ -5,6 +5,7 @@ import unittest
 
 # python3 -m unittest intervals/0763-partition-labels.py
 
+
 class Solution(unittest.TestCase):
     def partitionLabels(self, s: str) -> List[int]:
         last = {}
@@ -15,13 +16,13 @@ class Solution(unittest.TestCase):
         for idx, c in enumerate(s):
             end = max(end, last[c])
             if idx == end:
-                sizes.append(end-start+1)
-                start = idx+1
+                sizes.append(end - start + 1)
+                start = idx + 1
         return sizes
 
     def test(self):
         for s, expected in [
-            ("ababcbacadefegdehijhklij", [9,7,8]),
+            ("ababcbacadefegdehijhklij", [9, 7, 8]),
             ("eccbbbbdec", [10]),
         ]:
             output = self.partitionLabels(s)

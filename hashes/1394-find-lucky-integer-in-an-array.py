@@ -6,6 +6,7 @@ import unittest
 
 # python3 -m unittest hashes/1394-find-lucky-integer-in-an-array.py
 
+
 class Solution(unittest.TestCase):
     def findLucky(self, arr: List[int]) -> int:
         return max((num for num, cnt in Counter(arr).items() if num == cnt), default=-1)

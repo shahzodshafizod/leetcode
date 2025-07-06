@@ -4,6 +4,7 @@ import unittest
 
 # python3 -m unittest dp/1092-shortest-common-supersequence.py
 
+
 class Solution(unittest.TestCase):
     # # Approach #1: Top-Down Dynamic Programming (Time Limit Exceeded)
     # # Time: O(2^(n+m)⋅(n+m)), n=len(str1), m=len(str2)
@@ -55,16 +56,16 @@ class Solution(unittest.TestCase):
     def shortestCommonSupersequence(self, str1: str, str2: str) -> str:
         n1, n2 = len(str1), len(str2)
         curr = [str2[i2:] for i2 in range(n2)] + [""]
-        for i1 in range(n1-1,-1,-1):
-            next = curr
-            curr = [""] * (n2+1)
+        for i1 in range(n1 - 1, -1, -1):
+            nxt = curr
+            curr = [""] * (n2 + 1)
             curr[n2] = str1[i1:]
-            for i2 in range(n2-1,-1,-1):
+            for i2 in range(n2 - 1, -1, -1):
                 if str1[i1] == str2[i2]:
-                    curr[i2] = str1[i1] + next[i2+1]
+                    curr[i2] = str1[i1] + nxt[i2 + 1]
                 else:
-                    substr1 = str1[i1] + next[i2]
-                    substr2 = str2[i2] + curr[i2+1]
+                    substr1 = str1[i1] + nxt[i2]
+                    substr2 = str2[i2] + curr[i2 + 1]
                     if len(substr1) < len(substr2):
                         curr[i2] = substr1
                     else:

@@ -4,6 +4,7 @@ import unittest
 
 # python3 -m unittest strings/0482-license-key-formatting.py
 
+
 class Solution(unittest.TestCase):
     # Approach: Left to Right Traversal
     # Time: O(n)

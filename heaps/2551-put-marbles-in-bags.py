@@ -6,6 +6,7 @@ import unittest
 
 # python3 -m unittest heaps/2551-put-marbles-in-bags.py
 
+
 class Solution(unittest.TestCase):
     # # Approach #1: Heap (Priority Queue)
     # # Time: O(nlogn)
@@ -34,19 +35,23 @@ class Solution(unittest.TestCase):
     # Space: O(1)
     def putMarbles(self, weights: List[int], k: int) -> int:
         n = len(weights)
-        for idx in range(n-1):
-            weights[idx] += weights[idx+1]
-        weights = weights[:n-1]
+        for idx in range(n - 1):
+            weights[idx] += weights[idx + 1]
+        weights = weights[: n - 1]
         weights.sort()
-        return sum(weights[1-k:]) - sum(weights[:k-1])
+        return sum(weights[1 - k :]) - sum(weights[: k - 1])
 
     def test(self):
         for weights, k, expected in [
-            ([1,3,5,1], 2, 4),
-            ([1,3], 2, 0),
-            ([54,6,34,66,63,52,39,62,46,75,28,65,18,37,18,13,33,69,19,40,13,10,43,61,72], 4, 289),
-            ([1,4,2,5,2], 3, 3),
-            ([1,9,8,7,1,1,1], 3, 28),
+            ([1, 3, 5, 1], 2, 4),
+            ([1, 3], 2, 0),
+            (
+                [54, 6, 34, 66, 63, 52, 39, 62, 46, 75, 28, 65, 18, 37, 18, 13, 33, 69, 19, 40, 13, 10, 43, 61, 72],
+                4,
+                289,
+            ),
+            ([1, 4, 2, 5, 2], 3, 3),
+            ([1, 9, 8, 7, 1, 1, 1], 3, 28),
         ]:
             output = self.putMarbles(weights, k)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

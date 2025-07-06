@@ -6,6 +6,7 @@ import unittest
 
 # python3 -m unittest graphs/2127-maximum-employees-to-be-invited-to-a-meeting.py
 
+
 class Solution(unittest.TestCase):
     # Approach: Topological Sort to Reduce Non-Cyclic Nodes
     # Time: O(n)
@@ -46,9 +47,9 @@ class Solution(unittest.TestCase):
 
     def test(self):
         for favorite, expected in [
-            ([2,2,1,2], 3),
-            ([1,2,0], 3),
-            ([3,0,1,4,1], 4),
+            ([2, 2, 1, 2], 3),
+            ([1, 2, 0], 3),
+            ([3, 0, 1, 4, 1], 4),
         ]:
             output = self.maximumInvitations(favorite)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

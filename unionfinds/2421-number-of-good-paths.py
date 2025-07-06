@@ -1,10 +1,11 @@
-from collections import defaultdict
+from collections import defaultdict  # pylint: disable=unused-import
 from typing import List
 import unittest
 
 # https://leetcode.com/problems/number-of-good-paths/
 
 # python3 -m unittest unionfinds/2421-number-of-good-paths.py
+
 
 class Solution(unittest.TestCase):
     # # Approach: Brute-Force with Union Find (Time Limit Exceeded)
@@ -44,15 +45,17 @@ class Solution(unittest.TestCase):
     def numberOfGoodPaths(self, vals: List[int], edges: List[List[int]]) -> int:
         n = len(vals)
         parent = list(range(n))
-        def find(x: int) -> int: # O(logn)
+
+        def find(x: int) -> int:  # O(logn)
             while parent[x] != x:
                 parent[x] = parent[parent[x]]
                 x = parent[x]
             return x
-        count = [1]*n
+
+        count = [1] * n
         result = n
-        edges.sort(key=lambda edge: max(vals[edge[0]],vals[edge[1]]))
-        for x, y in edges: # O(n)
+        edges.sort(key=lambda edge: max(vals[edge[0]], vals[edge[1]]))
+        for x, y in edges:  # O(n)
             px, py = find(x), find(y)
             if vals[px] < vals[py]:
                 parent[px] = py
@@ -67,9 +70,9 @@ class Solution(unittest.TestCase):
     def test(self):
         for vals, edges, expected in [
             ([1], [], 1),
-            ([2,1,1], [[0,1],[2,0]], 3),
-            ([1,3,2,1,3], [[0,1],[0,2],[2,3],[2,4]], 6),
-            ([1,1,2,2,3], [[0,1],[1,2],[2,3],[2,4]], 7),
+            ([2, 1, 1], [[0, 1], [2, 0]], 3),
+            ([1, 3, 2, 1, 3], [[0, 1], [0, 2], [2, 3], [2, 4]], 6),
+            ([1, 1, 2, 2, 3], [[0, 1], [1, 2], [2, 3], [2, 4]], 7),
         ]:
             output = self.numberOfGoodPaths(vals, edges)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

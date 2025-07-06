@@ -1,4 +1,3 @@
-from collections import defaultdict
 from typing import List
 import unittest
 from sortedcontainers import SortedDict
@@ -7,11 +6,9 @@ from sortedcontainers import SortedDict
 
 # python3 -m unittest design/0352-data-stream-as-disjoint-intervals.py
 
-"""
-[1,2,3,4,6,8,9] -> [[1,4], [6,6], [8,9]]
-[1,2,3,4,6,7,8,9] -> [[1,4],[6,9]]
-[1,2,3,4,5,6,7,8,9] -> [[1,9]]
-"""
+# [1,2,3,4,6,8,9] -> [[1,4], [6,6], [8,9]]
+# [1,2,3,4,6,7,8,9] -> [[1,4],[6,9]]
+# [1,2,3,4,5,6,7,8,9] -> [[1,9]]
 
 # # Approach #1: Union-Find
 # # Time: O(N^2)
@@ -84,14 +81,17 @@ from sortedcontainers import SortedDict
 #     def getIntervals(self) -> List[List[int]]:
 #         return self.ranges
 
+
 # Approach #1: SortedDict
 # Time: O(NLogN)
 # Space: O(N)
 class SummaryRanges:
     def __init__(self):
         self.treeMap = SortedDict()
+
     def addNum(self, value: int) -> None:
         self.treeMap[value] = True
+
     def getIntervals(self) -> List[List[int]]:
         res = []
         for n in self.treeMap:
@@ -101,18 +101,43 @@ class SummaryRanges:
                 res.append([n, n])
         return res
 
+
 class Test(unittest.TestCase):
     def test(self):
         for commands, values, expected in [
             (
-                ["SummaryRanges","addNum","getIntervals","addNum","getIntervals","addNum","getIntervals","addNum","getIntervals","addNum","getIntervals"],
-                [[],[1],[],[3],[],[7],[],[2],[],[6],[]],
-                [None,None,[[1,1]],None,[[1,1],[3,3]],None,[[1,1],[3,3],[7,7]],None,[[1,3],[7,7]],None,[[1,3],[6,7]]],
+                [
+                    "SummaryRanges",
+                    "addNum",
+                    "getIntervals",
+                    "addNum",
+                    "getIntervals",
+                    "addNum",
+                    "getIntervals",
+                    "addNum",
+                    "getIntervals",
+                    "addNum",
+                    "getIntervals",
+                ],
+                [[], [1], [], [3], [], [7], [], [2], [], [6], []],
+                [
+                    None,
+                    None,
+                    [[1, 1]],
+                    None,
+                    [[1, 1], [3, 3]],
+                    None,
+                    [[1, 1], [3, 3], [7, 7]],
+                    None,
+                    [[1, 3], [7, 7]],
+                    None,
+                    [[1, 3], [6, 7]],
+                ],
             ),
             (
-                ["SummaryRanges","addNum","getIntervals","addNum","getIntervals"],
-                [[],[1],[],[0],[]],
-                [None,None,[[1,1]],None,[[0,1]]],
+                ["SummaryRanges", "addNum", "getIntervals", "addNum", "getIntervals"],
+                [[], [1], [], [0], []],
+                [None, None, [[1, 1]], None, [[0, 1]]],
             ),
         ]:
             for idx, command in enumerate(commands):

@@ -4,6 +4,7 @@ import unittest
 
 # python3 -m unittest strings/0520-detect-capital.py
 
+
 class Solution(unittest.TestCase):
     def detectCapitalUse(self, word: str) -> bool:
         return word.isupper() or word.islower() or word.istitle()

@@ -6,6 +6,7 @@ import unittest
 
 # python3 -m unittest graphs/0127-word-ladder.py
 
+
 class Solution(unittest.TestCase):
     # Approach: Breadth-First Search
     # N = len(wordList)
@@ -19,7 +20,7 @@ class Solution(unittest.TestCase):
         word_len = len(beginWord)
         for word in wordList:
             for idx in range(word_len):
-                pattern = word[:idx] + '*' + word[idx+1:]
+                pattern = word[:idx] + '*' + word[idx + 1 :]
                 adjList[pattern].append(word)
         queue = deque([beginWord])
         visited = set([beginWord])
@@ -30,26 +31,31 @@ class Solution(unittest.TestCase):
                 if word == endWord:
                     return steps
                 for idx in range(word_len):
-                    pattern = word[:idx] + '*' + word[idx+1:]
-                    for next in adjList[pattern]:
-                        if next not in visited:
-                            visited.add(next)
-                            queue.append(next)
+                    pattern = word[:idx] + '*' + word[idx + 1 :]
+                    for nxt in adjList[pattern]:
+                        if nxt not in visited:
+                            visited.add(nxt)
+                            queue.append(nxt)
             steps += 1
         return 0
 
     def test(self):
         for beginWord, endWord, wordList, expected in [
-            ("hit", "cog", ["hot","dot","dog","lot","log","cog"], 5),
-            ("hit", "cog", ["hot","dot","dog","lot","log"], 0),
-            ("a", "c", ["a","b","c"], 2),
-            ("leet", "code", ["lest","leet","lose","code","lode","robe","lost"], 6),
-            ("hot", "dog", ["hot","dog","dot"], 3),
-            ("hot", "dog", ["hot","dog","cog","pot","dot"], 3),
-            ("hot", "dot", ["hot","dot","dog"], 2),
-            ("hot", "dog", ["hot","dog"], 0),
-            ("hbo", "qbx", ["abo","hco","hbw","ado","abq","hcd","hcj","hww","qbq","qby","qbz","qbx","qbw"], 4),
-            ("ab", "ac", ["xx","ee","ac"], 2),
+            ("hit", "cog", ["hot", "dot", "dog", "lot", "log", "cog"], 5),
+            ("hit", "cog", ["hot", "dot", "dog", "lot", "log"], 0),
+            ("a", "c", ["a", "b", "c"], 2),
+            ("leet", "code", ["lest", "leet", "lose", "code", "lode", "robe", "lost"], 6),
+            ("hot", "dog", ["hot", "dog", "dot"], 3),
+            ("hot", "dog", ["hot", "dog", "cog", "pot", "dot"], 3),
+            ("hot", "dot", ["hot", "dot", "dog"], 2),
+            ("hot", "dog", ["hot", "dog"], 0),
+            (
+                "hbo",
+                "qbx",
+                ["abo", "hco", "hbw", "ado", "abq", "hcd", "hcj", "hww", "qbq", "qby", "qbz", "qbx", "qbw"],
+                4,
+            ),
+            ("ab", "ac", ["xx", "ee", "ac"], 2),
             ("be", "ko", ["ce", "mo", "ko", "me", "co"], 4),
         ]:
             output = self.ladderLength(beginWord, endWord, wordList)

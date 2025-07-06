@@ -4,6 +4,7 @@ import unittest
 
 # python3 -m unittest bits/0231-power-of-two.py
 
+
 class Solution(unittest.TestCase):
     # # Approach #1: Recursive
     # # Time: O(logn)
@@ -28,7 +29,7 @@ class Solution(unittest.TestCase):
     # Space: O(1)
     def isPowerOfTwo(self, n: int) -> bool:
         # return n > 0 and str(bin(n)).count('1') == 1
-        return n > 0 and (n & (n-1)) == 0
+        return n > 0 and (n & (n - 1)) == 0
 
     def test(self):
         for n, expected in [

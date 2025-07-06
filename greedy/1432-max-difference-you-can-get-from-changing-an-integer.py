@@ -4,24 +4,25 @@ import unittest
 
 # python3 -m unittest greedy/1432-max-difference-you-can-get-from-changing-an-integer.py
 
+
 class Solution(unittest.TestCase):
     # Time: O(log10(num))
     # Space: O(1)
     def maxDiff(self, num: int) -> int:
         num = str(num)
-        min, max = num, num
+        mn, mx = num, num
         for d in num:
             if d != '9':
-                max = num.replace(d, '9')
+                mx = num.replace(d, '9')
                 break
         if num[0] != '1':
-            min = num.replace(num[0], '1')
+            mn = num.replace(num[0], '1')
         else:
             for d in num:
                 if d != '0' and d != '1':
-                    min = num.replace(d, '0')
+                    mn = num.replace(d, '0')
                     break
-        return int(max) - int(min)
+        return int(mx) - int(mn)
 
     def test(self):
         for num, expected in [

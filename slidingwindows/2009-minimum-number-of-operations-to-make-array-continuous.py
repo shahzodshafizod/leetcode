@@ -5,6 +5,7 @@ import unittest
 
 # python3 -m unittest slidingwindows/2009-minimum-number-of-operations-to-make-array-continuous.py
 
+
 class Solution(unittest.TestCase):
     # # Approach #1: Binary Search
     # # Time: O(n log n)
@@ -35,9 +36,9 @@ class Solution(unittest.TestCase):
         nums = sorted(set(nums))
         operations = length
         end = 0
-        for start in range(len(nums)):
+        for start, num in enumerate(nums):
             # target window is: [start; start+length-1]
-            while end < len(nums) and nums[end] <= nums[start] + length - 1:
+            while end < len(nums) and nums[end] <= num + length - 1:
                 end += 1
             window_size = end - start
             operations = min(operations, length - window_size)
@@ -45,9 +46,9 @@ class Solution(unittest.TestCase):
 
     def test(self):
         for nums, expected in [
-            ([4,2,5,3], 0),
-            ([1,2,3,5,6], 1),
-            ([1,10,100,1000], 3),
+            ([4, 2, 5, 3], 0),
+            ([1, 2, 3, 5, 6], 1),
+            ([1, 10, 100, 1000], 3),
         ]:
             output = self.minOperations(nums)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

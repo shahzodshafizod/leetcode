@@ -6,6 +6,7 @@ from pkg.tree import TreeNode, create_tree
 
 # python3 -m unittest trees/0617-merge-two-binary-trees.py
 
+
 class Solution(unittest.TestCase):
     # # Approach: Depth-First Search
     # # Time: O(max(n1, n2)), n1=# of tree1 node, n2=# of tree2 nodes
@@ -30,26 +31,32 @@ class Solution(unittest.TestCase):
     # Time: O(max(n1, n2)), n1=# of tree1 node, n2=# of tree2 nodes
     # Space: O(max(w1, w2)), w1=width of tree1, w2=width of tree2
     def mergeTrees(self, root1: Optional[TreeNode], root2: Optional[TreeNode]) -> Optional[TreeNode]:
-        if not root1: return root2
+        if not root1:
+            return root2
         stack = [(root1, root2)]
         while stack:
             node1, node2 = stack.pop()
 
-            if not node1 or not node2: continue
+            if not node1 or not node2:
+                continue
 
             node1.val += node2.val
 
-            if not node1.left: node1.left = node2.left
-            else: stack.append((node1.left, node2.left))
+            if not node1.left:
+                node1.left = node2.left
+            else:
+                stack.append((node1.left, node2.left))
 
-            if not node1.right: node1.right = node2.right
-            else: stack.append((node1.right, node2.right))
+            if not node1.right:
+                node1.right = node2.right
+            else:
+                stack.append((node1.right, node2.right))
         return root1
 
     def test(self):
         for root1, root2, expected in [
-            ([1,3,2,5], [2,1,3,None,4,None,7], [3,4,5,5,4,None,7]),
-            ([1], [1,2], [2,2]),
+            ([1, 3, 2, 5], [2, 1, 3, None, 4, None, 7], [3, 4, 5, 5, 4, None, 7]),
+            ([1], [1, 2], [2, 2]),
         ]:
             root1 = create_tree(root1)
             root2 = create_tree(root2)

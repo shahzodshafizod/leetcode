@@ -4,6 +4,7 @@ import unittest
 
 # python3 -m unittest maths/0009-palindrome-number.py
 
+
 class Solution(unittest.TestCase):
     def isPalindrome(self, x: int) -> bool:
         if x <= 0 or x % 10 == 0:
@@ -12,7 +13,7 @@ class Solution(unittest.TestCase):
         while x > half:
             x, d = divmod(x, 10)
             half = half * 10 + d
-        return x == half or x == half//10
+        return x == half or x == half // 10
 
     def testIsPalindrome(self) -> None:
         for x, expected in [

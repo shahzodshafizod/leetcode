@@ -5,6 +5,7 @@ import unittest
 
 # python3 -m unittest graphs/0827-making-a-large-island.py
 
+
 class Solution(unittest.TestCase):
     # Approach: Depth-First Search
     # Time: O(nn)
@@ -13,18 +14,19 @@ class Solution(unittest.TestCase):
         n = len(grid)
         ids = [[-1] * n for _ in range(n)]
         directions = [1, 0, -1, 0, 1]
-        def dfs(row: int, col: int, id: int) -> int:
-            ids[row][col] = id
+
+        def dfs(row: int, col: int, idx: int) -> int:
+            ids[row][col] = idx
             area = 1
-            for dir in range(1, 5):
-                r = row + directions[dir-1]
-                c = col + directions[dir]
-                if min(r, c) < 0 or max(r, c) == n or \
-                    not grid[r][c] or ids[r][c] != -1:
+            for d in range(1, 5):
+                r = row + directions[d - 1]
+                c = col + directions[d]
+                if min(r, c) < 0 or max(r, c) == n or not grid[r][c] or ids[r][c] != -1:
                     continue
-                area += dfs(r, c, id)
+                area += dfs(r, c, idx)
             return area
-        id = 0
+
+        idx = 0
         areas, zeroes = [], []
         max_area = 0
         for row in range(n):
@@ -32,16 +34,16 @@ class Solution(unittest.TestCase):
                 if grid[row][col] == 0:
                     zeroes.append((row, col))
                 elif ids[row][col] == -1:
-                    areas.append(dfs(row, col, id))
+                    areas.append(dfs(row, col, idx))
                     max_area = max(max_area, areas[-1])
-                    id += 1
+                    idx += 1
         if len(areas) == 0:
             return 1
         for row, col in zeroes:
             neighbors = set()
-            for dir in range(1, 5):
-                r = row + directions[dir-1]
-                c = col + directions[dir]
+            for d in range(1, 5):
+                r = row + directions[d - 1]
+                c = col + directions[d]
                 if min(r, c) >= 0 and max(r, c) < n and grid[r][c]:
                     neighbors.add(ids[r][c])
             max_area = max(max_area, 1 + sum(areas[nei] for nei in neighbors))
@@ -49,13 +51,13 @@ class Solution(unittest.TestCase):
 
     def test(self):
         for grid, expected in [
-            ([[1,0],[0,1]], 3),
-            ([[1,1],[1,0]], 4),
-            ([[1,1],[1,1]], 4),
-            ([[0,0],[0,0]], 1),
-            ([[1,1,0,1],[1,0,0,1],[1,0,0,1],[1,0,0,1]], 10),
-            ([[1,0,1,0],[0,0,0,1],[1,0,1,0],[1,0,1,0]], 5),
-            ([[0,0,0,1,1],[1,0,0,1,0],[1,1,1,1,1],[1,1,1,0,1],[0,0,0,1,0]], 15),
+            ([[1, 0], [0, 1]], 3),
+            ([[1, 1], [1, 0]], 4),
+            ([[1, 1], [1, 1]], 4),
+            ([[0, 0], [0, 0]], 1),
+            ([[1, 1, 0, 1], [1, 0, 0, 1], [1, 0, 0, 1], [1, 0, 0, 1]], 10),
+            ([[1, 0, 1, 0], [0, 0, 0, 1], [1, 0, 1, 0], [1, 0, 1, 0]], 5),
+            ([[0, 0, 0, 1, 1], [1, 0, 0, 1, 0], [1, 1, 1, 1, 1], [1, 1, 1, 0, 1], [0, 0, 0, 1, 0]], 15),
         ]:
             output = self.largestIsland(grid)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

@@ -1,5 +1,5 @@
-from collections import defaultdict, deque
-from functools import lru_cache
+from collections import defaultdict, deque  # pylint: disable=unused-import
+from functools import lru_cache  # pylint: disable=unused-import
 from itertools import combinations
 from typing import List
 import unittest
@@ -8,7 +8,8 @@ import unittest
 
 # python3 -m unittest graphs/1494-parallel-courses-ii.py
 
-# TODO: Solve this problem by yourself
+# TODO: Solve this problem by yourself # pylint: disable=fixme
+
 
 class Solution(unittest.TestCase):
     # # Top-Down Dynamic Programming
@@ -23,7 +24,7 @@ class Solution(unittest.TestCase):
     #         # enumerating all the possible combinations
     #         for k_nodes in combinations(nodes, min(k, len(nodes))):
     #             new_in_degrees = list(in_degrees)
-    #             # updating what would happen to new_mask and new_in_degrees 
+    #             # updating what would happen to new_mask and new_in_degrees
     #             # if we considered the nodes in k_nodes
     #             for node in k_nodes:
     #                 # since we know the bit is set, we un-set this bit, to mark it "considered"
@@ -37,7 +38,7 @@ class Solution(unittest.TestCase):
     #         return ans
     #     # saving n and k for later use
     #     in_degrees = [0]*n
-    #     # graph layout remains the same, although the in_degrees change. 
+    #     # graph layout remains the same, although the in_degrees change.
     #     # This allows us to keep graph as self.graph
     #     # instead of passing it over and over.
     #     graph = defaultdict(list)
@@ -52,23 +53,23 @@ class Solution(unittest.TestCase):
 
     # Bottom-Up Dynamic Programming
     def minNumberOfSemesters(self, n: int, relations: List[List[int]], k: int) -> int:
-        seen = [False] * (1<<n)
-        preq = [0]*n
-        for prev, next in relations:
-            preq[next-1] += 1 << (prev-1)
-        TARGET = (1<<n)-1 # zero-based index
-        queue = deque([(0,0)])
+        seen = [False] * (1 << n)
+        preq = [0] * n
+        for prev, nxt in relations:
+            preq[nxt - 1] += 1 << (prev - 1)
+        TARGET = (1 << n) - 1  # zero-based index
+        queue = deque([(0, 0)])
         result = n
         while queue:
             state, semesters = queue.popleft()
             if state == TARGET:
                 result = semesters
                 break
-            nextCourses = [] # new courses to study
+            nextCourses = []  # new courses to study
             for course in range(n):
-                if preq[course] & state != preq[course]: # not enough prereq
+                if preq[course] & state != preq[course]:  # not enough prereq
                     continue
-                if state & (1<<course) > 0: # already studies this course
+                if state & (1 << course) > 0:  # already studies this course
                     continue
                 nextCourses.append(course)
             for k_courses in combinations(nextCourses, min(k, len(nextCourses))):
@@ -77,16 +78,48 @@ class Solution(unittest.TestCase):
                     newState |= 1 << course
                 if not seen[newState]:
                     seen[newState] = True
-                    queue.append((newState, semesters+1))
+                    queue.append((newState, semesters + 1))
         return result
 
     def test(self):
         for n, relations, k, expected in [
             (11, [], 2, 6),
-            (4, [[2,1],[3,1],[1,4]], 2, 3),
-            (5, [[2,1],[3,1],[4,1],[1,5]], 2, 4),
-            (12, [[1,2],[1,3],[7,5],[7,6],[4,8],[8,9],[9,10],[10,11],[11,12]], 2, 6),
-            (13, [[12,8],[2,4],[3,7],[6,8],[11,8],[9,4],[9,7],[12,4],[11,4],[6,4],[1,4],[10,7],[10,4],[1,7],[1,8],[2,7],[8,4],[10,8],[12,7],[5,4],[3,4],[11,7],[7,4],[13,4],[9,8],[13,8]], 9, 3),
+            (4, [[2, 1], [3, 1], [1, 4]], 2, 3),
+            (5, [[2, 1], [3, 1], [4, 1], [1, 5]], 2, 4),
+            (12, [[1, 2], [1, 3], [7, 5], [7, 6], [4, 8], [8, 9], [9, 10], [10, 11], [11, 12]], 2, 6),
+            (
+                13,
+                [
+                    [12, 8],
+                    [2, 4],
+                    [3, 7],
+                    [6, 8],
+                    [11, 8],
+                    [9, 4],
+                    [9, 7],
+                    [12, 4],
+                    [11, 4],
+                    [6, 4],
+                    [1, 4],
+                    [10, 7],
+                    [10, 4],
+                    [1, 7],
+                    [1, 8],
+                    [2, 7],
+                    [8, 4],
+                    [10, 8],
+                    [12, 7],
+                    [5, 4],
+                    [3, 4],
+                    [11, 7],
+                    [7, 4],
+                    [13, 4],
+                    [9, 8],
+                    [13, 8],
+                ],
+                9,
+                3,
+            ),
         ]:
             output = self.minNumberOfSemesters(n, relations, k)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

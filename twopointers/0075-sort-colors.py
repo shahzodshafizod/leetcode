@@ -5,12 +5,11 @@ import unittest
 
 # python3 -m unittest twopointers/0075-sort-colors.py
 
-"""
-DNF algorithm 🇳🇱
-The Dutch National Flag Algorithm, also known as the DNF algorithm or
-the Three-Way Partitioning Algorithm, is a simple and efficient approach
-to sorting an array containing three distinct elements.
-"""
+# DNF algorithm 🇳🇱
+# The Dutch National Flag Algorithm, also known as the DNF algorithm or
+# the Three-Way Partitioning Algorithm, is a simple and efficient approach
+# to sorting an array containing three distinct elements.
+
 
 class Solution(unittest.TestCase):
     # # Approach: Count Sort
@@ -37,7 +36,7 @@ class Solution(unittest.TestCase):
         """
         Do not return anything, modify nums in-place instead.
         """
-        idx, left, right = 0, 0, len(nums)-1
+        idx, left, right = 0, 0, len(nums) - 1
         while idx <= right:
             match nums[idx]:
                 case 0:
@@ -51,8 +50,8 @@ class Solution(unittest.TestCase):
 
     def test(self):
         for nums, expected in [
-            ([2,0,2,1,1,0], [0,0,1,1,2,2]),
-            ([2,0,1], [0,1,2]),
+            ([2, 0, 2, 1, 1, 0], [0, 0, 1, 1, 2, 2]),
+            ([2, 0, 1], [0, 1, 2]),
         ]:
             self.sortColors(nums)
             output = nums

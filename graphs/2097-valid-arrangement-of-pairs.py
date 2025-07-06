@@ -6,16 +6,15 @@ import unittest
 
 # python3 -m unittest graphs/2097-valid-arrangement-of-pairs.py
 
-"""
-Eulerian paths have a couple of conditions:
-	- In an undirected graph, either all nodes have an even degree,
-		or exactly two have an odd degree.
-	- In a directed graph (which is what we have here), we need to check if:
-		- Each node’s degree matches its degree.
-		- Or, exactly one node has one more outgoing edge
-			(degree = degree + 1), which indicates our starting point.
-https://www.youtube.com/watch?v=8MpoO2zA2l4
-"""
+# Eulerian paths have a couple of conditions:
+# 	- In an undirected graph, either all nodes have an even degree,
+# 		or exactly two have an odd degree.
+# 	- In a directed graph (which is what we have here), we need to check if:
+# 		- Each node’s degree matches its degree.
+# 		- Or, exactly one node has one more outgoing edge
+# 			(degree = degree + 1), which indicates our starting point.
+# https://www.youtube.com/watch?v=8MpoO2zA2l4
+
 
 class Solution(unittest.TestCase):
     # # Approach 1: Eulerian Path (Recursive)
@@ -52,8 +51,8 @@ class Solution(unittest.TestCase):
             degree[start] += 1
             degree[end] -= 1
         start = pairs[0][0]
-        for node in degree.keys():
-            if degree[node] == 1:
+        for node, deg in degree.items():
+            if deg == 1:
                 start = node
                 break
         stack = [start]
@@ -64,16 +63,19 @@ class Solution(unittest.TestCase):
                 stack.append(graph[node].pop())
             else:
                 order.append(stack.pop())
-        return [[order[i], order[i-1]] for i in range(len(order)-1,0,-1)]
+        return [[order[i], order[i - 1]] for i in range(len(order) - 1, 0, -1)]
 
     def test(self):
         for pairs, expected in [
-            ([[1,3],[3,2],[2,1]], [[1,3],[3,2],[2,1]]),
-            ([[1,2],[1,3],[2,1]], [[1,2],[2,1],[1,3]]),
-            ([[5,1],[4,5],[11,9],[9,4]], [[11,9],[9,4],[4,5],[5,1]]),
-            ([[299,1],[1,2],[1,3],[2,1],[3,1]], [[299,1],[1,3],[3,1],[1,2],[2,1]]),
-            ([[1,3],[3,9],[9,4],[4,1],[1,4],[4,6],[6,3],[3,1],[1,456]], [[1,4],[4,6],[6,3],[3,1],[1,3],[3,9],[9,4],[4,1],[1,456]]),
-            # ([[299,1],[1,2],[1,3],[3,5],[5,8],[8,3],[3,7],[7,6],[6,9],[9,3],[3,6],[6,7],[7,3],[3,8],[8,5],[5,3],[3,1],[2,1]], [[299,1],[1,3],[3,8],[8,5],[5,3],[3,6],[6,7],[7,3],[3,7],[7,6],[6,9],[9,3],[3,5],[5,8],[8,3],[3,1],[1,2],[2,1]]),
+            ([[1, 3], [3, 2], [2, 1]], [[1, 3], [3, 2], [2, 1]]),
+            ([[1, 2], [1, 3], [2, 1]], [[1, 2], [2, 1], [1, 3]]),
+            ([[5, 1], [4, 5], [11, 9], [9, 4]], [[11, 9], [9, 4], [4, 5], [5, 1]]),
+            ([[299, 1], [1, 2], [1, 3], [2, 1], [3, 1]], [[299, 1], [1, 3], [3, 1], [1, 2], [2, 1]]),
+            (
+                [[1, 3], [3, 9], [9, 4], [4, 1], [1, 4], [4, 6], [6, 3], [3, 1], [1, 456]],
+                [[1, 4], [4, 6], [6, 3], [3, 1], [1, 3], [3, 9], [9, 4], [4, 1], [1, 456]],
+            ),
+            # ([[299,1],[1,2],[1,3],[3,5],[5,8],[8,3],[3,7],[7,6],[6,9],[9,3],[3,6],[6,7],[7,3],[3,8],[8,5],[5,3],[3,1],[2,1]], [[299,1],[1,3],[3,8],[8,5],[5,3],[3,6],[6,7],[7,3],[3,7],[7,6],[6,9],[9,3],[3,5],[5,8],[8,3],[3,1],[1,2],[2,1]]), # pylint: disable=line-too-long
             # ([[5,13],[10,6],[11,3],[15,19],[16,19],[1,10],[19,11],[4,16],[19,9],[5,11],[5,6],[13,5],[13,9],[9,15],[11,16],[6,9],[9,13],[3,1],[16,5],[6,5]], [[4,16],[16,5],[5,6],[6,5],[5,11],[11,16],[16,19],[19,9],[9,13],[13,5],[5,13],[13,9],[9,15],[15,19],[19,11],[11,3],[3,1],[1,10],[10,6],[6,9]]),
         ]:
             output = self.validArrangement(pairs)

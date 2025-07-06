@@ -4,11 +4,12 @@ import unittest
 
 # python3 -m unittest bits/0067-add-binary.py
 
+
 class Solution(unittest.TestCase):
     def addBinary(self, a: str, b: str) -> str:
         bisum = ""
-        aid = len(a)-1
-        bid = len(b)-1
+        aid = len(a) - 1
+        bid = len(b) - 1
         carry = 0
         while aid >= 0 or bid >= 0:
             if aid >= 0:
@@ -17,7 +18,7 @@ class Solution(unittest.TestCase):
             if bid >= 0:
                 carry += ord(b[bid]) - ord('0')
                 bid -= 1
-            bisum += str(carry&1)
+            bisum += str(carry & 1)
             carry >>= 1
         if carry != 0:
             bisum += str(carry)

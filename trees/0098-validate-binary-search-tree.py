@@ -1,10 +1,11 @@
 from typing import Optional
-from pkg.tree import TreeNode, create_tree
 import unittest
+from pkg.tree import TreeNode, create_tree
 
 # https://leetcode.com/problems/validate-binary-search-tree/
 
 # python3 -m unittest trees/0098-validate-binary-search-tree.py
+
 
 class Solution(unittest.TestCase):
     # # Approach: Recursive

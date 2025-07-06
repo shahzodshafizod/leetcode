@@ -4,6 +4,7 @@ import unittest
 
 # python3 -m unittest dp/0115-distinct-subsequences.py
 
+
 class Solution(unittest.TestCase):
     # # Approach: Top-Down Dynamic Programming
     # # Time: O(ns * nt), ns=len(s), nt=len(t)
@@ -43,12 +44,12 @@ class Solution(unittest.TestCase):
     # Space: O(nt)
     def numDistinct(self, s: str, t: str) -> int:
         ns, nt = len(s), len(t)
-        dp = [0] * (nt+1)
+        dp = [0] * (nt + 1)
         dp[0] = 1
-        for i in range(1, ns+1):
+        for i in range(1, ns + 1):
             for j in range(nt, 0, -1):
-                if s[i-1] == t[j-1]:
-                    dp[j] += dp[j-1]
+                if s[i - 1] == t[j - 1]:
+                    dp[j] += dp[j - 1]
         return dp[nt]
 
     def test(self):

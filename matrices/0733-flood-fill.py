@@ -6,6 +6,7 @@ from collections import deque
 
 # python3 -m unittest matrices/0733-flood-fill.py
 
+
 class Solution(unittest.TestCase):
     def floodFill(self, image: List[List[int]], sr: int, sc: int, color: int) -> List[List[int]]:
         srcColor = image[sr][sc]
@@ -18,7 +19,7 @@ class Solution(unittest.TestCase):
             row, col = queue.popleft()
             image[row][col] = color
             for d in range(1, len(directions)):
-                r, c = row+directions[d-1], col+directions[d]
+                r, c = row + directions[d - 1], col + directions[d]
                 if min(r, c) >= 0 and r < m and c < n and image[r][c] == srcColor:
                     queue.append((r, c))
         return image

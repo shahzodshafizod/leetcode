@@ -7,6 +7,7 @@ import unittest
 
 # python3 -m unittest maths/2183-count-array-pairs-divisible-by-k.py
 
+
 class Solution(unittest.TestCase):
     # # Approach: Brute-Force
     # # Time: O(N^2)
@@ -48,8 +49,8 @@ class Solution(unittest.TestCase):
 
     def test(self):
         for nums, k, expected in [
-            ([1,2,3,4,5], 2, 7),
-            ([1,2,3,4], 5, 0),
+            ([1, 2, 3, 4, 5], 2, 7),
+            ([1, 2, 3, 4], 5, 0),
         ]:
             output = self.countPairs(nums, k)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

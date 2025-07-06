@@ -6,6 +6,7 @@ import unittest
 
 # python3 -m unittest dp/0494-target-sum.py
 
+
 class Solution(unittest.TestCase):
     # # Approach #1: Backtracking
     # # Time: O(2^n)
@@ -55,12 +56,12 @@ class Solution(unittest.TestCase):
     def findTargetSumWays(self, nums: List[int], target: int) -> int:
         dp = defaultdict(int)
         dp[0] = 1
-        for idx in range(len(nums)):
+        for num in nums:
             prev = dp
             dp = defaultdict(int)
             for curr_sum, count in prev.items():
-                dp[curr_sum+nums[idx]] += count
-                dp[curr_sum-nums[idx]] += count
+                dp[curr_sum + num] += count
+                dp[curr_sum - num] += count
         return dp[target]
 
     def test(self):
@@ -68,7 +69,7 @@ class Solution(unittest.TestCase):
             ([1], 1, 1),
             ([1], 2, 0),
             ([100, 100], -300, 0),
-            ([1,1,1,1,1], 3, 5),
+            ([1, 1, 1, 1, 1], 3, 5),
             # ([12,25,42,49,41,15,22,34,28,31], 35, 8),
             # ([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1], 1, 524288),
             # ([3,2,3,5,7,11,13,17,19,23,29,2,7,9,13,27,31,37,47,53], 107, 0),

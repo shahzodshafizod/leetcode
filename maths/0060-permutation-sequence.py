@@ -1,10 +1,12 @@
 from math import factorial
+
 # from typing import List
 import unittest
 
 # https://leetcode.com/problems/permutation-sequence/
 
 # python3 -m unittest maths/0060-permutation-sequence.py
+
 
 class Solution(unittest.TestCase):
     # # Solved with the help of this problem:
@@ -51,17 +53,17 @@ class Solution(unittest.TestCase):
     # Time: O(n)
     # Space: O(n)
     def getPermutation(self, n: int, k: int) -> str:
-        nums = list(range(1, n+1))
+        nums = list(range(1, n + 1))
         fact = factorial(n)
         permutations = []
-        k -= 1 # to make it 0-based
+        k -= 1  # to make it 0-based
         for i in range(n, 0, -1):
             fact //= i
             idx = k // fact
             permutations.append(str(nums.pop(idx)))
-            k %= fact # k -= idx * fact
+            k %= fact  # k -= idx * fact
         return "".join(permutations)
-    
+
     def test(self):
         for n, k, expected in [
             (3, 3, "213"),

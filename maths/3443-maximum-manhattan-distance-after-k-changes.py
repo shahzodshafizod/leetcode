@@ -1,9 +1,10 @@
-from collections import defaultdict
+from collections import defaultdict  # pylint: disable=unused-import
 import unittest
 
 # https://leetcode.com/problems/maximum-manhattan-distance-after-k-changes/
 
 # python3 -m unittest maths/3443-maximum-manhattan-distance-after-k-changes.py
+
 
 class Solution(unittest.TestCase):
     # # Approach #1
@@ -41,19 +42,23 @@ class Solution(unittest.TestCase):
 
     #         distance = max(distance, dist)
     #     return distance
-    
+
     # Approach #3
     # Time: O(n)
     # Space: O(1)
     def maxDistance(self, s: str, k: int) -> int:
         distance, lon, lat = 0, 0, 0
-        for idx in range(len(s)):
-            match s[idx]:
-                case 'E': lon += 1
-                case 'W': lon -= 1
-                case 'N': lat += 1
-                case 'S': lat -= 1
-            distance = max(distance, min(abs(lon)+abs(lat)+2*k, idx+1))
+        for idx, c in enumerate(s):
+            match c:
+                case 'E':
+                    lon += 1
+                case 'W':
+                    lon -= 1
+                case 'N':
+                    lat += 1
+                case 'S':
+                    lat -= 1
+            distance = max(distance, min(abs(lon) + abs(lat) + 2 * k, idx + 1))
         return distance
 
     def test(self):

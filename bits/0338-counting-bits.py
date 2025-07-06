@@ -5,6 +5,7 @@ from typing import List
 
 # python3 -m unittest bits/0338-counting-bits.py
 
+
 class Solution(unittest.TestCase):
     def countBits(self, n: int) -> List[int]:
         # mask = [0] * 32
@@ -20,9 +21,9 @@ class Solution(unittest.TestCase):
         #     count += 1
         #     ans[i] = count
         # return ans
-        ans = [0] * (n+1)
-        for i in range(1, n+1):
-            ans[i] = ans[i >> 1] + (i&1)
+        ans = [0] * (n + 1)
+        for i in range(1, n + 1):
+            ans[i] = ans[i >> 1] + (i & 1)
         return ans
 
     def testCountBits(self) -> None:

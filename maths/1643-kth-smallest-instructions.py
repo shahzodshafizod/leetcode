@@ -1,21 +1,20 @@
-from functools import cache
+from functools import cache  # pylint: disable=unused-import
 from typing import List
 import unittest
 
-"""
-There are nCk(m + n, m) = nCk(m + n, n) solutions
-to go from (0, 0) to (m, n)
-because we have to perform m moves down and n moves right
+# There are nCk(m + n, m) = nCk(m + n, n) solutions
+# to go from (0, 0) to (m, n)
+# because we have to perform m moves down and n moves right
 
-First we move one step left (col-1) and compute the possibilities
-nCk(m + (n-1), m)
-if k <= nCk(m + (n-1), m), then the move will be left-right: H (horizontal)
-else, we move up-down: V (vertical) and we decrease the number of ways: k -= c
-"""
+# First we move one step left (col-1) and compute the possibilities
+# nCk(m + (n-1), m)
+# if k <= nCk(m + (n-1), m), then the move will be left-right: H (horizontal)
+# else, we move up-down: V (vertical) and we decrease the number of ways: k -= c
 
 # https://leetcode.com/problems/kth-smallest-instructions/
 
 # python3 -m unittest maths/1643-kth-smallest-instructions.py
+
 
 class Solution(unittest.TestCase):
     # # Approach: Brute-Force (Memory+Time Limit Exceeded Exceptions)
@@ -40,12 +39,13 @@ class Solution(unittest.TestCase):
 
     # Credit to: http://ptaskbook.com/en/tasks/recur.php (Recur6)
     dp = [[None] * 30 for _ in range(30)]
+
     def comb(self, n: int, k: int) -> int:
         if n == k or k == 0:
             return 1
-        if self.dp[n][k] != None:
+        if self.dp[n][k] is not None:
             return self.dp[n][k]
-        self.dp[n][k] = self.comb(n-1, k) + self.comb(n-1, k-1)
+        self.dp[n][k] = self.comb(n - 1, k) + self.comb(n - 1, k - 1)
         return self.dp[n][k]
 
     # # Approach: Recursive
@@ -67,7 +67,7 @@ class Solution(unittest.TestCase):
         row, col = destination
         path = ""
         while row and col:
-            c = self.comb(row+col-1, row)
+            c = self.comb(row + col - 1, row)
             if k <= c:
                 path += 'H'
                 col -= 1
@@ -75,15 +75,15 @@ class Solution(unittest.TestCase):
                 k -= c
                 path += 'V'
                 row -= 1
-        path += 'H'*col + 'V'*row
+        path += 'H' * col + 'V' * row
         return path
 
     def test(self):
         for destination, k, expected in [
-            ([2,3], 1, "HHHVV"),
-            ([2,3], 2, "HHVHV"),
-            ([2,3], 3, "HHVVH"),
-            ([15,15], 155117520, "VVVVVVVVVVVVVVVHHHHHHHHHHHHHHH"),
+            ([2, 3], 1, "HHHVV"),
+            ([2, 3], 2, "HHVHV"),
+            ([2, 3], 3, "HHVVH"),
+            ([15, 15], 155117520, "VVVVVVVVVVVVVVVHHHHHHHHHHHHHHH"),
         ]:
             output = self.kthSmallestPath(destination, k)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

@@ -6,6 +6,7 @@ import unittest
 
 # python3 -m unittest linkedlists/0203-remove-linked-list-elements.py
 
+
 class Solution(unittest.TestCase):
     # # Approach: Recursive
     # # Time: O(n)
@@ -19,20 +20,20 @@ class Solution(unittest.TestCase):
     # Time: O(n)
     # Space: O(1)
     def removeElements(self, head: Optional[ListNode], val: int) -> Optional[ListNode]:
-        node = dummy = ListNode(next=head)
-        while node.next:
-            if node.next.val == val:
-                node.next = node.next.next
+        node = dummy = ListNode(nxt=head)
+        while node.nxt:
+            if node.nxt.val == val:
+                node.nxt = node.nxt.nxt
             else:
-                node = node.next
-        return dummy.next
+                node = node.nxt
+        return dummy.nxt
 
     def test(self):
         for head, val, expected in [
-            ([1,2,6,3,4,5,6], 6, [1,2,3,4,5]),
+            ([1, 2, 6, 3, 4, 5, 6], 6, [1, 2, 3, 4, 5]),
             ([], 1, []),
-            ([7,7,7,7], 7, []),
-            ([1,2,2,1], 2, [1,1]),
+            ([7, 7, 7, 7], 7, []),
+            ([1, 2, 2, 1], 2, [1, 1]),
             ([1], 2, [1]),
         ]:
             head = create_linked_list(head)

@@ -3,12 +3,13 @@ import unittest
 # https://leetcode.com/problems/maximum-score-after-splitting-a-string/
 
 # python3 -m unittest prefixsums/1422-maximum-score-after-splitting-a-string.py
- 
+
+
 class Solution(unittest.TestCase):
     def maxScore(self, s: str) -> int:
         zeroes, ones = 0, s.count('1')
         score = 0
-        for idx in range(len(s)-1):
+        for idx in range(len(s) - 1):
             if s[idx] == '0':
                 zeroes += 1
             else:

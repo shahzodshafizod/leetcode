@@ -5,6 +5,7 @@ import unittest
 
 # python3 -m unittest matrices/1267-count-servers-that-communicate.py
 
+
 # Approach: Counting
 # Time: O(mn)
 # Space: O(m+n)
@@ -25,9 +26,9 @@ class Solution(unittest.TestCase):
 
     def test(self):
         for grid, expected in [
-            ([[1,0],[0,1]], 0),
-            ([[1,0],[1,1]], 3),
-            ([[1,1,0,0],[0,0,1,0],[0,0,1,0],[0,0,0,1]], 4),
+            ([[1, 0], [0, 1]], 0),
+            ([[1, 0], [1, 1]], 3),
+            ([[1, 1, 0, 0], [0, 0, 1, 0], [0, 0, 1, 0], [0, 0, 0, 1]], 4),
         ]:
             output = self.countServers(grid)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

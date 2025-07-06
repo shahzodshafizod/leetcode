@@ -6,6 +6,7 @@ import unittest
 
 # python3 -m unittest hashes/2306-naming-a-company.py
 
+
 class Solution(unittest.TestCase):
     # # Approach: Tries
     # # Time: O(NxW), N=len(ideas), W=max(len(ideas[i]))
@@ -46,23 +47,24 @@ class Solution(unittest.TestCase):
     # Time: O(N)
     # Space: O(N)
     def distinctNames(self, ideas: List[str]) -> int:
-        count = defaultdict(set) # S: O(26)
-        for a in ideas: # T: O(N)
+        count = defaultdict(set)  # S: O(26)
+        for a in ideas:  # T: O(N)
             count[a[0]].add(hash(a[1:]))
         res = 0
-        for a, seta in count.items(): # T: O(26)
-            for b, setb in count.items(): # T: O(26)
-                if b <= a: continue
+        for a, seta in count.items():  # T: O(26)
+            for b, setb in count.items():  # T: O(26)
+                if b <= a:
+                    continue
                 same = len(seta & setb)
                 res += (len(seta) - same) * (len(setb) - same)
         return res * 2
 
     def test(self):
         for ideas, expected in [
-            (["coffee","donuts","time","toffee"], 6),
-		    (["lack","back"], 0),
-            (["a","b","baby","aby","banana","apple"], 8),
-            # (["j","t","fmucd","liantvj","sgizj","qjkqmnefo","g","zaa","epw","fz","ycad","oocqnz","bwowse","bcnealx","imlwxoxzml","crmahpv","vh","qfwyd","dycxopdrzb","hvbje","f","qwowse","lnwgxmqdc","k","fmffskrv","bmlwxoxzml","iffrcpdsu","xpqodjcvri","cmsyrkrrm","unb","ln","hmffskrv","bihbm","fv","eqwg","p","vnpooqdpe","okja","lmffskrv","r","pnwgxmqdc","gpyamphhda","azklwrs","ejwuuqz","rmxhrnzz","gggwj","qh","siantvj","pcad","y","nteqr","mi","ri","jqwg","fnpooqdpe","ukqhjnk","tyaastc","xmsyrkrrm","l","ypmpilxnl","lzf","nkja","xiantvj","fvbje","ooltwf","fycxopdrzb","gi","bmffskrv","bnihnwsx","epci","awowse","tokjknsyk","owan","vz","qd","ng","goebwzhefq","xafrsm","sjyfskc","bfr","nwan","mjkj","ujlr","mrmahpv"], 5808),
+            (["coffee", "donuts", "time", "toffee"], 6),
+            (["lack", "back"], 0),
+            (["a", "b", "baby", "aby", "banana", "apple"], 8),
+            # (["j","t","fmucd","liantvj","sgizj","qjkqmnefo","g","zaa","epw","fz","ycad","oocqnz","bwowse","bcnealx","imlwxoxzml","crmahpv","vh","qfwyd","dycxopdrzb","hvbje","f","qwowse","lnwgxmqdc","k","fmffskrv","bmlwxoxzml","iffrcpdsu","xpqodjcvri","cmsyrkrrm","unb","ln","hmffskrv","bihbm","fv","eqwg","p","vnpooqdpe","okja","lmffskrv","r","pnwgxmqdc","gpyamphhda","azklwrs","ejwuuqz","rmxhrnzz","gggwj","qh","siantvj","pcad","y","nteqr","mi","ri","jqwg","fnpooqdpe","ukqhjnk","tyaastc","xmsyrkrrm","l","ypmpilxnl","lzf","nkja","xiantvj","fvbje","ooltwf","fycxopdrzb","gi","bmffskrv","bnihnwsx","epci","awowse","tokjknsyk","owan","vz","qd","ng","goebwzhefq","xafrsm","sjyfskc","bfr","nwan","mjkj","ujlr","mrmahpv"], 5808), # pylint: disable=line-too-long
         ]:
             output = self.distinctNames(ideas)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

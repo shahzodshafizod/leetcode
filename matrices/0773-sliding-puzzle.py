@@ -6,6 +6,7 @@ import unittest
 
 # python3 -m unittest matrices/0773-sliding-puzzle.py
 
+
 class Solution(unittest.TestCase):
     # # Approach: Depth-First Search
     # # Time: O((m⋅n)!×(m⋅n)^2)
@@ -30,7 +31,7 @@ class Solution(unittest.TestCase):
     # Time: O((m⋅n)!×(m⋅n))
     # Space: O((m⋅n)!)
     def slidingPuzzle(self, board: List[List[int]]) -> int:
-        neighbors = [[1,3],[0,2,4],[1,5],[0,4],[1,3,5],[2,4]]
+        neighbors = [[1, 3], [0, 2, 4], [1, 5], [0, 4], [1, 3, 5], [2, 4]]
         state = "".join([str(val) for row in board for val in row])
         queue = deque([(state, state.index("0"), 0)])
         visited = set([state])
@@ -39,28 +40,28 @@ class Solution(unittest.TestCase):
             if state == "123450":
                 return length
             b = list(state)
-            for next in neighbors[curr]:
-                b[curr], b[next] = b[next], b[curr]
+            for nei in neighbors[curr]:
+                b[curr], b[nei] = b[nei], b[curr]
                 new_state = "".join(b)
                 if new_state not in visited:
-                    queue.append((new_state, next, length+1))
+                    queue.append((new_state, nei, length + 1))
                     visited.add(new_state)
-                b[curr], b[next] = b[next], b[curr]
+                b[curr], b[nei] = b[nei], b[curr]
         return -1
 
     def test(self):
         for board, expected in [
-            ([[1,2,3],[4,0,5]], 1),
-            ([[1,2,3],[5,4,0]], -1),
-            ([[4,1,2],[5,0,3]], 5),
-            ([[1,3,4],[0,2,5]], 14),
-            ([[3,2,4],[1,5,0]], 14),
-            ([[2,4,1],[5,3,0]], 12),
-            ([[0,5,2],[4,3,1]], 15),
-            ([[4,2,0],[5,1,3]], 7),
-            ([[3,0,1],[4,2,5]], -1),
-            ([[3,2,1],[4,0,5]], -1),
-            ([[1,2,3],[4,5,0]], 0),
+            ([[1, 2, 3], [4, 0, 5]], 1),
+            ([[1, 2, 3], [5, 4, 0]], -1),
+            ([[4, 1, 2], [5, 0, 3]], 5),
+            ([[1, 3, 4], [0, 2, 5]], 14),
+            ([[3, 2, 4], [1, 5, 0]], 14),
+            ([[2, 4, 1], [5, 3, 0]], 12),
+            ([[0, 5, 2], [4, 3, 1]], 15),
+            ([[4, 2, 0], [5, 1, 3]], 7),
+            ([[3, 0, 1], [4, 2, 5]], -1),
+            ([[3, 2, 1], [4, 0, 5]], -1),
+            ([[1, 2, 3], [4, 5, 0]], 0),
         ]:
             output = self.slidingPuzzle(board)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

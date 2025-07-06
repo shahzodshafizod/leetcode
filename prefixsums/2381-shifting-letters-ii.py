@@ -1,11 +1,11 @@
-from collections import defaultdict
 from typing import List
-import heapq
+import heapq  # pylint: disable=unused-import
 import unittest
 
 # https://leetcode.com/problems/shifting-letters-ii/
 
 # python3 -m unittest prefixsums/2381-shifting-letters-ii.py
+
 
 class Solution(unittest.TestCase):
     # # Approach: Heap (Priority Queue) (Time Limit Exceeded)
@@ -36,17 +36,17 @@ class Solution(unittest.TestCase):
     # Time: O(n+m), n=len(s), m=len(shifts)
     # Space: O(n)
     def shiftingLetters(self, s: str, shifts: List[List[int]]) -> str:
-        line = [0]*(len(s)+1)
+        line = [0] * (len(s) + 1)
         for start, end, direction in shifts:
             if direction == 0:
                 direction = -1
             line[start] += direction
-            line[end+1] -= direction
+            line[end + 1] -= direction
         s = list(s)
         delta = 0
-        for idx in range(len(s)):
+        for idx, c in enumerate(s):
             delta += line[idx]
-            code = (ord(s[idx]) - ord('a') + delta) % 26
+            code = (ord(c) - ord('a') + delta) % 26
             if code < 0:
                 code += 26
             s[idx] = chr(ord('a') + code)
@@ -54,8 +54,8 @@ class Solution(unittest.TestCase):
 
     def test(self):
         for s, shifts, expected in [
-            ("abc", [[0,1,0],[1,2,1],[0,2,1]], "ace"),
-            ("dztz", [[0,0,0],[1,1,1]], "catz"),
+            ("abc", [[0, 1, 0], [1, 2, 1], [0, 2, 1]], "ace"),
+            ("dztz", [[0, 0, 0], [1, 1, 1]], "catz"),
         ]:
             output = self.shiftingLetters(s, shifts)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

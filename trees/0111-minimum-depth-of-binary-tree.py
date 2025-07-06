@@ -7,6 +7,7 @@ from pkg.tree import TreeNode, create_tree
 
 # python3 -m unittest trees/0111-minimum-depth-of-binary-tree.py
 
+
 class Solution(unittest.TestCase):
     # # Approach: Depth-First Search
     # # Time: O(n), n=# of nodes
@@ -25,7 +26,8 @@ class Solution(unittest.TestCase):
     # Space: O(w), w=width of tree
     def minDepth(self, root: Optional[TreeNode]) -> int:
         queue = deque()
-        if root: queue.append(root)
+        if root:
+            queue.append(root)
         depth = 0
         while queue:
             depth += 1
@@ -33,16 +35,18 @@ class Solution(unittest.TestCase):
                 node = queue.popleft()
                 if not node.left and not node.right:
                     return depth
-                if node.left: queue.append(node.left)
-                if node.right: queue.append(node.right)
+                if node.left:
+                    queue.append(node.left)
+                if node.right:
+                    queue.append(node.right)
         return 0
 
     def testMinDepth(self) -> None:
         for root, expected in [
             ([], 0),
             ([2], 1),
-            ([3,9,20,None,None,15,7], 2),
-		    ([2,None,3,None,4,None,5,None,6], 5),
+            ([3, 9, 20, None, None, 15, 7], 2),
+            ([2, None, 3, None, 4, None, 5, None, 6], 5),
         ]:
             root = create_tree(root)
             output = self.minDepth(root)

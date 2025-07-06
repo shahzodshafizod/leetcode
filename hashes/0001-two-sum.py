@@ -5,6 +5,7 @@ from typing import List
 
 # python3 -m unittest hashes/0001-two-sum.py
 
+
 class Solution(unittest.TestCase):
     # # Approach: Two Pointers
     # # Time: O(n log n)
@@ -28,23 +29,23 @@ class Solution(unittest.TestCase):
     # Space: O(n)
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         diffs = {}
-        for idx in range(len(nums)):
-            if nums[idx] in diffs:
-                return [diffs[nums[idx]],idx]
-            diffs[target-nums[idx]] = idx
+        for idx, num in enumerate(nums):
+            if num in diffs:
+                return [diffs[num], idx]
+            diffs[target - num] = idx
         return []
 
     def test(self):
         for nums, target, expected in [
-            ([1,3,7,9,2],11,[3,4]),
-            ([1,3,7,9,2], 25, []),
+            ([1, 3, 7, 9, 2], 11, [3, 4]),
+            ([1, 3, 7, 9, 2], 25, []),
             ([], 1, []),
             ([5], 5, []),
-            ([1,6], 7, [0,1]),
-            ([],1, []),
-            ([2,7,11,15], 9, [0,1]),
-            ([3,2,4], 6, [1,2]),
-            ([3,3], 6, [0,1]),
+            ([1, 6], 7, [0, 1]),
+            ([], 1, []),
+            ([2, 7, 11, 15], 9, [0, 1]),
+            ([3, 2, 4], 6, [1, 2]),
+            ([3, 3], 6, [0, 1]),
         ]:
             output = self.twoSum(nums, target)
             output.sort()

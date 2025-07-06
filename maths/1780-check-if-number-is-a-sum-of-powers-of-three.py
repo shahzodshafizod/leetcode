@@ -4,6 +4,7 @@ import unittest
 
 # python3 -m unittest maths/1780-check-if-number-is-a-sum-of-powers-of-three.py
 
+
 class Solution(unittest.TestCase):
     # # Approach #1: Backtracking
     # # Time: O(2 ^ log3(n))
@@ -20,7 +21,7 @@ class Solution(unittest.TestCase):
     #         # skip
     #         return backtrack(x+1, cur_sum)
     #     return backtrack(0, 0)
-    
+
     # # Approach #2: Iterative (Optimized)
     # # Time: O( log3(n) )
     # # Space: O(1)

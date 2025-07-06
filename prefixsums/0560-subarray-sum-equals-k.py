@@ -6,6 +6,7 @@ import unittest
 
 # python3 -m unittest prefixsums/0560-subarray-sum-equals-k.py
 
+
 class Solution(unittest.TestCase):
     # # Approach #1: Prefix Sum
     # # Time: O(nn)
@@ -36,8 +37,8 @@ class Solution(unittest.TestCase):
 
     def test(self):
         for nums, k, expected in [
-            ([1,1,1], 2, 2),
-		    ([1,2,3], 3, 2),
+            ([1, 1, 1], 2, 2),
+            ([1, 2, 3], 3, 2),
         ]:
             output = self.subarraySum(nums, k)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

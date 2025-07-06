@@ -5,13 +5,15 @@ import unittest
 
 # python3 -m unittest stacks/2434-using-a-robot-to-print-the-lexicographically-smallest-string.py
 
+
 class Solution(unittest.TestCase):
     # Approach: Greedy + Stack
     # Time: O(n)
     # Space: O(n)
     def robotWithString(self, s: str) -> str:
         cnt = defaultdict(int)
-        for c in s: cnt[c] += 1
+        for c in s:
+            cnt[c] += 1
         t, paper = [], []
         min_char = "a"
         for c in s:

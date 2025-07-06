@@ -5,6 +5,7 @@ import unittest
 
 # python3 -m unittest tries/2185-counting-words-with-a-given-prefix.py
 
+
 class Solution(unittest.TestCase):
     # # Approach: Brute-Force
     # # Time: O(m*n), m=len(pref), n=len(words)
@@ -57,8 +58,8 @@ class Solution(unittest.TestCase):
 
     def test(self):
         for words, pref, expected in [
-            (["pay","attention","practice","attend"], "at", 2),
-            (["leetcode","win","loops","success"], "code", 0),
+            (["pay", "attention", "practice", "attend"], "at", 2),
+            (["leetcode", "win", "loops", "success"], "code", 0),
         ]:
             output = self.prefixCount(words, pref)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

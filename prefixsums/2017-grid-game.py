@@ -5,6 +5,7 @@ import unittest
 
 # python3 -m unittest prefixsums/2017-grid-game.py
 
+
 class Solution(unittest.TestCase):
     # Approach: Prefix Sum
     # Time: O(n)
@@ -20,9 +21,9 @@ class Solution(unittest.TestCase):
 
     def test(self):
         for grid, expected in [
-            ([[2,5,4],[1,5,1]], 4),
-            ([[3,3,1],[8,5,2]], 4),
-            ([[1,3,1,15],[1,3,3,1]], 7),
+            ([[2, 5, 4], [1, 5, 1]], 4),
+            ([[3, 3, 1], [8, 5, 2]], 4),
+            ([[1, 3, 1, 15], [1, 3, 3, 1]], 7),
         ]:
             output = self.gridGame(grid)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

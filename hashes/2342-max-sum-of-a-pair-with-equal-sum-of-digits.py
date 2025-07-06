@@ -5,6 +5,7 @@ import unittest
 
 # python3 -m unittest hashes/2342-max-sum-of-a-pair-with-equal-sum-of-digits.py
 
+
 class Solution(unittest.TestCase):
     def maximumSum(self, nums: List[int]) -> int:
         pairs = {}
@@ -24,12 +25,12 @@ class Solution(unittest.TestCase):
 
     def test(self):
         for nums, expected in [
-            ([18,43,36,13,7], 54),
-            ([10,12,19,14], -1),
+            ([18, 43, 36, 13, 7], 54),
+            ([10, 12, 19, 14], -1),
             ([4], -1),
-            ([5,1,6], -1),
-            ([4,6,10,6], 12),
-            ([2,1,5,5,2,4], 10),
+            ([5, 1, 6], -1),
+            ([4, 6, 10, 6], 12),
+            ([2, 1, 5, 5, 2, 4], 10),
         ]:
             output = self.maximumSum(nums)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

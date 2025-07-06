@@ -6,6 +6,7 @@ import unittest
 
 # Note: This question is the same as 2220: Minimum Bit Flips to Convert Number.
 
+
 class Solution(unittest.TestCase):
     # # Approach #1: Recursive
     # # Time: O(b), b=# of bits of max(start, goal)
@@ -29,7 +30,7 @@ class Solution(unittest.TestCase):
     # Time: O(b), b=# of bits of max(start, goal)
     # Space: O(1)
     def hammingDistance(self, x: int, y: int) -> int:
-        return str(bin(x^y)).count("1")
+        return str(bin(x ^ y)).count("1")
 
     def testHammingDistance(self) -> None:
         for x, y, expected in [

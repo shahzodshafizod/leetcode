@@ -4,6 +4,7 @@ import unittest
 
 # python3 -m unittest greedy/1415-the-k-th-lexicographical-string-of-all-happy-strings-of-length-n.py
 
+
 class Solution(unittest.TestCase):
     def getHappyString(self, n: int, k: int) -> str:
         happy = [''] * n
@@ -12,9 +13,9 @@ class Solution(unittest.TestCase):
             partition_len //= 2
             i = 0
             for c in "abc":
-                if happy[idx-1] == c:
+                if happy[idx - 1] == c:
                     continue
-                if k <= (i+1) * partition_len:
+                if k <= (i + 1) * partition_len:
                     happy[idx] = c
                     k -= i * partition_len
                     break

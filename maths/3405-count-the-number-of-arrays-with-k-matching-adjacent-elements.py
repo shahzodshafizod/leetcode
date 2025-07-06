@@ -5,10 +5,11 @@ import unittest
 
 # python3 -m unittest maths/3405-count-the-number-of-arrays-with-k-matching-adjacent-elements.py
 
+
 class Solution(unittest.TestCase):
     def countGoodArrays(self, n: int, m: int, k: int) -> int:
         MOD = 10**9 + 7
-        return m * pow(m-1, n-1-k, MOD) * math.comb(n-1,k) % MOD
+        return m * pow(m - 1, n - 1 - k, MOD) * math.comb(n - 1, k) % MOD
 
     def test(self):
         for n, m, k, expected in [

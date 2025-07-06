@@ -5,6 +5,7 @@ import unittest
 
 # python3 -m unittest matrices/2965-find-missing-and-repeated-values.py
 
+
 class Solution(unittest.TestCase):
     # Approach: Counting
     # Time: O(nn)
@@ -14,6 +15,7 @@ class Solution(unittest.TestCase):
         nn = n * n
         total = nn * (nn + 1) // 2
         seen = [False] * (nn + 1)
+        twice = 0
         for r in range(n):
             for c in range(n):
                 if seen[grid[r][c]]:
@@ -26,8 +28,8 @@ class Solution(unittest.TestCase):
 
     def test(self):
         for grid, expected in [
-            ([[1,3],[2,2]], [2,4]),
-            ([[9,1,7],[8,9,2],[3,4,6]], [9,5]),
+            ([[1, 3], [2, 2]], [2, 4]),
+            ([[9, 1, 7], [8, 9, 2], [3, 4, 6]], [9, 5]),
         ]:
             output = self.findMissingAndRepeatedValues(grid)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

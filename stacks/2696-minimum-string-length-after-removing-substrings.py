@@ -4,6 +4,7 @@ import unittest
 
 # python3 -m unittest stacks/2696-minimum-string-length-after-removing-substrings.py
 
+
 class Solution(unittest.TestCase):
     # Approach: Stack
     # Time: O(N)
@@ -11,7 +12,7 @@ class Solution(unittest.TestCase):
     def minLength(self, s: str) -> int:
         stack = []
         for c in s:
-            if stack and (c == 'B' or c == 'D') and ord(stack[-1])+1 == ord(c):
+            if stack and (c == 'B' or c == 'D') and ord(stack[-1]) + 1 == ord(c):
                 stack.pop()
             else:
                 stack.append(c)
@@ -20,7 +21,7 @@ class Solution(unittest.TestCase):
     def test(self):
         for s, expected in [
             ("ABFCACDB", 2),
-		    ("ACBBD", 5),
+            ("ACBBD", 5),
             ("CCADDADDDBBCDDBABACADABAABADCABDCCBDACBDBAADDABCABBCABBDDAABCBCBBCCCDBCDDDADAACBCACDDBBA", 62),
             ("DCDCBCBDACBBABDABABCCCBABCCCCCCCBDDBCDACDADABADDCDBBC", 35),
             ("BBBDCADCDACACDBBCACDACDABCBCDDADCDCACCDDBCACCDDDCCBCDBDCBDDCBCBBCCBBBAACBBB", 47),

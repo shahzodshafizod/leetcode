@@ -4,11 +4,12 @@ import unittest
 
 # python3 -m unittest greedy/2311-longest-binary-subsequence-less-than-or-equal-to-k.py
 
+
 class Solution(unittest.TestCase):
     def longestSubsequence(self, s: str, k: int) -> int:
         count, n = 0, len(s)
         for i in range(n):
-            digit = int(s[n-1-i])
+            digit = int(s[n - 1 - i])
             if k >= (digit << i):
                 k -= digit << i
                 count += 1

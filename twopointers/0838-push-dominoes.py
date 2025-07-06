@@ -4,6 +4,7 @@ import unittest
 
 # python3 -m unittest twopointers/0838-push-dominoes.py
 
+
 class Solution(unittest.TestCase):
     # # Approach: Calculate Force
     # # Time: O(n)
@@ -38,7 +39,7 @@ class Solution(unittest.TestCase):
     def test(self):
         for dominoes, expected in [
             ("RR.L", "RR.L"),
-		    (".L.R...LR..L..", "LL.RR.LLRRLL.."),
+            (".L.R...LR..L..", "LL.RR.LLRRLL.."),
         ]:
             output = self.pushDominoes(dominoes)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

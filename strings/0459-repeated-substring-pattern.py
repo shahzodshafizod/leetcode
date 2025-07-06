@@ -4,6 +4,7 @@ import unittest
 
 # python3 -m unittest strings/0459-repeated-substring-pattern.py
 
+
 class Solution(unittest.TestCase):
     # Approach: KMP (Knuth-Morris-Pratt) Algorithm
     # Time: O(n)
@@ -18,10 +19,10 @@ class Solution(unittest.TestCase):
                 pref_len += 1
                 lps[idx] = pref_len
             elif pref_len > 0:
-                pref_len = lps[pref_len-1]
+                pref_len = lps[pref_len - 1]
                 idx -= 1
             idx += 1
-        return lps[-1] != 0 and lps[-1] % (n-lps[-1]) == 0
+        return lps[-1] != 0 and lps[-1] % (n - lps[-1]) == 0
 
     def test(self):
         for s, expected in [

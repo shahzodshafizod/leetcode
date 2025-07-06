@@ -6,6 +6,7 @@ import unittest
 
 # python3 -m unittest hashes/0974-subarray-sums-divisible-by-k.py
 
+
 class Solution(unittest.TestCase):
     # # Approach: Brute-Force
     # # Time: O(N^2)
@@ -27,7 +28,7 @@ class Solution(unittest.TestCase):
     def subarraysDivByK(self, nums: List[int], k: int) -> int:
         count, prefmod = 0, 0
         mods = defaultdict(int)
-        mods[0] = 1 # 0 is divisable by k
+        mods[0] = 1  # 0 is divisable by k
         for num in nums:
             prefmod = (prefmod + num + k) % k
             count += mods[prefmod]
@@ -36,11 +37,11 @@ class Solution(unittest.TestCase):
 
     def test(self):
         for nums, k, expected in [
-            ([4,5,0,-2,-3,1], 5, 7),
+            ([4, 5, 0, -2, -3, 1], 5, 7),
             ([5], 9, 0),
-            ([23,2,6,4,7], 6, 3),
-            ([23,2,6,4,7], 13, 0),
-            ([4,5,0,-2,-3,1], 5, 7),
+            ([23, 2, 6, 4, 7], 6, 3),
+            ([23, 2, 6, 4, 7], 13, 0),
+            ([4, 5, 0, -2, -3, 1], 5, 7),
             ([5], 9, 0),
             ([-5], 5, 1),
             ([0], 2, 1),

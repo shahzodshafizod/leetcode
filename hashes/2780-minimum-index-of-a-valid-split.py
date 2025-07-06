@@ -6,6 +6,7 @@ import unittest
 
 # python3 -m unittest hashes/2780-minimum-index-of-a-valid-split.py
 
+
 class Solution(unittest.TestCase):
     # # Approach #1: Hash Map
     # # Time: O(n)
@@ -44,15 +45,15 @@ class Solution(unittest.TestCase):
             if nums[idx] == dominent:
                 prefix += 1
                 postfix -= 1
-            if prefix*2 > idx+1 and postfix*2 > n-idx-1:
+            if prefix * 2 > idx + 1 and postfix * 2 > n - idx - 1:
                 return idx
         return -1
 
     def test(self):
         for nums, expected in [
-            ([1,2,2,2], 2),
-            ([2,1,3,1,1,1,7,1,2,1], 4),
-            ([3,3,3,3,7,2,2], -1),
+            ([1, 2, 2, 2], 2),
+            ([2, 1, 3, 1, 1, 1, 7, 1, 2, 1], 4),
+            ([3, 3, 3, 3, 7, 2, 2], -1),
         ]:
             output = self.minimumIndex(nums)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

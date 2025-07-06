@@ -5,6 +5,7 @@ import unittest
 
 # python3 -m unittest dp/0741-cherry-pickup.py
 
+
 class Solution(unittest.TestCase):
     # # Approach: Dynamic Programming (Top-Down)
     # # Time: O(N^4)
@@ -76,27 +77,48 @@ class Solution(unittest.TestCase):
         n = len(grid)
         dp = [[0] * n for _ in range(n)]
         dp[0][0] = grid[0][0]
-        for t in range(1, (n<<1) - 1): # 2*n-1: # of steps to reach (n-1,n-1)
-            for i in range(n-1, -1, -1):
-                for j in range(n-1, -1, -1):
-                    if (t-i < 0 or t-i >= n or t-j < 0 or t-j >= n or
-                        grid[i][t-i] == -1 or grid[j][t-j] == -1):
+        for t in range(1, (n << 1) - 1):  # 2*n-1: # of steps to reach (n-1,n-1)
+            for i in range(n - 1, -1, -1):
+                for j in range(n - 1, -1, -1):
+                    if (
+                        t - i < 0
+                        or t - i >= n
+                        or t - j < 0
+                        or t - j >= n
+                        or grid[i][t - i] == -1
+                        or grid[j][t - j] == -1
+                    ):
                         dp[i][j] = -1
                         continue
-                    if i > 0: dp[i][j] = max(dp[i][j], dp[i-1][j])
-                    if j > 0: dp[i][j] = max(dp[i][j], dp[i][j-1])
-                    if i > 0 and j > 0: dp[i][j] = max(dp[i][j], dp[i-1][j-1])
-                    if dp[i][j] >= 0: dp[i][j] += grid[i][t-i] + (grid[j][t-j] if i != j else 0)
-        return max(0, dp[n-1][n-1])
+                    if i > 0:
+                        dp[i][j] = max(dp[i][j], dp[i - 1][j])
+                    if j > 0:
+                        dp[i][j] = max(dp[i][j], dp[i][j - 1])
+                    if i > 0 and j > 0:
+                        dp[i][j] = max(dp[i][j], dp[i - 1][j - 1])
+                    if dp[i][j] >= 0:
+                        dp[i][j] += grid[i][t - i] + (grid[j][t - j] if i != j else 0)
+        return max(0, dp[n - 1][n - 1])
 
     def test(self):
         for grid, expected in [
-            ([[0,1,-1],[1,0,-1],[1,1,1]], 5),
-		    ([[1,1,-1],[1,-1,1],[-1,1,1]], 0),
-            ([[1,1,1,0,1],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[1,0,1,1,1]], 8),
-            ([[1,1,1,0,0],[0,0,1,0,1],[1,0,1,0,0],[0,0,1,0,0],[0,0,1,1,1]], 11),
-            ([[0,1,1,0,0],[1,1,1,1,0],[-1,1,1,1,-1],[0,1,1,1,0],[1,0,-1,0,0]], 11),
-            ([[1,1,1,1,0,0,0],[0,0,0,1,0,0,0],[0,0,0,1,0,0,1],[1,0,0,1,0,0,0],[0,0,0,1,0,0,0],[0,0,0,1,0,0,0],[0,0,0,1,1,1,1]], 15),
+            ([[0, 1, -1], [1, 0, -1], [1, 1, 1]], 5),
+            ([[1, 1, -1], [1, -1, 1], [-1, 1, 1]], 0),
+            ([[1, 1, 1, 0, 1], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [1, 0, 1, 1, 1]], 8),
+            ([[1, 1, 1, 0, 0], [0, 0, 1, 0, 1], [1, 0, 1, 0, 0], [0, 0, 1, 0, 0], [0, 0, 1, 1, 1]], 11),
+            ([[0, 1, 1, 0, 0], [1, 1, 1, 1, 0], [-1, 1, 1, 1, -1], [0, 1, 1, 1, 0], [1, 0, -1, 0, 0]], 11),
+            (
+                [
+                    [1, 1, 1, 1, 0, 0, 0],
+                    [0, 0, 0, 1, 0, 0, 0],
+                    [0, 0, 0, 1, 0, 0, 1],
+                    [1, 0, 0, 1, 0, 0, 0],
+                    [0, 0, 0, 1, 0, 0, 0],
+                    [0, 0, 0, 1, 0, 0, 0],
+                    [0, 0, 0, 1, 1, 1, 1],
+                ],
+                15,
+            ),
         ]:
             output = self.cherryPickup(grid)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

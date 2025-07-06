@@ -5,6 +5,7 @@ import unittest
 
 # python3 -m unittest twopointers/2460-apply-operations-to-an-array.py
 
+
 class Solution(unittest.TestCase):
     # Approach: Brute-Force
     # Time: O(n)
@@ -14,9 +15,9 @@ class Solution(unittest.TestCase):
         for idx in range(n):
             if nums[idx] == 0:
                 continue
-            if idx < n-1 and nums[idx] == nums[idx+1]:
+            if idx < n - 1 and nums[idx] == nums[idx + 1]:
                 nums[left] = nums[idx] * 2
-                nums[idx+1] = 0
+                nums[idx + 1] = 0
             else:
                 nums[left] = nums[idx]
             left += 1
@@ -27,10 +28,13 @@ class Solution(unittest.TestCase):
 
     def test(self):
         for nums, expected in [
-            ([1,2,2,1,1,0], [1,4,2,0,0,0]),
-            ([0,1], [1,0]),
-            ([1,4,0,2,0,0], [1,4,2,0,0,0]),
-            ([847,847,0,0,0,399,416,416,879,879,206,206,206,272], [1694,399,832,1758,412,206,272,0,0,0,0,0,0,0]),
+            ([1, 2, 2, 1, 1, 0], [1, 4, 2, 0, 0, 0]),
+            ([0, 1], [1, 0]),
+            ([1, 4, 0, 2, 0, 0], [1, 4, 2, 0, 0, 0]),
+            (
+                [847, 847, 0, 0, 0, 399, 416, 416, 879, 879, 206, 206, 206, 272],
+                [1694, 399, 832, 1758, 412, 206, 272, 0, 0, 0, 0, 0, 0, 0],
+            ),
         ]:
             output = self.applyOperations(nums)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

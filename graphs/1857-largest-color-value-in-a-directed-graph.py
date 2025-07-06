@@ -6,6 +6,7 @@ import unittest
 
 # python3 -m unittest graphs/1857-largest-color-value-in-a-directed-graph.py
 
+
 class Solution(unittest.TestCase):
     # # Approach: Depth-First Search
     # # Time: O(26n) = O(n)
@@ -48,14 +49,14 @@ class Solution(unittest.TestCase):
             adj[src].append(dst)
             indegrees[dst] += 1
         queue = deque([n for n in range(n) if indegrees[n] == 0])
-        colors = [ord(c)-ord('a') for c in colors]
+        colors = [ord(c) - ord('a') for c in colors]
         dp = [[0] * 26 for _ in range(n)]
         value = 0
         while queue:
             node = queue.popleft()
             n -= 1
             dp[node][colors[node]] += 1
-            value = max(value, max(dp[node]))
+            value = max(dp[node] + [value])
             for nei in adj[node]:
                 for c in range(26):
                     dp[nei][c] = max(
@@ -69,10 +70,10 @@ class Solution(unittest.TestCase):
 
     def test(self):
         for colors, edges, expected in [
-            ("a", [[0,0]], -1),
-            ("ab", [[0,1],[1,1]], -1),
-            ("abaca", [[0,1],[0,2],[2,3],[3,4]], 3),
-            ("aaaca", [[0,1],[0,2],[2,3],[3,4],[4,0]], -1),
+            ("a", [[0, 0]], -1),
+            ("ab", [[0, 1], [1, 1]], -1),
+            ("abaca", [[0, 1], [0, 2], [2, 3], [3, 4]], 3),
+            ("aaaca", [[0, 1], [0, 2], [2, 3], [3, 4], [4, 0]], -1),
         ]:
             output = self.largestPathValue(colors, edges)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

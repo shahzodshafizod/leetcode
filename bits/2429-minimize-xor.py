@@ -4,6 +4,7 @@ import unittest
 
 # python3 -m unittest bits/2429-minimize-xor.py
 
+
 class Solution(unittest.TestCase):
     # Approach: Bit Manipulation
     # Time: O(log n)

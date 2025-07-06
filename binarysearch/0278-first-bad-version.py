@@ -4,9 +4,11 @@ import unittest
 
 # python3 -m unittest binarysearch/0278-first-bad-version.py
 
+
 # The isBadVersion API is already defined for you.
 def isBadVersion(version: int) -> bool:
     return version >= bad
+
 
 class Solution(unittest.TestCase):
     def firstBadVersion(self, n: int) -> int:
@@ -20,7 +22,7 @@ class Solution(unittest.TestCase):
         return right
 
     def testFirstBadVersion(self) -> None:
-        global bad
+        global bad  # pylint: disable=global-variable-undefined
         for n, local_bad, expected in [
             (5, 4, 4),
             (1, 1, 1),

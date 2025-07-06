@@ -11,6 +11,7 @@ import unittest
 #          otherwise return 0
 # def guess(num: int) -> int:
 
+
 class Solution(unittest.TestCase):
     guessed = 0
 
@@ -24,13 +25,14 @@ class Solution(unittest.TestCase):
     def guessNumber(self, n: int) -> int:
         left, right = 1, n
         while left <= right:
-            num = (left+right) // 2
+            num = (left + right) // 2
             guessed = self.guess(num)
             if guessed == -1:
-                right = num-1
+                right = num - 1
             elif guessed == 1:
-                left = num+1
-            else: break
+                left = num + 1
+            else:
+                break
         return num
 
     def test(self):

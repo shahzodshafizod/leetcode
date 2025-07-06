@@ -4,6 +4,7 @@ import unittest
 
 # python3 -m unittest strings/0028-find-the-index-of-the-first-occurrence-in-a-string.py
 
+
 class Solution(unittest.TestCase):
     # def strStr(self, haystack: str, needle: str) -> int:
     #     return haystack.find(needle)
@@ -46,22 +47,22 @@ class Solution(unittest.TestCase):
     # Time: O(M+N)
     # Space: O(1)
     def strStr(self, haystack: str, needle: str) -> int:
-        base, mod = 29, int(1e9+7)
+        base, mod = 29, 10**9 + 7
         subs = 0
         for c in needle:
             digit = ord(c) - ord('a') + 1
             subs = (subs * base + digit) % mod
         m = len(needle)
-        power = base ** (m-1)
+        power = base ** (m - 1)
         s = 0
         for idx, c in enumerate(haystack):
             digit = ord(c) - ord('a') + 1
             s = (s * base + digit) % mod
-            if idx+1 < m:
+            if idx + 1 < m:
                 continue
             if s == subs:
-                return idx+1 - m
-            digit = ord(haystack[idx+1-m]) - ord('a') + 1
+                return idx + 1 - m
+            digit = ord(haystack[idx + 1 - m]) - ord('a') + 1
             s -= (digit * power) % mod
         return -1
 
@@ -72,7 +73,7 @@ class Solution(unittest.TestCase):
             ("sydbutsad", "sad", 6),
             ("aabaaabaaac", "aabaaac", 4),
             ("ababcaababcaabc", "ababcaabc", 6),
-            # ("fourscoreandsevenyearsagoourfathersbroughtforthuponthiscontinentanewnation", "ourfathersbroughtforthuponthiscontinentanewnation", 25),
+            # ("fourscoreandsevenyearsagoourfathersbroughtforthuponthiscontinentanewnation", "ourfathersbroughtforthuponthiscontinentanewnation", 25), # pylint: disable=line-too-long
         ]:
             output = self.strStr(haystack, needle)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

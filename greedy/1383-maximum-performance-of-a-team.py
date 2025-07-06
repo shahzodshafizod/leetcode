@@ -6,6 +6,7 @@ import unittest
 
 # python3 -m unittest greedy/1383-maximum-performance-of-a-team.py
 
+
 class Solution(unittest.TestCase):
     # # Approach: Brute-Force
     # # Time: O(2^N)
@@ -23,8 +24,10 @@ class Solution(unittest.TestCase):
 
     # Time: O(n Log n)
     # Space: O(n)
-    def maxPerformance(self, n: int, speed: List[int], efficiency: List[int], k: int) -> int:
-        engineers = [[eff,spd] for eff,spd in zip(efficiency, speed)]
+    def maxPerformance(
+        self, n: int, speed: List[int], efficiency: List[int], k: int  # pylint: disable=unused-argument
+    ) -> int:
+        engineers = [[eff, spd] for eff, spd in zip(efficiency, speed)]
         engineers.sort(reverse=True)
         performance, total_speed = 0, 0
         min_heap = []
@@ -34,14 +37,14 @@ class Solution(unittest.TestCase):
             total_speed += spd
             heapq.heappush(min_heap, spd)
             performance = max(performance, total_speed * eff)
-        return performance % (10**9+7)
+        return performance % (10**9 + 7)
 
     def test(self):
         for n, speed, efficiency, k, expected in [
-            (6, [2,10,3,1,5,8], [5,4,3,9,7,2], 2, 60),
-            (6, [2,10,3,1,5,8], [5,4,3,9,7,2], 3, 68),
-            (6, [2,10,3,1,5,8], [5,4,3,9,7,2], 4, 72),
-            (3, [2,8,2], [2,7,1], 2, 56),
+            (6, [2, 10, 3, 1, 5, 8], [5, 4, 3, 9, 7, 2], 2, 60),
+            (6, [2, 10, 3, 1, 5, 8], [5, 4, 3, 9, 7, 2], 3, 68),
+            (6, [2, 10, 3, 1, 5, 8], [5, 4, 3, 9, 7, 2], 4, 72),
+            (3, [2, 8, 2], [2, 7, 1], 2, 56),
         ]:
             output = self.maxPerformance(n, speed, efficiency, k)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

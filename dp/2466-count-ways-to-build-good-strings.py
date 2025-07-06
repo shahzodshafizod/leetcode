@@ -1,10 +1,9 @@
 import unittest
-import sys
-sys.setrecursionlimit(1000000)
 
 # https://leetcode.com/problems/count-ways-to-build-good-strings/
 
 # python3 -m unittest dp/2466-count-ways-to-build-good-strings.py
+
 
 class Solution(unittest.TestCase):
     # # Approach #1: Top-Down Dynamic Programming
@@ -31,12 +30,12 @@ class Solution(unittest.TestCase):
     def countGoodStrings(self, low: int, high: int, zero: int, one: int) -> int:
         MOD = int(1e9 + 7)
         dp = [1] + [0] * high
-        for length in range(1, high+1):
+        for length in range(1, high + 1):
             if length - zero >= 0:
-                dp[length] = dp[length-zero]
+                dp[length] = dp[length - zero]
             if length - one >= 0:
-                dp[length] = (dp[length] + dp[length-one]) % MOD
-        return sum(dp[low:high+1]) % MOD
+                dp[length] = (dp[length] + dp[length - one]) % MOD
+        return sum(dp[low : high + 1]) % MOD
 
     def test(self):
         for low, high, zero, one, expected in [

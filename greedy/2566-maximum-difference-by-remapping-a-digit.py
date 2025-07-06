@@ -4,6 +4,7 @@ import unittest
 
 # python3 -m unittest greedy/2566-maximum-difference-by-remapping-a-digit.py
 
+
 class Solution(unittest.TestCase):
     # Time: O(log10(num))
     # Space: O(1)

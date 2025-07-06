@@ -4,15 +4,17 @@ import unittest
 
 # python3 -m unittest strings/3403-find-the-lexicographically-largest-string-from-the-box-i.py
 
+
 class Solution(unittest.TestCase):
     # Approach 1: Enumeration
     # Time: O(nk), n=len(word), k=n-numFriends+1
     # Space: O(1)
     def answerString(self, word: str, numFriends: int) -> str:
-        if numFriends == 1: return word
+        if numFriends == 1:
+            return word
         n = len(word)
         k = n - numFriends + 1
-        return max( word[i:i+k] for i in range(n) )
+        return max(word[i : i + k] for i in range(n))
 
     def test(self):
         for word, numFriends, expected in [

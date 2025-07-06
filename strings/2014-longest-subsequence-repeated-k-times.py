@@ -6,6 +6,7 @@ import unittest
 
 # python3 -m unittest strings/2014-longest-subsequence-repeated-k-times.py
 
+
 class Solution(unittest.TestCase):
     # Approach: Backtracking + Breadth-First Search
     # Time: O(7! * n)
@@ -21,14 +22,15 @@ class Solution(unittest.TestCase):
                         count += 1
                         i = 0
             return count
+
         candidates = sorted([c for c, cnt in Counter(s).items() if cnt >= k])
         subseq = ""
         queue = deque([subseq])
         while queue:
             subseq = queue.popleft()
             for c in candidates:
-                if calc_count(subseq+c) >= k:
-                    queue.append(subseq+c)
+                if calc_count(subseq + c) >= k:
+                    queue.append(subseq + c)
         return subseq
 
     def test(self):

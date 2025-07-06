@@ -4,6 +4,7 @@ import unittest
 
 # python3 -m unittest stacks/1047-remove-all-adjacent-duplicates-in-string.py
 
+
 class Solution(unittest.TestCase):
     # # Approach: Stack
     # # Time: O(n)
@@ -21,11 +22,11 @@ class Solution(unittest.TestCase):
     # Time: O(n)
     # Space: O(n)
     def removeDuplicates(self, s: str) -> str:
-        res = ['']*len(s)
+        res = [''] * len(s)
         j = 0
-        for i in range(len(s)):
-            res[j] = s[i]
-            while j > 0 and res[j-1] == res[j]:
+        for c in s:
+            res[j] = c
+            while j > 0 and res[j - 1] == res[j]:
                 j -= 2
             j += 1
         return "".join(res[:j])

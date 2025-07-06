@@ -4,6 +4,7 @@ import unittest
 
 # python3 -m unittest strings/2490-circular-sentence.py
 
+
 class Solution(unittest.TestCase):
     # # Time: O(n)
     # # Space: O(1)
@@ -17,13 +18,15 @@ class Solution(unittest.TestCase):
     # Time: O(n)
     # Space: O(n)
     def isCircularSentence(self, sentence: str) -> bool:
+        # words = sentence.split()
+        # for prev, curr in zip(words, words[1:] + [words[0]]):
+        #     # Indices in Python are circular
+        #     if curr[0] != prev[-1]:
+        #         return False
+        # return True
         words = sentence.split()
-        for idx in range(len(words)):
-            # Indices in Python are circular
-            if words[idx][0] != words[idx-1][-1]:
-                return False
-        return True
-    
+        return all(curr[0] == prev[-1] for prev, curr in zip(words, words[1:] + [words[0]]))
+
     def test(self):
         for sentence, expected in [
             ("L", True),
@@ -36,7 +39,10 @@ class Solution(unittest.TestCase):
             ("leetcode Exercises sound delightfu", False),
             ("leetcode exercises sound delightful", True),
             ("Leetcode Exercises sound delightful", False),
-            ("IuTiUtGGsNydmacGduehPPGksKQyT TmOraUbCcQdnZUCpGCYtGp p pG GCcRvZDRawqGKOiBSLwjIDOjdhnHiisfddYoeHqxOqkUvOEyI", True),
+            (
+                "IuTiUtGGsNydmacGduehPPGksKQyT TmOraUbCcQdnZUCpGCYtGp p pG GCcRvZDRawqGKOiBSLwjIDOjdhnHiisfddYoeHqxOqkUvOEyI",  # pylint: disable=line-too-long
+                True,
+            ),
         ]:
             output = self.isCircularSentence(sentence)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

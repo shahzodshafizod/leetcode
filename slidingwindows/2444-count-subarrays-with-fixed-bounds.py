@@ -5,6 +5,7 @@ import unittest
 
 # python3 -m unittest slidingwindows/2444-count-subarrays-with-fixed-bounds.py
 
+
 class Solution(unittest.TestCase):
     def countSubarrays(self, nums: List[int], minK: int, maxK: int) -> int:
         total = 0
@@ -21,10 +22,10 @@ class Solution(unittest.TestCase):
 
     def test(self):
         for nums, minK, maxK, expected in [
-            ([1,1,1,1], 1, 1, 10),
-            ([1,3,5,2,7,5], 1, 5, 2),
-            ([1,2,1,4,1,3,4], 1, 4, 16),
-            ([1,3,2,2,1,3,2,2], 1, 3, 20),
+            ([1, 1, 1, 1], 1, 1, 10),
+            ([1, 3, 5, 2, 7, 5], 1, 5, 2),
+            ([1, 2, 1, 4, 1, 3, 4], 1, 4, 16),
+            ([1, 3, 2, 2, 1, 3, 2, 2], 1, 3, 20),
         ]:
             output = self.countSubarrays(nums, minK, maxK)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

@@ -5,6 +5,7 @@ import unittest
 
 # python3 -m unittest greedy/1007-minimum-domino-rotations-for-equal-row.py
 
+
 class Solution(unittest.TestCase):
     def minDominoRotations(self, tops: List[int], bottoms: List[int]) -> int:
         # If one side can be made equal,
@@ -21,15 +22,15 @@ class Solution(unittest.TestCase):
                     t_swaps += 1
                 elif bottom != target:
                     b_swaps += 1
-                if idx == n-1:
+                if idx == n - 1:
                     return min(t_swaps, b_swaps)
         return -1
 
     def test(self):
         for tops, bottoms, expected in [
-            ([2,1,2,4,2,2], [5,2,6,2,3,2], 2),
-            ([3,5,1,2,3], [3,6,3,3,4], -1),
-            ([1,1,1,2,2,2], [5,5,5,1,1,1], 3),
+            ([2, 1, 2, 4, 2, 2], [5, 2, 6, 2, 3, 2], 2),
+            ([3, 5, 1, 2, 3], [3, 6, 3, 3, 4], -1),
+            ([1, 1, 1, 2, 2, 2], [5, 5, 5, 1, 1, 1], 3),
         ]:
             output = self.minDominoRotations(tops, bottoms)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

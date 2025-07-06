@@ -1,9 +1,10 @@
-from collections import deque
+from collections import deque  # pylint: disable=unused-import
 import unittest
 
 # https://leetcode.com/problems/minimum-number-of-days-to-eat-n-oranges/
 
 # python3 -m unittest dp/1553-minimum-number-of-days-to-eat-n-oranges.py
+
 
 class Solution(unittest.TestCase):
     # # Approach: Breadth-First Search
@@ -39,19 +40,23 @@ class Solution(unittest.TestCase):
         # - east n/2, remains n/2, n/2+n/2 = n
         # - east 2*n/3, remains n/3, 2*n/3+n/3 = 3*n/3 = n
         memo = {}
+
         def dp(n: int) -> int:
-            if n <= 1: return n
-            if n in memo: return memo[n]
+            if n <= 1:
+                return n
+            if n in memo:
+                return memo[n]
             memo[n] = 1 + min(
-                n%3 + dp(n//3), # make n divisable to 3 and add the remaining
-                n%2 + dp(n//2), # make n divisable to 2 and add the remaining
+                n % 3 + dp(n // 3),  # make n divisable to 3 and add the remaining
+                n % 2 + dp(n // 2),  # make n divisable to 2 and add the remaining
             )
             return memo[n]
+
         return dp(n)
 
     def test(self):
         for n, expected in [
-		    (6, 3),
+            (6, 3),
             (10, 4),
             # (1073741826, 32),
             # (2000000000, 32),

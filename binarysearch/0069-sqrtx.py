@@ -4,6 +4,7 @@ import unittest
 
 # python3 -m unittest binarysearch/0069-sqrtx.py
 
+
 class Solution(unittest.TestCase):
     def mySqrt(self, x: int) -> int:
         left, right = 1, x

@@ -1,9 +1,10 @@
-from functools import lru_cache
+from functools import lru_cache  # pylint: disable=unused-import
 import unittest
 
 # https://leetcode.com/problems/count-vowels-permutation/
 
 # python3 -m unittest dp/1220-count-vowels-permutation.py
+
 
 class Solution(unittest.TestCase):
     # # Approach: Top-Down Dynamic Programming
@@ -33,9 +34,9 @@ class Solution(unittest.TestCase):
     # Time: O(n)
     # Space: O(1)
     def countVowelPermutation(self, n: int) -> int:
-        mod = int(1e9+7)
+        mod = int(1e9 + 7)
         a, e, i, o, u = 1, 1, 1, 1, 1
-        for _ in range(n-1):
+        for _ in range(n - 1):
             next_a = e
             next_e = (a + i) % mod
             next_i = (a + e + o + u) % mod
