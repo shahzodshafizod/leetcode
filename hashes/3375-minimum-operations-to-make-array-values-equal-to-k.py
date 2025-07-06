@@ -15,7 +15,7 @@ class Solution(unittest.TestCase):
         for num in nums:
             if num < k:
                 return -1
-            elif num > k:
+            if num > k:
                 visited.add(num)
         return len(visited)
 

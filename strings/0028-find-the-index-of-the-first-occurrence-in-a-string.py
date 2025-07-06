@@ -73,7 +73,7 @@ class Solution(unittest.TestCase):
             ("sydbutsad", "sad", 6),
             ("aabaaabaaac", "aabaaac", 4),
             ("ababcaababcaabc", "ababcaabc", 6),
-            # ("fourscoreandsevenyearsagoourfathersbroughtforthuponthiscontinentanewnation", "ourfathersbroughtforthuponthiscontinentanewnation", 25), # pylint: disable=line-too-long
+            # ("fourscoreandsevenyearsagoourfathersbroughtforthuponthiscontinentanewnation", "ourfathersbroughtforthuponthiscontinentanewnation", 25),
         ]:
             output = self.strStr(haystack, needle)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

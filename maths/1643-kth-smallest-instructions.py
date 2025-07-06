@@ -41,7 +41,7 @@ class Solution(unittest.TestCase):
     dp = [[None] * 30 for _ in range(30)]
 
     def comb(self, n: int, k: int) -> int:
-        if n == k or k == 0:
+        if k in (n, 0):
             return 1
         if self.dp[n][k] is not None:
             return self.dp[n][k]

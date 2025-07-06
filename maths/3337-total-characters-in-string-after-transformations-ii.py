@@ -55,7 +55,7 @@ class Solution(unittest.TestCase):
         for s, t, nums, expected in [
             ("abcyy", 2, [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2], 7),
             ("azbk", 1, [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2], 8),
-            # ("zcxjrwgcqgmzgxyinfmnexquaopmzjllxlwtgxnpqvsgqbqvnguwymblhzkjkytdejhgewxtqwhpgmgrmvrazebvjikqplfcgnnosmxrcakvfvvjyvmkgzpglcpnphjttgmowbbfeqmqkbfszohhtrrjixnqctndm", 8942, [21,10,18,20,22,15,19,16,1,18,17,1,22,18,3,7,13,5,21,6,10,20,22,2,25,21], 906321724), # pylint: disable=line-too-long
+            # ("zcxjrwgcqgmzgxyinfmnexquaopmzjllxlwtgxnpqvsgqbqvnguwymblhzkjkytdejhgewxtqwhpgmgrmvrazebvjikqplfcgnnosmxrcakvfvvjyvmkgzpglcpnphjttgmowbbfeqmqkbfszohhtrrjixnqctndm", 8942, [21,10,18,20,22,15,19,16,1,18,17,1,22,18,3,7,13,5,21,6,10,20,22,2,25,21], 906321724),
         ]:
             output = self.lengthAfterTransformations(s, t, nums)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

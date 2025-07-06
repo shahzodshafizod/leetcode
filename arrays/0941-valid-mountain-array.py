@@ -16,7 +16,7 @@ class Solution(unittest.TestCase):
         while idx + 1 < n and arr[idx] < arr[idx + 1]:
             idx += 1
         # peak can't be first or last
-        if idx == 0 or idx == n - 1:
+        if idx in (0, n - 1):
             return False
         # walk down
         while idx + 1 < n and arr[idx] > arr[idx + 1]:

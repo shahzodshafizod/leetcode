@@ -19,7 +19,7 @@ class Solution(unittest.TestCase):
             mn = num.replace(num[0], '1')
         else:
             for d in num:
-                if d != '0' and d != '1':
+                if d not in ('0', '1'):
                     mn = num.replace(d, '0')
                     break
         return int(mx) - int(mn)

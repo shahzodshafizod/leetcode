@@ -36,7 +36,7 @@ class Solution(unittest.TestCase):
             ("abcyy", 2, 7),
             ("zwzzugozhwsycuocakus", 1, 24),
             # ("jqktcurgdvlibczdsvnsg", 7517, 79033769),
-            # ("hrzmawnweztcskakojfahyvnoctsctwsbagyqmmoheldlpzctduxmhfcwqcbvovoyswjtdzvsheoofocknqddfsjwxfuuhvznxry", 1000, 652815408), # pylint: disable=line-too-long
+            # ("hrzmawnweztcskakojfahyvnoctsctwsbagyqmmoheldlpzctduxmhfcwqcbvovoyswjtdzvsheoofocknqddfsjwxfuuhvznxry", 1000, 652815408),
             # ("xdzbhxqcmhezajdhljzsgshikospdeyxrnwylcvcuvfppquqqxcfbvmdlwbzkxjkwzvoyvmpnlxuyulexoqgayvxlvofyjhmxshfprpbhjywofbqhhufezuyccasrodkzmxkwzfhcfxhlrpidoklhgidflvyppajzgecuhumjyglgzqzcusdniuqgylpxlhkknwbwehtaabnioerjnpxxjqhmxftsoukxbfkndssniyhwqfmtcoerxrkkdjepiyrhmnepuwaunubwrixahwaoecretfzbqavlhzavdherptjpkhqrkpopdheswffikuxrvqohccbyphcrirhhjddjqihwxlszdehalyoqqzsimaaxepttwbfpbtqgwhidvzoegkjeqdhndszmrtgloqwerpdsvqhdvmfqxwdmkocqcltqiojgpstzainiukaejurbvuvjbyyodruvuliahiscdmrjmnthehnmhovjwakenmuwbxqeoox", 100000, 571676932),
         ]:
             output = self.lengthAfterTransformations(s, t)

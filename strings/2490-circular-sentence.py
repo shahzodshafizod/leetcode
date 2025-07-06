@@ -40,7 +40,7 @@ class Solution(unittest.TestCase):
             ("leetcode exercises sound delightful", True),
             ("Leetcode Exercises sound delightful", False),
             (
-                "IuTiUtGGsNydmacGduehPPGksKQyT TmOraUbCcQdnZUCpGCYtGp p pG GCcRvZDRawqGKOiBSLwjIDOjdhnHiisfddYoeHqxOqkUvOEyI",  # pylint: disable=line-too-long
+                "IuTiUtGGsNydmacGduehPPGksKQyT TmOraUbCcQdnZUCpGCYtGp p pG GCcRvZDRawqGKOiBSLwjIDOjdhnHiisfddYoeHqxOqkUvOEyI",
                 True,
             ),
         ]:

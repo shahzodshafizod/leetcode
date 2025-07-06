@@ -1,3 +1,4 @@
+# pylint: disable=duplicate-code
 from typing import List
 import unittest
 

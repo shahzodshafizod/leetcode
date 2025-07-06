@@ -24,7 +24,7 @@ class Solution(unittest.TestCase):
             mask >>= 2
             res = 0
             for color in (1, 2, 3):
-                if color == up or color == left:
+                if color in (up, left):
                     continue
                 color <<= shift_pos
                 res += dp(mask | color, row + 1, col)

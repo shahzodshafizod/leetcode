@@ -12,7 +12,7 @@ class Solution(unittest.TestCase):
     def minLength(self, s: str) -> int:
         stack = []
         for c in s:
-            if stack and (c == 'B' or c == 'D') and ord(stack[-1]) + 1 == ord(c):
+            if stack and c in ('B', 'D') and ord(stack[-1]) + 1 == ord(c):
                 stack.pop()
             else:
                 stack.append(c)

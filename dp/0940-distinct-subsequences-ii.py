@@ -119,7 +119,7 @@ class Solution(unittest.TestCase):
             # ("jqasojtrigivhwtxajfvrfpycgjufd", 858575627),
             # ("qhfwbsrchpiauesezsorqlmcarknhw", 861037815),
             # ("ahbhubuqlyzesrqfrkririgtadlwha", 439400831),
-            # ("zchmliaqdgvwncfatcfivphddpzjkgyygueikthqzyeeiebczqbqhdytkoawkehkbizdmcnilcjjlpoeoqqoqpswtqdpvszfaksn", 97915677), # pylint: disable=line-too-long
+            # ("zchmliaqdgvwncfatcfivphddpzjkgyygueikthqzyeeiebczqbqhdytkoawkehkbizdmcnilcjjlpoeoqqoqpswtqdpvszfaksn", 97915677),
             # ("knqmywztzgalovcyitifjmllyltjjnwbehsqaofidwzygekdylwmwxtsnhowpyuwkxomdqsldbcuseojgyimebpvqyzmvubgwhku", 208740189),
             # ("blljuffdyfrkqtwfyfztpdiyktrhftgtabxxoibcclbjvirnqyynkyaqlxgyybkgyzvcahmytjdqqtctirnxfjpktxmjkojlvvrr", 589192369),
             # ("ajxjagdwzxxehvwbxhenrxtoydfobqrlugeuklytwonkrilsthwokzobvtraitboxlsazxstwnjnwnouzuzsskwteuapmmyexvdj", 584215525),

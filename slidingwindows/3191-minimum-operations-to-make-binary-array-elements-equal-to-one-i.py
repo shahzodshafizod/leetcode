@@ -9,16 +9,16 @@ import unittest
 class Solution(unittest.TestCase):
     def minOperations(self, nums: List[int]) -> int:
         flips = 0
-        curr, next = nums[0], nums[1]
+        curr, nxt = nums[0], nums[1]
         prev = -1
         for idx in range(2, len(nums)):
-            prev, curr = curr, next
-            next = nums[idx]
+            prev, curr = curr, nxt
+            nxt = nums[idx]
             if prev == 0:
                 curr ^= 1
-                next ^= 1
+                nxt ^= 1
                 flips += 1
-        return -1 if curr == 0 or next == 0 else flips
+        return -1 if curr == 0 or nxt == 0 else flips
 
     def test(self):
         for nums, expected in [

@@ -60,7 +60,7 @@ class Solution(unittest.TestCase):
             if seen[node]:
                 continue
             vertices = dfs(node)
-            if all([len(vertices) - 1 == len(graph[node]) for node in vertices]):
+            if all(len(vertices) - 1 == len(graph[node]) for node in vertices):
                 count += 1
         return count
 

@@ -49,7 +49,7 @@ class Solution(unittest.TestCase):
             for (u, v), cnt in shared.items():  # O(e)
                 # subtract those edges that were added, but
                 # considering shared ones between them breaks condition
-                if degree[u] + degree[v] > query and degree[u] + degree[v] - cnt <= query:
+                if degree[u] + degree[v] > query >= degree[u] + degree[v] - cnt:
                     answer[idx] -= 1
         return answer
 

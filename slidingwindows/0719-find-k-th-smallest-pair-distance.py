@@ -8,8 +8,8 @@ class Solution(unittest.TestCase):
     def smallestDistancePair(self, nums: List[int], k: int) -> int:
         def countPairDistances(distance: int) -> int:
             left, count = 0, 0
-            for right in range(len(nums)):
-                while nums[right] - nums[left] > distance:
+            for right, num in enumerate(nums):
+                while num - nums[left] > distance:
                     left += 1
                 count += right - left
             return count

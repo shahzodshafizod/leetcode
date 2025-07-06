@@ -8,13 +8,13 @@ import unittest
 
 class Solution(unittest.TestCase):
     def maxAscendingSum(self, nums: List[int]) -> int:
-        max_sum = sum = nums[0]
+        max_sum = total = nums[0]
         for idx in range(1, len(nums)):
             if nums[idx - 1] < nums[idx]:
-                sum += nums[idx]
+                total += nums[idx]
             else:
-                sum = nums[idx]
-            max_sum = max(max_sum, sum)
+                total = nums[idx]
+            max_sum = max(max_sum, total)
         return max_sum
 
     def test(self):

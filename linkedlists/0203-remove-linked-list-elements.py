@@ -1,6 +1,6 @@
 from typing import Optional
-from pkg.listnode import ListNode, create_linked_list
 import unittest
+from pkg.listnode import ListNode, create_linked_list
 
 # https://leetcode.com/problems/remove-linked-list-elements/
 

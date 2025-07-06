@@ -21,7 +21,7 @@ class Solution(unittest.TestCase):
             ("I speak Goat Latin", "Imaa peaksmaaa oatGmaaaa atinLmaaaaa"),
             (
                 "The quick brown fox jumped over the lazy dog",
-                "heTmaa uickqmaaa rownbmaaaa oxfmaaaaa umpedjmaaaaaa overmaaaaaaa hetmaaaaaaaa azylmaaaaaaaaa ogdmaaaaaaaaaa",  # pylint: disable=line-too-long
+                "heTmaa uickqmaaa rownbmaaaa oxfmaaaaa umpedjmaaaaaa overmaaaaaaa hetmaaaaaaaa azylmaaaaaaaaa ogdmaaaaaaaaaa",
             ),
         ]:
             output = self.toGoatLatin(sentence)

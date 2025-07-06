@@ -81,7 +81,7 @@ class Solution(unittest.TestCase):
             for i in range(n - 1, -1, -1):
                 for j in range(n - 1, -1, -1):
                     if (
-                        t - i < 0
+                        t - i < 0  # pylint: disable=too-many-boolean-expressions
                         or t - i >= n
                         or t - j < 0
                         or t - j >= n

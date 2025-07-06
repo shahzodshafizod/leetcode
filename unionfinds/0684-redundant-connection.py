@@ -12,7 +12,7 @@ class Solution(unittest.TestCase):
     # Space: O(n)
     def findRedundantConnection(self, edges: List[List[int]]) -> List[int]:
         n = len(edges)
-        parent = [node for node in range(n + 1)]
+        parent = list(range(n + 1))
 
         def find(x: int) -> int:
             if parent[x] != x:

@@ -1,7 +1,7 @@
 from collections import deque
-from pkg.tree import TreeNode, create_tree
 from typing import Optional
 import unittest
+from pkg.tree import TreeNode, create_tree
 
 # https://leetcode.com/problems/same-tree/
 

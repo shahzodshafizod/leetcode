@@ -13,7 +13,7 @@ class Solution(unittest.TestCase):
         while x > half:
             x, d = divmod(x, 10)
             half = half * 10 + d
-        return x == half or x == half // 10
+        return x in (half, half // 10)
 
     def testIsPalindrome(self) -> None:
         for x, expected in [

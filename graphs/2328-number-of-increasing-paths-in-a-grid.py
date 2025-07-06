@@ -23,7 +23,7 @@ class Solution(unittest.TestCase):
             dp[row][col] = count
             return count
 
-        return sum([dfs(row, col) for row in range(m) for col in range(n)]) % int(1e9 + 7)
+        return sum(dfs(row, col) for row in range(m) for col in range(n)) % int(1e9 + 7)
 
     def test(self):
         for grid, expected in [

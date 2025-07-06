@@ -8,7 +8,7 @@ import unittest
 
 class Solution(unittest.TestCase):
     def canConstruct(self, s: str, k: int) -> bool:
-        return len(s) >= k and sum(1 for cnt in Counter(s).values() if cnt & 1 == 1) <= k
+        return len(s) >= k >= sum(1 for cnt in Counter(s).values() if cnt & 1 == 1)
 
     def test(self):
         for s, k, expected in [

@@ -51,11 +51,11 @@ class Solution(unittest.TestCase):
         jobs = sorted(zip(endTime, startTime, profit))
         n = len(jobs)
         dp = [0] * (n + 1)
-        for idx, (_, start, profit) in enumerate(jobs):
+        for idx, (_, start, prof) in enumerate(jobs):
             prev = bisect_left(jobs, (start + 1, -1, -1), hi=idx)
             dp[idx + 1] = max(
                 dp[idx],  # skip this job
-                profit + dp[prev],  # take this job
+                prof + dp[prev],  # take this job
             )
         return dp[n]
 
@@ -79,7 +79,7 @@ class Solution(unittest.TestCase):
                 [9933, 967, 5417, 1835, 2746, 3901, 773, 2248, 5062, 3712],
                 24313,
             ),
-            # ([96,815,776,701,4773,3771,6725,8841,4289,4992,9852,6641,6065,3366,6415,7684,9429,7620,8880,6509], [3816,7818,8658,3359,6845,12795,12943,13524,8099,9911,16365,7667,10043,9038,7822,14342,13581,12347,10690,11189], [8628,8418,9036,7717,1828,1498,5657,1156,4749,2528,8675,4130,3791,6585,655,3686,8462,9630,2263,9595], 22977), # pylint: disable=line-too-long
+            # ([96,815,776,701,4773,3771,6725,8841,4289,4992,9852,6641,6065,3366,6415,7684,9429,7620,8880,6509], [3816,7818,8658,3359,6845,12795,12943,13524,8099,9911,16365,7667,10043,9038,7822,14342,13581,12347,10690,11189], [8628,8418,9036,7717,1828,1498,5657,1156,4749,2528,8675,4130,3791,6585,655,3686,8462,9630,2263,9595], 22977),
         ]:
             output = self.jobScheduling(startTime, endTime, profit)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

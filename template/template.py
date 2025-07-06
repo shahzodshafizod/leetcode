@@ -6,8 +6,8 @@ import unittest
 
 
 class Solution(unittest.TestCase):
-    def a(self):
-        pass
+    def a(self) -> int:
+        return 0
 
     def test(self):
         for expected in [

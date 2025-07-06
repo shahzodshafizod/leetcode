@@ -39,8 +39,8 @@ class Solution(unittest.TestCase):
         robot.sort()
         factory.sort()
         factories = []
-        for factory in factory:
-            factories.extend([factory[0]] * factory[1])
+        for f in factory:
+            factories.extend([f[0]] * f[1])
         rlen, flen = len(robot), len(factories)
         dp = [[0] * (flen + 1) for _ in range(rlen + 1)]
         for rid in range(rlen - 1, -1, -1):

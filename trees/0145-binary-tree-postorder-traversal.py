@@ -1,6 +1,6 @@
 from typing import List, Optional
-from pkg.tree import TreeNode, create_tree
 import unittest
+from pkg.tree import TreeNode, create_tree
 
 # https://leetcode.com/problems/binary-tree-postorder-traversal/
 

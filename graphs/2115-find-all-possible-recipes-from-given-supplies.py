@@ -39,7 +39,7 @@ class Solution(unittest.TestCase):
                 ["yeast", "flour", "meat"],
                 ["bread", "sandwich"],
             ),
-            # (["bread","sandwich","burger"], [["yeast","flour"],["bread","meat"],["sandwich","meat","bread"]], ["yeast","flour","meat"], ["bread","sandwich","burger"]), # pylint: disable=line-too-long
+            # (["bread","sandwich","burger"], [["yeast","flour"],["bread","meat"],["sandwich","meat","bread"]], ["yeast","flour","meat"], ["bread","sandwich","burger"]),
             # (["ju","fzjnm","x","e","zpmcz","h","q"], [["d"],["hveml","f","cpivl"],["cpivl","zpmcz","h","e","fzjnm","ju"],["cpivl","hveml","zpmcz","ju","h"],["h","fzjnm","e","q","x"],["d","hveml","cpivl","q","zpmcz","ju","e","x"],["f","hveml","cpivl"]], ["f","hveml","cpivl","d"], ["fzjnm","q","ju"]),
             (["bread", "sandwich"], [["bread", "flour"], ["bread", "flour"]], ["yeast", "flour", "meat"], []),
             # (["qxyj","vawos","nkov","bec","qiabz"], [["mxf"],["iy","qxyj","nkov","qiabz","bec"],["nw","xutnl","e"],["eep","km","nw","xutnl","e","iy","vawos","qxyj","qiabz"],["nyhyc"]], ["nw","eep","iy","e","xutnl","km"], ["nkov"]),

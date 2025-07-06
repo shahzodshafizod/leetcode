@@ -9,10 +9,10 @@ class Solution(unittest.TestCase):
     def numberOfSubstrings(self, s: str) -> int:
         count = 0
         a, b, c = -1, -1, -1
-        for idx in range(len(s)):
-            if s[idx] == 'a':
+        for idx, sc in enumerate(s):
+            if sc == 'a':
                 a = idx
-            elif s[idx] == 'b':
+            elif sc == 'b':
                 b = idx
             else:
                 c = idx

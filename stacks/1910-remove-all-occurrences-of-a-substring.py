@@ -59,7 +59,7 @@ class Solution(unittest.TestCase):
             ("daabcbaabcbc", "abc", "dab"),
             ("axxxxyyyyb", "xy", "ab"),
             ("wwwwwwwwwwwwwwwwwwwwwvwwwwswxwwwwsdwxweeohapwwzwuwajrnogb", "w", "vsxsdxeeohapzuajrnogb"),
-            # ("kpygkivtlqoockpygkivtlqoocssnextkqzjpycbylkaondsskpygkpygkivtlqoocssnextkqzjpkpygkivtlqoocssnextkqzjpycbylkaondsycbylkaondskivtlqoocssnextkqzjpycbylkaondssnextkqzjpycbylkaondshijzgaovndkjiiuwjtcpdpbkrfsi", "kpygkivtlqoocssnextkqzjpycbylkaonds", "hijzgaovndkjiiuwjtcpdpbkrfsi"), # pylint: disable=line-too-long
+            # ("kpygkivtlqoockpygkivtlqoocssnextkqzjpycbylkaondsskpygkpygkivtlqoocssnextkqzjpkpygkivtlqoocssnextkqzjpycbylkaondsycbylkaondskivtlqoocssnextkqzjpycbylkaondssnextkqzjpycbylkaondshijzgaovndkjiiuwjtcpdpbkrfsi", "kpygkivtlqoocssnextkqzjpycbylkaonds", "hijzgaovndkjiiuwjtcpdpbkrfsi"),
         ]:
             output = self.removeOccurrences(s, part)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

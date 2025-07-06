@@ -1,6 +1,6 @@
 from typing import Optional
-from pkg.tree import TreeNode, create_tree
 import unittest
+from pkg.tree import TreeNode, create_tree
 
 # https://leetcode.com/problems/binary-tree-maximum-path-sum/
 
@@ -8,7 +8,7 @@ import unittest
 
 
 class Solution(unittest.TestCase):
-    def maxPathSum(sef, root: Optional[TreeNode]) -> int:
+    def maxPathSum(self, root: Optional[TreeNode]) -> int:
         def dfs(node: TreeNode) -> int:
             if not node:
                 return 0

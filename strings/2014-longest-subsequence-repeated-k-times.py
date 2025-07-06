@@ -1,4 +1,3 @@
-from typing import List
 from collections import Counter, deque
 import unittest
 

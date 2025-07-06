@@ -16,9 +16,9 @@ class Solution(unittest.TestCase):
         for target in [tops[0], bottoms[0]]:
             t_swaps, b_swaps = 0, 0
             for idx, (top, bottom) in enumerate(zip(tops, bottoms)):
-                if top != target and bottom != target:
+                if target not in (top, bottom):
                     break
-                elif top != target:
+                if top != target:
                     t_swaps += 1
                 elif bottom != target:
                     b_swaps += 1
