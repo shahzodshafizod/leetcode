@@ -1,5 +1,8 @@
 {
   "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "always"
+  },
   "python.linting.enabled": true,
   "python.linting.pylintEnabled": true,
   "python.linting.pylintArgs": [
@@ -8,5 +11,6 @@
   "python.formatting.blackArgs": [
     "--line-length",
     "120"
-  ]
+  ],
+  "python.analysis.typeCheckingMode": "strict"
 }

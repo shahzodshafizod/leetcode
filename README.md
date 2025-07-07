@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1353 | [Maximum Number of Events That Can Be Attended](https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/) | Medium | Array, Greedy, Sorting, Heap (Priority Queue) | 2025-07-07 | [Go](greedy/1353-maximum-number-of-events-that-can-be-attended.go) [Python](greedy/1353-maximum-number-of-events-that-can-be-attended.py)
 | 1865 | [Finding Pairs With a Certain Sum](https://leetcode.com/problems/finding-pairs-with-a-certain-sum/) | Medium | Array, Hash Table, Design | 2025-07-06 | [Go](design/1865-finding-pairs-with-a-certain-sum.go) [Python](design/1865-finding-pairs-with-a-certain-sum.py)
 | 1394 | [Find Lucky Integer in an Array](https://leetcode.com/problems/find-lucky-integer-in-an-array/) | Easy | Array, Hash Table, Counting | 2025-07-05 | [Go](hashes/1394-find-lucky-integer-in-an-array.go) [Python](hashes/1394-find-lucky-integer-in-an-array.py)
 | 3307 | [Find the K-th Character in String Game II](https://leetcode.com/problems/find-the-k-th-character-in-string-game-ii/) | Hard | Math, Bit Manipulation, Recursion | 2025-07-04 | [Go](bits/3307-find-the-k-th-character-in-string-game-ii.go) [Python](bits/3307-find-the-k-th-character-in-string-game-ii.py)
