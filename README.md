@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1337 | [The K Weakest Rows in a Matrix](https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix/) | Easy | Array, Binary Search, Sorting, Heap (Priority Queue), Matrix | 2025-07-08 | [Go](matrices/1337-the-k-weakest-rows-in-a-matrix.go) [Python](matrices/1337-the-k-weakest-rows-in-a-matrix.py)
 | 1353 | [Maximum Number of Events That Can Be Attended](https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/) | Medium | Array, Greedy, Sorting, Heap (Priority Queue) | 2025-07-07 | [Go](greedy/1353-maximum-number-of-events-that-can-be-attended.go) [Python](greedy/1353-maximum-number-of-events-that-can-be-attended.py)
 | 1865 | [Finding Pairs With a Certain Sum](https://leetcode.com/problems/finding-pairs-with-a-certain-sum/) | Medium | Array, Hash Table, Design | 2025-07-06 | [Go](design/1865-finding-pairs-with-a-certain-sum.go) [Python](design/1865-finding-pairs-with-a-certain-sum.py)
 | 1394 | [Find Lucky Integer in an Array](https://leetcode.com/problems/find-lucky-integer-in-an-array/) | Easy | Array, Hash Table, Counting | 2025-07-05 | [Go](hashes/1394-find-lucky-integer-in-an-array.go) [Python](hashes/1394-find-lucky-integer-in-an-array.py)
