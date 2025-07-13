@@ -13,20 +13,18 @@ class Solution(unittest.TestCase):
     # Space: O(N + sort)
     def mostBooked(self, n: int, meetings: List[List[int]]) -> int:
         count = [0] * n
-        meetings.sort()
-        used = []  # (end, room)
-        available = list(range(n))  # sorted array is a valid heap
-        for start, end in meetings:
-            while used and used[0][0] <= start:
-                _, room = heapq.heappop(used)
-                heapq.heappush(available, room)
-            if not available:
-                time, room = heapq.heappop(used)
-                heapq.heappush(available, room)
-                end = time + (end - start)
-            room = heapq.heappop(available)
+        held = []  # (end, room)
+        avai = list(range(n))  # sorted array is a valid heap
+        for start, end in sorted(meetings):
+            while held and held[0][0] <= start:
+                heapq.heappush(avai, heapq.heappop(held)[1])
+            if not avai:
+                finish, room = heapq.heappop(held)
+                heapq.heappush(avai, room)
+                end += finish - start
+            room = heapq.heappop(avai)
+            heapq.heappush(held, (end, room))
             count[room] += 1
-            heapq.heappush(used, (end, room))
         return count.index(max(count))
 
     def test(self):
