@@ -450,7 +450,9 @@ disable=raw-checker-failed,
         too-many-branches,
         too-many-nested-blocks,
         line-too-long,
-        too-many-lines
+        too-many-lines,
+        unrecognized-option,
+        unknown-option-value
 
 # Enable the message, report, category or checker with the given id(s). You can
 # either give multiple identifier separated by comma (,) or put this option

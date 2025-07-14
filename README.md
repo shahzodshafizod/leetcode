@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1290 | [Convert Binary Number in a Linked List to Integer](https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/) | Easy | Linked List, Math | 2025-07-14 | [Go](linkedlists/1290-convert-binary-number-in-a-linked-list-to-integer.go) [Python](linkedlists/1290-convert-binary-number-in-a-linked-list-to-integer.py)
 | 2410 | [Maximum Matching of Players With Trainers](https://leetcode.com/problems/maximum-matching-of-players-with-trainers/) | Medium | Array, Two Pointers, Greedy, Sorting | 2025-07-13 | [Go](greedy/2410-maximum-matching-of-players-with-trainers.go) [Python](greedy/2410-maximum-matching-of-players-with-trainers.py)
 | 1900 | [The Earliest and Latest Rounds Where Players Compete](https://leetcode.com/problems/the-earliest-and-latest-rounds-where-players-compete/) | Hard | Dynamic Programming, Memoization | 2025-07-12 | [Go](dp/1900-the-earliest-and-latest-rounds-where-players-compete.go) [Python](dp/1900-the-earliest-and-latest-rounds-where-players-compete.py)
 | 1342 | [Number of Steps to Reduce a Number to Zero](https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/) | Easy | Math, Bit Manipulation | 2025-07-11 | [Go](bits/1342-number-of-steps-to-reduce-a-number-to-zero.go) [Python](bits/1342-number-of-steps-to-reduce-a-number-to-zero.py)

@@ -5,7 +5,7 @@ from typing import List, Optional
 class ListNode:
     def __init__(self, val: int = 0, nxt: "ListNode" = None):
         self.val = val
-        self.nxt = nxt
+        self.next = nxt
 
     def __eq__(self, __value: object) -> bool:
         if not __value:
@@ -13,7 +13,7 @@ class ListNode:
         return all(
             [
                 self.val == __value.val,
-                not self.nxt and not __value.nxt or self.nxt.__eq__(__value.nxt),
+                not self.next and not __value.next or self.next.__eq__(__value.next),
             ]
         )
 
@@ -22,13 +22,13 @@ class ListNode:
         vals = []
         while curr:
             vals.append(str(curr.val))
-            curr = curr.nxt
+            curr = curr.next
         return ",".join(vals)
 
 
 def create_linked_list(vals: List[int]) -> Optional[ListNode]:
     tail = dummy = ListNode()
     for val in vals:
-        tail.nxt = ListNode(val)
-        tail = tail.nxt
-    return dummy.nxt
+        tail.next = ListNode(val)
+        tail = tail.next
+    return dummy.next
