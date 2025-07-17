@@ -11,6 +11,7 @@ class Solution(unittest.TestCase):
     def getDecimalValue(self, head: Optional[ListNode]) -> int:
         value, node = 0, head
         while node:
+            # value = value * 2 + node.val
             value = (value << 1) | node.val
             node = node.next
         return value

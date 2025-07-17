@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3201 | [Find the Maximum Length of Valid Subsequence I](https://leetcode.com/problems/find-the-maximum-length-of-valid-subsequence-i/) | Medium | Array, Dynamic Programming | 2025-07-16 | [Go](dp/3201-find-the-maximum-length-of-valid-subsequence-i.go) [Python](dp/3201-find-the-maximum-length-of-valid-subsequence-i.py)
+| 3136 | [Valid Word](https://leetcode.com/problems/valid-word/) | Easy | String | 2025-07-15 | [Go](strings/3136-valid-word.go) [Python](strings/3136-valid-word.py)
 | 1290 | [Convert Binary Number in a Linked List to Integer](https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/) | Easy | Linked List, Math | 2025-07-14 | [Go](linkedlists/1290-convert-binary-number-in-a-linked-list-to-integer.go) [Python](linkedlists/1290-convert-binary-number-in-a-linked-list-to-integer.py)
 | 2410 | [Maximum Matching of Players With Trainers](https://leetcode.com/problems/maximum-matching-of-players-with-trainers/) | Medium | Array, Two Pointers, Greedy, Sorting | 2025-07-13 | [Go](greedy/2410-maximum-matching-of-players-with-trainers.go) [Python](greedy/2410-maximum-matching-of-players-with-trainers.py)
 | 1900 | [The Earliest and Latest Rounds Where Players Compete](https://leetcode.com/problems/the-earliest-and-latest-rounds-where-players-compete/) | Hard | Dynamic Programming, Memoization | 2025-07-12 | [Go](dp/1900-the-earliest-and-latest-rounds-where-players-compete.go) [Python](dp/1900-the-earliest-and-latest-rounds-where-players-compete.py)

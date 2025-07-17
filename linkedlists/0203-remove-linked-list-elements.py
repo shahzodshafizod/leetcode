@@ -21,12 +21,12 @@ class Solution(unittest.TestCase):
     # Space: O(1)
     def removeElements(self, head: Optional[ListNode], val: int) -> Optional[ListNode]:
         node = dummy = ListNode(nxt=head)
-        while node.nxt:
-            if node.nxt.val == val:
-                node.nxt = node.nxt.nxt
+        while node.next:
+            if node.next.val == val:
+                node.next = node.next.next
             else:
-                node = node.nxt
-        return dummy.nxt
+                node = node.next
+        return dummy.next
 
     def test(self):
         for head, val, expected in [
