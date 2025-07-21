@@ -51,7 +51,7 @@ Step 2: Write out some test cases
 // https://leetcode.com/problems/time-needed-to-inform-all-employees/
 
 func numOfMinutes(n int, headID int, manager []int, informTime []int) int {
-	var adjacencyList = make([][]int, n)
+	adjacencyList := make([][]int, n)
 	for id := 0; id < n; id++ {
 		if manager[id] != -1 {
 			if adjacencyList[manager[id]] == nil {
@@ -68,7 +68,7 @@ func numOfMinutesDFS(adjacencyList [][]int, informTime []int, ID int) int {
 	if adjacencyList[ID] == nil {
 		return 0
 	}
-	var maximum = 0
+	maximum := 0
 	for _, employeeID := range adjacencyList[ID] {
 		maximum = max(maximum, numOfMinutesDFS(adjacencyList, informTime, employeeID))
 	}

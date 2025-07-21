@@ -4,22 +4,22 @@ package matrices
 
 // DFS
 func maxAreaOfIsland(grid [][]int) int {
-	var m = len(grid)
-	var n = len(grid[0])
-	var directions = [4][2]int{{-1, 0}, {0, 1}, {1, 0}, {0, -1}} // up, right, down, left
+	m := len(grid)
+	n := len(grid[0])
+	directions := [4][2]int{{-1, 0}, {0, 1}, {1, 0}, {0, -1}} // up, right, down, left
 	var dfs func(row int, col int) int
 	dfs = func(row int, col int) int {
 		if row < 0 || row >= m || col < 0 || col >= n || grid[row][col] == 0 {
 			return 0
 		}
-		var count = 1
+		count := 1
 		grid[row][col] = 0
 		for _, dir := range directions {
 			count += dfs(row+dir[0], col+dir[1])
 		}
 		return count
 	}
-	var maxCount = 0
+	maxCount := 0
 	for row := 0; row < m; row++ {
 		for col := 0; col < n; col++ {
 			count := dfs(row, col)

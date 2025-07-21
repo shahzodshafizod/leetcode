@@ -9,11 +9,11 @@ package dp
 // Space: O(N)
 func minHeightShelves(books [][]int, shelfWidth int) int {
 	// books[i] = [2]int{thickness, height}
-	var n = len(books)
-	var dp = make([]int, n+1)
+	n := len(books)
+	dp := make([]int, n+1)
 	for idx := n - 1; idx >= 0; idx-- {
-		var space = shelfWidth
-		var maxHeight = 0
+		space := shelfWidth
+		maxHeight := 0
 		dp[idx] = 1_000 * shelfWidth // 1_000 is max height
 		for jdx := idx; jdx < n && space >= books[jdx][0]; jdx++ {
 			space -= books[jdx][0]

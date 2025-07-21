@@ -20,7 +20,7 @@ could give us that duplicate
 
 func findDuplicate(nums []int) int {
 	// 1. find meeting point
-	var tortoise, hare = 0, 0
+	tortoise, hare := 0, 0
 	for {
 		tortoise = nums[tortoise]
 		hare = nums[nums[hare]]

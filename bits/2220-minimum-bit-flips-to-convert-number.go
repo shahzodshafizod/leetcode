@@ -9,8 +9,8 @@ package bits
 // Space: O(1)
 func minBitFlips(start int, goal int) int {
 	// return bits.OnesCount(uint(start ^ goal))
-	var flips = 0
-	var result = start ^ goal
+	flips := 0
+	result := start ^ goal
 	for result != 0 {
 		result &= result - 1
 		flips += 1

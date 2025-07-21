@@ -10,7 +10,7 @@ import (
 func TestMaxEvents(t *testing.T) {
 	for _, tc := range []struct {
 		events [][]int
-		count int
+		count  int
 	}{
 		{events: [][]int{{1, 10}, {1, 10}, {1, 10}, {1, 10}}, count: 4},
 		{events: [][]int{{1, 100}, {50, 100}, {60, 70}, {90, 95}}, count: 4},

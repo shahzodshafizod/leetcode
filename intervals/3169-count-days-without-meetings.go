@@ -14,7 +14,7 @@ func countDays(days int, meetings [][]int) int {
 		return meetings[i][0] < meetings[j][0] ||
 			meetings[i][1] < meetings[j][1]
 	})
-	var last = 0
+	last := 0
 	var start, end int
 	for idx := range meetings {
 		start, end = meetings[idx][0], meetings[idx][1]

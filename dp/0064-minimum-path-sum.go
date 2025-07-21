@@ -3,7 +3,7 @@ package dp
 // https://leetcode.com/problems/minimum-path-sum/
 
 func minPathSum(grid [][]int) int {
-	var m, n = len(grid), len(grid[0])
+	m, n := len(grid), len(grid[0])
 	var dp func(row int, col int) int
 	dp = func(row int, col int) int {
 		if row == m || col == n {
@@ -12,7 +12,7 @@ func minPathSum(grid [][]int) int {
 		if grid[row][col]>>8 > 0 {
 			return grid[row][col] >> 8
 		}
-		var sum = grid[row][col]
+		sum := grid[row][col]
 		down := dp(row+1, col)
 		right := dp(row, col+1)
 		if down != -1 && right != -1 {

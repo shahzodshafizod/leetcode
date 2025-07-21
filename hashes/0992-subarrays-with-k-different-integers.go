@@ -3,10 +3,10 @@ package hashes
 // https://leetcode.com/problems/subarrays-with-k-different-integers/
 
 func subarraysWithKDistinct(nums []int, k int) int {
-	var atMost = func(k int) int {
-		var count = make(map[int]int)
-		var result = 0
-		var start = 0
+	atMost := func(k int) int {
+		count := make(map[int]int)
+		result := 0
+		start := 0
 		for end := range nums {
 			count[nums[end]]++
 			for len(count) > k {

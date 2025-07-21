@@ -7,7 +7,7 @@ func findWords(board [][]byte, words []string) []string {
 		word     string
 		children [26]*node
 	}
-	var insert = func(curr *node, word *string) {
+	insert := func(curr *node, word *string) {
 		for _, c := range *word {
 			c -= 'a'
 			if curr.children[c] == nil {
@@ -17,7 +17,7 @@ func findWords(board [][]byte, words []string) []string {
 		}
 		curr.word = *word
 	}
-	var m, n = len(board), len(board[0])
+	m, n := len(board), len(board[0])
 	var dfs func(row int, col int, curr *node, result *[]string)
 	dfs = func(row int, col int, curr *node, result *[]string) {
 		letter := board[row][col]
@@ -45,11 +45,11 @@ func findWords(board [][]byte, words []string) []string {
 		board[row][col] = letter
 	}
 
-	var root = &node{}
+	root := &node{}
 	for _, word := range words {
 		insert(root, &word)
 	}
-	var result = make([]string, 0)
+	result := make([]string, 0)
 	for row := 0; row < m; row++ {
 		for col := 0; col < n; col++ {
 			dfs(row, col, root, &result)

@@ -7,8 +7,8 @@ import "unicode"
 // Time: O(N)
 // Space: O(N)
 func capitalizeTitle(title string) string {
-	var result = []rune(title)
-	var start, n = 0, len(result)
+	result := []rune(title)
+	start, n := 0, len(result)
 	for idx := 0; idx <= n; idx++ {
 		if idx == n || result[idx] == ' ' {
 			if idx-start > 2 {

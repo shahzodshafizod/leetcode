@@ -5,8 +5,8 @@ package greedy
 // time: O(n)
 // space: O(52) = O(1)
 func longestPalindrome(s string) int {
-	var seen = make(map[rune]bool)
-	var length = 0
+	seen := make(map[rune]bool)
+	length := 0
 	for _, c := range s {
 		if seen[c] {
 			length += 2

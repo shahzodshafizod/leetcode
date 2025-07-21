@@ -6,7 +6,7 @@ package bits
 // Time: O(n)
 // Space: O(1)
 func subsetXORSum(nums []int) int {
-	var total = 0
+	total := 0
 	for _, num := range nums {
 		total |= num
 	}

@@ -11,8 +11,8 @@ import (
 // Time: O(nlogn + c), n=len(nums), c=max(cost[i])
 // Space: O(n)
 func minCost(nums []int, cost []int) int64 {
-	var n = len(nums)
-	var indices = make([]int, n)
+	n := len(nums)
+	indices := make([]int, n)
 	for idx := range indices {
 		indices[idx] = idx
 	}
@@ -29,7 +29,7 @@ func minCost(nums []int, cost []int) int64 {
 		postMult -= int64(nums[idx] * cost[idx])
 		preCost += int64(cost[idx])
 		postCost -= int64(cost[idx])
-		var total = int64(nums[idx])*preCost - preMult
+		total := int64(nums[idx])*preCost - preMult
 		total += postMult - int64(nums[idx])*postCost
 		minTotal = min(minTotal, total)
 	}

@@ -5,14 +5,14 @@ package maths
 // Time: O(n)
 // Space: O(n)
 func getPermutation(n int, k int) string {
-	var nums = make([]int, n)
-	var factorial = 1
+	nums := make([]int, n)
+	factorial := 1
 	for idx := 1; idx <= n; idx++ {
 		nums[idx-1] = idx
 		factorial *= idx
 	}
 	k--
-	var permutation = make([]byte, 0, n)
+	permutation := make([]byte, 0, n)
 	for n > 0 {
 		factorial /= n
 		idx := k / factorial

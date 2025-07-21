@@ -6,9 +6,9 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 
 // Prefix Sum + Hash Table
 func removeZeroSumSublists(head *pkg.ListNode) *pkg.ListNode {
-	var dummy = &pkg.ListNode{Next: head}
-	var sum = 0
-	var hashset = make(map[int]*pkg.ListNode)
+	dummy := &pkg.ListNode{Next: head}
+	sum := 0
+	hashset := make(map[int]*pkg.ListNode)
 	var start, node *pkg.ListNode
 	for end := dummy; end != nil; end = end.Next {
 		sum += end.Val

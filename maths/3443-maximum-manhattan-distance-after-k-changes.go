@@ -6,9 +6,9 @@ package maths
 // Time: O(n)
 // Space: O(1)
 func maxDistance(s string, k int) int {
-	var distance = 0
+	distance := 0
 	var x, y int
-	var lat, lon = 0, 0
+	lat, lon := 0, 0
 	for idx, c := range s {
 		switch c {
 		case 'E':

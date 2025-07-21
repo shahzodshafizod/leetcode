@@ -6,12 +6,12 @@ package dp
 // Time: O(nn)
 // Space: O(n)
 func paintWalls(cost []int, time []int) int {
-	var n = len(cost)
-	var dp = make([][]int, n+1)
+	n := len(cost)
+	dp := make([][]int, n+1)
 	for idx := range dp {
 		dp[idx] = make([]int, n+1)
 	}
-	var curr, next = make([]int, n+1), make([]int, n+1)
+	curr, next := make([]int, n+1), make([]int, n+1)
 	for walls := 1; walls <= n; walls++ {
 		curr[walls] = 1e9
 	}

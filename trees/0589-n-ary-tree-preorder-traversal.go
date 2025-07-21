@@ -6,13 +6,13 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 
 // BFS
 func preorder(root *pkg.NTreeNode) []int {
-	var values = make([]int, 0)
-	var stack = make([]*pkg.NTreeNode, 0)
+	values := make([]int, 0)
+	stack := make([]*pkg.NTreeNode, 0)
 	if root != nil {
 		stack = append(stack, root)
 	}
 	for length := len(stack); length > 0; length = len(stack) {
-		var top = stack[length-1]
+		top := stack[length-1]
 		stack = stack[:length-1]
 		values = append(values, top.Val)
 		for i := len(top.Children) - 1; i >= 0; i-- {

@@ -11,9 +11,9 @@ import (
 // Time: O(7! * n)
 // Space: O(7!)
 func longestSubsequenceRepeatedK(s string, k int) string {
-	var calcCount = func(subseq []rune) int {
-		var i, n = 0, len(subseq)
-		var count = 0
+	calcCount := func(subseq []rune) int {
+		i, n := 0, len(subseq)
+		count := 0
 		for _, c := range s {
 			if c == subseq[i] {
 				i++
@@ -25,7 +25,7 @@ func longestSubsequenceRepeatedK(s string, k int) string {
 		}
 		return count
 	}
-	var count = make(map[rune]int)
+	count := make(map[rune]int)
 	for _, c := range s {
 		count[c]++
 	}
@@ -37,13 +37,13 @@ func longestSubsequenceRepeatedK(s string, k int) string {
 	}
 	slices.Sort(candidates)
 	var queue list.List
-	var subseq = ""
+	subseq := ""
 	queue.PushBack(subseq)
 	for queue.Len() > 0 {
 		subseq = queue.Remove(queue.Front()).(string)
-		var nexts = []rune(subseq)
+		nexts := []rune(subseq)
 		nexts = append(nexts, ' ')
-		var n = len(nexts)
+		n := len(nexts)
 		for _, c := range candidates {
 			nexts[n-1] = c
 			if calcCount(nexts) >= k {

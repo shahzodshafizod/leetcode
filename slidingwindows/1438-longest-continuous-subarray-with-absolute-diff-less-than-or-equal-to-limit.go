@@ -12,27 +12,27 @@ func longestSubarray(nums []int, limit int) int {
 		end     int
 		compare func(a int, b int) bool
 	}
-	var expand = func(m *monoqueue, idx int) {
+	expand := func(m *monoqueue, idx int) {
 		for m.end >= m.start && !m.compare(nums[m.indices[m.end]], nums[idx]) {
 			m.end--
 		}
 		m.end++
 		m.indices[m.end] = idx
 	}
-	var shrink = func(m *monoqueue, idx int) {
+	shrink := func(m *monoqueue, idx int) {
 		for m.start < m.end && m.indices[m.start] < idx {
 			m.start++
 		}
 	}
-	var first = func(m *monoqueue) int {
+	first := func(m *monoqueue) int {
 		return m.indices[m.start]
 	}
 
-	var n = len(nums)
-	var monoqinc = &monoqueue{make([]int, n), 0, 0, func(a, b int) bool { return a < b }}
-	var monoqdec = &monoqueue{make([]int, n), 0, 0, func(a, b int) bool { return a > b }}
-	var start = 0
-	var size = 0
+	n := len(nums)
+	monoqinc := &monoqueue{make([]int, n), 0, 0, func(a, b int) bool { return a < b }}
+	monoqdec := &monoqueue{make([]int, n), 0, 0, func(a, b int) bool { return a > b }}
+	start := 0
+	size := 0
 	for end := range nums { // O(n)
 		expand(monoqinc, end) // O(+n)
 		expand(monoqdec, end) // O(+n)

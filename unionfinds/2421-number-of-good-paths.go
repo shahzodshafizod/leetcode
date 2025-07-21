@@ -8,14 +8,14 @@ import "sort"
 // Time: O(nlogn)
 // Space: O(n)
 func numberOfGoodPaths(vals []int, edges [][]int) int {
-	var n = len(vals)
-	var parent = make([]int, n)
-	var count = make([]int, n)
+	n := len(vals)
+	parent := make([]int, n)
+	count := make([]int, n)
 	for idx := range parent {
 		parent[idx] = idx
 		count[idx] = 1
 	}
-	var find = func(x int) int {
+	find := func(x int) int {
 		for parent[x] != x {
 			parent[x] = parent[parent[x]]
 			x = parent[x]
@@ -26,7 +26,7 @@ func numberOfGoodPaths(vals []int, edges [][]int) int {
 		return max(vals[edges[i][0]], vals[edges[i][1]]) < max(vals[edges[j][0]], vals[edges[j][1]])
 	})
 	var px, py int
-	var result = n
+	result := n
 	for _, edge := range edges {
 		px = find(edge[0])
 		py = find(edge[1])

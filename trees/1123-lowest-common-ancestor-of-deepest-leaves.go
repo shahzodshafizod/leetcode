@@ -13,8 +13,8 @@ func lcaDeepestLeaves(root *pkg.TreeNode) *pkg.TreeNode {
 		if node == nil {
 			return nil, 0
 		}
-		var lanc, lheight = dfs(node.Left)
-		var ranc, rheight = dfs(node.Right)
+		lanc, lheight := dfs(node.Left)
+		ranc, rheight := dfs(node.Right)
 		if lheight == rheight {
 			return node, lheight + 1
 		}
@@ -23,6 +23,6 @@ func lcaDeepestLeaves(root *pkg.TreeNode) *pkg.TreeNode {
 		}
 		return ranc, rheight + 1
 	}
-	var anc, _ = dfs(root)
+	anc, _ := dfs(root)
 	return anc
 }

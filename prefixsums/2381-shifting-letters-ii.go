@@ -6,7 +6,7 @@ package prefixsums
 // Time: O(n+m), n=len(s), m=len(shifts)
 // Space: O(n)
 func shiftingLetters(s string, shifts [][]int) string {
-	var line = make([]int, len(s)+1)
+	line := make([]int, len(s)+1)
 	var direction int
 	for idx := range shifts {
 		direction = shifts[idx][2]
@@ -16,8 +16,8 @@ func shiftingLetters(s string, shifts [][]int) string {
 		line[shifts[idx][0]] += direction
 		line[shifts[idx][1]+1] -= direction
 	}
-	var delta = 0
-	var b = []byte(s)
+	delta := 0
+	b := []byte(s)
 	var code int
 	for idx := range b {
 		delta += line[idx]

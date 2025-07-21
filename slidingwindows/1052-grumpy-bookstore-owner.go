@@ -5,9 +5,9 @@ package slidingwindows
 // time: O(n)
 // space: O(1)
 func maxSatisfied(customers []int, grumpy []int, minutes int) int {
-	var start = 0
-	var window, maxWindow = 0, 0
-	var satisfied = 0
+	start := 0
+	window, maxWindow := 0, 0
+	satisfied := 0
 	for end := range grumpy {
 		if grumpy[end] == 1 {
 			window += customers[end]

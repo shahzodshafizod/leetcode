@@ -29,8 +29,8 @@ import "sort"
 // time: O(nlogn + mlogm)
 // space: O(2n) = O(n)
 func maxProfitAssignment(difficulty []int, profit []int, worker []int) int {
-	var n = len(difficulty)
-	var jobProfile = make([][2]int, n)
+	n := len(difficulty)
+	jobProfile := make([][2]int, n)
 	for idx := 0; idx < n; idx++ {
 		jobProfile[idx][0] = difficulty[idx]
 		jobProfile[idx][1] = profit[idx]
@@ -39,8 +39,8 @@ func maxProfitAssignment(difficulty []int, profit []int, worker []int) int {
 		return jobProfile[i][0] < jobProfile[j][0]
 	})
 	sort.Ints(worker) // O(m log m)
-	var netProfit = 0
-	var idx, maxProfit = 0, 0
+	netProfit := 0
+	idx, maxProfit := 0, 0
 	for _, ability := range worker { // O(max(m,n))
 		for idx < n && jobProfile[idx][0] <= ability {
 			maxProfit = max(maxProfit, jobProfile[idx][1])

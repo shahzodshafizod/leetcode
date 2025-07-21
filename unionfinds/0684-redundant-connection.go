@@ -6,8 +6,8 @@ package unionfinds
 // Time: O(N⋅α(N))
 // Space: O(n)
 func findRedundantConnection(edges [][]int) []int {
-	var n = len(edges)
-	var parent = make([]int, n+1)
+	n := len(edges)
+	parent := make([]int, n+1)
 	for node := 0; node <= n; node++ {
 		parent[node] = node
 	}
@@ -18,7 +18,7 @@ func findRedundantConnection(edges [][]int) []int {
 		}
 		return parent[x]
 	}
-	var union = func(x int, y int) bool {
+	union := func(x int, y int) bool {
 		px := find(x)
 		py := find(y)
 		if px == py {

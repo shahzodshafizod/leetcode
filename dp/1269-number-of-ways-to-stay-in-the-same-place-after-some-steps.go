@@ -7,7 +7,7 @@ package dp
 // Space: O(min(S,A))
 func numWays(steps int, arrLen int) int {
 	arrLen = min(arrLen, steps) // cannot move further than "steps" steps
-	var prev, curr = make([]int, arrLen), make([]int, arrLen)
+	prev, curr := make([]int, arrLen), make([]int, arrLen)
 	curr[0] = 1
 	const MOD int = 1e9 + 7
 	for st := 1; st <= steps; st++ {

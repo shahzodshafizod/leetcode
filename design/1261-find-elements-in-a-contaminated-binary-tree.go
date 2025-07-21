@@ -9,11 +9,11 @@ type FindElements struct {
 }
 
 func NewFindElements(root *pkg.TreeNode) FindElements {
-	var values = make(map[int]struct{})
+	values := make(map[int]struct{})
 	root.Val = 0
-	var queue = []*pkg.TreeNode{root}
+	queue := []*pkg.TreeNode{root}
 	for len(queue) > 0 {
-		var next = make([]*pkg.TreeNode, 0)
+		next := make([]*pkg.TreeNode, 0)
 		for _, node := range queue {
 			values[node.Val] = struct{}{}
 			if node.Left != nil {
@@ -31,7 +31,7 @@ func NewFindElements(root *pkg.TreeNode) FindElements {
 }
 
 func (f *FindElements) Find(target int) bool {
-	var _, found = f.values[target]
+	_, found := f.values[target]
 	return found
 }
 

@@ -5,16 +5,16 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 // https://leetcode.com/problems/distribute-coins-in-binary-tree/
 
 func distributeCoins(root *pkg.TreeNode) int {
-	var abs = func(n int) int {
+	abs := func(n int) int {
 		if n < 0 {
 			return -n
 		}
 		return n
 	}
-	var moves = 0
+	moves := 0
 	var dfs func(node *pkg.TreeNode) int
 	dfs = func(node *pkg.TreeNode) int {
-		var left, right = 0, 0
+		left, right := 0, 0
 		if node.Left != nil {
 			left = dfs(node.Left)
 		}

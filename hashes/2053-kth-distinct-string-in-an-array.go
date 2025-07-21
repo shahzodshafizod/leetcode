@@ -6,7 +6,7 @@ package hashes
 // Time: O(N)
 // Space: O(N)
 func kthDistinct(arr []string, k int) string {
-	var count = make(map[string]int)
+	count := make(map[string]int)
 	for _, s := range arr {
 		count[s]++
 	}

@@ -18,8 +18,8 @@ dp[n][k] - # of arrays with k inverse pairs, given n elements
 // Space: O(K)
 func kInversePairs(n int, k int) int {
 	const MOD int = 1e9 + 7
-	var prev = make([]int, k+1)
-	var curr = make([]int, k+1)
+	prev := make([]int, k+1)
+	curr := make([]int, k+1)
 	curr[0] = 1
 	var total int
 	for ni := 1; ni <= n; ni++ {

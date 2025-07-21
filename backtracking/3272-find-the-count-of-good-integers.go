@@ -4,7 +4,7 @@ package backtracking
 
 func countGoodIntegers(n int, k int) int64 {
 	// 1. collecting all k-palindromic integer containing n digits
-	var palindromes = make(map[int]struct{})
+	palindromes := make(map[int]struct{})
 	var backtrack func(number int, digit int, left int, right int)
 	backtrack = func(number int, digit int, left int, right int) {
 		if left < right {
@@ -39,7 +39,7 @@ func countGoodIntegers(n int, k int) int64 {
 			backtrack(number, digit+1, left, right)
 		}
 	}
-	var left = 1
+	left := 1
 	for idx := n - 1; idx > 0; idx-- {
 		left *= 10
 	}

@@ -37,7 +37,7 @@ Step 2: Write out some test cases
 
 func countNodes(root *pkg.TreeNode) int {
 	// find the tree height
-	var height = 0
+	height := 0
 	for node := root; node != nil; node = node.Left {
 		height++
 	}
@@ -45,7 +45,7 @@ func countNodes(root *pkg.TreeNode) int {
 		return height
 	}
 
-	var rightHeight = 0
+	rightHeight := 0
 	for node := root; node != nil; node = node.Right {
 		rightHeight++
 	}
@@ -55,11 +55,11 @@ func countNodes(root *pkg.TreeNode) int {
 		return int(math.Pow(2, float64(height))) - 1
 	}
 
-	var count = int(math.Pow(2, float64(height-1))) - 1
+	count := int(math.Pow(2, float64(height-1))) - 1
 
-	var optimalRoot, left, right = root, 0, count
+	optimalRoot, left, right := root, 0, count
 	for left < right {
-		var index = int(math.Ceil(float64(left+right) / 2))
+		index := int(math.Ceil(float64(left+right) / 2))
 
 		// find the current node
 		currentNode := optimalRoot

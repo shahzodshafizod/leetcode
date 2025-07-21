@@ -5,17 +5,17 @@ package slidingwindows
 // time: O(n)
 // space: O(1)
 func equalSubstring(s string, t string, maxCost int) int {
-	var getcost = func(idx int) int {
-		var cost = int(s[idx]) - int(t[idx])
+	getcost := func(idx int) int {
+		cost := int(s[idx]) - int(t[idx])
 		if cost < 0 {
 			return -cost
 		}
 		return cost
 	}
-	var start = 0
-	var cost = 0
-	var maxlen = 0
-	var n = len(s)
+	start := 0
+	cost := 0
+	maxlen := 0
+	n := len(s)
 	for end := 0; end < n; end++ {
 		cost += getcost(end)
 		for cost > maxCost {

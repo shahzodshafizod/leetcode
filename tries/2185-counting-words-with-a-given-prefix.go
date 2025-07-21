@@ -8,7 +8,7 @@ import "strings"
 // Time: O(m*n), m=len(pref), n=len(words)
 // Space: O(1)
 func prefixCount(words []string, pref string) int {
-	var count = 0
+	count := 0
 	for _, word := range words {
 		if strings.HasPrefix(word, pref) {
 			count++

@@ -21,8 +21,8 @@ import (
 // time: O(k log n)
 // space: O(n)
 func findMaximizedCapital(k int, w int, profits []int, capital []int) int {
-	var maxHeap = pkg.NewHeap(make([]int, 0), func(x, y int) bool { return x > y })
-	var minHeap = pkg.NewHeap(
+	maxHeap := pkg.NewHeap(make([]int, 0), func(x, y int) bool { return x > y })
+	minHeap := pkg.NewHeap(
 		make([][2]int, 0),
 		func(x, y [2]int) bool {
 			if x[0] == y[0] {

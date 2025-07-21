@@ -8,11 +8,11 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 // Time: O(n), n=# of nodes
 // Space: O(w), w=width of tree
 func minDepth(root *pkg.TreeNode) int {
-	var queue = make([]*pkg.TreeNode, 0)
+	queue := make([]*pkg.TreeNode, 0)
 	if root != nil {
 		queue = append(queue, root)
 	}
-	var depth = 0
+	depth := 0
 	for size := len(queue); size > 0; size = len(queue) {
 		depth++
 		for idx := 0; idx < size; idx++ {

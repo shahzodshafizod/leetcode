@@ -3,7 +3,7 @@ package hashes
 // https://leetcode.com/problems/number-of-equivalent-domino-pairs/
 
 func numEquivDominoPairs(dominoes [][]int) int {
-	var count = make(map[int]int)
+	count := make(map[int]int)
 	var a, b, key int
 	var total int
 	for idx := range dominoes {

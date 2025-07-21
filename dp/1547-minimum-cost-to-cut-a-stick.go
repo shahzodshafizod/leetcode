@@ -13,8 +13,8 @@ import (
 func minCost(n int, cuts []int) int {
 	cuts = append(cuts, 0, n)
 	sort.Ints(cuts)
-	var m = len(cuts)
-	var dp = make([][]int, m)
+	m := len(cuts)
+	dp := make([][]int, m)
 	for idx := range dp {
 		dp[idx] = make([]int, m)
 	}

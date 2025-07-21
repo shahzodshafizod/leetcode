@@ -19,21 +19,22 @@ it means the second remains the same, but the first changes
 // Time: O(n + mm), m=5
 // Space: O(n)
 func maxDifference(s string, k int) int {
-	var getStat = func(a int, b int) int {
+	getStat := func(a int, b int) int {
 		return ((a & 1) << 1) + (b & 1)
 	}
-	var n = len(s)
-	var calcDifference = func(a byte, b byte) int {
-		var best = [4]int{0, n, n, n}
-		var bestB = [4]int{0, n, n, n}
-		var cnta, cntb = 0, 0
-		var preva, prevb = 0, 0
+	n := len(s)
+	calcDifference := func(a byte, b byte) int {
+		best := [4]int{0, n, n, n}
+		bestB := [4]int{0, n, n, n}
+		cnta, cntb := 0, 0
+		preva, prevb := 0, 0
 		var stat, prevStat, prevDiff int
-		var maxDiff = -n
+		maxDiff := -n
 		for idx := 0; idx < n; idx++ {
-			if s[idx] == a {
+			switch s[idx] {
+			case a:
 				cnta++
-			} else if s[idx] == b {
+			case b:
 				cntb++
 			}
 			if idx+1 >= k {
@@ -43,9 +44,10 @@ func maxDifference(s string, k int) int {
 					maxDiff = max(maxDiff, cnta-cntb-best[stat])
 				}
 				// slide window to right
-				if s[idx+1-k] == a {
+				switch s[idx+1-k] {
+				case a:
 					preva++
-				} else if s[idx+1-k] == b {
+				case b:
 					prevb++
 				}
 				prevStat = getStat(preva, prevb)
@@ -58,8 +60,8 @@ func maxDifference(s string, k int) int {
 		}
 		return maxDiff
 	}
-	var vals = [5]byte{'0', '1', '2', '3', '4'}
-	var maxDiff = -n
+	vals := [5]byte{'0', '1', '2', '3', '4'}
+	maxDiff := -n
 	for _, a := range vals {
 		for _, b := range vals {
 			if a != b {

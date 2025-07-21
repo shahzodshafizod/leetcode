@@ -6,12 +6,12 @@ package dp
 // Time: O(n)
 // Space: O(n)
 func maxSumOfThreeSubarrays(nums []int, k int) []int {
-	var n = len(nums)
-	var sums = make([]int, n)
+	n := len(nums)
+	sums := make([]int, n)
 	for idx := 0; idx < k; idx++ {
 		sums[0] += nums[idx]
 	}
-	var right = make([][2]int, n) // {sum, start_idx}
+	right := make([][2]int, n) // {sum, start_idx}
 	right[0][0] = sums[0]
 	for idx := 1; idx <= n-k; idx++ {
 		sums[idx] = sums[idx-1] - nums[idx-1] + nums[idx+k-1]
@@ -25,8 +25,8 @@ func maxSumOfThreeSubarrays(nums []int, k int) []int {
 			right[idx] = right[idx+1]
 		}
 	}
-	var total, indices = 0, []int{}
-	var left, lid = 0, -1
+	total, indices := 0, []int{}
+	left, lid := 0, -1
 	for idx := k; idx <= n-2*k; idx++ {
 		if sums[idx-k] > left {
 			left = sums[idx-k]

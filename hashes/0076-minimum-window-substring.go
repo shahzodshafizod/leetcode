@@ -6,15 +6,15 @@ func minWindow(s string, t string) string {
 	if len(t) > len(s) {
 		return ""
 	}
-	var hash = make(map[rune]int)
-	var table = make(map[rune]int)
+	hash := make(map[rune]int)
+	table := make(map[rune]int)
 	for _, r := range t {
 		table[r]++
 	}
-	var count = len(table)
-	var minLength = 0
+	count := len(table)
+	minLength := 0
 	var window string
-	var leftIndex = 0
+	leftIndex := 0
 	for index, r := range s {
 		if miqdor := table[r]; miqdor > 0 {
 			hash[r]++
@@ -24,7 +24,7 @@ func minWindow(s string, t string) string {
 			if count == 0 {
 				rightIndex := index
 				for ; leftIndex < rightIndex; leftIndex++ {
-					var key = rune(s[leftIndex])
+					key := rune(s[leftIndex])
 					if count, exists := hash[key]; exists {
 						if count == table[key] {
 							break

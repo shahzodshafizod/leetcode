@@ -8,8 +8,8 @@ package graphs
 // Time: O(N * M^2)
 // Space: O(N*M)
 func ladderLength(beginWord string, endWord string, wordList []string) int {
-	var adjList = make(map[string][]string)
-	var exists = false
+	adjList := make(map[string][]string)
+	exists := false
 	var pattern []byte
 	var c byte
 	wordList = append(wordList, beginWord)
@@ -26,18 +26,18 @@ func ladderLength(beginWord string, endWord string, wordList []string) int {
 	if !exists {
 		return 0
 	}
-	var n = len(wordList)
-	var queue = make([]string, n)
+	n := len(wordList)
+	queue := make([]string, n)
 	queue[0] = beginWord
-	var head, tail = 0, 0
-	var visited = make(map[string]bool)
+	head, tail := 0, 0
+	visited := make(map[string]bool)
 	visited[beginWord] = true
-	var steps = 0
+	steps := 0
 	for head <= tail {
 		steps++
-		var end = tail
+		end := tail
 		for head <= end {
-			var word = queue[head]
+			word := queue[head]
 			head++
 			if word == endWord {
 				return steps

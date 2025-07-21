@@ -5,12 +5,12 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 // https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
 
 func buildTree(preorder []int, inorder []int) *pkg.TreeNode {
-	var indices = make(map[int]int)
+	indices := make(map[int]int)
 	for idx, val := range inorder {
 		indices[val] = idx
 	}
 	var buildTreeRecur func(left, right int) *pkg.TreeNode
-	var idx = 0
+	idx := 0
 	buildTreeRecur = func(left, right int) *pkg.TreeNode {
 		if left > right {
 			return nil

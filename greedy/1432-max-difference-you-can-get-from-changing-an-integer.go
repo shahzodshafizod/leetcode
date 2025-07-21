@@ -6,7 +6,7 @@ package greedy
 // Space: O(1)
 func maxDiff(num int) int {
 	var digit int
-	var zero, non0and1, nine = 0, 0, 9
+	zero, non0and1, nine := 0, 0, 9
 	for tmp := num; tmp > 0; tmp /= 10 {
 		digit = tmp % 10
 		zero = digit
@@ -28,8 +28,8 @@ func maxDiff(num int) int {
 		zeros[non0and1] = 0
 	}
 	nines[nine] = 9
-	var max, min = 0, 0
-	var decimal = 1
+	max, min := 0, 0
+	decimal := 1
 	for tmp := num; tmp > 0; tmp /= 10 {
 		digit = tmp % 10
 		max += nines[digit] * decimal

@@ -10,14 +10,14 @@ func recoverArray(n int, sums []int) []int {
 	sort.Ints(sums)
 	var num, exclude int
 	var positive bool
-	var ans = make([]int, 0, n)
+	ans := make([]int, 0, n)
 	for length := len(sums); length >= 2; length = len(sums) {
-		var count = make(map[int]int)
+		count := make(map[int]int)
 		for _, sum := range sums {
 			count[sum]++
 		}
-		var including = make([]int, 0, length/2)
-		var excluding = make([]int, 0, length/2)
+		including := make([]int, 0, length/2)
+		excluding := make([]int, 0, length/2)
 		num = sums[length-1] - sums[length-2] // OR sums[1] - sums[0]
 		positive = false
 		for _, include := range sums {

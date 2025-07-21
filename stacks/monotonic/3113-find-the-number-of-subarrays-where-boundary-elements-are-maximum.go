@@ -4,8 +4,8 @@ package monotonic
 
 func numberOfSubarrays(nums []int) int64 {
 	var count int64 = 0
-	var stack = make([][2]int, len(nums))
-	var size = 0
+	stack := make([][2]int, len(nums))
+	size := 0
 	for _, num := range nums {
 		for size > 0 && stack[size-1][0] < num {
 			size--

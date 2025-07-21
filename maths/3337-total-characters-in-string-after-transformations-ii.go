@@ -7,7 +7,7 @@ package maths
 // Space: O(26^2)
 func lengthAfterTransformations(s string, t int, nums []int) int {
 	const MOD int = 1e9 + 7
-	var multiply = func(a, b [26][26]int) [26][26]int {
+	multiply := func(a, b [26][26]int) [26][26]int {
 		var c [26][26]int
 		for i := 0; i < 26; i++ {
 			for j := 0; j < 26; j++ {
@@ -20,7 +20,7 @@ func lengthAfterTransformations(s string, t int, nums []int) int {
 		}
 		return c
 	}
-	var powMatrix = func(base [26][26]int, exp int) [26][26]int {
+	powMatrix := func(base [26][26]int, exp int) [26][26]int {
 		// identity matrix
 		var res [26][26]int
 		for i := 0; i < 26; i++ {
@@ -40,8 +40,8 @@ func lengthAfterTransformations(s string, t int, nums []int) int {
 			transformation[(i+j)%26][i] = 1
 		}
 	}
-	var final = powMatrix(transformation, t)
-	var res = 0
+	final := powMatrix(transformation, t)
+	res := 0
 	var letter, rowSum int
 	for _, c := range s {
 		letter = int(c - 'a')

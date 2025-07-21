@@ -9,9 +9,9 @@ package arrays
 // time: O(2n) = O(n)
 // space: O(1)
 func productExceptSelf(nums []int) []int {
-	var len = len(nums)
-	var answer = make([]int, len)
-	var product = 1
+	len := len(nums)
+	answer := make([]int, len)
+	product := 1
 	for idx := 0; idx < len; idx++ { // from left to right
 		answer[idx] = product
 		product *= nums[idx]

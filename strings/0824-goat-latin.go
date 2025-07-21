@@ -5,7 +5,7 @@ import "strings"
 // https://leetcode.com/problems/goat-latin/
 
 func toGoatLatin(sentence string) string {
-	var isVowel = map[byte]bool{
+	isVowel := map[byte]bool{
 		'a': true, 'e': true, 'i': true, 'o': true, 'u': true,
 		'A': true, 'E': true, 'I': true, 'O': true, 'U': true,
 	}

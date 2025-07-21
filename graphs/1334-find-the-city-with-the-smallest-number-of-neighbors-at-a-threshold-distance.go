@@ -6,7 +6,7 @@ package graphs
 // Time: O(N^3)
 // Space: O(N^2)
 func findTheCity(n int, edges [][]int, distanceThreshold int) int {
-	var adjMatrix = make([][]int, n)
+	adjMatrix := make([][]int, n)
 	for from := range adjMatrix {
 		adjMatrix[from] = make([]int, n)
 		for to := range adjMatrix[from] {
@@ -34,7 +34,7 @@ func findTheCity(n int, edges [][]int, distanceThreshold int) int {
 	}
 	// Determine the city with the fewest number of
 	// reachable cities within the adjMatrix threshold
-	var city, minConnections = 0, n
+	city, minConnections := 0, n
 	var connections int
 	for from := n - 1; from >= 0; from-- {
 		connections = 0

@@ -6,12 +6,12 @@ package dp
 // Time: O(N^3)
 // Space: O(N^2)
 func maxCoins(nums []int) int {
-	var n = len(nums) + 2
-	var bordered = make([]int, n)
+	n := len(nums) + 2
+	bordered := make([]int, n)
 	copy(bordered[1:], nums)
 	nums = bordered
 	nums[0], nums[n-1] = 1, 1
-	var dp = make([][]int, n)
+	dp := make([][]int, n)
 	for idx := range dp {
 		dp[idx] = make([]int, n)
 	}

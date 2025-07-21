@@ -6,8 +6,8 @@ package maths
 // Space: O(1)
 func kMirror(k int, n int) int64 {
 	var digits [100]int64
-	var isBaseKMirror = func(num int64) bool {
-		var right = -1
+	isBaseKMirror := func(num int64) bool {
+		right := -1
 		for ; num > 0; num /= int64(k) {
 			right++
 			digits[right] = num % int64(k)

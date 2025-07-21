@@ -17,8 +17,8 @@ func TestPostorderTraversal(t *testing.T) {
 		{vals: []any{}, order: []int{}},
 		{vals: []any{1}, order: []int{1}},
 	} {
-		var root = pkg.MakeTree(0, tc.vals)
-		var order = postorderTraversal(root)
+		root := pkg.MakeTree(0, tc.vals)
+		order := postorderTraversal(root)
 		assert.Equal(t, tc.order, order)
 	}
 }

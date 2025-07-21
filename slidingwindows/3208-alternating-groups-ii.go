@@ -5,9 +5,9 @@ package slidingwindows
 // Time: O(N)
 // Space: O(1)
 func numberOfAlternatingGroups(colors []int, k int) int {
-	var groups, tails = 0, 1
-	var n = len(colors)
-	var next = (n + k - 2) % n
+	groups, tails := 0, 1
+	n := len(colors)
+	next := (n + k - 2) % n
 	var curr int
 	for idx := n + k - 3; idx >= 0; idx-- {
 		curr = idx % n

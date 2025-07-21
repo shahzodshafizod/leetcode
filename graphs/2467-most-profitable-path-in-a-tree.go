@@ -8,8 +8,8 @@ import "math"
 // Time: O(n)
 // Space: O(n)
 func mostProfitablePath(edges [][]int, bob int, amount []int) int {
-	var n = len(edges) + 1
-	var graph = make([][]int, n)
+	n := len(edges) + 1
+	graph := make([][]int, n)
 	var a, b int
 	for idx := range edges {
 		a, b = edges[idx][0], edges[idx][1]
@@ -19,8 +19,8 @@ func mostProfitablePath(edges [][]int, bob int, amount []int) int {
 	var dfs func(parent int, node int, adist int) (int, int)
 	// returns (alice profit, bob dist)
 	dfs = func(parent int, node int, adist int) (int, int) {
-		var profit = math.MinInt
-		var bdist = -1
+		profit := math.MinInt
+		bdist := -1
 		for _, nei := range graph[node] {
 			if nei != parent {
 				p, d := dfs(node, nei, adist+1)
@@ -44,6 +44,6 @@ func mostProfitablePath(edges [][]int, bob int, amount []int) int {
 		}
 		return profit, bdist
 	}
-	var profit, _ = dfs(-1, 0, 0)
+	profit, _ := dfs(-1, 0, 0)
 	return profit
 }

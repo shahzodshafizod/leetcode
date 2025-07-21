@@ -6,7 +6,7 @@ package hashes
 // Time: O(N)
 // Space: O(N)
 func distinctNames(ideas []string) int64 {
-	var suffixes = make(map[string][]int)
+	suffixes := make(map[string][]int)
 	var prefix int
 	var suffix string
 	var counts [26]int64

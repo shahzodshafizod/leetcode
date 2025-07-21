@@ -225,12 +225,10 @@ linters:
     - wsl_v5
     - zerologlint
 
-  # settings:
-  #   asasalint:
-  #     exclude:
-  #       - Append
-  #       - \.Wrapf
-  #     use-builtin-exclusions: false
+  settings:
+    lll:
+      tab-width: 1
+      line-length: 200
 
   # exclusions:
 

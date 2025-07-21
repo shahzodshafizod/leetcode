@@ -28,16 +28,16 @@ Step 2: Write out some test cases
 // https://leetcode.com/problems/walls-and-gates/
 
 func wallsAndGates(matrix [][]int) [][]int {
-	var m = len(matrix)
+	m := len(matrix)
 	if m == 0 {
 		return matrix
 	}
-	var n = len(matrix[0])
+	n := len(matrix[0])
 	if n == 0 {
 		return matrix
 	}
 
-	var directions = [4][2]int{{-1, 0}, {0, 1}, {1, 0}, {0, -1}} // up, right, down and left
+	directions := [4][2]int{{-1, 0}, {0, 1}, {1, 0}, {0, -1}} // up, right, down and left
 
 	for row := 0; row < m; row++ {
 		for col := 0; col < n; col++ {
@@ -50,14 +50,23 @@ func wallsAndGates(matrix [][]int) [][]int {
 	return matrix
 }
 
-func wallsAndGatesDFS(matrix [][]int, directions [4][2]int, m int, n int, row int, col int, steps int) {
+func wallsAndGatesDFS(
+	matrix [][]int,
+	directions [4][2]int,
+	m int,
+	n int,
+	row int,
+	col int,
+	steps int,
+) {
 	if steps > 0 {
 		matrix[row][col] = steps
 	}
 	steps++
 	for _, direction := range directions {
-		var r, c = row + direction[0], col + direction[1]
-		if r >= 0 && c >= 0 && r < m && c < n && matrix[r][c] != -1 && matrix[r][c] != 0 && matrix[r][c] > steps {
+		r, c := row+direction[0], col+direction[1]
+		if r >= 0 && c >= 0 && r < m && c < n && matrix[r][c] != -1 && matrix[r][c] != 0 &&
+			matrix[r][c] > steps {
 			wallsAndGatesDFS(matrix, directions, m, n, r, c, steps)
 		}
 	}

@@ -27,7 +27,7 @@ func isNStraightHand(hand []int, groupSize int) bool {
 	if len(hand)%groupSize != 0 {
 		return false
 	}
-	var count = make(map[int]int)
+	count := make(map[int]int)
 	for _, card := range hand { // O(n)
 		count[card]++
 	}

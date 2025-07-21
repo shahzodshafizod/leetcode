@@ -9,8 +9,8 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 // Space: O(n)
 func finalPrices(prices []int) []int {
 	var top *pkg.ListNode = nil // stack top
-	var n = len(prices)
-	var answer = make([]int, n)
+	n := len(prices)
+	answer := make([]int, n)
 	for idx, price := range prices {
 		answer[idx] = price
 		for top != nil && answer[top.Val] >= price {

@@ -8,8 +8,8 @@ import "container/list"
 // Time: O(v*(v+e)), v=# of vertices, e=# of edges
 // Space: O(v+e)
 func magnificentSets(n int, edges [][]int) int {
-	var parent = make([]int, n)
-	var depth = make([]int, n)
+	parent := make([]int, n)
+	depth := make([]int, n)
 	for node := 0; node < n; node++ {
 		parent[node] = node
 	}
@@ -20,7 +20,7 @@ func magnificentSets(n int, edges [][]int) int {
 		}
 		return parent[node]
 	}
-	var union = func(x int, y int) {
+	union := func(x int, y int) {
 		px, py := find(x), find(y)
 		if px == py {
 			return
@@ -33,7 +33,7 @@ func magnificentSets(n int, edges [][]int) int {
 			depth[px]++
 		}
 	}
-	var graph = make([][]int, n)
+	graph := make([][]int, n)
 	var a, b int
 	for idx := range edges {
 		a, b = edges[idx][0]-1, edges[idx][1]-1
@@ -42,21 +42,22 @@ func magnificentSets(n int, edges [][]int) int {
 		union(a, b) // groupping connected components
 	}
 	var curr, next int
-	var countGroups = func(src int) int {
-		var queue = list.New()
+	countGroups := func(src int) int {
+		queue := list.New()
 		queue.PushBack(src)
-		var layers = make([]int, n)
+		layers := make([]int, n)
 		layers[src] = 1
-		var layer = 0
+		layer := 0
 		for size := queue.Len(); size > 0; size = queue.Len() {
 			layer++
 			for ; size > 0; size-- {
 				curr = queue.Remove(queue.Front()).(int)
 				for _, next = range graph[curr] {
-					if layers[next] == 0 {
+					switch layers[next] {
+					case 0:
 						layers[next] = layer + 1
 						queue.PushBack(next)
-					} else if layers[next] == layer {
+					case layer:
 						return -1
 					}
 				}
@@ -64,7 +65,7 @@ func magnificentSets(n int, edges [][]int) int {
 		}
 		return layer
 	}
-	var groupCounts = make(map[int]int)
+	groupCounts := make(map[int]int)
 	var count, group int
 	for node := 0; node < n; node++ {
 		count = countGroups(node)
@@ -74,7 +75,7 @@ func magnificentSets(n int, edges [][]int) int {
 		group = find(node)
 		groupCounts[group] = max(groupCounts[group], count)
 	}
-	var groups = 0
+	groups := 0
 	for _, count = range groupCounts {
 		groups += count
 	}

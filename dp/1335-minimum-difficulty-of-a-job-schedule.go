@@ -6,18 +6,18 @@ package dp
 // Time: O(N*D)
 // Space: O(N)
 func minDifficulty(jobDifficulty []int, d int) int {
-	var n = len(jobDifficulty)
+	n := len(jobDifficulty)
 	if n < d {
 		return -1
 	}
-	var prev, curr = make([]int, n), make([]int, n)
+	prev, curr := make([]int, n), make([]int, n)
 	for idx := range curr {
 		curr[idx] = 300_001
 	}
 	for day := 0; day < d; day++ {
 		prev, curr = curr, prev
-		var stack = make([]int, 0)
-		var slen = 0
+		stack := make([]int, 0)
+		slen := 0
 		for idx := day; idx < n; idx++ {
 			curr[idx] = jobDifficulty[idx]
 			if idx > 0 {

@@ -8,18 +8,18 @@ import (
 // https://leetcode.com/problems/make-lexicographically-smallest-array-by-swapping-elements/
 
 func lexicographicallySmallestArray(nums []int, limit int) []int {
-	var abs = func(x int) int {
+	abs := func(x int) int {
 		if x < 0 {
 			return -x
 		}
 		return x
 	}
-	var sorted = make([]int, len(nums))
+	sorted := make([]int, len(nums))
 	copy(sorted, nums)
 	sort.Ints(sorted)
-	var groups = make([]*list.List, 0, 10)
-	var size = 0
-	var groupIndices = make(map[int]int, len(nums))
+	groups := make([]*list.List, 0, 10)
+	size := 0
+	groupIndices := make(map[int]int, len(nums))
 	for _, num := range sorted {
 		if size == 0 || abs(num-groups[size-1].Back().Value.(int)) > limit {
 			groups = append(groups, list.New())

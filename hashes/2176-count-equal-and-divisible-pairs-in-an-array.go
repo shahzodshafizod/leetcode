@@ -6,8 +6,8 @@ package hashes
 // Time: best: O(N); worst: O(NN)
 // Space: O(N)
 func countPairs(nums []int, k int) int {
-	var pairs = 0
-	var indices = make(map[int][]int)
+	pairs := 0
+	indices := make(map[int][]int)
 	for curr, num := range nums {
 		for _, prev := range indices[num] {
 			if prev*curr%k == 0 {

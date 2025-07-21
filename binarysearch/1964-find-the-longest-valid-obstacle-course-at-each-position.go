@@ -6,10 +6,10 @@ package binarysearch
 // Time: O(n log n)
 // Space: O(n)
 func longestObstacleCourseAtEachPosition(obstacles []int) []int {
-	var n = len(obstacles)
-	var lis = make([]int, n)
-	var size = 0
-	var ans = make([]int, 0, n)
+	n := len(obstacles)
+	lis := make([]int, n)
+	size := 0
+	ans := make([]int, 0, n)
 	var left, right, mid int
 	for _, obstacle := range obstacles {
 		left, right = 0, size

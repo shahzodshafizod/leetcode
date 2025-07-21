@@ -3,7 +3,7 @@ package binarysearch
 // https://leetcode.com/problems/maximum-candies-allocated-to-k-children/
 
 func maximumCandies(candies []int, k int64) int {
-	var canDivide = func(target int64) bool {
+	canDivide := func(target int64) bool {
 		var count int64 = 0
 		for _, candy := range candies {
 			count += int64(candy) / target

@@ -8,7 +8,7 @@ import "math"
 // Time: O(n)
 // Space: O(1)
 func minimumRecolors(blocks string, k int) int {
-	var res = math.MaxInt
+	res := math.MaxInt
 	ops, k := 0, k-1
 	for idx := range blocks {
 		if blocks[idx] == 'W' {

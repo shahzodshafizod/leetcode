@@ -6,31 +6,31 @@ package graphs
 // Time: O(E+2V) = O(E+V)
 // Space: O(E+3V) = O(E+V)
 func countCompleteComponents(n int, edges [][]int) int {
-	var graph = make([][]int, n)
+	graph := make([][]int, n)
 	var a, b int
 	for idx := range edges {
 		a, b = edges[idx][0], edges[idx][1]
 		graph[a] = append(graph[a], b)
 		graph[b] = append(graph[b], a)
 	}
-	var seen = make([]bool, n)
+	seen := make([]bool, n)
 	var dfs func(node int) []int
 	dfs = func(node int) []int {
 		if seen[node] {
 			return []int{}
 		}
 		seen[node] = true
-		var vertices = []int{node}
+		vertices := []int{node}
 		for _, nei := range graph[node] {
 			vertices = append(vertices, dfs(nei)...)
 		}
 		return vertices
 	}
 	var complete int
-	var count = 0
+	count := 0
 	for node := 0; node < n; node++ {
 		if !seen[node] {
-			var vertices = dfs(node)
+			vertices := dfs(node)
 			complete = 1
 			for _, v := range vertices {
 				if len(graph[v]) != len(vertices)-1 {

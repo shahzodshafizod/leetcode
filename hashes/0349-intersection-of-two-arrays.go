@@ -5,11 +5,11 @@ package hashes
 // time: O(n+m)
 // space: O(n)
 func intersection(nums1 []int, nums2 []int) []int {
-	var hashset = make(map[int]bool)
+	hashset := make(map[int]bool)
 	for _, num := range nums1 {
 		hashset[num] = true
 	}
-	var common = make([]int, 0)
+	common := make([]int, 0)
 	for _, num := range nums2 {
 		if hashset[num] {
 			common = append(common, num)

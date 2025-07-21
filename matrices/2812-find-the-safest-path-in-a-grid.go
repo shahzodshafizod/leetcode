@@ -9,11 +9,11 @@ import (
 // https://leetcode.com/problems/find-the-safest-path-in-a-grid/
 
 func maximumSafenessFactor(grid [][]int) int {
-	var n = len(grid)
+	n := len(grid)
 	if grid[0][0]+grid[n-1][n-1] > 0 {
 		return 0
 	}
-	var queue = make([][3]int, 0, n*n)
+	queue := make([][3]int, 0, n*n)
 	for row := range grid {
 		for col := range grid[row] {
 			if grid[row][col] == 1 {
@@ -24,11 +24,11 @@ func maximumSafenessFactor(grid [][]int) int {
 			}
 		}
 	}
-	var inBound = func(row int, col int) bool {
+	inBound := func(row int, col int) bool {
 		return min(row, col) >= 0 && max(row, col) < n
 	}
-	var idx, length = 0, len(queue)
-	var directions = [5]int{0, 1, 0, -1, 0}
+	idx, length := 0, len(queue)
+	directions := [5]int{0, 1, 0, -1, 0}
 	var row, col, dist int
 	for length-idx > 0 {
 		for idx < length {
@@ -45,7 +45,7 @@ func maximumSafenessFactor(grid [][]int) int {
 		}
 		length = len(queue)
 	}
-	var pq = pkg.NewHeap(make([][3]int, 0), func(x, y [3]int) bool { return x[0] > y[0] })
+	pq := pkg.NewHeap(make([][3]int, 0), func(x, y [3]int) bool { return x[0] > y[0] })
 	heap.Push(pq, [3]int{grid[0][0], 0, 0})
 	grid[0][0] = -1
 	var top [3]int
@@ -58,8 +58,8 @@ func maximumSafenessFactor(grid [][]int) int {
 			return dist
 		}
 		for dir := 0; dir < 4; dir++ {
-			var r = row + directions[dir]
-			var c = col + directions[dir+1]
+			r := row + directions[dir]
+			c := col + directions[dir+1]
 			if inBound(r, c) && grid[r][c] > 0 {
 				grid[r][c] = min(dist, grid[r][c])
 				heap.Push(pq, [3]int{grid[r][c], r, c})

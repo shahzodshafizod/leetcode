@@ -8,13 +8,13 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 // Time: O(n)
 // Space: O(n)
 func recoverFromPreorder(traversal string) *pkg.TreeNode {
-	var n = len(traversal)
+	n := len(traversal)
 	var recover func(idx int, depth int) (*pkg.TreeNode, int)
 	recover = func(idx int, depth int) (*pkg.TreeNode, int) {
 		if idx >= n {
 			return nil, idx
 		}
-		var dashes = 0
+		dashes := 0
 		for idx < n && traversal[idx] == '-' {
 			idx++
 			dashes++
@@ -22,15 +22,15 @@ func recoverFromPreorder(traversal string) *pkg.TreeNode {
 		if dashes != depth {
 			return nil, idx - dashes
 		}
-		var val = 0
+		val := 0
 		for ; idx < n && traversal[idx] != '-'; idx++ {
 			val = val*10 + int(traversal[idx]-'0')
 		}
-		var node = &pkg.TreeNode{Val: val}
+		node := &pkg.TreeNode{Val: val}
 		node.Left, idx = recover(idx, depth+1)
 		node.Right, idx = recover(idx, depth+1)
 		return node, idx
 	}
-	var root, _ = recover(0, 0)
+	root, _ := recover(0, 0)
 	return root
 }

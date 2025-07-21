@@ -4,11 +4,11 @@ package queues
 
 func firstUniqChar(s string) int {
 	var unique [26][2]int
-	var n = len(s)
+	n := len(s)
 	for i, len := 0, n; i < len; i++ {
 		unique[s[i]-'a'] = [2]int{unique[s[i]-'a'][0] + 1, i}
 	}
-	var index = n
+	index := n
 	for _, item := range unique {
 		if item[0] == 1 && item[1] < index {
 			index = item[1]

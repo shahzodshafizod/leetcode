@@ -5,7 +5,7 @@ package arrays
 func sampleStats(count []int) []float64 {
 	var mi, ma int = -1, 256
 	var sum float64
-	var mode = [2]int{0, 0}
+	mode := [2]int{0, 0}
 	var leftCount, rightCount uint64
 	var mid int
 	left, right := 0, 255
@@ -30,8 +30,8 @@ func sampleStats(count []int) []float64 {
 			right--
 		}
 	}
-	var total = leftCount + rightCount
-	var half = total / 2
+	total := leftCount + rightCount
+	half := total / 2
 	var neighbor int
 	if leftCount == rightCount {
 		if mid == left {
@@ -54,8 +54,8 @@ func sampleStats(count []int) []float64 {
 	if total%2 == 0 {
 		med = float64(mid+neighbor) / 2
 	}
-	var mea = sum / float64(total)
-	var mo = float64(mode[1])
+	mea := sum / float64(total)
+	mo := float64(mode[1])
 	return []float64{float64(mi), float64(ma), mea, med, mo}
 }
 

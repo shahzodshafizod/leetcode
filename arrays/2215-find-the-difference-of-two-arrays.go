@@ -10,7 +10,7 @@ func findDifference(nums1 []int, nums2 []int) [][]int {
 	for _, num := range nums2 {
 		mask[num+1000] |= 2
 	}
-	var answer = make([][]int, 2)
+	answer := make([][]int, 2)
 	answer[0] = make([]int, 0)
 	answer[1] = make([]int, 0)
 	for num, mask := range mask {

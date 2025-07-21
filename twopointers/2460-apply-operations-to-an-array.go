@@ -6,7 +6,7 @@ package twopointers
 // Time: O(n)
 // Space: O(1)
 func applyOperations(nums []int) []int {
-	var n, left = len(nums), 0
+	n, left := len(nums), 0
 	for idx := 0; idx < n; idx++ {
 		if nums[idx] == 0 {
 			continue

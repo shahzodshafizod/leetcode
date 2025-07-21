@@ -50,7 +50,7 @@ func (b *bst) insert(curr *TreeNode, val int) *TreeNode {
 }
 
 func (b *bst) minNodeValue(curr *TreeNode) int {
-	var minNode = curr
+	minNode := curr
 	for minNode != nil && minNode.Left != nil {
 		minNode = minNode.Left
 	}

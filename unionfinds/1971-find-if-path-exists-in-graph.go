@@ -5,7 +5,7 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 // https://leetcode.com/problems/find-if-path-exists-in-graph/
 
 func validPath(n int, edges [][]int, source int, destination int) bool {
-	var uf = pkg.NewUnionFind(n)
+	uf := pkg.NewUnionFind(n)
 	for _, edge := range edges {
 		uf.Union(edge[0], edge[1])
 	}

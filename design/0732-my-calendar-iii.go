@@ -19,7 +19,7 @@ func (m *MyCalendarThree) Book(startTime int, endTime int) int {
 	m.addKey(endTime)   // O(N)
 	m.count[startTime]++
 	m.count[endTime]--
-	var overlap, maxOverlap = 0, 0
+	overlap, maxOverlap := 0, 0
 	for _, point := range m.points { // O(N)
 		overlap += m.count[point]
 		maxOverlap = max(maxOverlap, overlap)

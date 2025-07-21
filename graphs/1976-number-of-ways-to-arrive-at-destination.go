@@ -13,20 +13,20 @@ import (
 // Time: O((V+E)logV)
 // Space: O(V+E)
 func countPaths1976(n int, roads [][]int) int {
-	var dist = make([]int, n)
+	dist := make([]int, n)
 	for idx := 1; idx < n; idx++ {
 		dist[idx] = math.MaxInt
 	}
-	var count = make([]int, n)
+	count := make([]int, n)
 	count[0] = 1
-	var graph = make([][][2]int, n)
+	graph := make([][][2]int, n)
 	var u, v, t int
 	for _, road := range roads {
 		u, v, t = road[0], road[1], road[2]
 		graph[u] = append(graph[u], [2]int{v, t})
 		graph[v] = append(graph[v], [2]int{u, t})
 	}
-	var queue = pkg.NewHeap(
+	queue := pkg.NewHeap(
 		[][2]int{{0, 0}}, // node, time
 		func(x, y [2]int) bool { return x[1] < y[1] },
 	)

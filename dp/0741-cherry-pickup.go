@@ -8,9 +8,9 @@ package dp
 // Time: O(N^3)
 // Space: O(N^2)
 func cherryPickup(grid [][]int) int {
-	var n = len(grid)
-	var m = (n << 1) - 1 // 2*n-1: # of steps to reach (n-1,n-1)
-	var dp = make([][]int, n)
+	n := len(grid)
+	m := (n << 1) - 1 // 2*n-1: # of steps to reach (n-1,n-1)
+	dp := make([][]int, n)
 	for idx := range dp {
 		dp[idx] = make([]int, n)
 	}

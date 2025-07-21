@@ -6,7 +6,7 @@ package graphs
 // Time: O(mn), m=# of ROWS, n=# of COLS
 // Space: O(c), c=# of colors
 func isPrintable(targetGrid [][]int) bool {
-	var border = make(map[int][4]int)
+	border := make(map[int][4]int)
 	for row := range targetGrid { // O(m)
 		for col, color := range targetGrid[row] { // O(n)
 			if _, found := border[color]; !found {
@@ -21,7 +21,7 @@ func isPrintable(targetGrid [][]int) bool {
 			}
 		}
 	}
-	var seen = make(map[int]bool)
+	seen := make(map[int]bool)
 	var dfs func(row int, col int) bool // O(mn)
 	dfs = func(row int, col int) bool {
 		color := targetGrid[row][col]

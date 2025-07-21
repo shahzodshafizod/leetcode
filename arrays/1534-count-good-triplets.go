@@ -6,13 +6,13 @@ package arrays
 // Time: O(nnn)
 // Space: O(1)
 func countGoodTriplets(arr []int, a int, b int, c int) int {
-	var abs = func(x int) int {
+	abs := func(x int) int {
 		if x < 0 {
 			return -x
 		}
 		return x
 	}
-	var count, n = 0, len(arr)
+	count, n := 0, len(arr)
 	var i, j, k, x, y, z int
 	for i = 0; i < n; i++ {
 		x = arr[i]

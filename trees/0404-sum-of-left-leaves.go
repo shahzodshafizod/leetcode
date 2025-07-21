@@ -11,7 +11,7 @@ func sumOfLeftLeaves(root *pkg.TreeNode) int {
 		if node == nil {
 			return 0
 		}
-		var sum = 0
+		sum := 0
 		if isLeft && node.Left == nil && node.Right == nil {
 			sum += node.Val
 		}

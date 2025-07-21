@@ -3,11 +3,11 @@ package dp
 // https://leetcode.com/problems/longest-unequal-adjacent-groups-subsequence-ii/
 
 func getWordsInLongestSubsequence(words []string, groups []int) []string {
-	var check = func(i int, j int) bool {
+	check := func(i int, j int) bool {
 		if len(words[i]) != len(words[j]) {
 			return false
 		}
-		var count = 0
+		count := 0
 		for k := len(words[i]) - 1; k >= 0 && count <= 1; k-- {
 			if words[i][k] != words[j][k] {
 				count++
@@ -15,10 +15,10 @@ func getWordsInLongestSubsequence(words []string, groups []int) []string {
 		}
 		return count == 1
 	}
-	var n = len(words)
-	var dp = make([]int, n)
-	var next = make([]*int, n)
-	var best = n - 1
+	n := len(words)
+	dp := make([]int, n)
+	next := make([]*int, n)
+	best := n - 1
 	for i := n - 1; i >= 0; i-- {
 		for j := i + 1; j < n; j++ {
 			if groups[i] != groups[j] && dp[j]+1 > dp[i] && check(i, j) {

@@ -6,7 +6,7 @@ package bits
 // Time: O(logn)
 // Space: O(1)
 func minimumOneBitOperations(n int) int {
-	var operations = 0
+	operations := 0
 	for n > 0 {
 		operations ^= n
 		n /= 2

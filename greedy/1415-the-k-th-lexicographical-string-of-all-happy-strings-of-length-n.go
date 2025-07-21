@@ -6,9 +6,9 @@ package greedy
 // Time: O(n)
 // Space: O(1)
 func getHappyString(n int, k int) string {
-	var happy = make([]rune, 0, n)
-	var partitionLen = 1 << n // 2^n
-	var template = "abc"
+	happy := make([]rune, 0, n)
+	partitionLen := 1 << n // 2^n
+	template := "abc"
 	var i int
 	var prev rune = -1
 	for idx := 0; idx < n; idx++ {

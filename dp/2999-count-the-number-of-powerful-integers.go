@@ -12,7 +12,7 @@ import (
 // Time: O(len(finish))
 // Space: O(len(finish))
 func numberOfPowerfulInt(start int64, finish int64, limit int, s string) int64 {
-	var count = func(finish int64) int64 {
+	count := func(finish int64) int64 {
 		var suff1, suff2 int64 = 0, 0
 		var decimal int64 = 1
 		for idx := len(s) - 1; idx >= 0; idx-- {
@@ -24,9 +24,9 @@ func numberOfPowerfulInt(start int64, finish int64, limit int, s string) int64 {
 			finish /= 10
 			decimal *= 10
 		}
-		var flow = strconv.FormatInt(finish, 10)
-		var n = len(flow)
-		var dp = make([][2]int64, n+1)
+		flow := strconv.FormatInt(finish, 10)
+		n := len(flow)
+		dp := make([][2]int64, n+1)
 		dp[n][0] = 1
 		if suff1 >= suff2 {
 			dp[n][1] = 1

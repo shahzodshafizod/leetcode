@@ -6,8 +6,8 @@ package hashes
 // Time: O(n)
 // Space: O(1)
 func minimumIndex(nums []int) int {
-	var n = len(nums)
-	var dominent, count = nums[0], 0
+	n := len(nums)
+	dominent, count := nums[0], 0
 	for idx := 0; idx < n; idx++ {
 		if nums[idx] == dominent {
 			count++
@@ -19,7 +19,7 @@ func minimumIndex(nums []int) int {
 			count = 1
 		}
 	}
-	var prefix, suffix = 0, 0
+	prefix, suffix := 0, 0
 	for idx := 0; idx < n; idx++ {
 		if nums[idx] == dominent {
 			suffix++

@@ -3,7 +3,7 @@ package binarysearch
 // https://leetcode.com/problems/sqrtx/
 
 func mySqrt(x int) int {
-	var left, right = 1, x
+	left, right := 1, x
 	var mid int
 	for left <= right {
 		mid = left + (right-left)/2

@@ -16,12 +16,12 @@ func countOfAtoms(formula string) string {
 		name  string
 		atoms int
 	}
-	var elem = &element{name: "", atoms: 0}
-	var dec = 1
+	elem := &element{name: "", atoms: 0}
+	dec := 1
 	var r rune
-	var elements = make([]*element, 0)
-	var stack = make([]int, 0)
-	var multiply = 1
+	elements := make([]*element, 0)
+	stack := make([]int, 0)
+	multiply := 1
 	for i := len(formula) - 1; i >= 0; i-- { // O(N)
 		r = rune(formula[i])
 		switch {
@@ -57,8 +57,8 @@ func countOfAtoms(formula string) string {
 			return elements[i].name < elements[j].name
 		},
 	)
-	var result = ""
-	var n = len(elements)
+	result := ""
+	n := len(elements)
 	for idx := range elements { // O(N)
 		if idx+1 < n && elements[idx].name == elements[idx+1].name {
 			elements[idx+1].atoms += elements[idx].atoms

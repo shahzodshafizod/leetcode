@@ -8,10 +8,10 @@ import "sort"
 // Time: O(nnm), n=len(words), m=len(words[i])
 // Space: O(m)
 func stringMatching(words []string) []string {
-	var getLPS = func(word string) []int {
-		var m = len(word)
-		var lps = make([]int, m)
-		var p, s = 0, 1
+	getLPS := func(word string) []int {
+		m := len(word)
+		lps := make([]int, m)
+		p, s := 0, 1
 		for s < m {
 			if word[s] == word[p] {
 				p++
@@ -26,10 +26,10 @@ func stringMatching(words []string) []string {
 		return lps
 	}
 	sort.Slice(words, func(i int, j int) bool { return len(words[i]) < len(words[j]) })
-	var n = len(words)
-	var check = func(curr string, start int) bool {
-		var m = len(curr)
-		var lps = getLPS(curr)
+	n := len(words)
+	check := func(curr string, start int) bool {
+		m := len(curr)
+		lps := getLPS(curr)
 		var cid, nid, nlen int
 		for idx := start; idx < n; idx++ {
 			next := words[idx]
@@ -54,7 +54,7 @@ func stringMatching(words []string) []string {
 		}
 		return false
 	}
-	var result = make([]string, 0)
+	result := make([]string, 0)
 	for idx, word := range words {
 		if check(word, idx+1) {
 			result = append(result, word)

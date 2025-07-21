@@ -5,25 +5,25 @@ package slidingwindows
 // Time: O(N)
 // Space: O(N)
 func findSubstring(s string, words []string) []int {
-	var getCounter = func() map[string]int {
-		var count = make(map[string]int)
+	getCounter := func() map[string]int {
+		count := make(map[string]int)
 		for _, word := range words {
 			count[word]++
 		}
 		return count
 	}
-	var wordsLen = len(words)
-	var wordLen = len(words[0])
-	var windowLen = wordsLen * wordLen
-	var n = len(s)
+	wordsLen := len(words)
+	wordLen := len(words[0])
+	windowLen := wordsLen * wordLen
+	n := len(s)
 	var wordsFound int
-	var substrings = make([]int, 0)
+	substrings := make([]int, 0)
 	for idx := 0; idx < wordLen; idx++ {
-		var count = getCounter()
+		count := getCounter()
 		wordsFound = 0
-		var left = idx
+		left := idx
 		for right := left + wordLen; right <= n; right += wordLen {
-			var word = s[right-wordLen : right]
+			word := s[right-wordLen : right]
 			if _, exists := count[word]; exists {
 				if count[word] > 0 {
 					wordsFound++

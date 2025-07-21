@@ -3,7 +3,7 @@ package arrays
 // https://leetcode.com/problems/remove-duplicates-from-sorted-array/
 
 func removeDuplicates(nums []int) int {
-	var index = 0
+	index := 0
 	for _, num := range nums {
 		if num != nums[index] {
 			index++

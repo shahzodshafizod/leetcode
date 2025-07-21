@@ -1479,13 +1479,15 @@ type Edge struct {
 
 type graph struct{}
 
-var _ Graph = &graph{}
-var _ ShortestPath = &graph{}
+var (
+	_ Graph        = &graph{}
+	_ ShortestPath = &graph{}
+)
 
 func (g *graph) DFS(adjList [][]int) []int {
 	var dfs func(curr int, visited map[int]bool) []int
 	dfs = func(curr int, visited map[int]bool) []int {
-		var nodes = []int{curr}
+		nodes := []int{curr}
 		visited[curr] = true
 		for _, neighbor := range adjList[curr] {
 			if !visited[neighbor] {
@@ -1498,10 +1500,10 @@ func (g *graph) DFS(adjList [][]int) []int {
 }
 
 func (g *graph) BFS(adjList [][]int) []int {
-	var nodes = make([]int, 0)
-	var queue = pkg.NewQueue[int]()
+	nodes := make([]int, 0)
+	queue := pkg.NewQueue[int]()
 	queue.Enqueue(0)
-	var visited = make(map[int]bool)
+	visited := make(map[int]bool)
 	for !queue.Empty() {
 		curr := queue.Dequeue()
 		nodes = append(nodes, curr)
@@ -1516,21 +1518,21 @@ func (g *graph) BFS(adjList [][]int) []int {
 }
 
 func (g *graph) TopologicalSortBFS(adjList map[int][]*Edge, n int) []int {
-	var indegrees = make(map[int]int)
+	indegrees := make(map[int]int)
 	for _, dsts := range adjList {
 		for _, dst := range dsts {
 			indegrees[dst.To]++
 		}
 	}
-	var visited = make(map[int]bool)
-	var queue = pkg.NewQueue[int]()
+	visited := make(map[int]bool)
+	queue := pkg.NewQueue[int]()
 	for src := 0; src < n; src++ {
 		if indegrees[src] == 0 && !visited[src] {
 			queue.Enqueue(src)
 			visited[src] = true
 		}
 	}
-	var sorted = make([]int, 0)
+	sorted := make([]int, 0)
 	var node int
 	for !queue.Empty() {
 		node = queue.Dequeue()
@@ -1549,7 +1551,7 @@ func (g *graph) TopologicalSortBFS(adjList map[int][]*Edge, n int) []int {
 }
 
 func (g *graph) TopologicalSortDFS(adjList map[int][]*Edge, n int) []int {
-	var sorted = make([]int, n)
+	sorted := make([]int, n)
 	var dfs func(node int, visited map[int]bool, idx int, sorted []int) int
 	dfs = func(node int, visited map[int]bool, idx int, sorted []int) int {
 		visited[node] = true
@@ -1561,8 +1563,8 @@ func (g *graph) TopologicalSortDFS(adjList map[int][]*Edge, n int) []int {
 		sorted[idx] = node
 		return idx - 1
 	}
-	var visited = make(map[int]bool)
-	var idx = n - 1
+	visited := make(map[int]bool)
+	idx := n - 1
 	for src := 0; src < n; src++ {
 		if !visited[src] {
 			visited[src] = true
@@ -1574,13 +1576,13 @@ func (g *graph) TopologicalSortDFS(adjList map[int][]*Edge, n int) []int {
 
 // Approach: BFS
 func (g *graph) Dungeon(grid [][]byte) int {
-	var directions = [5]int{-1, 0, 1, 0, -1}
-	var m, n = len(grid), len(grid[0])
-	var visited = make([][]bool, m)
+	directions := [5]int{-1, 0, 1, 0, -1}
+	m, n := len(grid), len(grid[0])
+	visited := make([][]bool, m)
 	for idx := range visited {
 		visited[idx] = make([]bool, n)
 	}
-	var queue = pkg.NewQueue[[3]int]()
+	queue := pkg.NewQueue[[3]int]()
 	for row := 0; row < m && queue.Empty(); row++ {
 		for col := 0; col < n && queue.Empty(); col++ {
 			if grid[row][col] == 'S' {
@@ -1591,7 +1593,7 @@ func (g *graph) Dungeon(grid [][]byte) int {
 	}
 	var row, col, path, r, c int
 	for !queue.Empty() {
-		var current = queue.Dequeue()
+		current := queue.Dequeue()
 		row, col, path = current[0], current[1], current[2]
 		for dir := 1; dir < 5; dir++ {
 			r = row + directions[dir-1]
@@ -1611,17 +1613,17 @@ func (g *graph) Dungeon(grid [][]byte) int {
 }
 
 func (g *graph) DAG(adjList map[int][]*Edge, s int, n int) []int {
-	var topsort = g.TopologicalSortBFS(adjList, n)
-	var dist = make([]int, n)
-	var hasValue = make([]bool, n)
+	topsort := g.TopologicalSortBFS(adjList, n)
+	dist := make([]int, n)
+	hasValue := make([]bool, n)
 	dist[s] = 0
 	hasValue[s] = true
 
 	for _, node := range topsort {
 		if hasValue[node] {
-			var adjacentEdges = adjList[node]
+			adjacentEdges := adjList[node]
 			for _, edge := range adjacentEdges {
-				var newDist = dist[node] + edge.Weight
+				newDist := dist[node] + edge.Weight
 				if !hasValue[edge.To] || newDist < dist[edge.To] {
 					dist[edge.To] = newDist
 					hasValue[edge.To] = true
@@ -1635,22 +1637,22 @@ func (g *graph) DAG(adjList map[int][]*Edge, s int, n int) []int {
 
 // Lazy Dijkstra's Algorithm
 func (g *graph) Dijkstra(adjList map[int][]*Edge, s int, n int) []int {
-	var visited = make([]bool, n)
-	var dist = make([]int, n)
+	visited := make([]bool, n)
+	dist := make([]int, n)
 	for idx := range dist {
 		dist[idx] = math.MaxInt
 	}
 	dist[s] = 0
-	var minPQ = pkg.NewHeap(make([]*Edge, 0), func(x, y *Edge) bool { return x.Weight < y.Weight })
+	minPQ := pkg.NewHeap(make([]*Edge, 0), func(x, y *Edge) bool { return x.Weight < y.Weight })
 	heap.Push(minPQ, &Edge{s, 0})
 	for minPQ.Len() > 0 {
-		var nodeId = heap.Pop(minPQ).(*Edge).To // get the next minimal (promising) distance
+		nodeId := heap.Pop(minPQ).(*Edge).To // get the next minimal (promising) distance
 		visited[nodeId] = true
 		for _, edge := range adjList[nodeId] {
 			if visited[edge.To] {
 				continue
 			}
-			var newDist = dist[nodeId] + edge.Weight
+			newDist := dist[nodeId] + edge.Weight
 			if newDist < dist[edge.To] {
 				dist[edge.To] = newDist
 				heap.Push(minPQ, &Edge{edge.To, newDist})
@@ -1662,7 +1664,7 @@ func (g *graph) Dijkstra(adjList map[int][]*Edge, s int, n int) []int {
 
 func (g *graph) BellmanFord(adjList map[int][]*Edge, s int, n int) []int {
 	// step 1: initialization
-	var dist = make([]int, n)
+	dist := make([]int, n)
 	for idx := range dist {
 		dist[idx] = math.MaxInt
 	}

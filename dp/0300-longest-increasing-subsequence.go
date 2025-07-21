@@ -19,7 +19,7 @@ Dynamic Programming
 // its length is the length of the longest increasing subsequence
 // we'll keep many subsequences in the same array by replacing previous values
 func lengthOfLIS(nums []int) int {
-	var lis = make([]int, 0)
+	lis := make([]int, 0)
 	for _, num := range nums {
 		if len(lis) == 0 || num > lis[len(lis)-1] {
 			lis = append(lis, num)

@@ -6,8 +6,8 @@ package dp
 // Time: O(N)
 // Space: O(1)
 func minimumDeletions(s string) int {
-	var deletions = 0
-	var bcount = 0
+	deletions := 0
+	bcount := 0
 	for _, c := range s {
 		if c == 'b' {
 			bcount++

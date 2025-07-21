@@ -10,8 +10,8 @@ import (
 // time: O(2^target)
 func combinationSum(candidates []int, target int) [][]int {
 	sort.Ints(candidates) // to skip remaining greater candicates if target is negative
-	var combinations = make([][]int, 0)
-	var length = len(candidates)
+	combinations := make([][]int, 0)
+	length := len(candidates)
 	var dfs func(idx int, target int, combination []int)
 	dfs = func(idx int, target int, combination []int) {
 		if idx < 0 || target < 0 {

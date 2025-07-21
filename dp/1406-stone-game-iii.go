@@ -8,7 +8,7 @@ import "math"
 // Time: O(n)
 // Space: O(1)
 func stoneGameIII(stoneValue []int) string {
-	var n = len(stoneValue)
+	n := len(stoneValue)
 	var dp [3]int
 	var best, stones int
 	for idx := n - 1; idx >= 0; idx-- {

@@ -6,9 +6,9 @@ package graphs
 // Time: O(N+E)
 // Space: O(N+E)
 func secondMinimum(n int, edges [][]int, time int, change int) int {
-	var adjList = make([][]int, n+1)
-	var dist1 = make([]int, n+1)
-	var dist2 = make([]int, n+1)
+	adjList := make([][]int, n+1)
+	dist1 := make([]int, n+1)
+	dist2 := make([]int, n+1)
 	for idx := 0; idx <= n; idx++ {
 		adjList[idx] = make([]int, 0)
 		dist1[idx] = -1
@@ -20,8 +20,8 @@ func secondMinimum(n int, edges [][]int, time int, change int) int {
 		adjList[u] = append(adjList[u], v)
 		adjList[v] = append(adjList[v], u)
 	}
-	var queue = [][2]int{{1, 1}} // {city, freq}
-	var idx = 0
+	queue := [][2]int{{1, 1}} // {city, freq}
+	idx := 0
 	dist1[1] = 0
 	var timeTaken, node, freq int
 	for idx < len(queue) {

@@ -3,8 +3,8 @@ package strings
 // https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal/
 
 func areAlmostEqual(s1 string, s2 string) bool {
-	var count = 0
-	var index1, index2 = 0, 0
+	count := 0
+	index1, index2 := 0, 0
 	for idx := len(s1) - 1; idx >= 0; idx-- {
 		if s1[idx] == s2[idx] {
 			continue

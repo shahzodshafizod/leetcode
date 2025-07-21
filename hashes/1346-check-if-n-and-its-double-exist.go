@@ -6,7 +6,7 @@ package hashes
 // Time: O(n)
 // Space: O(n)
 func checkIfExist(arr []int) bool {
-	var seen = make(map[int]bool)
+	seen := make(map[int]bool)
 	for _, num := range arr {
 		if seen[2*num] || num&1 == 0 && seen[num/2] {
 			return true

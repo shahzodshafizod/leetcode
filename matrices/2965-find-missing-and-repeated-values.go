@@ -6,10 +6,10 @@ package matrices
 // Time: O(nn)
 // Space: O(nn)
 func findMissingAndRepeatedValues(grid [][]int) []int {
-	var n = len(grid)
-	var nn = n * n
-	var seen = make([]bool, nn+1)
-	var sum = nn * (nn + 1) / 2
+	n := len(grid)
+	nn := n * n
+	seen := make([]bool, nn+1)
+	sum := nn * (nn + 1) / 2
 	var twice int
 	for row := 0; row < n; row++ {
 		for col := 0; col < n; col++ {
@@ -21,6 +21,6 @@ func findMissingAndRepeatedValues(grid [][]int) []int {
 			}
 		}
 	}
-	var missing = sum
+	missing := sum
 	return []int{twice, missing}
 }

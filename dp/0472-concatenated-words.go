@@ -9,11 +9,11 @@ import "sort"
 // Space: O(N+M)
 func findAllConcatenatedWordsInADict(words []string) []string {
 	sort.Slice(words, func(i, j int) bool { return len(words[i]) < len(words[j]) })
-	var set = make(map[string]bool)
-	var concatenated = make([]string, 0)
+	set := make(map[string]bool)
+	concatenated := make([]string, 0)
 	for _, word := range words {
-		var n = len(word)
-		var dp = make([]bool, n+1)
+		n := len(word)
+		dp := make([]bool, n+1)
 		dp[0] = true
 		for len := 1; len <= n; len++ {
 			for j := len - 1; j >= 0; j-- {

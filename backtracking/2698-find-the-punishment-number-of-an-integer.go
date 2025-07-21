@@ -13,7 +13,7 @@ func punishmentNumber(n int) int {
 		if idx == len(s) || target < 0 {
 			return target == 0
 		}
-		var num = 0
+		num := 0
 		for _, c := range s[idx:] {
 			num = num*10 + int(c-'0')
 			if partition(target-num, idx+1, s) {
@@ -23,7 +23,7 @@ func punishmentNumber(n int) int {
 		}
 		return false
 	}
-	var panishment = 0
+	panishment := 0
 	for num := 1; num <= n; num++ {
 		if partition(num, 0, strconv.Itoa(num*num)) {
 			panishment += num * num

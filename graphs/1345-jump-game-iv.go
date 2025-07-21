@@ -6,14 +6,14 @@ package graphs
 // Time: O(N)
 // Space: O(N)
 func minJumps(arr []int) int {
-	var n = len(arr)
-	var indices = make(map[int][]int)
+	n := len(arr)
+	indices := make(map[int][]int)
 	for idx := 0; idx < n; idx++ {
 		indices[arr[idx]] = append(indices[arr[idx]], idx)
 	}
-	var visited = make([]bool, n)
-	var queue = [][2]int{{0, 0}} // {node, jumps}
-	var idx = 0
+	visited := make([]bool, n)
+	queue := [][2]int{{0, 0}} // {node, jumps}
+	idx := 0
 	visited[0] = true
 	for idx < len(queue) {
 		curr := queue[idx]

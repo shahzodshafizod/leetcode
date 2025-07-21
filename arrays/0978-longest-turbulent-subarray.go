@@ -18,8 +18,8 @@ And then find the longest alternating area
 // time: O(n)
 // space: O(1)
 func maxTurbulenceSize(arr []int) int {
-	var length, maxlen = 0, 0
-	var prev, curr = 0, 0
+	length, maxlen := 0, 0
+	prev, curr := 0, 0
 	for idx, len := 1, len(arr); idx < len; idx++ {
 		if arr[idx-1] > arr[idx] {
 			curr = 1

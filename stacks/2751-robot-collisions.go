@@ -9,7 +9,7 @@ import (
 // time: O(N Log N)
 // space: O(N)
 func survivedRobotsHealths(positions []int, healths []int, directions string) []int {
-	var posid = make([][2]int, len(positions))
+	posid := make([][2]int, len(positions))
 	for idx, position := range positions {
 		posid[idx][0] = position
 		posid[idx][1] = idx
@@ -45,7 +45,7 @@ func survivedRobotsHealths(positions []int, healths []int, directions string) []
 			}
 		}
 	}
-	var survivors = make([]int, 0)
+	survivors := make([]int, 0)
 	for _, health := range healths {
 		if health > 0 {
 			survivors = append(survivors, health)

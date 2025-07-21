@@ -6,9 +6,9 @@ package slidingwindows
 // time: O(2n) = O(n)
 // space: O(1)
 func numberOfSubarrays(nums []int, k int) int {
-	var subarrays = 0
-	var start, middle = 0, 0
-	var odds = 0
+	subarrays := 0
+	start, middle := 0, 0
+	odds := 0
 	for end := range nums {
 		odds += nums[end] & 1
 		for odds > k {

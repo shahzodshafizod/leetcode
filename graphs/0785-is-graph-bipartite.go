@@ -6,8 +6,8 @@ package graphs
 // Time: O(v+e), v=# of vertices (nodes), e=# of edges
 // Space: O(v+e)
 func isBipartite(graph [][]int) bool {
-	var n = len(graph)
-	var colors = make([]int, n)
+	n := len(graph)
+	colors := make([]int, n)
 	var dfs func(node int, color int) bool
 	dfs = func(node int, color int) bool {
 		colors[node] = color

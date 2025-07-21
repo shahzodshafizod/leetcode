@@ -11,8 +11,8 @@ func minMaxDifference(num int) int {
 		zeros[digit] = digit
 		nines[digit] = digit
 	}
-	var tmp = num
-	var zero, nine = 0, 9
+	tmp := num
+	zero, nine := 0, 9
 	for ; tmp > 0; tmp /= 10 {
 		digit = tmp % 10
 		zero = digit
@@ -22,9 +22,9 @@ func minMaxDifference(num int) int {
 	}
 	zeros[zero] = 0
 	nines[nine] = 9
-	var max, min = 0, 0
+	max, min := 0, 0
 	tmp = num
-	var decimal = 1
+	decimal := 1
 	for ; tmp > 0; tmp /= 10 {
 		digit = tmp % 10
 		max += nines[digit] * decimal

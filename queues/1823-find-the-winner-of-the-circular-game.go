@@ -4,7 +4,7 @@ package queues
 
 // Approach #2: Math
 func findTheWinner(n int, k int) int {
-	var winner = 0
+	winner := 0
 	for p := 1; p <= n; p++ {
 		winner = (winner + k) % p
 	}

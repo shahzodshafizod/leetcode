@@ -15,12 +15,12 @@ func maxPathSum(root *pkg.TreeNode) int {
 		if node == nil {
 			return -1000, 0
 		}
-		var lmax, lpath = dfs(node.Left)
-		var rmax, rpath = dfs(node.Right)
+		lmax, lpath := dfs(node.Left)
+		rmax, rpath := dfs(node.Right)
 		lpath = max(0, lpath)
 		rpath = max(0, rpath)
-		var currMax = max(lmax, rmax, node.Val+lpath+rpath)
-		var currPath = node.Val + max(lpath, rpath)
+		currMax := max(lmax, rmax, node.Val+lpath+rpath)
+		currPath := node.Val + max(lpath, rpath)
 		return currMax, currPath
 	}
 	maxPath, _ := dfs(root)

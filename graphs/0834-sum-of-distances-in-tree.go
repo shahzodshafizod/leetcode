@@ -3,7 +3,7 @@ package graphs
 // https://leetcode.com/problems/sum-of-distances-in-tree/
 
 func sumOfDistancesInTree(n int, edges [][]int) []int {
-	var adjList = make([][]int, n)
+	adjList := make([][]int, n)
 	for idx := range adjList {
 		adjList[idx] = make([]int, 0)
 	}
@@ -14,8 +14,8 @@ func sumOfDistancesInTree(n int, edges [][]int) []int {
 		adjList[b] = append(adjList[b], a)
 	}
 
-	var answer = make([]int, n)
-	var count = make([]int, n)
+	answer := make([]int, n)
+	count := make([]int, n)
 
 	var calcCount func(curr int, prev int, depth int)
 	calcCount = func(curr int, prev int, depth int) {

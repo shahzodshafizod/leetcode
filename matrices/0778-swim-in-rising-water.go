@@ -11,8 +11,8 @@ import (
 // time: O(n x n)
 // space: O(n x n)
 func swimInWater(grid [][]int) int {
-	var n = len(grid)
-	var pq = pkg.NewHeap(
+	n := len(grid)
+	pq := pkg.NewHeap(
 		make([][3]int, 0),
 		func(x, y [3]int) bool { return x[0] < y[0] },
 	)
@@ -20,8 +20,8 @@ func swimInWater(grid [][]int) int {
 	grid[0][0] = -1
 	var top [3]int
 	var row, col, r, c int
-	var t = 0
-	var directions = [5]int{0, 1, 0, -1, 0}
+	t := 0
+	directions := [5]int{0, 1, 0, -1, 0}
 	for pq.Len() > 0 {
 		top = heap.Pop(pq).([3]int)
 		t = max(t, top[0])

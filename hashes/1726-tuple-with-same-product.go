@@ -3,13 +3,13 @@ package hashes
 // https://leetcode.com/problems/tuple-with-same-product/
 
 func tupleSameProduct(nums []int) int {
-	var squares = make(map[int]int)
+	squares := make(map[int]int)
 	for i, n := 0, len(nums); i < n; i++ {
 		for j := i + 1; j < n; j++ {
 			squares[nums[i]*nums[j]]++
 		}
 	}
-	var count = 0
+	count := 0
 	for _, cnt := range squares {
 		count += 8 * cnt * (cnt - 1)
 	}

@@ -24,14 +24,14 @@ func knightProbability(n int, k int, row int, column int) float64 {
 	if k == 0 {
 		return 1
 	}
-	var prev = make([][]float64, n)
-	var curr = make([][]float64, n)
+	prev := make([][]float64, n)
+	curr := make([][]float64, n)
 	for i := 0; i < n; i++ {
 		prev[i] = make([]float64, n)
 		curr[i] = make([]float64, n)
 	}
 	prev[row][column] = 1
-	var ways = [8][2]int{{-2, 1}, {-1, 2}, {1, 2}, {2, 1}, {2, -1}, {1, -2}, {-1, -2}, {-2, -1}}
+	ways := [8][2]int{{-2, 1}, {-1, 2}, {1, 2}, {2, 1}, {2, -1}, {1, -2}, {-1, -2}, {-2, -1}}
 	var res float64 = 1
 	var value float64
 	for step := 1; step <= k; step++ {
@@ -40,7 +40,7 @@ func knightProbability(n int, k int, row int, column int) float64 {
 			for c := 0; c < n; c++ {
 				curr[r][c] = 0
 				for _, way := range ways {
-					var prevR, prevC = r + way[0], c + way[1]
+					prevR, prevC := r+way[0], c+way[1]
 					if prevR >= 0 && prevR < n && prevC >= 0 && prevC < n {
 						value = prev[prevR][prevC] / 8
 						curr[r][c] += value

@@ -6,8 +6,8 @@ package dp
 // Time: O(n)
 // Space: O(n)
 func mostPoints(questions [][]int) int64 {
-	var n = len(questions)
-	var dp = make([]int64, n)
+	n := len(questions)
+	dp := make([]int64, n)
 	dp[n-1] = int64(questions[n-1][0])
 	var nextIdx int
 	for idx := n - 2; idx >= 0; idx-- {

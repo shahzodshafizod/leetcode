@@ -10,7 +10,7 @@ func minimumLength(s string) int {
 	for _, c := range s {
 		count[int(c-'a')]++
 	}
-	var length = 0
+	length := 0
 	for _, cnt := range count {
 		if cnt&1 == 1 {
 			length += 1

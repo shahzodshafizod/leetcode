@@ -5,16 +5,16 @@ import "math"
 // https://leetcode.com/problems/max-points-on-a-line/
 
 func maxPoints(points [][]int) int {
-	var n = len(points)
+	n := len(points)
 	if n <= 2 {
 		return n
 	}
-	var count = 0
+	count := 0
 	var x1, y1, x2, y2 int
 	var slope float64
 	for i := range points {
 		x1, y1 = points[i][0], points[i][1]
-		var slopes = make(map[float64]int)
+		slopes := make(map[float64]int)
 		for j := i + 1; j < n; j++ {
 			x2, y2 = points[j][0], points[j][1]
 			slope = math.MaxFloat64

@@ -24,7 +24,7 @@ func guess(num int) int {
 }
 
 func guessNumber(n int) int {
-	var left, right = 1, n
+	left, right := 1, n
 	var num, guessed int
 	for left <= right {
 		num = left + (right-left)/2

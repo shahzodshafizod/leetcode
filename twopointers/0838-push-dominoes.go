@@ -18,9 +18,9 @@ If both hit the same dot, it stays upright.
 // Time: O(n)
 // Space: O(n)
 func pushDominoes(dominoes string) string {
-	var n = len(dominoes)
-	var force = make([]int, n)
-	var f = 0
+	n := len(dominoes)
+	force := make([]int, n)
+	f := 0
 	for idx := n - 1; idx >= 0; idx-- {
 		switch dominoes[idx] {
 		case 'L':

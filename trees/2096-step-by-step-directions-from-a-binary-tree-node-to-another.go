@@ -19,11 +19,11 @@ func getDirections(root *pkg.TreeNode, startValue int, destValue int) string {
 			return nil
 		}
 		if node.Val == target {
-			var path = make([]byte, level+1)
+			path := make([]byte, level+1)
 			path[level] = direction
 			return path
 		}
-		var path = dfs(node.Left, target, level+1, 'L')
+		path := dfs(node.Left, target, level+1, 'L')
 		if len(path) > 0 {
 			path[level] = direction
 			return path
@@ -35,12 +35,12 @@ func getDirections(root *pkg.TreeNode, startValue int, destValue int) string {
 		}
 		return nil
 	}
-	var startPath = dfs(root, startValue, 0, '0')
-	var destPath = dfs(root, destValue, 0, '0')
-	var idx, minlen = 0, min(len(startPath), len(destPath))
+	startPath := dfs(root, startValue, 0, '0')
+	destPath := dfs(root, destValue, 0, '0')
+	idx, minlen := 0, min(len(startPath), len(destPath))
 	for idx < minlen && startPath[idx] == destPath[idx] {
 		idx++
 	}
-	var directions = strings.Repeat("U", len(startPath)-idx) + string(destPath[idx:])
+	directions := strings.Repeat("U", len(startPath)-idx) + string(destPath[idx:])
 	return directions
 }

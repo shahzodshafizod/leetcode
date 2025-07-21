@@ -15,10 +15,10 @@ D - D wins the vote.
 // https://leetcode.com/problems/dota2-senate/
 
 func predictPartyVictory(senate string) string {
-	var length = len(senate)
-	var radiants = make([]int, 0, length)
-	var dires = make([]int, 0, length)
-	var skipR, skipD = 0, 0
+	length := len(senate)
+	radiants := make([]int, 0, length)
+	dires := make([]int, 0, length)
+	skipR, skipD := 0, 0
 	for index, r := range senate {
 		switch r {
 		case 'R':

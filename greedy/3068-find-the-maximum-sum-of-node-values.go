@@ -18,7 +18,7 @@ func maximumValueSum(nums []int, k int, _ [][]int) int64 {
 	// 10^9 = 0b111011100110101100101000000000
 	var sum, minDelta int64 = 0, 1 << 30
 	var delta int64
-	var count = 0
+	count := 0
 	for _, num := range nums {
 		sum += int64(num)
 		delta = int64((num ^ k) - num)

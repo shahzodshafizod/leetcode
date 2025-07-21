@@ -5,17 +5,23 @@ package graphs
 // Approach: Breadth-First Search
 // Time: O(nn)
 // Space: O(nn)
-func maxCandies(status []int, candies []int, keys [][]int, containedBoxes [][]int, initialBoxes []int) int {
-	var n = len(status)
-	var seen = make([]bool, n)
-	var queue = make([]int, n)
-	var qid, qlen = 0, 0
+func maxCandies(
+	status []int,
+	candies []int,
+	keys [][]int,
+	containedBoxes [][]int,
+	initialBoxes []int,
+) int {
+	n := len(status)
+	seen := make([]bool, n)
+	queue := make([]int, n)
+	qid, qlen := 0, 0
 	for _, node := range initialBoxes {
 		seen[node] = true
 		queue[qlen] = node
 		qlen++
 	}
-	var count = 0
+	count := 0
 	var node int
 	for qid < qlen {
 		for k := qid; k < qlen; k++ {

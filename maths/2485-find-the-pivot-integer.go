@@ -18,8 +18,8 @@ sum(n)=n*(n+1)/2
 // time: O(1)
 // space: O(1)
 func pivotInteger(n int) int {
-	var sum = int(float32(n) / 2 * float32(n+1))
-	var pivot = int(math.Sqrt(float64(sum)))
+	sum := int(float32(n) / 2 * float32(n+1))
+	pivot := int(math.Sqrt(float64(sum)))
 	if pivot*pivot == sum {
 		return pivot
 	}

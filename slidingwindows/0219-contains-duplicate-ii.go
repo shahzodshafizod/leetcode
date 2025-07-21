@@ -5,8 +5,8 @@ package slidingwindows
 // time: O(n)
 // space: O(n)
 func containsNearbyDuplicate(nums []int, k int) bool {
-	var window = make(map[int]bool)
-	var start = 0
+	window := make(map[int]bool)
+	start := 0
 	for end, num := range nums {
 		if end-start > k {
 			delete(window, nums[start])

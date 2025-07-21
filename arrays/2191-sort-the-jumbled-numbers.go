@@ -7,9 +7,9 @@ import "sort"
 // Time: O(N Log N)
 // Space: O(N)
 func sortJumbled(mapping []int, nums []int) []int {
-	var n = len(nums)
-	var mapped = make([]int, n)
-	var indices = make([]int, n)
+	n := len(nums)
+	mapped := make([]int, n)
+	indices := make([]int, n)
 	var places int
 	for idx, num := range nums {
 		indices[idx] = idx
@@ -32,7 +32,7 @@ func sortJumbled(mapping []int, nums []int) []int {
 			return mapped[i] < mapped[j]
 		},
 	)
-	var sorted = make([]int, n)
+	sorted := make([]int, n)
 	for idx := 0; idx < n; idx++ {
 		sorted[idx] = nums[indices[idx]]
 	}

@@ -9,9 +9,9 @@ func answerString(word string, numFriends int) string {
 	if numFriends <= 1 {
 		return word
 	}
-	var n = len(word)
-	var k = n - numFriends + 1
-	var largest = ""
+	n := len(word)
+	k := n - numFriends + 1
+	largest := ""
 	for i := 0; i < n; i++ {
 		largest = max(largest, word[i:min(i+k, n)])
 	}

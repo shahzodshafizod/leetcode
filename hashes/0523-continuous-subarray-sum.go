@@ -5,8 +5,8 @@ package hashes
 // time: O(n)
 // space: O(n)
 func checkSubarraySum(nums []int, k int) bool {
-	var modsum = 0
-	var prefixes = map[int]int{modsum: -1}
+	modsum := 0
+	prefixes := map[int]int{modsum: -1}
 	var prev int
 	var ok bool
 	for idx := range nums {

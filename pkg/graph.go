@@ -8,7 +8,7 @@ type Node struct {
 
 func MakeGraph(adjList [][]int) *Node {
 	var root *Node
-	var ptrs = make(map[int]*Node)
+	ptrs := make(map[int]*Node)
 	for node, neighbors := range adjList {
 		node++
 		if ptrs[node] == nil {

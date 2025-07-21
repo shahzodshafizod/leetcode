@@ -12,12 +12,12 @@ import (
 // Time: O(k log n)
 // Space: O(n)
 func getFinalState(nums []int, k int, multiplier int) []int {
-	var n = len(nums)
-	var indices = make([]int, n)
+	n := len(nums)
+	indices := make([]int, n)
 	for idx := range indices {
 		indices[idx] = idx
 	}
-	var pq = pkg.NewHeap(indices, func(x, y int) bool {
+	pq := pkg.NewHeap(indices, func(x, y int) bool {
 		return nums[x] == nums[y] && x < y || nums[x] < nums[y]
 	})
 	heap.Init(pq)

@@ -3,8 +3,8 @@ package graphs
 // https://leetcode.com/problems/find-the-town-judge/
 
 func findJudge(n int, trust [][]int) int {
-	var trusters = make([]int, n)
-	var trustees = make([]int, n)
+	trusters := make([]int, n)
+	trustees := make([]int, n)
 	for _, tr := range trust {
 		trusters[tr[0]-1]++
 		trustees[tr[1]-1]++

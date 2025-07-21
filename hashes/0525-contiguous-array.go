@@ -3,9 +3,9 @@ package hashes
 // https://leetcode.com/problems/contiguous-array/
 
 func findMaxLength(nums []int) int {
-	var length = 0
-	var hashset = map[int]int{0: -1}
-	var sum = 0
+	length := 0
+	hashset := map[int]int{0: -1}
+	sum := 0
 	for idx, num := range nums {
 		if num == 0 {
 			num = -1

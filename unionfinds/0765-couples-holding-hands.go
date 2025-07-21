@@ -17,7 +17,7 @@ func minSwapsCouples(row []int) int {
 	for i := 0; i < n; i++ {
 		p[i] = i
 	}
-	var connected = n
+	connected := n
 	var find func(x int) int
 	find = func(x int) int {
 		if p[x] != x {
@@ -25,7 +25,7 @@ func minSwapsCouples(row []int) int {
 		}
 		return p[x]
 	}
-	var union = func(x int, y int) {
+	union := func(x int, y int) {
 		px, py := find(x), find(y)
 		if px != py {
 			p[px] = py

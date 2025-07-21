@@ -29,7 +29,7 @@ type BIT interface {
 type bit []int
 
 func NewBIT(n int) BIT {
-	var b = bit(make([]int, n+1))
+	b := bit(make([]int, n+1))
 	return &b
 }
 

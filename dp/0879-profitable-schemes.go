@@ -8,22 +8,22 @@ package dp
 func profitableSchemes(n int, minProfit int, group []int, profit []int) int {
 	const mod int = 1e9 + 7
 	// dp[i][j] means the count of schemes with i profit and j members.
-	var dp = make([][]int, minProfit+1)
+	dp := make([][]int, minProfit+1)
 	for idx := range dp {
 		dp[idx] = make([]int, n+1)
 	}
 	dp[0][0] = 1
-	var g = len(group)
+	g := len(group)
 	for k := 0; k < g; k++ { // O(G)
-		var g = group[k]
-		var p = profit[k]
+		g := group[k]
+		p := profit[k]
 		for i := minProfit; i >= 0; i-- { // O(P)
 			for j := n - g; j >= 0; j-- { // O(N)
 				dp[min(minProfit, i+p)][j+g] = (dp[min(minProfit, i+p)][j+g] + dp[i][j]) % mod
 			}
 		}
 	}
-	var count = 0
+	count := 0
 	for _, cnt := range dp[minProfit] {
 		count = (count + cnt) % mod
 	}

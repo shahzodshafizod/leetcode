@@ -6,8 +6,8 @@ package prefixsums
 // Time: O(n)
 // Space: O(n)
 func countInterestingSubarrays(nums []int, modulo int, k int) int64 {
-	var precount = 0
-	var freq = map[int]int{0: 1}
+	precount := 0
+	freq := map[int]int{0: 1}
 	var total int64 = 0
 	for _, num := range nums {
 		if num%modulo == k {

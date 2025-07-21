@@ -6,23 +6,23 @@ package fenwicks
 // Time: O(nlogn)
 // Space: O(n)
 func goodTriplets(nums1 []int, nums2 []int) int64 {
-	var n = len(nums1)
-	var tree = make([]int, n+2) // 1-indexed
-	var update = func(num int) {
+	n := len(nums1)
+	tree := make([]int, n+2) // 1-indexed
+	update := func(num int) {
 		for num < n+2 {
 			tree[num]++
 			num += num & -num
 		}
 	}
-	var query = func(num int) int {
-		var total = 0
+	query := func(num int) int {
+		total := 0
 		for num > 0 {
 			total += tree[num]
 			num -= num & -num
 		}
 		return total
 	}
-	var indices2 = make([]int, n)
+	indices2 := make([]int, n)
 	for idx := 0; idx < n; idx++ {
 		indices2[nums2[idx]] = idx
 	}

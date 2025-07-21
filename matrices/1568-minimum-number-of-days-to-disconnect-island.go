@@ -12,8 +12,8 @@ Modify the grid such that it either:
 // Time: O((MxN)^2)
 // Space: O(MxN)
 func minDays(grid [][]int) int {
-	var m, n = len(grid), len(grid[0])
-	var dirs = [5]int{-1, 0, 1, 0, -1}
+	m, n := len(grid), len(grid[0])
+	dirs := [5]int{-1, 0, 1, 0, -1}
 	var dfs func(row int, col int, visited [][]bool) int
 	dfs = func(row int, col int, visited [][]bool) int {
 		if min(row, col) < 0 || row == m || col == n ||
@@ -28,12 +28,12 @@ func minDays(grid [][]int) int {
 		}
 		return 1
 	}
-	var countIslands = func() int {
-		var visited = make([][]bool, m)
+	countIslands := func() int {
+		visited := make([][]bool, m)
 		for idx := range visited {
 			visited[idx] = make([]bool, n)
 		}
-		var count = 0
+		count := 0
 		for row := 0; row < m; row++ {
 			for col := 0; col < n; col++ {
 				count += dfs(row, col, visited)

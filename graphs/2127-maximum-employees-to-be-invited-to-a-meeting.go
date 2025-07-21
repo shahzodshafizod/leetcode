@@ -24,18 +24,18 @@ Solution:
 // Time: O(n)
 // Space: O(n)
 func maximumInvitations(favorite []int) int {
-	var n = len(favorite)
-	var indegree = make([]int, n)
+	n := len(favorite)
+	indegree := make([]int, n)
 	for empl := 0; empl < n; empl++ {
 		indegree[favorite[empl]]++
 	}
-	var queue = list.New()
+	queue := list.New()
 	for empl := 0; empl < n; empl++ {
 		if indegree[empl] == 0 {
 			queue.PushBack(empl)
 		}
 	}
-	var depth = make([]int, n)
+	depth := make([]int, n)
 	var currEmpl, nextEmpl int
 	for queue.Len() > 0 {
 		currEmpl = queue.Remove(queue.Front()).(int)
@@ -46,8 +46,8 @@ func maximumInvitations(favorite []int) int {
 			queue.PushBack(nextEmpl)
 		}
 	}
-	var longestCycle = 0
-	var twoLenCycle = 0
+	longestCycle := 0
+	twoLenCycle := 0
 	var cycleLength, tmpEmpl int
 	for empl := 0; empl < n; empl++ {
 		if indegree[empl] == 0 {

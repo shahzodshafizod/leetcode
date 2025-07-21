@@ -7,9 +7,9 @@ package graphs
 // Space: O(n)
 func closestMeetingNode(edges []int, node1 int, node2 int) int {
 	type Node struct{ node, mask int }
-	var n = len(edges)
-	var seen = make([]int, n+1)
-	var n1, n2 = &Node{node1, 1}, &Node{node2, 2}
+	n := len(edges)
+	seen := make([]int, n+1)
+	n1, n2 := &Node{node1, 1}, &Node{node2, 2}
 	for n1.node != -1 || n2.node != -1 {
 		if n1.node > n2.node {
 			n1, n2 = n2, n1

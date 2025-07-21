@@ -6,9 +6,9 @@ package dp
 // Time: O(nn)
 // Space: O(nn)
 func generate(numRows int) [][]int {
-	var rows = make([][]int, numRows)
+	rows := make([][]int, numRows)
 	for len := 1; len <= numRows; len++ {
-		var row = make([]int, len)
+		row := make([]int, len)
 		row[0], row[len-1] = 1, 1
 		for idx := 1; idx < len-1; idx++ {
 			row[idx] = rows[len-2][idx-1] + rows[len-2][idx]

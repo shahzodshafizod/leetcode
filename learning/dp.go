@@ -163,7 +163,7 @@ func (mm *memoization) GridTravaler(m int, n int) int {
 		memo[m-1][n-1] = dp(m-1, n, memo) + dp(m, n-1, memo)
 		return memo[m-1][n-1]
 	}
-	var memo = make([][]int, m)
+	memo := make([][]int, m)
 	for i := 0; i < m; i++ {
 		memo[i] = make([]int, n)
 	}
@@ -327,7 +327,7 @@ func (m *memoization) CountConstruct(target string, wordBank []string) int {
 		if count, exists := memo[target]; exists {
 			return count
 		}
-		var count = 0
+		count := 0
 		for _, word := range wordBank {
 			if strings.Index(target, word) == 0 {
 				restOfTarget := target[len(word):]
@@ -355,7 +355,7 @@ func (m *memoization) AllConstruct(target string, wordBank []string) [][]string 
 		if ways, exists := memo[target]; exists {
 			return ways
 		}
-		var allWays = make([][]string, 0)
+		allWays := make([][]string, 0)
 		for _, word := range wordBank {
 			if strings.Index(target, word) == 0 {
 				restOfTarget := target[len(word):]
@@ -397,8 +397,8 @@ func (t *tabulation) Fib(n int) int {
 	// 	dp[i] = dp[i-1] + dp[i-2]
 	// }
 	// return dp[n]
-	var prev = 0
-	var curr = 1
+	prev := 0
+	curr := 1
 	for i := 2; i <= n; i++ {
 		prev, curr = curr, prev+curr
 	}
@@ -412,7 +412,7 @@ func (t *tabulation) GridTravaler(m int, n int) int {
 	// [1][1][1]
 	// [1][2][3]
 	// [1][3][6]
-	var array = make([]int, m)
+	array := make([]int, m)
 	array[0] = 1
 	for col := 0; col < n; col++ {
 		for row := 1; row < m; row++ {
@@ -448,9 +448,9 @@ func (t *tabulation) CanSum(targetSum int, numbers []int) bool {
 	// can: [T] F F T T T F F (0+5->T, 0+3->T, 0+4->T)
 	// can: T [F] [F] T T T F F skip, skip
 	// can: T F F [T] T T T T (3+5->[out], 3+3->T, 3+4->T) and so on.
-	var dp = make([]bool, targetSum+1)
+	dp := make([]bool, targetSum+1)
 	dp[0] = true
-	var exit = false
+	exit := false
 	for i := 0; i <= targetSum && !exit; i++ {
 		if !dp[i] {
 			continue
@@ -471,9 +471,9 @@ func (t *tabulation) CanSum(targetSum int, numbers []int) bool {
 // time: O(n * m^2)
 // space: O(m^2)
 func (t *tabulation) HowSum(targetSum int, numbers []int) []int {
-	var dp = make([][]int, targetSum+1)
+	dp := make([][]int, targetSum+1)
 	dp[0] = []int{}
-	var exit = false
+	exit := false
 	for i := 0; i <= targetSum && !exit; i++ {
 		if dp[i] == nil {
 			continue
@@ -494,9 +494,9 @@ func (t *tabulation) HowSum(targetSum int, numbers []int) []int {
 // time: O(n * m^2)
 // space: O(m^2)
 func (t *tabulation) BestSum(targetSum int, numbers []int) []int {
-	var dp = make([][]int, targetSum+1)
+	dp := make([][]int, targetSum+1)
 	dp[0] = []int{}
-	var exit = false
+	exit := false
 	for i := 0; i <= targetSum && !exit; i++ {
 		if dp[i] == nil {
 			continue
@@ -519,10 +519,10 @@ func (t *tabulation) BestSum(targetSum int, numbers []int) []int {
 // time: O(n * m^2)
 // space: O(m)
 func (t *tabulation) CanConstruct(target string, wordBank []string) bool {
-	var n = len(target)
-	var dp = make([]bool, n+1)
+	n := len(target)
+	dp := make([]bool, n+1)
 	dp[0] = true
-	var exit = false
+	exit := false
 	var length int
 	for i := 0; i < n && !exit; i++ {
 		if !dp[i] {
@@ -548,11 +548,11 @@ func (t *tabulation) CanConstruct(target string, wordBank []string) bool {
 // time: O(n * m^2)
 // space: O(m) - ?????
 func (t *tabulation) CountConstruct(target string, wordBank []string) int {
-	var n = len(target)
-	var dp = make([]int, n+1)
+	n := len(target)
+	dp := make([]int, n+1)
 	dp[0] = 1
 	var length int
-	var exit = false
+	exit := false
 	for i := 0; i < n && !exit; i++ {
 		if dp[i] == 0 {
 			continue
@@ -578,13 +578,13 @@ func (t *tabulation) CountConstruct(target string, wordBank []string) int {
 // space: O(n^m)
 // Exponential Complexity!
 func (t *tabulation) AllConstruct(target string, wordBank []string) [][]string {
-	var n = len(target)
-	var dp = make([][][]string, n+1)
+	n := len(target)
+	dp := make([][][]string, n+1)
 	for i := 1; i <= n; i++ {
 		dp[i] = [][]string{}
 	}
 	dp[0] = [][]string{{}}
-	var exit = false
+	exit := false
 	var length int
 	for i := 0; i < n && !exit; i++ {
 		if len(dp[i]) == 0 {
@@ -599,7 +599,10 @@ func (t *tabulation) AllConstruct(target string, wordBank []string) [][]string {
 				if strings.Index(currTarget, word) == 0 {
 					var combination [][]string
 					for j, len := 0, len(dp[i]); j < len; j++ {
-						combination = append(combination, append(append([]string{}, dp[i][j]...), word))
+						combination = append(
+							combination,
+							append(append([]string{}, dp[i][j]...), word),
+						)
 					}
 					dp[i+length] = append(dp[i+length], combination...)
 				}

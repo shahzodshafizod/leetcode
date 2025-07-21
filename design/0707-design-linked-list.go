@@ -11,7 +11,7 @@ type MyLinkedList struct {
 }
 
 func NewMyLinkedList() MyLinkedList {
-	var ll = MyLinkedList{
+	ll := MyLinkedList{
 		head: &pkg.DListNode{Val: -1},
 		tail: &pkg.DListNode{Val: -1},
 	}
@@ -28,14 +28,14 @@ func (m *MyLinkedList) Get(index int) int {
 }
 
 func (m *MyLinkedList) AddAtHead(val int) {
-	var node = &pkg.DListNode{Val: val, Prev: m.head, Next: m.head.Next}
+	node := &pkg.DListNode{Val: val, Prev: m.head, Next: m.head.Next}
 	node.Prev.Next = node
 	node.Next.Prev = node
 	m.size++
 }
 
 func (m *MyLinkedList) AddAtTail(val int) {
-	var node = &pkg.DListNode{Val: val, Prev: m.tail.Prev, Next: m.tail}
+	node := &pkg.DListNode{Val: val, Prev: m.tail.Prev, Next: m.tail}
 	node.Prev.Next = node
 	node.Next.Prev = node
 	m.size++
@@ -46,11 +46,11 @@ func (m *MyLinkedList) AddAtIndex(index int, val int) {
 		m.AddAtTail(val)
 		return
 	}
-	var next = m.getNodeAtIndex(index)
+	next := m.getNodeAtIndex(index)
 	if next == nil {
 		return
 	}
-	var node = &pkg.DListNode{Val: val, Prev: next.Prev, Next: next}
+	node := &pkg.DListNode{Val: val, Prev: next.Prev, Next: next}
 	node.Prev.Next = node
 	node.Next.Prev = node
 	m.size++

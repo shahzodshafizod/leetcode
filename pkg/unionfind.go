@@ -32,7 +32,7 @@ func (u *unionFind) Reset(x int) {
 }
 
 func NewUnionFind(size int) UnionFind {
-	var uf = &unionFind{parent: make([]int, size)}
+	uf := &unionFind{parent: make([]int, size)}
 	for i := 0; i < size; i++ {
 		// each node's root is the node itself,
 		// so nodes are disconnected
@@ -42,8 +42,8 @@ func NewUnionFind(size int) UnionFind {
 }
 
 func (u *unionFind) Union(x int, y int) bool {
-	var px = u.Find(x)
-	var py = u.Find(y)
+	px := u.Find(x)
+	py := u.Find(y)
 	if px == py {
 		return false
 	}
@@ -65,7 +65,7 @@ type unionFindQuickFind struct {
 }
 
 func NewUnionFindQuickFind(size int) UnionFind {
-	var uf = &unionFindQuickFind{make([]int, size)}
+	uf := &unionFindQuickFind{make([]int, size)}
 	for idx := 0; idx < size; idx++ {
 		uf.Reset(idx)
 	}
@@ -74,8 +74,8 @@ func NewUnionFindQuickFind(size int) UnionFind {
 
 // O(N)
 func (u *unionFindQuickFind) Union(x int, y int) bool {
-	var rootX = u.Find(x)
-	var rootY = u.Find(y)
+	rootX := u.Find(x)
+	rootY := u.Find(y)
 	if rootX == rootY {
 		return false
 	}
@@ -103,7 +103,7 @@ type unionFindQuickUnion struct {
 }
 
 func NewUnionFindQuickUnion(size int) UnionFind {
-	var uf = &unionFindQuickUnion{make([]int, size)}
+	uf := &unionFindQuickUnion{make([]int, size)}
 	for idx := 0; idx < size; idx++ {
 		uf.Reset(idx)
 	}
@@ -112,8 +112,8 @@ func NewUnionFindQuickUnion(size int) UnionFind {
 
 // O(1)
 func (u *unionFindQuickUnion) Union(x int, y int) bool {
-	var rootX = u.root[x]
-	var rootY = u.root[y]
+	rootX := u.root[x]
+	rootY := u.root[y]
 	if rootX == rootY {
 		return false
 	}
@@ -141,7 +141,7 @@ type unionFindRanked struct {
 }
 
 func NewUnionFindRanked(size int) UnionFind {
-	var uf = &unionFindRanked{
+	uf := &unionFindRanked{
 		root: make([]int, size),
 		rank: make([]int, size),
 	}
@@ -161,8 +161,8 @@ func (u *unionFindRanked) Find(x int) int {
 
 // O(Log N)
 func (u *unionFindRanked) Union(x int, y int) bool {
-	var rootX = u.Find(x)
-	var rootY = u.Find(y)
+	rootX := u.Find(x)
+	rootY := u.Find(y)
 	if rootX == rootY {
 		return false
 	}

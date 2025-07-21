@@ -3,11 +3,11 @@ package matrices
 // https://leetcode.com/problems/convert-1d-array-into-2d-array/
 
 func construct2DArray(original []int, m int, n int) [][]int {
-	var olen = len(original)
+	olen := len(original)
 	if m*n != olen {
 		return [][]int{}
 	}
-	var matrix = make([][]int, m)
+	matrix := make([][]int, m)
 	// for row := 0; row < m; row++ {
 	// 	matrix[row] = append([]int{}, original[n*row:n*(row+1)]...)
 	// }

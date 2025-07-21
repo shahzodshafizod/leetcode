@@ -17,7 +17,7 @@ func NewMyStack() MyStack {
 }
 
 func (m *MyStack) Push(x int) {
-	var newNode = &queueNode{data: x}
+	newNode := &queueNode{data: x}
 	if m.first == nil {
 		m.first, m.last = newNode, newNode
 	} else {
@@ -31,7 +31,7 @@ func (m *MyStack) Pop() int {
 	if m.first == nil {
 		return data
 	}
-	var preLast = m.first
+	preLast := m.first
 	for preLast != m.last && preLast.next != nil && preLast.next != m.last {
 		preLast = preLast.next
 	}

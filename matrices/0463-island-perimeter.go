@@ -3,8 +3,8 @@ package matrices
 // https://leetcode.com/problems/island-perimeter/
 
 func islandPerimeter(grid [][]int) int {
-	var m, n = len(grid), len(grid[0])
-	var blocks, borders = 0, 0
+	m, n := len(grid), len(grid[0])
+	blocks, borders := 0, 0
 	for row := 0; row < m; row++ {
 		for col := 0; col < n; col++ {
 			if grid[row][col] == 1 {

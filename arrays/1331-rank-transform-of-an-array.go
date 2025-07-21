@@ -10,11 +10,11 @@ import (
 // Time: O(NLogN)
 // Space: O(N)
 func arrayRankTransform(arr []int) []int {
-	var sorted = make([]int, len(arr))
+	sorted := make([]int, len(arr))
 	copy(sorted, arr)
 	sort.Ints(sorted)
-	var ranks = make(map[int]int)
-	var prev, rank = 0, 0
+	ranks := make(map[int]int)
+	prev, rank := 0, 0
 	for _, num := range sorted {
 		if rank > 0 && num == prev {
 			continue

@@ -20,7 +20,7 @@ func TestFindMinHeightTrees(t *testing.T) {
 		{n: 1, edges: [][]int{}, trees: map[int]bool{0: true}},
 	} {
 		roots := findMinHeightTrees(tc.n, tc.edges)
-		var trees = make(map[int]bool) // because the order is randomly organized
+		trees := make(map[int]bool) // because the order is randomly organized
 		for _, root := range roots {
 			trees[root] = true
 		}

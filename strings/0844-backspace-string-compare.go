@@ -29,7 +29,7 @@ Step 8: Can we optimize our solution?
 // https://leetcode.com/problems/backspace-string-compare/
 
 func backspaceCompare(s string, t string) bool {
-	var equal = true
+	equal := true
 	var skips int
 	for indexS, indexT := len(s)-1, len(t)-1; ; {
 		for indexS >= 0 && s[indexS] == '#' {

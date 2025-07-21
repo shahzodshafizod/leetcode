@@ -6,15 +6,15 @@ package maths
 func isPowerOfFour(n int) bool {
 	// All power of 4 numbers have 4 common features:
 	// 1. greater than 0.
-	var one = n > 0
+	one := n > 0
 	// 2. have one set bit in their binary representation.
-	var two = n&(n-1) == 0
+	two := n&(n-1) == 0
 	// 3. the set bit is located in odd position from right to left.
 	// The maximum number in binary representation with a length of 32 is:
 	// bin(0b01010101010101010101010101010101) = hex(0x55555555) = dec(1431655765).
-	var three = n&0b01010101010101010101010101010101 != 0
+	three := n&0b01010101010101010101010101010101 != 0
 	// 4. subtracting 1 makes the number divisable to 3.
-	var four = (n-1)%3 == 0
+	four := (n-1)%3 == 0
 	return one && two && three && four
 }
 

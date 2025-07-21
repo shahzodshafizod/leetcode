@@ -7,9 +7,9 @@ package strings
 // Space: O(n)
 func repeatedSubstringPattern(s string) bool {
 	// return strings.Contains((s + s)[1:2*len(s)-1], s)
-	var n = len(s)
-	var lps = make([]int, n)
-	var preflen = 0
+	n := len(s)
+	lps := make([]int, n)
+	preflen := 0
 	for idx := 1; idx < n; idx++ {
 		if s[idx] == s[preflen] {
 			preflen++

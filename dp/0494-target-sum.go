@@ -6,8 +6,8 @@ package dp
 // Time: O(n*sum(nums))
 // Space: O(sum(nums))
 func findTargetSumWays(nums []int, target int) int {
-	var n = len(nums)
-	var dp = make(map[int]int)
+	n := len(nums)
+	dp := make(map[int]int)
 	dp[0] = 1
 	for idx := 0; idx < n; idx++ {
 		prev := dp

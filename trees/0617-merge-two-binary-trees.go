@@ -11,8 +11,8 @@ func mergeTrees(root1 *pkg.TreeNode, root2 *pkg.TreeNode) *pkg.TreeNode {
 	if root1 == nil {
 		return root2
 	}
-	var stack = [][2]*pkg.TreeNode{{root1, root2}}
-	var size = 1
+	stack := [][2]*pkg.TreeNode{{root1, root2}}
+	size := 1
 	var node1, node2 *pkg.TreeNode
 	for size > 0 {
 		node1, node2 = stack[size-1][0], stack[size-1][1]

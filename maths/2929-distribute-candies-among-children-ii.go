@@ -6,7 +6,7 @@ package maths
 // Time: O(1)
 // Space: O(1)
 func distributeCandies2929(n int, limit int) int64 {
-	var count = func(candies int) int64 {
+	count := func(candies int) int64 {
 		// to avoid selecting 3 children, we add 2 more dividers
 		candies += 2
 		if candies < 0 {
@@ -17,7 +17,7 @@ func distributeCandies2929(n int, limit int) int64 {
 
 	// step 1: calculate number of ways to
 	// distribute n candies without any limit
-	var ways = count(n)
+	ways := count(n)
 
 	// step 2: subtract the ways where at
 	// least 1 child receives more than limit

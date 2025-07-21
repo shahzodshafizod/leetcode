@@ -8,8 +8,8 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 // Time: O(n)
 // Space: O(1)
 func removeElements(head *pkg.ListNode, val int) *pkg.ListNode {
-	var dummy = &pkg.ListNode{Next: head}
-	var node = dummy
+	dummy := &pkg.ListNode{Next: head}
+	node := dummy
 	for node.Next != nil {
 		if node.Next.Val == val {
 			node.Next = node.Next.Next

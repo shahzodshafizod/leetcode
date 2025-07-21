@@ -10,11 +10,11 @@ import (
 // space:  O(1)
 func maxDistance(position []int, m int) int {
 	sort.Ints(position) // O(N Log N)
-	var n = len(position)
-	var max = position[n-1]
-	var low, high = 1, max / (m - 1)
+	n := len(position)
+	max := position[n-1]
+	low, high := 1, max/(m-1)
 	var force, balls, prevPosition, curr int
-	var distance = 0
+	distance := 0
 	for low <= high { // O(Log Max)
 		force = (low + high) / 2
 		balls = 1

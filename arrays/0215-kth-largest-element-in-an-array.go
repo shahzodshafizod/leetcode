@@ -46,7 +46,7 @@ Algorithmic Paradigm: Divide & Conquer
 // Approach#1: Heap (Priority Queue)
 func findKthLargest(nums []int, k int) int {
 	// Time: O(NLogK)
-	var minHeap = pkg.NewHeap(make([]int, 0), func(x, y int) bool { return x < y })
+	minHeap := pkg.NewHeap(make([]int, 0), func(x, y int) bool { return x < y })
 	for _, num := range nums {
 		heap.Push(minHeap, num)
 		if minHeap.Len() > k {

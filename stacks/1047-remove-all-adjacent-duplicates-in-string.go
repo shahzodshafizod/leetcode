@@ -6,8 +6,8 @@ package stacks
 // Time: O(n)
 // Space: O(n)
 func removeDuplicates(s string) string {
-	var stack = make([]rune, len(s))
-	var size = 0
+	stack := make([]rune, len(s))
+	size := 0
 	for _, c := range s {
 		if size > 0 && stack[size-1] == c {
 			size--

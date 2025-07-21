@@ -4,17 +4,17 @@ package matrices
 
 // BFS (DFS works incorrectly)
 func shortestPathBinaryMatrix(grid [][]int) int {
-	var directions = [8][2]int{{-1, 0}, {0, -1}, {-1, 1}, {1, -1}, {0, 1}, {1, 0}, {1, 1}, {-1, -1}}
-	var m = len(grid)
-	var n = len(grid[0])
-	var queue = make([][2]int, 0)
+	directions := [8][2]int{{-1, 0}, {0, -1}, {-1, 1}, {1, -1}, {0, 1}, {1, 0}, {1, 1}, {-1, -1}}
+	m := len(grid)
+	n := len(grid[0])
+	queue := make([][2]int, 0)
 	if grid[0][0] == 0 {
 		queue = append(queue, [2]int{0, 0})
 		grid[0][0] = 1
 	}
 	var cell [2]int
 	var row, col, r, c int
-	var count = 0
+	count := 0
 	for length := len(queue); length > 0; length = len(queue) {
 		count++
 		for i := 0; i < length; i++ {

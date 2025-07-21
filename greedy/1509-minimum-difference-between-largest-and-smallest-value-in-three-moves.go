@@ -8,12 +8,12 @@ import (
 // https://leetcode.com/problems/minimum-difference-between-largest-and-smallest-value-in-three-moves/
 
 func minDifference(nums []int) int {
-	var n = len(nums)
+	n := len(nums)
 	if n <= 4 {
 		return 0
 	}
 	sort.Ints(nums)
-	var minDiff = math.MaxInt
+	minDiff := math.MaxInt
 	for left := 0; left < 4; left++ { // smaller index
 		right := n - 4 + left // larger index
 		minDiff = min(minDiff, nums[right]-nums[left])

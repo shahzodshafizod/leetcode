@@ -6,14 +6,14 @@ package greedy
 // Time: O(n)
 // Space: O(n)
 func candy(ratings []int) int {
-	var n = len(ratings)
-	var cnts = make([]int, n)
+	n := len(ratings)
+	cnts := make([]int, n)
 	for idx := 1; idx < n; idx++ {
 		if ratings[idx] > ratings[idx-1] {
 			cnts[idx] = cnts[idx-1] + 1
 		}
 	}
-	var candies = n + cnts[n-1]
+	candies := n + cnts[n-1]
 	for idx := n - 2; idx >= 0; idx-- {
 		if ratings[idx] > ratings[idx+1] {
 			cnts[idx] = max(cnts[idx], cnts[idx+1]+1)

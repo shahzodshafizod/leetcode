@@ -71,9 +71,9 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 // time: O(2n) = O(n)
 // space: O(2n) = O(n): 1*recursion+nodes
 func balanceBST(root *pkg.TreeNode) *pkg.TreeNode {
-	var getNodes = func(root *pkg.TreeNode) []*pkg.TreeNode {
-		var nodes = make([]*pkg.TreeNode, 0)
-		var curr = root
+	getNodes := func(root *pkg.TreeNode) []*pkg.TreeNode {
+		nodes := make([]*pkg.TreeNode, 0)
+		curr := root
 		for curr != nil {
 			if curr.Left == nil {
 				nodes = append(nodes, curr)
@@ -100,13 +100,13 @@ func balanceBST(root *pkg.TreeNode) *pkg.TreeNode {
 		if left > right {
 			return nil
 		}
-		var mid = (left + right) / 2
-		var node = nodes[mid]
+		mid := (left + right) / 2
+		node := nodes[mid]
 		node.Left = balance(nodes, left, mid-1)
 		node.Right = balance(nodes, mid+1, right)
 		return node
 	}
-	var nodes = getNodes(root)
+	nodes := getNodes(root)
 	root = balance(nodes, 0, len(nodes)-1)
 	return root
 }

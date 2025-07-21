@@ -5,10 +5,10 @@ package arrays
 // time: O((m+n)/2) = O(m+n)
 // space: O(1)
 func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
-	var len1, len2 = len(nums1), len(nums2)
-	var total = len1 + len2
-	var half = total / 2
-	var idx, idx1, idx2 = 0, 0, 0
+	len1, len2 := len(nums1), len(nums2)
+	total := len1 + len2
+	half := total / 2
+	idx, idx1, idx2 := 0, 0, 0
 	var median, prev int
 	for idx <= half && (idx1 < len1 || idx2 < len2) {
 		idx++

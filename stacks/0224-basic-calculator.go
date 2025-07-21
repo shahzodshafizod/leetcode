@@ -20,7 +20,7 @@ func calculate(s string) int {
 		sign   = 1
 		number = 0
 	)
-	var stack = make([][2]int, 0)
+	stack := make([][2]int, 0)
 	for _, r := range s {
 		switch r {
 		case '+', '-':

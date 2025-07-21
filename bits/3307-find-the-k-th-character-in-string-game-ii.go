@@ -8,7 +8,7 @@ import "math/bits"
 // Time: O(logk)
 // Space: O(1)
 func kthCharacter(k int64, operations []int) byte {
-	var ans = 0
+	ans := 0
 	for bits := bits.Len(uint(k)); bits >= 0; bits-- {
 		if k > 1<<bits {
 			k -= 1 << bits

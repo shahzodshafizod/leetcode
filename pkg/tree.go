@@ -20,7 +20,7 @@ func MakeTree(index int, vals []any) *TreeNode {
 
 func MakeTree2(vals ...any) *TreeNode {
 	var root *TreeNode = nil
-	var queue = make([]*TreeNode, 0)
+	queue := make([]*TreeNode, 0)
 	if len(vals) > 0 && vals[0] != nil {
 		root = &TreeNode{Val: vals[0].(int)}
 		queue = append(queue, root)
@@ -48,8 +48,8 @@ func traversalBFS(root *TreeNode) []int {
 	if root == nil {
 		return []int{}
 	}
-	var values = make([]int, 0)
-	var queue = NewQueue[*TreeNode]()
+	values := make([]int, 0)
+	queue := NewQueue[*TreeNode]()
 	queue.Enqueue(root)
 	for queue.Size() > 0 {
 		current := queue.Dequeue()
@@ -68,7 +68,7 @@ func traversalDFSInOrder(root *TreeNode) []int {
 	if root == nil {
 		return []int{}
 	}
-	var values = make([]int, 0)
+	values := make([]int, 0)
 	if root.Left != nil {
 		values = append(values, traversalDFSInOrder(root.Left)...)
 	}
@@ -80,9 +80,9 @@ func traversalDFSInOrder(root *TreeNode) []int {
 }
 
 func traversalMorris(root *TreeNode) []int {
-	var values = make([]int, 0)
+	values := make([]int, 0)
 	var prev *TreeNode
-	var curr = root
+	curr := root
 	for curr != nil {
 		if curr.Left == nil {
 			values = append(values, curr.Val)
@@ -115,13 +115,13 @@ func MakeNAryTree(vals []any) *NTreeNode {
 	if len(vals) == 0 || vals[0] == nil {
 		return nil
 	}
-	var root = &NTreeNode{Val: vals[0].(int), Children: make([]*NTreeNode, 0)}
-	var parents = []*NTreeNode{root}
-	var index = 2
+	root := &NTreeNode{Val: vals[0].(int), Children: make([]*NTreeNode, 0)}
+	parents := []*NTreeNode{root}
+	index := 2
 	for length := len(parents); length > 0; length = len(parents) {
 		for i := 0; i < len(parents); i++ {
 			for index < len(vals) && vals[index] != nil {
-				var child = &NTreeNode{
+				child := &NTreeNode{
 					Val:      vals[index].(int),
 					Children: make([]*NTreeNode, 0),
 				}

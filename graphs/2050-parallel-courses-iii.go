@@ -8,23 +8,23 @@ import "slices"
 // Time: O(E+V), E=# of edges, V=# of nodes/vertices
 // Space: O(E+V)
 func minimumTime(n int, relations [][]int, time []int) int {
-	var adjList = make([][]int, n)
-	var indegree = make([]int, n)
+	adjList := make([][]int, n)
+	indegree := make([]int, n)
 	var src, dst int
 	for idx := range relations {
 		src, dst = relations[idx][0]-1, relations[idx][1]-1
 		adjList[src] = append(adjList[src], dst)
 		indegree[dst]++
 	}
-	var queue = make([]int, 0)
+	queue := make([]int, 0)
 	for node, degree := range indegree {
 		if degree == 0 {
 			queue = append(queue, node)
 		}
 	}
-	var dist = make([]int, n)
+	dist := make([]int, n)
 	copy(dist, time)
-	var idx, size = 0, len(queue)
+	idx, size := 0, len(queue)
 	for idx < size {
 		src = queue[idx]
 		idx++

@@ -14,8 +14,8 @@ type KthLargest struct {
 }
 
 func NewKthLargest(k int, nums []int) KthLargest {
-	var kth = KthLargest{len: k}
-	var compare = func(x, y int) bool { return x < y }
+	kth := KthLargest{len: k}
+	compare := func(x, y int) bool { return x < y }
 	if len(nums) <= k {
 		kth.minHeap = pkg.NewHeap(nums, compare)
 		nums = nil

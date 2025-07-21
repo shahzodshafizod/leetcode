@@ -30,16 +30,16 @@ func searchRange(nums []int, target int) []int {
 		return []int{-1, -1}
 	}
 	left, right := 0, length-1
-	var position = binarySearch(nums, &left, &right, target)
+	position := binarySearch(nums, &left, &right, target)
 
-	var first = -1
+	first := -1
 	for pos := position; pos != -1; {
 		first = pos
 		pos--
 		pos = binarySearch(nums, &left, &pos, target)
 	}
 
-	var last = -1
+	last := -1
 	for pos := position; pos != -1; {
 		last = pos
 		pos++

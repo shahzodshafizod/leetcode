@@ -24,9 +24,9 @@ Step 2: Write out some test cases
 // https://leetcode.com/problems/valid-palindrome-ii/
 
 func validPalindrome(s string) bool {
-	var left2 = -1
+	left2 := -1
 	var right2 int
-	var skips = 0
+	skips := 0
 	for left1, right1 := 0, len(s)-1; left1 < right1 && skips < 2; left1, right1 = left1+1, right1-1 {
 		if s[left1] != s[right1] {
 			skips++

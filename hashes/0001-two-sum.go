@@ -35,7 +35,7 @@ Step 8: Can we optimize the solution?
 // Time: O(n)
 // Space: O(n)
 func twoSum(nums []int, target int) []int {
-	var hash = make(map[int]int)
+	hash := make(map[int]int)
 	for i := len(nums) - 1; i >= 0; i-- {
 		if j, exists := hash[nums[i]]; exists {
 			return []int{i, j}

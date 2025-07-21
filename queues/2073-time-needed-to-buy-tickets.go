@@ -3,7 +3,7 @@ package queues
 // https://leetcode.com/problems/time-needed-to-buy-tickets/
 
 func timeRequiredToBuy(tickets []int, k int) int {
-	var seconds = 0
+	seconds := 0
 	for idx := range tickets {
 		if idx <= k {
 			seconds += min(tickets[idx], tickets[k])

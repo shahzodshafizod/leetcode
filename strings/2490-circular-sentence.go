@@ -7,8 +7,8 @@ import "strings"
 // Time: O(n)
 // Space: O(n)
 func isCircularSentence(sentence string) bool {
-	var words = strings.Split(sentence, " ")
-	var n = len(words)
+	words := strings.Split(sentence, " ")
+	n := len(words)
 	for idx := 1; idx < n; idx++ {
 		if words[idx][0] != words[idx-1][len(words[idx-1])-1] {
 			return false

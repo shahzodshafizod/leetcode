@@ -5,10 +5,10 @@ package stacks
 // time: O(n)
 // space: O(n)
 func largestRectangleArea(heights []int) int {
-	var n = len(heights)
-	var stack = make([][2]int, n) // increasing stack {index, height}
-	var top = -1
-	var maximal = 0
+	n := len(heights)
+	stack := make([][2]int, n) // increasing stack {index, height}
+	top := -1
+	maximal := 0
 	var index int
 	for idx, height := range heights {
 		index = idx

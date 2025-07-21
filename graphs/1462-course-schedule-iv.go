@@ -5,16 +5,16 @@ import "container/list"
 // https://leetcode.com/problems/course-schedule-iv/
 
 func checkIfPrerequisite(numCourses int, prerequisites [][]int, queries [][]int) []bool {
-	var adjList = make([][]int, numCourses)
-	var indegree = make([]int, numCourses)
+	adjList := make([][]int, numCourses)
+	indegree := make([]int, numCourses)
 	var src, dst int
 	for idx := range prerequisites {
 		src, dst = prerequisites[idx][0], prerequisites[idx][1]
 		adjList[src] = append(adjList[src], dst)
 		indegree[dst]++
 	}
-	var queue = list.New()
-	var reach = make([][]bool, numCourses)
+	queue := list.New()
+	reach := make([][]bool, numCourses)
 	for course := 0; course < numCourses; course++ {
 		reach[course] = make([]bool, numCourses)
 		if indegree[course] == 0 {
@@ -34,7 +34,7 @@ func checkIfPrerequisite(numCourses int, prerequisites [][]int, queries [][]int)
 			}
 		}
 	}
-	var answer = make([]bool, len(queries))
+	answer := make([]bool, len(queries))
 	var u, v int
 	for idx := range queries {
 		u, v = queries[idx][0], queries[idx][1]

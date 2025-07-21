@@ -7,12 +7,12 @@ import (
 // https://leetcode.com/problems/word-pattern/
 
 func wordPattern(pattern string, s string) bool {
-	var words = strings.Split(s, " ")
-	var n = len(words)
+	words := strings.Split(s, " ")
+	n := len(words)
 	if n != len(pattern) {
 		return false
 	}
-	var codes = make(map[string]byte)
+	codes := make(map[string]byte)
 	var used [26]bool
 	var letter byte
 	var ok bool

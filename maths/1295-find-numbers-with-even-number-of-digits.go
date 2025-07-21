@@ -6,7 +6,7 @@ package maths
 // Time: O(NxM), N=len(nums), M=max(len(nums[i]))
 // Space: O(1)
 func findNumbers(nums []int) int {
-	var count = 0
+	count := 0
 	var digits int
 	for _, num := range nums {
 		digits = 0

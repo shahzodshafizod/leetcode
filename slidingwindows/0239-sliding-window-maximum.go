@@ -6,10 +6,10 @@ package slidingwindows
 // Time: O(n)
 // Space: O(n)
 func maxSlidingWindow(nums []int, k int) []int {
-	var n = len(nums)
-	var queue = make([]int, n)
-	var head, tail = 0, -1
-	var maxes = make([]int, n-k+1)
+	n := len(nums)
+	queue := make([]int, n)
+	head, tail := 0, -1
+	maxes := make([]int, n-k+1)
 	for idx := range nums {
 		if head <= tail && idx-queue[head] >= k {
 			head++

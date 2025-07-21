@@ -9,7 +9,7 @@ import (
 // https://leetcode.com/problems/last-stone-weight/
 
 func lastStoneWeight(stones []int) int {
-	var maxHeap = pkg.NewHeap(stones, func(x, y int) bool { return x > y })
+	maxHeap := pkg.NewHeap(stones, func(x, y int) bool { return x > y })
 	heap.Init(maxHeap)
 	for maxHeap.Len() > 1 {
 		y := heap.Pop(maxHeap).(int)

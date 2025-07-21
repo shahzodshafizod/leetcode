@@ -29,7 +29,7 @@ func TestTricks(t *testing.T) {
 // go test -v -count=1 ./learning/ -run ^TestBits$
 func TestBits(t *testing.T) {
 	// bitwise operators: "&", "|", "^", "~", "<<", ">>"
-	var assert = assert.New(t)
+	assert := assert.New(t)
 
 	// AND
 	// 0b01011000 &

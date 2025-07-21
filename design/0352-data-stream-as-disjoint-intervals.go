@@ -20,8 +20,8 @@ func NewSummaryRanges() SummaryRanges {
 }
 
 func (s *SummaryRanges) AddNum(value int) {
-	var n = len(s.intervals)
-	var left, right = 0, n - 1
+	n := len(s.intervals)
+	left, right := 0, n-1
 	var mid, start, end int
 	for left <= right {
 		mid = left + (right-left)>>1
@@ -36,9 +36,9 @@ func (s *SummaryRanges) AddNum(value int) {
 			left = mid + 1
 		}
 	}
-	var prev, next = right, right + 1
+	prev, next := right, right+1
 	// 2. check if can merge
-	var merged = false
+	merged := false
 	if prev >= 0 && s.intervals[prev][1]+1 == value {
 		s.intervals[prev][1]++
 		merged = true

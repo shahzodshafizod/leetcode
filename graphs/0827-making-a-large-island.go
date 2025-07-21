@@ -6,8 +6,8 @@ package graphs
 // Time: O(nn)
 // Space: O(nn)
 func largestIsland(grid [][]int) int {
-	var n = len(grid)
-	var ids = make([][]int, n)
+	n := len(grid)
+	ids := make([][]int, n)
 	var row, col int
 	for row = 0; row < n; row++ {
 		ids[row] = make([]int, n)
@@ -15,11 +15,11 @@ func largestIsland(grid [][]int) int {
 			ids[row][col] = -1
 		}
 	}
-	var directions = [5]int{1, 0, -1, 0, 1}
+	directions := [5]int{1, 0, -1, 0, 1}
 	var dfs func(row int, col int, id int) int
 	dfs = func(row int, col int, id int) int {
 		ids[row][col] = id
-		var area = 1
+		area := 1
 		for dir := 1; dir < 5; dir++ {
 			r := row + directions[dir-1]
 			c := col + directions[dir]
@@ -32,8 +32,8 @@ func largestIsland(grid [][]int) int {
 	}
 	var areas []int
 	var zeroes [][2]int
-	var id = 0
-	var maxArea = 0
+	id := 0
+	maxArea := 0
 	for row = 0; row < n; row++ {
 		for col = 0; col < n; col++ {
 			if grid[row][col] == 0 {
@@ -50,7 +50,7 @@ func largestIsland(grid [][]int) int {
 	}
 	for idx := range zeroes {
 		row, col = zeroes[idx][0], zeroes[idx][1]
-		var neighbors = make(map[int]struct{})
+		neighbors := make(map[int]struct{})
 		for dir := 1; dir < 5; dir++ {
 			r := row + directions[dir-1]
 			c := col + directions[dir]

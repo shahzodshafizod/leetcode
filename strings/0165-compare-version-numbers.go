@@ -5,8 +5,8 @@ package strings
 // time: O(n1 + n2)
 // space: O(1)
 func compareVersion(version1 string, version2 string) int {
-	var idx1, idx2 = 0, 0
-	var n1, n2 = len(version1), len(version2)
+	idx1, idx2 := 0, 0
+	n1, n2 := len(version1), len(version2)
 	var revision1, revision2 int
 	for idx1 < n1 || idx2 < n2 {
 		revision1, revision2 = 0, 0

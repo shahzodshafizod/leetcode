@@ -17,10 +17,10 @@ Note: Edge cases are when leftEnd = 0 and rightEnd = len(nums) - 1
 */
 
 func maximumScore(nums []int, k int) int {
-	var n = len(nums)
-	var score = nums[k]
-	var minimum = nums[k]
-	var left, right = k, k
+	n := len(nums)
+	score := nums[k]
+	minimum := nums[k]
+	left, right := k, k
 	var lnum, rnum int
 	for left > 0 || right+1 < n {
 		lnum, rnum = 0, 0

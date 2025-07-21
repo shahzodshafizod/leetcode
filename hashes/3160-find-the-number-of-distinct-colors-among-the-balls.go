@@ -3,12 +3,12 @@ package hashes
 // https://leetcode.com/problems/find-the-number-of-distinct-colors-among-the-balls/
 
 func queryResults(_ int, queries [][]int) []int {
-	var balls = make(map[int]int)  // ball -> color
-	var colors = make(map[int]int) // color -> count
-	var result = make([]int, len(queries))
+	balls := make(map[int]int)  // ball -> color
+	colors := make(map[int]int) // color -> count
+	result := make([]int, len(queries))
 	var x, y, color int
 	var found bool
-	var count = 0
+	count := 0
 	for idx := range queries {
 		x, y = queries[idx][0], queries[idx][1]
 		color, found = balls[x]

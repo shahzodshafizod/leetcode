@@ -17,9 +17,9 @@ func maxScore(nums []int) int {
 		}
 		return gcd(b, a%b)
 	}
-	var n = len(nums)
-	var limit = 1 << n
-	var dp = make([]int, limit)
+	n := len(nums)
+	limit := 1 << n
+	dp := make([]int, limit)
 	var count, newMask int
 	for mask := 0; mask < limit; mask++ {
 		count = bits.OnesCount(uint(mask))

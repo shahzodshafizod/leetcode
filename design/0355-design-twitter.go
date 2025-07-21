@@ -28,7 +28,7 @@ func NewTwitter() Twitter {
 }
 
 func (t *Twitter) PostTweet(userId int, tweetId int) { // O(1)
-	var newTweet = &tweet{id: tweetId, uniqueId: t.nextId}
+	newTweet := &tweet{id: tweetId, uniqueId: t.nextId}
 	t.nextId++
 	if t.tweets[userId] == nil {
 		t.tweets[userId] = []*tweet{newTweet}
@@ -38,15 +38,15 @@ func (t *Twitter) PostTweet(userId int, tweetId int) { // O(1)
 }
 
 func (t *Twitter) GetNewsFeed(userId int) []int { // O(N Log N)
-	var posts = make([]*tweet, len(t.tweets[userId]))
+	posts := make([]*tweet, len(t.tweets[userId]))
 	for followeeId := range t.followees[userId] {
 		posts = append(posts, t.tweets[followeeId]...)
 	}
 	copy(posts, t.tweets[userId])
-	var tweets = pkg.NewHeap(posts, func(x, y *tweet) bool { return x.uniqueId > y.uniqueId })
+	tweets := pkg.NewHeap(posts, func(x, y *tweet) bool { return x.uniqueId > y.uniqueId })
 	heap.Init(tweets)
-	var result = make([]int, 0)
-	var count = 10
+	result := make([]int, 0)
+	count := 10
 	for tweets.Len() > 0 && count > 0 {
 		count--
 		tweet := heap.Pop(tweets).(*tweet)

@@ -7,7 +7,7 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 // DFS
 func cloneGraph(node *pkg.Node) *pkg.Node {
 	var seen [101]*pkg.Node
-	var newNode = func(val int) *pkg.Node { return &pkg.Node{Val: val, Neighbors: make([]*pkg.Node, 0)} }
+	newNode := func(val int) *pkg.Node { return &pkg.Node{Val: val, Neighbors: make([]*pkg.Node, 0)} }
 	var dfs func(curr *pkg.Node) *pkg.Node
 	dfs = func(curr *pkg.Node) *pkg.Node {
 		if curr == nil {

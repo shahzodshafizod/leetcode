@@ -14,7 +14,7 @@ type pq[T any] struct {
 }
 
 func newPriorityQueue[T any](data []T, less func(x T, y T) bool) priorityQueue[T] {
-	var pq = pq[T]{
+	pq := pq[T]{
 		data: data,
 		less: less,
 	}
@@ -62,7 +62,7 @@ func (p pq[T]) parent(idx int) int        { return (idx - 1) / 2 }
 func (p pq[T]) left(idx int) int          { return 2*idx + 1 } // right: 2*idx + 2
 
 func (p *pq[T]) shiftUp(child int) {
-	var parent = p.parent(child)
+	parent := p.parent(child)
 	for parent >= 0 && p.compare(parent, child) {
 		p.swap(parent, child)
 		child = parent

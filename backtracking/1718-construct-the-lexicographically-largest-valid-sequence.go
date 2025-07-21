@@ -6,9 +6,9 @@ package backtracking
 // Time: O(n!)
 // Space: O(n)
 func constructDistancedSequence(n int) []int {
-	var size = 2*n - 1
-	var seq = make([]int, size)
-	var used = make([]bool, n+1)
+	size := 2*n - 1
+	seq := make([]int, size)
+	used := make([]bool, n+1)
 	var backtrack func(int) bool
 	backtrack = func(idx int) bool {
 		if idx == size {

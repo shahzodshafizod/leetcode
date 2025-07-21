@@ -7,9 +7,9 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 // time: O(2N) = O(N)
 // space: O(2N) = O(N)
 func createBinaryTree(descriptions [][]int) *pkg.TreeNode {
-	var tree = make(map[int]*pkg.TreeNode)
+	tree := make(map[int]*pkg.TreeNode)
 	var parent, child, isLeft int
-	var children = make(map[int]bool)
+	children := make(map[int]bool)
 	for _, desc := range descriptions {
 		parent, child, isLeft = desc[0], desc[1], desc[2]
 		children[child] = true

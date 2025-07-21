@@ -14,14 +14,14 @@ func stringIndices(wordsContainer []string, wordsQuery []string) []int {
 		index    int
 		length   int
 	}
-	var newTrie = func() *Trie {
+	newTrie := func() *Trie {
 		return &Trie{
 			index:  -1,
 			length: 5001,
 		}
 	}
-	var buildTrie = func() *Trie {
-		var root = newTrie()
+	buildTrie := func() *Trie {
+		root := newTrie()
 		for idx, word := range wordsContainer {
 			curr := root
 			length := len(word)
@@ -40,8 +40,8 @@ func stringIndices(wordsContainer []string, wordsQuery []string) []int {
 		}
 		return root
 	}
-	var root = buildTrie()
-	var ans = make([]int, len(wordsQuery))
+	root := buildTrie()
+	ans := make([]int, len(wordsQuery))
 	for idx, word := range wordsQuery {
 		curr := root
 		ans[idx] = curr.index

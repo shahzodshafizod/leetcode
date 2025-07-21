@@ -3,8 +3,8 @@ package dp
 // https://leetcode.com/problems/word-break/
 
 func wordBreak(s string, wordDict []string) bool {
-	var sn = len(s)
-	var dp = make([]bool, sn+1)
+	sn := len(s)
+	dp := make([]bool, sn+1)
 	dp[sn] = true
 	for idx := sn - 1; idx >= 0; idx-- {
 		for _, word := range wordDict {

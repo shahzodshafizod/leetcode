@@ -6,7 +6,7 @@ func isPalindrome(x int) bool {
 	if x < 0 || x != 0 && x%10 == 0 {
 		return false
 	}
-	var half = 0
+	half := 0
 	for x > half {
 		half = half*10 + x%10
 		x /= 10

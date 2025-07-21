@@ -8,7 +8,7 @@ import "sort"
 // Time: O(nlogn)
 // Space: O(1)
 func putMarbles(weights []int, k int) int64 {
-	var n = len(weights)
+	n := len(weights)
 	for idx := 1; idx < n; idx++ {
 		weights[idx-1] += weights[idx]
 	}

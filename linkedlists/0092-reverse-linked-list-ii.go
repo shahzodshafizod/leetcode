@@ -35,8 +35,8 @@ func reverseBetween(head *pkg.ListNode, left int, right int) *pkg.ListNode {
 	if head == nil {
 		return nil
 	}
-	var position = 1
-	var node = head
+	position := 1
+	node := head
 	var lastPrev *pkg.ListNode
 	for node != nil && position < left {
 		lastPrev = node

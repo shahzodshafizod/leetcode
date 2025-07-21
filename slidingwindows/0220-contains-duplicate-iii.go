@@ -30,14 +30,14 @@ func containsNearbyAlmostDuplicate(nums []int, indexDiff int, valueDiff int) boo
 	if len(nums) <= 1 || valueDiff < 0 {
 		return false
 	}
-	var width = int64(valueDiff) + 1
-	var getbucketkey = func(num int64) int64 {
+	width := int64(valueDiff) + 1
+	getbucketkey := func(num int64) int64 {
 		if num < 0 {
 			return (num+1)/width - 1
 		}
 		return num / width
 	}
-	var buckets = make(map[int64]int64)
+	buckets := make(map[int64]int64)
 	var bucketkey, num int64
 	for idx := range nums {
 		num = int64(nums[idx])

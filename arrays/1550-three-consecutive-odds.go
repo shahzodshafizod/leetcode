@@ -3,7 +3,7 @@ package arrays
 // https://leetcode.com/problems/three-consecutive-odds/
 
 func threeConsecutiveOdds(arr []int) bool {
-	var count = 0
+	count := 0
 	for _, num := range arr {
 		if num&1 == 1 {
 			count++

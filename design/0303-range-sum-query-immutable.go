@@ -7,7 +7,7 @@ type NumArray struct {
 }
 
 func NewNumArray(nums []int) NumArray {
-	var n = len(nums)
+	n := len(nums)
 	prefix := make([]int, n+1)
 	for idx := 0; idx < n; idx++ {
 		prefix[idx+1] = prefix[idx] + nums[idx]

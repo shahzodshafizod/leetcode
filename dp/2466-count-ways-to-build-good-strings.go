@@ -7,9 +7,9 @@ package dp
 // Space: O(high)
 func countGoodStrings(low int, high int, zero int, one int) int {
 	var MOD int = 1e9 + 7
-	var dp = make([]int, high+1)
+	dp := make([]int, high+1)
 	dp[0] = 1
-	var count = 0
+	count := 0
 	for length := 1; length <= high; length++ {
 		if length-zero >= 0 {
 			dp[length] = dp[length-zero]

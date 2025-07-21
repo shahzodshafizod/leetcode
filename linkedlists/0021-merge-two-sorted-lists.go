@@ -22,8 +22,8 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 
 // space: O(1)
 func mergeTwoLists(list1 *pkg.ListNode, list2 *pkg.ListNode) *pkg.ListNode {
-	var dummy = &pkg.ListNode{} // to escape "if tail != nil"
-	var tail = dummy
+	dummy := &pkg.ListNode{} // to escape "if tail != nil"
+	tail := dummy
 	for list1 != nil && list2 != nil {
 		if list1.Val < list2.Val {
 			tail.Next = list1

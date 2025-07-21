@@ -10,7 +10,7 @@ ON and OFF:
 // https://leetcode.com/problems/find-all-duplicates-in-an-array/
 
 func findDuplicates(nums []int) []int {
-	var duplicates = make([]int, 0)
+	duplicates := make([]int, 0)
 	for _, num := range nums {
 		if num < 0 {
 			num = -num

@@ -7,10 +7,10 @@ func countPrefixSuffixPairs3045(words []string) int64 {
 		count    int
 		children map[[2]byte]*TrieNode
 	}
-	var NewTrieNode = func() *TrieNode {
+	NewTrieNode := func() *TrieNode {
 		return &TrieNode{children: make(map[[2]byte]*TrieNode)}
 	}
-	var root = NewTrieNode()
+	root := NewTrieNode()
 	var count int64 = 0
 	var left, right int
 	for wid := len(words) - 1; wid >= 0; wid-- {

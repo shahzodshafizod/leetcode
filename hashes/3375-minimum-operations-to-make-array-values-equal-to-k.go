@@ -6,7 +6,7 @@ package hashes
 // Time: O(n)
 // Space: O(n)
 func minOperations(nums []int, k int) int {
-	var visited = make(map[int]struct{})
+	visited := make(map[int]struct{})
 	for _, num := range nums {
 		if num < k {
 			return -1

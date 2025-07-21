@@ -9,12 +9,12 @@ import "slices"
 // time: O(N)
 // space: O(Len)
 func minIncrementForUnique(nums []int) int {
-	var len = len(nums) + slices.Max(nums)
-	var count = make([]int, len)
+	len := len(nums) + slices.Max(nums)
+	count := make([]int, len)
 	for _, num := range nums { // O(n)
 		count[num]++
 	}
-	var moves = 0
+	moves := 0
 	for num := 0; num < len; num++ { // O(len)
 		if count[num] > 1 {
 			moves += count[num] - 1

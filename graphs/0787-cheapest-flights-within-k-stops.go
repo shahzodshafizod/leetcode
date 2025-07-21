@@ -6,7 +6,7 @@ import "math"
 
 // Bellman Ford's Algorithm
 func findCheapestPrice(n int, flights [][]int, src int, dst int, k int) int {
-	var prices = make([]int, n)
+	prices := make([]int, n)
 	for i := 0; i < n; i++ {
 		prices[i] = math.MaxInt
 	}

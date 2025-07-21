@@ -6,8 +6,8 @@ package slidingwindows
 // Time: O(n)
 // Space: O(1)
 func longestNiceSubarray(nums []int) int {
-	var mask, length = 0, 0
-	var left = 0
+	mask, length := 0, 0
+	left := 0
 	for right := range nums {
 		for mask&nums[right] != 0 {
 			mask ^= nums[left]

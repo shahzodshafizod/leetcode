@@ -41,7 +41,7 @@ Step 2: Write out some test cases:
 // time: O(N)
 // space: O(H)
 func isValidBST(root *pkg.TreeNode) bool {
-	var stack = make([]*pkg.TreeNode, 0)
+	stack := make([]*pkg.TreeNode, 0)
 	var prev, node *pkg.TreeNode = nil, root
 	for len(stack) != 0 || node != nil {
 		for node != nil {

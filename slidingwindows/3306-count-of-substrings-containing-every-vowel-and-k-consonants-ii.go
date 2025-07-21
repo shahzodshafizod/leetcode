@@ -5,20 +5,20 @@ package slidingwindows
 // Time: O(N)
 // Space: O(1)
 func countOfSubstrings(word string, k int) int64 {
-	var isVowel = map[byte]bool{
+	isVowel := map[byte]bool{
 		'a': true,
 		'e': true,
 		'i': true,
 		'o': true,
 		'u': true,
 	}
-	var n = len(word)
-	var atLeast = func(k int) int64 {
+	n := len(word)
+	atLeast := func(k int) int64 {
 		var result int64 = 0
 		var count [26]int
 		var code int
-		var vowels, consonents = 0, 0
-		var left = 0
+		vowels, consonents := 0, 0
+		left := 0
 		for right := 0; right < n; right++ {
 			code = int(word[right] - 'a')
 			count[code]++

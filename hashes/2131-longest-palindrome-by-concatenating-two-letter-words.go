@@ -5,7 +5,7 @@ package hashes
 // Approach #2: Array
 func longestPalindrome(words []string) int {
 	var count [26 * 26]int
-	var length, unpaired = 0, 0
+	length, unpaired := 0, 0
 	var a, b, word, revw int
 	for idx := range words {
 		a = int(words[idx][0] - 'a')

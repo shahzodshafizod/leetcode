@@ -6,9 +6,9 @@ package tries
 // Time: O((log(10)n)^2)
 // Space: O(1)
 func findKthNumber(n int, k int) int {
-	var count = func(curr int) int { // O(log(10)n)
-		var nei = curr + 1 // neighboring branch of tree
-		var cnt = 0
+	count := func(curr int) int { // O(log(10)n)
+		nei := curr + 1 // neighboring branch of tree
+		cnt := 0
 		for curr <= n {
 			cnt += min(n+1, nei) - curr
 			curr *= 10
@@ -16,7 +16,7 @@ func findKthNumber(n int, k int) int {
 		}
 		return cnt
 	}
-	var curr = 1
+	curr := 1
 	k-- // account for first element: curr=1
 	var cnt int
 	for k > 0 { // O(log(10)n)

@@ -14,12 +14,12 @@ func robotWithString(s string) string {
 	for idx := range s {
 		cnt[int(s[idx]-'a')]++
 	}
-	var n = len(s)
-	var t = make([]int, n)
-	var size = 0
+	n := len(s)
+	t := make([]int, n)
+	size := 0
 	var paper strings.Builder
 	paper.Grow(n)
-	var minChar = 0
+	minChar := 0
 	for idx := range s {
 		t[size] = int(s[idx] - 'a')
 		size++

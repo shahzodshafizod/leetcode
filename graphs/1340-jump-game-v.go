@@ -6,8 +6,8 @@ package graphs
 // Time: O(n x d)
 // Space: O(n)
 func maxJumps(arr []int, d int) int {
-	var n = len(arr)
-	var dp = make([]int, n)
+	n := len(arr)
+	dp := make([]int, n)
 	var dfs func(idx int) int
 	dfs = func(idx int) int {
 		if dp[idx] != 0 {
@@ -24,7 +24,7 @@ func maxJumps(arr []int, d int) int {
 		}
 		return dp[idx]
 	}
-	var maxJump = 0
+	maxJump := 0
 	for idx := 0; idx < n; idx++ {
 		maxJump = max(maxJump, dfs(idx))
 	}

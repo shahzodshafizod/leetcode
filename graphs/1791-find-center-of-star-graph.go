@@ -6,8 +6,8 @@ package graphs
 // time: O(1)
 // space: O(1)
 func findCenter(edges [][]int) int {
-	var u1, v1 = edges[0][0], edges[0][1]
-	var u2, v2 = edges[1][0], edges[1][1]
+	u1, v1 := edges[0][0], edges[0][1]
+	u2, v2 := edges[1][0], edges[1][1]
 	if u1 == u2 || u1 == v2 {
 		return u1
 	}

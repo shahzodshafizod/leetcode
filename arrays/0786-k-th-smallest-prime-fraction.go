@@ -6,7 +6,7 @@ package arrays
 // time: O(n log m^2); m - max array value
 // space: O(1)
 func kthSmallestPrimeFraction(arr []int, k int) []int {
-	var n = len(arr)
+	n := len(arr)
 	var left, right float64 = 0, 1
 	var mid, fraction, maxfraction float64
 	var smallfractions, numerator, denominator, j int

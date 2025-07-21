@@ -5,13 +5,13 @@ package maths
 // Time: O(n*sqrt(K))
 // Space: O(k)
 func countPairs(nums []int, k int) int64 {
-	var gcd = func(a int, b int) int {
+	gcd := func(a int, b int) int {
 		for b != 0 {
 			a, b = b, a%b
 		}
 		return a
 	}
-	var counts = make(map[int]int64)
+	counts := make(map[int]int64)
 	var count int64 = 0
 	for _, num := range nums {
 		curr := gcd(num, k)

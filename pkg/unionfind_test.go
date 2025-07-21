@@ -9,7 +9,7 @@ import (
 // go test -v -count=1 ./pkg/ -run ^TestUnionFind$
 func TestUnionFind(t *testing.T) {
 	var uf UnionFind
-	var m, n = 4, 3
+	m, n := 4, 3
 	for _, tc := range []struct {
 		command string
 		value   []int

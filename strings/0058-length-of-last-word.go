@@ -3,11 +3,11 @@ package strings
 // https://leetcode.com/problems/length-of-last-word/
 
 func lengthOfLastWord(s string) int {
-	var right = len(s) - 1
+	right := len(s) - 1
 	for s[right] == ' ' {
 		right--
 	}
-	var left = right
+	left := right
 	for left >= 0 && s[left] != ' ' {
 		left--
 	}

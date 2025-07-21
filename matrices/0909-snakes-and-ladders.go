@@ -6,20 +6,20 @@ package matrices
 // Time: O(nn)
 // Space: O(nn)
 func snakesAndLadders(board [][]int) int {
-	var n = len(board)
-	var getPos = func(square int) (int, int) {
-		var row = (square - 1) / n
-		var col = (square - 1) % n
+	n := len(board)
+	getPos := func(square int) (int, int) {
+		row := (square - 1) / n
+		col := (square - 1) % n
 		if row&1 == 1 {
 			col = n - 1 - col
 		}
 		return n - 1 - row, col
 	}
-	var target = n * n
-	var queue = make([][2]int, target)
+	target := n * n
+	queue := make([][2]int, target)
 	queue[0] = [2]int{1, 0} // [2]int{square, moves}
-	var qid, qlen = 0, 1
-	var visited = make([]bool, target)
+	qid, qlen := 0, 1
+	visited := make([]bool, target)
 	var square, moves, row, col, next int
 	for qid < qlen {
 		square, moves = queue[qid][0], queue[qid][1]+1

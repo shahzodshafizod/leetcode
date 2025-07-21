@@ -13,8 +13,8 @@ package unionfinds
 // Time: O(N)
 // Space: O(N)
 func canReachCorner(xCorner int, yCorner int, circles [][]int) bool {
-	var n = len(circles)
-	var parent = make([]int, n+2)
+	n := len(circles)
+	parent := make([]int, n+2)
 	for idx := range parent {
 		parent[idx] = idx
 	}

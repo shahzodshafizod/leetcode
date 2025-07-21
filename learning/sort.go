@@ -64,12 +64,12 @@ func insertionSort(array []int) []int {
 // space: O(k) -> O(1)
 // works for [0;k]
 func bucketSort(array []int) []int {
-	var k = slices.Max(array)
-	var buckets = make([]int, k+1)
+	k := slices.Max(array)
+	buckets := make([]int, k+1)
 	for _, num := range array { // O(N)
 		buckets[num]++
 	}
-	var idx = 0
+	idx := 0
 	for num, count := range buckets { // O(k)
 		for count > 0 { // O(N/k)
 			count--
@@ -85,11 +85,11 @@ func bucketSort(array []int) []int {
 // time: O(N*Log(N))
 // space: O(N)
 func mergeSort(array []int) []int {
-	var len = len(array)
+	len := len(array)
 	if len <= 1 {
 		return array
 	}
-	var middle = len / 2
+	middle := len / 2
 	return merge(
 		mergeSort(array[:middle]), // [0-middle)
 		mergeSort(array[middle:]), // [middle-len)
@@ -97,9 +97,9 @@ func mergeSort(array []int) []int {
 }
 
 func merge(array1 []int, array2 []int) []int {
-	var len1, len2 = len(array1), len(array2)
-	var array = make([]int, 0, len1+len2)
-	var idx1, idx2 = 0, 0
+	len1, len2 := len(array1), len(array2)
+	array := make([]int, 0, len1+len2)
+	idx1, idx2 := 0, 0
 	for idx1 < len1 && idx2 < len2 {
 		if array1[idx1] < array2[idx2] {
 			array = append(array, array1[idx1])
@@ -120,9 +120,9 @@ func merge(array1 []int, array2 []int) []int {
 // time: O(N^2), is sorted; else O(N*Log(N))
 // space: O(Log(N))
 func quickSort(array []int) []int {
-	var partition = func(array []int, left int, right int) int {
-		var pivot = array[right]
-		var mid = left
+	partition := func(array []int, left int, right int) int {
+		pivot := array[right]
+		mid := left
 		for i := left; i < right; i++ {
 			if array[i] < pivot {
 				array[i], array[mid] = array[mid], array[i]
@@ -154,7 +154,7 @@ func heapSort(array []int) []int {
 		swap      = func(i int, j int) { array[i], array[j] = array[j], array[i] }
 	)
 	// 1. create a max heap
-	var len = len(array)
+	len := len(array)
 	for i := 1; i < len; i++ {
 		// sift up
 		child := i

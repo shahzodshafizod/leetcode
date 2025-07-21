@@ -5,12 +5,12 @@ package dp
 // time: O(rows*cols)
 // space: O(rows*cols)
 func maximalSquare(matrix [][]byte) int {
-	var rows, cols = len(matrix), len(matrix[0])
-	var dp = make([][]int, rows+1)
+	rows, cols := len(matrix), len(matrix[0])
+	dp := make([][]int, rows+1)
 	for idx := range dp {
 		dp[idx] = make([]int, cols+1)
 	}
-	var maxside = 0
+	maxside := 0
 	for row := rows - 1; row >= 0; row-- {
 		for col := cols - 1; col >= 0; col-- {
 			if matrix[row][col] == '1' {

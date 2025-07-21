@@ -7,7 +7,7 @@ func maxDifference(s string) int {
 	for _, c := range s {
 		count[int(c-'a')]++
 	}
-	var a1, a2 = 0, len(s)
+	a1, a2 := 0, len(s)
 	for _, cnt := range count {
 		if cnt&1 == 1 {
 			a1 = max(a1, cnt)

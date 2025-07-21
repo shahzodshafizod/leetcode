@@ -28,7 +28,7 @@ func levelOrder(root *pkg.TreeNode) [][]int {
 	if root == nil {
 		return levels
 	}
-	var queue = []*pkg.TreeNode{root}
+	queue := []*pkg.TreeNode{root}
 	for queueLen := len(queue); queueLen > 0; queueLen = len(queue) {
 		levelElements := make([]int, 0)
 		for count := 0; count < queueLen; count++ {

@@ -6,9 +6,9 @@ package graphs
 // Time: O(MxN)
 // Space: O(MxN)
 func longestIncreasingPath(matrix [][]int) int {
-	var m, n = len(matrix), len(matrix[0])
-	var dirs = [5]int{-1, 0, 1, 0, -1}
-	var dp = make([][]int, m)
+	m, n := len(matrix), len(matrix[0])
+	dirs := [5]int{-1, 0, 1, 0, -1}
+	dp := make([][]int, m)
 	for idx := range dp {
 		dp[idx] = make([]int, n)
 	}
@@ -18,7 +18,7 @@ func longestIncreasingPath(matrix [][]int) int {
 		if dp[row][col] != 0 {
 			return dp[row][col]
 		}
-		var length = 0
+		length := 0
 		for d := 1; d < 5; d++ {
 			r, c = row+dirs[d-1], col+dirs[d]
 			if min(r, c) >= 0 && r < m && c < n && matrix[row][col] < matrix[r][c] {
@@ -29,7 +29,7 @@ func longestIncreasingPath(matrix [][]int) int {
 		dp[row][col] = length
 		return length
 	}
-	var length = 1
+	length := 1
 	for row := 0; row < m; row++ {
 		for col := 0; col < n; col++ {
 			length = max(length, dfs(row, col))

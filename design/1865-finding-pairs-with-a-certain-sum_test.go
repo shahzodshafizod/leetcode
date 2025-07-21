@@ -10,13 +10,13 @@ import (
 func TestFindSumPairs(t *testing.T) {
 	for _, tc := range []struct {
 		commands []string
-		values [][][]int
-		output []any
+		values   [][][]int
+		output   []any
 	}{
 		{
-			commands: []string{"FindSumPairs","count","add","count","count","add","add","count"},
-			values: [][][]int{{{1,1,2,2,2,3},{1,4,5,2,5,4}},{{7}},{{3,2}},{{8}},{{4}},{{0,1}},{{1,1}},{{7}}},
-			output: []any{nil,8,nil,2,1,nil,nil,11},
+			commands: []string{"FindSumPairs", "count", "add", "count", "count", "add", "add", "count"},
+			values:   [][][]int{{{1, 1, 2, 2, 2, 3}, {1, 4, 5, 2, 5, 4}}, {{7}}, {{3, 2}}, {{8}}, {{4}}, {{0, 1}}, {{1, 1}}, {{7}}},
+			output:   []any{nil, 8, nil, 2, 1, nil, nil, 11},
 		},
 		// {
 		// 	commands: []string{"FindSumPairs","add","add","count","add","add","add","add","add","add","add","add","count","count","add","add","add","add","add","add","add","add","add","count","add","add","count","add","add","add","add","count","count","add","add","add","count","add","count","add","add","add","count","add","count","add","add","add","add","add","count","add","add","add","add","count","add","count","add","count","add","add","add","add","add","add","add","add","count","add","add","add","add","add","count","add","add","count","add","add","add","add","add","add","add","count","add","add","count","add","count","add","add","add","count","add","add","add","add","add","add","add","add","add","add","add","add","add","count","add","add","add","add","add","add","add","count","add","count","add","add","add","add","count","count","add","add","add","add","add","add","add","add","add","add","count","add","add","add","add","count","add","count","add","add","add","add","add","add","count","count","count","count","count","count","count","count","count","count","count","count","count","count","count","count","count","count","count","count","count","count","count","count","count","count","count","count","count","count","count","count","count","count","count","count","count","count","count","count","count"},

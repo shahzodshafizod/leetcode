@@ -49,11 +49,11 @@ func numberToWords(num int) string {
 // Follow-up: Convert NUMBER in reverse order to WORDS without reversing the NUMBER itself
 
 func numberToWordsReverse(num int) string {
-	var levels = []string{"", "Thousand", "Million", "Billion", "Trillion"}
+	levels := []string{"", "Thousand", "Million", "Billion", "Trillion"}
 	var numberToWordsReverseHelper func(num int, divider int, level int) string
 	numberToWordsReverseHelper = func(num int, divider int, level int) string {
 		var words string
-		var current = divider + num
+		current := divider + num
 		divider /= 1000
 		if divider != 0 {
 			current /= divider
@@ -72,8 +72,8 @@ func numberToWordsReverse(num int) string {
 		}
 		return words
 	}
-	var divider = 1
-	var tempNum = num
+	divider := 1
+	tempNum := num
 	for tempNum > 0 {
 		tempNum /= 10
 		divider *= 10

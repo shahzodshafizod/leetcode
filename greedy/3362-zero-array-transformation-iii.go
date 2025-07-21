@@ -16,10 +16,10 @@ func maxRemoval(nums []int, queries [][]int) int {
 	sort.Slice(queries, func(i, j int) bool {
 		return queries[i][0] < queries[j][0]
 	})
-	var line = make([]int, len(nums)+1)
-	var ops = 0
-	var qid, n = 0, len(queries)
-	var maxHeap = pkg.NewHeap([]int{}, func(x, y int) bool { return x > y })
+	line := make([]int, len(nums)+1)
+	ops := 0
+	qid, n := 0, len(queries)
+	maxHeap := pkg.NewHeap([]int{}, func(x, y int) bool { return x > y })
 	for idx, num := range nums {
 		ops += line[idx]
 		for qid < n && queries[qid][0] == idx {

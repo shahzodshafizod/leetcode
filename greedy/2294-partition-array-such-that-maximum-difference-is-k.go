@@ -9,7 +9,7 @@ import "sort"
 // Space: O(1)
 func partitionArray(nums []int, k int) int {
 	sort.Ints(nums)
-	var partitions, min = 1, nums[0]
+	partitions, min := 1, nums[0]
 	for _, max := range nums {
 		if max-min > k {
 			min = max

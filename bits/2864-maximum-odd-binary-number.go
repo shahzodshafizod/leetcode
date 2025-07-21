@@ -5,9 +5,9 @@ package bits
 // Greedy Bit Manipulation
 func maximumOddBinaryNumber(s string) string {
 	const ZERO, ONE = '0', '1'
-	var n = len(s)
-	var b = []byte(s)
-	var left, right = 0, n - 1
+	n := len(s)
+	b := []byte(s)
+	left, right := 0, n-1
 	for left <= right {
 		switch {
 		case b[left] == ONE:

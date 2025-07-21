@@ -81,8 +81,8 @@ package dp
 // Time: O(N)
 // Space: O(1)
 func maxProfitIII(prices []int) int {
-	var buyFirst, sellFirst = 100000, 0
-	var buySecond, sellSecond = 100000, 0
+	buyFirst, sellFirst := 100000, 0
+	buySecond, sellSecond := 100000, 0
 	for _, price := range prices {
 		buyFirst = min(buyFirst, price)
 		sellFirst = max(sellFirst, price-buyFirst)

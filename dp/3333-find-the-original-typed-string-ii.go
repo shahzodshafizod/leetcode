@@ -8,8 +8,8 @@ package dp
 func possibleStringCount(word string, k int) int {
 	const MOD int = 1e9 + 7
 	var groups []int
-	var count, total = 1, 1
-	var n = len(word)
+	count, total := 1, 1
+	n := len(word)
 	for idx := 1; idx < n; idx++ {
 		if word[idx-1] != word[idx] {
 			groups = append(groups, count)
@@ -20,15 +20,15 @@ func possibleStringCount(word string, k int) int {
 	}
 	groups = append(groups, count)
 	total = (total * count) % MOD
-	var m = len(groups)
+	m := len(groups)
 	if k <= m {
 		return total
 	}
-	var dp = make([]int, k)
+	dp := make([]int, k)
 	dp[0] = 1
 	var presum int
 	for _, count := range groups {
-		var newDP = make([]int, k)
+		newDP := make([]int, k)
 		presum = 0
 		for idx := 1; idx < k; idx++ {
 			presum = (presum + dp[idx-1]) % MOD

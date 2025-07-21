@@ -3,9 +3,9 @@ package hashes
 // https://leetcode.com/problems/max-sum-of-a-pair-with-equal-sum-of-digits/
 
 func maximumSum(nums []int) int {
-	var pairs = make(map[int][2]int)
+	pairs := make(map[int][2]int)
 	var tmp, sum int
-	var maxSum = -1
+	maxSum := -1
 	for _, num := range nums {
 		tmp, sum = num, 0
 		for tmp > 0 {

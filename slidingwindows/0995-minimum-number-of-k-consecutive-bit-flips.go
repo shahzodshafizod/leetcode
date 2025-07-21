@@ -6,9 +6,9 @@ package slidingwindows
 // time: O(n)
 // space: O(1)
 func minKBitFlips(nums []int, k int) int {
-	var totalFlips = 0
-	var flips = 0
-	var n = len(nums)
+	totalFlips := 0
+	flips := 0
+	n := len(nums)
 	for idx := range nums {
 		if nums[idx]&1 == flips&1 {
 			if idx+k > n {

@@ -26,8 +26,8 @@ BottomMissing[n] = Full[n-2] + TopMissing[n-1]
 // Time: O(n)
 // Space: O(1)
 func numTilings(n int) int {
-	var tm, bm = 0, 0
-	var preprev, prev, curr = 1, 1, 1 // [n-2], [n-1], [n]
+	tm, bm := 0, 0
+	preprev, prev, curr := 1, 1, 1 // [n-2], [n-1], [n]
 	const MOD int = 1e9 + 7
 	for i := 2; i <= n; i++ {
 		curr = (prev + preprev + tm + bm) % MOD

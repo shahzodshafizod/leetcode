@@ -8,7 +8,7 @@ func isPerfectSquare(num int) bool {
 	if num == 1 {
 		return true
 	}
-	var left, right = 2, num / 2
+	left, right := 2, num/2
 	var mid, square int
 	for left <= right {
 		mid = (left + right) / 2

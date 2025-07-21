@@ -6,10 +6,10 @@ package prefixsums
 // Time: O(n+m), n=len(nums), m=len(queries)
 // Space: O(n)
 func minZeroArray(nums []int, queries [][]int) int {
-	var n = len(nums)
-	var line = make([]int, n+1)
-	var k, qlen = 0, len(queries)
-	var idx, presum = 0, 0
+	n := len(nums)
+	line := make([]int, n+1)
+	k, qlen := 0, len(queries)
+	idx, presum := 0, 0
 	var l, r, val int
 	for idx < n {
 		if nums[idx] <= presum+line[idx] {

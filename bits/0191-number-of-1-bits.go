@@ -9,7 +9,7 @@ package bits
 // 0b00000000000000000000000000001000
 // 0b00000000000000000000000000000000
 func hammingWeight(num uint32) int {
-	var count = 0
+	count := 0
 	for num > 0 {
 		num &= num - 1
 		count++

@@ -12,8 +12,8 @@ import (
 // space: O(n)
 func deckRevealedIncreasing(deck []int) []int {
 	sort.Ints(deck) // O(n log n)
-	var revealed = make([]int, len(deck))
-	var queue = pkg.NewQueue[int]()
+	revealed := make([]int, len(deck))
+	queue := pkg.NewQueue[int]()
 	for idx := range deck { // O(n)
 		queue.Enqueue(idx)
 	}

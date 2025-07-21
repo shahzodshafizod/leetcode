@@ -8,16 +8,16 @@ import "math"
 // Time: O(3*N) = O(N)
 // Space: O(N)
 func sortArray(nums []int) []int {
-	var mini, maxi = math.MaxInt, math.MinInt
+	mini, maxi := math.MaxInt, math.MinInt
 	for _, num := range nums {
 		mini = min(mini, num)
 		maxi = max(maxi, num)
 	}
-	var count = make([]int, maxi-mini+1)
+	count := make([]int, maxi-mini+1)
 	for _, num := range nums {
 		count[num-mini]++
 	}
-	var idx = 0
+	idx := 0
 	for num, count := range count {
 		num += mini
 		for count > 0 {

@@ -12,14 +12,14 @@ func countPrefixSuffixPairs(words []string) int {
 		suffix   int64
 		children map[rune]*TrieNode
 	}
-	var NewTrieNode = func() *TrieNode {
+	NewTrieNode := func() *TrieNode {
 		return &TrieNode{children: make(map[rune]*TrieNode)}
 	}
-	var root = NewTrieNode()
+	root := NewTrieNode()
 	var prefix, suffix bool
 	var c rune
 	var currp, currs *TrieNode
-	var count = 0
+	count := 0
 	for wid := len(words) - 1; wid >= 0; wid-- {
 		word := words[wid]
 		prefix = true

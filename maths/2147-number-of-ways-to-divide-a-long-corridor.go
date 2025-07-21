@@ -6,8 +6,8 @@ package maths
 // Space: O(1)
 func numberOfWays(corridor string) int {
 	const MOD int = 1e9 + 7
-	var seats, plants = 0, 0
-	var ways = 1
+	seats, plants := 0, 0
+	ways := 1
 	for _, c := range corridor {
 		if c == 'S' {
 			seats++

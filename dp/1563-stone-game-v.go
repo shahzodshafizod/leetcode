@@ -6,9 +6,9 @@ package dp
 // Time: O(nnn)
 // Space: O(nn)
 func stoneGameV(stoneValue []int) int {
-	var n = len(stoneValue)
-	var presum = make([]int, n+1)
-	var dp = make([][]int, n)
+	n := len(stoneValue)
+	presum := make([]int, n+1)
+	dp := make([][]int, n)
 	for idx := range stoneValue {
 		presum[idx+1] = presum[idx] + stoneValue[idx]
 		dp[idx] = make([]int, n)

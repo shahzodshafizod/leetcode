@@ -9,7 +9,7 @@ https://leetcode.com/problems/complement-of-base-10-integer/
 // https://leetcode.com/problems/number-complement/
 
 func findComplement(num int) int {
-	var bit = 1
+	bit := 1
 	for bit <= num {
 		num ^= bit
 		bit <<= 1

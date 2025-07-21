@@ -4,11 +4,11 @@ package slidingwindows
 
 func maxTotalFruits(fruits [][]int, startPos int, k int) int {
 	// to find left, could be used binary search approach
-	var left, n = 0, len(fruits)
+	left, n := 0, len(fruits)
 	for left < n && fruits[left][0] < startPos-k {
 		left++
 	}
-	var total, maxTotal = 0, 0
+	total, maxTotal := 0, 0
 	for right := left; right < n && fruits[right][0] <= startPos+k; right++ {
 		total += fruits[right][1]
 		for min(startPos-2*fruits[left][0]+fruits[right][0], 2*fruits[right][0]-fruits[left][0]-startPos) > k {

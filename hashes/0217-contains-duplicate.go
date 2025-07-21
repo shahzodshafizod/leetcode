@@ -5,7 +5,7 @@ package hashes
 // time: O(n)
 // space: O(n)
 func containsDuplicate(nums []int) bool {
-	var seen = make(map[int]bool)
+	seen := make(map[int]bool)
 	for _, num := range nums {
 		if seen[num] {
 			return true

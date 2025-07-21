@@ -6,8 +6,8 @@ package dp
 // Time: O(ns * nt), ns=len(s), nt=len(t)
 // Space: O(nt)
 func numDistinct(s string, t string) int {
-	var ns, nt = len(s), len(t)
-	var dp = make([]int, nt+1)
+	ns, nt := len(s), len(t)
+	dp := make([]int, nt+1)
 	dp[0] = 1
 	for is := 1; is <= ns; is++ {
 		for it := nt; it > 0; it-- {

@@ -10,10 +10,10 @@ func wordBreak(s string, wordDict []string) []string {
 		next  int
 		index int
 	}
-	var wordices = make([]*index, 0)
+	wordices := make([]*index, 0)
 	var start, next, skips int
-	var sn = len(s)
-	var exists = make([]bool, sn)
+	sn := len(s)
+	exists := make([]bool, sn)
 	for idx, word := range wordDict {
 		start = strings.Index(s, word)
 		skips = 0
@@ -34,7 +34,7 @@ func wordBreak(s string, wordDict []string) []string {
 			return []string{}
 		}
 	}
-	var sentences = make([]string, 0)
+	sentences := make([]string, 0)
 	var dfs func(idx int, sentence *string)
 	dfs = func(idx int, sentence *string) {
 		if idx == sn {
@@ -49,7 +49,7 @@ func wordBreak(s string, wordDict []string) []string {
 			}
 		}
 	}
-	var sentence = ""
+	sentence := ""
 	dfs(0, &sentence)
 	return sentences
 }

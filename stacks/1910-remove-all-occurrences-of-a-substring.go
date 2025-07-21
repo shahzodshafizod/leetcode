@@ -6,9 +6,9 @@ package stacks
 // Time: O(n+m), n=len(s), m=len(part)
 // Space: O(n+m)
 func removeOccurrences(s string, part string) string {
-	var pn = len(part)
-	var getLPS = func(part string) []int {
-		var lps = make([]int, pn)
+	pn := len(part)
+	getLPS := func(part string) []int {
+		lps := make([]int, pn)
 		for preflen, idx := 0, 1; idx < pn; idx++ {
 			if part[idx] == part[preflen] {
 				preflen++
@@ -20,11 +20,11 @@ func removeOccurrences(s string, part string) string {
 		}
 		return lps
 	}
-	var lps = getLPS(part)
-	var pid, sid, sn = 0, 0, len(s)
-	var stack = make([]byte, sn)
-	var nextID = make([]int, sn)
-	var diff = 0
+	lps := getLPS(part)
+	pid, sid, sn := 0, 0, len(s)
+	stack := make([]byte, sn)
+	nextID := make([]int, sn)
+	diff := 0
 	for sid < sn {
 		stack[sid-diff] = s[sid]
 		if s[sid] == part[pid] {

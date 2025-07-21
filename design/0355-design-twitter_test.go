@@ -36,16 +36,16 @@ func TestTwitter(t *testing.T) {
 			case "Twitter":
 				twitter = NewTwitter()
 			case "postTweet":
-				var userID, tweetID = tc.values[index][0], tc.values[index][1]
+				userID, tweetID := tc.values[index][0], tc.values[index][1]
 				twitter.PostTweet(userID, tweetID)
 			case "getNewsFeed":
-				var userID = tc.values[index][0]
+				userID := tc.values[index][0]
 				output = twitter.GetNewsFeed(userID)
 			case "follow":
-				var followerId, followeeId = tc.values[index][0], tc.values[index][1]
+				followerId, followeeId := tc.values[index][0], tc.values[index][1]
 				twitter.Follow(followerId, followeeId)
 			case "unfollow":
-				var followerId, followeeId = tc.values[index][0], tc.values[index][1]
+				followerId, followeeId := tc.values[index][0], tc.values[index][1]
 				twitter.Unfollow(followerId, followeeId)
 			}
 			assert.Equal(t, tc.output[index], output)

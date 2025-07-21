@@ -10,11 +10,11 @@ import "slices"
 // time: O(n+m+k)
 // space: O(k)
 func relativeSortArray(arr1 []int, arr2 []int) []int {
-	var count = make([]int, slices.Max(arr1)+1)
+	count := make([]int, slices.Max(arr1)+1)
 	for _, num := range arr1 {
 		count[num]++
 	}
-	var result = make([]int, 0, len(arr1))
+	result := make([]int, 0, len(arr1))
 	for _, num := range arr2 {
 		for count[num] > 0 {
 			result = append(result, num)

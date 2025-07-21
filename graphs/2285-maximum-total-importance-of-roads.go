@@ -9,13 +9,13 @@ import "slices"
 // time: O(R+3N) = O(R+N) = O(N^2)
 // space: O(2N) = O(N)
 func maximumImportance(n int, roads [][]int) int64 {
-	var degrees = make([]int, n)
+	degrees := make([]int, n)
 	for _, road := range roads { // O(R)
 		degrees[road[0]]++
 		degrees[road[1]]++
 	}
-	var max = slices.Max(degrees) // O(N)
-	var count = make([]int, max+1)
+	max := slices.Max(degrees) // O(N)
+	count := make([]int, max+1)
 	for _, degree := range degrees { // O(N)
 		count[degree]++
 	}

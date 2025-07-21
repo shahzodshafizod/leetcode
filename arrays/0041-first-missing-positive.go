@@ -3,7 +3,7 @@ package arrays
 // https://leetcode.com/problems/first-missing-positive/
 
 func firstMissingPositive(nums []int) int {
-	var len = len(nums)
+	len := len(nums)
 	// 1. delete unneccessary elements (set to zero)
 	// and sort elements: O(2N) = O(N)
 	for idx := range nums {

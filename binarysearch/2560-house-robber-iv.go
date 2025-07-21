@@ -5,8 +5,8 @@ import "slices"
 // https://leetcode.com/problems/house-robber-iv/
 
 func minCapability(nums []int, k int) int {
-	var n = len(nums)
-	var low, high = 1, slices.Max(nums)
+	n := len(nums)
+	low, high := 1, slices.Max(nums)
 	var mid, count, idx int
 	for low < high {
 		mid = low + (high-low)/2

@@ -8,8 +8,8 @@ import "strconv"
 // Time: O(N)
 // Space: O(1)
 func fizzBuzz(n int) []string {
-	var answer = make([]string, n)
-	var fizz, buzz = 3, 5
+	answer := make([]string, n)
+	fizz, buzz := 3, 5
 	for idx := 1; idx <= n; idx++ {
 		if idx == fizz {
 			answer[idx-1] = "Fizz"

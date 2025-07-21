@@ -5,9 +5,9 @@ package backtracking
 // time: O(m*n*4^w)
 // space: O(2*w) = O(w); O(w)-recursion stack, O(w)-counts
 func exist(board [][]byte, word string) bool {
-	var m, n, w = len(board), len(board[0]), len(word)
-	var letters = []byte(word)
-	var counts = make([]int, w)
+	m, n, w := len(board), len(board[0]), len(word)
+	letters := []byte(word)
+	counts := make([]int, w)
 	for row := 0; row < m; row++ { // time: O(m*n*w)
 		for col := 0; col < n; col++ {
 			for idx := range letters {
@@ -31,7 +31,7 @@ func exist(board [][]byte, word string) bool {
 			right--
 		}
 	}
-	var directions = [][2]int{{-1, 0}, {1, 0}, {0, -1}, {0, 1}}
+	directions := [][2]int{{-1, 0}, {1, 0}, {0, -1}, {0, 1}}
 	var dfs func(idx int, row int, col int) bool
 	dfs = func(idx int, row int, col int) bool {
 		if idx == w {

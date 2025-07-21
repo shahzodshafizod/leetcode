@@ -6,7 +6,7 @@ package dp
 // Time: O(n)
 // Space: O(1)
 func rob(nums []int) int {
-	var prev, curr = 0, 0
+	prev, curr := 0, 0
 	for _, num := range nums {
 		prev, curr = curr, max(prev+num, curr)
 	}

@@ -6,7 +6,7 @@ package hashes
 // Time: O(S+T), S=len(s), T=len(t)
 // Space: O(26) = O(1)
 func isAnagram(s string, t string) bool {
-	var counter = make(map[rune]int)
+	counter := make(map[rune]int)
 	for _, c := range s {
 		counter[c]++
 	}

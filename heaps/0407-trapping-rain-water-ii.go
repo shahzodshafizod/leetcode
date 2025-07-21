@@ -9,9 +9,9 @@ import (
 // https://leetcode.com/problems/trapping-rain-water-ii/
 
 func trapRainWater(heightMap [][]int) int {
-	var directions = [5]int{-1, 0, 1, 0, -1}
-	var m, n = len(heightMap), len(heightMap[0])
-	var queue = pkg.NewHeap(make([][3]int, 0), func(x [3]int, y [3]int) bool { return x[0] < y[0] })
+	directions := [5]int{-1, 0, 1, 0, -1}
+	m, n := len(heightMap), len(heightMap[0])
+	queue := pkg.NewHeap(make([][3]int, 0), func(x [3]int, y [3]int) bool { return x[0] < y[0] })
 	for row := 0; row < m; row++ {
 		heap.Push(queue, [3]int{heightMap[row][0], row, 0})
 		heap.Push(queue, [3]int{heightMap[row][n-1], row, n - 1})
@@ -24,7 +24,7 @@ func trapRainWater(heightMap [][]int) int {
 		heightMap[0][col] = -1
 		heightMap[m-1][col] = -1
 	}
-	var volume = 0
+	volume := 0
 	var height, row, col, r, c int
 	for queue.Len() > 0 {
 		top := heap.Pop(queue).([3]int)

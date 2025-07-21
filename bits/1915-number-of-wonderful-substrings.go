@@ -3,8 +3,8 @@ package bits
 // https://leetcode.com/problems/number-of-wonderful-substrings/
 
 func wonderfulSubstrings(word string) int64 {
-	var mask = 0 // current state
-	var freq = map[int]int64{mask: 1}
+	mask := 0 // current state
+	freq := map[int]int64{mask: 1}
 	var key int
 	var result int64 = 0
 	for _, letter := range word {

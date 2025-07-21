@@ -20,7 +20,7 @@ func smallestEquivalentString(s1 string, s2 string, baseStr string) string {
 		}
 		return root[x]
 	}
-	var n = len(s1)
+	n := len(s1)
 	var x, y int
 	for idx := 0; idx < n; idx++ {
 		x = find(int(s1[idx] - 'a'))

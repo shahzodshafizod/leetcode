@@ -55,18 +55,18 @@ type distance struct {
 
 // Dijkstra's Algorithm
 func networkDelayTime(times [][]int, n int, k int) int {
-	var graph = make(map[int][]*distance)
+	graph := make(map[int][]*distance)
 	for _, time := range times {
-		var source, target, weight = time[0], time[1], time[2]
+		source, target, weight := time[0], time[1], time[2]
 		graph[source] = append(graph[source], &distance{target: target, weight: weight})
 	}
-	var minHeap = pkg.NewHeap(
+	minHeap := pkg.NewHeap(
 		[]*distance{{target: k, weight: 0}},
 		func(x, y *distance) bool { return x.weight < y.weight },
 	)
-	var arrivalTime = make(map[int]int)
+	arrivalTime := make(map[int]int)
 	for minHeap.Len() > 0 {
-		var dist = heap.Pop(minHeap).(*distance)
+		dist := heap.Pop(minHeap).(*distance)
 		if _, found := arrivalTime[dist.target]; found {
 			continue
 		}
@@ -79,7 +79,7 @@ func networkDelayTime(times [][]int, n int, k int) int {
 	if len(arrivalTime) != n {
 		return -1
 	}
-	var maxDistance = 0
+	maxDistance := 0
 	for _, time := range arrivalTime {
 		if time > maxDistance {
 			maxDistance = time

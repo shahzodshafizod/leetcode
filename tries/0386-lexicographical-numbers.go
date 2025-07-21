@@ -6,8 +6,8 @@ package tries
 // Time: O(n)
 // Space: O(1)
 func lexicalOrder(n int) []int {
-	var nums = make([]int, n)
-	var num = 1
+	nums := make([]int, n)
+	num := 1
 	for idx := 0; idx < n; idx++ {
 		nums[idx] = num
 		if num*10 <= n {

@@ -22,7 +22,7 @@ func binaryTreePaths(root *pkg.TreeNode) []string {
 		if node.Left == nil && node.Right == nil {
 			return []string{strings.Join(path, "->")}
 		}
-		var paths = dfs(node.Left, path)
+		paths := dfs(node.Left, path)
 		paths = append(paths, dfs(node.Right, path)...)
 		return paths
 	}

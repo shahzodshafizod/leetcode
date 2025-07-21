@@ -11,16 +11,16 @@ import (
 // Time: O(mxn)
 // Space: O(mxn)
 func minCost(grid [][]int) int {
-	var directions = [4][2]int{{0, 1}, {0, -1}, {1, 0}, {-1, 0}}
-	var m, n = len(grid), len(grid[0])
-	var minCost = make([][]int, m)
+	directions := [4][2]int{{0, 1}, {0, -1}, {1, 0}, {-1, 0}}
+	m, n := len(grid), len(grid[0])
+	minCost := make([][]int, m)
 	for row := range minCost {
 		minCost[row] = make([]int, n)
 		for col := range minCost[row] {
 			minCost[row][col] = math.MaxInt
 		}
 	}
-	var queue = list.New()
+	queue := list.New()
 	queue.PushBack([3]int{0, 0, 0}) // row, col, cost
 	var row, col, cost, r, c int
 	for queue.Len() > 0 {

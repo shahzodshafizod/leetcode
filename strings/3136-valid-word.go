@@ -3,15 +3,15 @@ package strings
 // https://leetcode.com/problems/valid-word/
 
 func isValid(word string) bool {
-    if len(word) < 3 {
+	if len(word) < 3 {
 		return false
 	}
-	var isVowel = map[rune]bool{
-		'a':true,'e':true,'i':true,'o':true,'u':true,
-		'A':true,'E':true,'I':true,'O':true,'U':true,
+	isVowel := map[rune]bool{
+		'a': true, 'e': true, 'i': true, 'o': true, 'u': true,
+		'A': true, 'E': true, 'I': true, 'O': true, 'U': true,
 	}
-	var isWrong = map[rune]bool{'@':true,'#':true,'$':true}
-	var hasVowel, hasConsonent = false, false
+	isWrong := map[rune]bool{'@': true, '#': true, '$': true}
+	hasVowel, hasConsonent := false, false
 	for _, c := range word {
 		if isWrong[c] {
 			return false

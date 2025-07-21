@@ -6,11 +6,11 @@ package matrices
 // Time: O(mn)
 // Space: O(1)
 func findMaxFish(grid [][]int) int {
-	var directions = [5]int{1, 0, -1, 0, 1}
-	var m, n = len(grid), len(grid[0])
+	directions := [5]int{1, 0, -1, 0, 1}
+	m, n := len(grid), len(grid[0])
 	var dfs func(row int, col int) int
 	dfs = func(row int, col int) int {
-		var fish = grid[row][col]
+		fish := grid[row][col]
 		grid[row][col] = 0
 		var r, c int
 		for dir := 1; dir < 5; dir++ {
@@ -23,7 +23,7 @@ func findMaxFish(grid [][]int) int {
 		}
 		return fish
 	}
-	var maxfish = 0
+	maxfish := 0
 	for row := 0; row < m; row++ {
 		for col := 0; col < n; col++ {
 			if grid[row][col] > 0 {

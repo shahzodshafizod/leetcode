@@ -6,8 +6,8 @@ package matrices
 // Time: O(mn)
 // Space: O(1)
 func setZeroes(matrix [][]int) {
-	var m, n = len(matrix), len(matrix[0])
-	var firstCol = false
+	m, n := len(matrix), len(matrix[0])
+	firstCol := false
 	for row := 0; row < m; row++ {
 		if matrix[row][0] == 0 {
 			firstCol = true

@@ -8,8 +8,8 @@ import "strings"
 // Time: O(n⋅m)
 // Space: O(n⋅m)
 func shortestCommonSupersequence(str1 string, str2 string) string {
-	var n1, n2 = len(str1), len(str2)
-	var dp = make([][]int, n1+1)
+	n1, n2 := len(str1), len(str2)
+	dp := make([][]int, n1+1)
 	for idx := range dp {
 		dp[idx] = make([]int, n2+1)
 	}

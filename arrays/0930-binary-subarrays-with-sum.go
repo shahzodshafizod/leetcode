@@ -6,7 +6,7 @@ package arrays
 // space: O(1)
 // (22 ms, 6.7 MB)
 func numSubarraysWithSum(nums []int, goal int) int {
-	var count, sum, zeros, start = 0, 0, 0, 0
+	count, sum, zeros, start := 0, 0, 0, 0
 	for end, num := range nums {
 		sum += num
 		for start < end && (nums[start] == 0 || sum > goal) {

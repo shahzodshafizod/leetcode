@@ -10,9 +10,9 @@ import (
 
 func findAllPeople(n int, meetings [][]int, firstPerson int) []int {
 	sort.Slice(meetings, func(i, j int) bool { return meetings[i][2] < meetings[j][2] })
-	var uf = pkg.NewUnionFind(n)
+	uf := pkg.NewUnionFind(n)
 	uf.Union(0, firstPerson)
-	var told = make([]bool, n)
+	told := make([]bool, n)
 	told[0] = true
 	told[firstPerson] = true
 	var x, y, time int
@@ -38,7 +38,7 @@ func findAllPeople(n int, meetings [][]int, firstPerson int) []int {
 			}
 		}
 	}
-	var informed = make([]int, 0)
+	informed := make([]int, 0)
 	for person, aware := range told {
 		if aware {
 			informed = append(informed, person)

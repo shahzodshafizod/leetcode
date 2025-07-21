@@ -22,8 +22,8 @@ Then iterate over t and return the count of the last station if you find it.
 // time: O(len(t))
 // space: O(1)
 func isSubsequence(s string, t string) bool {
-	var sn, tn = len(s), len(t)
-	var si = 0
+	sn, tn := len(s), len(t)
+	si := 0
 	for ti := 0; ti < tn && si < sn; ti++ {
 		if s[si] == t[ti] {
 			si++

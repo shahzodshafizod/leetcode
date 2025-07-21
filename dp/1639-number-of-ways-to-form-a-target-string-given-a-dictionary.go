@@ -6,14 +6,14 @@ package dp
 // Time: O(W*T + W*w), W=len(words[i]), T=len(target), w=len(words)
 // Space: O(T)
 func numWays1639(words []string, target string) int {
-	var tlen, wlen = len(target), len(words[0])
-	var count = make([][26]int, wlen)
+	tlen, wlen := len(target), len(words[0])
+	count := make([][26]int, wlen)
 	for _, word := range words {
 		for wid := range word {
 			count[wid][int(word[wid]-'a')]++
 		}
 	}
-	var curr, next = make([]int, tlen+1), make([]int, tlen+1)
+	curr, next := make([]int, tlen+1), make([]int, tlen+1)
 	curr[tlen], next[tlen] = 1, 1
 	const MOD int = 1e9 + 7
 	for wid := wlen - 1; wid >= 0; wid-- {

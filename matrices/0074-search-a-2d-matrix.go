@@ -3,11 +3,11 @@ package matrices
 // https://leetcode.com/problems/search-a-2d-matrix/
 
 func searchMatrix(matrix [][]int, target int) bool {
-	var m, n = len(matrix), len(matrix[0])
-	var left, right = 0, m*n - 1
+	m, n := len(matrix), len(matrix[0])
+	left, right := 0, m*n-1
 	for left <= right {
-		var mid = (left + right) / 2
-		var midElem = matrix[mid/n][mid%n]
+		mid := (left + right) / 2
+		midElem := matrix[mid/n][mid%n]
 		if target == midElem {
 			return true
 		} else if target < midElem {

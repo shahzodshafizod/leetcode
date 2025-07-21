@@ -9,7 +9,7 @@ import (
 // https://leetcode.com/problems/merge-k-sorted-lists/
 
 func mergeKLists(lists []*pkg.ListNode) *pkg.ListNode {
-	var minHeap = pkg.NewHeap(
+	minHeap := pkg.NewHeap(
 		make([]*pkg.ListNode, 0),
 		func(x, y *pkg.ListNode) bool { return x.Val < y.Val },
 	)
@@ -18,8 +18,8 @@ func mergeKLists(lists []*pkg.ListNode) *pkg.ListNode {
 			heap.Push(minHeap, list)
 		}
 	}
-	var list = &pkg.ListNode{}
-	var tail = list
+	list := &pkg.ListNode{}
+	tail := list
 	for minHeap.Len() > 0 {
 		min := heap.Pop(minHeap).(*pkg.ListNode)
 		if min.Next != nil {

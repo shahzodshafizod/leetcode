@@ -3,7 +3,7 @@ package strings
 // https://leetcode.com/problems/sum-of-digits-of-string-after-convert/
 
 func getLucky(s string, k int) int {
-	var number = 0
+	number := 0
 	var temp int
 	for _, c := range s {
 		temp = int(c-'a') + 1

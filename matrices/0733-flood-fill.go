@@ -6,16 +6,16 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 
 // Approach: Breadth-First Search
 func floodFill(image [][]int, sr int, sc int, color int) [][]int {
-	var queue = pkg.NewQueue[[2]int]()
-	var srcColor = image[sr][sc]
+	queue := pkg.NewQueue[[2]int]()
+	srcColor := image[sr][sc]
 	if srcColor != color {
 		queue.Enqueue([2]int{sr, sc})
 	}
-	var m, n = len(image), len(image[0])
-	var dirs = [5]int{-1, 0, 1, 0, -1}
+	m, n := len(image), len(image[0])
+	dirs := [5]int{-1, 0, 1, 0, -1}
 	var row, col, r, c int
 	for !queue.Empty() {
-		var curr = queue.Dequeue()
+		curr := queue.Dequeue()
 		row, col = curr[0], curr[1]
 		image[row][col] = color
 		for d := 1; d < 5; d++ {

@@ -10,7 +10,7 @@ import (
 // Time: O(RF), R=len(robot), F=sum(factory[i][1])
 // Space: O(RF)
 func minimumTotalDistance(robot []int, factory [][]int) int64 {
-	var abs = func(x int) int64 {
+	abs := func(x int) int64 {
 		if x < 0 {
 			x = -x
 		}
@@ -18,14 +18,14 @@ func minimumTotalDistance(robot []int, factory [][]int) int64 {
 	}
 	sort.Ints(robot)
 	sort.Slice(factory, func(i, j int) bool { return factory[i][0] < factory[j][0] })
-	var factories = make([]int, 0, len(factory))
+	factories := make([]int, 0, len(factory))
 	for fid := range factory {
 		for limit := factory[fid][1]; limit > 0; limit-- {
 			factories = append(factories, factory[fid][0])
 		}
 	}
-	var rlen, flen = len(robot), len(factories)
-	var dp = make([][]int64, rlen+1)
+	rlen, flen := len(robot), len(factories)
+	dp := make([][]int64, rlen+1)
 	for idx := range dp {
 		dp[idx] = make([]int64, flen+1)
 		dp[idx][flen] = 1e12

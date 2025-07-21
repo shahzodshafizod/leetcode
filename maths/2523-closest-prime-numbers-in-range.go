@@ -8,7 +8,7 @@ import "math"
 // Time: O(N∗Log(Log(N)))
 // Space: O(N)
 func closestPrimes(left int, right int) []int {
-	var nonprime = make([]bool, right+1)
+	nonprime := make([]bool, right+1)
 	nonprime[0], nonprime[1] = true, true
 	for num, sqrt := 2, int(math.Sqrt(float64(right))); num <= sqrt; num++ {
 		if !nonprime[num] {
@@ -17,9 +17,9 @@ func closestPrimes(left int, right int) []int {
 			}
 		}
 	}
-	var ans = []int{-1, -1}
-	var diff = right - left + 1
-	var prev = -1
+	ans := []int{-1, -1}
+	diff := right - left + 1
+	prev := -1
 	for curr := left; curr <= right; curr++ {
 		if nonprime[curr] {
 			continue

@@ -5,7 +5,7 @@ package dp
 // time: O(M*N)
 // space: O(M)
 func uniquePaths(m int, n int) int {
-	var count = make([]int, n)
+	count := make([]int, n)
 	for i := 0; i < n; i++ {
 		count[i] = 1
 	}

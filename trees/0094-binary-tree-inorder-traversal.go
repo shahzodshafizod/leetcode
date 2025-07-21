@@ -8,8 +8,8 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 // time: O(n)
 // space: O(1)
 func inorderTraversal(root *pkg.TreeNode) []int {
-	var result = make([]int, 0)
-	var curr = root
+	result := make([]int, 0)
+	curr := root
 	var prev *pkg.TreeNode
 	for curr != nil {
 		if curr.Left == nil {

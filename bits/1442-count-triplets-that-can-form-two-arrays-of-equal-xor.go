@@ -12,8 +12,8 @@ a ^ 0 = a
 // time: O(n ^ 2)
 // space: O(1)
 func countTriplets(arr []int) int {
-	var count = 0
-	var n = len(arr)
+	count := 0
+	n := len(arr)
 	var xor int
 	for start := 0; start < n; start++ {
 		xor = arr[start]

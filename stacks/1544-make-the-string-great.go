@@ -3,7 +3,7 @@ package stacks
 // https://leetcode.com/problems/make-the-string-great/
 
 func makeGood(s string) string {
-	var st = make([]byte, 0)
+	st := make([]byte, 0)
 	for idx := range s {
 		if len(st) > 0 && (st[len(st)-1]-s[idx] == 32 || s[idx]-st[len(st)-1] == 32) {
 			st = st[:len(st)-1]

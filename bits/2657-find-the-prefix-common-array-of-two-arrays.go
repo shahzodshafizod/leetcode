@@ -9,7 +9,7 @@ import "math/bits"
 // Space: O(1)
 func findThePrefixCommonArray(A []int, B []int) []int {
 	var amask, bmask int64 = 0, 0
-	var C = make([]int, len(A))
+	C := make([]int, len(A))
 	for idx := range A {
 		amask |= 1 << A[idx]
 		bmask |= 1 << B[idx]

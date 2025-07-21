@@ -10,7 +10,7 @@ type trie struct {
 }
 
 func (t *trie) insert(word *string) {
-	var current = t
+	current := t
 	for _, c := range *word {
 		child := current.children[c]
 		if child == nil {
@@ -23,7 +23,7 @@ func (t *trie) insert(word *string) {
 }
 
 func (t *trie) search(word *string) int {
-	var current = t
+	current := t
 	for idx, c := range *word {
 		if current.end {
 			return idx
@@ -43,11 +43,11 @@ func (t *trie) search(word *string) int {
 // space: O(d*w + s*w*26) = O(d*w + s*w)
 // each node can store up to 26 pointers
 func replaceWords(dictionary []string, sentence string) string {
-	var trie = &trie{children: make(map[rune]*trie)}
+	trie := &trie{children: make(map[rune]*trie)}
 	for idx := range dictionary {
 		trie.insert(&dictionary[idx])
 	}
-	var words = strings.Split(sentence, " ")
+	words := strings.Split(sentence, " ")
 	for idx := range words {
 		rootEnd := trie.search(&words[idx])
 		if rootEnd > 0 {

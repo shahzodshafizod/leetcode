@@ -3,15 +3,15 @@ package backtracking
 // https://leetcode.com/problems/n-queens-ii/
 
 func totalNQueens(n int) int {
-	var cols = make([]bool, n)
-	var diag = make([]bool, 2*n)     // [row+col] as slash /
-	var backDiag = make([]bool, 2*n) // [n-row+col] as back slash \
+	cols := make([]bool, n)
+	diag := make([]bool, 2*n)     // [row+col] as slash /
+	backDiag := make([]bool, 2*n) // [n-row+col] as back slash \
 	var backtrack func(row int) int
 	backtrack = func(row int) int {
 		if row == n {
 			return 1
 		}
-		var solutions = 0
+		solutions := 0
 		for col := 0; col < n; col++ {
 			if cols[col] || diag[row+col] || backDiag[n-row+col] {
 				continue

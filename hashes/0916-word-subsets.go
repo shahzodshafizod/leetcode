@@ -13,7 +13,7 @@ func wordSubsets(words1 []string, words2 []string) []string {
 			freq[idx] = 0
 		}
 	}
-	var subsets = make([]string, 0)
+	subsets := make([]string, 0)
 	var universal bool
 	for _, word := range words1 {
 		for _, c := range word {

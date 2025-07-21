@@ -9,7 +9,7 @@ import (
 // go test -v -count=1 ./strings/ -run ^TestIsValid$
 func TestIsValid(t *testing.T) {
 	for _, tc := range []struct {
-		word string
+		word  string
 		valid bool
 	}{
 		{word: "234Adas", valid: true},

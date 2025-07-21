@@ -7,8 +7,8 @@ package tries
 // Time: O(N x len(prefix))
 // Space: O(1)
 func longestCommonPrefix(strs []string) string {
-	var idx = 0
-	var exit = false
+	idx := 0
+	exit := false
 	for !exit {
 		for _, word := range strs {
 			if idx == len(word) || word[idx] != strs[0][idx] {

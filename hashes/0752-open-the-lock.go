@@ -3,7 +3,7 @@ package hashes
 // https://leetcode.com/problems/open-the-lock/
 
 func openLock(deadends []string, target string) int {
-	var visited = make(map[string]bool)
+	visited := make(map[string]bool)
 	for _, deadend := range deadends {
 		visited[deadend] = true
 	}
@@ -13,9 +13,9 @@ func openLock(deadends []string, target string) int {
 	if target == "0000" {
 		return 0
 	}
-	var queue = []string{"0000"}
+	queue := []string{"0000"}
 	visited["0000"] = true
-	var level = 1
+	level := 1
 	for length := len(queue); length > 0; length = len(queue) {
 		for idx := 0; idx < length; idx++ {
 			for digit := 0; digit < 4; digit++ {

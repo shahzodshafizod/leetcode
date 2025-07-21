@@ -9,7 +9,7 @@ import (
 // go test -v -count=1 ./bits/ -run ^TestNumberOfSteps$
 func TestNumberOfSteps(t *testing.T) {
 	for _, tc := range []struct {
-		num int
+		num   int
 		steps int
 	}{
 		{num: 14, steps: 6},

@@ -4,7 +4,7 @@ package slidingwindows
 
 func countSubarrays(nums []int, minK int, maxK int) int64 {
 	var count int64 = 0
-	var badid, minid, maxid = -1, -1, -1
+	badid, minid, maxid := -1, -1, -1
 	for idx, num := range nums {
 		if num == minK {
 			minid = idx

@@ -6,9 +6,9 @@ package matrices
 // Time: O(mn)
 // Space: O(mn)
 func highestPeak(isWater [][]int) [][]int {
-	var m, n = len(isWater), len(isWater[0])
-	var queue = make([][2]int, 0)
-	var height = make([][]int, m)
+	m, n := len(isWater), len(isWater[0])
+	queue := make([][2]int, 0)
+	height := make([][]int, m)
 	for row := 0; row < m; row++ {
 		height[row] = make([]int, n)
 		for col := 0; col < n; col++ {
@@ -19,10 +19,10 @@ func highestPeak(isWater [][]int) [][]int {
 			}
 		}
 	}
-	var directions = [5]int{-1, 0, 1, 0, -1}
+	directions := [5]int{-1, 0, 1, 0, -1}
 	var row, col, r, c int
 	for len(queue) > 0 {
-		var next = make([][2]int, 0)
+		next := make([][2]int, 0)
 		for idx := range queue {
 			row, col = queue[idx][0], queue[idx][1]
 			for dir := 1; dir < 5; dir++ {

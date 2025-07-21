@@ -15,7 +15,7 @@ That result should be equal to zero.
 // Time: O(n)
 // Space: O(1)
 func doesValidArrayExist(derived []int) bool {
-	var xorsum = 0
+	xorsum := 0
 	for _, item := range derived {
 		xorsum ^= item
 	}

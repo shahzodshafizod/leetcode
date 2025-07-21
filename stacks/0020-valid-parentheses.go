@@ -22,9 +22,9 @@ func isValid(s string) bool {
 	if s == "" {
 		return true
 	}
-	var stack = make([]byte, 0)
+	stack := make([]byte, 0)
 	length := 0
-	var parentheses = map[byte]byte{'}': '{', ')': '(', ']': '['}
+	parentheses := map[byte]byte{'}': '{', ')': '(', ']': '['}
 	for i := len(s) - 1; i >= 0; i-- {
 		if length > 0 && s[i] == parentheses[stack[length-1]] {
 			length--

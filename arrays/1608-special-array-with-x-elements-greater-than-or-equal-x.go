@@ -5,12 +5,12 @@ package arrays
 // time: O(n)
 // space: O(n)
 func specialArray(nums []int) int {
-	var n = len(nums)
-	var freq = make([]int, n+1)
+	n := len(nums)
+	freq := make([]int, n+1)
 	for _, num := range nums {
 		freq[min(n, num)]++
 	}
-	var count = 0
+	count := 0
 	for x := n; x >= 0; x-- {
 		count += freq[x]
 		if x == count {

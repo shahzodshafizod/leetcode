@@ -6,8 +6,8 @@ package dp
 // Time: O(nkp), n=len(piles), p=len(piles[i])
 // Space: O(k)
 func maxValueOfCoins(piles [][]int, k int) int {
-	var n = len(piles)
-	var curr, next = make([]int, k+1), make([]int, k+1)
+	n := len(piles)
+	curr, next := make([]int, k+1), make([]int, k+1)
 	curr[1] = 1
 	var total, limit int
 	for i := n - 1; i >= 0; i-- {

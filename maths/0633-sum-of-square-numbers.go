@@ -8,7 +8,7 @@ import "math"
 // time: O(sqrt(c))
 // space: O(1)
 func judgeSquareSum(c int) bool {
-	var a, b = 0, int(math.Sqrt(float64(c)))
+	a, b := 0, int(math.Sqrt(float64(c)))
 	var sum int
 	for a <= b {
 		sum = a*a + b*b

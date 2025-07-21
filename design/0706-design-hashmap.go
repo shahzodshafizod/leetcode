@@ -13,8 +13,8 @@ type MyHashMap struct {
 
 func NewMyHashMap() MyHashMap {
 	const cap = 997
-	var keys = make([]*pkg.ListNode, cap)
-	var vals = make([]*pkg.ListNode, cap)
+	keys := make([]*pkg.ListNode, cap)
+	vals := make([]*pkg.ListNode, cap)
 	for i := 0; i < cap; i++ {
 		keys[i] = &pkg.ListNode{} // dummy head node
 		vals[i] = &pkg.ListNode{} // dummy head node

@@ -22,7 +22,7 @@ func commonChars(words []string) []string {
 			current[i] = 0
 		}
 	}
-	var result = make([]string, 0)
+	result := make([]string, 0)
 	for letter, count := range common {
 		for count > 0 {
 			count--

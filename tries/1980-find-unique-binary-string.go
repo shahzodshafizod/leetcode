@@ -6,8 +6,8 @@ package tries
 // Time: O(n)
 // Space: O(1)
 func findDifferentBinaryString(nums []string) string {
-	var n = len(nums)
-	var num = make([]byte, n)
+	n := len(nums)
+	num := make([]byte, n)
 	for idx := 0; idx < n; idx++ {
 		if nums[idx][idx] == '0' {
 			num[idx] = '1'

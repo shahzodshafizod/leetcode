@@ -7,7 +7,7 @@ import "sort"
 // Time: O(N Log N)
 // Space: O(N)
 func frequencySort(nums []int) []int {
-	var freq = make(map[int]int)
+	freq := make(map[int]int)
 	for _, num := range nums {
 		freq[num]++
 	}

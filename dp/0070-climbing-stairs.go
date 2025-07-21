@@ -7,7 +7,7 @@ func climbStairs(n int) int {
 	if n <= 2 {
 		return n
 	}
-	var prev, curr = 1, 2
+	prev, curr := 1, 2
 	for i := 3; i <= n; i++ {
 		prev, curr = curr, prev+curr
 	}

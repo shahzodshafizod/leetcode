@@ -22,8 +22,8 @@ Step 2: Write out some test cases
 // https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/
 
 func minRemoveToMakeValid(s string) string {
-	var slice = []byte(s)
-	var remove = make([]int, 0, len(slice))
+	slice := []byte(s)
+	remove := make([]int, 0, len(slice))
 	for idx, elem := range slice {
 		switch elem {
 		case '(':

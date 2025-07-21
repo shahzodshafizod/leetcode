@@ -9,11 +9,11 @@ import (
 // Time: O(v+e+q), v=n, e=len(edges), q=len(query)
 // Space: O(v)
 func minimumCost(n int, edges [][]int, query [][]int) []int {
-	var uf = pkg.NewUnionFindRanked(n)
+	uf := pkg.NewUnionFindRanked(n)
 	for _, edge := range edges {
 		uf.Union(edge[0], edge[1])
 	}
-	var walks = make([]*int, n)
+	walks := make([]*int, n)
 	var root int
 	for _, edge := range edges {
 		root = uf.Find(edge[0])
@@ -23,7 +23,7 @@ func minimumCost(n int, edges [][]int, query [][]int) []int {
 		}
 		*walks[root] &= edge[2]
 	}
-	var answer = make([]int, len(query))
+	answer := make([]int, len(query))
 	var rs, rt int
 	for idx := range query {
 		rs = uf.Find(query[idx][0])

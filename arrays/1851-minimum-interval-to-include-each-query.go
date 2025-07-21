@@ -35,7 +35,7 @@ func minInterval(intervals [][]int, queries []int) []int {
 	)
 
 	qmap := make(map[int]int)
-	var iid, ilen = 0, len(intervals)
+	iid, ilen := 0, len(intervals)
 	var left, right int
 	for _, query := range squeries {
 		for iid < ilen && intervals[iid][0] <= query {
@@ -47,7 +47,7 @@ func minInterval(intervals [][]int, queries []int) []int {
 		for inbound.Len() > 0 && inbound.Peak().right < query {
 			heap.Pop(inbound)
 		}
-		var value = -1
+		value := -1
 		if inbound.Len() > 0 {
 			value = inbound.Peak().length
 		}

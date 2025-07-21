@@ -10,8 +10,8 @@ import (
 // Time: O(n)
 // Space: O(1)
 func licenseKeyFormatting(s string, k int) string {
-	var n = len(s)
-	var count = (n - strings.Count(s, "-")) % k
+	n := len(s)
+	count := (n - strings.Count(s, "-")) % k
 	if count == 0 {
 		count = k
 	}

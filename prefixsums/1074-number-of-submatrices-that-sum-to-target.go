@@ -6,12 +6,12 @@ package prefixsums
 // Time: O(nnm)
 // Space: O(m)
 func numSubmatrixSumTarget(matrix [][]int, target int) int {
-	var m, n = len(matrix), len(matrix[0])
+	m, n := len(matrix), len(matrix[0])
 	// 560. Subarray Sum Equals K
 	// https://leetcode.com/problems/subarray-sum-equals-k/
-	var subarraySum = func(nums []int, k int) int {
-		var counter = map[int]int{0: 1}
-		var count, presum = 0, 0
+	subarraySum := func(nums []int, k int) int {
+		counter := map[int]int{0: 1}
+		count, presum := 0, 0
 		for idx := 0; idx < m; idx++ {
 			presum += nums[idx]
 			count += counter[presum-k]
@@ -19,9 +19,9 @@ func numSubmatrixSumTarget(matrix [][]int, target int) int {
 		}
 		return count
 	}
-	var count = 0
+	count := 0
 	for start := 0; start < n; start++ {
-		var presum = make([]int, m)
+		presum := make([]int, m)
 		for end := start; end < n; end++ {
 			for row := 0; row < m; row++ {
 				presum[row] += matrix[row][end]

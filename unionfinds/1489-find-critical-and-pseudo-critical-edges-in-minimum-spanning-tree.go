@@ -7,7 +7,7 @@ import (
 // https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/
 
 func findCriticalAndPseudoCriticalEdges(n int, edges [][]int) [][]int {
-	var parent = make([]int, n)
+	parent := make([]int, n)
 	var find func(x int) int
 	find = func(x int) int {
 		if parent[x] != x {
@@ -15,8 +15,8 @@ func findCriticalAndPseudoCriticalEdges(n int, edges [][]int) [][]int {
 		}
 		return parent[x]
 	}
-	var union = func(x int, y int) bool {
-		var px, py = find(x), find(y)
+	union := func(x int, y int) bool {
+		px, py := find(x), find(y)
 		if px != py {
 			parent[max(px, py)] = min(px, py)
 		}
@@ -26,12 +26,12 @@ func findCriticalAndPseudoCriticalEdges(n int, edges [][]int) [][]int {
 		edges[idx] = append(edges[idx], idx)
 	}
 	sort.Slice(edges, func(i, j int) bool { return edges[i][2] < edges[j][2] })
-	var kruskal = func(skip int, pick int) int {
+	kruskal := func(skip int, pick int) int {
 		for idx := 0; idx < n; idx++ {
 			parent[idx] = idx
 		}
-		var weight = 0
-		var count = n
+		weight := 0
+		count := n
 		var node1, node2, cost int
 		if pick >= 0 {
 			node1, node2, cost = edges[pick][0], edges[pick][1], edges[pick][2]
@@ -55,8 +55,8 @@ func findCriticalAndPseudoCriticalEdges(n int, edges [][]int) [][]int {
 		}
 		return weight
 	}
-	var critical, pseudoc = make([]int, 0), make([]int, 0)
-	var mstWeight = kruskal(-1, -1)
+	critical, pseudoc := make([]int, 0), make([]int, 0)
+	mstWeight := kruskal(-1, -1)
 	for idx := range edges {
 		if kruskal(idx, -1) > mstWeight {
 			critical = append(critical, edges[idx][3])

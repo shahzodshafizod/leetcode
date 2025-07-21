@@ -32,9 +32,9 @@ package hashes
 // Time: O(nn), n=len(arr)
 // Space: O(nn)
 func lenLongestFibSubseq(arr []int) int {
-	var n = len(arr)
-	var indices = make(map[int]int, n)
-	var dp = make([][]int, n)
+	n := len(arr)
+	indices := make(map[int]int, n)
+	dp := make([][]int, n)
 	for i := 0; i < n; i++ {
 		indices[arr[i]] = i
 		dp[i] = make([]int, n)
@@ -42,7 +42,7 @@ func lenLongestFibSubseq(arr []int) int {
 			dp[i][j] = 2
 		}
 	}
-	var longest = 0
+	longest := 0
 	var prev, curr, next int
 	for prev = 0; prev < n; prev++ {
 		for curr = prev + 1; curr < n; curr++ {

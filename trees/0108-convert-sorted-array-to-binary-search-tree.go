@@ -17,7 +17,7 @@ func sortedArrayToBST(nums []int) *pkg.TreeNode {
 		if left+1 == right {
 			return &pkg.TreeNode{Val: nums[left]}
 		}
-		var mid = left + (right-left)/2
+		mid := left + (right-left)/2
 		return &pkg.TreeNode{
 			Val:   nums[mid],
 			Left:  createTree(left, mid),

@@ -25,8 +25,8 @@ func (m *MountainArray) get(index int) int {
 func (m *MountainArray) length() int { return len(m.arr) }
 
 func findInMountainArray(target int, ma *MountainArray) int {
-	var peak = 1
-	var left, right = 1, ma.length() - 2
+	peak := 1
+	left, right := 1, ma.length()-2
 	for left <= right {
 		peak = left + (right-left)/2
 		if ma.get(peak-1) < ma.get(peak) {

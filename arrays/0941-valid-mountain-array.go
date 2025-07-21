@@ -3,12 +3,12 @@ package arrays
 // https://leetcode.com/problems/valid-mountain-array/
 
 func validMountainArray(arr []int) bool {
-	var n = len(arr)
+	n := len(arr)
 	if n < 3 { // Recall that arr is a mountain array if and only if: arr.length >= 3
 		return false
 	}
 	// walk up
-	var idx = 0
+	idx := 0
 	for idx+1 < n && arr[idx] < arr[idx+1] {
 		idx++
 	}

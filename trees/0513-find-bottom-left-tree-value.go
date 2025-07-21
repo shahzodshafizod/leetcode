@@ -7,7 +7,7 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 // DFS
 func findBottomLeftValue(root *pkg.TreeNode) int {
 	var value int
-	var maxLevel = -1
+	maxLevel := -1
 	var dfs func(node *pkg.TreeNode, level int)
 	dfs = func(node *pkg.TreeNode, level int) {
 		if node == nil {

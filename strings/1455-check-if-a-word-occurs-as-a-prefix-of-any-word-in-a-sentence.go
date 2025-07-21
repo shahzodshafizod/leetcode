@@ -6,9 +6,9 @@ package strings
 // Time: O(n+m), n=len(sentence), m=len(searchWord)
 // Space: O(1)
 func isPrefixOfWord(sentence string, searchWord string) int {
-	var wordIndex = 0
-	var idx, m = 0, len(searchWord)
-	var block = false
+	wordIndex := 0
+	idx, m := 0, len(searchWord)
+	block := false
 	for _, c := range sentence {
 		if c == ' ' {
 			wordIndex++

@@ -8,7 +8,7 @@ import "strings"
 // Time: O(n*m), n=len(emails), m=len(emails[i])
 // Space: O(n)
 func numUniqueEmails(emails []string) int {
-	var receivers = make(map[string]struct{})
+	receivers := make(map[string]struct{})
 	for _, email := range emails {
 		parts := strings.Split(email, "@")
 		parts[0] = strings.Split(parts[0], "+")[0]

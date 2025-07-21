@@ -6,13 +6,13 @@ package strings
 // Time: O(n)
 // Space: O(1)
 func shortestPalindrome(s string) string {
-	var forward, backward = 0, 0
+	forward, backward := 0, 0
 	const mod int = 1e9 + 7
 	// 29 is the first prime number after base26 to decrease collisions
 	const base int = 29
 	var digit int
-	var power = 1
-	var length = 0
+	power := 1
+	length := 0
 	for idx, c := range s {
 		digit = int(c-'a') + 1
 		forward = (forward*base + digit) % mod
@@ -22,7 +22,7 @@ func shortestPalindrome(s string) string {
 		}
 		power = power * base % mod
 	}
-	var prefix = []byte(s[length:])
+	prefix := []byte(s[length:])
 	for l, r := 0, len(prefix)-1; l < r; l, r = l+1, r-1 {
 		prefix[l], prefix[r] = prefix[r], prefix[l]
 	}

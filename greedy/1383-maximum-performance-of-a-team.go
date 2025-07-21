@@ -12,16 +12,16 @@ import (
 // Time: O(n Log n)
 // Space: O(n)
 func maxPerformance(n int, speed []int, efficiency []int, k int) int {
-	var engineers = make([][2]int, 0, n)
+	engineers := make([][2]int, 0, n)
 	for idx := 0; idx < n; idx++ {
 		engineers = append(engineers, [2]int{efficiency[idx], speed[idx]})
 	}
 	slices.SortFunc(engineers, func(a, b [2]int) int { return b[0] - a[0] })
-	var speeds = pkg.NewHeap(
+	speeds := pkg.NewHeap(
 		make([]int, 0),
 		func(x, y int) bool { return x < y },
 	)
-	var performance, totalSpeed = 0, 0
+	performance, totalSpeed := 0, 0
 	for _, engineer := range engineers {
 		if speeds.Len() == k {
 			totalSpeed -= heap.Pop(speeds).(int)

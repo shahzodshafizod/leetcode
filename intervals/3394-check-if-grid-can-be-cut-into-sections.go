@@ -5,11 +5,11 @@ import "sort"
 // https://leetcode.com/problems/check-if-grid-can-be-cut-into-sections/
 
 func checkValidCuts(n int, rectangles [][]int) bool {
-	var check = func(dim int) bool {
+	check := func(dim int) bool {
 		sort.Slice(rectangles, func(i int, j int) bool {
 			return rectangles[i][dim] < rectangles[j][dim]
 		})
-		var last, count = 0, 0
+		last, count := 0, 0
 		for idx := range rectangles {
 			if last <= rectangles[idx][dim] {
 				count++

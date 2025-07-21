@@ -3,8 +3,8 @@ package dp
 // https://leetcode.com/problems/regular-expression-matching/
 
 func isMatch(s string, p string) bool {
-	var slen, plen = len(s), len(p)
-	var cache = make([][]*bool, slen)
+	slen, plen := len(s), len(p)
+	cache := make([][]*bool, slen)
 	for idx := range cache {
 		cache[idx] = make([]*bool, plen)
 	}

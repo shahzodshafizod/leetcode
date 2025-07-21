@@ -20,4 +20,3 @@ func TestGridGame(t *testing.T) {
 		assert.Equal(t, tc.robot2, robot2)
 	}
 }
-

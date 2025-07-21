@@ -3,7 +3,7 @@ package stacks
 // https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/
 
 func maxDepth(s string) int {
-	var depth, counter = 0, 0
+	depth, counter := 0, 0
 	for _, c := range s {
 		switch c {
 		case '(':

@@ -11,8 +11,8 @@ func maxValue(events [][]int, k int) int {
 	sort.Slice(events, func(i, j int) bool {
 		return events[i][0] < events[j][0]
 	})
-	var n = len(events)
-	var next = make([]int, n)
+	n := len(events)
+	next := make([]int, n)
 	var left, right, mid int
 	for idx := 0; idx < n; idx++ {
 		left, right = idx+1, n
@@ -26,7 +26,7 @@ func maxValue(events [][]int, k int) int {
 		}
 		next[idx] = right
 	}
-	var dp = make([][]int, n+1)
+	dp := make([][]int, n+1)
 	for idx := range dp {
 		dp[idx] = make([]int, k+1)
 	}

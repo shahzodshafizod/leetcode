@@ -21,7 +21,7 @@ Step 2: Write out some test cases
 // https://leetcode.com/problems/reverse-linked-list/
 
 func reverseList(head *pkg.ListNode) *pkg.ListNode {
-	var node = head
+	node := head
 	head = nil
 	var next *pkg.ListNode
 	for node != nil {

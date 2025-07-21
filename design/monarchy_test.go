@@ -10,7 +10,7 @@ import (
 func TestMonarchy(t *testing.T) {
 	a := assert.New(t)
 
-	var monarchy = NewMonarchy("Jake")
+	monarchy := NewMonarchy("Jake")
 	monarchy.Birth("Catherine", "Jake")
 	monarchy.Birth("Tom", "Jake")
 	monarchy.Birth("Celine", "Jake")

@@ -6,13 +6,13 @@ package stacks
 // time: O(N)
 // space: O(1)
 func maximumGain(s string, x int, y int) int {
-	var a, b = 'a', 'b'
+	a, b := 'a', 'b'
 	if x < y {
 		x, y = y, x
 		a, b = b, a
 	}
-	var points = 0
-	var acount, bcount = 0, 0
+	points := 0
+	acount, bcount := 0, 0
 	for _, r := range s {
 		switch r {
 		case a:

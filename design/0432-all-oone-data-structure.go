@@ -33,7 +33,7 @@ func NewAllOne() AllOne {
 }
 
 func (a *AllOne) Inc(key string) {
-	var node = a.keys[key]
+	node := a.keys[key]
 	if node == nil {
 		node = NewAllOneNode(key, a.tail.prev, a.tail)
 		node.prev.next = node
@@ -47,7 +47,7 @@ func (a *AllOne) Inc(key string) {
 }
 
 func (a *AllOne) Dec(key string) {
-	var node = a.keys[key]
+	node := a.keys[key]
 	node.count--
 	if node.count == 0 {
 		node.prev.next = node.next

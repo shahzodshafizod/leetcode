@@ -6,8 +6,8 @@ package dp
 // Time: O(MxN)
 // Space: O(MxN)
 func calculateMinimumHP(dungeon [][]int) int {
-	var m, n = len(dungeon), len(dungeon[0])
-	var dp = make([][]int, m+1)
+	m, n := len(dungeon), len(dungeon[0])
+	dp := make([][]int, m+1)
 	for row := range dp {
 		dp[row] = make([]int, n+1)
 		for col := range dp[row] {

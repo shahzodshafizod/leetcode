@@ -8,15 +8,15 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 // Time: O(N Log N)
 // Space: O(1)
 func sortPeople(names []string, heights []int) []string {
-	var compare = func(i int, j int) bool {
+	compare := func(i int, j int) bool {
 		return heights[i] > heights[j]
 	}
-	var swap = func(i int, j int) {
+	swap := func(i int, j int) {
 		heights[i], heights[j] = heights[j], heights[i]
 		names[i], names[j] = names[j], names[i]
 	}
 
-	var pq = pkg.NewPQSort(len(names), compare, swap)
+	pq := pkg.NewPQSort(len(names), compare, swap)
 	pq.Sort() // O(N Log N)
 	return names
 }

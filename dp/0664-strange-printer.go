@@ -7,8 +7,8 @@ package dp
 // Space: O(N^2)
 func strangePrinter(s string) int {
 	// remove consecutive duplicate characters
-	var uniqS = ""
-	var prev = ' '
+	uniqS := ""
+	prev := ' '
 	for _, c := range s {
 		if c != prev {
 			uniqS += string(c)
@@ -16,10 +16,10 @@ func strangePrinter(s string) int {
 		prev = c
 	}
 	s = uniqS
-	var n = len(s)
+	n := len(s)
 
-	var indexes = map[byte]int{}
-	var next = make([]int, n)
+	indexes := map[byte]int{}
+	next := make([]int, n)
 	for idx := n - 1; idx >= 0; idx-- {
 		if indexes[s[idx]] > 0 {
 			next[idx] = indexes[s[idx]]
@@ -29,7 +29,7 @@ func strangePrinter(s string) int {
 		indexes[s[idx]] = idx
 	}
 
-	var dp = make([][]int, n+1)
+	dp := make([][]int, n+1)
 	for idx := range dp {
 		dp[idx] = make([]int, n+1)
 		dp[idx][idx] = 1

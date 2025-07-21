@@ -3,8 +3,8 @@ package stacks
 // https://leetcode.com/problems/longest-valid-parentheses/
 
 func longestValidParentheses(s string) int {
-	var length = func(open byte, from int, to int, factor int) int {
-		var length, opens, closes = 0, 0, 0
+	length := func(open byte, from int, to int, factor int) int {
+		length, opens, closes := 0, 0, 0
 		for idx := from; idx != to; idx += factor {
 			if s[idx] == open {
 				opens++

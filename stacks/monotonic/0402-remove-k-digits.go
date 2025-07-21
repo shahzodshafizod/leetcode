@@ -7,8 +7,8 @@ import "bytes"
 // time: O(n)
 // space: O(n)
 func removeKdigits(num string, k int) string {
-	var size = 0
-	var stack = make([]byte, size, len(num)-k)
+	size := 0
+	stack := make([]byte, size, len(num)-k)
 	var curr byte
 	for idx := range num {
 		curr = num[idx]

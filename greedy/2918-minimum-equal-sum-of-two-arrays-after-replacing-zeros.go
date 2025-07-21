@@ -4,7 +4,7 @@ package greedy
 
 func minSum(nums1 []int, nums2 []int) int64 {
 	var sum1, sum2 int64 = 0, 0
-	var zeroes1, zeroes2 = 0, 0
+	zeroes1, zeroes2 := 0, 0
 	for _, num := range nums1 {
 		sum1 += int64(num)
 		if num == 0 {

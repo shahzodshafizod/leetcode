@@ -10,25 +10,25 @@ import (
 // Time: O(n⋅log(maxRating))
 // Space: O(maxRating)
 func numTeams(rating []int) int {
-	var update = func(bit []int, idx int, delta int) {
+	update := func(bit []int, idx int, delta int) {
 		for n := len(bit); idx < n; idx += idx & -idx {
 			bit[idx] += delta
 		}
 	}
-	var count = func(bit []int, idx int) int {
-		var count = 0
+	count := func(bit []int, idx int) int {
+		count := 0
 		for ; idx > 0; idx -= idx & -idx {
 			count += bit[idx]
 		}
 		return count
 	}
-	var maxRating = slices.Max(rating)
-	var leftBIT = make([]int, maxRating+1)
-	var rightBIT = make([]int, maxRating+1)
+	maxRating := slices.Max(rating)
+	leftBIT := make([]int, maxRating+1)
+	rightBIT := make([]int, maxRating+1)
 	for _, rating := range rating {
 		update(rightBIT, rating, 1)
 	}
-	var teams = 0
+	teams := 0
 	for _, rating := range rating {
 		update(rightBIT, rating, -1)
 		lSmallers := count(leftBIT, rating-1)

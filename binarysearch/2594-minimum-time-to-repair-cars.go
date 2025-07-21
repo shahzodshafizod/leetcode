@@ -8,7 +8,7 @@ import (
 // https://leetcode.com/problems/minimum-time-to-repair-cars/
 
 func repairCars(ranks []int, cars int) int64 {
-	var n = len(ranks)
+	n := len(ranks)
 	var low, high int64 = 1, int64(slices.Max(ranks) * cars * cars)
 	var mid int64
 	var idx, remained int

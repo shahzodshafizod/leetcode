@@ -11,11 +11,11 @@ import (
 // Time: O(nxm), m=max(len(RLE))
 // Space: O(n)
 func countAndSay(n int) string {
-	var rle = "1"
+	rle := "1"
 	var new_rle strings.Builder
 	for ; n > 1; n-- {
 		new_rle.Reset()
-		var count, slen = 1, len(rle)
+		count, slen := 1, len(rle)
 		for idx := 1; idx < slen; idx++ {
 			if rle[idx] != rle[idx-1] {
 				new_rle.WriteString(strconv.Itoa(count))

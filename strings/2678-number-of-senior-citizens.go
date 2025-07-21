@@ -3,7 +3,7 @@ package strings
 // https://leetcode.com/problems/number-of-senior-citizens/
 
 func countSeniors(details []string) int {
-	var count = 0
+	count := 0
 	for _, detail := range details {
 		if detail[11] > '6' || detail[11] == '6' && detail[12] != '0' {
 			count++

@@ -9,15 +9,15 @@ func findMinHeightTrees(n int, edges [][]int) []int {
 	if n == 1 {
 		return []int{0}
 	}
-	var adjList = make([][]int, n)
+	adjList := make([][]int, n)
 	var a, b int
 	for _, edge := range edges {
 		a, b = edge[0], edge[1]
 		adjList[a] = append(adjList[a], b)
 		adjList[b] = append(adjList[b], a)
 	}
-	var count = make([]int, n)
-	var leaves = make([]int, 0)
+	count := make([]int, n)
+	leaves := make([]int, 0)
 	var length int
 	for node, neighbors := range adjList {
 		length = len(neighbors)

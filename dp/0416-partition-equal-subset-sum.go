@@ -8,17 +8,17 @@ import "maps"
 // Time: O(n*sum)
 // Space: O(sum)
 func canPartition(nums []int) bool {
-	var total = 0
+	total := 0
 	for _, num := range nums {
 		total += num
 	}
 	if total&1 != 0 {
 		return false
 	}
-	var target = total / 2
-	var dp = map[int]bool{0: true}
+	target := total / 2
+	dp := map[int]bool{0: true}
 	for _, num := range nums {
-		var nextdp = maps.Clone(dp)
+		nextdp := maps.Clone(dp)
 		for t := range dp {
 			if t+num == target {
 				return true

@@ -4,9 +4,9 @@ package graphs
 
 // Approach: Breadth-First Search + Backtracking
 func findLadders(beginWord string, endWord string, wordList []string) [][]string {
-	var m = len(beginWord)
-	var graph = make(map[string][]string)
-	var found = false
+	m := len(beginWord)
+	graph := make(map[string][]string)
+	found := false
 	for _, word := range wordList {
 		found = found || word == endWord
 		pattern := []byte(word)
@@ -20,11 +20,11 @@ func findLadders(beginWord string, endWord string, wordList []string) [][]string
 	if !found {
 		return [][]string{}
 	}
-	var prev = make(map[string][]string)
-	var queue = []string{beginWord}
-	var visited = map[string]int{beginWord: 1}
+	prev := make(map[string][]string)
+	queue := []string{beginWord}
+	visited := map[string]int{beginWord: 1}
 	found = false
-	var layer = 0
+	layer := 0
 	for size := len(queue); size > 0 && !found; size = len(queue) {
 		layer++
 		for _, word := range queue {
@@ -53,7 +53,7 @@ func findLadders(beginWord string, endWord string, wordList []string) [][]string
 		if word == beginWord {
 			return [][]string{path}
 		}
-		var sequences = make([][]string, 0)
+		sequences := make([][]string, 0)
 		for _, prev := range prev[word] {
 			newPath := append([]string{prev}, path...)
 			seq := dfs(prev, newPath)

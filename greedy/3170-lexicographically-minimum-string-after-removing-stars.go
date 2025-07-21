@@ -9,8 +9,8 @@ import "strings"
 // Space: O(n)
 func clearStars(s string) string {
 	var stack [26][]int
-	var stars = 0
-	var starred = []byte(s)
+	stars := 0
+	starred := []byte(s)
 	for idx, c := range s {
 		if c == '*' {
 			stars++

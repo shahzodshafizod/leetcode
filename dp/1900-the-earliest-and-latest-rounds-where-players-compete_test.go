@@ -9,10 +9,10 @@ import (
 // go test -v -count=1 ./dp/ -run ^TestEarliestAndLatest$
 func TestEarliestAndLatest(t *testing.T) {
 	for _, tc := range []struct {
-		n int
-		firstPlayer int
+		n            int
+		firstPlayer  int
 		secondPlayer int
-		rounds []int
+		rounds       []int
 	}{
 		{n: 11, firstPlayer: 2, secondPlayer: 4, rounds: []int{3, 4}},
 		{n: 5, firstPlayer: 1, secondPlayer: 5, rounds: []int{1, 1}},

@@ -7,7 +7,7 @@ package twopointers
 // Space: O(1)
 func findKDistantIndices(nums []int, key int, k int) []int {
 	var indices []int
-	var n, right = len(nums), 0
+	n, right := len(nums), 0
 	var left int
 	for idx := 0; idx < n; idx++ {
 		if nums[idx] == key {

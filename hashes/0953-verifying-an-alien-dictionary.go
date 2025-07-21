@@ -3,7 +3,7 @@ package hashes
 // https://leetcode.com/problems/verifying-an-alien-dictionary/
 
 func isAlienSorted(words []string, order string) bool {
-	var indices = make(map[byte]int)
+	indices := make(map[byte]int)
 	for idx := range order {
 		indices[order[idx]] = idx
 	}

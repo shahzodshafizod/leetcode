@@ -8,8 +8,8 @@ import "strings"
 // Time: O(N*maxWidth)
 // Space: O(maxWidth)
 func fullJustify(words []string, maxWidth int) []string {
-	var lines = make([]string, 0)
-	var line, width = make([]string, 0), 0
+	lines := make([]string, 0)
+	line, width := make([]string, 0), 0
 	var wcount, spaces, extra int
 	for idx, n := 0, len(words); idx < n; idx++ {
 		if width+len(line)+len(words[idx]) > maxWidth {
@@ -34,7 +34,7 @@ func fullJustify(words []string, maxWidth int) []string {
 		line = append(line, words[idx])
 		width += len(words[idx])
 	}
-	var lastLine = strings.Join(line, " ")
+	lastLine := strings.Join(line, " ")
 	lastLine += strings.Repeat(" ", maxWidth-len(lastLine))
 	lines = append(lines, lastLine)
 	return lines

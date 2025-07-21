@@ -24,7 +24,7 @@ You must multiply by modular inverse of the denominator under modulo.
 // Space: O(1)
 func countGoodArrays(n int, m int, k int) int {
 	const MOD int = 1e9 + 7
-	var pow = func(base, exp int) int {
+	pow := func(base, exp int) int {
 		result := 1
 		for exp > 0 {
 			if exp&1 == 1 {
@@ -35,7 +35,7 @@ func countGoodArrays(n int, m int, k int) int {
 		}
 		return result
 	}
-	var comb = func(n int, k int) int {
+	comb := func(n int, k int) int {
 		if k > n/2 {
 			k = n - k
 		}

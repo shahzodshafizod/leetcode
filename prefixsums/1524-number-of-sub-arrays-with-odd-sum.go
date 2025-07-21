@@ -6,8 +6,8 @@ package prefixsums
 // Time: O(n)
 // Space: O(1)
 func numOfSubarrays(arr []int) int {
-	var oddCnt, envCnt = 0, 0
-	var totalCount, prefixSum = 0, 0
+	oddCnt, envCnt := 0, 0
+	totalCount, prefixSum := 0, 0
 	const MOD int = 1e9 + 7
 	for _, num := range arr {
 		prefixSum += num

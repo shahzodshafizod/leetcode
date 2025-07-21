@@ -5,13 +5,13 @@ package monotonic
 // time: O(2n) = O(n) // n = len(nums1)
 // space: O(m) // m = len(nums2)
 func nextGreaterElement(nums1 []int, nums2 []int) []int {
-	var idmap = make(map[int]int)
+	idmap := make(map[int]int)
 	for idx, num := range nums1 {
 		idmap[num] = idx
 		nums1[idx] = -1
 	}
-	var size = 0
-	var stack = make([]int, size) // monotonic stack
+	size := 0
+	stack := make([]int, size) // monotonic stack
 	var curr, ptrid int
 	var exists bool
 	for idx := len(nums2) - 1; idx >= 0; idx-- {

@@ -10,8 +10,8 @@ import (
 // Time: O(n+m), n=# of tree nodes, m=len(queries)
 // Space: O(n+m)
 func treeQueries(root *pkg.TreeNode, queries []int) []int {
-	var height = make(map[int]int)
-	var maxHeight = 0
+	height := make(map[int]int)
+	maxHeight := 0
 	var dfs func(node *pkg.TreeNode, level int)
 	dfs = func(node *pkg.TreeNode, level int) {
 		if node == nil {
@@ -26,7 +26,7 @@ func treeQueries(root *pkg.TreeNode, queries []int) []int {
 	dfs(root, 0)
 	maxHeight = 0
 	dfs(root, 0)
-	var answer = make([]int, 0, len(queries))
+	answer := make([]int, 0, len(queries))
 	for _, query := range queries {
 		answer = append(answer, height[query])
 	}

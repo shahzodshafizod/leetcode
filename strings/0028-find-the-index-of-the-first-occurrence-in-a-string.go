@@ -7,9 +7,9 @@ package strings
 // Space: O(1)
 func strStr(haystack string, needle string) int {
 	const base, mod int = 29, 1e9 + 7
-	var subs = 0
+	subs := 0
 	var digit int
-	var power = 1
+	power := 1
 	for idx, c := range needle {
 		digit = int(c-'a') + 1
 		subs = (subs*base + digit) % mod
@@ -17,8 +17,8 @@ func strStr(haystack string, needle string) int {
 			power = (power * base) % mod
 		}
 	}
-	var m = len(needle)
-	var s = 0
+	m := len(needle)
+	s := 0
 	for idx, c := range haystack {
 		if idx >= m {
 			digit = int(haystack[idx-m]-'a') + 1

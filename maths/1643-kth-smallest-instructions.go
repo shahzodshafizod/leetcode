@@ -21,8 +21,8 @@ func kthSmallestPath(destination []int, k int) string {
 		dp[n][k] = comb(n-1, k) + comb(n-1, k-1)
 		return dp[n][k]
 	}
-	var row, col = destination[0], destination[1]
-	var path = ""
+	row, col := destination[0], destination[1]
+	path := ""
 	for row != 0 && col != 0 {
 		c := comb(row+col-1, row)
 		if k <= c {

@@ -6,10 +6,10 @@ package queues
 // Time: O(n)
 // Space: O(n)
 func constrainedSubsetSum(nums []int, k int) int {
-	var n = len(nums)
-	var queue = make([]int, n)
-	var head, tail = 0, 0
-	var result = nums[0]
+	n := len(nums)
+	queue := make([]int, n)
+	head, tail := 0, 0
+	result := nums[0]
 	for idx := 1; idx < n; idx++ {
 		if queue[head]+k < idx {
 			head++ // popleft

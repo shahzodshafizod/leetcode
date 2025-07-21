@@ -20,4 +20,3 @@ func gridGame(grid [][]int) int64 {
 	}
 	return robot2
 }
-

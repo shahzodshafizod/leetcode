@@ -3,13 +3,13 @@ package maths
 // https://leetcode.com/problems/task-scheduler/
 
 func leastInterval(tasks []byte, n int) int {
-	var counts = make(map[byte]int)
+	counts := make(map[byte]int)
 	for _, task := range tasks { // O(n)
 		counts[task]++
 	}
 
-	var maximum = 0
-	var maxCount = 0
+	maximum := 0
+	maxCount := 0
 	for _, count := range counts { // O(26)
 		if count > maximum {
 			maximum = count

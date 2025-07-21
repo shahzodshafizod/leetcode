@@ -17,7 +17,7 @@ func isBadVersion(version int) bool {
 }
 
 func firstBadVersion(n int) int {
-	var left, right = 1, n
+	left, right := 1, n
 	for left < right {
 		mid := left + (right-left)/2
 		if isBadVersion(mid) {

@@ -7,8 +7,8 @@ import (
 // https://leetcode.com/problems/uncommon-words-from-two-sentences/
 
 func uncommonFromSentences(s1 string, s2 string) []string {
-	var allow = make(map[string]bool)
-	var deny = make(map[string]bool)
+	allow := make(map[string]bool)
+	deny := make(map[string]bool)
 	for _, word := range strings.Split(s1+" "+s2, " ") {
 		if deny[word] {
 			continue
@@ -20,7 +20,7 @@ func uncommonFromSentences(s1 string, s2 string) []string {
 		}
 		allow[word] = true
 	}
-	var uncommon = make([]string, 0, len(allow))
+	uncommon := make([]string, 0, len(allow))
 	for word := range allow {
 		uncommon = append(uncommon, word)
 	}

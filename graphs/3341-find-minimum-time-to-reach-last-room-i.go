@@ -12,17 +12,17 @@ import (
 // Time: O(nm log nm)
 // Space: O(nm)
 func minTimeToReach(moveTime [][]int) int {
-	var n, m = len(moveTime), len(moveTime[0])
-	var seen = make([][]bool, n)
+	n, m := len(moveTime), len(moveTime[0])
+	seen := make([][]bool, n)
 	for row := 0; row < n; row++ {
 		seen[row] = make([]bool, m)
 	}
-	var minHeap = pkg.NewHeap(
+	minHeap := pkg.NewHeap(
 		[][3]int{{0, 0, 0}},
 		func(x, y [3]int) bool { return x[2] < y[2] },
 	)
 	seen[0][0] = true
-	var directions = [5]int{1, 0, -1, 0, 1}
+	directions := [5]int{1, 0, -1, 0, 1}
 	var row, col, time, newR, newC, newT int
 	for minHeap.Len() > 0 {
 		top := heap.Pop(minHeap).([3]int)

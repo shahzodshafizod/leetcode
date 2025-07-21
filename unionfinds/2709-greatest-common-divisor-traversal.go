@@ -5,9 +5,9 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 // https://leetcode.com/problems/greatest-common-divisor-traversal/
 
 func canTraverseAllPairs(nums []int) bool {
-	var n = len(nums)
-	var uf = pkg.NewUnionFindRanked(n)
-	var factors = make(map[int]int)
+	n := len(nums)
+	uf := pkg.NewUnionFindRanked(n)
+	factors := make(map[int]int)
 	var factor int
 	for idx, num := range nums {
 		factor = 2

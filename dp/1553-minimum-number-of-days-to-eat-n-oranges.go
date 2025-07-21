@@ -10,7 +10,7 @@ func minDays(n int) int {
 	// - east 1, remains n-1: 1+n-1 = n
 	// - east n/2, remains n/2, n/2+n/2 = n
 	// - east 2*n/3, remains n/3, 2*n/3+n/3 = 3*n/3 = n
-	var memo = make(map[int]int)
+	memo := make(map[int]int)
 	var dp func(n int) int
 	dp = func(n int) int {
 		if n <= 1 {

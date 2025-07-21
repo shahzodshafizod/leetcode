@@ -4,7 +4,7 @@ package dp
 
 func countBalancedPermutations(num string) int {
 	var cnt [10]int
-	var sum, maxFreq = 0, 0
+	sum, maxFreq := 0, 0
 	var digit int
 	for _, c := range num {
 		digit = int(c - '0')
@@ -22,9 +22,9 @@ func countBalancedPermutations(num string) int {
 	}
 
 	const MOD int = 1e9 + 7
-	var n = len(num)
-	var oddCnt = (n + 1) / 2
-	var halfSum = sum >> 1
+	n := len(num)
+	oddCnt := (n + 1) / 2
+	halfSum := sum >> 1
 
 	// var comb = func(n int, k int) int {
 	// 	if k > n {
@@ -36,7 +36,7 @@ func countBalancedPermutations(num string) int {
 	// 	}
 	// 	return res % MOD
 	// }
-	var comb = make([][]int, oddCnt+1)
+	comb := make([][]int, oddCnt+1)
 	for i := 0; i <= oddCnt; i++ {
 		comb[i] = make([]int, maxFreq+1)
 	}
@@ -48,14 +48,14 @@ func countBalancedPermutations(num string) int {
 		}
 	}
 
-	var memo = make([][][10]*int, oddCnt+1)
+	memo := make([][][10]*int, oddCnt+1)
 	for idx := 0; idx <= oddCnt; idx++ {
 		memo[idx] = make([][10]*int, halfSum+1)
 	}
 
 	var dfs func(digit int, ocnt int, balance int) int
 	dfs = func(digit int, ocnt int, balance int) int {
-		var ecnt = n - ocnt - postCnt[digit+1]
+		ecnt := n - ocnt - postCnt[digit+1]
 		if ocnt == 0 && ecnt == 0 && balance == 0 {
 			return 1
 		}
@@ -65,7 +65,7 @@ func countBalancedPermutations(num string) int {
 		if memo[ocnt][balance][digit] != nil {
 			return *memo[ocnt][balance][digit]
 		}
-		var res = 0
+		res := 0
 		var nxt, ways int
 		for freq := 0; freq <= cnt[digit]; freq++ {
 			nxt = dfs(digit-1, ocnt-freq, balance-digit*freq)

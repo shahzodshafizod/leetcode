@@ -6,17 +6,17 @@ package graphs
 // Time: Time: O(n+e), n=# of nodes, e=# of edges
 // Space: O(n+e)
 func maxKDivisibleComponents(n int, edges [][]int, values []int, k int) int {
-	var adj = make([][]int, n)
+	adj := make([][]int, n)
 	var a, b int
 	for idx := range edges {
 		a, b = edges[idx][0], edges[idx][1]
 		adj[a] = append(adj[a], b)
 		adj[b] = append(adj[b], a)
 	}
-	var count = 0
+	count := 0
 	var dfs func(parent int, node int) int
 	dfs = func(parent int, node int) int {
-		var total = values[node]
+		total := values[node]
 		for _, next := range adj[node] {
 			if next == parent {
 				continue

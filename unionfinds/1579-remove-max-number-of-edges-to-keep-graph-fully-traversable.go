@@ -9,7 +9,7 @@ type uf struct {
 }
 
 func newUF(n int) *uf {
-	var uf = &uf{
+	uf := &uf{
 		n:    n,
 		par:  make([]int, n+1),
 		rank: make([]int, n+1),

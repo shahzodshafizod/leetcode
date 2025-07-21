@@ -5,7 +5,7 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 // https://leetcode.com/problems/double-a-number-represented-as-a-linked-list/
 
 func doubleIt(head *pkg.ListNode) *pkg.ListNode {
-	var dummy = &pkg.ListNode{Val: 0, Next: head}
+	dummy := &pkg.ListNode{Val: 0, Next: head}
 	for node := dummy; node.Next != nil; node = node.Next {
 		node.Next.Val *= 2
 		node.Val += node.Next.Val / 10

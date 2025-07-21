@@ -6,11 +6,11 @@ package dp
 // Time: O(nlogn)
 // Space: O(n)
 func minimumMountainRemovals(nums []int) int {
-	var n = len(nums)
-	var getLIS = func(start int, end int, step int) []int {
-		var lis = make([]int, n)
-		var sequence = make([]int, 0)
-		var slen = 0
+	n := len(nums)
+	getLIS := func(start int, end int, step int) []int {
+		lis := make([]int, n)
+		sequence := make([]int, 0)
+		slen := 0
 		var left, right, mid int
 		for idx := start; idx != end; idx += step {
 			if slen == 0 || nums[idx] > sequence[slen-1] {
@@ -34,11 +34,11 @@ func minimumMountainRemovals(nums []int) int {
 		return lis
 	}
 	// longest increasing subsequence
-	var lis = getLIS(0, n, 1)
+	lis := getLIS(0, n, 1)
 	// longest decreasing subsequence
-	var lds = getLIS(n-1, -1, -1)
+	lds := getLIS(n-1, -1, -1)
 	var length int
-	var mountain = 0
+	mountain := 0
 	// minimum to remove = maximum to keep
 	for peek, n := 0, len(nums); peek < n; peek++ { // O(n)
 		length = lis[peek] + lds[peek] - 1

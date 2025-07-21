@@ -9,9 +9,9 @@ import "sort"
 // Space: O(1)
 func countFairPairs(nums []int, lower int, upper int) int64 {
 	sort.Ints(nums)
-	var lessThan = func(top int) int64 {
+	lessThan := func(top int) int64 {
 		var pairs int64 = 0
-		var left, right = 0, len(nums) - 1
+		left, right := 0, len(nums)-1
 		for left < right {
 			if nums[left]+nums[right] < top {
 				pairs += int64(right - left)

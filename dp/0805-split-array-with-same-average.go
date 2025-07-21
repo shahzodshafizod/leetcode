@@ -27,18 +27,18 @@ then nums itself has to have this average as well
 // Time: O(N*TotalSum)
 // Space: O(TotalSum)
 func splitArraySameAverage(nums []int) bool {
-	var n = len(nums)
+	n := len(nums)
 	if n == 1 {
 		return false
 	}
-	var total = 0
+	total := 0
 	for _, num := range nums {
 		total += num
 	}
 	if total == 0 {
 		return true
 	}
-	var possible = false
+	possible := false
 	for size := 1; size < n; size++ {
 		if total*size%n == 0 {
 			possible = true
@@ -48,7 +48,7 @@ func splitArraySameAverage(nums []int) bool {
 	if !possible {
 		return false
 	}
-	var dp = make([]int, total+1)
+	dp := make([]int, total+1)
 	dp[0] = 1
 	for _, num := range nums {
 		for target := total; target >= 0; target-- {

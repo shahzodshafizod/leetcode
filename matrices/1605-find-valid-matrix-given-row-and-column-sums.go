@@ -18,8 +18,8 @@ matrix = [  |                |               |
 // time: O(M x N)
 // space: O(1)
 func restoreMatrix(rowSum []int, colSum []int) [][]int {
-	var m, n = len(rowSum), len(colSum)
-	var matrix = make([][]int, m)
+	m, n := len(rowSum), len(colSum)
+	matrix := make([][]int, m)
 	for row := 0; row < m; row++ {
 		matrix[row] = make([]int, n)
 		matrix[row][0] = rowSum[row]

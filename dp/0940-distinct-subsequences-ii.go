@@ -7,7 +7,7 @@ package dp
 // Space: O(n)
 func distinctSubseqII(s string) int {
 	const MOD int = 1e9 + 7
-	var dp = 1
+	dp := 1
 	var last [26]int
 	var key int
 	for idx := range s {

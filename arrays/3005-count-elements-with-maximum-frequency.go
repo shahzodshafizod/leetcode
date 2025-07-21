@@ -4,7 +4,7 @@ package arrays
 
 func maxFrequencyElements(nums []int) int {
 	var count [101]int
-	var total, maxCount = 0, 0
+	total, maxCount := 0, 0
 	for _, num := range nums {
 		count[num]++
 		switch {

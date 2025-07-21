@@ -11,9 +11,9 @@ There are only two rules that you need to know in this problem:
 // time: O(m x n)
 // space: O(1)
 func matrixScore(grid [][]int) int {
-	var m, n = len(grid), len(grid[0])
+	m, n := len(grid), len(grid[0])
 	// 1. all bits in the first column should be set
-	var score = m * (1 << (n - 1))
+	score := m * (1 << (n - 1))
 	var count int
 	for col := 1; col < n; col++ {
 		count = 0

@@ -9,8 +9,8 @@ import "sort"
 // Space: O(nn)
 func largestDivisibleSubset(nums []int) []int {
 	sort.Ints(nums)
-	var n = len(nums)
-	var dp = make([][]int, n)
+	n := len(nums)
+	dp := make([][]int, n)
 	var answer []int
 	for idx := n - 1; idx >= 0; idx-- {
 		dp[idx] = append(dp[idx], nums[idx])

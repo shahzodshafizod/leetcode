@@ -42,8 +42,8 @@ Example: nums:[-2, 1, -3, 4, -1, 2, 1, -5, 4], max:6
 
 // Kadane's algorithm: O(n)
 func maxSubArray(nums []int) int {
-	var maxSum = nums[0]
-	var currSum = 0
+	maxSum := nums[0]
+	currSum := 0
 	for _, num := range nums {
 		currSum += num
 		maxSum = max(maxSum, currSum)

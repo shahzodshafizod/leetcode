@@ -7,7 +7,7 @@ package dp
 func uniquePathsWithObstacles(obstacleGrid [][]int) int {
 	m := len(obstacleGrid)
 	n := len(obstacleGrid[0])
-	var memo = make([]int, n)
+	memo := make([]int, n)
 	for i := n - 1; i >= 0; i-- {
 		if obstacleGrid[m-1][i] == 1 {
 			break

@@ -3,7 +3,7 @@ package bits
 // https://leetcode.com/problems/counting-bits/
 
 func countBits(n int) []int {
-	var bits = make([]int, n+1)
+	bits := make([]int, n+1)
 	for i := 1; i <= n; i++ {
 		if i&(i-1) == 0 { // power of two, has the only bit set
 			bits[i] = 1

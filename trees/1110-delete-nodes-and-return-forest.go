@@ -7,7 +7,7 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 // time: O(N)
 // space: O(N)
 func delNodes(root *pkg.TreeNode, toDelete []int) []*pkg.TreeNode {
-	var inDelMap = make(map[int]bool)
+	inDelMap := make(map[int]bool)
 	for _, val := range toDelete {
 		inDelMap[val] = true
 	}
@@ -16,7 +16,7 @@ func delNodes(root *pkg.TreeNode, toDelete []int) []*pkg.TreeNode {
 		if node == nil {
 			return nil, nil
 		}
-		var forest = make([]*pkg.TreeNode, 0)
+		forest := make([]*pkg.TreeNode, 0)
 		if isRoot && !inDelMap[node.Val] {
 			forest = append(forest, node)
 		}
@@ -33,7 +33,7 @@ func delNodes(root *pkg.TreeNode, toDelete []int) []*pkg.TreeNode {
 		}
 		return forest, node
 	}
-	var forest, _ = dfs(root, true)
+	forest, _ := dfs(root, true)
 	return forest
 }
 

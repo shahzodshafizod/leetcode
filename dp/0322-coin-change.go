@@ -6,7 +6,7 @@ package dp
 // time: O(amount*len(coins))
 // space: O(amount)
 func coinChange(coins []int, amount int) int {
-	var counts = make([]int, amount+1)
+	counts := make([]int, amount+1)
 	counts[0] = 0
 	for a := 1; a <= amount; a++ {
 		counts[a] = amount + 1

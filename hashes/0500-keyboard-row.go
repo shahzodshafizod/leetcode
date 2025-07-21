@@ -8,7 +8,7 @@ import (
 // https://leetcode.com/problems/keyboard-row/
 
 func findWords(words []string) []string {
-	var codes = make(map[rune]int)
+	codes := make(map[rune]int)
 	for idx, word := range [3]string{"qwertyuiop", "asdfghjkl", "zxcvbnm"} {
 		for _, c := range word {
 			codes[c] = idx

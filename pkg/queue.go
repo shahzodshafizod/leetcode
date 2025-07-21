@@ -24,7 +24,7 @@ func NewQueue[T any]() Queue[T] {
 }
 
 func (q *queue[T]) Enqueue(val T) {
-	var newNode = &queueNode[T]{val: val}
+	newNode := &queueNode[T]{val: val}
 	if q.Empty() {
 		q.head, q.tail = newNode, newNode
 	} else {

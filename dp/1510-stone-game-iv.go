@@ -6,7 +6,7 @@ package dp
 // Time: O(n*sqrt(n))
 // Space: O(n)
 func winnerSquareGame(n int) bool {
-	var dp = make([]bool, n+1)
+	dp := make([]bool, n+1)
 	dp[0] = false
 	for curr := 1; curr <= n; curr++ {
 		for x := 1; x*x <= curr; x++ {

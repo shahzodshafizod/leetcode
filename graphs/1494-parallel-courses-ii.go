@@ -6,13 +6,13 @@ package graphs
 // Time: O(2^n)
 // Space: O(2^n)
 func minNumberOfSemesters(n int, relations [][]int, k int) int {
-	var adjList = make([][]int, n)
+	adjList := make([][]int, n)
 	var prev, next int
 	for idx := range relations {
 		prev, next = relations[idx][0]-1, relations[idx][1]-1
 		adjList[prev] = append(adjList[prev], next)
 	}
-	var memo = make([]*int, 1<<n)
+	memo := make([]*int, 1<<n)
 	var dfs func(mask int) int
 	dfs = func(mask int) int {
 		if mask == (1<<n)-1 {
@@ -21,7 +21,7 @@ func minNumberOfSemesters(n int, relations [][]int, k int) int {
 		if memo[mask] != nil {
 			return *memo[mask]
 		}
-		var indegree = make([]int, n)
+		indegree := make([]int, n)
 		for node := 0; node < n; node++ {
 			if mask&(1<<node) != 0 {
 				continue
@@ -30,20 +30,20 @@ func minNumberOfSemesters(n int, relations [][]int, k int) int {
 				indegree[child]++
 			}
 		}
-		var availableMask = 0
-		var count = 0
+		availableMask := 0
+		count := 0
 		for node := 0; node < n; node++ {
 			if indegree[node] == 0 && mask&(1<<node) == 0 {
 				availableMask |= 1 << node
 				count++
 			}
 		}
-		var result = n + 1
-		var nextMask = availableMask
+		result := n + 1
+		nextMask := availableMask
 		if count > k {
 			for nextMask > 0 {
 				count = 0
-				var tmp = nextMask
+				tmp := nextMask
 				for tmp > 0 {
 					tmp &= tmp - 1
 					count++

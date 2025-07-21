@@ -12,8 +12,8 @@ import (
 // Time: O(n + logn x logm), n=len(nums), m=max(nums[i])
 // Space: O(n)
 func minimumDeviation(nums []int) int {
-	var n = len(nums)
-	var maxHeap = make([]int, 0, n)
+	n := len(nums)
+	maxHeap := make([]int, 0, n)
 	var smallest int = 1e9
 	for _, num := range nums {
 		if num&1 == 1 {
@@ -22,7 +22,7 @@ func minimumDeviation(nums []int) int {
 		maxHeap = append(maxHeap, num)
 		smallest = min(smallest, num)
 	}
-	var pq = pkg.NewHeap(maxHeap,
+	pq := pkg.NewHeap(maxHeap,
 		func(x, y int) bool {
 			return x > y
 		},

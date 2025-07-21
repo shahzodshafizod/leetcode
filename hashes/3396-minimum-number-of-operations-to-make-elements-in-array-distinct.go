@@ -6,7 +6,7 @@ package hashes
 // Time: O(n)
 // Space: O(n)
 func minimumOperations(nums []int) int {
-	var visited = make(map[int]struct{})
+	visited := make(map[int]struct{})
 	var exists bool
 	for idx := len(nums) - 1; idx >= 0; idx-- {
 		if _, exists = visited[nums[idx]]; exists {

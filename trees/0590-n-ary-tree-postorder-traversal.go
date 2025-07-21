@@ -25,7 +25,7 @@ func postorder(root *pkg.NTreeNode) []int {
 	if root == nil {
 		return []int{}
 	}
-	var order = make([]int, 0)
+	order := make([]int, 0)
 	for _, child := range root.Children {
 		order = append(order, postorder(child)...)
 	}

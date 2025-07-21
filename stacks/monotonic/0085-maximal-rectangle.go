@@ -6,10 +6,10 @@ package monotonic
 // time: O(rows*cols)
 // space: O(cols)
 func maximalRectangle(matrix [][]byte) int {
-	var rows, cols = len(matrix), len(matrix[0])
-	var maximal = 0
-	var heights = make([]int, cols)
-	var stack = make([][2]int, cols) // increasing stack {index, height}
+	rows, cols := len(matrix), len(matrix[0])
+	maximal := 0
+	heights := make([]int, cols)
+	stack := make([][2]int, cols) // increasing stack {index, height}
 	var top, index, height, width int
 	for row := 0; row < rows; row++ { // O(rows)
 		top = -1                          // reset the stack

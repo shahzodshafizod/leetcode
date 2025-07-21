@@ -8,18 +8,18 @@ import "strconv"
 // Time: O(Len(n) * Log(n))
 // Space: O(n)
 func nearestPalindromic(n string) string {
-	var makePalindrome = func(num int64) int64 {
-		var b = []byte(strconv.FormatInt(num, 10))
-		var n = len(b)
-		var left = (n - 1) / 2
-		var right = n / 2
+	makePalindrome := func(num int64) int64 {
+		b := []byte(strconv.FormatInt(num, 10))
+		n := len(b)
+		left := (n - 1) / 2
+		right := n / 2
 		for ; left >= 0; left, right = left-1, right+1 {
 			b[right] = b[left]
 		}
 		num, _ = strconv.ParseInt(string(b), 10, 64)
 		return num
 	}
-	var prevPalindrome = func(num int64) int64 {
+	prevPalindrome := func(num int64) int64 {
 		var left, right int64 = 0, num - 1
 		var palindrome, prev, mid int64
 		for left <= right {
@@ -34,7 +34,7 @@ func nearestPalindromic(n string) string {
 		}
 		return prev
 	}
-	var nextPalindrome = func(num int64) int64 {
+	nextPalindrome := func(num int64) int64 {
 		var left, right int64 = num + 1, 10e17 + 1
 		var palindrome, next, mid int64
 		for left <= right {
@@ -50,9 +50,9 @@ func nearestPalindromic(n string) string {
 		return next
 	}
 
-	var num, _ = strconv.ParseInt(n, 10, 64)
-	var prev = prevPalindrome(num)
-	var next = nextPalindrome(num)
+	num, _ := strconv.ParseInt(n, 10, 64)
+	prev := prevPalindrome(num)
+	next := nextPalindrome(num)
 	if (num - prev) <= (next - num) {
 		return strconv.FormatInt(prev, 10)
 	}

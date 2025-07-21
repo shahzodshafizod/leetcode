@@ -17,8 +17,8 @@ https://www.youtube.com/watch?v=8MpoO2zA2l4
 // Time: O(V+E), V=# of vertices(nodes), E=# of edges
 // Space: O(V+E)
 func validArrangement(pairs [][]int) [][]int {
-	var adjList = make(map[int][]int)
-	var degree = make(map[int]int)
+	adjList := make(map[int][]int)
+	degree := make(map[int]int)
 	var start, end int
 	for idx := range pairs {
 		start, end = pairs[idx][0], pairs[idx][1]
@@ -33,9 +33,9 @@ func validArrangement(pairs [][]int) [][]int {
 			break
 		}
 	}
-	var stack = []int{start}
+	stack := []int{start}
 	var curr, next int
-	var order = make([]int, 0, len(pairs)+1)
+	order := make([]int, 0, len(pairs)+1)
 	for size := len(stack); size > 0; size = len(stack) {
 		curr = stack[size-1]
 		if l := len(adjList[curr]); l > 0 {
@@ -47,7 +47,7 @@ func validArrangement(pairs [][]int) [][]int {
 			order = append(order, curr)
 		}
 	}
-	var arrangement = make([][]int, 0, len(pairs))
+	arrangement := make([][]int, 0, len(pairs))
 	for i := len(order) - 1; i > 0; i-- {
 		arrangement = append(arrangement, []int{order[i], order[i-1]})
 	}

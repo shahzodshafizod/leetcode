@@ -8,8 +8,8 @@ import (
 
 // go test -v -count=1 ./dp/ -run ^TestDPFib$
 func TestDPFib(t *testing.T) {
-	var dps = []DP{NewMemoization(), NewTabulation()}
-	var assert = assert.New(t)
+	dps := []DP{NewMemoization(), NewTabulation()}
+	assert := assert.New(t)
 	for _, tc := range []struct {
 		n int
 		f int
@@ -28,8 +28,8 @@ func TestDPFib(t *testing.T) {
 
 // go test -v -count=1 ./dp/ -run ^TestDPGridTraveler$
 func TestDPGridTraveler(t *testing.T) {
-	var dps = []DP{NewMemoization(), NewTabulation()}
-	var assert = assert.New(t)
+	dps := []DP{NewMemoization(), NewTabulation()}
+	assert := assert.New(t)
 	for _, tc := range []struct {
 		m    int
 		n    int
@@ -50,8 +50,8 @@ func TestDPGridTraveler(t *testing.T) {
 
 // go test -v -count=1 ./dp/ -run ^TestDPCanSum$
 func TestDPCanSum(t *testing.T) {
-	var dps = []DP{NewMemoization(), NewTabulation()}
-	var assert = assert.New(t)
+	dps := []DP{NewMemoization(), NewTabulation()}
+	assert := assert.New(t)
 	for _, tc := range []struct {
 		targetSum int
 		numbers   []int
@@ -75,8 +75,8 @@ func TestDPCanSum(t *testing.T) {
 
 // go test -v -count=1 ./dp/ -run ^TestDPHowSum$
 func TestDPHowSum(t *testing.T) {
-	var dps = []DP{NewMemoization(), NewTabulation()}
-	var assert = assert.New(t)
+	dps := []DP{NewMemoization(), NewTabulation()}
+	assert := assert.New(t)
 	for _, tc := range []struct {
 		targetSum   int
 		numbers     []int
@@ -100,8 +100,8 @@ func TestDPHowSum(t *testing.T) {
 
 // go test -v -count=1 ./dp/ -run ^TestDPBestSum$
 func TestDPBestSum(t *testing.T) {
-	var dps = []DP{NewMemoization(), NewTabulation()}
-	var assert = assert.New(t)
+	dps := []DP{NewMemoization(), NewTabulation()}
+	assert := assert.New(t)
 	for _, tc := range []struct {
 		targetSum   int
 		numbers     []int
@@ -128,8 +128,8 @@ func TestDPBestSum(t *testing.T) {
 
 // go test -v -count=1 ./dp/ -run ^TestDPCanConstruct$
 func TestDPCanConstruct(t *testing.T) {
-	var dps = []DP{NewMemoization(), NewTabulation()}
-	var assert = assert.New(t)
+	dps := []DP{NewMemoization(), NewTabulation()}
+	assert := assert.New(t)
 	for _, tc := range []struct {
 		target   string
 		wordBank []string
@@ -153,8 +153,8 @@ func TestDPCanConstruct(t *testing.T) {
 
 // go test -v -count=1 ./dp/ -run ^TestDPCountConstruct$
 func TestDPCountConstruct(t *testing.T) {
-	var dps = []DP{NewMemoization(), NewTabulation()}
-	var assert = assert.New(t)
+	dps := []DP{NewMemoization(), NewTabulation()}
+	assert := assert.New(t)
 	for _, tc := range []struct {
 		target   string
 		wordBank []string
@@ -179,8 +179,8 @@ func TestDPCountConstruct(t *testing.T) {
 
 // go test -v -count=1 ./dp/ -run ^TestDPAllConstruct$
 func TestDPAllConstruct(t *testing.T) {
-	var dps = []DP{NewMemoization(), NewTabulation()}
-	var assert = assert.New(t)
+	dps := []DP{NewMemoization(), NewTabulation()}
+	assert := assert.New(t)
 	for _, tc := range []struct {
 		target   string
 		wordBank []string

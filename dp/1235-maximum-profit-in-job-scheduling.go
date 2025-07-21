@@ -10,15 +10,15 @@ import (
 // Time: O(n⋅logn)
 // Space: O(n)
 func jobScheduling(startTime []int, endTime []int, profit []int) int {
-	var n = len(startTime)
-	var jobs = make([][3]int, n)
+	n := len(startTime)
+	jobs := make([][3]int, n)
 	for idx := range jobs {
 		jobs[idx] = [3]int{startTime[idx], endTime[idx], profit[idx]}
 	}
 	sort.Slice(jobs, func(i, j int) bool {
 		return jobs[i][0] < jobs[j][0]
 	})
-	var dp = make([]int, n+1)
+	dp := make([]int, n+1)
 	var left, right, mid, next int
 	for idx := n - 1; idx >= 0; idx-- {
 		left, right = idx+1, n

@@ -5,8 +5,8 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 // https://leetcode.com/problems/even-odd-tree/
 
 func isEvenOddTree(root *pkg.TreeNode) bool {
-	var queue = []*pkg.TreeNode{root}
-	var level = 0
+	queue := []*pkg.TreeNode{root}
+	level := 0
 	var levelParity, factor int
 	for length := len(queue); length > 0; length = len(queue) {
 		levelParity = level & 1

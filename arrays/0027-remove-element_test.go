@@ -8,7 +8,7 @@ import (
 
 // go test -v -count=1 ./arrays/ -run ^TestRemoveElement$
 func TestRemoveElement(t *testing.T) {
-	var assert = assert.New(t)
+	assert := assert.New(t)
 	for _, tc := range []struct {
 		nums         []int
 		val          int

@@ -4,22 +4,22 @@ package stacks
 
 // Approach 2: Wormhole Teleportation technique
 func reverseParentheses(s string) string {
-	var pairs = make(map[int]int)
-	var stack = make([]int, 0)
+	pairs := make(map[int]int)
+	stack := make([]int, 0)
 	for idx := range s {
 		switch s[idx] {
 		case '(':
 			stack = append(stack, idx)
 		case ')':
-			var opening = stack[len(stack)-1]
+			opening := stack[len(stack)-1]
 			stack = stack[:len(stack)-1]
 			pairs[opening] = idx
 			pairs[idx] = opening
 		}
 	}
-	var idx, dir = 0, 1
-	var len = len(s)
-	var result = make([]byte, 0)
+	idx, dir := 0, 1
+	len := len(s)
+	result := make([]byte, 0)
 	for idx < len {
 		if s[idx] == '(' || s[idx] == ')' {
 			idx = pairs[idx]

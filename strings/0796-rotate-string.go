@@ -10,9 +10,9 @@ func rotateString(s string, goal string) bool {
 		return false
 	}
 	// 1. LPS setup: O(2xn)
-	var n = len(goal)
-	var lps = make([]int, n) // longest prefix-suffix
-	var prevLps = 0
+	n := len(goal)
+	lps := make([]int, n) // longest prefix-suffix
+	prevLps := 0
 	for gid := 1; gid < n; gid++ {
 		for prevLps > 0 && goal[prevLps] != goal[gid] {
 			prevLps = lps[prevLps-1]
@@ -23,7 +23,7 @@ func rotateString(s string, goal string) bool {
 		lps[gid] = prevLps
 	}
 	// 2. KMP: O(2xn)
-	var gid = 0
+	gid := 0
 	for _, c := range s + s {
 		for gid > 0 && goal[gid] != byte(c) {
 			gid = lps[gid-1]

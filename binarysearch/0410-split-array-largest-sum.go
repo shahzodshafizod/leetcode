@@ -6,12 +6,12 @@ package binarysearch
 // Time: O(NLogS), N=len(nums), S=sum(nums)
 // Space: O(1)
 func splitArray(nums []int, k int) int {
-	var left, right = 0, 0
+	left, right := 0, 0
 	for _, num := range nums {
 		left = max(left, num)
 		right += num
 	}
-	var minmaxSum = right
+	minmaxSum := right
 	var mid, subarrays, currSum int
 	for left <= right {
 		mid = left + (right-left)/2

@@ -28,8 +28,8 @@ func (l *LFUCache) Get(key int) int {
 	if l.nodes[key] == nil {
 		return -1
 	}
-	var node = l.nodes[key]
-	var pair = node.Value.(*pkg.Pair)
+	node := l.nodes[key]
+	pair := node.Value.(*pkg.Pair)
 	l.buckets[pair.Cnt].Remove(node)
 	if l.buckets[pair.Cnt].Len() == 0 && l.minCnt == pair.Cnt {
 		l.minCnt++
@@ -44,14 +44,14 @@ func (l *LFUCache) Get(key int) int {
 
 func (l *LFUCache) Put(key int, value int) {
 	if l.Get(key) != -1 {
-		var pair = l.nodes[key].Value.(*pkg.Pair)
+		pair := l.nodes[key].Value.(*pkg.Pair)
 		pair.Val = value
 		l.nodes[key].Value = pair
 		return
 	}
 	if l.capacity == 0 {
-		var node = l.buckets[l.minCnt].Back()
-		var pair = node.Value.(*pkg.Pair)
+		node := l.buckets[l.minCnt].Back()
+		pair := node.Value.(*pkg.Pair)
 		delete(l.nodes, pair.Key)
 		l.buckets[l.minCnt].Remove(node)
 		l.capacity++

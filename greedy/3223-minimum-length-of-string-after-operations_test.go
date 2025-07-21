@@ -19,4 +19,3 @@ func TestMinimumLength(t *testing.T) {
 		assert.Equal(t, tc.length, length)
 	}
 }
-

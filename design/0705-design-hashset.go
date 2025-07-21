@@ -12,7 +12,7 @@ type MyHashSet struct {
 
 func NewMyHashSet() MyHashSet {
 	const cap = 997
-	var array = make([]*pkg.ListNode, cap)
+	array := make([]*pkg.ListNode, cap)
 	for idx := range array {
 		array[idx] = &pkg.ListNode{} // dummy head node
 	}

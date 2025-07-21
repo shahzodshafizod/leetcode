@@ -6,7 +6,7 @@ package dp
 // time: O(NxN)
 // space: O(1)
 func minFallingPathSum(grid [][]int) int {
-	var n = len(grid)
+	n := len(grid)
 	var min1col, min2col int
 	for row := 1; row < n; row++ {
 		// 1. find two minimums (min1<min2) from prev row
@@ -32,7 +32,7 @@ func minFallingPathSum(grid [][]int) int {
 		}
 	}
 	// 3. find the min from the last row
-	var minsum = grid[n-1][0]
+	minsum := grid[n-1][0]
 	for col := 1; col < n; col++ {
 		minsum = min(minsum, grid[n-1][col])
 	}

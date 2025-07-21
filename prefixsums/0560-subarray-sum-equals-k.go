@@ -6,8 +6,8 @@ package prefixsums
 // Time: O(n)
 // Space: O(n)
 func subarraySum(nums []int, k int) int {
-	var counter = map[int]int{0: 1}
-	var count, presum = 0, 0
+	counter := map[int]int{0: 1}
+	count, presum := 0, 0
 	for _, num := range nums {
 		presum += num
 		count += counter[presum-k]

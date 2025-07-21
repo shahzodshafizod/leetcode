@@ -13,7 +13,7 @@ import (
 // Space: O(E+V)
 func modifiedGraphEdges(n int, edges [][]int, source int, destination int, target int) [][]int {
 	// 1. Graph Representation
-	var adjList = make([][][2]int, n)
+	adjList := make([][][2]int, n)
 	var u, v int
 	for idx := range edges {
 		u, v = edges[idx][0], edges[idx][1]
@@ -22,14 +22,14 @@ func modifiedGraphEdges(n int, edges [][]int, source int, destination int, targe
 	}
 
 	// 2. Distance Arrays
-	var distances = make([][2]int, n)
+	distances := make([][2]int, n)
 	for idx := range distances {
 		distances[idx][0] = math.MaxInt
 		distances[idx][1] = math.MaxInt
 	}
 
-	var runDijkstra = func(index int, difference int) {
-		var pq = pkg.NewHeap(
+	runDijkstra := func(index int, difference int) {
+		pq := pkg.NewHeap(
 			[][2]int{{source, 0}},
 			func(x, y [2]int) bool {
 				return x[1] < y[1]
@@ -38,7 +38,7 @@ func modifiedGraphEdges(n int, edges [][]int, source int, destination int, targe
 		distances[source][index] = 0
 		var currNode, currDist, nextNode, egdeIndex, nextWeight int
 		for pq.Len() > 0 {
-			var curr = heap.Pop(pq).([2]int)
+			curr := heap.Pop(pq).([2]int)
 			currNode, currDist = curr[0], curr[1]
 			if currDist > distances[currNode][index] {
 				continue
@@ -50,7 +50,7 @@ func modifiedGraphEdges(n int, edges [][]int, source int, destination int, targe
 					nextWeight = 1
 				}
 				if index == 1 && edges[egdeIndex][2] == -1 {
-					var newWeight = difference + distances[nextNode][0] - distances[currNode][1]
+					newWeight := difference + distances[nextNode][0] - distances[currNode][1]
 					if newWeight > nextWeight {
 						nextWeight = newWeight
 						edges[egdeIndex][2] = newWeight
@@ -68,7 +68,7 @@ func modifiedGraphEdges(n int, edges [][]int, source int, destination int, targe
 	runDijkstra(0, 0)
 
 	// 4. Check Feasibility
-	var diffirence = target - distances[destination][0]
+	diffirence := target - distances[destination][0]
 	if diffirence < 0 {
 		return [][]int{}
 	}

@@ -65,7 +65,7 @@ type monarchy struct {
 }
 
 func NewMonarchy(kingName string) Monarchy {
-	var king = &member{
+	king := &member{
 		name:     kingName,
 		alive:    true,
 		children: make([]*member, 0),
@@ -77,11 +77,11 @@ func NewMonarchy(kingName string) Monarchy {
 }
 
 func (m *monarchy) Birth(child string, parent string) {
-	var theParent = m.members[parent]
+	theParent := m.members[parent]
 	if theParent == nil {
 		return
 	}
-	var newChild = &member{
+	newChild := &member{
 		name:     child,
 		alive:    true,
 		children: make([]*member, 0),
@@ -101,7 +101,7 @@ func (m *monarchy) GetOrderOfSuccession() []string {
 }
 
 func (m *monarchy) getOrderOfSuccession(current *member) []string {
-	var values = make([]string, 0)
+	values := make([]string, 0)
 	if current.alive {
 		values = append(values, current.name)
 	}

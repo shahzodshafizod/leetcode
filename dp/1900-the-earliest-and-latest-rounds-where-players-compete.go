@@ -8,15 +8,15 @@ import "math"
 // Time: O(n^4)
 // Space: O(n)
 func earliestAndLatest(n int, firstPlayer int, secondPlayer int) []int {
-	var f, s = firstPlayer-1, secondPlayer-1
-	var earliest, latest = math.MaxInt, 0
+	f, s := firstPlayer-1, secondPlayer-1
+	earliest, latest := math.MaxInt, 0
 	var seen [28][28][28]bool
 	var ldelta, mdelta, rdelta int
 	var dfs func(left int, right int, mask int, round int, lcnt int, mcnt int, rcnt int)
 	dfs = func(left int, right int, mask int, round int, lcnt int, mcnt int, rcnt int) {
 		if left >= right {
 			// We're done with the current round. Go to the next one
-			dfs(0, n-1, mask, round+1, lcnt,mcnt, rcnt)
+			dfs(0, n-1, mask, round+1, lcnt, mcnt, rcnt)
 		} else if mask&(1<<left) == 0 {
 			// Skip the defeated left player
 			dfs(left+1, right, mask, round, lcnt, mcnt, rcnt)

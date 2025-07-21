@@ -6,8 +6,8 @@ package arrays
 // Time: Time(n)
 // Space: O(1)
 func check(nums []int) bool {
-	var n = len(nums)
-	var breaks = 0
+	n := len(nums)
+	breaks := 0
 	for idx := 1; idx < n; idx++ {
 		if nums[idx-1] > nums[idx] {
 			breaks++

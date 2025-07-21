@@ -8,7 +8,7 @@ import "sort"
 // space: O(n)
 func findMinArrowShots(points [][]int) int {
 	sort.Slice(points, func(i, j int) bool { return points[i][0] < points[j][0] })
-	var count = 0
+	count := 0
 	var prev []int
 	for idx, curr := range points {
 		if idx == 0 || prev[1] < curr[0] {

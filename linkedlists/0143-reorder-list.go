@@ -6,12 +6,12 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 
 func reorderList(head *pkg.ListNode) {
 	// 1, find middle
-	var tortoise, hare = head, head
+	tortoise, hare := head, head
 	for hare != nil && hare.Next != nil {
 		tortoise = tortoise.Next
 		hare = hare.Next.Next
 	}
-	var middle = tortoise
+	middle := tortoise
 
 	// 2. reverse the second part
 	var tail, next *pkg.ListNode

@@ -5,8 +5,8 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 // https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 
 func removeNthFromEnd(head *pkg.ListNode, n int) *pkg.ListNode {
-	var before = &pkg.ListNode{Next: head}
-	var current = before
+	before := &pkg.ListNode{Next: head}
+	current := before
 	for n > 0 {
 		n--
 		current = current.Next

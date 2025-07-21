@@ -5,13 +5,13 @@ package maths
 func countSymmetricIntegers(low int, high int) int {
 	// calculate length of low
 	// and the next length's start number
-	var length, next = 0, 1
+	length, next := 0, 1
 	for tmp := low; tmp > 0; tmp /= 10 {
 		length++
 		next *= 10
 	}
 	var sum, tmp int
-	var count = 0
+	count := 0
 	for num := low; num <= high; num++ {
 		// if number became one digit longer
 		// we change length and the next length's start number

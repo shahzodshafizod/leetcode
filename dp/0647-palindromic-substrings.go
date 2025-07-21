@@ -3,9 +3,9 @@ package dp
 // https://leetcode.com/problems/palindromic-substrings/
 
 func countSubstrings(s string) int {
-	var n = len(s)
-	var expand = func(left int, right int) int {
-		var count = 0
+	n := len(s)
+	expand := func(left int, right int) int {
+		count := 0
 		for left >= 0 && right < n && s[left] == s[right] {
 			count++
 			left--
@@ -13,7 +13,7 @@ func countSubstrings(s string) int {
 		}
 		return count
 	}
-	var count = 0
+	count := 0
 	for i := 0; i < n; i++ {
 		count += expand(i, i)
 		if i+1 < n {

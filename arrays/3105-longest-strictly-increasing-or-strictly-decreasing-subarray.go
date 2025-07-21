@@ -3,8 +3,8 @@ package arrays
 // https://leetcode.com/problems/longest-strictly-increasing-or-strictly-decreasing-subarray/
 
 func longestMonotonicSubarray(nums []int) int {
-	var length = 1
-	var inc, dec = 1, 1
+	length := 1
+	inc, dec := 1, 1
 	for idx := len(nums) - 1; idx > 0; idx-- {
 		if nums[idx-1] < nums[idx] {
 			inc++

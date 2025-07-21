@@ -15,27 +15,27 @@ the intersection of sets is a null set.
 */
 
 func matrixRankTransform(matrix [][]int) [][]int {
-	var m = len(matrix)
-	var n = len(matrix[0])
-	var list = make(map[int][][2]int)
-	var answer = make([][]int, m)
+	m := len(matrix)
+	n := len(matrix[0])
+	list := make(map[int][][2]int)
+	answer := make([][]int, m)
 	for row := 0; row < m; row++ {
 		answer[row] = make([]int, n)
 		for col := 0; col < n; col++ {
 			list[matrix[row][col]] = append(list[matrix[row][col]], [2]int{row, col})
 		}
 	}
-	var vals = make([]int, 0, len(list))
+	vals := make([]int, 0, len(list))
 	for val := range list {
 		vals = append(vals, val)
 	}
 	sort.Ints(vals)
-	var rowRanks = make([]int, m)
-	var colRanks = make([]int, n)
-	var groups = pkg.NewUnionFind(m + n)
-	var ranks = make(map[int]int)
+	rowRanks := make([]int, m)
+	colRanks := make([]int, n)
+	groups := pkg.NewUnionFind(m + n)
+	ranks := make(map[int]int)
 	for _, val := range vals {
-		var cells = list[val]
+		cells := list[val]
 		for _, cell := range cells {
 			groups.Union(cell[0], cell[1]+m)
 		}

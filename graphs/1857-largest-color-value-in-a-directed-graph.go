@@ -6,18 +6,18 @@ package graphs
 // Time: O(26n) = O(n)
 // Space: O(26n) = O(n)
 func largestPathValue(colors string, edges [][]int) int {
-	var n = len(colors)
-	var adj = make([][]int, n)
-	var indegrees = make([]int, n)
+	n := len(colors)
+	adj := make([][]int, n)
+	indegrees := make([]int, n)
 	var src, dst int
 	for idx := range edges {
 		src, dst = edges[idx][0], edges[idx][1]
 		adj[src] = append(adj[src], dst)
 		indegrees[dst] += 1
 	}
-	var queue = make([]int, n)
-	var size = 0
-	var colids = make([]int, n)
+	queue := make([]int, n)
+	size := 0
+	colids := make([]int, n)
 	for node := 0; node < n; node++ {
 		if indegrees[node] == 0 {
 			queue[size] = node
@@ -25,8 +25,8 @@ func largestPathValue(colors string, edges [][]int) int {
 		}
 		colids[node] = int(colors[node] - 'a')
 	}
-	var dp = make([][26]int, n)
-	var value = 0
+	dp := make([][26]int, n)
+	value := 0
 	var node int
 	for size > 0 {
 		node = queue[size-1]

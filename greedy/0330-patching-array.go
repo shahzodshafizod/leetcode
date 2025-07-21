@@ -14,7 +14,7 @@ package greedy
 // time: O(LogN)
 // space: O(1)
 func minPatches(nums []int, n int) int {
-	var patches, maxPatch = 0, 0
+	patches, maxPatch := 0, 0
 	var patch int
 	for idx := 0; maxPatch < n; { // O(log n)
 		patch = maxPatch + 1

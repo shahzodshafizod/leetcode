@@ -11,7 +11,7 @@ import (
 // Time: O(n)
 // Space: O(n)
 func reverseWords(s string) string {
-	var words = strings.Split(s, " ")
+	words := strings.Split(s, " ")
 	for idx := range words {
 		word := []byte(words[idx])
 		slices.Reverse(word)

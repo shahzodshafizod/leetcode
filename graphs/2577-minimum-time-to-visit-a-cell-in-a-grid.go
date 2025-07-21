@@ -20,28 +20,28 @@ func minimumTime2577(grid [][]int) int {
 		Col  int
 		Time int
 	}
-	var abs = func(n int) int {
+	abs := func(n int) int {
 		if n < 0 {
 			return -n
 		}
 		return n
 	}
-	var directions = [5]int{-1, 0, 1, 0, -1}
-	var minHeap = pkg.NewHeap(
+	directions := [5]int{-1, 0, 1, 0, -1}
+	minHeap := pkg.NewHeap(
 		[]*Cell{{0, 0, 0}},
 		func(x, y *Cell) bool {
 			return x.Time < y.Time
 		},
 	)
-	var m, n = len(grid), len(grid[0])
-	var seen = make([][]bool, m)
+	m, n := len(grid), len(grid[0])
+	seen := make([][]bool, m)
 	for idx := range seen {
 		seen[idx] = make([]bool, n)
 	}
 	seen[0][0] = true
 	var row, col, wait, time int
 	for minHeap.Len() > 0 {
-		var curr = heap.Pop(minHeap).(*Cell)
+		curr := heap.Pop(minHeap).(*Cell)
 		if curr.Row == m-1 && curr.Col == n-1 {
 			return curr.Time
 		}

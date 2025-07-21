@@ -6,9 +6,9 @@ package dp
 // Time: O(m*n^2)
 // Space: O(n^2)
 func cherryPickupII(grid [][]int) int {
-	var m, n = len(grid), len(grid[0])
+	m, n := len(grid), len(grid[0])
 	var dp [2][71][71]int
-	var curr, next = 0, 1
+	curr, next := 0, 1
 	var count int
 	for row := m - 1; row >= 0; row-- {
 		next, curr = curr, next

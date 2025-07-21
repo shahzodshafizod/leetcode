@@ -6,12 +6,12 @@ package graphs
 // Time: O(n+q)
 // Space: O(n)
 func shortestDistanceAfterQueries(n int, queries [][]int) []int {
-	var next = make([]int, n)
+	next := make([]int, n)
 	for idx := range next {
 		next[idx] = idx + 1
 	}
-	var distance = n - 1
-	var answer = make([]int, len(queries))
+	distance := n - 1
+	answer := make([]int, len(queries))
 	var src, dst int
 	for idx := range queries {
 		src, dst = queries[idx][0], queries[idx][1]

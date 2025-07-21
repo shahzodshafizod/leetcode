@@ -6,8 +6,8 @@ package graphs
 // Time: O(v+e), v=# of vertices (nodes), e=# of edges
 // Space: O(v)
 func eventualSafeNodes(graph [][]int) []int {
-	var n = len(graph)
-	var safe = make([]*bool, n)
+	n := len(graph)
+	safe := make([]*bool, n)
 	var dfs func(int) bool
 	dfs = func(node int) bool {
 		if safe[node] != nil {
@@ -22,7 +22,7 @@ func eventualSafeNodes(graph [][]int) []int {
 		*safe[node] = true
 		return true
 	}
-	var result = make([]int, 0)
+	result := make([]int, 0)
 	for node := 0; node < n; node++ {
 		if dfs(node) {
 			result = append(result, node)

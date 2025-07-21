@@ -5,12 +5,12 @@ package greedy
 // time: O(n)
 // space: O(n)
 func numRescueBoats(people []int, limit int) int {
-	var count = make([]int, limit+1)
+	count := make([]int, limit+1)
 	for _, weight := range people {
 		count[weight]++
 	}
-	var light, heavy = 1, limit
-	var boats = 0
+	light, heavy := 1, limit
+	boats := 0
 	for {
 		for light <= heavy && count[light] <= 0 {
 			light++

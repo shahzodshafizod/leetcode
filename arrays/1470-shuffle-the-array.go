@@ -3,7 +3,7 @@ package arrays
 // https://leetcode.com/problems/shuffle-the-array/
 
 func shuffle(nums []int, n int) []int {
-	var shuffled = make([]int, 0, 2*n)
+	shuffled := make([]int, 0, 2*n)
 	for i := 0; i < n; i++ {
 		shuffled = append(shuffled, nums[i], nums[n+i])
 	}

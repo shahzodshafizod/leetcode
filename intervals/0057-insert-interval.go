@@ -3,7 +3,7 @@ package intervals
 // https://leetcode.com/problems/insert-interval/
 
 func insert(intervals [][]int, newInterval []int) [][]int {
-	var result = make([][]int, 0)
+	result := make([][]int, 0)
 	for idx, interval := range intervals {
 		if newInterval[1] < interval[0] {
 			return append(result, append([][]int{newInterval}, intervals[idx:]...)...)

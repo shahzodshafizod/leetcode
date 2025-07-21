@@ -3,7 +3,7 @@ package stacks
 // https://leetcode.com/problems/crawler-log-folder/
 
 func minOperations(logs []string) int {
-	var stack = 0
+	stack := 0
 	for _, log := range logs {
 		switch log {
 		case "../":

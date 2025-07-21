@@ -5,10 +5,10 @@ import "slices"
 // https://leetcode.com/problems/add-binary/
 
 func addBinary(a string, b string) string {
-	var aid = len(a) - 1
-	var bid = len(b) - 1
-	var carry = 0
-	var bisum = make([]byte, 0)
+	aid := len(a) - 1
+	bid := len(b) - 1
+	carry := 0
+	bisum := make([]byte, 0)
 	for aid >= 0 || bid >= 0 {
 		if aid >= 0 {
 			carry += int(a[aid] - '0')

@@ -10,7 +10,7 @@ type WordFilter struct {
 }
 
 func NewWordFilter(words []string) WordFilter {
-	var root = WordFilter{children: make(map[byte]*WordFilter)}
+	root := WordFilter{children: make(map[byte]*WordFilter)}
 	var wordLen, newWordLen int
 	var c byte
 	for index := range words {
@@ -34,7 +34,7 @@ func NewWordFilter(words []string) WordFilter {
 
 func (w *WordFilter) F(pref string, suff string) int {
 	word := suff + "#" + pref
-	var curr = w
+	curr := w
 	var c byte
 	for idx := range word {
 		c = word[idx]

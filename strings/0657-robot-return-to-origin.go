@@ -6,7 +6,7 @@ package strings
 // Time: O(n)
 // Space: O(1)
 func judgeCircle(moves string) bool {
-	var x, y = 0, 0
+	x, y := 0, 0
 	for _, move := range moves {
 		switch move {
 		case 'R':

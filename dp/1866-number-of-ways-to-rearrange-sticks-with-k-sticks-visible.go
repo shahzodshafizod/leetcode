@@ -7,7 +7,7 @@ package dp
 // Space: O(K)
 func rearrangeSticks(n int, k int) int {
 	const mod int = 1e9 + 7
-	var dp = make([]int, k+1)
+	dp := make([]int, k+1)
 	dp[0] = 1
 	for x := 1; x <= n; x++ {
 		tmp := make([]int, k+1)

@@ -6,8 +6,8 @@ package twopointers
 // Time: O(n)
 // Space: O(n)
 func pivotArray(nums []int, pivot int) []int {
-	var n = len(nums)
-	var left = 0
+	n := len(nums)
+	left := 0
 	for idx := 0; idx < n; idx++ {
 		if nums[idx] < pivot {
 			nums[left] = nums[idx]
@@ -19,7 +19,7 @@ func pivotArray(nums []int, pivot int) []int {
 	for ; left < n; left++ {
 		nums[left] = pivot
 	}
-	var greater = len(nums) - n
+	greater := len(nums) - n
 	copy(nums[n-greater:], nums[n:])
 	nums = nums[:n]
 	return nums

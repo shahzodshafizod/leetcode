@@ -44,7 +44,7 @@ Step 2: Write out some test cases
 
 // DFS
 func numIslands(grid [][]byte) int {
-	var m, n = len(grid), len(grid[0])
+	m, n := len(grid), len(grid[0])
 	var drowning func(row int, col int)
 	drowning = func(row int, col int) {
 		if grid[row][col] == '0' {
@@ -64,7 +64,7 @@ func numIslands(grid [][]byte) int {
 			drowning(row, col-1)
 		}
 	}
-	var num = 0
+	num := 0
 	for row := 0; row < m; row++ {
 		for col := 0; col < n; col++ {
 			if grid[row][col] == '1' {

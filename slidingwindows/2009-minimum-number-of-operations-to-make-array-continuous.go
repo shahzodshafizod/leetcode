@@ -8,8 +8,8 @@ import "sort"
 // Time: O(n log n)
 // Space: O(n)
 func minOperations(nums []int) int {
-	var origlen = len(nums)
-	var unique = make(map[int]struct{})
+	origlen := len(nums)
+	unique := make(map[int]struct{})
 	for _, num := range nums {
 		unique[num] = struct{}{}
 	}
@@ -18,9 +18,9 @@ func minOperations(nums []int) int {
 		nums = append(nums, num)
 	}
 	sort.Ints(nums)
-	var len = len(nums)
-	var ops = origlen
-	var end = 0
+	len := len(nums)
+	ops := origlen
+	end := 0
 	var windowSize int
 	for start := range nums {
 		// target window is: [start; start+length-1]

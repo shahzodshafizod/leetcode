@@ -17,7 +17,7 @@ func TestMaxPriorityQueueSort(t *testing.T) {
 			sorted: []int{45, 11, 7, 7, 6, 6, 6, 6, 5, 5, 5, 4, 4, 4, 4, 3, 2, 2, 1, 1, 0},
 		},
 	} {
-		var maxHeap = NewPQSort(
+		maxHeap := NewPQSort(
 			len(tc.array),
 			func(i, j int) bool { return tc.array[i] > tc.array[j] },
 			func(i, j int) { tc.array[i], tc.array[j] = tc.array[j], tc.array[i] },
@@ -38,7 +38,7 @@ func TestMinPriorityQueueSort(t *testing.T) {
 			sorted: []int{0, 1, 1, 2, 2, 3, 4, 4, 4, 4, 5, 5, 5, 6, 6, 6, 6, 7, 7, 11, 45},
 		},
 	} {
-		var minHeap = NewPQSort(
+		minHeap := NewPQSort(
 			len(tc.array),
 			func(i, j int) bool { return tc.array[i] < tc.array[j] },
 			func(i int, j int) { tc.array[i], tc.array[j] = tc.array[j], tc.array[i] },

@@ -3,7 +3,7 @@ package backtracking
 // https://leetcode.com/problems/palindrome-partitioning/
 
 func partition(s string) [][]string {
-	var isPalindrome = func(left int, right int) bool {
+	isPalindrome := func(left int, right int) bool {
 		for left < right {
 			if s[left] != s[right] {
 				return false
@@ -13,7 +13,7 @@ func partition(s string) [][]string {
 		}
 		return true
 	}
-	var res = make([][]string, 0)
+	res := make([][]string, 0)
 	var part []string
 	var dfs func(sid int)
 	dfs = func(sid int) {

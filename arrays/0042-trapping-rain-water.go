@@ -23,11 +23,11 @@ Step 6: Test out code with out test cases
 // https://leetcode.com/problems/trapping-rain-water/
 
 func trap(height []int) int {
-	var total = 0
-	var maxElem = 0
-	var left, right = 0, len(height) - 1
+	total := 0
+	maxElem := 0
+	left, right := 0, len(height)-1
 	for left < right {
-		var oldMaxElem = maxElem
+		oldMaxElem := maxElem
 		if height[left] < height[right] {
 			maxElem = max(maxElem, height[left])
 			total += (right-left)*(maxElem-oldMaxElem) - height[left]

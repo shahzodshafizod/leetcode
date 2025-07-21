@@ -6,7 +6,7 @@ package dp
 func longestIdealString(s string, k int) int {
 	var dp [26]int
 	var current, letter int
-	var length = 0
+	length := 0
 	for idx := range s {
 		current = int(s[idx] - 'a')
 		dp[current]++

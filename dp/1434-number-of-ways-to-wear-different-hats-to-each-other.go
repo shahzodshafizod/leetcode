@@ -7,14 +7,14 @@ package dp
 // Space: O(k⋅2^n)
 func numberWays(hats [][]int) int {
 	const MOD int = 1e9 + 7
-	var people = make(map[int][]int)
+	people := make(map[int][]int)
 	for person, hts := range hats {
 		for _, hat := range hts {
 			people[hat-1] = append(people[hat-1], person)
 		}
 	}
-	var n = len(hats)
-	var done = (1 << n) - 1
+	n := len(hats)
+	done := (1 << n) - 1
 	const MAX_HAT = 40
 	var memo [MAX_HAT][]*int
 	for idx := range memo {
@@ -32,7 +32,7 @@ func numberWays(hats [][]int) int {
 			return *memo[hat][mask]
 		}
 		// 1. skip
-		var ways = dp(hat+1, mask)
+		ways := dp(hat+1, mask)
 		// 2. include
 		for _, person := range people[hat] {
 			person = 1 << person

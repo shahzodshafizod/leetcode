@@ -42,7 +42,7 @@ When n=3, we have 6 spots: _ _ _ _ _ _.
 // Space: O(1)
 func countOrders(n int) int {
 	const MOD int = 1e9 + 7
-	var options = 1
+	options := 1
 	for spots := n << 1; spots > 2; spots -= 2 {
 		options = (options * (spots >> 1) * (spots - 1)) % MOD
 	}

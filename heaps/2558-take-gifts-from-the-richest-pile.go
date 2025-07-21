@@ -10,7 +10,7 @@ import (
 // https://leetcode.com/problems/take-gifts-from-the-richest-pile/
 
 func pickGifts(gifts []int, k int) int64 {
-	var maxHeap = pkg.NewHeap(gifts, func(x, y int) bool { return x > y })
+	maxHeap := pkg.NewHeap(gifts, func(x, y int) bool { return x > y })
 	heap.Init(maxHeap)
 	for ; k > 0; k-- {
 		gifts[0] = int(math.Sqrt(float64(gifts[0])))

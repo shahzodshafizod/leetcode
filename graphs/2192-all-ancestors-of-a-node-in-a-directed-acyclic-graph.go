@@ -42,13 +42,13 @@ package graphs
 // time: O(N^2+NM) = O(N^2)
 // space: O(N+M) = O(N), M: for recursion stack
 func getAncestors(n int, edges [][]int) [][]int {
-	var adjList = make([][]int, n)
+	adjList := make([][]int, n)
 	var from, to int
 	for _, edge := range edges { // O(E) = O(N^2)
 		from, to = edge[0], edge[1]
 		adjList[from] = append(adjList[from], to)
 	}
-	var answer = make([][]int, n)
+	answer := make([][]int, n)
 	var dfs func(ancestor int, node int)
 	dfs = func(ancestor int, node int) {
 		for _, neighbor := range adjList[node] {

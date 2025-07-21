@@ -11,7 +11,7 @@ XOR: ^
 // https://leetcode.com/problems/minimum-number-of-operations-to-make-array-xor-equal-to-k/
 
 func minOperations(nums []int, k int) int {
-	var xor = 0
+	xor := 0
 	for _, num := range nums {
 		xor ^= num
 	}
@@ -19,7 +19,7 @@ func minOperations(nums []int, k int) int {
 		return 0
 	}
 	xor ^= k
-	var flips = 0
+	flips := 0
 	for xor > 0 {
 		if xor&1 == 1 {
 			flips++

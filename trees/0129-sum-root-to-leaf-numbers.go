@@ -11,7 +11,7 @@ func sumNumbers(root *pkg.TreeNode) int {
 		if node.Left == nil && node.Right == nil {
 			return number
 		}
-		var sum = 0
+		sum := 0
 		if node.Left != nil {
 			sum += dfs(node.Left, number)
 		}
