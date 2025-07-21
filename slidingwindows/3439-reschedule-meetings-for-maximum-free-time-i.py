@@ -9,7 +9,7 @@ import unittest
 class Solution(unittest.TestCase):
     def maxFreeTime(self, eventTime: int, k: int, startTime: List[int], endTime: List[int]) -> int:
         free, busy, n = 0, 0, len(startTime)
-        for i in range(n):  # pylint: disable=consider-using-enumerate
+        for i in range(n):
             busy += endTime[i] - startTime[i]
             left = 0 if i + 1 <= k else endTime[i - k]
             right = eventTime if i + 1 == n else startTime[i + 1]

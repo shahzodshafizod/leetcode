@@ -28,6 +28,17 @@ class Solution(unittest.TestCase):
                 stack.append(c)
         return "".join(stack)
 
+    # def makeFancyString(self, s: str) -> str:
+    #     fancy, freq = [s[0]], 1
+    #     for i in range(1, len(s)):
+    #         if s[i - 1] == s[i]:
+    #             freq += 1
+    #         else:
+    #             freq = 1
+    #         if freq < 3:
+    #             fancy.append(s[i])
+    #     return "".join(fancy)
+
     def test(self):
         for s, expected in [
             ("a", "a"),

@@ -9,7 +9,7 @@ from typing import List
 class Solution(unittest.TestCase):
     def moveZeroes(self, nums: List[int]) -> None:
         slow = 0
-        for fast in range(len(nums)):  # pylint: disable=consider-using-enumerate
+        for fast in range(len(nums)):
             if nums[fast] != 0:
                 nums[slow], nums[fast] = nums[fast], nums[slow]
                 slow += 1

@@ -9,7 +9,7 @@ import (
 // go test -v -count=1 ./dp/ -run ^TestMaximumLength$
 func TestMaximumLength(t *testing.T) {
 	for _, tc := range []struct {
-		nums []int
+		nums   []int
 		length int
 	}{
 		{nums: []int{1, 2, 3, 4}, length: 4},

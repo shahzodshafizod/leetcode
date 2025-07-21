@@ -10,8 +10,9 @@ class Solution(unittest.TestCase):
     def maximumLength(self, nums: List[int]) -> int:
         cnt, end = [0] * 2, [0] * 2
         for num in nums:
-            cnt[num % 2] += 1
-            end[num % 2] = end[1 - num % 2] + 1
+            num %= 2
+            cnt[num] += 1
+            end[num] = end[1 - num] + 1
         return max(cnt[0], cnt[1], end[0], end[1])
 
     def test(self):

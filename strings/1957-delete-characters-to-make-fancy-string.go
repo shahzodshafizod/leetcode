@@ -6,8 +6,8 @@ package strings
 // Time: O(n)
 // Space: O(n)
 func makeFancyString(s string) string {
-	var stack = make([]rune, 0, len(s))
-	var size = 0
+	stack := make([]rune, 0, len(s))
+	size := 0
 	for _, c := range s {
 		if size < 2 || stack[size-1] != c || stack[size-2] != c {
 			stack = append(stack, c)
