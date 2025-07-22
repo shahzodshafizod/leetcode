@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1695 | [Maximum Erasure Value](https://leetcode.com/problems/maximum-erasure-value/) | Medium | Array, Hash Table, Sliding Window | 2025-07-22 | [Go](slidingwindows/1695-maximum-erasure-value.go) [Python](slidingwindows/1695-maximum-erasure-value.py)
 | 1480 | [Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/) | Easy | Array, Prefix Sum | 2025-07-21 | [Go](prefixsums/1480-running-sum-of-1d-array.go) [Python](prefixsums/1480-running-sum-of-1d-array.py)
 | 1948 | [Delete Duplicate Folders in System](https://leetcode.com/problems/delete-duplicate-folders-in-system/) | Hard | Array, Hash Table, String, Trie, Hash Function | 2025-07-20 | [Go](tries/1948-delete-duplicate-folders-in-system.go) [Python](tries/1948-delete-duplicate-folders-in-system.py)
 | 1233 | [Remove Sub-Folders from the Filesystem](https://leetcode.com/problems/remove-sub-folders-from-the-filesystem/) | Medium | Array, String, Depth-First Search, Trie | 2025-07-19 | [Go](tries/1233-remove-sub-folders-from-the-filesystem.go) [Python](tries/1233-remove-sub-folders-from-the-filesystem.py)
