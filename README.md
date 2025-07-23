@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1672 | [Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth/) | Easy | Array, Matrix | 2025-07-23 | [Go](matrices/1672-richest-customer-wealth.go) [Python](matrices/1672-richest-customer-wealth.py)
 | 1695 | [Maximum Erasure Value](https://leetcode.com/problems/maximum-erasure-value/) | Medium | Array, Hash Table, Sliding Window | 2025-07-22 | [Go](slidingwindows/1695-maximum-erasure-value.go) [Python](slidingwindows/1695-maximum-erasure-value.py)
 | 1480 | [Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/) | Easy | Array, Prefix Sum | 2025-07-21 | [Go](prefixsums/1480-running-sum-of-1d-array.go) [Python](prefixsums/1480-running-sum-of-1d-array.py)
 | 1948 | [Delete Duplicate Folders in System](https://leetcode.com/problems/delete-duplicate-folders-in-system/) | Hard | Array, Hash Table, String, Trie, Hash Function | 2025-07-20 | [Go](tries/1948-delete-duplicate-folders-in-system.go) [Python](tries/1948-delete-duplicate-folders-in-system.py)
@@ -403,7 +404,7 @@
 | 2196 | [Create Binary Tree From Descriptions](https://leetcode.com/problems/create-binary-tree-from-descriptions/) | Medium | Array, Hash Table, Tree, Binary Tree | 2024-07-15 | [Go](trees/2196-create-binary-tree-from-descriptions.go)
 | 0726 | [Number of Atoms](https://leetcode.com/problems/number-of-atoms/) | Hard | Hash Table, String, Stack, Sorting | 2024-07-14 | [Go](stacks/0726-number-of-atoms.go)
 | 2751 | [Robot Collisions](https://leetcode.com/problems/robot-collisions/) | Hard | Array, Stack, Sorting, Simulation | 2024-07-13 | [Go](stacks/2751-robot-collisions.go)
-| 1717 | [Maximum Score From Removing Substrings](https://leetcode.com/problems/maximum-score-from-removing-substrings/) | Medium | String, Stack, Greedy | 2024-07-12 | [Go](stacks/1717-maximum-score-from-removing-substrings.go)
+| 1717 | [Maximum Score From Removing Substrings](https://leetcode.com/problems/maximum-score-from-removing-substrings/) | Medium | String, Stack, Greedy | 2024-07-12 | [Go](stacks/1717-maximum-score-from-removing-substrings.go) [Python](stacks/1717-maximum-score-from-removing-substrings.py)
 | 1190 | [Reverse Substrings Between Each Pair of Parentheses](https://leetcode.com/problems/reverse-substrings-between-each-pair-of-parentheses/) | Medium | String, Stack | 2024-07-11 | [Go](stacks/1190-reverse-substrings-between-each-pair-of-parentheses.go)
 | 1598 | [Crawler Log Folder](https://leetcode.com/problems/crawler-log-folder/) | Easy | Array, String, Stack | 2024-07-10 | [Go](stacks/1598-crawler-log-folder.go)
 | 1701 | [Average Waiting Time](https://leetcode.com/problems/average-waiting-time/) | Medium | Array, Simulation | 2024-07-09 | [Go](arrays/1701-average-waiting-time.go)

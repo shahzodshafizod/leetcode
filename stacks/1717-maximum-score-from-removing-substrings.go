@@ -2,66 +2,60 @@ package stacks
 
 // https://leetcode.com/problems/maximum-score-from-removing-substrings/
 
-// Approach 2: Greedy Way (Counting)
-// time: O(N)
-// space: O(1)
+// Approach 2: Greedy (Counting)
+// Time: O(n)
+// Space: O(1)
 func maximumGain(s string, x int, y int) int {
 	a, b := 'a', 'b'
 	if x < y {
 		x, y = y, x
 		a, b = b, a
 	}
-	points := 0
-	acount, bcount := 0, 0
-	for _, r := range s {
-		switch r {
+	score, acnt, bcnt := 0, 0, 0
+	for _, c := range s {
+		switch c {
 		case a:
-			acount++
+			acnt++
 		case b:
-			if acount > 0 {
-				acount--
-				points += x
+			if acnt > 0 {
+				score += x
+				acnt--
 			} else {
-				bcount++
+				bcnt++
 			}
 		default:
-			points += min(acount, bcount) * y
-			acount, bcount = 0, 0
+			score += min(acnt, bcnt) * y
+			acnt, bcnt = 0, 0
 		}
 	}
-	points += min(acount, bcount) * y
-	return points
+	score += min(acnt, bcnt) * y
+	return score
 }
 
 // // Approach #1: Stack
-// // time: O(2*N) = O(N)
-// // space: O(2*N) = O(N)
+// // Time: O(2n) = O(n)
+// // Space: O(n)
 // func maximumGain(s string, x int, y int) int {
-// 	var a, b = 'a', 'b'
-// 	if y > x {
+// 	bayts := []byte(s)
+// 	size := len(bayts)
+// 	getScore := func(a byte, b byte, score int) int {
+// 		res, ptr := 0, 0
+// 		for i := 0; i < size; i++ {
+// 			if ptr > 0 && bayts[ptr-1] == a && bayts[i] == b {
+// 				res += score
+// 				ptr--
+// 			} else {
+// 				bayts[ptr] = bayts[i]
+// 				ptr++
+// 			}
+// 		}
+// 		size = ptr
+// 		return res
+// 	}
+// 	var a, b byte = 'a', 'b'
+// 	if x < y {
 // 		x, y = y, x
 // 		a, b = b, a
 // 	}
-// 	var points = 0
-// 	var stack = design.NewStack[rune]()
-// 	for _, r := range s {
-// 		if !stack.Empty() && stack.Top() == a && r == b {
-// 			stack.Pop()
-// 			points += x
-// 		} else {
-// 			stack.Push(r)
-// 		}
-// 	}
-// 	var stack2 = design.NewStack[rune]()
-// 	var r rune
-// 	for !stack.Empty() {
-// 		r = stack.Pop()
-// 		if !stack2.Empty() && stack2.Top() == a && r == b {
-// 			stack2.Pop()
-// 			points += y
-// 		} else {
-// 			stack2.Push(r)
-// 		}
-// 	}
-// 	return points
+// 	return getScore(a, b, x) + getScore(b, a, y)
 // }
