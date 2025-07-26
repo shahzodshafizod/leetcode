@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3487 | [Maximum Unique Subarray Sum After Deletion](https://leetcode.com/problems/maximum-unique-subarray-sum-after-deletion/) | Easy | Array, Hash Table, Greedy | 2025-07-25 | [Go](greedy/3487-maximum-unique-subarray-sum-after-deletion.go) [Python](greedy/3487-maximum-unique-subarray-sum-after-deletion.py)
+| 2322 | [Minimum Score After Removals on a Tree](https://leetcode.com/problems/minimum-score-after-removals-on-a-tree/) | Hard | Array, Bit Manipulation, Tree, Depth-First Search | 2025-07-24 | [Go](graphs/2322-minimum-score-after-removals-on-a-tree.go) [Python](graphs/2322-minimum-score-after-removals-on-a-tree.py)
 | 1672 | [Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth/) | Easy | Array, Matrix | 2025-07-23 | [Go](matrices/1672-richest-customer-wealth.go) [Python](matrices/1672-richest-customer-wealth.py)
 | 1695 | [Maximum Erasure Value](https://leetcode.com/problems/maximum-erasure-value/) | Medium | Array, Hash Table, Sliding Window | 2025-07-22 | [Go](slidingwindows/1695-maximum-erasure-value.go) [Python](slidingwindows/1695-maximum-erasure-value.py)
 | 1480 | [Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/) | Easy | Array, Prefix Sum | 2025-07-21 | [Go](prefixsums/1480-running-sum-of-1d-array.go) [Python](prefixsums/1480-running-sum-of-1d-array.py)
