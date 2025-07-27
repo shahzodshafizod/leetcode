@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2210 | [Count Hills and Valleys in an Array](https://leetcode.com/problems/count-hills-and-valleys-in-an-array/) | Easy | Array | 2025-07-27 | [Go](arrays/2210-count-hills-and-valleys-in-an-array.go) [Python](arrays/2210-count-hills-and-valleys-in-an-array.py)
+| 3480 | [Maximize Subarrays After Removing One Conflicting Pair](https://leetcode.com/problems/maximize-subarrays-after-removing-one-conflicting-pair/) | Hard | Array, Segment Tree, Enumeration, Prefix Sum | 2025-07-26 | [Go](prefixsums/3480-maximize-subarrays-after-removing-one-conflicting-pair.go) [Python](prefixsums/3480-maximize-subarrays-after-removing-one-conflicting-pair.py)
 | 3487 | [Maximum Unique Subarray Sum After Deletion](https://leetcode.com/problems/maximum-unique-subarray-sum-after-deletion/) | Easy | Array, Hash Table, Greedy | 2025-07-25 | [Go](greedy/3487-maximum-unique-subarray-sum-after-deletion.go) [Python](greedy/3487-maximum-unique-subarray-sum-after-deletion.py)
 | 2322 | [Minimum Score After Removals on a Tree](https://leetcode.com/problems/minimum-score-after-removals-on-a-tree/) | Hard | Array, Bit Manipulation, Tree, Depth-First Search | 2025-07-24 | [Go](graphs/2322-minimum-score-after-removals-on-a-tree.go) [Python](graphs/2322-minimum-score-after-removals-on-a-tree.py)
 | 1672 | [Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth/) | Easy | Array, Matrix | 2025-07-23 | [Go](matrices/1672-richest-customer-wealth.go) [Python](matrices/1672-richest-customer-wealth.py)
