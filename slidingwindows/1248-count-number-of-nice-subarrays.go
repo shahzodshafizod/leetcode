@@ -8,6 +8,7 @@ package slidingwindows
 func numberOfSubarrays(nums []int, k int) int {
 	subarrays := 0
 	start, middle := 0, 0
+
 	odds := 0
 	for end := range nums {
 		odds += nums[end] & 1
@@ -15,14 +16,17 @@ func numberOfSubarrays(nums []int, k int) int {
 			odds -= nums[start] & 1
 			start++
 		}
+
 		if odds == k {
 			middle = start
 			for nums[middle]&1 == 0 {
 				middle++
 			}
+
 			subarrays += (middle - start) + 1
 		}
 	}
+
 	return subarrays
 }
 

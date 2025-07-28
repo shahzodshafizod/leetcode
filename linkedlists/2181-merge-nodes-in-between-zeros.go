@@ -8,6 +8,7 @@ func mergeNodes(head *pkg.ListNode) *pkg.ListNode {
 	dummy := &pkg.ListNode{}
 	tail := dummy
 	sum := 0
+
 	for node := head.Next; node != nil; node = node.Next {
 		if node.Val != 0 {
 			sum += node.Val
@@ -18,5 +19,6 @@ func mergeNodes(head *pkg.ListNode) *pkg.ListNode {
 			tail = tail.Next
 		}
 	}
+
 	return dummy.Next
 }

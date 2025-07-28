@@ -110,7 +110,7 @@ linters:
     - wastedassign
     - whitespace
     - wrapcheck
-    - wsl
+    # - wsl # depricated
     - wsl_v5
     - zerologlint
 
@@ -221,9 +221,9 @@ linters:
     - wastedassign
     - whitespace
     - wrapcheck
-    - wsl
-    - wsl_v5
-    - zerologlint
+
+    # - wsl_v5
+    # - zerologlint
 
   settings:
     lll:

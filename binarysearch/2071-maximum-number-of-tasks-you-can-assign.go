@@ -13,6 +13,7 @@ func maxTaskAssign(tasks []int, workers []int, pills int, strength int) int {
 	n, m := len(tasks), len(workers)
 	sort.Ints(tasks)   // O(n log n)
 	sort.Ints(workers) // O(m log m)
+
 	deque := make([]int, m)
 	greedy := func(mid int) bool { // O(min(n,m))
 		p := pills
@@ -25,6 +26,7 @@ func maxTaskAssign(tasks []int, workers []int, pills int, strength int) int {
 				first--
 				wid--
 			}
+
 			if first == last { // not enough strong workers, even with pills
 				return false
 			}
@@ -38,10 +40,13 @@ func maxTaskAssign(tasks []int, workers []int, pills int, strength int) int {
 				return false
 			}
 		}
+
 		return true
 	}
 	left, right := 0, min(n, m) // left=0 is important
+
 	var mid int
+
 	for left < right { // O(log min(n,m))
 		mid = left + (right-left+1)/2
 		if greedy(mid) {
@@ -50,5 +55,6 @@ func maxTaskAssign(tasks []int, workers []int, pills int, strength int) int {
 			right = mid - 1
 		}
 	}
+
 	return left
 }

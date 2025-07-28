@@ -7,6 +7,7 @@ func transpose(matrix [][]int) [][]int {
 	if m == 0 {
 		return [][]int{}
 	}
+
 	n := len(matrix[0])
 	if n == 0 {
 		return [][]int{}
@@ -19,12 +20,14 @@ func transpose(matrix [][]int) [][]int {
 				matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
 			}
 		}
+
 		for index := m - 2; index > 0; index-- {
 			i, j := index, m-1
 			for ; i < j; i, j = i+1, j-1 {
 				matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
 			}
 		}
+
 		return matrix
 	}
 

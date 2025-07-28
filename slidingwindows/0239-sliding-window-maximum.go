@@ -10,19 +10,24 @@ func maxSlidingWindow(nums []int, k int) []int {
 	queue := make([]int, n)
 	head, tail := 0, -1
 	maxes := make([]int, n-k+1)
+
 	for idx := range nums {
 		if head <= tail && idx-queue[head] >= k {
 			head++
 		}
+
 		for head <= tail && nums[queue[tail]] <= nums[idx] {
 			tail--
 		}
+
 		tail++
+
 		queue[tail] = idx
 		if idx+1 >= k {
 			maxes[idx-k+1] = nums[queue[head]]
 		}
 	}
+
 	return maxes
 }
 

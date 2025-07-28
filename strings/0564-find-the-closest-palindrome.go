@@ -13,17 +13,22 @@ func nearestPalindromic(n string) string {
 		n := len(b)
 		left := (n - 1) / 2
 		right := n / 2
+
 		for ; left >= 0; left, right = left-1, right+1 {
 			b[right] = b[left]
 		}
+
 		num, _ = strconv.ParseInt(string(b), 10, 64)
+
 		return num
 	}
 	prevPalindrome := func(num int64) int64 {
 		var left, right int64 = 0, num - 1
+
 		var palindrome, prev, mid int64
 		for left <= right {
 			mid = (right-left)/2 + left
+
 			palindrome = makePalindrome(mid)
 			if palindrome < num {
 				prev = palindrome
@@ -32,13 +37,16 @@ func nearestPalindromic(n string) string {
 				right = mid - 1
 			}
 		}
+
 		return prev
 	}
 	nextPalindrome := func(num int64) int64 {
 		var left, right int64 = num + 1, 10e17 + 1
+
 		var palindrome, next, mid int64
 		for left <= right {
 			mid = (right-left)/2 + left
+
 			palindrome = makePalindrome(mid)
 			if palindrome > num {
 				next = palindrome
@@ -47,15 +55,18 @@ func nearestPalindromic(n string) string {
 				left = mid + 1
 			}
 		}
+
 		return next
 	}
 
 	num, _ := strconv.ParseInt(n, 10, 64)
 	prev := prevPalindrome(num)
 	next := nextPalindrome(num)
+
 	if (num - prev) <= (next - num) {
 		return strconv.FormatInt(prev, 10)
 	}
+
 	return strconv.FormatInt(next, 10)
 }
 

@@ -14,24 +14,32 @@ func minimumTotalDistance(robot []int, factory [][]int) int64 {
 		if x < 0 {
 			x = -x
 		}
+
 		return int64(x)
 	}
+
 	sort.Ints(robot)
 	sort.Slice(factory, func(i, j int) bool { return factory[i][0] < factory[j][0] })
 	factories := make([]int, 0, len(factory))
+
 	for fid := range factory {
 		for limit := factory[fid][1]; limit > 0; limit-- {
 			factories = append(factories, factory[fid][0])
 		}
 	}
+
 	rlen, flen := len(robot), len(factories)
 	dp := make([][]int64, rlen+1)
+
 	for idx := range dp {
 		dp[idx] = make([]int64, flen+1)
 		dp[idx][flen] = 1e12
 	}
+
 	dp[rlen][flen] = 0
+
 	var distance int64
+
 	for rid := rlen - 1; rid >= 0; rid-- {
 		for fid := flen - 1; fid >= 0; fid-- {
 			distance = abs(robot[rid] - factories[fid])
@@ -41,6 +49,7 @@ func minimumTotalDistance(robot []int, factory [][]int) int64 {
 			)
 		}
 	}
+
 	return dp[0][0]
 }
 

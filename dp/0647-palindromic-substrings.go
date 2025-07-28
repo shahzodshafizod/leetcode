@@ -11,14 +11,17 @@ func countSubstrings(s string) int {
 			left--
 			right++
 		}
+
 		return count
 	}
 	count := 0
+
 	for i := 0; i < n; i++ {
 		count += expand(i, i)
 		if i+1 < n {
 			count += expand(i, i+1)
 		}
 	}
+
 	return count
 }

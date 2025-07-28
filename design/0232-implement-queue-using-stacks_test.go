@@ -20,8 +20,10 @@ func TestMyQueue(t *testing.T) {
 		},
 	} {
 		var queue MyQueue
+
 		for index, operation := range tc.operations {
 			var output any = nil
+
 			switch operation {
 			case "MyQueue":
 				queue = NewMyQueue()
@@ -34,6 +36,7 @@ func TestMyQueue(t *testing.T) {
 			case "empty":
 				output = queue.Empty()
 			}
+
 			assert.Equal(t, tc.output[index], output)
 		}
 	}

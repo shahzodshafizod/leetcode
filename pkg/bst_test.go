@@ -9,6 +9,7 @@ import (
 // go test -v -count=1 ./pkg/ -run ^TestBST$
 func TestBST(t *testing.T) {
 	var bst BST
+
 	for _, tc := range []struct {
 		command string
 		value   []int
@@ -30,6 +31,7 @@ func TestBST(t *testing.T) {
 		{command: "Search", value: []int{6}, output: true},
 	} {
 		var output any = nil
+
 		switch tc.command {
 		case "BST":
 			bst = NewBST()
@@ -40,6 +42,7 @@ func TestBST(t *testing.T) {
 		case "Remove":
 			bst.Remove(tc.value[0])
 		}
+
 		assert.Equal(t, tc.output, output)
 	}
 }

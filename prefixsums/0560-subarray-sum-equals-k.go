@@ -7,12 +7,14 @@ package prefixsums
 // Space: O(n)
 func subarraySum(nums []int, k int) int {
 	counter := map[int]int{0: 1}
+
 	count, presum := 0, 0
 	for _, num := range nums {
 		presum += num
 		count += counter[presum-k]
 		counter[presum]++
 	}
+
 	return count
 }
 

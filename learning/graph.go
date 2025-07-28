@@ -1486,16 +1486,20 @@ var (
 
 func (g *graph) DFS(adjList [][]int) []int {
 	var dfs func(curr int, visited map[int]bool) []int
+
 	dfs = func(curr int, visited map[int]bool) []int {
 		nodes := []int{curr}
+
 		visited[curr] = true
 		for _, neighbor := range adjList[curr] {
 			if !visited[neighbor] {
 				nodes = append(nodes, dfs(neighbor, visited)...)
 			}
 		}
+
 		return nodes
 	}
+
 	return dfs(0, make(map[int]bool))
 }
 
@@ -1503,10 +1507,13 @@ func (g *graph) BFS(adjList [][]int) []int {
 	nodes := make([]int, 0)
 	queue := pkg.NewQueue[int]()
 	queue.Enqueue(0)
+
 	visited := make(map[int]bool)
+
 	for !queue.Empty() {
 		curr := queue.Dequeue()
 		nodes = append(nodes, curr)
+
 		visited[curr] = true
 		for _, neighbor := range adjList[curr] {
 			if !visited[neighbor] {
@@ -1514,45 +1521,57 @@ func (g *graph) BFS(adjList [][]int) []int {
 			}
 		}
 	}
+
 	return nodes
 }
 
 func (g *graph) TopologicalSortBFS(adjList map[int][]*Edge, n int) []int {
 	indegrees := make(map[int]int)
+
 	for _, dsts := range adjList {
 		for _, dst := range dsts {
 			indegrees[dst.To]++
 		}
 	}
+
 	visited := make(map[int]bool)
 	queue := pkg.NewQueue[int]()
+
 	for src := 0; src < n; src++ {
 		if indegrees[src] == 0 && !visited[src] {
 			queue.Enqueue(src)
+
 			visited[src] = true
 		}
 	}
+
 	sorted := make([]int, 0)
+
 	var node int
 	for !queue.Empty() {
 		node = queue.Dequeue()
 		sorted = append(sorted, node)
+
 		for _, dst := range adjList[node] {
 			if !visited[dst.To] {
 				indegrees[dst.To]--
 				if indegrees[dst.To] == 0 {
 					queue.Enqueue(dst.To)
+
 					visited[dst.To] = true
 				}
 			}
 		}
 	}
+
 	return sorted
 }
 
 func (g *graph) TopologicalSortDFS(adjList map[int][]*Edge, n int) []int {
 	sorted := make([]int, n)
+
 	var dfs func(node int, visited map[int]bool, idx int, sorted []int) int
+
 	dfs = func(node int, visited map[int]bool, idx int, sorted []int) int {
 		visited[node] = true
 		for _, next := range adjList[node] {
@@ -1560,17 +1579,21 @@ func (g *graph) TopologicalSortDFS(adjList map[int][]*Edge, n int) []int {
 				idx = dfs(next.To, visited, idx, sorted)
 			}
 		}
+
 		sorted[idx] = node
+
 		return idx - 1
 	}
 	visited := make(map[int]bool)
 	idx := n - 1
+
 	for src := 0; src < n; src++ {
 		if !visited[src] {
 			visited[src] = true
 			idx = dfs(src, visited, idx, sorted)
 		}
 	}
+
 	return sorted
 }
 
@@ -1579,36 +1602,45 @@ func (g *graph) Dungeon(grid [][]byte) int {
 	directions := [5]int{-1, 0, 1, 0, -1}
 	m, n := len(grid), len(grid[0])
 	visited := make([][]bool, m)
+
 	for idx := range visited {
 		visited[idx] = make([]bool, n)
 	}
+
 	queue := pkg.NewQueue[[3]int]()
 	for row := 0; row < m && queue.Empty(); row++ {
 		for col := 0; col < n && queue.Empty(); col++ {
 			if grid[row][col] == 'S' {
 				queue.Enqueue([3]int{row, col, 1})
+
 				visited[row][col] = true
 			}
 		}
 	}
+
 	var row, col, path, r, c int
+
 	for !queue.Empty() {
 		current := queue.Dequeue()
+
 		row, col, path = current[0], current[1], current[2]
 		for dir := 1; dir < 5; dir++ {
 			r = row + directions[dir-1]
 			c = col + directions[dir]
+
 			if min(r, c) >= 0 && r < m && c < n && !visited[r][c] {
 				switch grid[r][c] {
 				case 'E':
 					return path + 1
 				case '.':
 					queue.Enqueue([3]int{r, c, path + 1})
+
 					visited[r][c] = true
 				}
 			}
 		}
 	}
+
 	return -1
 }
 
@@ -1638,20 +1670,25 @@ func (g *graph) DAG(adjList map[int][]*Edge, s int, n int) []int {
 // Lazy Dijkstra's Algorithm
 func (g *graph) Dijkstra(adjList map[int][]*Edge, s int, n int) []int {
 	visited := make([]bool, n)
+
 	dist := make([]int, n)
 	for idx := range dist {
 		dist[idx] = math.MaxInt
 	}
+
 	dist[s] = 0
 	minPQ := pkg.NewHeap(make([]*Edge, 0), func(x, y *Edge) bool { return x.Weight < y.Weight })
 	heap.Push(minPQ, &Edge{s, 0})
+
 	for minPQ.Len() > 0 {
 		nodeId := heap.Pop(minPQ).(*Edge).To // get the next minimal (promising) distance
 		visited[nodeId] = true
+
 		for _, edge := range adjList[nodeId] {
 			if visited[edge.To] {
 				continue
 			}
+
 			newDist := dist[nodeId] + edge.Weight
 			if newDist < dist[edge.To] {
 				dist[edge.To] = newDist
@@ -1659,6 +1696,7 @@ func (g *graph) Dijkstra(adjList map[int][]*Edge, s int, n int) []int {
 			}
 		}
 	}
+
 	return dist
 }
 
@@ -1668,6 +1706,7 @@ func (g *graph) BellmanFord(adjList map[int][]*Edge, s int, n int) []int {
 	for idx := range dist {
 		dist[idx] = math.MaxInt
 	}
+
 	dist[s] = 0
 	// step 2: relax edges
 	for i := 0; i < n-1; i++ {
@@ -1685,6 +1724,7 @@ func (g *graph) BellmanFord(adjList map[int][]*Edge, s int, n int) []int {
 			if dist[src] == math.MaxInt {
 				continue
 			}
+
 			for _, edge := range edges {
 				if dist[edge.To] > dist[src]+edge.Weight {
 					// Graph contains negative weight cycle
@@ -1693,6 +1733,7 @@ func (g *graph) BellmanFord(adjList map[int][]*Edge, s int, n int) []int {
 			}
 		}
 	}
+
 	return dist
 }
 

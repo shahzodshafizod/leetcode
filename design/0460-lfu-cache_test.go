@@ -20,9 +20,11 @@ func TestLFUCache(t *testing.T) {
 		},
 	} {
 		var lfu LFUCache
+
 		var output any
 		for idx, command := range tc.commands {
 			output = nil
+
 			switch command {
 			case "LFUCache":
 				lfu = NewLFUCache(tc.values[idx][0])
@@ -31,6 +33,7 @@ func TestLFUCache(t *testing.T) {
 			case "put":
 				lfu.Put(tc.values[idx][0], tc.values[idx][1])
 			}
+
 			assert.Equal(t, tc.output[idx], output)
 		}
 	}

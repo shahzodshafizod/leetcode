@@ -9,23 +9,30 @@ import "math"
 // Space: O(1)
 func stoneGameIII(stoneValue []int) string {
 	n := len(stoneValue)
+
 	var dp [3]int
+
 	var best, stones int
 	for idx := n - 1; idx >= 0; idx-- {
 		best = math.MinInt
+
 		stones = 0
 		for x := idx; x < min(n, idx+3); x++ {
 			stones += stoneValue[x]
 			best = max(best, stones-dp[x-idx])
 		}
+
 		dp[0], dp[1], dp[2] = best, dp[0], dp[1]
 	}
+
 	if dp[0] > 0 {
 		return "Alice"
 	}
+
 	if dp[0] < 0 {
 		return "Bob"
 	}
+
 	return "Tie"
 }
 

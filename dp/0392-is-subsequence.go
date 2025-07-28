@@ -24,11 +24,13 @@ Then iterate over t and return the count of the last station if you find it.
 func isSubsequence(s string, t string) bool {
 	sn, tn := len(s), len(t)
 	si := 0
+
 	for ti := 0; ti < tn && si < sn; ti++ {
 		if s[si] == t[ti] {
 			si++
 		}
 	}
+
 	return si == sn
 }
 

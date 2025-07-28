@@ -20,9 +20,12 @@ func findRelativeRanks(score []int) []string {
 	for idx, score := range score {
 		indexes[score] = idx + 1
 	}
+
 	ranks := make([]string, len(score))
 	place := 0
+
 	var rank string
+
 	for score := max; score >= 0; score-- {
 		if indexes[score] != 0 {
 			place++
@@ -36,9 +39,11 @@ func findRelativeRanks(score []int) []string {
 			default:
 				rank = strconv.Itoa(place)
 			}
+
 			ranks[indexes[score]-1] = rank
 		}
 	}
+
 	return ranks
 }
 

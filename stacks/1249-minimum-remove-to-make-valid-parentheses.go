@@ -24,6 +24,7 @@ Step 2: Write out some test cases
 func minRemoveToMakeValid(s string) string {
 	slice := []byte(s)
 	remove := make([]int, 0, len(slice))
+
 	for idx, elem := range slice {
 		switch elem {
 		case '(':
@@ -36,8 +37,10 @@ func minRemoveToMakeValid(s string) string {
 			}
 		}
 	}
+
 	for idx := len(remove) - 1; idx >= 0; idx-- {
 		slice = append(slice[:remove[idx]], slice[remove[idx]+1:]...)
 	}
+
 	return string(slice)
 }

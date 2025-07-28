@@ -11,35 +11,45 @@ import "slices"
 // space: O(m)
 func minMovesToSeat(seats []int, students []int) int {
 	maxseat := slices.Max(seats) // O(n)
+
 	countseat := make([]int, maxseat+1)
 	for _, seat := range seats { // O(n)
 		countseat[seat]++
 	}
+
 	maxstudent := slices.Max(students) // O(n)
+
 	countstudent := make([]int, maxstudent+1)
 	for _, student := range students { // O(n)
 		countstudent[student]++
 	}
+
 	moves := 0
 	seat, student := 0, 0
+
 	for { // O(m)
 		for seat <= maxseat && countseat[seat] == 0 {
 			seat++
 		}
+
 		for student <= maxstudent && countstudent[student] == 0 {
 			student++
 		}
+
 		if seat > maxseat || student > maxstudent {
 			break
 		}
+
 		if student > seat {
 			moves += student - seat
 		} else {
 			moves += seat - student
 		}
+
 		countseat[seat]--
 		countstudent[student]--
 	}
+
 	return moves
 }
 

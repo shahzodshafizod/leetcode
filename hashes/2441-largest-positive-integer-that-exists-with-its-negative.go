@@ -6,8 +6,11 @@ package hashes
 // space: O(m)
 func findMaxK(nums []int) int {
 	var bitset [1001]int16
+
 	k := -1
+
 	var absnum int
+
 	for _, num := range nums {
 		if num < 0 {
 			absnum = -num
@@ -16,10 +19,12 @@ func findMaxK(nums []int) int {
 			absnum = num
 			bitset[absnum] |= 2
 		}
+
 		if bitset[absnum] == 3 && absnum > k {
 			k = absnum
 		}
 	}
+
 	return k
 }
 

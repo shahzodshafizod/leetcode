@@ -12,21 +12,26 @@ func profitableSchemes(n int, minProfit int, group []int, profit []int) int {
 	for idx := range dp {
 		dp[idx] = make([]int, n+1)
 	}
+
 	dp[0][0] = 1
+
 	g := len(group)
 	for k := 0; k < g; k++ { // O(G)
 		g := group[k]
 		p := profit[k]
+
 		for i := minProfit; i >= 0; i-- { // O(P)
 			for j := n - g; j >= 0; j-- { // O(N)
 				dp[min(minProfit, i+p)][j+g] = (dp[min(minProfit, i+p)][j+g] + dp[i][j]) % mod
 			}
 		}
 	}
+
 	count := 0
 	for _, cnt := range dp[minProfit] {
 		count = (count + cnt) % mod
 	}
+
 	return count
 }
 

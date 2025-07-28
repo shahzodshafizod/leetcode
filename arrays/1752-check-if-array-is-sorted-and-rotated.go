@@ -8,14 +8,17 @@ package arrays
 func check(nums []int) bool {
 	n := len(nums)
 	breaks := 0
+
 	for idx := 1; idx < n; idx++ {
 		if nums[idx-1] > nums[idx] {
 			breaks++
 		}
 	}
+
 	if nums[n-1] > nums[0] {
 		breaks++
 	}
+
 	return breaks <= 1
 }
 

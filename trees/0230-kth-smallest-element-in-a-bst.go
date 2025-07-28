@@ -9,9 +9,11 @@ func kthSmallest(root *pkg.TreeNode, k int) int {
 	if k <= leftCount {
 		return kthSmallest(root.Left, k)
 	}
+
 	if k > leftCount+1 { // 1 is counted as the current node
 		return kthSmallest(root.Right, k-leftCount-1)
 	}
+
 	return root.Val
 }
 
@@ -19,6 +21,7 @@ func kthSmallestCountNodes(curr *pkg.TreeNode) int {
 	if curr == nil {
 		return 0
 	}
+
 	return 1 + kthSmallestCountNodes(curr.Left) + kthSmallestCountNodes(curr.Right)
 }
 

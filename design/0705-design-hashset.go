@@ -12,10 +12,12 @@ type MyHashSet struct {
 
 func NewMyHashSet() MyHashSet {
 	const cap = 997
+
 	array := make([]*pkg.ListNode, cap)
 	for idx := range array {
 		array[idx] = &pkg.ListNode{} // dummy head node
 	}
+
 	return MyHashSet{array: array, cap: cap}
 }
 
@@ -25,8 +27,10 @@ func (m *MyHashSet) Add(key int) {
 		if curr.Next.Val == key {
 			return
 		}
+
 		curr = curr.Next
 	}
+
 	curr.Next = &pkg.ListNode{Val: key}
 }
 
@@ -37,6 +41,7 @@ func (m *MyHashSet) Remove(key int) {
 			curr.Next = curr.Next.Next
 			return
 		}
+
 		curr = curr.Next
 	}
 }
@@ -47,8 +52,10 @@ func (m *MyHashSet) Contains(key int) bool {
 		if curr.Val == key {
 			return true
 		}
+
 		curr = curr.Next
 	}
+
 	return false
 }
 

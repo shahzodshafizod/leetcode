@@ -11,9 +11,9 @@ func firstMissingPositive(nums []int) int {
 			nums[idx] <= len &&
 			nums[idx] != idx+1 &&
 			nums[idx] != nums[nums[idx]-1] {
-
 			nums[idx], nums[nums[idx]-1] = nums[nums[idx]-1], nums[idx]
 		}
+
 		if nums[idx] != idx+1 {
 			nums[idx] = 0
 		}

@@ -8,16 +8,20 @@ package stacks
 func parseBoolExpr(expression string) bool {
 	stack := make([]rune, len(expression))
 	sid := -1
+
 	for _, c := range expression {
 		if c == ')' {
 			var value rune
+
 			hasTrue, hasFalse := false, false
+
 			for stack[sid] != '(' {
 				value = stack[sid]
 				sid--
 				hasTrue = hasTrue || value == 't'
 				hasFalse = hasFalse || value == 'f'
 			}
+
 			sid-- // skip ')'
 			// sid++ // (for a new element) we'll replace the operator
 			oper := stack[sid]
@@ -33,6 +37,7 @@ func parseBoolExpr(expression string) bool {
 			stack[sid] = c
 		}
 	}
+
 	return stack[sid] == 't'
 }
 

@@ -7,6 +7,7 @@ func sumOfDistancesInTree(n int, edges [][]int) []int {
 	for idx := range adjList {
 		adjList[idx] = make([]int, 0)
 	}
+
 	var a, b int
 	for _, edge := range edges {
 		a, b = edge[0], edge[1]
@@ -18,9 +19,11 @@ func sumOfDistancesInTree(n int, edges [][]int) []int {
 	count := make([]int, n)
 
 	var calcCount func(curr int, prev int, depth int)
+
 	calcCount = func(curr int, prev int, depth int) {
 		count[curr] = 1
 		depth++
+
 		for _, next := range adjList[curr] {
 			if next != prev {
 				calcCount(next, curr, depth)
@@ -32,6 +35,7 @@ func sumOfDistancesInTree(n int, edges [][]int) []int {
 	calcCount(0, -1, 0)
 
 	var calcSum func(curr int, prev int)
+
 	calcSum = func(curr int, prev int) {
 		for _, next := range adjList[curr] {
 			if next != prev {

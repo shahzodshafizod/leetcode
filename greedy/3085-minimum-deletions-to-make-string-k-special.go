@@ -7,10 +7,13 @@ func minimumDeletions(word string, k int) int {
 	for _, c := range word {
 		freq[int(c-'a')]++
 	}
+
 	res := len(word)
+
 	var high, dels int
 	for _, low := range freq {
 		high, dels = low+k, 0
+
 		for _, cnt := range freq {
 			if cnt < low {
 				dels += cnt
@@ -18,7 +21,9 @@ func minimumDeletions(word string, k int) int {
 				dels += cnt - high
 			}
 		}
+
 		res = min(res, dels)
 	}
+
 	return res
 }

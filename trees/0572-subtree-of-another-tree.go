@@ -6,19 +6,23 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 
 func isSubtree(root *pkg.TreeNode, subRoot *pkg.TreeNode) bool {
 	var dfs func(root *pkg.TreeNode, subRoot *pkg.TreeNode, check bool) bool
+
 	dfs = func(root *pkg.TreeNode, subRoot *pkg.TreeNode, check bool) bool {
 		if root == nil || subRoot == nil {
 			return root == subRoot
 		}
+
 		if check {
 			return root.Val == subRoot.Val &&
 				dfs(root.Left, subRoot.Left, true) &&
 				dfs(root.Right, subRoot.Right, true)
 		}
+
 		return dfs(root, subRoot, true) ||
 			dfs(root.Left, subRoot, false) ||
 			dfs(root.Right, subRoot, false)
 	}
+
 	return dfs(root, subRoot, false)
 }
 

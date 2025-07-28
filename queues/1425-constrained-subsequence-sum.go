@@ -10,18 +10,23 @@ func constrainedSubsetSum(nums []int, k int) int {
 	queue := make([]int, n)
 	head, tail := 0, 0
 	result := nums[0]
+
 	for idx := 1; idx < n; idx++ {
 		if queue[head]+k < idx {
 			head++ // popleft
 		}
+
 		nums[idx] += max(0, nums[queue[head]])
 		result = max(result, nums[idx])
+
 		for tail >= head && nums[queue[tail]] < nums[idx] {
 			tail-- // pop
 		}
+
 		tail++
 		queue[tail] = idx // append
 	}
+
 	return result
 }
 

@@ -79,6 +79,7 @@ func TestStructyHasPath(t *testing.T) {
 		},
 	} {
 		var structy Structy = &structy{}
+
 		hasPath := structy.HasPath(tc.adjList, tc.src, tc.dst)
 		assert.Equal(t, tc.hasPath, hasPath)
 	}
@@ -220,6 +221,7 @@ func TestStructyUndirectedPath(t *testing.T) {
 		},
 	} {
 		var structy Structy = &structy{}
+
 		hasPath := structy.UndirectedPath(tc.edges, tc.nodeA, tc.nodeB)
 		assert.Equal(t, tc.hasPath, hasPath)
 	}
@@ -286,6 +288,7 @@ func TestStructyConnectedComponentsCount(t *testing.T) {
 		},
 	} {
 		var structy Structy = &structy{}
+
 		count := structy.ConnectedComponentsCount(tc.adjList)
 		assert.Equal(t, tc.count, count)
 	}
@@ -352,6 +355,7 @@ func TestStructyLargestComponent(t *testing.T) {
 		},
 	} {
 		var structy Structy = &structy{}
+
 		maxsize := structy.LargestComponent(tc.adjList)
 		assert.Equal(t, tc.maxsize, maxsize)
 	}
@@ -471,6 +475,7 @@ func TestStructyShortestPath(t *testing.T) {
 		},
 	} {
 		var structy Structy = &structy{}
+
 		minPath := structy.ShortestPath(tc.edges, tc.nodeA, tc.nodeB)
 		assert.Equal(t, tc.minPath, minPath)
 	}
@@ -521,6 +526,7 @@ func TestStructyIslandCount(t *testing.T) {
 		},
 	} {
 		var structy Structy = &structy{}
+
 		islands := structy.IslandCount(tc.grid)
 		assert.Equal(t, tc.islands, islands)
 	}
@@ -572,6 +578,7 @@ func TestStructyMinimumIsland(t *testing.T) {
 		},
 	} {
 		var structy Structy = &structy{}
+
 		minIsland := structy.MinimumIsland(tc.grid)
 		assert.Equal(t, tc.minIsland, minIsland)
 	}

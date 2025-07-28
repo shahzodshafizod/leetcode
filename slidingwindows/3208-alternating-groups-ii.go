@@ -8,17 +8,21 @@ func numberOfAlternatingGroups(colors []int, k int) int {
 	groups, tails := 0, 1
 	n := len(colors)
 	next := (n + k - 2) % n
+
 	var curr int
 	for idx := n + k - 3; idx >= 0; idx-- {
 		curr = idx % n
 		if colors[curr] == colors[next] {
 			tails = 0
 		}
+
 		tails++
 		if tails >= k {
 			groups++
 		}
+
 		next = curr
 	}
+
 	return groups
 }

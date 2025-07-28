@@ -14,5 +14,6 @@ func findComplement(num int) int {
 		num ^= bit
 		bit <<= 1
 	}
+
 	return num
 }

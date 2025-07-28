@@ -7,17 +7,21 @@ package dp
 // Space: O(n)
 func maxSumOfThreeSubarrays(nums []int, k int) []int {
 	n := len(nums)
+
 	sums := make([]int, n)
 	for idx := 0; idx < k; idx++ {
 		sums[0] += nums[idx]
 	}
+
 	right := make([][2]int, n) // {sum, start_idx}
 	right[0][0] = sums[0]
+
 	for idx := 1; idx <= n-k; idx++ {
 		sums[idx] = sums[idx-1] - nums[idx-1] + nums[idx+k-1]
 		right[idx][0] = sums[idx]
 		right[idx][1] = idx
 	}
+
 	for idx := n - k - 1; idx >= 0; idx-- {
 		if sums[idx] >= right[idx+1][0] {
 			right[idx] = [2]int{sums[idx], idx}
@@ -25,18 +29,22 @@ func maxSumOfThreeSubarrays(nums []int, k int) []int {
 			right[idx] = right[idx+1]
 		}
 	}
+
 	total, indices := 0, []int{}
+
 	left, lid := 0, -1
 	for idx := k; idx <= n-2*k; idx++ {
 		if sums[idx-k] > left {
 			left = sums[idx-k]
 			lid = idx - k
 		}
+
 		if left+sums[idx]+right[idx+k][0] > total {
 			total = left + sums[idx] + right[idx+k][0]
 			indices = []int{lid, idx, right[idx+k][1]}
 		}
 	}
+
 	return indices
 }
 

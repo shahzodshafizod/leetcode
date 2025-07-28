@@ -31,25 +31,32 @@ func splitArraySameAverage(nums []int) bool {
 	if n == 1 {
 		return false
 	}
+
 	total := 0
 	for _, num := range nums {
 		total += num
 	}
+
 	if total == 0 {
 		return true
 	}
+
 	possible := false
+
 	for size := 1; size < n; size++ {
 		if total*size%n == 0 {
 			possible = true
 			break
 		}
 	}
+
 	if !possible {
 		return false
 	}
+
 	dp := make([]int, total+1)
 	dp[0] = 1
+
 	for _, num := range nums {
 		for target := total; target >= 0; target-- {
 			if dp[target] != 0 {
@@ -57,6 +64,7 @@ func splitArraySameAverage(nums []int) bool {
 			}
 		}
 	}
+
 	for target := 1; target <= total; target++ {
 		if target*n%total == 0 {
 			shift := target * n / total
@@ -65,6 +73,7 @@ func splitArraySameAverage(nums []int) bool {
 			}
 		}
 	}
+
 	return false
 }
 

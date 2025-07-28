@@ -13,19 +13,24 @@ func arrayRankTransform(arr []int) []int {
 	sorted := make([]int, len(arr))
 	copy(sorted, arr)
 	sort.Ints(sorted)
+
 	ranks := make(map[int]int)
+
 	prev, rank := 0, 0
 	for _, num := range sorted {
 		if rank > 0 && num == prev {
 			continue
 		}
+
 		rank++
 		ranks[num] = rank
 		prev = num
 	}
+
 	for idx, num := range arr {
 		arr[idx] = ranks[num]
 	}
+
 	return arr
 }
 

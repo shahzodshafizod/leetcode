@@ -7,6 +7,7 @@ func subarraysWithKDistinct(nums []int, k int) int {
 		count := make(map[int]int)
 		result := 0
 		start := 0
+
 		for end := range nums {
 			count[nums[end]]++
 			for len(count) > k {
@@ -14,10 +15,13 @@ func subarraysWithKDistinct(nums []int, k int) int {
 				if count[nums[start]] == 0 {
 					delete(count, nums[start])
 				}
+
 				start++
 			}
+
 			result += end - start + 1
 		}
+
 		return result
 	}
 	// exactly(k) = atMost(k) - atMost(k-1)

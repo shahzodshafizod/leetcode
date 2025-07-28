@@ -34,10 +34,12 @@ func (f *FreqStack) Push(val int) {
 func (f *FreqStack) Pop() int {
 	val := f.buckets[f.maxCnt].Val
 	f.counts[val]--
+
 	f.buckets[f.maxCnt] = f.buckets[f.maxCnt].Next
 	if f.buckets[f.maxCnt] == nil {
 		f.maxCnt--
 	}
+
 	return val
 }
 

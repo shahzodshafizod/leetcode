@@ -9,21 +9,26 @@ func buildTree(preorder []int, inorder []int) *pkg.TreeNode {
 	for idx, val := range inorder {
 		indices[val] = idx
 	}
+
 	var buildTreeRecur func(left, right int) *pkg.TreeNode
+
 	idx := 0
 	buildTreeRecur = func(left, right int) *pkg.TreeNode {
 		if left > right {
 			return nil
 		}
+
 		val := preorder[idx]
 		idx++
 		mid := indices[val]
+
 		return &pkg.TreeNode{
 			Val:   val,
 			Left:  buildTreeRecur(left, mid-1),
 			Right: buildTreeRecur(mid+1, right),
 		}
 	}
+
 	return buildTreeRecur(0, len(inorder)-1)
 }
 

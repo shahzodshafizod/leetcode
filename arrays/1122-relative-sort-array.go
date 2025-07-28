@@ -14,19 +14,24 @@ func relativeSortArray(arr1 []int, arr2 []int) []int {
 	for _, num := range arr1 {
 		count[num]++
 	}
+
 	result := make([]int, 0, len(arr1))
+
 	for _, num := range arr2 {
 		for count[num] > 0 {
 			result = append(result, num)
 			count[num]--
 		}
 	}
+
 	for num, count := range count {
 		for count > 0 {
 			count--
+
 			result = append(result, num)
 		}
 	}
+
 	return result
 }
 

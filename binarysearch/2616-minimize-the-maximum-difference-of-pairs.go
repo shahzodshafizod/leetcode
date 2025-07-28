@@ -11,7 +11,9 @@ func minimizeMax(nums []int, p int) int {
 	sort.Ints(nums)
 	n := len(nums)
 	left, right := 0, nums[n-1]
+
 	var mid, cnt int
+
 	for left < right {
 		mid = left + (right-left)/2
 
@@ -29,5 +31,6 @@ func minimizeMax(nums []int, p int) int {
 			left = mid + 1
 		}
 	}
+
 	return left
 }

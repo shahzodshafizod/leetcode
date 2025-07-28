@@ -6,14 +6,17 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 
 func doubleIt(head *pkg.ListNode) *pkg.ListNode {
 	dummy := &pkg.ListNode{Val: 0, Next: head}
+
 	for node := dummy; node.Next != nil; node = node.Next {
 		node.Next.Val *= 2
 		node.Val += node.Next.Val / 10
 		node.Next.Val %= 10
 	}
+
 	if dummy.Val != 0 {
 		head = dummy
 	}
+
 	return head
 }
 

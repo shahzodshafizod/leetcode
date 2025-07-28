@@ -10,6 +10,7 @@ func leastInterval(tasks []byte, n int) int {
 
 	maximum := 0
 	maxCount := 0
+
 	for _, count := range counts { // O(26)
 		if count > maximum {
 			maximum = count

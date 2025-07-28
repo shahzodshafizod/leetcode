@@ -10,5 +10,6 @@ func middleNode(head *pkg.ListNode) *pkg.ListNode {
 		tortoise = tortoise.Next
 		hare = hare.Next.Next
 	}
+
 	return tortoise
 }

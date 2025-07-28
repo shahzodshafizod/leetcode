@@ -25,14 +25,17 @@ func TestMyCalendarThree(t *testing.T) {
 		},
 	} {
 		var calendar MyCalendarThree
+
 		for idx, command := range tc.commands {
 			var output any = nil
+
 			switch command {
 			case "MyCalendarThree":
 				calendar = NewMyCalendarThree()
 			case "book":
 				output = calendar.Book(tc.values[idx][0], tc.values[idx][1])
 			}
+
 			assert.Equal(t, tc.output[idx], output)
 		}
 	}

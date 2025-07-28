@@ -9,19 +9,23 @@ func minKBitFlips(nums []int, k int) int {
 	totalFlips := 0
 	flips := 0
 	n := len(nums)
+
 	for idx := range nums {
 		if nums[idx]&1 == flips&1 {
 			if idx+k > n {
 				return -1
 			}
+
 			nums[idx+k-1] |= 2
 			flips++
 			totalFlips++
 		}
+
 		flips -= nums[idx] >> 1
 		// nums[idx] &= 1 // restore the original bit
 		// nums[idx] = 1  // set the bit
 	}
+
 	return totalFlips
 }
 

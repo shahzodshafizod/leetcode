@@ -8,12 +8,15 @@ func countStudents(students []int, sandwiches []int) int {
 	for _, student := range students {
 		requirement[student]++
 	}
+
 	for _, sandwich := range sandwiches {
 		if requirement[sandwich] == 0 {
 			return requirement[0] + requirement[1]
 		}
+
 		requirement[sandwich]--
 	}
+
 	return 0
 }
 

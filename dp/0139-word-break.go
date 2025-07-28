@@ -6,16 +6,19 @@ func wordBreak(s string, wordDict []string) bool {
 	sn := len(s)
 	dp := make([]bool, sn+1)
 	dp[sn] = true
+
 	for idx := sn - 1; idx >= 0; idx-- {
 		for _, word := range wordDict {
 			if idx+len(word) <= sn && s[idx:idx+len(word)] == word {
 				dp[idx] = dp[idx+len(word)]
 			}
+
 			if dp[idx] {
 				break
 			}
 		}
 	}
+
 	return dp[0]
 }
 

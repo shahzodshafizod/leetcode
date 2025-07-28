@@ -21,9 +21,11 @@ could give us that duplicate
 func findDuplicate(nums []int) int {
 	// 1. find meeting point
 	tortoise, hare := 0, 0
+
 	for {
 		tortoise = nums[tortoise]
 		hare = nums[nums[hare]]
+
 		if tortoise == hare {
 			break
 		}
@@ -34,6 +36,7 @@ func findDuplicate(nums []int) int {
 		tortoise = nums[tortoise]
 		hare = nums[hare]
 	}
+
 	return tortoise
 }
 

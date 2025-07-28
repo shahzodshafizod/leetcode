@@ -12,23 +12,29 @@ func minDepth(root *pkg.TreeNode) int {
 	if root != nil {
 		queue = append(queue, root)
 	}
+
 	depth := 0
 	for size := len(queue); size > 0; size = len(queue) {
 		depth++
+
 		for idx := 0; idx < size; idx++ {
 			node := queue[idx]
 			if node.Left == nil && node.Right == nil {
 				return depth
 			}
+
 			if node.Left != nil {
 				queue = append(queue, node.Left)
 			}
+
 			if node.Right != nil {
 				queue = append(queue, node.Right)
 			}
 		}
+
 		queue = queue[size:]
 	}
+
 	return 0
 }
 

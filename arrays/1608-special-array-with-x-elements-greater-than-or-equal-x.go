@@ -7,9 +7,11 @@ package arrays
 func specialArray(nums []int) int {
 	n := len(nums)
 	freq := make([]int, n+1)
+
 	for _, num := range nums {
 		freq[min(n, num)]++
 	}
+
 	count := 0
 	for x := n; x >= 0; x-- {
 		count += freq[x]
@@ -17,6 +19,7 @@ func specialArray(nums []int) int {
 			return x
 		}
 	}
+
 	return -1
 }
 

@@ -7,11 +7,13 @@ func findLucky(arr []int) int {
 	for _, num := range arr {
 		counter[num]++
 	}
+
 	lucky := -1
 	for num, cnt := range counter {
 		if num == cnt && num > lucky {
 			lucky = num
 		}
 	}
+
 	return lucky
 }

@@ -25,21 +25,27 @@ Step 2: Write out some test cases
 
 func validPalindrome(s string) bool {
 	left2 := -1
+
 	var right2 int
+
 	skips := 0
 	for left1, right1 := 0, len(s)-1; left1 < right1 && skips < 2; left1, right1 = left1+1, right1-1 {
 		if s[left1] != s[right1] {
 			skips++
+
 			if left2 < 0 {
 				left2 = left1
 				right2 = right1 - 1
 			}
+
 			right1++
 		}
 	}
+
 	if skips < 2 {
 		return true
 	}
+
 	skips = 1
 	for ; left2 < right2 && skips < 2; left2, right2 = left2+1, right2-1 {
 		if s[left2] != s[right2] {
@@ -47,6 +53,7 @@ func validPalindrome(s string) bool {
 			left2--
 		}
 	}
+
 	return skips < 2
 }
 

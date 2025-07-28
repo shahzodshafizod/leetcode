@@ -9,11 +9,13 @@ func isPrefixOfWord(sentence string, searchWord string) int {
 	wordIndex := 0
 	idx, m := 0, len(searchWord)
 	block := false
+
 	for _, c := range sentence {
 		if c == ' ' {
 			wordIndex++
 			idx = 0
 			block = false
+
 			continue
 		} else if block {
 			continue
@@ -21,11 +23,13 @@ func isPrefixOfWord(sentence string, searchWord string) int {
 			block = true
 			continue
 		}
+
 		idx++
 		if idx == m {
 			return wordIndex + 1
 		}
 	}
+
 	return -1
 }
 

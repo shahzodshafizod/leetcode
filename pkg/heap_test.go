@@ -20,10 +20,12 @@ func TestMaxHeap(t *testing.T) {
 	} {
 		maxHeap := NewHeap(tc.array, func(x, y int) bool { return x < y })
 		heap.Init(maxHeap)
+
 		sorted := make([]int, 0, maxHeap.Len())
 		for maxHeap.Len() > 0 {
 			sorted = append(sorted, heap.Pop(maxHeap).(int))
 		}
+
 		assert.Equal(t, tc.sorted, sorted)
 	}
 }
@@ -43,10 +45,12 @@ func TestMinHeap(t *testing.T) {
 		for _, num := range tc.array {
 			heap.Push(minHeap, num)
 		}
+
 		sorted := make([]int, 0, minHeap.Len())
 		for minHeap.Len() > 0 {
 			sorted = append(sorted, heap.Pop(minHeap).(int))
 		}
+
 		assert.Equal(t, tc.sorted, sorted)
 	}
 }

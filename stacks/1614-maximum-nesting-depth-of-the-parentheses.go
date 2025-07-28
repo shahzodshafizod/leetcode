@@ -4,6 +4,7 @@ package stacks
 
 func maxDepth(s string) int {
 	depth, counter := 0, 0
+
 	for _, c := range s {
 		switch c {
 		case '(':
@@ -13,6 +14,7 @@ func maxDepth(s string) int {
 			counter--
 		}
 	}
+
 	return depth
 }
 

@@ -11,6 +11,7 @@ func minimumOneBitOperations(n int) int {
 		operations ^= n
 		n /= 2
 	}
+
 	return operations
 }
 

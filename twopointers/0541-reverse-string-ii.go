@@ -7,7 +7,9 @@ package twopointers
 // Space: O(n), for b := []byte(s)
 func reverseStr(s string, k int) string {
 	b, n := []byte(s), len(s)
+
 	var left, right int
+
 	for start := 0; start < n; start += 2 * k {
 		left, right = start, min(n-1, start+k-1)
 		for left < right {
@@ -16,5 +18,6 @@ func reverseStr(s string, k int) string {
 			right--
 		}
 	}
+
 	return string(b)
 }

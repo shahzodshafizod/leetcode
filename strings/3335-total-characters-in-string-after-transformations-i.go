@@ -8,7 +8,9 @@ func lengthAfterTransformations(s string, t int) int {
 	for _, c := range s {
 		dp[int(c-'a')]++
 	}
+
 	const MOD int = 1e9 + 7
+
 	z, a := 25, 0
 	for ; t > 0; t-- {
 		a = (z + 1) % 26
@@ -16,10 +18,12 @@ func lengthAfterTransformations(s string, t int) int {
 		// y becomes z, so z moves back circly
 		z = (z - 1 + 26) % 26
 	}
+
 	length := 0
 	for _, cnt := range dp {
 		length = (length + cnt) % MOD
 	}
+
 	return length
 }
 

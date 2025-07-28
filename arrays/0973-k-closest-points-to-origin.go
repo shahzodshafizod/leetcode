@@ -12,6 +12,7 @@ import (
 // Priority Queue
 func kClosest(points [][]int, k int) [][]int {
 	distance := func(x int, y int) float64 { return math.Sqrt(float64(x*x + y*y)) }
+
 	minHeap := pkg.NewHeap(
 		make([][]int, 0),
 		func(x, y []int) bool { return distance(x[0], x[1]) < distance(y[0], y[1]) },
@@ -19,12 +20,15 @@ func kClosest(points [][]int, k int) [][]int {
 	for _, point := range points {
 		heap.Push(minHeap, point)
 	}
+
 	closestPoints := make([][]int, 0, k)
+
 	for k > 0 {
 		k--
 		point := heap.Pop(minHeap).([]int)
 		closestPoints = append(closestPoints, []int{point[0], point[1]})
 	}
+
 	return closestPoints
 }
 

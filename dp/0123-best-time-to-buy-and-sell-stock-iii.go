@@ -83,12 +83,14 @@ package dp
 func maxProfitIII(prices []int) int {
 	buyFirst, sellFirst := 100000, 0
 	buySecond, sellSecond := 100000, 0
+
 	for _, price := range prices {
 		buyFirst = min(buyFirst, price)
 		sellFirst = max(sellFirst, price-buyFirst)
 		buySecond = min(buySecond, price-sellFirst)
 		sellSecond = max(sellSecond, price-buySecond)
 	}
+
 	return sellSecond
 }
 

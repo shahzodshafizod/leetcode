@@ -10,17 +10,21 @@ import "slices"
 // space: O(Len)
 func minIncrementForUnique(nums []int) int {
 	len := len(nums) + slices.Max(nums)
+
 	count := make([]int, len)
 	for _, num := range nums { // O(n)
 		count[num]++
 	}
+
 	moves := 0
+
 	for num := 0; num < len; num++ { // O(len)
 		if count[num] > 1 {
 			moves += count[num] - 1
 			count[num+1] += count[num] - 1
 		}
 	}
+
 	return moves
 }
 

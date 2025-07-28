@@ -8,17 +8,21 @@ package tries
 func lexicalOrder(n int) []int {
 	nums := make([]int, n)
 	num := 1
+
 	for idx := 0; idx < n; idx++ {
 		nums[idx] = num
+
 		if num*10 <= n {
 			num *= 10
 		} else {
 			for num == n || num%10 == 9 {
 				num /= 10
 			}
+
 			num++
 		}
 	}
+
 	return nums
 }
 

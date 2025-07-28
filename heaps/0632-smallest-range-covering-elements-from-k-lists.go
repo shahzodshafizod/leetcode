@@ -26,31 +26,42 @@ import (
 func smallestRange(nums [][]int) []int {
 	n := len(nums)
 	data := make([][2]int, n) // [row,col]
+
 	var end int = -1e5
+
 	for idx := range nums { // O(N)
 		data[idx] = [2]int{idx, 0}
 		end = max(end, nums[idx][0])
 	}
+
 	minHeap := pkg.NewHeap(data, func(x, y [2]int) bool {
 		return nums[x[0]][x[1]] < nums[y[0]][y[1]]
 	})
 	heap.Init(minHeap)
+
 	var start int
+
 	var interval []int
+
 	length := 2 * int(1e5)
+
 	for { // O(min(len(nums[i])))
 		start = nums[data[0][0]][data[0][1]]
 		if end-start < length {
 			length = end - start
 			interval = []int{start, end}
 		}
+
 		data[0][1]++
 		if data[0][1] == len(nums[data[0][0]]) {
 			break
 		}
+
 		end = max(end, nums[data[0][0]][data[0][1]])
+
 		heap.Fix(minHeap, 0) // O(LogN)
 	}
+
 	return interval
 }
 

@@ -39,11 +39,13 @@ func (q *MyQueue) Pop() int {
 	if q.out == nil {
 		q.move()
 	}
+
 	var result int
 	if q.out != nil {
 		result = q.out.data
 		q.out = q.out.next
 	}
+
 	return result
 }
 
@@ -61,10 +63,12 @@ func (q *MyQueue) Peek() int {
 	if q.out == nil {
 		q.move()
 	}
+
 	var result int
 	if q.out != nil {
 		result = q.out.data
 	}
+
 	return result
 }
 

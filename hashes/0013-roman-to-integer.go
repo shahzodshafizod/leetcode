@@ -13,7 +13,9 @@ func romanToInt(s string) int {
 		'M': 1000,
 	}
 	num := 0
+
 	var next byte = 'I'
+
 	var curr byte
 	for idx := len(s) - 1; idx >= 0; idx-- {
 		curr = s[idx]
@@ -22,7 +24,9 @@ func romanToInt(s string) int {
 		} else {
 			num += table[curr]
 		}
+
 		next = curr
 	}
+
 	return num
 }

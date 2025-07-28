@@ -7,8 +7,10 @@ func partitionLabels(s string) []int {
 	for idx, c := range s {
 		last[c] = idx
 	}
+
 	start, end := -1, -1
 	sizes := make([]int, 0)
+
 	for idx, c := range s {
 		end = max(end, last[c])
 		if idx == end {
@@ -16,5 +18,6 @@ func partitionLabels(s string) []int {
 			start = idx
 		}
 	}
+
 	return sizes
 }

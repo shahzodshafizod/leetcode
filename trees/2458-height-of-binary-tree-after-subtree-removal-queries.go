@@ -12,11 +12,14 @@ import (
 func treeQueries(root *pkg.TreeNode, queries []int) []int {
 	height := make(map[int]int)
 	maxHeight := 0
+
 	var dfs func(node *pkg.TreeNode, level int)
+
 	dfs = func(node *pkg.TreeNode, level int) {
 		if node == nil {
 			return
 		}
+
 		height[node.Val] = max(height[node.Val], maxHeight)
 		maxHeight = max(maxHeight, level)
 		dfs(node.Left, level+1)
@@ -24,12 +27,16 @@ func treeQueries(root *pkg.TreeNode, queries []int) []int {
 		node.Left, node.Right = node.Right, node.Left
 	}
 	dfs(root, 0)
+
 	maxHeight = 0
+
 	dfs(root, 0)
+
 	answer := make([]int, 0, len(queries))
 	for _, query := range queries {
 		answer = append(answer, height[query])
 	}
+
 	return answer
 }
 

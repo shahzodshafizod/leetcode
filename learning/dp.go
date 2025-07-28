@@ -133,16 +133,21 @@ func NewMemoization() DP { return &memoization{} }
 // space: O(n)
 func (m *memoization) Fib(n int) int {
 	var dp func(n int, memo []int) int
+
 	dp = func(n int, memo []int) int {
 		if n <= 2 {
 			return 1
 		}
+
 		if memo[n-1] != 0 {
 			return memo[n-1]
 		}
+
 		memo[n-1] = dp(n-1, memo) + dp(n-2, memo)
+
 		return memo[n-1]
 	}
+
 	return dp(n, make([]int, n))
 }
 
@@ -150,23 +155,30 @@ func (m *memoization) Fib(n int) int {
 // space: O(m*n)
 func (mm *memoization) GridTravaler(m int, n int) int {
 	var dp func(m int, n int, memo [][]int) int
+
 	dp = func(m int, n int, memo [][]int) int {
 		if m == 0 || n == 0 {
 			return 0
 		}
+
 		if m == 1 && n == 1 {
 			return 1
 		}
+
 		if memo[m-1][n-1] != 0 {
 			return memo[m-1][n-1]
 		}
+
 		memo[m-1][n-1] = dp(m-1, n, memo) + dp(m, n-1, memo)
+
 		return memo[m-1][n-1]
 	}
+
 	memo := make([][]int, m)
 	for i := 0; i < m; i++ {
 		memo[i] = make([]int, n)
 	}
+
 	return dp(m, n, memo)
 }
 
@@ -176,15 +188,18 @@ func (mm *memoization) GridTravaler(m int, n int) int {
 // space: O(m)
 func (m *memoization) CanSum(targetSum int, numbers []int) bool {
 	var dp func(targetSum int, idx int, memo []*bool) bool
+
 	dp = func(targetSum int, idx int, memo []*bool) bool {
 		if idx < 0 || targetSum <= 0 {
 			return targetSum == 0
 		}
+
 		if memo[targetSum] != nil {
 			return *memo[targetSum]
 		}
 		// decision to include
 		targetSum -= numbers[idx]
+
 		can := dp(targetSum, idx, memo)
 		if can {
 			memo[targetSum] = &can
@@ -194,8 +209,10 @@ func (m *memoization) CanSum(targetSum int, numbers []int) bool {
 		targetSum += numbers[idx]
 		can = dp(targetSum, idx-1, memo)
 		memo[targetSum] = &can
+
 		return can
 	}
+
 	return dp(targetSum, len(numbers)-1, make([]*bool, targetSum+1))
 }
 
@@ -205,30 +222,37 @@ func (m *memoization) CanSum(targetSum int, numbers []int) bool {
 // space: O(m^2)
 func (m *memoization) HowSum(targetSum int, numbers []int) []int {
 	var dp func(targetSum int, idx int, memo []*[]int) []int
+
 	dp = func(targetSum int, idx int, memo []*[]int) []int {
 		if idx < 0 || targetSum < 0 {
 			return nil
 		}
+
 		if targetSum == 0 {
 			return []int{}
 		}
+
 		if memo[targetSum] != nil {
 			return *memo[targetSum]
 		}
 		// decision to include
 		targetSum -= numbers[idx]
+
 		combination := dp(targetSum, idx, memo)
 		if combination != nil {
 			combination = append(combination, numbers[idx])
 			memo[targetSum] = &combination
+
 			return combination
 		}
 		// decision NOT to include
 		targetSum += numbers[idx]
 		combination = dp(targetSum, idx-1, memo)
 		memo[targetSum] = &combination
+
 		return combination
 	}
+
 	return dp(targetSum, len(numbers)-1, make([]*[]int, targetSum+1))
 }
 
@@ -238,19 +262,25 @@ func (m *memoization) HowSum(targetSum int, numbers []int) []int {
 // space: O(m^2)
 func (m *memoization) BestSum(targetSum int, numbers []int) []int {
 	var dp func(targetSum int, memo []*[]int) []int
+
 	dp = func(targetSum int, memo []*[]int) []int {
 		if targetSum < 0 {
 			return nil
 		}
+
 		if targetSum == 0 {
 			return []int{}
 		}
+
 		if memo[targetSum] != nil {
 			return *memo[targetSum]
 		}
+
 		var shortest []int = nil
+
 		for _, number := range numbers {
 			remainder := targetSum - number
+
 			combination := dp(remainder, memo)
 			if combination != nil {
 				combination = append(combination, number)
@@ -259,9 +289,12 @@ func (m *memoization) BestSum(targetSum int, numbers []int) []int {
 				}
 			}
 		}
+
 		memo[targetSum] = &shortest
+
 		return shortest
 	}
+
 	return dp(targetSum, make([]*[]int, targetSum+1))
 	// // BACKTRACKING
 	// var shortest []int = nil
@@ -296,21 +329,27 @@ func (m *memoization) BestSum(targetSum int, numbers []int) []int {
 func (m *memoization) CanConstruct(target string, wordBank []string) bool {
 	// backtracking is not suitable, bc it never uses first word with the last word combined
 	var dp func(target string, memo map[string]bool) bool
+
 	dp = func(target string, memo map[string]bool) bool {
 		if target == "" {
 			return true
 		}
+
 		if can, exists := memo[target]; exists {
 			return can
 		}
+
 		for _, word := range wordBank {
 			if strings.Index(target, word) == 0 && dp(target[len(word):], memo) {
 				return true
 			}
 		}
+
 		memo[target] = false
+
 		return false
 	}
+
 	return dp(target, make(map[string]bool))
 }
 
@@ -320,14 +359,18 @@ func (m *memoization) CanConstruct(target string, wordBank []string) bool {
 // space: O(m^2) - saving every combination
 func (m *memoization) CountConstruct(target string, wordBank []string) int {
 	var dp func(target string, memo map[string]int) int
+
 	dp = func(target string, memo map[string]int) int {
 		if target == "" {
 			return 1
 		}
+
 		if count, exists := memo[target]; exists {
 			return count
 		}
+
 		count := 0
+
 		for _, word := range wordBank {
 			if strings.Index(target, word) == 0 {
 				restOfTarget := target[len(word):]
@@ -336,9 +379,12 @@ func (m *memoization) CountConstruct(target string, wordBank []string) int {
 				count += ways
 			}
 		}
+
 		memo[target] = count
+
 		return count
 	}
+
 	return dp(target, make(map[string]int))
 }
 
@@ -348,27 +394,36 @@ func (m *memoization) CountConstruct(target string, wordBank []string) int {
 // space: O(m) - ?????
 func (m *memoization) AllConstruct(target string, wordBank []string) [][]string {
 	var dp func(target string, memo map[string][][]string) [][]string
+
 	dp = func(target string, memo map[string][][]string) [][]string {
 		if target == "" {
 			return [][]string{{}}
 		}
+
 		if ways, exists := memo[target]; exists {
 			return ways
 		}
+
 		allWays := make([][]string, 0)
+
 		for _, word := range wordBank {
 			if strings.Index(target, word) == 0 {
 				restOfTarget := target[len(word):]
+
 				ways := dp(restOfTarget, memo)
 				for i := range ways {
 					ways[i] = append([]string{word}, ways[i]...)
 				}
+
 				allWays = append(allWays, ways...)
 			}
 		}
+
 		memo[target] = append([][]string{}, allWays...)
+
 		return allWays
 	}
+
 	return dp(target, make(map[string][][]string))
 }
 
@@ -399,9 +454,11 @@ func (t *tabulation) Fib(n int) int {
 	// return dp[n]
 	prev := 0
 	curr := 1
+
 	for i := 2; i <= n; i++ {
 		prev, curr = curr, prev+curr
 	}
+
 	return curr
 }
 
@@ -414,11 +471,13 @@ func (t *tabulation) GridTravaler(m int, n int) int {
 	// [1][3][6]
 	array := make([]int, m)
 	array[0] = 1
+
 	for col := 0; col < n; col++ {
 		for row := 1; row < m; row++ {
 			array[row] += array[row-1]
 		}
 	}
+
 	return array[m-1]
 	// // space: O(m*n)
 	// var grid = make([][]int, m)
@@ -451,11 +510,14 @@ func (t *tabulation) CanSum(targetSum int, numbers []int) bool {
 	dp := make([]bool, targetSum+1)
 	dp[0] = true
 	exit := false
+
 	for i := 0; i <= targetSum && !exit; i++ {
 		if !dp[i] {
 			continue
 		}
+
 		exit = true
+
 		for _, number := range numbers {
 			if number+i <= targetSum {
 				exit = false
@@ -463,6 +525,7 @@ func (t *tabulation) CanSum(targetSum int, numbers []int) bool {
 			}
 		}
 	}
+
 	return dp[targetSum]
 }
 
@@ -474,18 +537,23 @@ func (t *tabulation) HowSum(targetSum int, numbers []int) []int {
 	dp := make([][]int, targetSum+1)
 	dp[0] = []int{}
 	exit := false
+
 	for i := 0; i <= targetSum && !exit; i++ {
 		if dp[i] == nil {
 			continue
 		}
+
 		exit = true
+
 		for _, number := range numbers {
 			if number+i <= targetSum && dp[number+i] == nil {
 				exit = false
+
 				dp[number+i] = append(dp[i], number)
 			}
 		}
 	}
+
 	return dp[targetSum]
 }
 
@@ -497,20 +565,25 @@ func (t *tabulation) BestSum(targetSum int, numbers []int) []int {
 	dp := make([][]int, targetSum+1)
 	dp[0] = []int{}
 	exit := false
+
 	for i := 0; i <= targetSum && !exit; i++ {
 		if dp[i] == nil {
 			continue
 		}
+
 		exit = true
+
 		for _, number := range numbers {
 			if number+i <= targetSum {
 				exit = false
+
 				if dp[number+i] == nil || len(dp[i])+1 < len(dp[number+i]) {
 					dp[number+i] = append([]int{number}, dp[i]...)
 				}
 			}
 		}
 	}
+
 	return dp[targetSum]
 }
 
@@ -523,23 +596,29 @@ func (t *tabulation) CanConstruct(target string, wordBank []string) bool {
 	dp := make([]bool, n+1)
 	dp[0] = true
 	exit := false
+
 	var length int
+
 	for i := 0; i < n && !exit; i++ {
 		if !dp[i] {
 			continue
 		}
+
 		exit = true
 		currTarget := target[i:]
+
 		for _, word := range wordBank {
 			length = len(word)
 			if i+length <= n {
 				exit = false
+
 				if strings.Index(currTarget, word) == 0 {
 					dp[i+length] = true
 				}
 			}
 		}
 	}
+
 	return dp[n]
 }
 
@@ -551,24 +630,30 @@ func (t *tabulation) CountConstruct(target string, wordBank []string) int {
 	n := len(target)
 	dp := make([]int, n+1)
 	dp[0] = 1
+
 	var length int
+
 	exit := false
 	for i := 0; i < n && !exit; i++ {
 		if dp[i] == 0 {
 			continue
 		}
+
 		exit = true
 		currTarget := target[i:]
+
 		for _, word := range wordBank {
 			length = len(word)
 			if i+length <= n {
 				exit = false
+
 				if strings.Index(currTarget, word) == 0 {
 					dp[i+length] += dp[i]
 				}
 			}
 		}
 	}
+
 	return dp[n]
 }
 
@@ -580,22 +665,29 @@ func (t *tabulation) CountConstruct(target string, wordBank []string) int {
 func (t *tabulation) AllConstruct(target string, wordBank []string) [][]string {
 	n := len(target)
 	dp := make([][][]string, n+1)
+
 	for i := 1; i <= n; i++ {
 		dp[i] = [][]string{}
 	}
+
 	dp[0] = [][]string{{}}
 	exit := false
+
 	var length int
+
 	for i := 0; i < n && !exit; i++ {
 		if len(dp[i]) == 0 {
 			continue
 		}
+
 		exit = true
 		currTarget := target[i:]
+
 		for _, word := range wordBank {
 			length = len(word)
 			if i+length <= n {
 				exit = false
+
 				if strings.Index(currTarget, word) == 0 {
 					var combination [][]string
 					for j, len := 0, len(dp[i]); j < len; j++ {
@@ -604,10 +696,12 @@ func (t *tabulation) AllConstruct(target string, wordBank []string) [][]string {
 							append(append([]string{}, dp[i][j]...), word),
 						)
 					}
+
 					dp[i+length] = append(dp[i+length], combination...)
 				}
 			}
 		}
 	}
+
 	return dp[n]
 }

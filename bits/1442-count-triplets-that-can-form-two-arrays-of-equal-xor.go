@@ -14,7 +14,9 @@ a ^ 0 = a
 func countTriplets(arr []int) int {
 	count := 0
 	n := len(arr)
+
 	var xor int
+
 	for start := 0; start < n; start++ {
 		xor = arr[start]
 		for end := start + 1; end < n; end++ {
@@ -24,6 +26,7 @@ func countTriplets(arr []int) int {
 			}
 		}
 	}
+
 	return count
 }
 

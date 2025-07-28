@@ -13,21 +13,27 @@ func maxDistance(position []int, m int) int {
 	n := len(position)
 	max := position[n-1]
 	low, high := 1, max/(m-1)
+
 	var force, balls, prevPosition, curr int
+
 	distance := 0
+
 	for low <= high { // O(Log Max)
 		force = (low + high) / 2
 		balls = 1
+
 		prevPosition = position[0]
 		for curr = 1; curr < n; curr++ { // O(N)
 			if position[curr]-prevPosition >= force {
 				balls++
 				prevPosition = position[curr]
 			}
+
 			if balls == m {
 				break
 			}
 		}
+
 		if balls == m {
 			distance = force
 			low = force + 1
@@ -35,5 +41,6 @@ func maxDistance(position []int, m int) int {
 			high = force - 1
 		}
 	}
+
 	return distance
 }

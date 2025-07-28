@@ -9,24 +9,31 @@ func numRescueBoats(people []int, limit int) int {
 	for _, weight := range people {
 		count[weight]++
 	}
+
 	light, heavy := 1, limit
 	boats := 0
+
 	for {
 		for light <= heavy && count[light] <= 0 {
 			light++
 		}
+
 		for light <= heavy && count[heavy] <= 0 {
 			heavy--
 		}
+
 		if light > heavy {
 			break
 		}
+
 		if light+heavy <= limit {
 			count[light]--
 		}
+
 		count[heavy]--
 		boats++
 	}
+
 	return boats
 }
 

@@ -17,6 +17,7 @@ func NewMyLinkedList() MyLinkedList {
 	}
 	ll.head.Next = ll.tail
 	ll.tail.Prev = ll.head
+
 	return ll
 }
 
@@ -24,6 +25,7 @@ func (m *MyLinkedList) Get(index int) int {
 	if node := m.getNodeAtIndex(index); node != nil {
 		return node.Val
 	}
+
 	return -1
 }
 
@@ -46,10 +48,12 @@ func (m *MyLinkedList) AddAtIndex(index int, val int) {
 		m.AddAtTail(val)
 		return
 	}
+
 	next := m.getNodeAtIndex(index)
 	if next == nil {
 		return
 	}
+
 	node := &pkg.DListNode{Val: val, Prev: next.Prev, Next: next}
 	node.Prev.Next = node
 	node.Next.Prev = node
@@ -60,17 +64,21 @@ func (m *MyLinkedList) getNodeAtIndex(index int) *pkg.DListNode {
 	if index < 0 || index >= m.size {
 		return nil
 	}
+
 	if index > m.size/2 {
 		node := m.tail.Prev
 		for i := m.size - 1; i > index; i-- {
 			node = node.Prev
 		}
+
 		return node
 	}
+
 	node := m.head.Next
 	for i := 0; i < index; i++ {
 		node = node.Next
 	}
+
 	return node
 }
 
@@ -79,6 +87,7 @@ func (m *MyLinkedList) DeleteAtIndex(index int) {
 	if node == nil {
 		return
 	}
+
 	node.Prev.Next = node.Next
 	node.Next.Prev = node.Prev
 	m.size--

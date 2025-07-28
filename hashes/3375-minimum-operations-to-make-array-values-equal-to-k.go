@@ -7,6 +7,7 @@ package hashes
 // Space: O(n)
 func minOperations(nums []int, k int) int {
 	visited := make(map[int]struct{})
+
 	for _, num := range nums {
 		if num < k {
 			return -1
@@ -14,5 +15,6 @@ func minOperations(nums []int, k int) int {
 			visited[num] = struct{}{}
 		}
 	}
+
 	return len(visited)
 }

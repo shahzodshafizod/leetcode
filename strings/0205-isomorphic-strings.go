@@ -16,5 +16,6 @@ func isIsomorphic(s string, t string) bool {
 		stable[s[idx]] = uint16(idx + 1)
 		ttable[t[idx]] = uint16(idx + 1)
 	}
+
 	return true
 }

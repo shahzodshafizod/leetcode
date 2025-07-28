@@ -11,22 +11,29 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 // Space: O(Log N)
 func countPairs(root *pkg.TreeNode, distance int) int {
 	pairs := 0
+
 	var dfs func(node *pkg.TreeNode, level int) []int
+
 	dfs = func(node *pkg.TreeNode, level int) []int {
 		if node == nil {
 			return nil
 		}
+
 		if node.Left == nil && node.Right == nil {
 			return []int{level}
 		}
+
 		leftLeaves := dfs(node.Left, level+1)
 		rightLeaves := dfs(node.Right, level+1)
 		leaves := make([]int, 0)
+
 		for _, l := range leftLeaves {
 			if l-level < distance {
 				leaves = append(leaves, l)
 			}
+
 			l -= level
+
 			for _, r := range rightLeaves {
 				r -= level
 				if l+r <= distance {
@@ -34,14 +41,17 @@ func countPairs(root *pkg.TreeNode, distance int) int {
 				}
 			}
 		}
+
 		for _, r := range rightLeaves {
 			if r-level < distance {
 				leaves = append(leaves, r)
 			}
 		}
+
 		return leaves
 	}
 	dfs(root, 0)
+
 	return pairs
 }
 

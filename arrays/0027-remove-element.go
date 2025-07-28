@@ -4,12 +4,14 @@ package arrays
 
 func removeElement(nums []int, val int) int {
 	index := -1
+
 	for _, num := range nums {
 		if num != val {
 			index++
 			nums[index] = num
 		}
 	}
+
 	return index + 1
 }
 

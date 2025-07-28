@@ -12,18 +12,24 @@ import (
 // Space: O(n)
 func minCost(nums []int, cost []int) int64 {
 	n := len(nums)
+
 	indices := make([]int, n)
 	for idx := range indices {
 		indices[idx] = idx
 	}
+
 	sort.Slice(indices, func(i, j int) bool { return nums[indices[i]] < nums[indices[j]] })
+
 	var postMult, postCost int64 = 0, 0
 	for idx := 0; idx < n; idx++ {
 		postMult += int64(nums[idx] * cost[idx])
 		postCost += int64(cost[idx])
 	}
+
 	var preMult, preCost int64 = 0, 0
+
 	var minTotal int64 = math.MaxInt64
+
 	for _, idx := range indices {
 		preMult += int64(nums[idx] * cost[idx])
 		postMult -= int64(nums[idx] * cost[idx])
@@ -33,6 +39,7 @@ func minCost(nums []int, cost []int) int64 {
 		total += postMult - int64(nums[idx])*postCost
 		minTotal = min(minTotal, total)
 	}
+
 	return minTotal
 }
 

@@ -8,6 +8,7 @@ func maxTotalFruits(fruits [][]int, startPos int, k int) int {
 	for left < n && fruits[left][0] < startPos-k {
 		left++
 	}
+
 	total, maxTotal := 0, 0
 	for right := left; right < n && fruits[right][0] <= startPos+k; right++ {
 		total += fruits[right][1]
@@ -15,8 +16,10 @@ func maxTotalFruits(fruits [][]int, startPos int, k int) int {
 			total -= fruits[left][1]
 			left++
 		}
+
 		maxTotal = max(maxTotal, total)
 	}
+
 	return maxTotal
 }
 

@@ -11,6 +11,7 @@ func isPalindrome(head *pkg.ListNode) bool {
 	tortoise, hare := head, head
 	// 1. find middle (prev,next) and reverse the first half
 	var prev, next *pkg.ListNode
+
 	for hare != nil && hare.Next != nil {
 		hare = hare.Next.Next
 		next = tortoise.Next
@@ -18,6 +19,7 @@ func isPalindrome(head *pkg.ListNode) bool {
 		prev = tortoise
 		tortoise = next
 	}
+
 	if hare != nil && next != nil {
 		next = next.Next
 	}
@@ -26,9 +28,11 @@ func isPalindrome(head *pkg.ListNode) bool {
 		if prev.Val != next.Val {
 			return false
 		}
+
 		prev = prev.Next
 		next = next.Next
 	}
+
 	return true
 }
 

@@ -14,9 +14,11 @@ func matrixScore(grid [][]int) int {
 	m, n := len(grid), len(grid[0])
 	// 1. all bits in the first column should be set
 	score := m * (1 << (n - 1))
+
 	var count int
 	for col := 1; col < n; col++ {
 		count = 0
+
 		for row := 0; row < m; row++ {
 			/*
 				For counting 0's, the first and the current should be different:
@@ -31,8 +33,10 @@ func matrixScore(grid [][]int) int {
 				count++
 			}
 		}
+
 		score += max(count, m-count) * (1 << (n - 1 - col))
 	}
+
 	return score
 }
 

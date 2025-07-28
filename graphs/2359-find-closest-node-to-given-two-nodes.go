@@ -7,34 +7,44 @@ package graphs
 // Space: O(n)
 func closestMeetingNode(edges []int, node1 int, node2 int) int {
 	type Node struct{ node, mask int }
+
 	n := len(edges)
 	seen := make([]int, n+1)
+
 	n1, n2 := &Node{node1, 1}, &Node{node2, 2}
 	for n1.node != -1 || n2.node != -1 {
 		if n1.node > n2.node {
 			n1, n2 = n2, n1
 		}
+
 		if seen[n1.node+1]&n1.mask == n1.mask {
 			n1.node = -1
 		}
+
 		if seen[n2.node+1]&n2.mask == n2.mask {
 			n2.node = -1
 		}
+
 		seen[n1.node+1] |= n1.mask
 		seen[n2.node+1] |= n2.mask
+
 		if seen[n1.node+1] == 3 {
 			return n1.node
 		}
+
 		if seen[n2.node+1] == 3 {
 			return n2.node
 		}
+
 		if n1.node != -1 {
 			n1.node = edges[n1.node]
 		}
+
 		if n2.node != -1 {
 			n2.node = edges[n2.node]
 		}
 	}
+
 	return -1
 }
 

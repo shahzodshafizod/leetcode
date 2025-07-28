@@ -11,24 +11,30 @@ func numSubmatrixSumTarget(matrix [][]int, target int) int {
 	// https://leetcode.com/problems/subarray-sum-equals-k/
 	subarraySum := func(nums []int, k int) int {
 		counter := map[int]int{0: 1}
+
 		count, presum := 0, 0
 		for idx := 0; idx < m; idx++ {
 			presum += nums[idx]
 			count += counter[presum-k]
 			counter[presum]++
 		}
+
 		return count
 	}
 	count := 0
+
 	for start := 0; start < n; start++ {
 		presum := make([]int, m)
+
 		for end := start; end < n; end++ {
 			for row := 0; row < m; row++ {
 				presum[row] += matrix[row][end]
 			}
+
 			count += subarraySum(presum, target)
 		}
 	}
+
 	return count
 }
 

@@ -5,20 +5,24 @@ package stacks
 func longestValidParentheses(s string) int {
 	length := func(open byte, from int, to int, factor int) int {
 		length, opens, closes := 0, 0, 0
+
 		for idx := from; idx != to; idx += factor {
 			if s[idx] == open {
 				opens++
 			} else {
 				closes++
 			}
+
 			if closes > opens {
 				opens, closes = 0, 0
 			} else if opens == closes {
 				length = max(length, opens+closes)
 			}
 		}
+
 		return length
 	}
+
 	return max(length('(', 0, len(s), 1), length(')', len(s)-1, -1, -1))
 }
 

@@ -12,6 +12,7 @@ type ListNode struct {
 
 func MakeLinkedList(vals ...int) *ListNode {
 	var head, tail *ListNode = nil, nil
+
 	for _, val := range vals {
 		newNode := &ListNode{Val: val, Next: nil}
 		if head == nil {
@@ -21,6 +22,7 @@ func MakeLinkedList(vals ...int) *ListNode {
 			tail = newNode
 		}
 	}
+
 	return head
 }
 
@@ -30,20 +32,25 @@ func GetNode(head *ListNode, position int) *ListNode {
 		if position == 0 {
 			return node
 		}
+
 		node = node.Next
 		position--
 	}
+
 	return nil
 }
 
 func MakeCycleLinkedList(position int, vals ...int) *ListNode {
 	var head, tail *ListNode = nil, nil
+
 	var cyclePoint *ListNode = nil
+
 	for index, val := range vals {
 		newNode := &ListNode{Val: val, Next: nil}
 		if index == position {
 			cyclePoint = newNode
 		}
+
 		if head == nil {
 			head, tail = newNode, newNode
 		} else {
@@ -51,9 +58,11 @@ func MakeCycleLinkedList(position int, vals ...int) *ListNode {
 			tail = newNode
 		}
 	}
+
 	if tail != nil {
 		tail.Next = cyclePoint
 	}
+
 	return head
 }
 
@@ -67,13 +76,16 @@ type NAryListNode struct {
 
 func MakeNAryLinkedList(vals ...any) *NAryListNode {
 	var root, current *NAryListNode
+
 	for _, val := range vals {
 		if kind := reflect.TypeOf(val).Kind(); kind != reflect.Int {
 			if kind == reflect.Slice && current != nil {
 				current.Child = MakeNAryLinkedList(val.([]any)...)
 			}
+
 			continue
 		}
+
 		newNode := &NAryListNode{Val: val.(int)}
 		if root == nil {
 			root, current = newNode, newNode
@@ -83,5 +95,6 @@ func MakeNAryLinkedList(vals ...any) *NAryListNode {
 			current = newNode
 		}
 	}
+
 	return root
 }

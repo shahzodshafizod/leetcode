@@ -7,7 +7,9 @@ func maximumLength3202(nums []int, k int) int {
 	for idx := range dp {
 		dp[idx] = make([]int, k)
 	}
+
 	length := 0
+
 	for _, curr := range nums {
 		curr %= k
 		for prev := 0; prev < k; prev++ {
@@ -15,5 +17,6 @@ func maximumLength3202(nums []int, k int) int {
 			length = max(length, dp[curr][prev])
 		}
 	}
+
 	return length
 }

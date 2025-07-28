@@ -9,10 +9,13 @@ func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 	total := len1 + len2
 	half := total / 2
 	idx, idx1, idx2 := 0, 0, 0
+
 	var median, prev int
+
 	for idx <= half && (idx1 < len1 || idx2 < len2) {
 		idx++
 		prev = median
+
 		switch {
 		case idx1 == len1:
 			median = nums2[idx2]
@@ -28,9 +31,11 @@ func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 			idx2++
 		}
 	}
+
 	if total&1 == 0 {
 		return float64(prev+median) / 2
 	}
+
 	return float64(median)
 }
 

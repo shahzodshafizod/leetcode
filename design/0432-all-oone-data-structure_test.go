@@ -30,8 +30,10 @@ func TestAllOne(t *testing.T) {
 		},
 	} {
 		var allOne AllOne
+
 		for index, command := range tc.commands {
 			var output any = nil
+
 			switch command {
 			case "AllOne":
 				allOne = NewAllOne()
@@ -44,6 +46,7 @@ func TestAllOne(t *testing.T) {
 			case "getMinKey":
 				output = allOne.GetMinKey()
 			}
+
 			assert.Equal(t, tc.output[index], output)
 		}
 	}

@@ -20,15 +20,19 @@ func numTeams(rating []int) int {
 		for ; idx > 0; idx -= idx & -idx {
 			count += bit[idx]
 		}
+
 		return count
 	}
 	maxRating := slices.Max(rating)
 	leftBIT := make([]int, maxRating+1)
+
 	rightBIT := make([]int, maxRating+1)
 	for _, rating := range rating {
 		update(rightBIT, rating, 1)
 	}
+
 	teams := 0
+
 	for _, rating := range rating {
 		update(rightBIT, rating, -1)
 		lSmallers := count(leftBIT, rating-1)
@@ -37,8 +41,10 @@ func numTeams(rating []int) int {
 		rGreaters := count(rightBIT, maxRating) - count(rightBIT, rating)
 		teams += lSmallers * rGreaters
 		teams += lGreaters * rSmallers
+
 		update(leftBIT, rating, 1)
 	}
+
 	return teams
 }
 

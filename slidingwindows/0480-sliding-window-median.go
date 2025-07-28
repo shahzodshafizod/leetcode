@@ -14,23 +14,29 @@ import (
 func medianSlidingWindow(nums []int, k int) []float64 {
 	maxHeap := pkg.NewHeap(make([]int, 0), func(x, y int) bool { return x > y })
 	minHeap := pkg.NewHeap(make([]int, 0), func(x, y int) bool { return x < y })
+
 	for idx := 0; idx < k; idx++ {
 		heap.Push(maxHeap, nums[idx])
 		heap.Push(minHeap, heap.Pop(maxHeap))
+
 		if minHeap.Len() > maxHeap.Len() {
 			heap.Push(maxHeap, heap.Pop(minHeap))
 		}
 	}
+
 	n := len(nums)
 	medians := make([]float64, n-k+1)
+
 	var median float64
 	if k&1 == 1 {
 		median = float64(maxHeap.Peak())
 	} else {
 		median = float64(maxHeap.Peak()+minHeap.Peak()) / 2
 	}
+
 	medians[0] = median
 	outbounds := make(map[int]int)
+
 	var outbound, balance int
 	for idx := k; idx < n; idx++ {
 		outbound = nums[idx-k]
@@ -44,9 +50,11 @@ func medianSlidingWindow(nums []int, k int) []float64 {
 
 		if float64(nums[idx]) <= median {
 			balance++
+
 			heap.Push(maxHeap, nums[idx])
 		} else {
 			balance--
+
 			heap.Push(minHeap, nums[idx])
 		}
 
@@ -59,6 +67,7 @@ func medianSlidingWindow(nums []int, k int) []float64 {
 		for maxHeap.Len() > 0 && outbounds[maxHeap.Peak()] > 0 {
 			outbounds[heap.Pop(maxHeap).(int)]--
 		}
+
 		for minHeap.Len() > 0 && outbounds[minHeap.Peak()] > 0 {
 			outbounds[heap.Pop(minHeap).(int)]--
 		}
@@ -68,8 +77,10 @@ func medianSlidingWindow(nums []int, k int) []float64 {
 		} else {
 			median = float64(maxHeap.Peak()+minHeap.Peak()) / 2
 		}
+
 		medians[idx-k+1] = median
 	}
+
 	return medians
 }
 

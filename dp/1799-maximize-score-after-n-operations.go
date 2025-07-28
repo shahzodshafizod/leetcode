@@ -11,29 +11,35 @@ import (
 // Space: O(2^n)
 func maxScore(nums []int) int {
 	var gcd func(a int, b int) int
+
 	gcd = func(a int, b int) int {
 		if b == 0 {
 			return a
 		}
+
 		return gcd(b, a%b)
 	}
 	n := len(nums)
 	limit := 1 << n
 	dp := make([]int, limit)
+
 	var count, newMask int
 	for mask := 0; mask < limit; mask++ {
 		count = bits.OnesCount(uint(mask))
 		if count&1 == 1 {
 			continue
 		}
+
 		for i := 0; i < n; i++ {
 			if mask&(1<<i) == 0 {
 				continue
 			}
+
 			for j := i + 1; j < n; j++ {
 				if mask&(1<<j) == 0 {
 					continue
 				}
+
 				newMask = mask ^ (1 << i) ^ (1 << j)
 				dp[mask] = max(
 					dp[mask],
@@ -42,6 +48,7 @@ func maxScore(nums []int) int {
 			}
 		}
 	}
+
 	return dp[limit-1]
 }
 

@@ -7,8 +7,11 @@ package hashes
 func checkSubarraySum(nums []int, k int) bool {
 	modsum := 0
 	prefixes := map[int]int{modsum: -1}
+
 	var prev int
+
 	var ok bool
+
 	for idx := range nums {
 		modsum = (modsum + nums[idx]) % k
 		if prev, ok = prefixes[modsum]; !ok {
@@ -17,6 +20,7 @@ func checkSubarraySum(nums []int, k int) bool {
 			return true
 		}
 	}
+
 	return false
 }
 

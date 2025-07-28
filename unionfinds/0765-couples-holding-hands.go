@@ -14,15 +14,20 @@ func minSwapsCouples(row []int) int {
 	// bitwise right shift operator to divide by 2
 	n := len(row) >> 1 // we have len(row)/2 couples
 	p := make([]int, n)
+
 	for i := 0; i < n; i++ {
 		p[i] = i
 	}
+
 	connected := n
+
 	var find func(x int) int
+
 	find = func(x int) int {
 		if p[x] != x {
 			p[x] = find(p[x])
 		}
+
 		return p[x]
 	}
 	union := func(x int, y int) {
@@ -37,5 +42,6 @@ func minSwapsCouples(row []int) int {
 		union(row[2*i]>>1, row[2*i+1]>>1)
 		// OR union(row[2*i]/2, row[2*i+1]/2)
 	}
+
 	return n - connected
 }

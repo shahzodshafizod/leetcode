@@ -7,6 +7,7 @@ package hashes
 func subarraysDivByK(nums []int, k int) int {
 	mods := make([]int, k)
 	mods[0] = 1
+
 	count, prefmod := 0, 0
 	for _, num := range nums {
 		// take modulo twice to avoid -ve remainders (indices)
@@ -14,6 +15,7 @@ func subarraysDivByK(nums []int, k int) int {
 		count += mods[prefmod]
 		mods[prefmod]++
 	}
+
 	return count
 }
 

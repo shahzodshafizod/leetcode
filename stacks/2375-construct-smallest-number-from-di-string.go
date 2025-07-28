@@ -10,8 +10,10 @@ func smallestNumber(pattern string) string {
 	stack := make([]int, n+1)
 	size := 0
 	num := make([]byte, 0, n+1)
+
 	for idx := 0; idx <= n; idx++ {
 		stack[size] = idx + 1
+
 		size++
 		if idx == n || pattern[idx] == 'I' {
 			for size > 0 {
@@ -20,6 +22,7 @@ func smallestNumber(pattern string) string {
 			}
 		}
 	}
+
 	return string(num)
 }
 

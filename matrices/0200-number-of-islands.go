@@ -45,33 +45,43 @@ Step 2: Write out some test cases
 // DFS
 func numIslands(grid [][]byte) int {
 	m, n := len(grid), len(grid[0])
+
 	var drowning func(row int, col int)
+
 	drowning = func(row int, col int) {
 		if grid[row][col] == '0' {
 			return
 		}
+
 		grid[row][col] = '0'
+
 		if row+1 < m { // south
 			drowning(row+1, col)
 		}
+
 		if row-1 >= 0 { // north
 			drowning(row-1, col)
 		}
+
 		if col+1 < n { // east
 			drowning(row, col+1)
 		}
+
 		if col-1 >= 0 { // west
 			drowning(row, col-1)
 		}
 	}
 	num := 0
+
 	for row := 0; row < m; row++ {
 		for col := 0; col < n; col++ {
 			if grid[row][col] == '1' {
 				num++
+
 				drowning(row, col)
 			}
 		}
 	}
+
 	return num
 }

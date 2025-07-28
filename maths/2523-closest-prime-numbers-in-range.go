@@ -10,6 +10,7 @@ import "math"
 func closestPrimes(left int, right int) []int {
 	nonprime := make([]bool, right+1)
 	nonprime[0], nonprime[1] = true, true
+
 	for num, sqrt := 2, int(math.Sqrt(float64(right))); num <= sqrt; num++ {
 		if !nonprime[num] {
 			for factor := num + num; factor <= right; factor += num {
@@ -17,18 +18,23 @@ func closestPrimes(left int, right int) []int {
 			}
 		}
 	}
+
 	ans := []int{-1, -1}
 	diff := right - left + 1
 	prev := -1
+
 	for curr := left; curr <= right; curr++ {
 		if nonprime[curr] {
 			continue
 		}
+
 		if prev != -1 && curr-prev < diff {
 			diff = curr - prev
 			ans = []int{prev, curr}
 		}
+
 		prev = curr
 	}
+
 	return ans
 }

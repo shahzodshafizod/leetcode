@@ -8,17 +8,21 @@ package tries
 // Space: O(1)
 func longestCommonPrefix(strs []string) string {
 	idx := 0
+
 	exit := false
 	for !exit {
 		for _, word := range strs {
 			if idx == len(word) || word[idx] != strs[0][idx] {
 				exit = true
 				idx--
+
 				break
 			}
 		}
+
 		idx++
 	}
+
 	return strs[0][:idx]
 }
 

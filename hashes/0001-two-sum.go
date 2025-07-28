@@ -40,8 +40,10 @@ func twoSum(nums []int, target int) []int {
 		if j, exists := hash[nums[i]]; exists {
 			return []int{i, j}
 		}
+
 		hash[target-nums[i]] = i
 	}
+
 	return nil
 }
 

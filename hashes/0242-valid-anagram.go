@@ -10,14 +10,17 @@ func isAnagram(s string, t string) bool {
 	for _, c := range s {
 		counter[c]++
 	}
+
 	for _, c := range t {
 		counter[c]--
 	}
+
 	for _, cnt := range counter {
 		if cnt != 0 {
 			return false
 		}
 	}
+
 	return true
 }
 

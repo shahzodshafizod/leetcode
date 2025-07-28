@@ -15,6 +15,7 @@ func isPowerOfFour(n int) bool {
 	three := n&0b01010101010101010101010101010101 != 0
 	// 4. subtracting 1 makes the number divisable to 3.
 	four := (n-1)%3 == 0
+
 	return one && two && three && four
 }
 

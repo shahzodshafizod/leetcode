@@ -11,17 +11,21 @@ func delNodes(root *pkg.TreeNode, toDelete []int) []*pkg.TreeNode {
 	for _, val := range toDelete {
 		inDelMap[val] = true
 	}
+
 	var dfs func(node *pkg.TreeNode, isRoot bool) ([]*pkg.TreeNode, *pkg.TreeNode) // (roots, child)
+
 	dfs = func(node *pkg.TreeNode, isRoot bool) ([]*pkg.TreeNode, *pkg.TreeNode) {
 		if node == nil {
 			return nil, nil
 		}
+
 		forest := make([]*pkg.TreeNode, 0)
 		if isRoot && !inDelMap[node.Val] {
 			forest = append(forest, node)
 		}
 
 		var roots []*pkg.TreeNode
+
 		roots, node.Left = dfs(node.Left, inDelMap[node.Val])
 		forest = append(forest, roots...)
 
@@ -31,9 +35,11 @@ func delNodes(root *pkg.TreeNode, toDelete []int) []*pkg.TreeNode {
 		if inDelMap[node.Val] {
 			return forest, nil
 		}
+
 		return forest, node
 	}
 	forest, _ := dfs(root, true)
+
 	return forest
 }
 

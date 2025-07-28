@@ -17,18 +17,23 @@ func guess(num int) int {
 	if num > GUESSED__NUMBER__ {
 		return -1
 	}
+
 	if num < GUESSED__NUMBER__ {
 		return 1
 	}
+
 	return 0
 }
 
 func guessNumber(n int) int {
 	left, right := 1, n
+
 	var num, guessed int
+
 	for left <= right {
 		num = left + (right-left)/2
 		guessed = guess(num)
+
 		if guessed == -1 {
 			right = num - 1
 		} else if guessed == 1 {
@@ -37,5 +42,6 @@ func guessNumber(n int) int {
 			break
 		}
 	}
+
 	return num
 }

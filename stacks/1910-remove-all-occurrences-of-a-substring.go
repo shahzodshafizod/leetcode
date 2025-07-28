@@ -9,6 +9,7 @@ func removeOccurrences(s string, part string) string {
 	pn := len(part)
 	getLPS := func(part string) []int {
 		lps := make([]int, pn)
+
 		for preflen, idx := 0, 1; idx < pn; idx++ {
 			if part[idx] == part[preflen] {
 				preflen++
@@ -18,6 +19,7 @@ func removeOccurrences(s string, part string) string {
 				idx--
 			}
 		}
+
 		return lps
 	}
 	lps := getLPS(part)
@@ -25,14 +27,18 @@ func removeOccurrences(s string, part string) string {
 	stack := make([]byte, sn)
 	nextID := make([]int, sn)
 	diff := 0
+
 	for sid < sn {
 		stack[sid-diff] = s[sid]
+
 		if s[sid] == part[pid] {
 			pid++
 			nextID[sid-diff] = pid
+
 			if pid == pn {
 				diff += pn
 				pid = 0
+
 				if sid >= diff {
 					pid = nextID[sid-diff]
 				}
@@ -43,7 +49,9 @@ func removeOccurrences(s string, part string) string {
 		} else {
 			nextID[sid-diff] = 0
 		}
+
 		sid++
 	}
+
 	return string(stack[:sn-diff])
 }

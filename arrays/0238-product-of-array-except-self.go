@@ -12,15 +12,18 @@ func productExceptSelf(nums []int) []int {
 	len := len(nums)
 	answer := make([]int, len)
 	product := 1
+
 	for idx := 0; idx < len; idx++ { // from left to right
 		answer[idx] = product
 		product *= nums[idx]
 	}
+
 	product = 1
 	for idx := len - 1; idx >= 0; idx-- { // from right to left
 		answer[idx] *= product
 		product *= nums[idx]
 	}
+
 	return answer
 }
 

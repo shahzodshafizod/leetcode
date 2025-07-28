@@ -9,6 +9,7 @@ import (
 // go test -v -count=1 ./pkg/ -run ^TestQueue$
 func TestQueue(t *testing.T) {
 	var queue Queue[int]
+
 	for _, tc := range []struct {
 		command string
 		value   []int
@@ -38,6 +39,7 @@ func TestQueue(t *testing.T) {
 		{command: "Empty", value: []int{}, output: true},
 	} {
 		var output any = nil
+
 		switch tc.command {
 		case "Queue":
 			queue = NewQueue[int]()
@@ -52,6 +54,7 @@ func TestQueue(t *testing.T) {
 		case "Size":
 			output = queue.Size()
 		}
+
 		assert.Equal(t, tc.output, output)
 	}
 }

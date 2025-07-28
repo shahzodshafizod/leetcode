@@ -9,12 +9,15 @@ func intersection(nums1 []int, nums2 []int) []int {
 	for _, num := range nums1 {
 		hashset[num] = true
 	}
+
 	common := make([]int, 0)
+
 	for _, num := range nums2 {
 		if hashset[num] {
 			common = append(common, num)
 			hashset[num] = false
 		}
 	}
+
 	return common
 }

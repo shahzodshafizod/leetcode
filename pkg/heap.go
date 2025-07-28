@@ -19,6 +19,7 @@ func (h *Heap[T]) Peak() T {
 	if h.Len() > 0 {
 		return h.data[0]
 	}
+
 	return *new(T)
 }
 

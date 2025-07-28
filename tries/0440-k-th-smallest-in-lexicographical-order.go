@@ -9,15 +9,18 @@ func findKthNumber(n int, k int) int {
 	count := func(curr int) int { // O(log(10)n)
 		nei := curr + 1 // neighboring branch of tree
 		cnt := 0
+
 		for curr <= n {
 			cnt += min(n+1, nei) - curr
 			curr *= 10
 			nei *= 10
 		}
+
 		return cnt
 	}
 	curr := 1
 	k-- // account for first element: curr=1
+
 	var cnt int
 	for k > 0 { // O(log(10)n)
 		cnt = count(curr)
@@ -29,5 +32,6 @@ func findKthNumber(n int, k int) int {
 			k--        // accouting this node (curr)
 		}
 	}
+
 	return curr
 }

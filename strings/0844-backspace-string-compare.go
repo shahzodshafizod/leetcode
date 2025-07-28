@@ -30,18 +30,23 @@ Step 8: Can we optimize our solution?
 
 func backspaceCompare(s string, t string) bool {
 	equal := true
+
 	var skips int
+
 	for indexS, indexT := len(s)-1, len(t)-1; ; {
 		for indexS >= 0 && s[indexS] == '#' {
 			skips = 0
+
 			for indexS >= 0 && s[indexS] == '#' {
 				indexS--
 				skips++
 			}
+
 			for skips > 0 && indexS >= 0 {
 				if s[indexS] == '#' {
 					skips += 2
 				}
+
 				indexS--
 				skips--
 			}
@@ -49,14 +54,17 @@ func backspaceCompare(s string, t string) bool {
 
 		for indexT >= 0 && t[indexT] == '#' {
 			skips = 0
+
 			for indexT >= 0 && t[indexT] == '#' {
 				indexT--
 				skips++
 			}
+
 			for skips > 0 && indexT >= 0 {
 				if t[indexT] == '#' {
 					skips += 2
 				}
+
 				indexT--
 				skips--
 			}
@@ -79,6 +87,7 @@ func backspaceCompare(s string, t string) bool {
 		indexS--
 		indexT--
 	}
+
 	return equal
 }
 

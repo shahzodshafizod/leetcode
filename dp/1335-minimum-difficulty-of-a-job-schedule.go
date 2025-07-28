@@ -10,32 +10,39 @@ func minDifficulty(jobDifficulty []int, d int) int {
 	if n < d {
 		return -1
 	}
+
 	prev, curr := make([]int, n), make([]int, n)
 	for idx := range curr {
 		curr[idx] = 300_001
 	}
+
 	for day := 0; day < d; day++ {
 		prev, curr = curr, prev
 		stack := make([]int, 0)
 		slen := 0
+
 		for idx := day; idx < n; idx++ {
 			curr[idx] = jobDifficulty[idx]
 			if idx > 0 {
 				curr[idx] += prev[idx-1]
 			}
+
 			for slen > 0 && jobDifficulty[stack[slen-1]] <= jobDifficulty[idx] {
 				j := stack[slen-1]
 				slen--
 				stack = stack[:slen]
 				curr[idx] = min(curr[idx], curr[j]-jobDifficulty[j]+jobDifficulty[idx])
 			}
+
 			if slen > 0 {
 				curr[idx] = min(curr[idx], curr[stack[slen-1]])
 			}
+
 			stack = append(stack, idx)
 			slen++
 		}
 	}
+
 	return curr[n-1]
 }
 

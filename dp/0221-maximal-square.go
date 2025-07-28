@@ -7,10 +7,13 @@ package dp
 func maximalSquare(matrix [][]byte) int {
 	rows, cols := len(matrix), len(matrix[0])
 	dp := make([][]int, rows+1)
+
 	for idx := range dp {
 		dp[idx] = make([]int, cols+1)
 	}
+
 	maxside := 0
+
 	for row := rows - 1; row >= 0; row-- {
 		for col := cols - 1; col >= 0; col-- {
 			if matrix[row][col] == '1' {
@@ -20,6 +23,7 @@ func maximalSquare(matrix [][]byte) int {
 			}
 		}
 	}
+
 	return maxside * maxside
 }
 

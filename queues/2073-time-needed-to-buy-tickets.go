@@ -4,6 +4,7 @@ package queues
 
 func timeRequiredToBuy(tickets []int, k int) int {
 	seconds := 0
+
 	for idx := range tickets {
 		if idx <= k {
 			seconds += min(tickets[idx], tickets[k])
@@ -11,5 +12,6 @@ func timeRequiredToBuy(tickets []int, k int) int {
 			seconds += min(tickets[idx], tickets[k]-1)
 		}
 	}
+
 	return seconds
 }

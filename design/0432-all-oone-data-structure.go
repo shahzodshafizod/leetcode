@@ -25,6 +25,7 @@ func NewAllOne() AllOne {
 	head.count = 5e4
 	tail := NewAllOneNode("", head, nil)
 	head.next = tail
+
 	return AllOne{
 		keys: make(map[string]*allOneNode),
 		head: head,
@@ -40,6 +41,7 @@ func (a *AllOne) Inc(key string) {
 		node.next.prev = node
 		a.keys[key] = node
 	}
+
 	node.count++
 	for node.prev.count < node.count {
 		a.swap(node.prev, node)
@@ -49,12 +51,15 @@ func (a *AllOne) Inc(key string) {
 func (a *AllOne) Dec(key string) {
 	node := a.keys[key]
 	node.count--
+
 	if node.count == 0 {
 		node.prev.next = node.next
 		node.next.prev = node.prev
 		a.keys[key] = nil
+
 		return
 	}
+
 	for node.count < node.next.count {
 		a.swap(node, node.next)
 	}
@@ -64,6 +69,7 @@ func (a *AllOne) GetMaxKey() string {
 	if a.head.next == a.tail {
 		return ""
 	}
+
 	return a.head.next.key
 }
 
@@ -71,6 +77,7 @@ func (a *AllOne) GetMinKey() string {
 	if a.tail.prev == a.head {
 		return ""
 	}
+
 	return a.tail.prev.key
 }
 

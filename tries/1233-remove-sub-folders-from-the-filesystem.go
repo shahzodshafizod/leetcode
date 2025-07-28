@@ -12,26 +12,35 @@ import (
 // Space: O(nl)
 func removeSubfolders(folder []string) []string {
 	type node map[string]node
+
 	sort.Strings(folder)
+
 	root := make(node)
+
 	var curr node
+
 	var res []string
+
 	for _, f := range folder {
 		curr = root
 		for _, word := range strings.Split(f, "/") {
 			if curr["$"] != nil {
 				break
 			}
+
 			if curr[word] == nil {
 				curr[word] = make(node)
 			}
+
 			curr = curr[word]
 		}
+
 		if curr["$"] == nil {
 			res = append(res, f)
 			curr["$"] = make(node)
 		}
 	}
+
 	return res
 }
 

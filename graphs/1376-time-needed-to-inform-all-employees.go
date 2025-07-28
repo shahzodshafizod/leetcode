@@ -52,6 +52,7 @@ Step 2: Write out some test cases
 
 func numOfMinutes(n int, headID int, manager []int, informTime []int) int {
 	adjacencyList := make([][]int, n)
+
 	for id := 0; id < n; id++ {
 		if manager[id] != -1 {
 			if adjacencyList[manager[id]] == nil {
@@ -61,6 +62,7 @@ func numOfMinutes(n int, headID int, manager []int, informTime []int) int {
 			}
 		}
 	}
+
 	return numOfMinutesDFS(adjacencyList, informTime, headID)
 }
 
@@ -68,9 +70,11 @@ func numOfMinutesDFS(adjacencyList [][]int, informTime []int, ID int) int {
 	if adjacencyList[ID] == nil {
 		return 0
 	}
+
 	maximum := 0
 	for _, employeeID := range adjacencyList[ID] {
 		maximum = max(maximum, numOfMinutesDFS(adjacencyList, informTime, employeeID))
 	}
+
 	return maximum + informTime[ID]
 }

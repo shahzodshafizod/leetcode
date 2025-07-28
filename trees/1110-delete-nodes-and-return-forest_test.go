@@ -27,10 +27,12 @@ func TestDelNodes(t *testing.T) {
 		},
 	} {
 		forest := delNodes(tc.root, tc.toDelete)
+
 		tc.forest = make([]*pkg.TreeNode, len(tc.forestVals))
 		for idx, vals := range tc.forestVals {
 			tc.forest[idx] = pkg.MakeTree(0, vals)
 		}
+
 		assert.Equal(t, tc.forest, forest)
 	}
 }

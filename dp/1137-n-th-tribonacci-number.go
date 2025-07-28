@@ -5,10 +5,12 @@ package dp
 // Tabulation
 func tribonacci(n int) int {
 	var cache [38]int
+
 	cache[1], cache[2] = 1, 1
 	for idx := 3; idx <= n; idx++ {
 		cache[idx] = cache[idx-3] + cache[idx-2] + cache[idx-1]
 	}
+
 	return cache[n]
 }
 

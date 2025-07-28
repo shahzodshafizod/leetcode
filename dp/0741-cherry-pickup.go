@@ -10,11 +10,14 @@ package dp
 func cherryPickup(grid [][]int) int {
 	n := len(grid)
 	m := (n << 1) - 1 // 2*n-1: # of steps to reach (n-1,n-1)
+
 	dp := make([][]int, n)
 	for idx := range dp {
 		dp[idx] = make([]int, n)
 	}
+
 	dp[0][0] = grid[0][0]
+
 	for t := 1; t < m; t++ {
 		for i := n - 1; i >= 0; i-- {
 			for j := n - 1; j >= 0; j-- {
@@ -23,15 +26,19 @@ func cherryPickup(grid [][]int) int {
 					dp[i][j] = -1
 					continue
 				}
+
 				if i > 0 {
 					dp[i][j] = max(dp[i][j], dp[i-1][j])
 				}
+
 				if j > 0 {
 					dp[i][j] = max(dp[i][j], dp[i][j-1])
 				}
+
 				if i > 0 && j > 0 {
 					dp[i][j] = max(dp[i][j], dp[i-1][j-1])
 				}
+
 				if dp[i][j] >= 0 {
 					dp[i][j] += grid[i][t-i]
 					if i != j {
@@ -41,6 +48,7 @@ func cherryPickup(grid [][]int) int {
 			}
 		}
 	}
+
 	return max(0, dp[n-1][n-1])
 }
 

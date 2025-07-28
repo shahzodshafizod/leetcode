@@ -7,5 +7,6 @@ func singleNumber(nums []int) int {
 	for _, num := range nums {
 		single ^= num
 	}
+
 	return single
 }

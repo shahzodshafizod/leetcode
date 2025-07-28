@@ -20,8 +20,10 @@ func TestMyHashMap(t *testing.T) {
 		},
 	} {
 		var myHashMap MyHashMap
+
 		for index, command := range tc.commands {
 			var output any = nil
+
 			switch command {
 			case "MyHashMap":
 				myHashMap = NewMyHashMap()
@@ -32,6 +34,7 @@ func TestMyHashMap(t *testing.T) {
 			case "remove":
 				myHashMap.Remove(tc.values[index][0])
 			}
+
 			assert.Equal(t, tc.output[index], output)
 		}
 	}

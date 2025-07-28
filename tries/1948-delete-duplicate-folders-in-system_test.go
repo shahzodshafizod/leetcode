@@ -22,11 +22,13 @@ func TestDeleteDuplicateFolder(t *testing.T) {
 		sort.Slice(tc.cleaned, func(i, j int) bool {
 			sort.Strings(tc.cleaned[i])
 			sort.Strings(tc.cleaned[j])
+
 			return strings.Join(tc.cleaned[i], "") < strings.Join(tc.cleaned[j], "")
 		})
 		sort.Slice(cleaned, func(i, j int) bool {
 			sort.Strings(cleaned[i])
 			sort.Strings(cleaned[j])
+
 			return strings.Join(cleaned[i], "") < strings.Join(cleaned[j], "")
 		})
 		assert.Equal(t, tc.cleaned, cleaned)

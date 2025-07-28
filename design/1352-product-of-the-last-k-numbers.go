@@ -18,8 +18,10 @@ func (p *ProductOfNumbers) Add(num int) {
 	if num == 0 {
 		p.presum = []int{1}
 		p.size = 0
+
 		return
 	}
+
 	p.presum = append(p.presum, p.presum[p.size]*num)
 	p.size++
 }
@@ -28,6 +30,7 @@ func (p *ProductOfNumbers) GetProduct(k int) int {
 	if k > p.size {
 		return 0
 	}
+
 	return p.presum[p.size] / p.presum[p.size-k]
 }
 

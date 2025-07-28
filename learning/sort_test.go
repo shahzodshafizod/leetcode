@@ -112,6 +112,7 @@ func TestBucketSort(t *testing.T) {
 		if slices.Min(tc.array) < 0 {
 			continue
 		}
+
 		copied := append([]int{}, tc.array...)
 		sorted := bucketSort(copied)
 		assert.Equal(t, tc.sorted, sorted)

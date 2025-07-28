@@ -8,13 +8,16 @@ func maxSubarrayLength(nums []int, k int) int {
 	count := make(map[int]int) // num:count
 	start := 0
 	length := 0
+
 	for end := range nums {
 		count[nums[end]]++
 		for count[nums[end]] > k {
 			count[nums[start]]--
 			start++
 		}
+
 		length = max(length, end-start+1)
 	}
+
 	return length
 }

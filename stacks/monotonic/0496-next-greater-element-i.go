@@ -10,22 +10,29 @@ func nextGreaterElement(nums1 []int, nums2 []int) []int {
 		idmap[num] = idx
 		nums1[idx] = -1
 	}
+
 	size := 0
 	stack := make([]int, size) // monotonic stack
+
 	var curr, ptrid int
+
 	var exists bool
+
 	for idx := len(nums2) - 1; idx >= 0; idx-- {
 		curr = nums2[idx]
 		for size > 0 && curr > stack[size-1] { // O(2n)
 			stack = stack[:size-1]
 			size--
 		}
+
 		if ptrid, exists = idmap[curr]; exists && size > 0 {
 			nums1[ptrid] = stack[size-1]
 		}
+
 		stack = append(stack, curr)
 		size++
 	}
+
 	return nums1
 }
 

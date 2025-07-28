@@ -4,6 +4,7 @@ package stacks
 
 func checkValidString(s string) bool {
 	openMin, openMax := 0, 0
+
 	for idx := range s {
 		switch s[idx] {
 		case '(':
@@ -16,13 +17,16 @@ func checkValidString(s string) bool {
 			openMin-- // consider * as )
 			openMax++ // consider * as (
 		}
+
 		if openMin < 0 {
 			openMin = 0 // ignore *
 		}
+
 		if openMax < 0 {
 			return false
 		}
 	}
+
 	return openMin == 0
 }
 

@@ -16,15 +16,18 @@ func detectCycle(head *pkg.ListNode) *pkg.ListNode {
 	for hare != nil && hare.Next != nil {
 		tortoise = tortoise.Next
 		hare = hare.Next.Next
+
 		if tortoise == hare {
 			tortoise = head
 			for tortoise != hare {
 				tortoise = tortoise.Next
 				hare = hare.Next
 			}
+
 			return tortoise
 		}
 	}
+
 	return nil
 }
 

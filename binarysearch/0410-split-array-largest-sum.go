@@ -11,12 +11,15 @@ func splitArray(nums []int, k int) int {
 		left = max(left, num)
 		right += num
 	}
+
 	minmaxSum := right
+
 	var mid, subarrays, currSum int
 	for left <= right {
 		mid = left + (right-left)/2
 
 		subarrays = 1 // we're currently in the first subarray
+
 		currSum = 0
 		for _, num := range nums {
 			currSum += num
@@ -33,6 +36,7 @@ func splitArray(nums []int, k int) int {
 			left = mid + 1
 		}
 	}
+
 	return minmaxSum
 }
 

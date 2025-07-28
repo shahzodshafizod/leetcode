@@ -11,16 +11,20 @@ func applyOperations(nums []int) []int {
 		if nums[idx] == 0 {
 			continue
 		}
+
 		if idx < n-1 && nums[idx] == nums[idx+1] {
 			nums[left] = nums[idx] * 2
 			nums[idx+1] = 0
 		} else {
 			nums[left] = nums[idx]
 		}
+
 		left++
 	}
+
 	for ; left < n; left++ {
 		nums[left] = 0
 	}
+
 	return nums
 }

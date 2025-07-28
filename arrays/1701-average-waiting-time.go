@@ -5,9 +5,11 @@ package arrays
 func averageWaitingTime(customers [][]int) float64 {
 	nextIdleTime := 0
 	netWaitingTime := 0
+
 	for _, customer := range customers {
 		nextIdleTime = max(nextIdleTime, customer[0]) + customer[1]
 		netWaitingTime += nextIdleTime - customer[0]
 	}
+
 	return float64(netWaitingTime) / float64(len(customers))
 }

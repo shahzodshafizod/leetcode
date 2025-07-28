@@ -10,11 +10,13 @@ func equalSubstring(s string, t string, maxCost int) int {
 		if cost < 0 {
 			return -cost
 		}
+
 		return cost
 	}
 	start := 0
 	cost := 0
 	maxlen := 0
+
 	n := len(s)
 	for end := 0; end < n; end++ {
 		cost += getcost(end)
@@ -22,8 +24,10 @@ func equalSubstring(s string, t string, maxCost int) int {
 			cost -= getcost(start)
 			start++
 		}
+
 		maxlen = max(maxlen, end-start+1)
 	}
+
 	return maxlen
 }
 

@@ -22,6 +22,7 @@ func TestGraphBFS(t *testing.T) {
 		},
 	} {
 		var graph Graph = &graph{}
+
 		values := graph.BFS(tc.adjList)
 		assert.Equal(t, tc.values, values)
 	}
@@ -43,6 +44,7 @@ func TestGraphDFS(t *testing.T) {
 		},
 	} {
 		var graph Graph = &graph{}
+
 		values := graph.DFS(tc.adjList)
 		assert.Equal(t, tc.values, values)
 	}
@@ -103,6 +105,7 @@ func TestDungeon(t *testing.T) {
 		},
 	} {
 		var graph Graph = &graph{}
+
 		path := graph.Dungeon(tc.grid)
 		assert.Equal(t, tc.path, path)
 	}
@@ -185,6 +188,7 @@ func TestShortestPath(t *testing.T) {
 		},
 	} {
 		var graph ShortestPath = &graph{}
+
 		var dist []int
 
 		if !tc.cyclic && !tc.negativeEdges && !tc.negativeCycles {

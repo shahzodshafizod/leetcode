@@ -11,6 +11,7 @@ func reorderList(head *pkg.ListNode) {
 		tortoise = tortoise.Next
 		hare = hare.Next.Next
 	}
+
 	middle := tortoise
 
 	// 2. reverse the second part

@@ -7,6 +7,7 @@ import "strings"
 func maxScore(s string) int {
 	zeroes, ones := 0, strings.Count(s, "1")
 	score := 0
+
 	n := len(s)
 	for idx := 0; idx < n-1; idx++ {
 		if s[idx] == '0' {
@@ -14,7 +15,9 @@ func maxScore(s string) int {
 		} else {
 			ones--
 		}
+
 		score = max(score, zeroes+ones)
 	}
+
 	return score
 }

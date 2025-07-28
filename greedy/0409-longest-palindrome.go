@@ -7,15 +7,19 @@ package greedy
 func longestPalindrome(s string) int {
 	seen := make(map[rune]bool)
 	length := 0
+
 	for _, c := range s {
 		if seen[c] {
 			length += 2
 		}
+
 		seen[c] = !seen[c]
 	}
+
 	if len(s) > length {
 		length++
 	}
+
 	return length
 }
 

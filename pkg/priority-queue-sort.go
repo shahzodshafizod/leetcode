@@ -17,6 +17,7 @@ func NewPQSort(length int, compare func(i int, j int) bool, swap func(i int, j i
 		swap:    swap,
 	}
 	pq.heapify()
+
 	return pq
 }
 
@@ -45,9 +46,11 @@ func (p *pqSort) shiftDown(parent int, n int) {
 		if child+1 < n && p.compare(child, child+1) {
 			child++
 		}
+
 		if !p.compare(parent, child) {
 			break
 		}
+
 		p.swap(parent, child)
 		parent = child
 		child = p.left(parent)

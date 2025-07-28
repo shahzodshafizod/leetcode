@@ -9,27 +9,34 @@ func minDays(bloomDay []int, m int, k int) int {
 	if len(bloomDay) < m*k {
 		return -1
 	}
+
 	getNumOfBouquets := func(max int) int {
 		flowers, bouquets := 0, 0
+
 		for _, day := range bloomDay { // O(N)
 			if day <= max {
 				flowers++
 			} else {
 				flowers = 0
 			}
+
 			if flowers == k {
 				bouquets++
 				flowers = 0
 			}
 		}
+
 		return bouquets
 	}
+
 	start, end := bloomDay[0], bloomDay[0]
 	for _, day := range bloomDay { // O(N)
 		start = min(start, day)
 		end = max(end, day)
 	}
+
 	days := -1
+
 	var mid int
 	for start <= end { // O(Log Max(bloomDay))
 		mid = (start + end) / 2
@@ -40,6 +47,7 @@ func minDays(bloomDay []int, m int, k int) int {
 			start = mid + 1
 		}
 	}
+
 	return days
 }
 

@@ -13,26 +13,32 @@ type MyHashMap struct {
 
 func NewMyHashMap() MyHashMap {
 	const cap = 997
+
 	keys := make([]*pkg.ListNode, cap)
 	vals := make([]*pkg.ListNode, cap)
+
 	for i := 0; i < cap; i++ {
 		keys[i] = &pkg.ListNode{} // dummy head node
 		vals[i] = &pkg.ListNode{} // dummy head node
 	}
+
 	return MyHashMap{keys: keys, vals: vals, cap: cap}
 }
 
 func (m *MyHashMap) Put(key int, value int) {
 	currKey := m.keys[key%m.cap]
 	currVal := m.vals[key%m.cap]
+
 	for currKey.Next != nil {
 		if currKey.Next.Val == key {
 			currVal.Next.Val = value
 			return
 		}
+
 		currKey = currKey.Next
 		currVal = currVal.Next
 	}
+
 	currKey.Next = &pkg.ListNode{Val: key}
 	currVal.Next = &pkg.ListNode{Val: value}
 }
@@ -40,25 +46,31 @@ func (m *MyHashMap) Put(key int, value int) {
 func (m *MyHashMap) Get(key int) int {
 	currKey := m.keys[key%m.cap].Next
 	currVal := m.vals[key%m.cap].Next
+
 	for currKey != nil {
 		if currKey.Val == key {
 			return currVal.Val
 		}
+
 		currKey = currKey.Next
 		currVal = currVal.Next
 	}
+
 	return -1
 }
 
 func (m *MyHashMap) Remove(key int) {
 	currKey := m.keys[key%m.cap]
 	currVal := m.vals[key%m.cap]
+
 	for currKey.Next != nil {
 		if currKey.Next.Val == key {
 			currKey.Next = currKey.Next.Next
 			currVal.Next = currVal.Next.Next
+
 			return
 		}
+
 		currKey = currKey.Next
 		currVal = currVal.Next
 	}

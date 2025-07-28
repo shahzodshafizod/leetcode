@@ -8,6 +8,7 @@ package tries
 func findDifferentBinaryString(nums []string) string {
 	n := len(nums)
 	num := make([]byte, n)
+
 	for idx := 0; idx < n; idx++ {
 		if nums[idx][idx] == '0' {
 			num[idx] = '1'
@@ -15,6 +16,7 @@ func findDifferentBinaryString(nums []string) string {
 			num[idx] = '0'
 		}
 	}
+
 	return string(num)
 }
 

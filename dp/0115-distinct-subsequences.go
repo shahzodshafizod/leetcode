@@ -9,6 +9,7 @@ func numDistinct(s string, t string) int {
 	ns, nt := len(s), len(t)
 	dp := make([]int, nt+1)
 	dp[0] = 1
+
 	for is := 1; is <= ns; is++ {
 		for it := nt; it > 0; it-- {
 			if s[is-1] == t[it-1] {
@@ -16,6 +17,7 @@ func numDistinct(s string, t string) int {
 			}
 		}
 	}
+
 	return dp[nt]
 }
 

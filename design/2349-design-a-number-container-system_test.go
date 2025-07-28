@@ -20,9 +20,11 @@ func TestNumberContainers(t *testing.T) {
 		},
 	} {
 		var container NumberContainers
+
 		var output any
 		for idx, command := range tc.commands {
 			output = nil
+
 			switch command {
 			case "NumberContainers":
 				container = NewNumberContainers()
@@ -31,6 +33,7 @@ func TestNumberContainers(t *testing.T) {
 			case "find":
 				output = container.Find(tc.values[idx][0])
 			}
+
 			assert.Equal(t, tc.output[idx], output)
 		}
 	}

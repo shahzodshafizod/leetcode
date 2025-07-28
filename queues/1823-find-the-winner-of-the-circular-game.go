@@ -8,6 +8,7 @@ func findTheWinner(n int, k int) int {
 	for p := 1; p <= n; p++ {
 		winner = (winner + k) % p
 	}
+
 	return winner + 1
 }
 

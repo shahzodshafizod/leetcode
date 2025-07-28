@@ -8,7 +8,9 @@ package graphs
 func isBipartite(graph [][]int) bool {
 	n := len(graph)
 	colors := make([]int, n)
+
 	var dfs func(node int, color int) bool
+
 	dfs = func(node int, color int) bool {
 		colors[node] = color
 		for _, neighbor := range graph[node] {
@@ -18,6 +20,7 @@ func isBipartite(graph [][]int) bool {
 				return false
 			}
 		}
+
 		return true
 	}
 	for node := 0; node < n; node++ {
@@ -25,6 +28,7 @@ func isBipartite(graph [][]int) bool {
 			return false
 		}
 	}
+
 	return true
 }
 

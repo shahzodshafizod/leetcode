@@ -12,6 +12,7 @@ func lowestCommonAncestor(root, p, q *pkg.TreeNode) *pkg.TreeNode {
 			root = root.Right
 		}
 	}
+
 	return root
 }
 

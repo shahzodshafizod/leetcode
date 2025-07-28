@@ -7,21 +7,29 @@ func maxScoreWords(words []string, letters []byte, score []int) int {
 	for _, letter := range letters {
 		lmap[letter-'a']++
 	}
+
 	getScore := func(idx int) int {
 		var c int
+
 		var count [26]int
+
 		wordScore := 0
+
 		for _, letter := range words[idx] {
 			c = int(letter - 'a')
 			wordScore += score[c]
+
 			count[c]++
 			if count[c] > lmap[c] {
 				return -1
 			}
 		}
+
 		return wordScore
 	}
+
 	var dfs func(idx int) int
+
 	dfs = func(idx int) int {
 		if idx < 0 {
 			return 0
@@ -33,13 +41,16 @@ func maxScoreWords(words []string, letters []byte, score []int) int {
 			for _, letter := range words[idx] {
 				lmap[letter-'a']--
 			}
+
 			maxScore = max(maxScore, wordScore+dfs(idx-1))
 			// backtracking...
 			for _, letter := range words[idx] {
 				lmap[letter-'a']++
 			}
 		}
+
 		return maxScore
 	}
+
 	return dfs(len(words) - 1)
 }

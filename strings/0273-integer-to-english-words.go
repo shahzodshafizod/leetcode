@@ -25,6 +25,7 @@ func numberToWords(num int) string {
 	if num <= 20 {
 		return dictionary[num]
 	}
+
 	for _, group := range groups {
 		if num >= group {
 			var words string
@@ -43,6 +44,7 @@ func numberToWords(num int) string {
 			return words
 		}
 	}
+
 	return ""
 }
 
@@ -50,33 +52,43 @@ func numberToWords(num int) string {
 
 func numberToWordsReverse(num int) string {
 	levels := []string{"", "Thousand", "Million", "Billion", "Trillion"}
+
 	var numberToWordsReverseHelper func(num int, divider int, level int) string
+
 	numberToWordsReverseHelper = func(num int, divider int, level int) string {
 		var words string
+
 		current := divider + num
 		divider /= 1000
+
 		if divider != 0 {
 			current /= divider
+
 			if num%divider != 0 {
 				words += numberToWordsReverseHelper(num%divider, divider, level+1) + " "
 			}
 		}
+
 		num = 0           // reverse every block separately
 		for current > 1 { // skip the first digit and reverse: 1004 => 400, 145 => 54
 			num = num*10 + current%10
 			current /= 10
 		}
+
 		words += numberToWords(num)
 		if levels[level] != "" {
 			words += " " + levels[level]
 		}
+
 		return words
 	}
 	divider := 1
+
 	tempNum := num
 	for tempNum > 0 {
 		tempNum /= 10
 		divider *= 10
 	}
+
 	return numberToWordsReverseHelper(num, divider, 0)
 }

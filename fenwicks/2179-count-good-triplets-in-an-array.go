@@ -20,20 +20,26 @@ func goodTriplets(nums1 []int, nums2 []int) int64 {
 			total += tree[num]
 			num -= num & -num
 		}
+
 		return total
 	}
+
 	indices2 := make([]int, n)
 	for idx := 0; idx < n; idx++ {
 		indices2[nums2[idx]] = idx
 	}
+
 	var total int64 = 0
+
 	var idx2, left, right int
 	for idx1 := 0; idx1 < n; idx1++ {
 		idx2 = indices2[nums1[idx1]]
 		left = query(idx2 + 1)
 		right = (n - idx2 - 1) - (idx1 - left)
 		total += int64(left * right)
+
 		update(idx2 + 1)
 	}
+
 	return total
 }

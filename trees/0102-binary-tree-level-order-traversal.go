@@ -28,22 +28,30 @@ func levelOrder(root *pkg.TreeNode) [][]int {
 	if root == nil {
 		return levels
 	}
+
 	queue := []*pkg.TreeNode{root}
+
 	for queueLen := len(queue); queueLen > 0; queueLen = len(queue) {
 		levelElements := make([]int, 0)
+
 		for count := 0; count < queueLen; count++ {
 			node := queue[count]
 			levelElements = append(levelElements, node.Val)
+
 			if node.Left != nil {
 				queue = append(queue, node.Left)
 			}
+
 			if node.Right != nil {
 				queue = append(queue, node.Right)
 			}
 		}
+
 		queue = queue[queueLen:]
+
 		levels = append(levels, levelElements)
 	}
+
 	return levels
 }
 

@@ -13,19 +13,24 @@ func sortArray(nums []int) []int {
 		mini = min(mini, num)
 		maxi = max(maxi, num)
 	}
+
 	count := make([]int, maxi-mini+1)
 	for _, num := range nums {
 		count[num-mini]++
 	}
+
 	idx := 0
+
 	for num, count := range count {
 		num += mini
+
 		for count > 0 {
 			count--
 			nums[idx] = num
 			idx++
 		}
 	}
+
 	return nums
 }
 

@@ -11,7 +11,9 @@ func reversePrefix(word string, ch byte) string {
 		for idx := end; idx >= 0; idx-- {
 			reversed = append(reversed, word[idx])
 		}
+
 		word = string(reversed) + word[end+1:]
 	}
+
 	return word
 }

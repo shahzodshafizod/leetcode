@@ -9,6 +9,7 @@ import "bytes"
 func removeKdigits(num string, k int) string {
 	size := 0
 	stack := make([]byte, size, len(num)-k)
+
 	var curr byte
 	for idx := range num {
 		curr = num[idx]
@@ -17,12 +18,15 @@ func removeKdigits(num string, k int) string {
 			size--
 			k--
 		}
+
 		stack = append(stack, curr)
 		size++
 	}
+
 	num = string(bytes.TrimLeft(stack[:size-k], "0"))
 	if num == "" {
 		num = "0"
 	}
+
 	return num
 }

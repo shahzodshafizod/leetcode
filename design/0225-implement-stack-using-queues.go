@@ -31,10 +31,12 @@ func (m *MyStack) Pop() int {
 	if m.first == nil {
 		return data
 	}
+
 	preLast := m.first
 	for preLast != m.last && preLast.next != nil && preLast.next != m.last {
 		preLast = preLast.next
 	}
+
 	if preLast == m.last {
 		data = preLast.data
 		m.first, m.last = nil, nil
@@ -42,6 +44,7 @@ func (m *MyStack) Pop() int {
 		data = preLast.next.data
 		m.last = preLast
 	}
+
 	return data
 }
 
@@ -50,6 +53,7 @@ func (m *MyStack) Top() int {
 	if m.last != nil {
 		data = m.last.data
 	}
+
 	return data
 }
 

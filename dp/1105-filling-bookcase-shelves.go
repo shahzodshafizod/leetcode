@@ -11,16 +11,19 @@ func minHeightShelves(books [][]int, shelfWidth int) int {
 	// books[i] = [2]int{thickness, height}
 	n := len(books)
 	dp := make([]int, n+1)
+
 	for idx := n - 1; idx >= 0; idx-- {
 		space := shelfWidth
 		maxHeight := 0
 		dp[idx] = 1_000 * shelfWidth // 1_000 is max height
+
 		for jdx := idx; jdx < n && space >= books[jdx][0]; jdx++ {
 			space -= books[jdx][0]
 			maxHeight = max(maxHeight, books[jdx][1])
 			dp[idx] = min(dp[idx], dp[jdx+1]+maxHeight)
 		}
 	}
+
 	return dp[0]
 }
 

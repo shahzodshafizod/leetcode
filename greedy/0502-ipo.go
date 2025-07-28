@@ -28,9 +28,11 @@ func findMaximizedCapital(k int, w int, profits []int, capital []int) int {
 			if x[0] == y[0] {
 				return x[1] < y[1]
 			}
+
 			return x[0] < y[0]
 		},
 	)
+
 	for idx := range capital { // O(n)
 		if capital[idx] <= w {
 			heap.Push(maxHeap, profits[idx])
@@ -38,12 +40,15 @@ func findMaximizedCapital(k int, w int, profits []int, capital []int) int {
 			heap.Push(minHeap, [2]int{capital[idx], profits[idx]})
 		}
 	}
+
 	for k > 0 && maxHeap.Len() > 0 { // O(k)
 		k--
+
 		w += heap.Pop(maxHeap).(int)
 		for minHeap.Len() > 0 && minHeap.Peak()[0] <= w {
 			heap.Push(maxHeap, heap.Pop(minHeap).([2]int)[1]) // O(log n)
 		}
 	}
+
 	return w
 }

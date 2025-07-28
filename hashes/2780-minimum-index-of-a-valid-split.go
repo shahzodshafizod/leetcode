@@ -8,32 +8,39 @@ package hashes
 func minimumIndex(nums []int) int {
 	n := len(nums)
 	dominent, count := nums[0], 0
+
 	for idx := 0; idx < n; idx++ {
 		if nums[idx] == dominent {
 			count++
 		} else {
 			count--
 		}
+
 		if count == 0 {
 			dominent = nums[idx]
 			count = 1
 		}
 	}
+
 	prefix, suffix := 0, 0
+
 	for idx := 0; idx < n; idx++ {
 		if nums[idx] == dominent {
 			suffix++
 		}
 	}
+
 	for idx := 0; idx < n; idx++ {
 		if nums[idx] == dominent {
 			prefix++
 			suffix--
 		}
+
 		if prefix*2 > idx+1 && suffix*2 > n-idx-1 {
 			return idx
 		}
 	}
+
 	return -1
 }
 

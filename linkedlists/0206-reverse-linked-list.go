@@ -23,6 +23,7 @@ Step 2: Write out some test cases
 func reverseList(head *pkg.ListNode) *pkg.ListNode {
 	node := head
 	head = nil
+
 	var next *pkg.ListNode
 	for node != nil {
 		next = node.Next
@@ -30,6 +31,7 @@ func reverseList(head *pkg.ListNode) *pkg.ListNode {
 		head = node
 		node = next
 	}
+
 	return head
 }
 

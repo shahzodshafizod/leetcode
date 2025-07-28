@@ -12,20 +12,26 @@ func countPairs(n int, edges [][]int, queries []int) []int {
 	// max(n) = 2^4, dec(2e5) = bin(0b100111000100000), # of bits = 15
 	// so, we'll move the first node by 15 steps to left
 	shared := make(map[int]int)
+
 	var u, v int
 	for idx := range edges { // O(e)
 		u, v = edges[idx][0], edges[idx][1]
 		degree[u]++
 		degree[v]++
+
 		if u > v {
 			u, v = v, u
 		}
+
 		shared[u<<15+v]++
 	}
+
 	sortedDegree := make([]int, n)
 	copy(sortedDegree, degree[1:]) // [1:] means excluding node 0
 	sort.Ints(sortedDegree)        // O(nlogn)
+
 	answer := make([]int, len(queries))
+
 	var left, right int
 	for idx := range queries { // O(q)
 		left, right = 0, n-1
@@ -37,6 +43,7 @@ func countPairs(n int, edges [][]int, queries []int) []int {
 				left++
 			}
 		}
+
 		for mask := range shared { // O(e)
 			u, v = mask>>15, mask&(1<<15-1)
 			if degree[u]+degree[v] > queries[idx] &&
@@ -45,6 +52,7 @@ func countPairs(n int, edges [][]int, queries []int) []int {
 			}
 		}
 	}
+
 	return answer
 }
 

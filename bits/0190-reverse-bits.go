@@ -4,12 +4,14 @@ package bits
 
 func reverseBits(num uint32) uint32 {
 	var reversed uint32 = 0
+
 	var power uint32 = 31
 	for num > 0 {
 		reversed += (num & 1) << power
 		num >>= 1
 		power--
 	}
+
 	return reversed
 }
 

@@ -7,26 +7,36 @@ package hashes
 // Space: O(N)
 func distinctNames(ideas []string) int64 {
 	suffixes := make(map[string][]int)
+
 	var prefix int
+
 	var suffix string
+
 	var counts [26]int64
+
 	var same [26][26]int64
+
 	for idx := range ideas {
 		prefix = int(ideas[idx][0] - 'a')
 		suffix = ideas[idx][1:]
 		counts[prefix]++
+
 		for _, c := range suffixes[suffix] {
 			same[prefix][c]++
 			same[c][prefix]++
 		}
+
 		suffixes[suffix] = append(suffixes[suffix], prefix)
 	}
+
 	var count int64 = 0
+
 	for a := 0; a < 26; a++ {
 		for b := a + 1; b < 26; b++ {
 			count += (counts[a] - same[a][b]) * (counts[b] - same[b][a])
 		}
 	}
+
 	return count * 2
 }
 

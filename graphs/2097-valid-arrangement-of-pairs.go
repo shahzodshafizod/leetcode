@@ -19,6 +19,7 @@ https://www.youtube.com/watch?v=8MpoO2zA2l4
 func validArrangement(pairs [][]int) [][]int {
 	adjList := make(map[int][]int)
 	degree := make(map[int]int)
+
 	var start, end int
 	for idx := range pairs {
 		start, end = pairs[idx][0], pairs[idx][1]
@@ -26,31 +27,41 @@ func validArrangement(pairs [][]int) [][]int {
 		degree[start]++
 		degree[end]--
 	}
+
 	start = pairs[0][0]
+
 	for node := range degree {
 		if degree[node] == 1 {
 			start = node
 			break
 		}
 	}
+
 	stack := []int{start}
+
 	var curr, next int
+
 	order := make([]int, 0, len(pairs)+1)
+
 	for size := len(stack); size > 0; size = len(stack) {
 		curr = stack[size-1]
 		if l := len(adjList[curr]); l > 0 {
 			next = adjList[curr][l-1]
 			adjList[curr] = adjList[curr][:l-1]
+
 			stack = append(stack, next)
 		} else {
 			stack = stack[:size-1]
+
 			order = append(order, curr)
 		}
 	}
+
 	arrangement := make([][]int, 0, len(pairs))
 	for i := len(order) - 1; i > 0; i-- {
 		arrangement = append(arrangement, []int{order[i], order[i-1]})
 	}
+
 	return arrangement
 }
 

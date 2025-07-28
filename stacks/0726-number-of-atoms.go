@@ -16,14 +16,19 @@ func countOfAtoms(formula string) string {
 		name  string
 		atoms int
 	}
+
 	elem := &element{name: "", atoms: 0}
 	dec := 1
+
 	var r rune
+
 	elements := make([]*element, 0)
 	stack := make([]int, 0)
 	multiply := 1
+
 	for i := len(formula) - 1; i >= 0; i-- { // O(N)
 		r = rune(formula[i])
+
 		switch {
 		case unicode.IsDigit(r):
 			elem.atoms += int(r-'0') * dec
@@ -35,6 +40,7 @@ func countOfAtoms(formula string) string {
 			if elem.atoms == 0 {
 				elem.atoms = 1
 			}
+
 			elem.atoms *= multiply
 			elements = append(elements, elem)
 			elem = &element{name: "", atoms: 0}
@@ -43,6 +49,7 @@ func countOfAtoms(formula string) string {
 			if elem.atoms == 0 {
 				elem.atoms = 1
 			}
+
 			stack = append(stack, elem.atoms)
 			multiply *= elem.atoms
 			elem.atoms = 0
@@ -52,12 +59,15 @@ func countOfAtoms(formula string) string {
 			stack = stack[:len(stack)-1]
 		}
 	}
+
 	sort.Slice(elements, // O(N Log N)
 		func(i, j int) bool {
 			return elements[i].name < elements[j].name
 		},
 	)
+
 	result := ""
+
 	n := len(elements)
 	for idx := range elements { // O(N)
 		if idx+1 < n && elements[idx].name == elements[idx+1].name {
@@ -69,6 +79,7 @@ func countOfAtoms(formula string) string {
 			}
 		}
 	}
+
 	return result
 }
 

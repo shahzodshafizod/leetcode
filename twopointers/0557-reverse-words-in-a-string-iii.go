@@ -17,6 +17,7 @@ func reverseWords(s string) string {
 		slices.Reverse(word)
 		words[idx] = string(word)
 	}
+
 	return strings.Join(words, " ")
 }
 

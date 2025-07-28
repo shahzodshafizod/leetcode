@@ -11,22 +11,28 @@ type FindElements struct {
 func NewFindElements(root *pkg.TreeNode) FindElements {
 	values := make(map[int]struct{})
 	root.Val = 0
+
 	queue := []*pkg.TreeNode{root}
 	for len(queue) > 0 {
 		next := make([]*pkg.TreeNode, 0)
+
 		for _, node := range queue {
 			values[node.Val] = struct{}{}
+
 			if node.Left != nil {
 				node.Left.Val = node.Val*2 + 1
 				next = append(next, node.Left)
 			}
+
 			if node.Right != nil {
 				node.Right.Val = node.Val*2 + 2
 				next = append(next, node.Right)
 			}
 		}
+
 		queue = next
 	}
+
 	return FindElements{values}
 }
 

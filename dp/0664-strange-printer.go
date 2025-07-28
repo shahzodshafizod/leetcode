@@ -8,24 +8,29 @@ package dp
 func strangePrinter(s string) int {
 	// remove consecutive duplicate characters
 	uniqS := ""
+
 	prev := ' '
 	for _, c := range s {
 		if c != prev {
 			uniqS += string(c)
 		}
+
 		prev = c
 	}
+
 	s = uniqS
 	n := len(s)
 
 	indexes := map[byte]int{}
 	next := make([]int, n)
+
 	for idx := n - 1; idx >= 0; idx-- {
 		if indexes[s[idx]] > 0 {
 			next[idx] = indexes[s[idx]]
 		} else {
 			next[idx] = n
 		}
+
 		indexes[s[idx]] = idx
 	}
 

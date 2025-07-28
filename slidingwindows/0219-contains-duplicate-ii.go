@@ -6,17 +6,22 @@ package slidingwindows
 // space: O(n)
 func containsNearbyDuplicate(nums []int, k int) bool {
 	window := make(map[int]bool)
+
 	start := 0
 	for end, num := range nums {
 		if end-start > k {
 			delete(window, nums[start])
+
 			start++
 		}
+
 		if window[num] {
 			return true
 		}
+
 		window[num] = true
 	}
+
 	return false
 }
 

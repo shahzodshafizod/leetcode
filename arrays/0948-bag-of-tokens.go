@@ -6,7 +6,9 @@ import "sort"
 
 func bagOfTokensScore(tokens []int, power int) int {
 	score := 0
+
 	sort.Ints(tokens)
+
 	for left, right := 0, len(tokens)-1; left <= right; {
 		if power >= tokens[left] {
 			power -= tokens[left]
@@ -20,5 +22,6 @@ func bagOfTokensScore(tokens []int, power int) int {
 			break
 		}
 	}
+
 	return score
 }

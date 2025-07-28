@@ -20,15 +20,18 @@ func TestNumArray(t *testing.T) {
 		},
 	} {
 		var numArray NumArray
+
 		var output any
 		for idx, command := range tc.commands {
 			output = nil
+
 			switch command {
 			case "NumArray":
 				numArray = NewNumArray(tc.values[idx])
 			case "sumRange":
 				output = numArray.SumRange(tc.values[idx][0], tc.values[idx][1])
 			}
+
 			assert.Equal(t, tc.output[idx], output)
 		}
 	}

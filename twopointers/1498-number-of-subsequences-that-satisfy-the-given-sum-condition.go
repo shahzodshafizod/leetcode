@@ -11,12 +11,17 @@ func numSubseq(nums []int, target int) int {
 	n := len(nums)
 	power2 := make([]int, n)
 	power2[0] = 1
+
 	const MOD int = 1e9 + 7
+
 	for idx := 1; idx < n; idx++ {
 		power2[idx] = (power2[idx-1] * 2) % MOD
 	}
+
 	sort.Ints(nums)
+
 	count := 0
+
 	left, right := 0, n-1
 	for left <= right {
 		if nums[left]+nums[right] > target {
@@ -29,5 +34,6 @@ func numSubseq(nums []int, target int) int {
 			left++
 		}
 	}
+
 	return count
 }

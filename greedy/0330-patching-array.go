@@ -15,7 +15,9 @@ package greedy
 // space: O(1)
 func minPatches(nums []int, n int) int {
 	patches, maxPatch := 0, 0
+
 	var patch int
+
 	for idx := 0; maxPatch < n; { // O(log n)
 		patch = maxPatch + 1
 		if idx < len(nums) && patch >= nums[idx] {
@@ -26,6 +28,7 @@ func minPatches(nums []int, n int) int {
 			patches++
 		}
 	}
+
 	return patches
 }
 

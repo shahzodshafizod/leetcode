@@ -10,7 +10,9 @@ func minZeroArray(nums []int, queries [][]int) int {
 	line := make([]int, n+1)
 	k, qlen := 0, len(queries)
 	idx, presum := 0, 0
+
 	var l, r, val int
+
 	for idx < n {
 		if nums[idx] <= presum+line[idx] {
 			presum += line[idx]
@@ -23,15 +25,19 @@ func minZeroArray(nums []int, queries [][]int) int {
 				} else {
 					line[l] += val
 				}
+
 				line[r+1] -= val
 			}
+
 			k++
 		} else {
 			break
 		}
 	}
+
 	if idx == n {
 		return k
 	}
+
 	return -1
 }

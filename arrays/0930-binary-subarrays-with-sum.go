@@ -15,13 +15,16 @@ func numSubarraysWithSum(nums []int, goal int) int {
 			} else {
 				zeros++
 			}
+
 			sum -= nums[start]
 			start++
 		}
+
 		if sum == goal {
 			count += 1 + zeros
 		}
 	}
+
 	return count
 }
 

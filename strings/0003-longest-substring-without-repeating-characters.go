@@ -34,18 +34,23 @@ func lengthOfLongestSubstring(s string) int {
 	if slength <= 1 {
 		return slength
 	}
+
 	maxLength := 0
 	hash := make(map[byte]int)
 	left, right := 0, 0
+
 	for ; right < slength; right++ {
 		if index, exists := hash[s[right]]; exists && index >= left {
 			maxLength = max(maxLength, right-left)
 			left = index + 1
 		}
+
 		hash[s[right]] = right
 		// maxLength = max(maxLength, right-left+1) // to uncomment this line, comment other maxLength = max()'s
 	}
+
 	maxLength = max(maxLength, right-left)
+
 	return maxLength
 }
 

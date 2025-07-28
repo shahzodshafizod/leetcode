@@ -12,21 +12,28 @@ func canPartition(nums []int) bool {
 	for _, num := range nums {
 		total += num
 	}
+
 	if total&1 != 0 {
 		return false
 	}
+
 	target := total / 2
+
 	dp := map[int]bool{0: true}
 	for _, num := range nums {
 		nextdp := maps.Clone(dp)
+
 		for t := range dp {
 			if t+num == target {
 				return true
 			}
+
 			nextdp[t+num] = true
 		}
+
 		dp = nextdp
 	}
+
 	return dp[target]
 }
 

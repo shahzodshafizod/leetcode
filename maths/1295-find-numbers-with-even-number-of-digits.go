@@ -7,6 +7,7 @@ package maths
 // Space: O(1)
 func findNumbers(nums []int) int {
 	count := 0
+
 	var digits int
 	for _, num := range nums {
 		digits = 0
@@ -14,10 +15,12 @@ func findNumbers(nums []int) int {
 			digits++
 			num /= 10
 		}
+
 		if digits&1 == 0 {
 			count++
 		}
 	}
+
 	return count
 }
 

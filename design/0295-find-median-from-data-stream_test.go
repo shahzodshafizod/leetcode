@@ -35,8 +35,10 @@ func TestMedianFinder(t *testing.T) {
 		},
 	} {
 		var medianFinder MedianFinder
+
 		for index, command := range tc.commands {
 			var output any = nil
+
 			switch command {
 			case "MedianFinder":
 				medianFinder = NewMedianFinder()
@@ -45,6 +47,7 @@ func TestMedianFinder(t *testing.T) {
 			case "findMedian":
 				output = medianFinder.FindMedian()
 			}
+
 			assert.Equal(t, tc.output[index], output)
 		}
 	}

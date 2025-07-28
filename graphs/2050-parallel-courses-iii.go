@@ -10,26 +10,33 @@ import "slices"
 func minimumTime(n int, relations [][]int, time []int) int {
 	adjList := make([][]int, n)
 	indegree := make([]int, n)
+
 	var src, dst int
 	for idx := range relations {
 		src, dst = relations[idx][0]-1, relations[idx][1]-1
 		adjList[src] = append(adjList[src], dst)
 		indegree[dst]++
 	}
+
 	queue := make([]int, 0)
+
 	for node, degree := range indegree {
 		if degree == 0 {
 			queue = append(queue, node)
 		}
 	}
+
 	dist := make([]int, n)
 	copy(dist, time)
+
 	idx, size := 0, len(queue)
 	for idx < size {
 		src = queue[idx]
 		idx++
+
 		for _, dst := range adjList[src] {
 			dist[dst] = max(dist[dst], dist[src]+time[dst])
+
 			indegree[dst]--
 			if indegree[dst] == 0 {
 				queue = append(queue, dst)
@@ -37,6 +44,7 @@ func minimumTime(n int, relations [][]int, time []int) int {
 			}
 		}
 	}
+
 	return slices.Max(dist)
 }
 

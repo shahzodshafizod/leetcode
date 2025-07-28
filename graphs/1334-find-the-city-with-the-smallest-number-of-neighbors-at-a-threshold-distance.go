@@ -12,8 +12,10 @@ func findTheCity(n int, edges [][]int, distanceThreshold int) int {
 		for to := range adjMatrix[from] {
 			adjMatrix[from][to] = 1e9
 		}
+
 		adjMatrix[from][from] = 0
 	}
+
 	var from, to, weight int
 	for _, edge := range edges {
 		from, to, weight = edge[0], edge[1], edge[2]
@@ -35,19 +37,23 @@ func findTheCity(n int, edges [][]int, distanceThreshold int) int {
 	// Determine the city with the fewest number of
 	// reachable cities within the adjMatrix threshold
 	city, minConnections := 0, n
+
 	var connections int
 	for from := n - 1; from >= 0; from-- {
 		connections = 0
+
 		for to := 0; to < n; to++ {
 			if from != to && adjMatrix[from][to] <= distanceThreshold {
 				connections++
 			}
 		}
+
 		if connections < minConnections {
 			minConnections = connections
 			city = from
 		}
 	}
+
 	return city
 }
 

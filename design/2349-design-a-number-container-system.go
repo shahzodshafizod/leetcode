@@ -25,6 +25,7 @@ func (n *NumberContainers) Change(index int, number int) {
 	if n.num2idx[number] == nil {
 		n.num2idx[number] = pkg.NewHeap(make([]int, 0), func(x int, y int) bool { return x < y })
 	}
+
 	heap.Push(n.num2idx[number], index)
 }
 
@@ -32,9 +33,11 @@ func (n *NumberContainers) Find(number int) int {
 	for n.num2idx[number] != nil && n.num2idx[number].Len() > 0 && n.idx2num[n.num2idx[number].Peak()] != number {
 		heap.Pop(n.num2idx[number])
 	}
+
 	if n.num2idx[number] != nil && n.num2idx[number].Len() > 0 {
 		return n.num2idx[number].Peak()
 	}
+
 	return -1
 }
 

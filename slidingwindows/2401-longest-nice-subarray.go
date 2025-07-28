@@ -8,13 +8,16 @@ package slidingwindows
 func longestNiceSubarray(nums []int) int {
 	mask, length := 0, 0
 	left := 0
+
 	for right := range nums {
 		for mask&nums[right] != 0 {
 			mask ^= nums[left]
 			left++
 		}
+
 		mask |= nums[right]
 		length = max(length, right-left+1)
 	}
+
 	return length
 }

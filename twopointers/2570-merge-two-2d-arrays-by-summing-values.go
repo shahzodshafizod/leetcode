@@ -5,6 +5,7 @@ package twopointers
 func mergeArrays(nums1 [][]int, nums2 [][]int) [][]int {
 	n1, n2 := len(nums1), len(nums2)
 	res := make([][]int, 0, n1+n2)
+
 	idx1, idx2 := 0, 0
 	for idx1 < n1 && idx2 < n2 {
 		if nums1[idx1][0] < nums2[idx2][0] {
@@ -22,11 +23,14 @@ func mergeArrays(nums1 [][]int, nums2 [][]int) [][]int {
 			idx2++
 		}
 	}
+
 	for ; idx1 < n1; idx1++ {
 		res = append(res, nums1[idx1])
 	}
+
 	for ; idx2 < n2; idx2++ {
 		res = append(res, nums2[idx2])
 	}
+
 	return res
 }

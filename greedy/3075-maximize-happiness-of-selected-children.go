@@ -8,14 +8,18 @@ import (
 
 func maximumHappinessSum(happiness []int, k int) int64 {
 	sort.Ints(happiness)
+
 	var sum int64 = 0
+
 	for turns, idx := 0, len(happiness)-1; turns < k; {
 		if happiness[idx]-turns > 0 {
 			sum += int64(happiness[idx] - turns)
 		}
+
 		idx--
 		turns++
 	}
+
 	return sum
 }
 

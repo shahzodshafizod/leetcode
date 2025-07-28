@@ -8,14 +8,18 @@ package dp
 func numWays1639(words []string, target string) int {
 	tlen, wlen := len(target), len(words[0])
 	count := make([][26]int, wlen)
+
 	for _, word := range words {
 		for wid := range word {
 			count[wid][int(word[wid]-'a')]++
 		}
 	}
+
 	curr, next := make([]int, tlen+1), make([]int, tlen+1)
 	curr[tlen], next[tlen] = 1, 1
+
 	const MOD int = 1e9 + 7
+
 	for wid := wlen - 1; wid >= 0; wid-- {
 		curr, next = next, curr
 		for tid := tlen - 1; tid >= 0; tid-- {
@@ -23,6 +27,7 @@ func numWays1639(words []string, target string) int {
 				count[wid][int(target[tid]-'a')]*next[tid+1]) % MOD
 		}
 	}
+
 	return curr[0]
 }
 

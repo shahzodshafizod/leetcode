@@ -19,20 +19,26 @@ func countSmaller(nums []int) []int {
 	count := func(idx int) int {
 		idx -= min
 		count := 0
+
 		for ; idx > 0; idx -= idx & -idx {
 			count += bitree[idx]
 		}
+
 		return count
 	}
+
 	for _, num := range nums {
 		update(num, 1)
 	}
+
 	n := len(nums)
 	smallers := make([]int, n)
+
 	for idx, num := range nums {
 		update(num, -1)
 		smallers[idx] = count(num)
 	}
+
 	return smallers
 }
 

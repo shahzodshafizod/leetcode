@@ -9,7 +9,9 @@ func numWays(steps int, arrLen int) int {
 	arrLen = min(arrLen, steps) // cannot move further than "steps" steps
 	prev, curr := make([]int, arrLen), make([]int, arrLen)
 	curr[0] = 1
+
 	const MOD int = 1e9 + 7
+
 	for st := 1; st <= steps; st++ {
 		prev, curr = curr, prev
 		for pos := arrLen - 1; pos >= 0; pos-- {
@@ -17,11 +19,13 @@ func numWays(steps int, arrLen int) int {
 			if pos > 0 {
 				curr[pos] = (curr[pos] + prev[pos-1]) % MOD
 			}
+
 			if pos+1 < arrLen {
 				curr[pos] = (curr[pos] + prev[pos+1]) % MOD
 			}
 		}
 	}
+
 	return curr[0]
 }
 

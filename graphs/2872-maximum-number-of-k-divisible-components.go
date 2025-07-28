@@ -7,29 +7,38 @@ package graphs
 // Space: O(n+e)
 func maxKDivisibleComponents(n int, edges [][]int, values []int, k int) int {
 	adj := make([][]int, n)
+
 	var a, b int
 	for idx := range edges {
 		a, b = edges[idx][0], edges[idx][1]
 		adj[a] = append(adj[a], b)
 		adj[b] = append(adj[b], a)
 	}
+
 	count := 0
+
 	var dfs func(parent int, node int) int
+
 	dfs = func(parent int, node int) int {
 		total := values[node]
+
 		for _, next := range adj[node] {
 			if next == parent {
 				continue
 			}
+
 			total += dfs(node, next)
 		}
+
 		if total%k == 0 {
 			count++
 			total = 0
 		}
+
 		return total
 	}
 	dfs(-1, 0)
+
 	return count
 }
 

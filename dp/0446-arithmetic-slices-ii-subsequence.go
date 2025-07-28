@@ -22,12 +22,16 @@ package dp
 // Space: O(nd), d=max(nums)-min(nums)
 func numberOfArithmeticSlicesSubsequence(nums []int) int {
 	n := len(nums)
+
 	dp := make([]map[int]int, n)
 	for idx := range dp {
 		dp[idx] = make(map[int]int)
 	}
+
 	var difference int
+
 	count := 0
+
 	for curr := 1; curr < n; curr++ {
 		for prev := 0; prev < curr; prev++ {
 			difference = nums[curr] - nums[prev]
@@ -35,6 +39,7 @@ func numberOfArithmeticSlicesSubsequence(nums []int) int {
 			count += dp[prev][difference]
 		}
 	}
+
 	return count
 }
 

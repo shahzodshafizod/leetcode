@@ -8,16 +8,21 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 func floodFill(image [][]int, sr int, sc int, color int) [][]int {
 	queue := pkg.NewQueue[[2]int]()
 	srcColor := image[sr][sc]
+
 	if srcColor != color {
 		queue.Enqueue([2]int{sr, sc})
 	}
+
 	m, n := len(image), len(image[0])
 	dirs := [5]int{-1, 0, 1, 0, -1}
+
 	var row, col, r, c int
+
 	for !queue.Empty() {
 		curr := queue.Dequeue()
 		row, col = curr[0], curr[1]
 		image[row][col] = color
+
 		for d := 1; d < 5; d++ {
 			r, c = row+dirs[d-1], col+dirs[d]
 			if min(r, c) >= 0 && r < m && c < n && image[r][c] == srcColor {
@@ -25,6 +30,7 @@ func floodFill(image [][]int, sr int, sc int, color int) [][]int {
 			}
 		}
 	}
+
 	return image
 }
 

@@ -67,24 +67,30 @@ Directed Acyclic Graph
 // Topological Sort via BFS
 func canFinish(numCourses int, prerequisites [][]int) bool {
 	adjList := make([][]int, numCourses)
+
 	inDegree := make([]int, numCourses)
 	for _, pair := range prerequisites {
 		inDegree[pair[0]]++
+
 		if adjList[pair[1]] == nil {
 			adjList[pair[1]] = []int{pair[0]}
 		} else {
 			adjList[pair[1]] = append(adjList[pair[1]], pair[0])
 		}
 	}
+
 	stack := make([]int, 0)
+
 	for i := 0; i < numCourses; i++ {
 		if inDegree[i] == 0 {
 			stack = append(stack, i)
 		}
 	}
+
 	count := 0
 	for length := len(stack); length > 0; length = len(stack) {
 		count++
+
 		adjacent := adjList[stack[0]]
 		for i, listLength := 0, len(adjacent); i < listLength; i++ {
 			inDegree[adjacent[i]]--
@@ -92,8 +98,10 @@ func canFinish(numCourses int, prerequisites [][]int) bool {
 				stack = append(stack, adjacent[i])
 			}
 		}
+
 		stack = stack[1:]
 	}
+
 	return count == numCourses
 }
 

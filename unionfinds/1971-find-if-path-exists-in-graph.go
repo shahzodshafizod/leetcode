@@ -9,6 +9,7 @@ func validPath(n int, edges [][]int, source int, destination int) bool {
 	for _, edge := range edges {
 		uf.Union(edge[0], edge[1])
 	}
+
 	return uf.Find(source) == uf.Find(destination)
 }
 

@@ -9,37 +9,46 @@ func largestPathValue(colors string, edges [][]int) int {
 	n := len(colors)
 	adj := make([][]int, n)
 	indegrees := make([]int, n)
+
 	var src, dst int
 	for idx := range edges {
 		src, dst = edges[idx][0], edges[idx][1]
 		adj[src] = append(adj[src], dst)
 		indegrees[dst] += 1
 	}
+
 	queue := make([]int, n)
 	size := 0
 	colids := make([]int, n)
+
 	for node := 0; node < n; node++ {
 		if indegrees[node] == 0 {
 			queue[size] = node
 			size++
 		}
+
 		colids[node] = int(colors[node] - 'a')
 	}
+
 	dp := make([][26]int, n)
 	value := 0
+
 	var node int
 	for size > 0 {
 		node = queue[size-1]
 		size--
 		n--
+
 		dp[node][colids[node]]++
 		for _, cnt := range dp[node] {
 			value = max(value, cnt)
 		}
+
 		for _, next := range adj[node] {
 			for c := 0; c < 26; c++ {
 				dp[next][c] = max(dp[next][c], dp[node][c])
 			}
+
 			indegrees[next]--
 			if indegrees[next] == 0 {
 				queue[size] = next
@@ -47,9 +56,11 @@ func largestPathValue(colors string, edges [][]int) int {
 			}
 		}
 	}
+
 	if n != 0 {
 		return -1
 	}
+
 	return value
 }
 

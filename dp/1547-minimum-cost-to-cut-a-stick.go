@@ -15,15 +15,18 @@ func minCost(n int, cuts []int) int {
 	sort.Ints(cuts)
 	m := len(cuts)
 	dp := make([][]int, m)
+
 	for idx := range dp {
 		dp[idx] = make([]int, m)
 	}
+
 	var start, end, mid, cost int
 	for diff := 2; diff < m; diff++ {
 		for start = 0; start < m-diff; start++ {
 			end = start + diff
 			dp[start][end] = math.MaxInt
 			cost = cuts[end] - cuts[start]
+
 			for mid = start + 1; mid < end; mid++ {
 				dp[start][end] = min(dp[start][end],
 					cost+dp[start][mid]+dp[mid][end],
@@ -31,6 +34,7 @@ func minCost(n int, cuts []int) int {
 			}
 		}
 	}
+
 	return dp[0][m-1]
 }
 

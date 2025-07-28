@@ -8,6 +8,7 @@ package dp
 func winnerSquareGame(n int) bool {
 	dp := make([]bool, n+1)
 	dp[0] = false
+
 	for curr := 1; curr <= n; curr++ {
 		for x := 1; x*x <= curr; x++ {
 			if !dp[curr-x*x] {
@@ -16,6 +17,7 @@ func winnerSquareGame(n int) bool {
 			}
 		}
 	}
+
 	return dp[n]
 }
 

@@ -55,22 +55,27 @@ func countMaxOrSubsets(nums []int) int {
 	for _, num := range nums {
 		maxor |= num
 	}
+
 	n := len(nums)
 	// bin(int(1e5)) = 11000011010100000
 	// dec(11111111111111111) = 131071
 	var dfs func(idx int, logicsum int) int
+
 	dfs = func(idx int, logicsum int) int {
 		if idx == n {
 			if logicsum == maxor {
 				return 1
 			}
+
 			return 0
 		}
 		// decision to skip
 		count := dfs(idx+1, logicsum)
 		// decision to include
 		count += dfs(idx+1, logicsum|nums[idx])
+
 		return count
 	}
+
 	return dfs(0, 0)
 }

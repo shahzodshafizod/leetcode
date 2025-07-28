@@ -7,11 +7,13 @@ package prefixsums
 // Space: O(n)
 func isZeroArray(nums []int, queries [][]int) bool {
 	n := len(nums)
+
 	line := make([]int, n+1)
 	for idx := range queries {
 		line[queries[idx][0]]++
 		line[queries[idx][1]+1]--
 	}
+
 	presum := 0
 	for idx := 0; idx < n; idx++ {
 		presum += line[idx]
@@ -19,5 +21,6 @@ func isZeroArray(nums []int, queries [][]int) bool {
 			return false
 		}
 	}
+
 	return true
 }

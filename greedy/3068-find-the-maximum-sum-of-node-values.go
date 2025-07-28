@@ -17,11 +17,15 @@ Why we didn't use edges?
 func maximumValueSum(nums []int, k int, _ [][]int) int64 {
 	// 10^9 = 0b111011100110101100101000000000
 	var sum, minDelta int64 = 0, 1 << 30
+
 	var delta int64
+
 	count := 0
+
 	for _, num := range nums {
 		sum += int64(num)
 		delta = int64((num ^ k) - num)
+
 		if delta > 0 {
 			sum += int64(delta)
 			count++
@@ -30,9 +34,11 @@ func maximumValueSum(nums []int, k int, _ [][]int) int64 {
 			minDelta = min(minDelta, -delta)
 		}
 	}
+
 	if count&1 == 1 {
 		sum -= minDelta
 	}
+
 	return sum
 }
 

@@ -7,6 +7,7 @@ package hashes
 // Space: O(N)
 func countPairs(nums []int, k int) int {
 	pairs := 0
+
 	indices := make(map[int][]int)
 	for curr, num := range nums {
 		for _, prev := range indices[num] {
@@ -14,7 +15,9 @@ func countPairs(nums []int, k int) int {
 				pairs++
 			}
 		}
+
 		indices[num] = append(indices[num], curr)
 	}
+
 	return pairs
 }

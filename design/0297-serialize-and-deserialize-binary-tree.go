@@ -21,6 +21,7 @@ func (c *Codec) serialize(root *pkg.TreeNode) string {
 	if root == nil {
 		return "N"
 	}
+
 	return fmt.Sprintf("%d,%s,%s",
 		root.Val,
 		c.serialize(root.Left),
@@ -31,19 +32,24 @@ func (c *Codec) serialize(root *pkg.TreeNode) string {
 // Deserializes your encoded data to tree.
 func (c *Codec) deserialize(data string) *pkg.TreeNode {
 	vals := strings.Split(data, ",")
+
 	var dfs func(idx int) (*pkg.TreeNode, int)
+
 	dfs = func(idx int) (*pkg.TreeNode, int) {
 		if vals[idx] == "N" {
 			return nil, idx + 1
 		}
+
 		node := &pkg.TreeNode{}
 		node.Val, _ = strconv.Atoi(vals[idx])
 		idx++
 		node.Left, idx = dfs(idx)
 		node.Right, idx = dfs(idx)
+
 		return node, idx
 	}
 	root, _ := dfs(0)
+
 	return root
 }
 

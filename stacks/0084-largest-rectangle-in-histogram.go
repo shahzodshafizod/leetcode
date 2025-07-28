@@ -9,6 +9,7 @@ func largestRectangleArea(heights []int) int {
 	stack := make([][2]int, n) // increasing stack {index, height}
 	top := -1
 	maximal := 0
+
 	var index int
 	for idx, height := range heights {
 		index = idx
@@ -17,17 +18,21 @@ func largestRectangleArea(heights []int) int {
 			maximal = max(maximal, stack[top][1]*(idx-index))
 			top--
 		}
+
 		top++
 		stack[top][0] = index
 		stack[top][1] = height
 	}
+
 	var height int
+
 	for top >= 0 {
 		index = stack[top][0]
 		height = stack[top][1]
 		maximal = max(maximal, height*(n-index))
 		top--
 	}
+
 	return maximal
 }
 

@@ -7,29 +7,39 @@ package strings
 // Space: O(1)
 func strStr(haystack string, needle string) int {
 	const base, mod int = 29, 1e9 + 7
+
 	subs := 0
+
 	var digit int
+
 	power := 1
+
 	for idx, c := range needle {
 		digit = int(c-'a') + 1
 		subs = (subs*base + digit) % mod
+
 		if idx > 0 {
 			power = (power * base) % mod
 		}
 	}
+
 	m := len(needle)
 	s := 0
+
 	for idx, c := range haystack {
 		if idx >= m {
 			digit = int(haystack[idx-m]-'a') + 1
 			s = (s + mod - (digit*power)%mod) % mod
 		}
+
 		digit = int(c-'a') + 1
+
 		s = (s*base + digit) % mod
 		if s == subs {
 			return idx + 1 - m
 		}
 	}
+
 	return -1
 }
 

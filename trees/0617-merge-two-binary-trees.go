@@ -11,16 +11,21 @@ func mergeTrees(root1 *pkg.TreeNode, root2 *pkg.TreeNode) *pkg.TreeNode {
 	if root1 == nil {
 		return root2
 	}
+
 	stack := [][2]*pkg.TreeNode{{root1, root2}}
 	size := 1
+
 	var node1, node2 *pkg.TreeNode
+
 	for size > 0 {
 		node1, node2 = stack[size-1][0], stack[size-1][1]
 		stack = stack[:size-1]
 		size--
+
 		if node1 == nil || node2 == nil {
 			continue
 		}
+
 		node1.Val += node2.Val
 
 		if node1.Left == nil {
@@ -29,6 +34,7 @@ func mergeTrees(root1 *pkg.TreeNode, root2 *pkg.TreeNode) *pkg.TreeNode {
 			stack = append(stack, [2]*pkg.TreeNode{node1.Left, node2.Left})
 			size++
 		}
+
 		if node1.Right == nil {
 			node1.Right = node2.Right
 		} else {
@@ -36,6 +42,7 @@ func mergeTrees(root1 *pkg.TreeNode, root2 *pkg.TreeNode) *pkg.TreeNode {
 			size++
 		}
 	}
+
 	return root1
 }
 

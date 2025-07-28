@@ -10,6 +10,7 @@ func removeDuplicates(nums []int) int {
 			nums[index] = num
 		}
 	}
+
 	return index + 1
 }
 

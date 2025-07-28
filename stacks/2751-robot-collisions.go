@@ -14,14 +14,18 @@ func survivedRobotsHealths(positions []int, healths []int, directions string) []
 		posid[idx][0] = position
 		posid[idx][1] = idx
 	}
+
 	sort.Slice(posid, // O(N Log N)
 		func(i, j int) bool { return posid[i][0] < posid[j][0] },
 	)
+
 	type node struct {
 		index int
 		next  *node
 	}
+
 	var stack *node = nil
+
 	var newid, topid int
 	for _, posid := range posid {
 		newid = posid[1]
@@ -31,6 +35,7 @@ func survivedRobotsHealths(positions []int, healths []int, directions string) []
 			for stack != nil && healths[newid] > 0 {
 				topid = stack.index
 				stack = stack.next
+
 				if healths[newid] > healths[topid] {
 					healths[topid] = 0
 					healths[newid]--
@@ -45,11 +50,14 @@ func survivedRobotsHealths(positions []int, healths []int, directions string) []
 			}
 		}
 	}
+
 	survivors := make([]int, 0)
+
 	for _, health := range healths {
 		if health > 0 {
 			survivors = append(survivors, health)
 		}
 	}
+
 	return survivors
 }

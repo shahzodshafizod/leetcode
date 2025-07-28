@@ -21,6 +21,7 @@ func pushDominoes(dominoes string) string {
 	n := len(dominoes)
 	force := make([]int, n)
 	f := 0
+
 	for idx := n - 1; idx >= 0; idx-- {
 		switch dominoes[idx] {
 		case 'L':
@@ -30,10 +31,14 @@ func pushDominoes(dominoes string) string {
 		default:
 			f = max(f-1, 0)
 		}
+
 		force[idx] -= f
 	}
+
 	var sb strings.Builder
+
 	f = 0
+
 	for idx := 0; idx < n; idx++ {
 		switch dominoes[idx] {
 		case 'R':
@@ -43,6 +48,7 @@ func pushDominoes(dominoes string) string {
 		default:
 			f = max(f-1, 0)
 		}
+
 		force[idx] += f
 		if force[idx] > 0 {
 			sb.WriteByte('R')
@@ -52,5 +58,6 @@ func pushDominoes(dominoes string) string {
 			sb.WriteByte('.')
 		}
 	}
+
 	return sb.String()
 }

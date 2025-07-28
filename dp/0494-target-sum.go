@@ -9,14 +9,17 @@ func findTargetSumWays(nums []int, target int) int {
 	n := len(nums)
 	dp := make(map[int]int)
 	dp[0] = 1
+
 	for idx := 0; idx < n; idx++ {
 		prev := dp
 		dp = make(map[int]int)
+
 		for currSum, count := range prev {
 			dp[currSum+nums[idx]] += count
 			dp[currSum-nums[idx]] += count
 		}
 	}
+
 	return dp[target]
 }
 

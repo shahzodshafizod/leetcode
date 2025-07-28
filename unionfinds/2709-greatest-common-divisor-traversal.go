@@ -8,6 +8,7 @@ func canTraverseAllPairs(nums []int) bool {
 	n := len(nums)
 	uf := pkg.NewUnionFindRanked(n)
 	factors := make(map[int]int)
+
 	var factor int
 	for idx, num := range nums {
 		factor = 2
@@ -20,12 +21,15 @@ func canTraverseAllPairs(nums []int) bool {
 				} else {
 					factors[factor] = idx
 				}
+
 				for num%factor == 0 {
 					num /= factor
 				}
 			}
+
 			factor++
 		}
+
 		if num > 1 {
 			if index, exists := factors[num]; exists {
 				if uf.Union(idx, index) {
@@ -36,6 +40,7 @@ func canTraverseAllPairs(nums []int) bool {
 			}
 		}
 	}
+
 	return n == 1
 }
 

@@ -11,18 +11,23 @@ func kthSmallestPath(destination []int, k int) string {
 	var dp [30][30]int
 	// Credit to: http://ptaskbook.com/en/tasks/recur.php (Recur6)
 	var comb func(n int, k int) int
+
 	comb = func(n int, k int) int {
 		if n == k || k == 0 {
 			return 1
 		}
+
 		if dp[n][k] != 0 {
 			return dp[n][k]
 		}
+
 		dp[n][k] = comb(n-1, k) + comb(n-1, k-1)
+
 		return dp[n][k]
 	}
 	row, col := destination[0], destination[1]
 	path := ""
+
 	for row != 0 && col != 0 {
 		c := comb(row+col-1, row)
 		if k <= c {
@@ -34,7 +39,9 @@ func kthSmallestPath(destination []int, k int) string {
 			row--
 		}
 	}
+
 	path += strings.Repeat("H", col) + strings.Repeat("V", row)
+
 	return path
 }
 

@@ -30,6 +30,7 @@ func NewTwitter() Twitter {
 func (t *Twitter) PostTweet(userId int, tweetId int) { // O(1)
 	newTweet := &tweet{id: tweetId, uniqueId: t.nextId}
 	t.nextId++
+
 	if t.tweets[userId] == nil {
 		t.tweets[userId] = []*tweet{newTweet}
 	} else {
@@ -42,16 +43,20 @@ func (t *Twitter) GetNewsFeed(userId int) []int { // O(N Log N)
 	for followeeId := range t.followees[userId] {
 		posts = append(posts, t.tweets[followeeId]...)
 	}
+
 	copy(posts, t.tweets[userId])
 	tweets := pkg.NewHeap(posts, func(x, y *tweet) bool { return x.uniqueId > y.uniqueId })
 	heap.Init(tweets)
+
 	result := make([]int, 0)
+
 	count := 10
 	for tweets.Len() > 0 && count > 0 {
 		count--
 		tweet := heap.Pop(tweets).(*tweet)
 		result = append(result, tweet.id)
 	}
+
 	return result
 }
 
@@ -59,6 +64,7 @@ func (t *Twitter) Follow(followerId int, followeeId int) { // O(1)
 	if t.followees[followerId] == nil {
 		t.followees[followerId] = make(map[int]bool)
 	}
+
 	t.followees[followerId][followeeId] = true
 }
 

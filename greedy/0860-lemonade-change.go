@@ -4,6 +4,7 @@ package greedy
 
 func lemonadeChange(bills []int) bool {
 	fiveStack, tenStack := 0, 0
+
 	for _, bill := range bills {
 		switch bill {
 		case 5:
@@ -19,9 +20,11 @@ func lemonadeChange(bills []int) bool {
 				fiveStack -= 3
 			}
 		}
+
 		if fiveStack < 0 {
 			return false
 		}
 	}
+
 	return true
 }

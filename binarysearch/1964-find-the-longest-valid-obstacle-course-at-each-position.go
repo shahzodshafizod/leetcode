@@ -10,6 +10,7 @@ func longestObstacleCourseAtEachPosition(obstacles []int) []int {
 	lis := make([]int, n)
 	size := 0
 	ans := make([]int, 0, n)
+
 	var left, right, mid int
 	for _, obstacle := range obstacles {
 		left, right = 0, size
@@ -21,14 +22,17 @@ func longestObstacleCourseAtEachPosition(obstacles []int) []int {
 				left = mid + 1
 			}
 		}
+
 		if right == size {
 			lis[size] = obstacle
 			size++
 		} else {
 			lis[right] = obstacle
 		}
+
 		ans = append(ans, right+1)
 	}
+
 	return ans
 }
 

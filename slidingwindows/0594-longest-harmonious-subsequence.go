@@ -10,12 +10,15 @@ func findLHS(nums []int) int {
 	for _, num := range nums {
 		freq[num]++
 	}
+
 	length := 0
+
 	for num, cnt1 := range freq {
 		if cnt2, ok := freq[num+1]; ok {
 			length = max(length, cnt1+cnt2)
 		}
 	}
+
 	return length
 }
 

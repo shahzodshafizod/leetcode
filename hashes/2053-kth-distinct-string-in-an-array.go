@@ -10,6 +10,7 @@ func kthDistinct(arr []string, k int) string {
 	for _, s := range arr {
 		count[s]++
 	}
+
 	for _, s := range arr {
 		if count[s] == 1 {
 			k--
@@ -18,6 +19,7 @@ func kthDistinct(arr []string, k int) string {
 			}
 		}
 	}
+
 	return ""
 }
 

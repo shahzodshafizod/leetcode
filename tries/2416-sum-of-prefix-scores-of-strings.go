@@ -12,9 +12,11 @@ func sumPrefixScores(words []string) []int {
 		children map[rune]*TrieNode
 		count    int
 	}
+
 	newTrieNode := func() *TrieNode {
 		return &TrieNode{children: make(map[rune]*TrieNode)}
 	}
+
 	root := newTrieNode()
 	for _, word := range words {
 		curr := root
@@ -22,11 +24,14 @@ func sumPrefixScores(words []string) []int {
 			if curr.children[c] == nil {
 				curr.children[c] = newTrieNode()
 			}
+
 			curr = curr.children[c]
 			curr.count++
 		}
 	}
+
 	answer := make([]int, len(words))
+
 	for idx, word := range words {
 		curr := root
 		for _, c := range word {
@@ -34,6 +39,7 @@ func sumPrefixScores(words []string) []int {
 			answer[idx] += curr.count
 		}
 	}
+
 	return answer
 }
 

@@ -12,14 +12,17 @@ func rotateString(s string, goal string) bool {
 	// 1. LPS setup: O(2xn)
 	n := len(goal)
 	lps := make([]int, n) // longest prefix-suffix
+
 	prevLps := 0
 	for gid := 1; gid < n; gid++ {
 		for prevLps > 0 && goal[prevLps] != goal[gid] {
 			prevLps = lps[prevLps-1]
 		}
+
 		if goal[gid] == goal[prevLps] {
 			prevLps++
 		}
+
 		lps[gid] = prevLps
 	}
 	// 2. KMP: O(2xn)
@@ -28,13 +31,16 @@ func rotateString(s string, goal string) bool {
 		for gid > 0 && goal[gid] != byte(c) {
 			gid = lps[gid-1]
 		}
+
 		if goal[gid] == byte(c) {
 			gid++
 		}
+
 		if gid == n {
 			return true
 		}
 	}
+
 	return false
 }
 

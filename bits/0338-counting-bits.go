@@ -4,6 +4,7 @@ package bits
 
 func countBits(n int) []int {
 	bits := make([]int, n+1)
+
 	for i := 1; i <= n; i++ {
 		if i&(i-1) == 0 { // power of two, has the only bit set
 			bits[i] = 1
@@ -13,6 +14,7 @@ func countBits(n int) []int {
 			bits[i] = bits[i/2]
 		}
 	}
+
 	return bits
 }
 

@@ -11,10 +11,12 @@ func maxCoins(nums []int) int {
 	copy(bordered[1:], nums)
 	nums = bordered
 	nums[0], nums[n-1] = 1, 1
+
 	dp := make([][]int, n)
 	for idx := range dp {
 		dp[idx] = make([]int, n)
 	}
+
 	for left := n - 2; left > 0; left-- {
 		for right := left; right < n-1; right++ {
 			for idx := left; idx <= right; idx++ {

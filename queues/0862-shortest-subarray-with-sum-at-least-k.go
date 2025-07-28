@@ -7,12 +7,15 @@ package queues
 // Space: O(n)
 func shortestSubarray(nums []int, k int) int {
 	n := len(nums)
+
 	presum := make([]int, n+1)
 	for idx := range nums {
 		presum[idx+1] = presum[idx] + nums[idx]
 	}
+
 	queue := make([]int, n+1)
 	left, right, length := 0, 0, n+1
+
 	for end := 1; end <= n; end++ {
 		// Find the minimum valid window ending at 'end'
 		for left <= right && presum[end]-presum[queue[left]] >= k {
@@ -23,12 +26,15 @@ func shortestSubarray(nums []int, k int) int {
 		for left <= right && presum[end] <= presum[queue[right]] {
 			right--
 		}
+
 		right++
 		queue[right] = end
 	}
+
 	if length > n {
 		return -1
 	}
+
 	return length
 }
 

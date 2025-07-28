@@ -73,6 +73,7 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 func balanceBST(root *pkg.TreeNode) *pkg.TreeNode {
 	getNodes := func(root *pkg.TreeNode) []*pkg.TreeNode {
 		nodes := make([]*pkg.TreeNode, 0)
+
 		curr := root
 		for curr != nil {
 			if curr.Left == nil {
@@ -83,8 +84,10 @@ func balanceBST(root *pkg.TreeNode) *pkg.TreeNode {
 				for prev.Right != nil && prev.Right != curr {
 					prev = prev.Right
 				}
+
 				if prev.Right == curr {
 					prev.Right = nil
+
 					nodes = append(nodes, curr)
 					curr = curr.Right
 				} else {
@@ -93,21 +96,27 @@ func balanceBST(root *pkg.TreeNode) *pkg.TreeNode {
 				}
 			}
 		}
+
 		return nodes
 	}
+
 	var balance func(nodes []*pkg.TreeNode, left int, right int) *pkg.TreeNode
+
 	balance = func(nodes []*pkg.TreeNode, left int, right int) *pkg.TreeNode {
 		if left > right {
 			return nil
 		}
+
 		mid := (left + right) / 2
 		node := nodes[mid]
 		node.Left = balance(nodes, left, mid-1)
 		node.Right = balance(nodes, mid+1, right)
+
 		return node
 	}
 	nodes := getNodes(root)
 	root = balance(nodes, 0, len(nodes)-1)
+
 	return root
 }
 

@@ -41,6 +41,7 @@ func countNodes(root *pkg.TreeNode) int {
 	for node := root; node != nil; node = node.Left {
 		height++
 	}
+
 	if height <= 1 {
 		return height
 	}
@@ -63,6 +64,7 @@ func countNodes(root *pkg.TreeNode) int {
 
 		// find the current node
 		currentNode := optimalRoot
+
 		for l, r := left, right; l < r; {
 			mid := int(math.Ceil(float64(l+r) / 2))
 			if index >= mid {
@@ -82,6 +84,7 @@ func countNodes(root *pkg.TreeNode) int {
 			optimalRoot = optimalRoot.Left
 		}
 	}
+
 	count += left + 1
 
 	return count

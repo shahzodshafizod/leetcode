@@ -9,6 +9,7 @@ import (
 // go test -v -count=1 ./pkg/ -run ^TestStack$
 func TestStack(t *testing.T) {
 	var stack Stack[string]
+
 	for _, tc := range []struct {
 		command string
 		value   []string
@@ -28,6 +29,7 @@ func TestStack(t *testing.T) {
 		{command: "Empty", value: []string{}, output: false},
 	} {
 		var output any = nil
+
 		switch tc.command {
 		case "Stack":
 			stack = NewStack[string]()
@@ -42,6 +44,7 @@ func TestStack(t *testing.T) {
 		case "Size":
 			output = stack.Size()
 		}
+
 		assert.Equal(t, tc.output, output)
 	}
 }

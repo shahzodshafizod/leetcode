@@ -11,7 +11,9 @@ func findTheDifference(s string, t string) byte {
 		extra ^= s[idx]
 		extra ^= t[idx]
 	}
+
 	extra ^= t[len(t)-1]
+
 	return extra
 }
 

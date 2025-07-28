@@ -7,13 +7,16 @@ package dp
 // space: O(1)
 func minFallingPathSum(grid [][]int) int {
 	n := len(grid)
+
 	var min1col, min2col int
+
 	for row := 1; row < n; row++ {
 		// 1. find two minimums (min1<min2) from prev row
 		min1col, min2col = 0, 1
 		if grid[row-1][min1col] > grid[row-1][min2col] {
 			min1col, min2col = min2col, min1col
 		}
+
 		for col := 2; col < n; col++ {
 			if grid[row-1][col] < grid[row-1][min1col] {
 				min2col = min1col
@@ -36,6 +39,7 @@ func minFallingPathSum(grid [][]int) int {
 	for col := 1; col < n; col++ {
 		minsum = min(minsum, grid[n-1][col])
 	}
+
 	return minsum
 }
 

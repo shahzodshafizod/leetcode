@@ -60,9 +60,11 @@ func TestProductOfNumbers(t *testing.T) {
 		},
 	} {
 		var p ProductOfNumbers
+
 		var output any
 		for idx, command := range tc.commands {
 			output = nil
+
 			switch command {
 			case "ProductOfNumbers":
 				p = NewProductOfNumbers()
@@ -71,6 +73,7 @@ func TestProductOfNumbers(t *testing.T) {
 			case "getProduct":
 				output = p.GetProduct(tc.values[idx][0])
 			}
+
 			assert.Equal(t, tc.output[idx], output)
 		}
 	}

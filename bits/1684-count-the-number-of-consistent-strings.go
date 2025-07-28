@@ -7,9 +7,11 @@ func countConsistentStrings(allowed string, words []string) int {
 	for _, c := range allowed {
 		mask |= 1 << int(c-'a')
 	}
+
 	count := 0
 	for _, word := range words {
 		count++
+
 		for _, c := range word {
 			if (1<<int(c-'a'))&mask == 0 {
 				count--
@@ -17,5 +19,6 @@ func countConsistentStrings(allowed string, words []string) int {
 			}
 		}
 	}
+
 	return count
 }

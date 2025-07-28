@@ -11,6 +11,7 @@ import (
 func TestCodec(t *testing.T) {
 	ser := NewCodec()
 	deser := NewCodec()
+
 	for _, tc := range []struct {
 		original *pkg.TreeNode
 		restored *pkg.TreeNode

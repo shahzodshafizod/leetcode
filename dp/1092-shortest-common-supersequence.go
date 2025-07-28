@@ -10,9 +10,11 @@ import "strings"
 func shortestCommonSupersequence(str1 string, str2 string) string {
 	n1, n2 := len(str1), len(str2)
 	dp := make([][]int, n1+1)
+
 	for idx := range dp {
 		dp[idx] = make([]int, n2+1)
 	}
+
 	var i1, i2 int
 	for i1 = n1 - 1; i1 >= 0; i1-- {
 		for i2 = n2 - 1; i2 >= 0; i2-- {
@@ -23,23 +25,30 @@ func shortestCommonSupersequence(str1 string, str2 string) string {
 			}
 		}
 	}
+
 	var csc strings.Builder
+
 	i1, i2 = 0, 0
 	for i1 < n1 && i2 < n2 {
 		if str1[i1] == str2[i2] {
 			csc.WriteByte(str1[i1])
+
 			i1++
 			i2++
 		} else if dp[i1][i2+1] < dp[i1+1][i2] {
 			csc.WriteByte(str1[i1])
+
 			i1++
 		} else {
 			csc.WriteByte(str2[i2])
+
 			i2++
 		}
 	}
+
 	csc.WriteString(str1[i1:])
 	csc.WriteString(str2[i2:])
+
 	return csc.String()
 }
 

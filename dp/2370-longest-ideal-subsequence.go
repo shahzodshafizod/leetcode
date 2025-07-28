@@ -5,19 +5,26 @@ package dp
 // Tabulation
 func longestIdealString(s string, k int) int {
 	var dp [26]int
+
 	var current, letter int
+
 	length := 0
+
 	for idx := range s {
 		current = int(s[idx] - 'a')
 		dp[current]++
+
 		for letter = max(0, current-k); letter < current; letter++ {
 			dp[current] = max(dp[current], 1+dp[letter])
 		}
+
 		for letter = min(25, current+k); letter > current; letter-- {
 			dp[current] = max(dp[current], 1+dp[letter])
 		}
+
 		length = max(length, dp[current])
 	}
+
 	return length
 }
 

@@ -10,16 +10,20 @@ import "math"
 func minimumRecolors(blocks string, k int) int {
 	res := math.MaxInt
 	ops, k := 0, k-1
+
 	for idx := range blocks {
 		if blocks[idx] == 'W' {
 			ops++
 		}
+
 		if idx-k >= 0 {
 			res = min(res, ops)
+
 			if blocks[idx-k] == 'W' {
 				ops--
 			}
 		}
 	}
+
 	return res
 }

@@ -40,6 +40,7 @@ func lengthOfLIS(nums []int) int {
 		// more elements to be added to the subsequence in the future.
 		lis[left] = num
 	}
+
 	return len(lis)
 }
 

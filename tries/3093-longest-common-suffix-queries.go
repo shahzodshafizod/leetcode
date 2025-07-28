@@ -14,6 +14,7 @@ func stringIndices(wordsContainer []string, wordsQuery []string) []int {
 		index    int
 		length   int
 	}
+
 	newTrie := func() *Trie {
 		return &Trie{
 			index:  -1,
@@ -25,33 +26,41 @@ func stringIndices(wordsContainer []string, wordsQuery []string) []int {
 		for idx, word := range wordsContainer {
 			curr := root
 			length := len(word)
+
 			if length < curr.length {
 				curr.length, curr.index = length, idx
 			}
+
 			for c := len(word) - 1; c >= 0; c-- {
 				if curr.children[word[c]-'a'] == nil {
 					curr.children[word[c]-'a'] = newTrie()
 				}
+
 				curr = curr.children[word[c]-'a']
 				if length < curr.length {
 					curr.length, curr.index = length, idx
 				}
 			}
 		}
+
 		return root
 	}
 	root := buildTrie()
 	ans := make([]int, len(wordsQuery))
+
 	for idx, word := range wordsQuery {
 		curr := root
 		ans[idx] = curr.index
+
 		for c := len(word) - 1; c >= 0; c-- {
 			if curr.children[word[c]-'a'] == nil {
 				break
 			}
+
 			curr = curr.children[word[c]-'a']
 			ans[idx] = curr.index
 		}
 	}
+
 	return ans
 }

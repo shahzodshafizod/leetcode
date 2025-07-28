@@ -11,8 +11,10 @@ func checkIfExist(arr []int) bool {
 		if seen[2*num] || num&1 == 0 && seen[num/2] {
 			return true
 		}
+
 		seen[num] = true
 	}
+
 	return false
 }
 

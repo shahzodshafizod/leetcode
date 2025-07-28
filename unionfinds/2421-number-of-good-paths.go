@@ -11,25 +11,33 @@ func numberOfGoodPaths(vals []int, edges [][]int) int {
 	n := len(vals)
 	parent := make([]int, n)
 	count := make([]int, n)
+
 	for idx := range parent {
 		parent[idx] = idx
 		count[idx] = 1
 	}
+
 	find := func(x int) int {
 		for parent[x] != x {
 			parent[x] = parent[parent[x]]
 			x = parent[x]
 		}
+
 		return x
 	}
+
 	sort.Slice(edges, func(i, j int) bool {
 		return max(vals[edges[i][0]], vals[edges[i][1]]) < max(vals[edges[j][0]], vals[edges[j][1]])
 	})
+
 	var px, py int
+
 	result := n
+
 	for _, edge := range edges {
 		px = find(edge[0])
 		py = find(edge[1])
+
 		if vals[px] < vals[py] {
 			parent[px] = py
 		} else if vals[py] < vals[px] {
@@ -40,6 +48,7 @@ func numberOfGoodPaths(vals []int, edges [][]int) int {
 			count[px] += count[py]
 		}
 	}
+
 	return result
 }
 

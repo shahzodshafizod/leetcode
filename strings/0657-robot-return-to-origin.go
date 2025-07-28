@@ -7,6 +7,7 @@ package strings
 // Space: O(1)
 func judgeCircle(moves string) bool {
 	x, y := 0, 0
+
 	for _, move := range moves {
 		switch move {
 		case 'R':
@@ -19,6 +20,7 @@ func judgeCircle(moves string) bool {
 			x--
 		}
 	}
+
 	return x == 0 && y == 0
 }
 

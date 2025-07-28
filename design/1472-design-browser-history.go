@@ -27,6 +27,7 @@ func (b *BrowserHistory) Back(steps int) string {
 	} else {
 		b.current -= steps
 	}
+
 	return b.history[b.current]
 }
 
@@ -36,6 +37,7 @@ func (b *BrowserHistory) Forward(steps int) string {
 	} else {
 		b.current += steps
 	}
+
 	return b.history[b.current]
 }
 

@@ -4,9 +4,11 @@ package matrices
 
 func searchMatrix(matrix [][]int, target int) bool {
 	m, n := len(matrix), len(matrix[0])
+
 	left, right := 0, m*n-1
 	for left <= right {
 		mid := (left + right) / 2
+
 		midElem := matrix[mid/n][mid%n]
 		if target == midElem {
 			return true
@@ -16,6 +18,7 @@ func searchMatrix(matrix [][]int, target int) bool {
 			left = mid + 1
 		}
 	}
+
 	return false
 }
 

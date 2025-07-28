@@ -20,12 +20,15 @@ func calculate(s string) int {
 		sign   = 1
 		number = 0
 	)
+
 	stack := make([][2]int, 0)
+
 	for _, r := range s {
 		switch r {
 		case '+', '-':
 			result += sign * number
 			number = 0
+
 			if r == '+' {
 				sign = 1
 			} else {
@@ -51,6 +54,7 @@ func calculate(s string) int {
 			number = number*10 + int(r-'0')
 		}
 	}
+
 	return result + sign*number
 }
 

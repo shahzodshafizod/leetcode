@@ -8,5 +8,6 @@ func isArraySpecial(nums []int) bool {
 			return false
 		}
 	}
+
 	return true
 }

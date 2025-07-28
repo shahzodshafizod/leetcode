@@ -9,11 +9,13 @@ import "strings"
 func isCircularSentence(sentence string) bool {
 	words := strings.Split(sentence, " ")
 	n := len(words)
+
 	for idx := 1; idx < n; idx++ {
 		if words[idx][0] != words[idx-1][len(words[idx-1])-1] {
 			return false
 		}
 	}
+
 	return words[0][0] == words[n-1][len(words[n-1])-1]
 }
 

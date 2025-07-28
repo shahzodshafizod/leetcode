@@ -6,6 +6,7 @@ import "math/bits"
 
 func longestSubsequence(s string, k int) int {
 	count, bits := 0, bits.Len(uint(k))
+
 	for i, n := 0, len(s); i < n; i++ {
 		if s[n-1-i] == '0' {
 			count++
@@ -14,5 +15,6 @@ func longestSubsequence(s string, k int) int {
 			count++
 		}
 	}
+
 	return count
 }

@@ -7,8 +7,11 @@ package maths
 // Space: O(1)
 func maxDistance(s string, k int) int {
 	distance := 0
+
 	var x, y int
+
 	lat, lon := 0, 0
+
 	for idx, c := range s {
 		switch c {
 		case 'E':
@@ -20,15 +23,19 @@ func maxDistance(s string, k int) int {
 		case 'S':
 			lat--
 		}
+
 		x, y = lon, lat
 		if x < 0 {
 			x = -x
 		}
+
 		if y < 0 {
 			y = -y
 		}
+
 		distance = max(distance, min(x+y+k+k, idx+1))
 	}
+
 	return distance
 }
 

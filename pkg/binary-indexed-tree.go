@@ -44,5 +44,6 @@ func (b *bit) Query(index int) int {
 	for idx := index; idx > 0; idx -= idx & -idx { // flip the last set bit
 		sum += (*b)[idx]
 	}
+
 	return sum
 }

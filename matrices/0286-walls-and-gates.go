@@ -32,6 +32,7 @@ func wallsAndGates(matrix [][]int) [][]int {
 	if m == 0 {
 		return matrix
 	}
+
 	n := len(matrix[0])
 	if n == 0 {
 		return matrix
@@ -62,7 +63,9 @@ func wallsAndGatesDFS(
 	if steps > 0 {
 		matrix[row][col] = steps
 	}
+
 	steps++
+
 	for _, direction := range directions {
 		r, c := row+direction[0], col+direction[1]
 		if r >= 0 && c >= 0 && r < m && c < n && matrix[r][c] != -1 && matrix[r][c] != 0 &&

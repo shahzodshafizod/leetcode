@@ -4,6 +4,7 @@ package stacks
 
 func minOperations(logs []string) int {
 	stack := 0
+
 	for _, log := range logs {
 		switch log {
 		case "../":
@@ -13,5 +14,6 @@ func minOperations(logs []string) int {
 			stack++
 		}
 	}
+
 	return stack
 }

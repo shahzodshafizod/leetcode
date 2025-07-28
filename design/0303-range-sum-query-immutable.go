@@ -9,9 +9,11 @@ type NumArray struct {
 func NewNumArray(nums []int) NumArray {
 	n := len(nums)
 	prefix := make([]int, n+1)
+
 	for idx := 0; idx < n; idx++ {
 		prefix[idx+1] = prefix[idx] + nums[idx]
 	}
+
 	return NumArray{prefix: prefix}
 }
 

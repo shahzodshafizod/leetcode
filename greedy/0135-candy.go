@@ -8,18 +8,23 @@ package greedy
 func candy(ratings []int) int {
 	n := len(ratings)
 	cnts := make([]int, n)
+
 	for idx := 1; idx < n; idx++ {
 		if ratings[idx] > ratings[idx-1] {
 			cnts[idx] = cnts[idx-1] + 1
 		}
 	}
+
 	candies := n + cnts[n-1]
+
 	for idx := n - 2; idx >= 0; idx-- {
 		if ratings[idx] > ratings[idx+1] {
 			cnts[idx] = max(cnts[idx], cnts[idx+1]+1)
 		}
+
 		candies += cnts[idx]
 	}
+
 	return candies
 }
 

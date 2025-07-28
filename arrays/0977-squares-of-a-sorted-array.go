@@ -5,8 +5,9 @@ package arrays
 func sortedSquares(nums []int) []int {
 	n := len(nums)
 	newNums := make([]int, n)
-	lsq := nums[0] * nums[0]                      // left square
-	rsq := nums[n-1] * nums[n-1]                  // right square
+	lsq := nums[0] * nums[0]     // left square
+	rsq := nums[n-1] * nums[n-1] // right square
+
 	for li, ri, i := 0, n-1, n-1; li <= ri; i-- { // left/right/newNums index
 		switch {
 		case lsq == -1:
@@ -14,6 +15,7 @@ func sortedSquares(nums []int) []int {
 		case rsq == -1:
 			rsq = nums[ri] * nums[ri]
 		}
+
 		if lsq >= rsq {
 			newNums[i] = lsq
 			li++
@@ -24,5 +26,6 @@ func sortedSquares(nums []int) []int {
 			rsq = -1
 		}
 	}
+
 	return newNums
 }

@@ -11,25 +11,34 @@ import (
 // Space: O(Q+H)
 func leftmostBuildingQueries(heights []int, queries [][]int) []int {
 	ans := make([]int, len(queries))
+
 	var a, b int
+
 	remained := make([][3]int, 0)
+
 	for idx := range queries {
 		a, b = queries[idx][0], queries[idx][1]
 		if a > b {
 			a, b = b, a
 		}
+
 		if a == b || heights[a] < heights[b] {
 			ans[idx] = b
 		} else {
 			ans[idx] = -1
+
 			remained = append(remained, [3]int{b, idx, heights[a]})
 		}
 	}
+
 	sort.Slice(remained, func(i, j int) bool { return remained[i][0] > remained[j][0] })
+
 	var qid, aid, height, left, right, mid int
+
 	hid := len(heights) - 1
 	stack := make([]int, 0)
 	size := 0
+
 	for idx := range remained {
 		qid, aid, height = remained[idx][0], remained[idx][1], remained[idx][2]
 		for ; hid > qid; hid-- {
@@ -37,9 +46,11 @@ func leftmostBuildingQueries(heights []int, queries [][]int) []int {
 				stack = stack[:size-1]
 				size--
 			}
+
 			stack = append(stack, hid)
 			size++
 		}
+
 		left, right = 0, size-1
 		for left <= right {
 			mid = left + (right-left)/2
@@ -49,10 +60,12 @@ func leftmostBuildingQueries(heights []int, queries [][]int) []int {
 				right = mid - 1
 			}
 		}
+
 		if right != -1 {
 			ans[aid] = stack[right]
 		}
 	}
+
 	return ans
 }
 

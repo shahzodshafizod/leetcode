@@ -35,6 +35,7 @@ func (m *MedianFinder) AddNum(num int) {
 	if m.maxHeap.Len() > m.minHeap.Len()+1 {
 		heap.Push(m.minHeap, heap.Pop(m.maxHeap))
 	}
+
 	if m.minHeap.Len() > m.maxHeap.Len() {
 		heap.Push(m.maxHeap, heap.Pop(m.minHeap))
 	}
@@ -44,6 +45,7 @@ func (m *MedianFinder) FindMedian() float64 {
 	if m.maxHeap.Len() > m.minHeap.Len() {
 		return float64(m.maxHeap.Peak())
 	}
+
 	return float64(m.minHeap.Peak()+m.maxHeap.Peak()) / 2
 }
 

@@ -14,6 +14,7 @@ func NewFindSumPairs(nums1 []int, nums2 []int) FindSumPairs {
 	for _, num := range nums2 {
 		freq[num]++
 	}
+
 	return FindSumPairs{
 		nums1: nums1,
 		nums2: nums2,
@@ -34,6 +35,7 @@ func (f *FindSumPairs) Count(tot int) int {
 	for _, num := range f.nums1 {
 		count += f.freq[tot-num]
 	}
+
 	return count
 }
 

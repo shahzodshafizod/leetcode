@@ -8,13 +8,17 @@ package graphs
 func findAllRecipes(recipes []string, ingredients [][]string, supplies []string) []string {
 	indegree := make(map[string]int)
 	deps := make(map[string][]string)
+
 	for idx, recipe := range recipes {
 		indegree[recipe] = len(ingredients[idx])
+
 		for _, ingredient := range ingredients[idx] {
 			deps[ingredient] = append(deps[ingredient], recipe)
 		}
 	}
+
 	result := make([]string, 0)
+
 	for idx, n := 0, len(supplies); idx < n; idx++ {
 		for _, recipe := range deps[supplies[idx]] {
 			indegree[recipe]--
@@ -25,5 +29,6 @@ func findAllRecipes(recipes []string, ingredients [][]string, supplies []string)
 			}
 		}
 	}
+
 	return result
 }

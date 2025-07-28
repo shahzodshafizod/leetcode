@@ -5,11 +5,13 @@ package strings
 func kthCharacter(k int) byte {
 	word := make([]int, 0, k*2)
 	word = append(word, 0)
+
 	length := 1
 	for ; length < k; length *= 2 {
 		for i := 0; i < length; i++ {
 			word = append(word, (word[i]+1)%26)
 		}
 	}
+
 	return byte('a' + word[k-1])
 }

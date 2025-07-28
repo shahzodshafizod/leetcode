@@ -14,12 +14,16 @@ func maximumImportance(n int, roads [][]int) int64 {
 		degrees[road[0]]++
 		degrees[road[1]]++
 	}
+
 	max := slices.Max(degrees) // O(N)
+
 	count := make([]int, max+1)
 	for _, degree := range degrees { // O(N)
 		count[degree]++
 	}
+
 	var importance int64 = 0
+
 	for degree := max; degree >= 0; degree-- { // O(MAX) || O(N)
 		for count[degree] > 0 {
 			importance += int64(degree * n)
@@ -27,6 +31,7 @@ func maximumImportance(n int, roads [][]int) int64 {
 			n--
 		}
 	}
+
 	return importance
 }
 

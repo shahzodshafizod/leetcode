@@ -40,27 +40,35 @@ Hence, the assumption that Y is a lucky number is wrong.
 // Space: O(1)
 func luckyNumbers(matrix [][]int) []int {
 	const MIN, MAX = 1, 100000
+
 	m, n := len(matrix), len(matrix[0])
 	maxOfmins := MIN
+
 	for _, row := range matrix {
 		minrow := MAX
 		for _, cell := range row {
 			minrow = min(minrow, cell)
 		}
+
 		maxOfmins = max(maxOfmins, minrow)
 	}
+
 	minOfmaxs := MAX
+
 	for col := 0; col < n; col++ {
 		maxcol := MIN
 		for row := 0; row < m; row++ {
 			maxcol = max(maxcol, matrix[row][col])
 		}
+
 		minOfmaxs = min(minOfmaxs, maxcol)
 	}
+
 	luckies := make([]int, 0)
 	if maxOfmins == minOfmaxs {
 		luckies = append(luckies, maxOfmins)
 	}
+
 	return luckies
 }
 

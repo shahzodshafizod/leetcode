@@ -35,8 +35,10 @@ func TestTrie(t *testing.T) {
 		},
 	} {
 		var trie Trie
+
 		for index, command := range tc.commands {
 			var output any = nil
+
 			switch command {
 			case "Trie":
 				trie = NewTrie()
@@ -47,6 +49,7 @@ func TestTrie(t *testing.T) {
 			case "startsWith":
 				output = trie.StartsWith(tc.values[index][0])
 			}
+
 			assert.Equal(t, tc.output[index], output)
 		}
 	}

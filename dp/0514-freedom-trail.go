@@ -13,19 +13,26 @@ import (
 func findRotateSteps(ring string, key string) int {
 	rn, kn := len(ring), len(key)
 	cache := make([][]*int, rn)
+
 	for idx := range cache {
 		cache[idx] = make([]*int, kn)
 	}
+
 	var dfs func(r int, k int) int
+
 	dfs = func(r int, k int) int {
 		if k == kn {
 			return 0
 		}
+
 		if cache[r][k] != nil {
 			return *cache[r][k]
 		}
+
 		result := math.MaxInt
+
 		var dist, idx int
+
 		skips := 0
 		for idx = strings.IndexByte(ring, key[k]); idx >= 0; {
 			idx += skips
@@ -35,9 +42,12 @@ func findRotateSteps(ring string, key string) int {
 			skips = idx + 1
 			idx = strings.IndexByte(ring[skips:], key[k])
 		}
+
 		cache[r][k] = &result
+
 		return result
 	}
+
 	return dfs(0, 0)
 }
 

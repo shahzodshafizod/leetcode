@@ -11,5 +11,6 @@ func countHillValley(nums []int) int {
 			prv = cur
 		}
 	}
+
 	return cnt
 }

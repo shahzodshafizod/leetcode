@@ -15,16 +15,19 @@ import "slices"
 func bubleSort(array []int) []int {
 	for i, len := 0, len(array); i < len-1; i++ {
 		sorted := true
+
 		for j := 1; j < len-i; j++ {
 			if array[j-1] > array[j] {
 				array[j-1], array[j] = array[j], array[j-1]
 				sorted = false
 			}
 		}
+
 		if sorted {
 			break
 		}
 	}
+
 	return array
 }
 
@@ -39,8 +42,10 @@ func selectionSort(array []int) []int {
 				min = j
 			}
 		}
+
 		array[i], array[min] = array[min], array[i]
 	}
+
 	return array
 }
 
@@ -52,10 +57,12 @@ func insertionSort(array []int) []int {
 			array = append(append([]int{array[i]}, array[:i]...), array[i+1:]...)
 			continue
 		}
+
 		for j := i; j > 0 && array[j-1] > array[j]; j-- {
 			array[j-1], array[j] = array[j], array[j-1]
 		}
 	}
+
 	return array
 }
 
@@ -65,11 +72,14 @@ func insertionSort(array []int) []int {
 // works for [0;k]
 func bucketSort(array []int) []int {
 	k := slices.Max(array)
+
 	buckets := make([]int, k+1)
 	for _, num := range array { // O(N)
 		buckets[num]++
 	}
+
 	idx := 0
+
 	for num, count := range buckets { // O(k)
 		for count > 0 { // O(N/k)
 			count--
@@ -77,6 +87,7 @@ func bucketSort(array []int) []int {
 			idx++
 		}
 	}
+
 	return array
 }
 
@@ -89,7 +100,9 @@ func mergeSort(array []int) []int {
 	if len <= 1 {
 		return array
 	}
+
 	middle := len / 2
+
 	return merge(
 		mergeSort(array[:middle]), // [0-middle)
 		mergeSort(array[middle:]), // [middle-len)
@@ -99,6 +112,7 @@ func mergeSort(array []int) []int {
 func merge(array1 []int, array2 []int) []int {
 	len1, len2 := len(array1), len(array2)
 	array := make([]int, 0, len1+len2)
+
 	idx1, idx2 := 0, 0
 	for idx1 < len1 && idx2 < len2 {
 		if array1[idx1] < array2[idx2] {
@@ -109,11 +123,13 @@ func merge(array1 []int, array2 []int) []int {
 			idx2++
 		}
 	}
+
 	if idx1 < len1 {
 		array = append(array, array1[idx1:]...)
 	} else if idx2 < len2 {
 		array = append(array, array2[idx2:]...)
 	}
+
 	return array
 }
 
@@ -123,16 +139,21 @@ func quickSort(array []int) []int {
 	partition := func(array []int, left int, right int) int {
 		pivot := array[right]
 		mid := left
+
 		for i := left; i < right; i++ {
 			if array[i] < pivot {
 				array[i], array[mid] = array[mid], array[i]
 				mid++
 			}
 		}
+
 		array[right], array[mid] = array[mid], array[right]
+
 		return mid
 	}
+
 	var helper func(left int, right int)
+
 	helper = func(left int, right int) {
 		if left < right {
 			mid := partition(array, left, right)
@@ -141,6 +162,7 @@ func quickSort(array []int) []int {
 		}
 	}
 	helper(0, len(array)-1)
+
 	return array
 }
 
@@ -159,6 +181,7 @@ func heapSort(array []int) []int {
 		// sift up
 		child := i
 		parent := getParent(child)
+
 		for parent >= 0 && compare(parent, child) {
 			swap(parent, child)
 			child = parent
@@ -172,18 +195,22 @@ func heapSort(array []int) []int {
 		swap(0, len)
 		// sift down
 		parent := 0
+
 		child := getLeft(parent)
 		for child < len {
 			if child+1 < len && compare(child, child+1) {
 				child++
 			}
+
 			if !compare(parent, child) {
 				break
 			}
+
 			swap(parent, child)
 			parent = child
 			child = getLeft(parent)
 		}
 	}
+
 	return array
 }

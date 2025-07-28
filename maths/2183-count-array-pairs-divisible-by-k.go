@@ -9,10 +9,13 @@ func countPairs(nums []int, k int) int64 {
 		for b != 0 {
 			a, b = b, a%b
 		}
+
 		return a
 	}
 	counts := make(map[int]int64)
+
 	var count int64 = 0
+
 	for _, num := range nums {
 		curr := gcd(num, k)
 		for prev, cnt := range counts {
@@ -20,8 +23,10 @@ func countPairs(nums []int, k int) int64 {
 				count += cnt
 			}
 		}
+
 		counts[curr]++
 	}
+
 	return count
 }
 

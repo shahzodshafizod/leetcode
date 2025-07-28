@@ -10,7 +10,9 @@ import "sort"
 func matchPlayersAndTrainers(players []int, trainers []int) int {
 	sort.Ints(players)
 	sort.Ints(trainers)
+
 	count := 0
+
 	pi, pn := 0, len(players)
 	for ti, tn := 0, len(trainers); ti < tn && pi < pn; ti++ {
 		if players[pi] <= trainers[ti] {
@@ -18,5 +20,6 @@ func matchPlayersAndTrainers(players []int, trainers []int) int {
 			pi++
 		}
 	}
+
 	return count
 }

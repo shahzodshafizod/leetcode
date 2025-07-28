@@ -8,6 +8,7 @@ package stacks
 func minLength(s string) int {
 	stack := make([]rune, len(s))
 	idx := -1
+
 	for _, c := range s {
 		if idx >= 0 && (c == 'B' || c == 'D') && rune(stack[idx]+1) == c {
 			idx--
@@ -16,5 +17,6 @@ func minLength(s string) int {
 			stack[idx] = c
 		}
 	}
+
 	return idx + 1
 }

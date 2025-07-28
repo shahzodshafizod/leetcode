@@ -9,6 +9,7 @@ import (
 // go test -v -count=1 ./arrays/ -run ^TestRemoveDuplicates$
 func TestRemoveDuplicates(t *testing.T) {
 	assert := assert.New(t)
+
 	for _, tc := range []struct {
 		nums         []int
 		expectedNums []int
@@ -19,6 +20,7 @@ func TestRemoveDuplicates(t *testing.T) {
 	} {
 		k := removeDuplicates(tc.nums)
 		assert.Equal(tc.k, k)
+
 		for i := 0; i < k; i++ {
 			assert.Equal(tc.expectedNums[i], tc.nums[i])
 		}

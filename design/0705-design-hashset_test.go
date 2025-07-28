@@ -20,8 +20,10 @@ func TestMyHashSet(t *testing.T) {
 		},
 	} {
 		var myHashSet MyHashSet
+
 		for index, command := range tc.commands {
 			var output any = nil
+
 			switch command {
 			case "MyHashSet":
 				myHashSet = NewMyHashSet()
@@ -32,6 +34,7 @@ func TestMyHashSet(t *testing.T) {
 			case "contains":
 				output = myHashSet.Contains(tc.values[index][0])
 			}
+
 			assert.Equal(t, tc.output[index], output)
 		}
 	}

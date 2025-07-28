@@ -5,7 +5,9 @@ package hashes
 // Approach #2: Array
 func longestPalindrome(words []string) int {
 	var count [26 * 26]int
+
 	length, unpaired := 0, 0
+
 	var a, b, word, revw int
 	for idx := range words {
 		a = int(words[idx][0] - 'a')
@@ -15,19 +17,23 @@ func longestPalindrome(words []string) int {
 		if count[revw] > 0 {
 			length += 4
 			count[revw]--
+
 			if word == revw {
 				unpaired--
 			}
 		} else {
 			count[word]++
+
 			if word == revw {
 				unpaired++
 			}
 		}
 	}
+
 	if unpaired > 0 {
 		length += 2 // center
 	}
+
 	return length
 }
 

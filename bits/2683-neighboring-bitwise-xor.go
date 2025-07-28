@@ -19,5 +19,6 @@ func doesValidArrayExist(derived []int) bool {
 	for _, item := range derived {
 		xorsum ^= item
 	}
+
 	return xorsum == 0
 }

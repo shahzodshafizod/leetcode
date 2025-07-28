@@ -11,7 +11,9 @@ func largestDivisibleSubset(nums []int) []int {
 	sort.Ints(nums)
 	n := len(nums)
 	dp := make([][]int, n)
+
 	var answer []int
+
 	for idx := n - 1; idx >= 0; idx-- {
 		dp[idx] = append(dp[idx], nums[idx])
 		for j := idx + 1; j < n; j++ {
@@ -19,10 +21,12 @@ func largestDivisibleSubset(nums []int) []int {
 				dp[idx] = append([]int{nums[idx]}, dp[j]...)
 			}
 		}
+
 		if len(dp[idx]) > len(answer) {
 			answer = dp[idx]
 		}
 	}
+
 	return answer
 }
 

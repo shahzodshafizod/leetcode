@@ -13,17 +13,22 @@ import (
 // Space: O(n)
 func getFinalState(nums []int, k int, multiplier int) []int {
 	n := len(nums)
+
 	indices := make([]int, n)
 	for idx := range indices {
 		indices[idx] = idx
 	}
+
 	pq := pkg.NewHeap(indices, func(x, y int) bool {
 		return nums[x] == nums[y] && x < y || nums[x] < nums[y]
 	})
 	heap.Init(pq)
+
 	for ; k > 0; k-- {
 		nums[pq.Peak()] *= multiplier
+
 		heap.Fix(pq, 0)
 	}
+
 	return nums
 }

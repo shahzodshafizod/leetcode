@@ -32,24 +32,30 @@ Step 2: Write out some test cases
 func flatten(root *pkg.NAryListNode) *pkg.NAryListNode {
 	for node := root; node != nil; {
 		nextNode := node.Next
+
 		if node.Child != nil {
 			tail := node.Child
 			nextNode = tail
+
 			for ; tail.Next != nil; tail = tail.Next {
 				if tail.Child == nil && tail == nextNode {
 					nextNode = tail
 				}
 			}
+
 			tail.Next = node.Next
 			if tail.Next != nil {
 				tail.Next.Prev = tail
 			}
+
 			node.Next = node.Child
 			node.Child.Prev = node
 			node.Child = nil
 		}
+
 		node = nextNode
 	}
+
 	return root
 }
 

@@ -9,16 +9,20 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 // Space: O(h), h=height of tree
 func isSymmetric(root *pkg.TreeNode) bool {
 	var isMirror func(node1 *pkg.TreeNode, node2 *pkg.TreeNode) bool
+
 	isMirror = func(node1 *pkg.TreeNode, node2 *pkg.TreeNode) bool {
 		if node1 == nil || node2 == nil {
 			return node1 == node2
 		}
+
 		if node1.Val != node2.Val {
 			return false
 		}
+
 		return isMirror(node1.Left, node2.Right) &&
 			isMirror(node1.Right, node2.Left)
 	}
+
 	return isMirror(root.Left, root.Right)
 }
 

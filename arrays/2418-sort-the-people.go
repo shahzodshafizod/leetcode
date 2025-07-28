@@ -18,6 +18,7 @@ func sortPeople(names []string, heights []int) []string {
 
 	pq := pkg.NewPQSort(len(names), compare, swap)
 	pq.Sort() // O(N Log N)
+
 	return names
 }
 

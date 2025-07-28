@@ -10,20 +10,25 @@ import (
 // Space: O(h), h=height of tree
 func sortedArrayToBST(nums []int) *pkg.TreeNode {
 	var createTree func(left int, right int) *pkg.TreeNode
+
 	createTree = func(left int, right int) *pkg.TreeNode {
 		if left == right {
 			return nil
 		}
+
 		if left+1 == right {
 			return &pkg.TreeNode{Val: nums[left]}
 		}
+
 		mid := left + (right-left)/2
+
 		return &pkg.TreeNode{
 			Val:   nums[mid],
 			Left:  createTree(left, mid),
 			Right: createTree(mid+1, right),
 		}
 	}
+
 	return createTree(0, len(nums))
 }
 

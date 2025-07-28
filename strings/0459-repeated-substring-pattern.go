@@ -9,6 +9,7 @@ func repeatedSubstringPattern(s string) bool {
 	// return strings.Contains((s + s)[1:2*len(s)-1], s)
 	n := len(s)
 	lps := make([]int, n)
+
 	preflen := 0
 	for idx := 1; idx < n; idx++ {
 		if s[idx] == s[preflen] {
@@ -19,5 +20,6 @@ func repeatedSubstringPattern(s string) bool {
 			idx--
 		}
 	}
+
 	return lps[n-1] != 0 && lps[n-1]%(n-lps[n-1]) == 0
 }

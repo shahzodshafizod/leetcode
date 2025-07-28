@@ -43,15 +43,18 @@ Example: nums:[-2, 1, -3, 4, -1, 2, 1, -5, 4], max:6
 // Kadane's algorithm: O(n)
 func maxSubArray(nums []int) int {
 	maxSum := nums[0]
+
 	currSum := 0
 	for _, num := range nums {
 		currSum += num
 		maxSum = max(maxSum, currSum)
+
 		if currSum < 0 {
 			// beginning of a new subsequence
 			currSum = 0
 		}
 	}
+
 	return maxSum
 }
 

@@ -16,6 +16,7 @@ type KthLargest struct {
 func NewKthLargest(k int, nums []int) KthLargest {
 	kth := KthLargest{len: k}
 	compare := func(x, y int) bool { return x < y }
+
 	if len(nums) <= k {
 		kth.minHeap = pkg.NewHeap(nums, compare)
 		nums = nil
@@ -23,13 +24,16 @@ func NewKthLargest(k int, nums []int) KthLargest {
 		kth.minHeap = pkg.NewHeap(nums[:k], compare)
 		nums = nums[k:]
 	}
+
 	heap.Init(kth.minHeap)
+
 	for _, num := range nums {
 		if num > kth.minHeap.Peak() {
 			heap.Pop(kth.minHeap)
 			heap.Push(kth.minHeap, num)
 		}
 	}
+
 	return kth
 }
 
@@ -39,8 +43,10 @@ func (k *KthLargest) Add(val int) int {
 		if heap_size >= k.len {
 			heap.Pop(k.minHeap)
 		}
+
 		heap.Push(k.minHeap, val)
 	}
+
 	return k.minHeap.Peak()
 }
 

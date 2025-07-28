@@ -4,9 +4,12 @@ package arrays
 
 func maxFrequencyElements(nums []int) int {
 	var count [101]int
+
 	total, maxCount := 0, 0
+
 	for _, num := range nums {
 		count[num]++
+
 		switch {
 		case count[num] > maxCount:
 			maxCount = count[num]
@@ -15,5 +18,6 @@ func maxFrequencyElements(nums []int) int {
 			total++
 		}
 	}
+
 	return total * maxCount
 }

@@ -9,6 +9,7 @@ import (
 // go test -v -count=1 ./pkg/ -run ^TestUnionFind$
 func TestUnionFind(t *testing.T) {
 	var uf UnionFind
+
 	m, n := 4, 3
 	for _, tc := range []struct {
 		command string
@@ -38,6 +39,7 @@ func TestUnionFind(t *testing.T) {
 		{command: "Find", value: []int{0}, output: 2},
 	} {
 		var output any = nil
+
 		switch tc.command {
 		case "UnionFind":
 			uf = NewUnionFind(tc.value[0])
@@ -46,6 +48,7 @@ func TestUnionFind(t *testing.T) {
 		case "Find":
 			output = uf.Find(tc.value[0])
 		}
+
 		assert.Equal(t, tc.output, output)
 	}
 }
@@ -64,9 +67,11 @@ func TestDSQuickFind(t *testing.T) {
 		},
 	} {
 		var uf UnionFind
+
 		var output bool
 		for idx, command := range tc.commands {
 			output = false
+
 			switch command {
 			case "NewQuickFind":
 				uf = NewUnionFindRanked(tc.values[idx][0])
@@ -75,6 +80,7 @@ func TestDSQuickFind(t *testing.T) {
 			case "Connected":
 				output = uf.Find(tc.values[idx][0]) == uf.Find(tc.values[idx][1])
 			}
+
 			assert.Equal(t, tc.output[idx], output)
 		}
 	}

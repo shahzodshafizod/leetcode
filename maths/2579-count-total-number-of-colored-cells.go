@@ -8,5 +8,6 @@ func coloredCells(n int) int64 {
 	for i := 1; i < n; i++ {
 		count += int64(4 * i)
 	}
+
 	return count
 }

@@ -8,14 +8,17 @@ package dp
 func calculateMinimumHP(dungeon [][]int) int {
 	m, n := len(dungeon), len(dungeon[0])
 	dp := make([][]int, m+1)
+
 	for row := range dp {
 		dp[row] = make([]int, n+1)
 		for col := range dp[row] {
 			dp[row][col] = 1e9
 		}
 	}
+
 	dp[m-1][n] = 1
 	dp[m][n-1] = 1
+
 	for row := m - 1; row >= 0; row-- {
 		for col := n - 1; col >= 0; col-- {
 			dp[row][col] = max(1,
@@ -26,6 +29,7 @@ func calculateMinimumHP(dungeon [][]int) int {
 			)
 		}
 	}
+
 	return dp[0][0]
 }
 

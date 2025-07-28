@@ -42,19 +42,25 @@ Step 2: Write out some test cases:
 // space: O(H)
 func isValidBST(root *pkg.TreeNode) bool {
 	stack := make([]*pkg.TreeNode, 0)
+
 	var prev, node *pkg.TreeNode = nil, root
+
 	for len(stack) != 0 || node != nil {
 		for node != nil {
 			stack = append(stack, node)
 			node = node.Left
 		}
+
 		node = stack[len(stack)-1]
 		stack = stack[:len(stack)-1]
+
 		if prev != nil && node.Val <= prev.Val {
 			return false
 		}
+
 		prev, node = node, node.Right
 	}
+
 	return true
 }
 

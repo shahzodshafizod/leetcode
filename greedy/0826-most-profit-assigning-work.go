@@ -31,23 +31,29 @@ import "sort"
 func maxProfitAssignment(difficulty []int, profit []int, worker []int) int {
 	n := len(difficulty)
 	jobProfile := make([][2]int, n)
+
 	for idx := 0; idx < n; idx++ {
 		jobProfile[idx][0] = difficulty[idx]
 		jobProfile[idx][1] = profit[idx]
 	}
+
 	sort.Slice(jobProfile, func(i, j int) bool { // O(n log n)
 		return jobProfile[i][0] < jobProfile[j][0]
 	})
 	sort.Ints(worker) // O(m log m)
+
 	netProfit := 0
+
 	idx, maxProfit := 0, 0
 	for _, ability := range worker { // O(max(m,n))
 		for idx < n && jobProfile[idx][0] <= ability {
 			maxProfit = max(maxProfit, jobProfile[idx][1])
 			idx++
 		}
+
 		netProfit += maxProfit
 	}
+
 	return netProfit
 }
 

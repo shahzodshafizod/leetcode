@@ -9,20 +9,24 @@ import "strconv"
 // Space: O(1)
 func fizzBuzz(n int) []string {
 	answer := make([]string, n)
+
 	fizz, buzz := 3, 5
 	for idx := 1; idx <= n; idx++ {
 		if idx == fizz {
 			answer[idx-1] = "Fizz"
 			fizz += 3
 		}
+
 		if idx == buzz {
 			answer[idx-1] += "Buzz"
 			buzz += 5
 		}
+
 		if len(answer[idx-1]) == 0 {
 			answer[idx-1] = strconv.Itoa(idx)
 		}
 	}
+
 	return answer
 }
 

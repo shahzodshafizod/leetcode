@@ -5,7 +5,9 @@ package binarysearch
 func maximumCount(nums []int) int {
 	n := len(nums)
 	left, right := 0, n-1
+
 	var mid int
+
 	for left <= right {
 		mid = left + (right-left)/2
 		if nums[mid] >= 0 {
@@ -14,7 +16,9 @@ func maximumCount(nums []int) int {
 			left = mid + 1
 		}
 	}
+
 	neg := right + 1
+
 	left, right = 0, n-1
 	for left <= right {
 		mid = left + (right-left)/2
@@ -24,6 +28,8 @@ func maximumCount(nums []int) int {
 			right = mid - 1
 		}
 	}
+
 	pos := n - left
+
 	return max(neg, pos)
 }

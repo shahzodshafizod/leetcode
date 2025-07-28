@@ -34,6 +34,7 @@ func (s *stack[T]) Pop() T {
 		s.top = s.top.next
 		s.size--
 	}
+
 	return val
 }
 
@@ -42,6 +43,7 @@ func (s *stack[T]) Top() T {
 	if !s.Empty() {
 		val = s.top.val
 	}
+
 	return val
 }
 

@@ -8,6 +8,7 @@ package dp
 func minimumDeletions(s string) int {
 	deletions := 0
 	bcount := 0
+
 	for _, c := range s {
 		if c == 'b' {
 			bcount++
@@ -15,6 +16,7 @@ func minimumDeletions(s string) int {
 			deletions = min(deletions+1, bcount)
 		}
 	}
+
 	return deletions
 }
 

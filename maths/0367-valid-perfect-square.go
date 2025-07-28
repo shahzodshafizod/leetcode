@@ -8,11 +8,15 @@ func isPerfectSquare(num int) bool {
 	if num == 1 {
 		return true
 	}
+
 	left, right := 2, num/2
+
 	var mid, square int
+
 	for left <= right {
 		mid = (left + right) / 2
 		square = mid * mid
+
 		if square > num {
 			right = mid - 1
 		} else if square < num {
@@ -21,5 +25,6 @@ func isPerfectSquare(num int) bool {
 			return true
 		}
 	}
+
 	return false
 }

@@ -8,17 +8,21 @@ func deleteNode(root *pkg.TreeNode, key int) *pkg.TreeNode {
 	if root == nil {
 		return nil
 	}
+
 	if root.Val > key {
 		root.Left = deleteNode(root.Left, key)
 		return root
 	}
+
 	if root.Val < key {
 		root.Right = deleteNode(root.Right, key)
 		return root
 	}
+
 	if root.Left == nil {
 		return root.Right
 	}
+
 	if root.Right == nil {
 		return root.Left
 	}
@@ -29,7 +33,9 @@ func deleteNode(root *pkg.TreeNode, key int) *pkg.TreeNode {
 	for minNode.Left != nil {
 		minNode = minNode.Left
 	}
+
 	root.Val = minNode.Val
 	root.Right = deleteNode(root.Right, minNode.Val)
+
 	return root
 }

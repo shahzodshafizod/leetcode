@@ -12,6 +12,7 @@ func distributeCandies2929(n int, limit int) int64 {
 		if candies < 0 {
 			return 0
 		}
+
 		return int64(candies) * int64(candies-1) / 2
 	}
 

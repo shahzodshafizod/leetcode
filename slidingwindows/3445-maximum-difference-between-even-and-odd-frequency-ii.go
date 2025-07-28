@@ -28,8 +28,11 @@ func maxDifference(s string, k int) int {
 		bestB := [4]int{0, n, n, n}
 		cnta, cntb := 0, 0
 		preva, prevb := 0, 0
+
 		var stat, prevStat, prevDiff int
+
 		maxDiff := -n
+
 		for idx := 0; idx < n; idx++ {
 			switch s[idx] {
 			case a:
@@ -37,6 +40,7 @@ func maxDifference(s string, k int) int {
 			case b:
 				cntb++
 			}
+
 			if idx+1 >= k {
 				stat = getStat(cnta, cntb) ^ 0b10
 				if best[stat] < n && cntb > bestB[stat] {
@@ -50,18 +54,22 @@ func maxDifference(s string, k int) int {
 				case b:
 					prevb++
 				}
+
 				prevStat = getStat(preva, prevb)
 				prevDiff = preva - prevb
+
 				if prevDiff < best[prevStat] {
 					best[prevStat] = prevDiff
 					bestB[prevStat] = prevb
 				}
 			}
 		}
+
 		return maxDiff
 	}
 	vals := [5]byte{'0', '1', '2', '3', '4'}
 	maxDiff := -n
+
 	for _, a := range vals {
 		for _, b := range vals {
 			if a != b {
@@ -69,6 +77,7 @@ func maxDifference(s string, k int) int {
 			}
 		}
 	}
+
 	return maxDiff
 }
 

@@ -15,17 +15,22 @@ func minOperations(nums []int, k int) int {
 	for _, num := range nums {
 		xor ^= num
 	}
+
 	if xor == k {
 		return 0
 	}
+
 	xor ^= k
 	flips := 0
+
 	for xor > 0 {
 		if xor&1 == 1 {
 			flips++
 		}
+
 		xor >>= 1
 	}
+
 	return flips
 }
 

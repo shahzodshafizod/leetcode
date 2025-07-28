@@ -18,6 +18,7 @@ func newPriorityQueue[T any](data []T, less func(x T, y T) bool) priorityQueue[T
 		data: data,
 		less: less,
 	}
+
 	return &pq
 }
 
@@ -36,6 +37,7 @@ func (p pq[T]) Peek() T {
 	if p.Len() > 0 {
 		val = p.data[0]
 	}
+
 	return val
 }
 
@@ -49,10 +51,12 @@ func (p *pq[T]) Pop() T {
 	if p.Len() == 0 {
 		return root
 	}
+
 	root = p.data[0]
 	p.swap(0, p.Len()-1)
 	p.data = p.data[:p.Len()-1]
 	p.shiftDown(0, p.Len())
+
 	return root
 }
 
@@ -72,14 +76,17 @@ func (p *pq[T]) shiftUp(child int) {
 
 func (p *pq[T]) shiftDown(lo int, hi int) {
 	parent := lo
+
 	child := p.left(parent)
 	for child < hi {
 		if child+1 < hi && p.compare(child, child+1) { // right
 			child++
 		}
+
 		if !p.compare(parent, child) {
 			return
 		}
+
 		p.swap(parent, child)
 		parent = child
 		child = p.left(parent)

@@ -7,20 +7,25 @@ package maths
 func getPermutation(n int, k int) string {
 	nums := make([]int, n)
 	factorial := 1
+
 	for idx := 1; idx <= n; idx++ {
 		nums[idx-1] = idx
 		factorial *= idx
 	}
+
 	k--
 	permutation := make([]byte, 0, n)
+
 	for n > 0 {
 		factorial /= n
 		idx := k / factorial
 		k %= factorial
+
 		permutation = append(permutation, byte('0'+nums[idx]))
 		nums = append(nums[:idx], nums[idx+1:]...)
 		n--
 	}
+
 	return string(permutation)
 }
 

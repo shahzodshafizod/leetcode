@@ -5,14 +5,17 @@ package matrices
 func islandPerimeter(grid [][]int) int {
 	m, n := len(grid), len(grid[0])
 	blocks, borders := 0, 0
+
 	for row := 0; row < m; row++ {
 		for col := 0; col < n; col++ {
 			if grid[row][col] == 1 {
 				blocks += 4
+
 				if row < m-1 && grid[row+1][col] == 1 {
 					// count down/up neighbors
 					borders += 2
 				}
+
 				if col < n-1 && grid[row][col+1] == 1 {
 					// count right/left borders
 					borders += 2
@@ -20,6 +23,7 @@ func islandPerimeter(grid [][]int) int {
 			}
 		}
 	}
+
 	return blocks - borders
 }
 

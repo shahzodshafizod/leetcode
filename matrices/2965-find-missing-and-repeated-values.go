@@ -10,7 +10,9 @@ func findMissingAndRepeatedValues(grid [][]int) []int {
 	nn := n * n
 	seen := make([]bool, nn+1)
 	sum := nn * (nn + 1) / 2
+
 	var twice int
+
 	for row := 0; row < n; row++ {
 		for col := 0; col < n; col++ {
 			if !seen[grid[row][col]] {
@@ -21,6 +23,8 @@ func findMissingAndRepeatedValues(grid [][]int) []int {
 			}
 		}
 	}
+
 	missing := sum
+
 	return []int{twice, missing}
 }

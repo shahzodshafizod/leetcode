@@ -11,37 +11,47 @@ func minimumObstacles(grid [][]int) int {
 		Row       int
 		Col       int
 	}
+
 	front := []*Cell{{0, 0, 0}} // {obstacles, row, col}
 	directions := [5]int{-1, 0, 1, 0, -1}
 	m, n := len(grid), len(grid[0])
 	seen := make([][]bool, m)
+
 	for idx := range seen {
 		seen[idx] = make([]bool, n)
 	}
+
 	obstacles := m + n - 1
+
 	for len(front) > 0 {
 		back := make([]*Cell, 0)
+
 		for idx := 0; idx < len(front); idx++ {
 			curr := front[idx]
 			if curr.Row == m-1 && curr.Col == n-1 {
 				return curr.Obstacles
 			}
+
 			var r, c int
 			for dir := 1; dir < 5; dir++ {
 				r = curr.Row + directions[dir-1]
 				c = curr.Col + directions[dir]
+
 				if min(r, c) >= 0 && r < m && c < n && !seen[r][c] {
 					if grid[r][c] == 0 {
 						front = append(front, &Cell{curr.Obstacles, r, c})
 					} else {
 						back = append(back, &Cell{curr.Obstacles + 1, r, c})
 					}
+
 					seen[r][c] = true
 				}
 			}
 		}
+
 		front = back
 	}
+
 	return obstacles
 }
 

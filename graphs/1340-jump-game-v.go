@@ -8,11 +8,14 @@ package graphs
 func maxJumps(arr []int, d int) int {
 	n := len(arr)
 	dp := make([]int, n)
+
 	var dfs func(idx int) int
+
 	dfs = func(idx int) int {
 		if dp[idx] != 0 {
 			return dp[idx]
 		}
+
 		dp[idx] = 1
 		// move left
 		for step := 1; step <= d && idx-step >= 0 && arr[idx] > arr[idx-step]; step++ {
@@ -22,12 +25,15 @@ func maxJumps(arr []int, d int) int {
 		for step := 1; step <= d && idx+step < n && arr[idx] > arr[idx+step]; step++ {
 			dp[idx] = max(dp[idx], 1+dfs(idx+step))
 		}
+
 		return dp[idx]
 	}
 	maxJump := 0
+
 	for idx := 0; idx < n; idx++ {
 		maxJump = max(maxJump, dfs(idx))
 	}
+
 	return maxJump
 }
 

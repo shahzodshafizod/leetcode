@@ -10,6 +10,7 @@ func subsetXORSum(nums []int) int {
 	for _, num := range nums {
 		total |= num
 	}
+
 	return total << (len(nums) - 1)
 }
 

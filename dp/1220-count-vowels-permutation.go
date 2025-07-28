@@ -20,9 +20,13 @@ package dp
 // Space: O(1)
 func countVowelPermutation(n int) int {
 	const mod int = 1e9 + 7
+
 	prev := [5]int{1, 1, 1, 1, 1}
+
 	var curr [5]int
+
 	count := 5
+
 	for ; n > 1; n-- {
 		curr[0] = (prev[1]) % mod
 		curr[1] = (prev[0] + prev[2]) % mod
@@ -30,11 +34,13 @@ func countVowelPermutation(n int) int {
 		curr[3] = (prev[2] + prev[4]) % mod
 		curr[4] = (prev[0]) % mod
 		count = 0
+
 		for i := 0; i < 5; i++ {
 			prev[i] = curr[i]
 			count = (count + curr[i]) % mod
 		}
 	}
+
 	return count
 }
 

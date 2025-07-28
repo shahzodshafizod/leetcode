@@ -11,5 +11,6 @@ func maximumDifference(nums []int) int {
 			premin = curr
 		}
 	}
+
 	return diff
 }

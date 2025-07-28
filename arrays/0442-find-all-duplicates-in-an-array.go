@@ -11,10 +11,12 @@ ON and OFF:
 
 func findDuplicates(nums []int) []int {
 	duplicates := make([]int, 0)
+
 	for _, num := range nums {
 		if num < 0 {
 			num = -num
 		}
+
 		num--
 		if nums[num] < 0 {
 			duplicates = append(duplicates, num+1)
@@ -22,6 +24,7 @@ func findDuplicates(nums []int) []int {
 			nums[num] = -nums[num]
 		}
 	}
+
 	return duplicates
 }
 

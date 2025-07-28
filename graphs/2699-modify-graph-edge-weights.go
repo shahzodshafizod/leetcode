@@ -14,6 +14,7 @@ import (
 func modifiedGraphEdges(n int, edges [][]int, source int, destination int, target int) [][]int {
 	// 1. Graph Representation
 	adjList := make([][][2]int, n)
+
 	var u, v int
 	for idx := range edges {
 		u, v = edges[idx][0], edges[idx][1]
@@ -36,19 +37,25 @@ func modifiedGraphEdges(n int, edges [][]int, source int, destination int, targe
 			},
 		)
 		distances[source][index] = 0
+
 		var currNode, currDist, nextNode, egdeIndex, nextWeight int
+
 		for pq.Len() > 0 {
 			curr := heap.Pop(pq).([2]int)
+
 			currNode, currDist = curr[0], curr[1]
 			if currDist > distances[currNode][index] {
 				continue
 			}
+
 			for _, next := range adjList[currNode] {
 				nextNode, egdeIndex = next[0], next[1]
+
 				nextWeight = edges[egdeIndex][2]
 				if nextWeight == -1 {
 					nextWeight = 1
 				}
+
 				if index == 1 && edges[egdeIndex][2] == -1 {
 					newWeight := difference + distances[nextNode][0] - distances[currNode][1]
 					if newWeight > nextWeight {
@@ -56,6 +63,7 @@ func modifiedGraphEdges(n int, edges [][]int, source int, destination int, targe
 						edges[egdeIndex][2] = newWeight
 					}
 				}
+
 				if distances[currNode][index]+nextWeight < distances[nextNode][index] {
 					distances[nextNode][index] = distances[currNode][index] + nextWeight
 					heap.Push(pq, [2]int{nextNode, distances[nextNode][index]})

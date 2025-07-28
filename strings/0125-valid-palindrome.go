@@ -37,6 +37,7 @@ func isPalindrome(s string) bool {
 	if length <= 1 {
 		return true
 	}
+
 	var leftChar, rightChar rune
 	for left, right := 0, length-1; left < right; left, right = left+1, right-1 {
 		leftChar = rune(s[left])
@@ -44,18 +45,22 @@ func isPalindrome(s string) bool {
 			left++
 			leftChar = rune(s[left])
 		}
+
 		rightChar = rune(s[right])
 		for right > left && !unicode.In(rightChar, unicode.Letter, unicode.Digit) {
 			right--
 			rightChar = rune(s[right])
 		}
+
 		if left >= right {
 			break
 		}
+
 		if unicode.ToLower(leftChar) != unicode.ToLower(rightChar) {
 			return false
 		}
 	}
+
 	return true
 }
 

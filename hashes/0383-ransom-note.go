@@ -10,13 +10,16 @@ func canConstruct0383(ransomNote string, magazine string) bool {
 	for _, c := range magazine {
 		count[c-'a']++
 	}
+
 	var code int
 	for _, c := range ransomNote {
 		code = int(c - 'a')
 		count[code]--
+
 		if count[code] < 0 {
 			return false
 		}
 	}
+
 	return true
 }

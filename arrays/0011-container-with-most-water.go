@@ -29,7 +29,9 @@ Step 8: Can we optimize our solution?
 
 func maxArea(height []int) int {
 	var maxArea int = 0
+
 	var area int
+
 	for left, right := 0, len(height)-1; left < right; {
 		if height[left] < height[right] {
 			area = height[left] * (right - left)
@@ -38,8 +40,10 @@ func maxArea(height []int) int {
 			area = height[right] * (right - left)
 			right--
 		}
+
 		maxArea = max(maxArea, area)
 	}
+
 	return maxArea
 }
 

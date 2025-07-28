@@ -8,10 +8,13 @@ func plusOne(digits []int) []int {
 			digits[idx]++
 			return digits
 		}
+
 		digits[idx] = 0
 	}
+
 	digits = append(digits, 0)
 	copy(digits, digits[1:])
 	digits[0] = 1
+
 	return digits
 }

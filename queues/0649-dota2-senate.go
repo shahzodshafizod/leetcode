@@ -19,6 +19,7 @@ func predictPartyVictory(senate string) string {
 	radiants := make([]int, 0, length)
 	dires := make([]int, 0, length)
 	skipR, skipD := 0, 0
+
 	for index, r := range senate {
 		switch r {
 		case 'R':
@@ -37,14 +38,18 @@ func predictPartyVictory(senate string) string {
 			}
 		}
 	}
+
 	if skipR > len(radiants) {
 		return "Dire"
 	}
+
 	if skipD > len(dires) {
 		return "Radiant"
 	}
+
 	radiants = radiants[skipR:]
 	dires = dires[skipD:]
+
 	for index := length; len(radiants) > 0 && len(dires) > 0; index++ {
 		if radiants[0] < dires[0] {
 			dires = dires[1:]
@@ -55,11 +60,14 @@ func predictPartyVictory(senate string) string {
 			dires = dires[1:]
 			dires = append(dires, index)
 		}
+
 		index++
 	}
+
 	if len(radiants) > 0 {
 		return "Radiant"
 	}
+
 	return "Dire"
 }
 

@@ -20,8 +20,10 @@ func TestBrowserHistory(t *testing.T) {
 		},
 	} {
 		var history BrowserHistory
+
 		for index, command := range tc.commands {
 			var output any
+
 			switch command {
 			case "BrowserHistory":
 				history = NewBrowserHistory(tc.values[index][0].(string))
@@ -32,6 +34,7 @@ func TestBrowserHistory(t *testing.T) {
 			case "forward":
 				output = history.Forward(tc.values[index][0].(int))
 			}
+
 			assert.Equal(t, tc.output[index], output)
 		}
 	}

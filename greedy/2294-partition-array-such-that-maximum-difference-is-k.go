@@ -9,6 +9,7 @@ import "sort"
 // Space: O(1)
 func partitionArray(nums []int, k int) int {
 	sort.Ints(nums)
+
 	partitions, min := 1, nums[0]
 	for _, max := range nums {
 		if max-min > k {
@@ -16,5 +17,6 @@ func partitionArray(nums []int, k int) int {
 			partitions++
 		}
 	}
+
 	return partitions
 }

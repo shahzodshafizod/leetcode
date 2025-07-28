@@ -10,5 +10,6 @@ func getDecimalValue(head *pkg.ListNode) int {
 		// value = value * 2 + node.Val
 		value = (value << 1) + node.Val
 	}
+
 	return value
 }

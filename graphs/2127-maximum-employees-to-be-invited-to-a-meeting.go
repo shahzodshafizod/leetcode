@@ -26,45 +26,58 @@ Solution:
 func maximumInvitations(favorite []int) int {
 	n := len(favorite)
 	indegree := make([]int, n)
+
 	for empl := 0; empl < n; empl++ {
 		indegree[favorite[empl]]++
 	}
+
 	queue := list.New()
+
 	for empl := 0; empl < n; empl++ {
 		if indegree[empl] == 0 {
 			queue.PushBack(empl)
 		}
 	}
+
 	depth := make([]int, n)
+
 	var currEmpl, nextEmpl int
 	for queue.Len() > 0 {
 		currEmpl = queue.Remove(queue.Front()).(int)
 		nextEmpl = favorite[currEmpl]
 		depth[nextEmpl] = max(depth[nextEmpl], depth[currEmpl]+1)
+
 		indegree[nextEmpl]--
 		if indegree[nextEmpl] == 0 {
 			queue.PushBack(nextEmpl)
 		}
 	}
+
 	longestCycle := 0
 	twoLenCycle := 0
+
 	var cycleLength, tmpEmpl int
+
 	for empl := 0; empl < n; empl++ {
 		if indegree[empl] == 0 {
 			continue
 		}
+
 		cycleLength = 0
+
 		tmpEmpl = empl
 		for indegree[tmpEmpl] != 0 {
 			indegree[tmpEmpl]--
 			cycleLength++
 			tmpEmpl = favorite[tmpEmpl]
 		}
+
 		if cycleLength == 2 {
 			twoLenCycle += depth[empl] + depth[favorite[empl]] + 2
 		} else {
 			longestCycle = max(longestCycle, cycleLength)
 		}
 	}
+
 	return max(longestCycle, twoLenCycle)
 }

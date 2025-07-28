@@ -14,17 +14,22 @@ package unionfinds
 // Space: O(N)
 func canReachCorner(xCorner int, yCorner int, circles [][]int) bool {
 	n := len(circles)
+
 	parent := make([]int, n+2)
 	for idx := range parent {
 		parent[idx] = idx
 	}
+
 	var find func(x int) int
+
 	find = func(x int) int {
 		if parent[x] != x {
 			parent[x] = find(parent[x])
 		}
+
 		return parent[x]
 	}
+
 	var x, y, r int
 	for idx := range circles {
 		x, y, r = circles[idx][0], circles[idx][1], circles[idx][2]
@@ -39,6 +44,7 @@ func canReachCorner(xCorner int, yCorner int, circles [][]int) bool {
 		if x <= r && y <= yCorner || y+r >= yCorner && x <= xCorner {
 			parent[find(n)] = find(idx)
 		}
+
 		if y <= r && x <= xCorner || x+r >= xCorner && y <= yCorner {
 			parent[find(n+1)] = find(idx)
 		}
@@ -51,18 +57,22 @@ func canReachCorner(xCorner int, yCorner int, circles [][]int) bool {
 	if find(n) == n || find(n+1) == n+1 {
 		return true
 	}
+
 	var x2, y2, r2 int
+
 	for i := 0; i < n; i++ {
 		x, y, r = circles[i][0], circles[i][1], circles[i][2]
 		// if circle 1 is out of usable range
 		if x-r >= xCorner || y-r >= yCorner || x >= xCorner && y >= yCorner {
 			continue
 		}
+
 		for j := 0; j < i; j++ {
 			// if already unioned
 			if find(i) == find(j) {
 				continue
 			}
+
 			x2, y2, r2 = circles[j][0], circles[j][1], circles[j][2]
 			// if pair is out of usable range
 			if x+x2 >= 2*xCorner && y+y2 >= 2*yCorner {
@@ -78,6 +88,7 @@ func canReachCorner(xCorner int, yCorner int, circles [][]int) bool {
 			}
 		}
 	}
+
 	return true
 }
 

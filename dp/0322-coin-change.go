@@ -8,6 +8,7 @@ package dp
 func coinChange(coins []int, amount int) int {
 	counts := make([]int, amount+1)
 	counts[0] = 0
+
 	for a := 1; a <= amount; a++ {
 		counts[a] = amount + 1
 		for _, coin := range coins {
@@ -16,9 +17,11 @@ func coinChange(coins []int, amount int) int {
 			}
 		}
 	}
+
 	if counts[amount] == amount+1 {
 		counts[amount] = -1
 	}
+
 	return counts[amount]
 }
 

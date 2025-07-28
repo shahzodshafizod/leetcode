@@ -45,8 +45,10 @@ func TestMyLinkedList(t *testing.T) {
 		},
 	} {
 		var list MyLinkedList
+
 		for index, command := range tc.commands {
 			var output any = nil
+
 			switch command {
 			case "MyLinkedList":
 				list = NewMyLinkedList()
@@ -61,6 +63,7 @@ func TestMyLinkedList(t *testing.T) {
 			case "deleteAtIndex":
 				list.DeleteAtIndex(tc.values[index][0])
 			}
+
 			assert.Equal(t, tc.output[index], output)
 		}
 	}

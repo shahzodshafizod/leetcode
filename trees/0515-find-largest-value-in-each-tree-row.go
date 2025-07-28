@@ -15,24 +15,32 @@ func largestValues(root *pkg.TreeNode) []int {
 	if root == nil {
 		return []int{}
 	}
+
 	largest := make([]int, 0)
 	queue := []*pkg.TreeNode{root}
+
 	var maxval int
+
 	for len(queue) > 0 {
 		maxval = math.MinInt
 		nextq := make([]*pkg.TreeNode, 0)
+
 		for _, node := range queue {
 			maxval = max(maxval, node.Val)
+
 			if node.Left != nil {
 				nextq = append(nextq, node.Left)
 			}
+
 			if node.Right != nil {
 				nextq = append(nextq, node.Right)
 			}
 		}
+
 		largest = append(largest, maxval)
 		queue = nextq
 	}
+
 	return largest
 }
 

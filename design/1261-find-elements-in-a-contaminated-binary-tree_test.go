@@ -31,15 +31,18 @@ func TestFindElements(t *testing.T) {
 		},
 	} {
 		var finder FindElements
+
 		var output any
 		for idx, command := range tc.commands {
 			output = nil
+
 			switch command {
 			case "FindElements":
 				finder = NewFindElements(pkg.MakeTree2(tc.values[idx][0].([]any)...))
 			case "find":
 				output = finder.Find(tc.values[idx][0].(int))
 			}
+
 			assert.Equal(t, tc.output[idx], output)
 		}
 	}

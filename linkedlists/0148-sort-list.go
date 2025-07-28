@@ -11,13 +11,16 @@ func sortList(head *pkg.ListNode) *pkg.ListNode {
 	if head == nil || head.Next == nil {
 		return head
 	}
+
 	tortoise, hare := head, head.Next
 	for hare != nil && hare.Next != nil {
 		tortoise = tortoise.Next
 		hare = hare.Next.Next
 	}
+
 	secondPart := tortoise.Next
 	tortoise.Next = nil
+
 	return mergeTwoLists(
 		sortList(head),
 		sortList(secondPart),

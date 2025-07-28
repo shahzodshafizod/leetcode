@@ -35,20 +35,25 @@ func TestKthLargest(t *testing.T) {
 		},
 	} {
 		var kth KthLargest
+
 		for index, command := range tc.commands {
 			var output any = nil
+
 			switch command {
 			case "KthLargest":
 				k := tc.values[index][0].(int)
 				src := tc.values[index][1].([]any)
 				nums := make([]int, 0, len(src))
+
 				for _, num := range src {
 					nums = append(nums, num.(int))
 				}
+
 				kth = NewKthLargest(k, nums)
 			case "add":
 				output = kth.Add(tc.values[index][0].(int))
 			}
+
 			assert.Equal(t, tc.output[index], output)
 		}
 	}

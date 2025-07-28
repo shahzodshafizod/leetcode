@@ -10,8 +10,10 @@ func containsDuplicate(nums []int) bool {
 		if seen[num] {
 			return true
 		}
+
 		seen[num] = true
 	}
+
 	return false
 }
 

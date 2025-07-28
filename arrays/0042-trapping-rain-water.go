@@ -26,8 +26,10 @@ func trap(height []int) int {
 	total := 0
 	maxElem := 0
 	left, right := 0, len(height)-1
+
 	for left < right {
 		oldMaxElem := maxElem
+
 		if height[left] < height[right] {
 			maxElem = max(maxElem, height[left])
 			total += (right-left)*(maxElem-oldMaxElem) - height[left]
@@ -38,6 +40,7 @@ func trap(height []int) int {
 			right--
 		}
 	}
+
 	return total
 }
 

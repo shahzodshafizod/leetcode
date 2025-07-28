@@ -7,6 +7,7 @@ func shuffle(nums []int, n int) []int {
 	for i := 0; i < n; i++ {
 		shuffled = append(shuffled, nums[i], nums[n+i])
 	}
+
 	return shuffled
 }
 

@@ -5,6 +5,7 @@ package slidingwindows
 func numberOfSubstrings(s string) int {
 	count := 0
 	a, b, c := -1, -1, -1
+
 	for idx, n := 0, len(s); idx < n; idx++ {
 		switch s[idx] {
 		case 'a':
@@ -14,7 +15,9 @@ func numberOfSubstrings(s string) int {
 		case 'c':
 			c = idx
 		}
+
 		count += min(a, b, c) + 1
 	}
+
 	return count
 }

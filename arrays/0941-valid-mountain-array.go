@@ -20,5 +20,6 @@ func validMountainArray(arr []int) bool {
 	for idx+1 < n && arr[idx] > arr[idx+1] {
 		idx++
 	}
+
 	return idx == n-1
 }

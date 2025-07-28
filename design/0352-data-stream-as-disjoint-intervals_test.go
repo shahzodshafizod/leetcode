@@ -25,9 +25,11 @@ func TestSummaryRanges(t *testing.T) {
 		},
 	} {
 		var sr SummaryRanges
+
 		var output any
 		for idx, command := range tc.commands {
 			output = nil
+
 			switch command {
 			case "SummaryRanges":
 				sr = NewSummaryRanges()
@@ -36,6 +38,7 @@ func TestSummaryRanges(t *testing.T) {
 			case "getIntervals":
 				output = sr.GetIntervals()
 			}
+
 			assert.Equal(t, tc.outputs[idx], output)
 		}
 	}

@@ -11,20 +11,26 @@ func minDays(n int) int {
 	// - east n/2, remains n/2, n/2+n/2 = n
 	// - east 2*n/3, remains n/3, 2*n/3+n/3 = 3*n/3 = n
 	memo := make(map[int]int)
+
 	var dp func(n int) int
+
 	dp = func(n int) int {
 		if n <= 1 {
 			return n
 		}
+
 		if cache, found := memo[n]; found {
 			return cache
 		}
+
 		memo[n] = 1 + min(
 			n%3+dp(n/3), // make n divisable to 3 and add the remaining
 			n%2+dp(n/2), // make n divisable to 2 and add the remaining
 		)
+
 		return memo[n]
 	}
+
 	return dp(n)
 }
 

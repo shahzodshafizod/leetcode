@@ -43,13 +43,17 @@ package graphs
 // space: O(N+M) = O(N), M: for recursion stack
 func getAncestors(n int, edges [][]int) [][]int {
 	adjList := make([][]int, n)
+
 	var from, to int
 	for _, edge := range edges { // O(E) = O(N^2)
 		from, to = edge[0], edge[1]
 		adjList[from] = append(adjList[from], to)
 	}
+
 	answer := make([][]int, n)
+
 	var dfs func(ancestor int, node int)
+
 	dfs = func(ancestor int, node int) {
 		for _, neighbor := range adjList[node] {
 			if len(answer[neighbor]) == 0 ||
@@ -62,6 +66,7 @@ func getAncestors(n int, edges [][]int) [][]int {
 	for ancestor := 0; ancestor < n; ancestor++ { // O(N)
 		dfs(ancestor, ancestor) // O(M) = maximal path length
 	}
+
 	return answer
 }
 

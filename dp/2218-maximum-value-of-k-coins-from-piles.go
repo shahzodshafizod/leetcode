@@ -9,7 +9,9 @@ func maxValueOfCoins(piles [][]int, k int) int {
 	n := len(piles)
 	curr, next := make([]int, k+1), make([]int, k+1)
 	curr[1] = 1
+
 	var total, limit int
+
 	for i := n - 1; i >= 0; i-- {
 		curr, next = next, curr
 		for coins := 1; coins <= k; coins++ {
@@ -26,6 +28,7 @@ func maxValueOfCoins(piles [][]int, k int) int {
 			}
 		}
 	}
+
 	return curr[k]
 }
 

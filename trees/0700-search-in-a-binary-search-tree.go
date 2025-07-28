@@ -12,6 +12,7 @@ func searchBST(root *pkg.TreeNode, val int) *pkg.TreeNode {
 			root = root.Left
 		}
 	}
+
 	return root
 }
 

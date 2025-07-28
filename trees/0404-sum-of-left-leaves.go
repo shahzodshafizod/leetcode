@@ -7,16 +7,20 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 // DFS
 func sumOfLeftLeaves(root *pkg.TreeNode) int {
 	var dfs func(node *pkg.TreeNode, isLeft bool) int
+
 	dfs = func(node *pkg.TreeNode, isLeft bool) int {
 		if node == nil {
 			return 0
 		}
+
 		sum := 0
 		if isLeft && node.Left == nil && node.Right == nil {
 			sum += node.Val
 		}
+
 		return sum + dfs(node.Left, true) + dfs(node.Right, false)
 	}
+
 	return dfs(root, false)
 }
 

@@ -5,8 +5,10 @@ package bits
 // Greedy Bit Manipulation
 func maximumOddBinaryNumber(s string) string {
 	const ZERO, ONE = '0', '1'
+
 	n := len(s)
 	b := []byte(s)
+
 	left, right := 0, n-1
 	for left <= right {
 		switch {
@@ -20,7 +22,9 @@ func maximumOddBinaryNumber(s string) string {
 			right--
 		}
 	}
+
 	left--
 	b[left], b[n-1] = b[n-1], b[left]
+
 	return string(b)
 }

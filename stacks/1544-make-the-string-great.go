@@ -11,6 +11,7 @@ func makeGood(s string) string {
 			st = append(st, s[idx])
 		}
 	}
+
 	return string(st)
 }
 

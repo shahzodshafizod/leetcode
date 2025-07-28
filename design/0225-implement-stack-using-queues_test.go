@@ -25,8 +25,10 @@ func TestMyStack(t *testing.T) {
 		},
 	} {
 		var stack MyStack
+
 		for index, command := range tc.commands {
 			var output any = nil
+
 			switch command {
 			case "MyStack":
 				stack = NewMyStack()
@@ -39,6 +41,7 @@ func TestMyStack(t *testing.T) {
 			case "empty":
 				output = stack.Empty()
 			}
+
 			assert.Equal(t, tc.output[index], output)
 		}
 	}

@@ -8,28 +8,36 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 // space: O(2N) = O(N)
 func createBinaryTree(descriptions [][]int) *pkg.TreeNode {
 	tree := make(map[int]*pkg.TreeNode)
+
 	var parent, child, isLeft int
+
 	children := make(map[int]bool)
+
 	for _, desc := range descriptions {
 		parent, child, isLeft = desc[0], desc[1], desc[2]
 		children[child] = true
+
 		if tree[parent] == nil {
 			tree[parent] = &pkg.TreeNode{Val: parent}
 		}
+
 		if tree[child] == nil {
 			tree[child] = &pkg.TreeNode{Val: child}
 		}
+
 		if isLeft == 1 {
 			tree[parent].Left = tree[child]
 		} else {
 			tree[parent].Right = tree[child]
 		}
 	}
+
 	for _, desc := range descriptions {
 		parent = desc[0]
 		if !children[parent] {
 			return tree[parent]
 		}
 	}
+
 	return nil
 }

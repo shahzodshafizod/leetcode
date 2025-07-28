@@ -9,6 +9,7 @@ func checkValidCuts(n int, rectangles [][]int) bool {
 		sort.Slice(rectangles, func(i int, j int) bool {
 			return rectangles[i][dim] < rectangles[j][dim]
 		})
+
 		last, count := 0, 0
 		for idx := range rectangles {
 			if last <= rectangles[idx][dim] {
@@ -17,9 +18,12 @@ func checkValidCuts(n int, rectangles [][]int) bool {
 					break
 				}
 			}
+
 			last = max(last, rectangles[idx][dim+2])
 		}
+
 		return count == 3
 	}
+
 	return check(0) || check(1)
 }

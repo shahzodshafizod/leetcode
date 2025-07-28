@@ -9,6 +9,7 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 // Space: O(1)
 func removeElements(head *pkg.ListNode, val int) *pkg.ListNode {
 	dummy := &pkg.ListNode{Next: head}
+
 	node := dummy
 	for node.Next != nil {
 		if node.Next.Val == val {
@@ -17,6 +18,7 @@ func removeElements(head *pkg.ListNode, val int) *pkg.ListNode {
 			node = node.Next
 		}
 	}
+
 	return dummy.Next
 }
 

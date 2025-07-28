@@ -13,22 +13,27 @@ func mergeKLists(lists []*pkg.ListNode) *pkg.ListNode {
 		make([]*pkg.ListNode, 0),
 		func(x, y *pkg.ListNode) bool { return x.Val < y.Val },
 	)
+
 	for _, list := range lists {
 		if list != nil {
 			heap.Push(minHeap, list)
 		}
 	}
+
 	list := &pkg.ListNode{}
 	tail := list
+
 	for minHeap.Len() > 0 {
 		min := heap.Pop(minHeap).(*pkg.ListNode)
 		if min.Next != nil {
 			heap.Push(minHeap, min.Next)
 		}
+
 		tail.Next = min
 		tail = tail.Next
 		tail.Next = nil
 	}
+
 	return list.Next
 }
 

@@ -6,6 +6,7 @@ package stacks
 func reverseParentheses(s string) string {
 	pairs := make(map[int]int)
 	stack := make([]int, 0)
+
 	for idx := range s {
 		switch s[idx] {
 		case '(':
@@ -17,9 +18,11 @@ func reverseParentheses(s string) string {
 			pairs[idx] = opening
 		}
 	}
+
 	idx, dir := 0, 1
 	len := len(s)
 	result := make([]byte, 0)
+
 	for idx < len {
 		if s[idx] == '(' || s[idx] == ')' {
 			idx = pairs[idx]
@@ -27,8 +30,10 @@ func reverseParentheses(s string) string {
 		} else {
 			result = append(result, s[idx])
 		}
+
 		idx += dir
 	}
+
 	return string(result)
 }
 

@@ -25,15 +25,18 @@ func TestWordFilter(t *testing.T) {
 		},
 	} {
 		var filter WordFilter
+
 		var output any
 		for idx, command := range tc.commands {
 			output = nil
+
 			switch command {
 			case "WordFilter":
 				filter = NewWordFilter(tc.values[idx])
 			case "f":
 				output = filter.F(tc.values[idx][0], tc.values[idx][1])
 			}
+
 			assert.Equal(t, tc.output[idx], output)
 		}
 	}

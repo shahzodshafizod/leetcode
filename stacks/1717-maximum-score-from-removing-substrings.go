@@ -7,11 +7,14 @@ package stacks
 // Space: O(1)
 func maximumGain(s string, x int, y int) int {
 	a, b := 'a', 'b'
+
 	if x < y {
 		x, y = y, x
 		a, b = b, a
 	}
+
 	score, acnt, bcnt := 0, 0, 0
+
 	for _, c := range s {
 		switch c {
 		case a:
@@ -28,7 +31,9 @@ func maximumGain(s string, x int, y int) int {
 			acnt, bcnt = 0, 0
 		}
 	}
+
 	score += min(acnt, bcnt) * y
+
 	return score
 }
 

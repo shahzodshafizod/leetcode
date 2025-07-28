@@ -4,15 +4,18 @@ package hashes
 
 func tupleSameProduct(nums []int) int {
 	squares := make(map[int]int)
+
 	for i, n := 0, len(nums); i < n; i++ {
 		for j := i + 1; j < n; j++ {
 			squares[nums[i]*nums[j]]++
 		}
 	}
+
 	count := 0
 	for _, cnt := range squares {
 		count += 8 * cnt * (cnt - 1)
 	}
+
 	return count / 2
 }
 

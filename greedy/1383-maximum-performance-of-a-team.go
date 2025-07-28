@@ -16,20 +16,25 @@ func maxPerformance(n int, speed []int, efficiency []int, k int) int {
 	for idx := 0; idx < n; idx++ {
 		engineers = append(engineers, [2]int{efficiency[idx], speed[idx]})
 	}
+
 	slices.SortFunc(engineers, func(a, b [2]int) int { return b[0] - a[0] })
+
 	speeds := pkg.NewHeap(
 		make([]int, 0),
 		func(x, y int) bool { return x < y },
 	)
 	performance, totalSpeed := 0, 0
+
 	for _, engineer := range engineers {
 		if speeds.Len() == k {
 			totalSpeed -= heap.Pop(speeds).(int)
 		}
+
 		totalSpeed += engineer[1]
 		heap.Push(speeds, engineer[1])
 		performance = max(performance, totalSpeed*engineer[0])
 	}
+
 	return performance % (1e9 + 7)
 }
 

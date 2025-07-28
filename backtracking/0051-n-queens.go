@@ -4,6 +4,7 @@ package backtracking
 
 func solveNQueens(n int) [][]string {
 	solutions := make([][]string, 0)
+
 	board := make([][]byte, n)
 	for row := range board {
 		board[row] = make([]byte, n)
@@ -11,23 +12,30 @@ func solveNQueens(n int) [][]string {
 			board[row][col] = '.'
 		}
 	}
+
 	cols := make([]bool, n)      // (row)
 	negDiag := make([]bool, 2*n) // (row - col)
 	posDiag := make([]bool, 2*n) // (row + col)
+
 	var backtrack func(row int)
+
 	backtrack = func(row int) {
 		if row == n {
 			solution := make([]string, n)
 			for idx := range solution {
 				solution[idx] = string(board[idx])
 			}
+
 			solutions = append(solutions, solution)
+
 			return
 		}
+
 		for col := 0; col < n; col++ {
 			if cols[col] || negDiag[n-row+col] || posDiag[row+col] {
 				continue
 			}
+
 			board[row][col] = 'Q'
 			cols[col] = true
 			negDiag[n-row+col] = true
@@ -42,5 +50,6 @@ func solveNQueens(n int) [][]string {
 		}
 	}
 	backtrack(0)
+
 	return solutions
 }

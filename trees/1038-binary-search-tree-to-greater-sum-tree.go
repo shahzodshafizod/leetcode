@@ -14,7 +14,9 @@ https://leetcode.com/problems/convert-bst-to-greater-tree/
 // space: O(1)
 func bstToGst(root *pkg.TreeNode) *pkg.TreeNode {
 	sum := 0
+
 	var prev *pkg.TreeNode
+
 	curr := root
 	for curr != nil {
 		if curr.Right == nil {
@@ -26,6 +28,7 @@ func bstToGst(root *pkg.TreeNode) *pkg.TreeNode {
 			for prev.Left != nil && prev.Left != curr {
 				prev = prev.Left
 			}
+
 			if prev.Left == curr {
 				prev.Left = nil
 				sum += curr.Val
@@ -37,6 +40,7 @@ func bstToGst(root *pkg.TreeNode) *pkg.TreeNode {
 			}
 		}
 	}
+
 	return root
 }
 

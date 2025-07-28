@@ -8,10 +8,12 @@ package matrices
 func setZeroes(matrix [][]int) {
 	m, n := len(matrix), len(matrix[0])
 	firstCol := false
+
 	for row := 0; row < m; row++ {
 		if matrix[row][0] == 0 {
 			firstCol = true
 		}
+
 		for col := 1; col < n; col++ {
 			if matrix[row][col] == 0 {
 				matrix[row][0] = 0
@@ -19,12 +21,14 @@ func setZeroes(matrix [][]int) {
 			}
 		}
 	}
+
 	for row := m - 1; row >= 0; row-- {
 		for col := n - 1; col >= 1; col-- {
 			if matrix[row][0] == 0 || matrix[0][col] == 0 {
 				matrix[row][col] = 0
 			}
 		}
+
 		if firstCol {
 			matrix[row][0] = 0
 		}

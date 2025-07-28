@@ -5,6 +5,7 @@ package matrices
 func largestLocal(grid [][]int) [][]int {
 	n := len(grid)
 	maxLocal := make([][]int, n-2)
+
 	for row := 0; row < n-2; row++ {
 		maxLocal[row] = make([]int, n-2)
 		for col := 0; col < n-2; col++ {
@@ -15,5 +16,6 @@ func largestLocal(grid [][]int) [][]int {
 			)
 		}
 	}
+
 	return maxLocal
 }

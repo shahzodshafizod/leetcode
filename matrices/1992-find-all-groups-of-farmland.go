@@ -4,9 +4,12 @@ package matrices
 
 func findFarmland(land [][]int) [][]int {
 	m, n := len(land), len(land[0])
+
 	var dfs func(row int, col int) (int, int)
+
 	dfs = func(row int, col int) (int, int) {
 		land[row][col] = 0
+
 		var r, c int
 		for _, next := range [2][2]int{
 			{row + 1, col}, // down
@@ -19,10 +22,13 @@ func findFarmland(land [][]int) [][]int {
 				col = max(col, c)
 			}
 		}
+
 		return row, col
 	}
 	farmland := make([][]int, 0)
+
 	var r2, c2 int
+
 	for row := 0; row < m; row++ {
 		for col := 0; col < n; col++ {
 			if land[row][col] == 1 {
@@ -32,5 +38,6 @@ func findFarmland(land [][]int) [][]int {
 			}
 		}
 	}
+
 	return farmland
 }

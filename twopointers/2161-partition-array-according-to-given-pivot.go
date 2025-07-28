@@ -8,6 +8,7 @@ package twopointers
 func pivotArray(nums []int, pivot int) []int {
 	n := len(nums)
 	left := 0
+
 	for idx := 0; idx < n; idx++ {
 		if nums[idx] < pivot {
 			nums[left] = nums[idx]
@@ -16,12 +17,15 @@ func pivotArray(nums []int, pivot int) []int {
 			nums = append(nums, nums[idx])
 		}
 	}
+
 	for ; left < n; left++ {
 		nums[left] = pivot
 	}
+
 	greater := len(nums) - n
 	copy(nums[n-greater:], nums[n:])
 	nums = nums[:n]
+
 	return nums
 }
 

@@ -70,6 +70,7 @@ func NewMonarchy(kingName string) Monarchy {
 		alive:    true,
 		children: make([]*member, 0),
 	}
+
 	return &monarchy{
 		king:    king,
 		members: map[string]*member{kingName: king},
@@ -81,6 +82,7 @@ func (m *monarchy) Birth(child string, parent string) {
 	if theParent == nil {
 		return
 	}
+
 	newChild := &member{
 		name:     child,
 		alive:    true,
@@ -105,8 +107,10 @@ func (m *monarchy) getOrderOfSuccession(current *member) []string {
 	if current.alive {
 		values = append(values, current.name)
 	}
+
 	for _, child := range current.children {
 		values = append(values, m.getOrderOfSuccession(child)...)
 	}
+
 	return values
 }

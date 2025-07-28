@@ -10,6 +10,7 @@ func rob(nums []int) int {
 	for _, num := range nums {
 		prev, curr = curr, max(prev+num, curr)
 	}
+
 	return curr
 }
 

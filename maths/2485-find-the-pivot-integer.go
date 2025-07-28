@@ -20,9 +20,11 @@ sum(n)=n*(n+1)/2
 func pivotInteger(n int) int {
 	sum := int(float32(n) / 2 * float32(n+1))
 	pivot := int(math.Sqrt(float64(sum)))
+
 	if pivot*pivot == sum {
 		return pivot
 	}
+
 	return -1
 }
 

@@ -7,29 +7,38 @@ package arrays
 // space: O(1)
 func kthSmallestPrimeFraction(arr []int, k int) []int {
 	n := len(arr)
+
 	var left, right float64 = 0, 1
+
 	var mid, fraction, maxfraction float64
+
 	var smallfractions, numerator, denominator, j int
+
 	for left < right {
 		mid = (left + right) / 2
 		maxfraction = 0.0
 		smallfractions = 0
 		numerator, denominator = 0, 0
+
 		j = 1
 		for i := 0; i < n; i++ {
 			for j < n && float64(arr[i]) >= mid*float64(arr[j]) {
 				j++
 			}
+
 			if j == n {
 				break
 			}
+
 			smallfractions += n - j
+
 			fraction = float64(arr[i]) / float64(arr[j])
 			if fraction > maxfraction {
 				maxfraction = fraction
 				numerator, denominator = i, j
 			}
 		}
+
 		if smallfractions == k {
 			break
 		} else if smallfractions > k {
@@ -38,6 +47,7 @@ func kthSmallestPrimeFraction(arr []int, k int) []int {
 			left = mid
 		}
 	}
+
 	return []int{arr[numerator], arr[denominator]}
 }
 

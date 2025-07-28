@@ -17,8 +17,10 @@ func (t *trie) insert(word *string) {
 			child = &trie{children: make(map[rune]*trie)}
 			current.children[c] = child
 		}
+
 		current = child
 	}
+
 	current.end = true
 }
 
@@ -28,11 +30,13 @@ func (t *trie) search(word *string) int {
 		if current.end {
 			return idx
 		}
+
 		current = current.children[c]
 		if current == nil {
 			break
 		}
 	}
+
 	return -1
 }
 
@@ -47,6 +51,7 @@ func replaceWords(dictionary []string, sentence string) string {
 	for idx := range dictionary {
 		trie.insert(&dictionary[idx])
 	}
+
 	words := strings.Split(sentence, " ")
 	for idx := range words {
 		rootEnd := trie.search(&words[idx])
@@ -54,6 +59,7 @@ func replaceWords(dictionary []string, sentence string) string {
 			words[idx] = words[idx][:rootEnd]
 		}
 	}
+
 	return strings.Join(words, " ")
 }
 

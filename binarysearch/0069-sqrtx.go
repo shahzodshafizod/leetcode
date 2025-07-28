@@ -4,7 +4,9 @@ package binarysearch
 
 func mySqrt(x int) int {
 	left, right := 1, x
+
 	var mid int
+
 	for left <= right {
 		mid = left + (right-left)/2
 		if mid*mid > x {
@@ -13,5 +15,6 @@ func mySqrt(x int) int {
 			left = mid + 1
 		}
 	}
+
 	return right
 }

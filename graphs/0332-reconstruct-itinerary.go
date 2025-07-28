@@ -16,16 +16,20 @@ For other vertex vi has indeg(vi)=outdeg(vi).
 
 func findItinerary(tickets [][]string) []string {
 	adjList := make(map[string]*pkg.Heap[string])
+
 	for _, ticket := range tickets {
 		src, dst := ticket[0], ticket[1]
 		if adjList[src] == nil {
 			adjList[src] = pkg.NewHeap(make([]string, 0), func(x, y string) bool { return x < y })
 		}
+
 		heap.Push(adjList[src], dst)
 	}
+
 	length := len(tickets) + 1
 	result := make([]string, length)
 	findItineraryDFS(adjList, "JFK", &result, &length)
+
 	return result
 }
 
@@ -39,6 +43,7 @@ func findItineraryDFS(
 		next := heap.Pop(adjList[source]).(string)
 		findItineraryDFS(adjList, next, result, index)
 	}
+
 	(*index)--
 	(*result)[*index] = source
 }

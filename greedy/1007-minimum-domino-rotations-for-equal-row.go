@@ -8,9 +8,12 @@ func minDominoRotations(tops []int, bottoms []int) int {
 	// not more optimal!!!
 	// So the first found one is the optimal one.
 	n := len(tops)
+
 	var idx int
+
 	for _, target := range []int{tops[0], bottoms[0]} {
 		tswaps, bswaps := 0, 0
+
 		for idx = 0; idx < n; idx++ {
 			if tops[idx] != target && bottoms[idx] != target {
 				break
@@ -20,9 +23,11 @@ func minDominoRotations(tops []int, bottoms []int) int {
 				bswaps++
 			}
 		}
+
 		if idx == n {
 			return min(tswaps, bswaps)
 		}
 	}
+
 	return -1
 }

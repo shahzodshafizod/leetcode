@@ -6,12 +6,15 @@ package bits
 // space: O(1)
 func numSteps(s string) int {
 	operations, carry := 0, 0
+
 	var bit int
+
 	for idx := len(s) - 1; idx > 0; idx-- {
 		bit = int(s[idx]-'0') ^ carry
 		carry |= bit
 		operations += 1 + bit
 	}
+
 	return operations + carry
 }
 

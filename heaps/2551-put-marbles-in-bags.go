@@ -12,13 +12,16 @@ func putMarbles(weights []int, k int) int64 {
 	for idx := 1; idx < n; idx++ {
 		weights[idx-1] += weights[idx]
 	}
+
 	weights = weights[:n-1]
 	sort.Ints(weights)
+
 	var min, max int64 = 0, 0
 	for idx := 0; idx < k-1; idx++ {
 		min += int64(weights[idx])
 		max += int64(weights[n-2-idx])
 	}
+
 	return max - min
 }
 

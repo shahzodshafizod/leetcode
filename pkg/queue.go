@@ -31,6 +31,7 @@ func (q *queue[T]) Enqueue(val T) {
 		q.tail.next = newNode
 		q.tail = newNode
 	}
+
 	q.size++
 }
 
@@ -41,6 +42,7 @@ func (q *queue[T]) Dequeue() T {
 		q.head = q.head.next
 		q.size--
 	}
+
 	return val
 }
 
@@ -49,6 +51,7 @@ func (q *queue[T]) Peek() T {
 	if !q.Empty() {
 		val = q.head.val
 	}
+
 	return val
 }
 

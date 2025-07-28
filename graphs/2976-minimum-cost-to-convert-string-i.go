@@ -20,11 +20,13 @@ func minimumCost(source string, target string, original []byte, changed []byte, 
 			}
 		}
 	}
+
 	var src, dst int
 	for idx := range original {
 		src, dst = int(original[idx]-'a'), int(changed[idx]-'a')
 		minCosts[src][dst] = min(minCosts[src][dst], int64(cost[idx]))
 	}
+
 	for through := 0; through < 26; through++ {
 		for src := 0; src < 26; src++ {
 			for dst := 0; dst < 26; dst++ {
@@ -35,12 +37,15 @@ func minimumCost(source string, target string, original []byte, changed []byte, 
 			}
 		}
 	}
+
 	var totalCost int64 = 0
+
 	for idx := range source {
 		src, dst = int(source[idx]-'a'), int(target[idx]-'a')
 		if minCosts[src][dst] >= math.MaxInt32 {
 			return -1
 		}
+
 		totalCost += minCosts[src][dst]
 	}
 

@@ -6,9 +6,11 @@ package maths
 func passThePillow(n int, time int) int {
 	rounds := time / (n - 1)
 	extras := time % (n - 1)
+
 	if rounds&1 == 0 {
 		return extras + 1
 	}
+
 	return n - extras
 }
 

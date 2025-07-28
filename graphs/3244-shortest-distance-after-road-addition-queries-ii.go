@@ -10,8 +10,10 @@ func shortestDistanceAfterQueries(n int, queries [][]int) []int {
 	for idx := range next {
 		next[idx] = idx + 1
 	}
+
 	distance := n - 1
 	answer := make([]int, len(queries))
+
 	var src, dst int
 	for idx := range queries {
 		src, dst = queries[idx][0], queries[idx][1]
@@ -19,8 +21,10 @@ func shortestDistanceAfterQueries(n int, queries [][]int) []int {
 			src, next[src] = next[src], dst
 			distance--
 		}
+
 		answer[idx] = distance
 	}
+
 	return answer
 }
 

@@ -29,6 +29,7 @@ func minInterval(intervals [][]int, queries []int) []int {
 		length int
 		right  int
 	}
+
 	inbound := pkg.NewHeap(
 		make([]*interval, 0),
 		func(x, y *interval) bool { return x.length < y.length },
@@ -36,27 +37,35 @@ func minInterval(intervals [][]int, queries []int) []int {
 
 	qmap := make(map[int]int)
 	iid, ilen := 0, len(intervals)
+
 	var left, right int
+
 	for _, query := range squeries {
 		for iid < ilen && intervals[iid][0] <= query {
 			left = intervals[iid][0]
 			right = intervals[iid][1]
 			heap.Push(inbound, &interval{right - left + 1, right})
+
 			iid++
 		}
+
 		for inbound.Len() > 0 && inbound.Peak().right < query {
 			heap.Pop(inbound)
 		}
+
 		value := -1
 		if inbound.Len() > 0 {
 			value = inbound.Peak().length
 		}
+
 		qmap[query] = value
 	}
+
 	answer := make([]int, qlen)
 	for idx, query := range queries {
 		answer[idx] = qmap[query]
 	}
+
 	return answer
 }
 

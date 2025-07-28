@@ -4,6 +4,7 @@ package arrays
 
 func canAliceWin(nums []int) bool {
 	singleSum, doubleSum := 0, 0
+
 	for _, num := range nums {
 		if num < 10 {
 			singleSum += num
@@ -11,5 +12,6 @@ func canAliceWin(nums []int) bool {
 			doubleSum += num
 		}
 	}
+
 	return singleSum != doubleSum
 }

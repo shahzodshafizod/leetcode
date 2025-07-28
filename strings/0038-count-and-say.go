@@ -12,22 +12,28 @@ import (
 // Space: O(n)
 func countAndSay(n int) string {
 	rle := "1"
+
 	var new_rle strings.Builder
 	for ; n > 1; n-- {
 		new_rle.Reset()
+
 		count, slen := 1, len(rle)
 		for idx := 1; idx < slen; idx++ {
 			if rle[idx] != rle[idx-1] {
 				new_rle.WriteString(strconv.Itoa(count))
 				new_rle.WriteByte(rle[idx-1])
+
 				count = 0
 			}
+
 			count++
 		}
+
 		new_rle.WriteString(strconv.Itoa(count))
 		new_rle.WriteByte(rle[slen-1])
 		rle = new_rle.String()
 	}
+
 	return rle
 }
 

@@ -38,16 +38,20 @@ func NewUnionFind(size int) UnionFind {
 		// so nodes are disconnected
 		uf.Reset(i)
 	}
+
 	return uf
 }
 
 func (u *unionFind) Union(x int, y int) bool {
 	px := u.Find(x)
 	py := u.Find(y)
+
 	if px == py {
 		return false
 	}
+
 	u.parent[py] = px
+
 	return true
 }
 
@@ -55,6 +59,7 @@ func (u *unionFind) Find(x int) int {
 	if u.parent[x] != x {
 		u.parent[x] = u.Find(u.parent[x])
 	}
+
 	return u.parent[x]
 }
 
@@ -69,6 +74,7 @@ func NewUnionFindQuickFind(size int) UnionFind {
 	for idx := 0; idx < size; idx++ {
 		uf.Reset(idx)
 	}
+
 	return uf
 }
 
@@ -76,14 +82,17 @@ func NewUnionFindQuickFind(size int) UnionFind {
 func (u *unionFindQuickFind) Union(x int, y int) bool {
 	rootX := u.Find(x)
 	rootY := u.Find(y)
+
 	if rootX == rootY {
 		return false
 	}
+
 	for i := range u.root {
 		if u.root[i] == rootY {
 			u.root[i] = rootX
 		}
 	}
+
 	return true
 }
 
@@ -107,6 +116,7 @@ func NewUnionFindQuickUnion(size int) UnionFind {
 	for idx := 0; idx < size; idx++ {
 		uf.Reset(idx)
 	}
+
 	return uf
 }
 
@@ -114,10 +124,13 @@ func NewUnionFindQuickUnion(size int) UnionFind {
 func (u *unionFindQuickUnion) Union(x int, y int) bool {
 	rootX := u.root[x]
 	rootY := u.root[y]
+
 	if rootX == rootY {
 		return false
 	}
+
 	u.root[rootY] = rootX
+
 	return true
 }
 
@@ -126,6 +139,7 @@ func (u *unionFindQuickUnion) Find(x int) int {
 	if x != u.root[x] {
 		u.root[x] = u.Find(u.root[x])
 	}
+
 	return u.root[x]
 }
 
@@ -148,6 +162,7 @@ func NewUnionFindRanked(size int) UnionFind {
 	for idx := 0; idx < size; idx++ {
 		uf.Reset(idx)
 	}
+
 	return uf
 }
 
@@ -156,6 +171,7 @@ func (u *unionFindRanked) Find(x int) int {
 	if x != u.root[x] {
 		u.root[x] = u.Find(u.root[x])
 	}
+
 	return u.root[x]
 }
 
@@ -163,9 +179,11 @@ func (u *unionFindRanked) Find(x int) int {
 func (u *unionFindRanked) Union(x int, y int) bool {
 	rootX := u.Find(x)
 	rootY := u.Find(y)
+
 	if rootX == rootY {
 		return false
 	}
+
 	if u.rank[rootX] < u.rank[rootY] {
 		u.root[rootX] = rootY
 		u.rank[rootY] += u.rank[rootX]
@@ -173,6 +191,7 @@ func (u *unionFindRanked) Union(x int, y int) bool {
 		u.root[rootY] = rootX
 		u.rank[rootX] += u.rank[rootY]
 	}
+
 	return true
 }
 

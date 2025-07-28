@@ -126,18 +126,22 @@ var _ Structy = &structy{}
 // Space: O(N)
 func (s *structy) HasPath(graph map[byte][]byte, src byte, dst byte) bool {
 	var dfs func(src byte, dst byte, visited map[byte]bool) bool
+
 	dfs = func(src byte, dst byte, visited map[byte]bool) bool {
 		if src == dst {
 			return true
 		}
+
 		visited[src] = true
 		for _, neighbor := range graph[src] {
 			if !visited[neighbor] && dfs(neighbor, dst, visited) {
 				return true
 			}
 		}
+
 		return false
 	}
+
 	return dfs(src, dst, make(map[byte]bool))
 }
 
@@ -147,12 +151,14 @@ func (s *structy) HasPath(graph map[byte][]byte, src byte, dst byte) bool {
 // Space: O(N)
 func (s *structy) UndirectedPath(edges [][]byte, nodeA byte, nodeB byte) bool {
 	adjList := make(map[byte][]byte)
+
 	var a, b byte
 	for _, edge := range edges {
 		a, b = edge[0], edge[1]
 		adjList[a] = append(adjList[a], b)
 		adjList[b] = append(adjList[b], a)
 	}
+
 	return s.HasPath(adjList, nodeA, nodeB)
 }
 
@@ -162,6 +168,7 @@ func (s *structy) UndirectedPath(edges [][]byte, nodeA byte, nodeB byte) bool {
 // Space: O(N)
 func (s *structy) ConnectedComponentsCount(graph map[int][]int) int {
 	var dfs func(node int, visited map[int]bool)
+
 	dfs = func(node int, visited map[int]bool) {
 		visited[node] = true
 		for _, neighbor := range graph[node] {
@@ -172,12 +179,15 @@ func (s *structy) ConnectedComponentsCount(graph map[int][]int) int {
 	}
 	visited := make(map[int]bool)
 	count := 0
+
 	for src := range graph {
 		if !visited[src] {
 			count++
+
 			dfs(src, visited)
 		}
 	}
+
 	return count
 }
 
@@ -187,22 +197,28 @@ func (s *structy) ConnectedComponentsCount(graph map[int][]int) int {
 // Space: O(N)
 func (s *structy) LargestComponent(graph map[int][]int) int {
 	var count func(node int, visited map[int]bool) int
+
 	count = func(node int, visited map[int]bool) int {
 		if visited[node] {
 			return 0
 		}
+
 		visited[node] = true
 		size := 1
+
 		for _, neighbor := range graph[node] {
 			size += count(neighbor, visited)
 		}
+
 		return size
 	}
 	visited := make(map[int]bool)
 	maxsize := 0
+
 	for src := range graph {
 		maxsize = max(maxsize, count(src, visited))
 	}
+
 	return maxsize
 }
 
@@ -211,12 +227,14 @@ func (s *structy) LargestComponent(graph map[int][]int) int {
 // Space: O(E)
 func (s *structy) ShortestPath(edges [][]byte, nodeA byte, nodeB byte) int {
 	adjList := make(map[byte][]byte)
+
 	var a, b byte
 	for _, edge := range edges {
 		a, b = edge[0], edge[1]
 		adjList[a] = append(adjList[a], b)
 		adjList[b] = append(adjList[b], a)
 	}
+
 	type node struct {
 		val      byte
 		distance int
@@ -224,19 +242,24 @@ func (s *structy) ShortestPath(edges [][]byte, nodeA byte, nodeB byte) int {
 	// BFS
 	queue := pkg.NewQueue[*node]()
 	visited := make(map[byte]bool)
+
 	queue.Enqueue(&node{val: nodeA, distance: 0})
+
 	for !queue.Empty() {
 		current := queue.Dequeue()
 		visited[current.val] = true
+
 		if current.val == nodeB {
 			return current.distance
 		}
+
 		for _, neighbor := range adjList[current.val] {
 			if !visited[neighbor] {
 				queue.Enqueue(&node{val: neighbor, distance: current.distance + 1})
 			}
 		}
 	}
+
 	return -1
 }
 
@@ -247,32 +270,42 @@ func (s *structy) ShortestPath(edges [][]byte, nodeA byte, nodeB byte) int {
 func (s *structy) IslandCount(grid [][]byte) int {
 	m, n := len(grid), len(grid[0])
 	directions := [5]int{-1, 0, 1, 0, -1}
+
 	var dfs func(row int, col int, visited [][]bool) int
+
 	dfs = func(row int, col int, visited [][]bool) int {
 		if visited[row][col] || grid[row][col] != 'L' {
 			return 0
 		}
+
 		visited[row][col] = true
+
 		var r, c int
 		for dir := 1; dir < 5; dir++ {
 			r = row + directions[dir-1]
 			c = col + directions[dir]
+
 			if min(r, c) >= 0 && r < m && c < n {
 				dfs(r, c, visited)
 			}
 		}
+
 		return 1
 	}
+
 	visited := make([][]bool, m)
 	for row := 0; row < m; row++ {
 		visited[row] = make([]bool, n)
 	}
+
 	islands := 0
+
 	for row := 0; row < m; row++ {
 		for col := 0; col < n; col++ {
 			islands += dfs(row, col, visited)
 		}
 	}
+
 	return islands
 }
 
@@ -283,13 +316,17 @@ func (s *structy) IslandCount(grid [][]byte) int {
 func (s *structy) MinimumIsland(grid [][]byte) int {
 	m, n := len(grid), len(grid[0])
 	directions := [5]int{-1, 0, 1, 0, -1}
+
 	var count func(row int, col int, visited [][]bool) int
+
 	count = func(row int, col int, visited [][]bool) int {
 		if visited[row][col] || grid[row][col] != 'L' {
 			return 0
 		}
+
 		visited[row][col] = true
 		size := 1
+
 		var r, c int
 		for dir := 1; dir < 5; dir++ {
 			r, c = row+directions[dir-1], col+directions[dir]
@@ -297,13 +334,17 @@ func (s *structy) MinimumIsland(grid [][]byte) int {
 				size += count(r, c, visited)
 			}
 		}
+
 		return size
 	}
+
 	visited := make([][]bool, m)
 	for row := 0; row < m; row++ {
 		visited[row] = make([]bool, n)
 	}
+
 	minSize := math.MaxInt
+
 	for row := 0; row < m; row++ {
 		for col := 0; col < n; col++ {
 			if count := count(row, col, visited); count > 0 {
@@ -311,5 +352,6 @@ func (s *structy) MinimumIsland(grid [][]byte) int {
 			}
 		}
 	}
+
 	return minSize
 }

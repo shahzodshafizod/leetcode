@@ -25,9 +25,11 @@ func TestFreqStack(t *testing.T) {
 		},
 	} {
 		var f FreqStack
+
 		var output any
 		for idx, command := range tc.commands {
 			output = nil
+
 			switch command {
 			case "FreqStack":
 				f = NewFreqStack()
@@ -36,6 +38,7 @@ func TestFreqStack(t *testing.T) {
 			case "pop":
 				output = f.Pop()
 			}
+
 			assert.Equal(t, tc.output[idx], output)
 		}
 	}

@@ -7,10 +7,12 @@ func lengthOfLastWord(s string) int {
 	for s[right] == ' ' {
 		right--
 	}
+
 	left := right
 	for left >= 0 && s[left] != ' ' {
 		left--
 	}
+
 	return right - left
 }
 

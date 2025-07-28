@@ -11,14 +11,18 @@ func minimumMountainRemovals(nums []int) int {
 		lis := make([]int, n)
 		sequence := make([]int, 0)
 		slen := 0
+
 		var left, right, mid int
+
 		for idx := start; idx != end; idx += step {
 			if slen == 0 || nums[idx] > sequence[slen-1] {
 				sequence = append(sequence, nums[idx])
 				slen++
 				lis[idx] = slen
+
 				continue
 			}
+
 			left, right = 0, slen
 			for left < right {
 				mid = left + (right-left)/2
@@ -28,16 +32,20 @@ func minimumMountainRemovals(nums []int) int {
 					right = mid
 				}
 			}
+
 			sequence[left] = nums[idx]
 			lis[idx] = left + 1
 		}
+
 		return lis
 	}
 	// longest increasing subsequence
 	lis := getLIS(0, n, 1)
 	// longest decreasing subsequence
 	lds := getLIS(n-1, -1, -1)
+
 	var length int
+
 	mountain := 0
 	// minimum to remove = maximum to keep
 	for peek, n := 0, len(nums); peek < n; peek++ { // O(n)
@@ -46,6 +54,7 @@ func minimumMountainRemovals(nums []int) int {
 			mountain = max(mountain, length)
 		}
 	}
+
 	return n - mountain
 }
 

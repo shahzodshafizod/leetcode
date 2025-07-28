@@ -5,6 +5,7 @@ package greedy
 func maxSum(nums []int) int {
 	total, maximal := 0, -((1 << 32) - 1)
 	exists := make(map[int]bool)
+
 	for _, num := range nums {
 		if num > 0 {
 			if !exists[num] {
@@ -15,8 +16,10 @@ func maxSum(nums []int) int {
 			maximal = num
 		}
 	}
+
 	if len(exists) > 0 {
 		return total
 	}
+
 	return maximal
 }

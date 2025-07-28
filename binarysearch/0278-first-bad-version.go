@@ -26,5 +26,6 @@ func firstBadVersion(n int) int {
 			left = mid + 1
 		}
 	}
+
 	return right
 }

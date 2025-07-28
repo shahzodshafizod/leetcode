@@ -20,10 +20,12 @@ matrix = [  |                |               |
 func restoreMatrix(rowSum []int, colSum []int) [][]int {
 	m, n := len(rowSum), len(colSum)
 	matrix := make([][]int, m)
+
 	for row := 0; row < m; row++ {
 		matrix[row] = make([]int, n)
 		matrix[row][0] = rowSum[row]
 	}
+
 	var sum int
 	for col := 1; col < n; col++ {
 		sum = 0
@@ -36,6 +38,7 @@ func restoreMatrix(rowSum []int, colSum []int) [][]int {
 			}
 		}
 	}
+
 	return matrix
 }
 

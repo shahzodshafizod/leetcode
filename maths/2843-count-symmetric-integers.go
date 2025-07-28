@@ -10,8 +10,11 @@ func countSymmetricIntegers(low int, high int) int {
 		length++
 		next *= 10
 	}
+
 	var sum, tmp int
+
 	count := 0
+
 	for num := low; num <= high; num++ {
 		// if number became one digit longer
 		// we change length and the next length's start number
@@ -40,5 +43,6 @@ func countSymmetricIntegers(low int, high int) int {
 			count++
 		}
 	}
+
 	return count
 }

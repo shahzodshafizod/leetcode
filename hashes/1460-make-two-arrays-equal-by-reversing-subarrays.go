@@ -11,11 +11,13 @@ func canBeEqual(target []int, arr []int) bool {
 		count[arr[idx]]++
 		count[target[idx]]--
 	}
+
 	for idx := range arr {
 		if count[target[idx]] != 0 || count[arr[idx]] != 0 {
 			return false
 		}
 	}
+
 	return true
 }
 

@@ -9,46 +9,58 @@ func secondMinimum(n int, edges [][]int, time int, change int) int {
 	adjList := make([][]int, n+1)
 	dist1 := make([]int, n+1)
 	dist2 := make([]int, n+1)
+
 	for idx := 0; idx <= n; idx++ {
 		adjList[idx] = make([]int, 0)
 		dist1[idx] = -1
 		dist2[idx] = -1
 	}
+
 	var u, v int
 	for _, edge := range edges {
 		u, v = edge[0], edge[1]
 		adjList[u] = append(adjList[u], v)
 		adjList[v] = append(adjList[v], u)
 	}
+
 	queue := [][2]int{{1, 1}} // {city, freq}
 	idx := 0
 	dist1[1] = 0
+
 	var timeTaken, node, freq int
 	for idx < len(queue) {
 		node, freq = queue[idx][0], queue[idx][1]
 		idx++
+
 		if freq == 1 {
 			timeTaken = dist1[node]
 		} else {
 			timeTaken = dist2[node]
 		}
+
 		if timeTaken/change%2 != 0 {
 			timeTaken += change - timeTaken%change
 		}
+
 		timeTaken += time
+
 		for _, next := range adjList[node] {
 			if dist1[next] == -1 {
 				dist1[next] = timeTaken
+
 				queue = append(queue, [2]int{next, 1})
 			} else if dist2[next] == -1 && timeTaken != dist1[next] {
 				if next == n {
 					return timeTaken
 				}
+
 				dist2[next] = timeTaken
+
 				queue = append(queue, [2]int{next, 2})
 			}
 		}
 	}
+
 	return 0
 }
 

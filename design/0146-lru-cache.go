@@ -26,6 +26,7 @@ func (l *LRUCache) Get(key int) int {
 		l.ptrs[key] = l.list.PushFront(l.list.Remove(node))
 		return l.ptrs[key].Value.(*pkg.Pair).Val
 	}
+
 	return -1
 }
 
@@ -35,10 +36,12 @@ func (l *LRUCache) Put(key int, value int) {
 	} else {
 		l.capacity--
 	}
+
 	l.ptrs[key] = l.list.PushFront(&pkg.Pair{Key: key, Val: value})
 	if l.capacity < 0 {
 		delete(l.ptrs, l.list.Back().Value.(*pkg.Pair).Key)
 		l.list.Remove(l.list.Back())
+
 		l.capacity++
 	}
 }

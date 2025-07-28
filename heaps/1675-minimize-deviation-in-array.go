@@ -14,34 +14,44 @@ import (
 func minimumDeviation(nums []int) int {
 	n := len(nums)
 	maxHeap := make([]int, 0, n)
+
 	var smallest int = 1e9
+
 	for _, num := range nums {
 		if num&1 == 1 {
 			num *= 2
 		}
+
 		maxHeap = append(maxHeap, num)
 		smallest = min(smallest, num)
 	}
+
 	pq := pkg.NewHeap(maxHeap,
 		func(x, y int) bool {
 			return x > y
 		},
 	)
 	heap.Init(pq)
+
 	var num int
+
 	var deviation int = 1e9
+
 	for pq.Len() == n {
 		num = maxHeap[0]
 		deviation = min(deviation, num-smallest)
+
 		if num&1 == 0 {
 			num /= 2
 			smallest = min(smallest, num)
 			maxHeap[0] = num
+
 			heap.Fix(pq, 0)
 		} else {
 			heap.Pop(pq)
 		}
 	}
+
 	return deviation
 }
 

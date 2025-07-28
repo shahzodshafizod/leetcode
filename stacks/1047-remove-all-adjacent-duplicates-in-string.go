@@ -8,6 +8,7 @@ package stacks
 func removeDuplicates(s string) string {
 	stack := make([]rune, len(s))
 	size := 0
+
 	for _, c := range s {
 		if size > 0 && stack[size-1] == c {
 			size--
@@ -16,5 +17,6 @@ func removeDuplicates(s string) string {
 			size++
 		}
 	}
+
 	return string(stack[:size])
 }

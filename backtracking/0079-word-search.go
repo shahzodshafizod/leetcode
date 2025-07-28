@@ -8,6 +8,7 @@ func exist(board [][]byte, word string) bool {
 	m, n, w := len(board), len(board[0]), len(word)
 	letters := []byte(word)
 	counts := make([]int, w)
+
 	for row := 0; row < m; row++ { // time: O(m*n*w)
 		for col := 0; col < n; col++ {
 			for idx := range letters {
@@ -31,20 +32,27 @@ func exist(board [][]byte, word string) bool {
 			right--
 		}
 	}
+
 	directions := [][2]int{{-1, 0}, {1, 0}, {0, -1}, {0, 1}}
+
 	var dfs func(idx int, row int, col int) bool
+
 	dfs = func(idx int, row int, col int) bool {
 		if idx == w {
 			return true
 		}
+
 		if row < 0 || row == m || col < 0 || col == n {
 			return false
 		}
+
 		letter := board[row][col]
 		if letter == '.' || letter != letters[idx] {
 			return false
 		}
+
 		board[row][col] = '.'
+
 		for _, direction := range directions {
 			r, c := row+direction[0], col+direction[1]
 			if dfs(idx+1, r, c) {
@@ -54,8 +62,10 @@ func exist(board [][]byte, word string) bool {
 		}
 		// backtracking
 		board[row][col] = letter
+
 		return false
 	}
+
 	for row := 0; row < m; row++ { // O(m*n*4^w)
 		for col := 0; col < n; col++ {
 			if dfs(0, row, col) { // O(4^w)
@@ -63,6 +73,7 @@ func exist(board [][]byte, word string) bool {
 			}
 		}
 	}
+
 	return false
 }
 

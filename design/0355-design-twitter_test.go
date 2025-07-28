@@ -30,8 +30,10 @@ func TestTwitter(t *testing.T) {
 		},
 	} {
 		var twitter Twitter
+
 		for index, command := range tc.commands {
 			var output []int
+
 			switch command {
 			case "Twitter":
 				twitter = NewTwitter()
@@ -48,6 +50,7 @@ func TestTwitter(t *testing.T) {
 				followerId, followeeId := tc.values[index][0], tc.values[index][1]
 				twitter.Unfollow(followerId, followeeId)
 			}
+
 			assert.Equal(t, tc.output[index], output)
 		}
 	}

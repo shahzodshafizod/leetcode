@@ -9,14 +9,17 @@ import "sort"
 // Space: O(1)
 func divideArray(nums []int) bool {
 	sort.Ints(nums)
+
 	prev, count := -1, 0
 	for _, num := range nums {
 		if num != prev && count&1 != 0 {
 			break
 		}
+
 		count++
 		prev = num
 	}
+
 	return count&1 == 0
 }
 

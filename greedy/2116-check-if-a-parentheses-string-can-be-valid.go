@@ -8,6 +8,7 @@ package greedy
 func canBeValid(s string, locked string) bool {
 	valid := func(start int, end int, step int, bracket byte) bool {
 		lockedCnt, unlockedCnt := 0, 0
+
 		for idx := start; idx != end; idx += step {
 			if locked[idx] == '0' {
 				unlockedCnt++
@@ -21,8 +22,10 @@ func canBeValid(s string, locked string) bool {
 				return false
 			}
 		}
+
 		return true
 	}
 	n := len(s)
+
 	return n&1 == 0 && valid(0, n, 1, '(') && valid(n-1, -1, -1, ')')
 }

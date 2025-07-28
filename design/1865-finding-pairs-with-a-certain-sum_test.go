@@ -30,9 +30,11 @@ func TestFindSumPairs(t *testing.T) {
 		// },
 	} {
 		var f FindSumPairs
+
 		var output any
 		for idx, command := range tc.commands {
 			output = nil
+
 			switch command {
 			case "FindSumPairs":
 				f = NewFindSumPairs(tc.values[idx][0], tc.values[idx][1])
@@ -41,6 +43,7 @@ func TestFindSumPairs(t *testing.T) {
 			case "count":
 				output = f.Count(tc.values[idx][0][0])
 			}
+
 			assert.Equal(t, tc.output[idx], output)
 		}
 	}

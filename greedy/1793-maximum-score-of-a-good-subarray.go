@@ -21,15 +21,19 @@ func maximumScore(nums []int, k int) int {
 	score := nums[k]
 	minimum := nums[k]
 	left, right := k, k
+
 	var lnum, rnum int
+
 	for left > 0 || right+1 < n {
 		lnum, rnum = 0, 0
 		if left > 0 {
 			lnum = nums[left-1]
 		}
+
 		if right+1 < n {
 			rnum = nums[right+1]
 		}
+
 		if lnum > rnum {
 			left--
 			minimum = min(minimum, lnum)
@@ -37,7 +41,9 @@ func maximumScore(nums []int, k int) int {
 			right++
 			minimum = min(minimum, rnum)
 		}
+
 		score = max(score, minimum*(right-left+1))
 	}
+
 	return score
 }

@@ -97,6 +97,7 @@ func solveSudoku(board [][]byte) {
 			if board[row][col] == '.' {
 				continue
 			}
+
 			if !sudokuIsValid(board, row, col, board[row][col]) {
 				return
 			}
@@ -108,19 +109,24 @@ func solveSudoku(board [][]byte) {
 
 func sudokuIsValid(board [][]byte, row, col int, num byte) bool {
 	blkrow, blkcol := (row/3)*3, (col/3)*3
+
 	for i := 0; i < 9; i++ {
 		if i != row && board[i][col] == num {
 			return false
 		}
+
 		if i != col && board[row][i] == num {
 			return false
 		}
+
 		r := blkrow + i/3
 		c := blkcol + i%3
+
 		if r != row && c != col && board[r][c] == num {
 			return false
 		}
 	}
+
 	return true
 }
 
@@ -128,6 +134,7 @@ func sudokuBacktrack(board [][]byte, row, col int) bool {
 	if row == 8 && col == 9 {
 		return true
 	}
+
 	if col == 9 {
 		row++
 		col = 0
@@ -149,6 +156,7 @@ func sudokuBacktrack(board [][]byte, row, col int) bool {
 			board[row][col] = '.'
 		}
 	}
+
 	return false // unreachable if solvable
 }
 

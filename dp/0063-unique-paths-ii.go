@@ -8,12 +8,15 @@ func uniquePathsWithObstacles(obstacleGrid [][]int) int {
 	m := len(obstacleGrid)
 	n := len(obstacleGrid[0])
 	memo := make([]int, n)
+
 	for i := n - 1; i >= 0; i-- {
 		if obstacleGrid[m-1][i] == 1 {
 			break
 		}
+
 		memo[i] = 1
 	}
+
 	for row := m - 2; row >= 0; row-- {
 		for col := n - 1; col >= 0; col-- {
 			if obstacleGrid[row][col] == 1 {
@@ -23,6 +26,7 @@ func uniquePathsWithObstacles(obstacleGrid [][]int) int {
 			}
 		}
 	}
+
 	return memo[0]
 }
 

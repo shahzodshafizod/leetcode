@@ -35,8 +35,10 @@ func TestLRUCache(t *testing.T) {
 		},
 	} {
 		var cache LRUCache
+
 		for index, command := range tc.commands {
 			var output any = nil
+
 			switch command {
 			case "LRUCache":
 				cache = NewLRUCache(tc.values[index][0])
@@ -45,6 +47,7 @@ func TestLRUCache(t *testing.T) {
 			case "put":
 				cache.Put(tc.values[index][0], tc.values[index][1])
 			}
+
 			assert.Equal(t, tc.output[index], output)
 		}
 	}

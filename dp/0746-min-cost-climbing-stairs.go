@@ -18,12 +18,14 @@ Recognize it's a dynamic programming problem
 func minCostClimbingStairs(cost []int) int {
 	n := len(cost)
 	first, second := cost[0], cost[1]
+
 	for i := 2; i < n; i++ {
 		// third := cost[i] + min(first, second)
 		// first = second
 		// second = third
 		first, second = second, cost[i]+min(first, second)
 	}
+
 	return min(first, second)
 }
 

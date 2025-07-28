@@ -30,34 +30,42 @@ func containsNearbyAlmostDuplicate(nums []int, indexDiff int, valueDiff int) boo
 	if len(nums) <= 1 || valueDiff < 0 {
 		return false
 	}
+
 	width := int64(valueDiff) + 1
 	getbucketkey := func(num int64) int64 {
 		if num < 0 {
 			return (num+1)/width - 1
 		}
+
 		return num / width
 	}
 	buckets := make(map[int64]int64)
+
 	var bucketkey, num int64
 	for idx := range nums {
 		num = int64(nums[idx])
+
 		bucketkey = getbucketkey(num)
 		if _, exists := buckets[bucketkey]; exists {
 			return true
 		}
+
 		if _, exists := buckets[bucketkey-1]; exists &&
 			math.Abs(float64(num-buckets[bucketkey-1])) < float64(width) {
 			return true
 		}
+
 		if _, exists := buckets[bucketkey+1]; exists &&
 			math.Abs(float64(num-buckets[bucketkey+1])) < float64(width) {
 			return true
 		}
+
 		buckets[bucketkey] = num
 		if idx-indexDiff >= 0 {
 			delete(buckets, getbucketkey(int64(nums[idx-indexDiff])))
 		}
 	}
+
 	return false
 }
 

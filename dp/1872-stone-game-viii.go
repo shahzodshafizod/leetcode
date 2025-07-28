@@ -9,13 +9,16 @@ func stoneGameVIII(stones []int) int {
 	n := len(stones)
 	presum := make([]int, n)
 	presum[0] = stones[0]
+
 	for idx := 1; idx < n; idx++ {
 		presum[idx] = presum[idx-1] + stones[idx]
 	}
+
 	dp := presum[n-1]
 	for idx := n - 2; idx > 0; idx-- {
 		dp = max(dp, presum[idx]-dp)
 	}
+
 	return dp
 }
 

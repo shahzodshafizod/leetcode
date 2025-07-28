@@ -9,6 +9,7 @@ func uniquePaths(m int, n int) int {
 	for i := 0; i < n; i++ {
 		count[i] = 1
 	}
+
 	for row := m - 1; row > 0; row-- {
 		for col := n - 2; col >= 0; col-- {
 			count[col] += count[col+1]

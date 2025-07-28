@@ -7,12 +7,15 @@ func findDifference(nums1 []int, nums2 []int) [][]int {
 	for _, num := range nums1 {
 		mask[num+1000] |= 1
 	}
+
 	for _, num := range nums2 {
 		mask[num+1000] |= 2
 	}
+
 	answer := make([][]int, 2)
 	answer[0] = make([]int, 0)
 	answer[1] = make([]int, 0)
+
 	for num, mask := range mask {
 		switch mask {
 		case 1:
@@ -21,5 +24,6 @@ func findDifference(nums1 []int, nums2 []int) [][]int {
 			answer[1] = append(answer[1], num-1000)
 		}
 	}
+
 	return answer
 }

@@ -9,12 +9,14 @@ import "strings"
 // Space: O(n)
 func numUniqueEmails(emails []string) int {
 	receivers := make(map[string]struct{})
+
 	for _, email := range emails {
 		parts := strings.Split(email, "@")
 		parts[0] = strings.Split(parts[0], "+")[0]
 		parts[0] = strings.ReplaceAll(parts[0], ".", "")
 		receivers[strings.Join(parts, "@")] = struct{}{}
 	}
+
 	return len(receivers)
 }
 

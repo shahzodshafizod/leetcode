@@ -8,13 +8,16 @@ package dp
 func paintWalls(cost []int, time []int) int {
 	n := len(cost)
 	dp := make([][]int, n+1)
+
 	for idx := range dp {
 		dp[idx] = make([]int, n+1)
 	}
+
 	curr, next := make([]int, n+1), make([]int, n+1)
 	for walls := 1; walls <= n; walls++ {
 		curr[walls] = 1e9
 	}
+
 	for idx := n - 1; idx >= 0; idx-- {
 		curr, next = next, curr
 		for wall := 1; wall <= n; wall++ {
@@ -26,6 +29,7 @@ func paintWalls(cost []int, time []int) int {
 			)
 		}
 	}
+
 	return curr[n]
 }
 

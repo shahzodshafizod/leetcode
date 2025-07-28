@@ -11,6 +11,7 @@ func stringMatching(words []string) []string {
 	getLPS := func(word string) []int {
 		m := len(word)
 		lps := make([]int, m)
+
 		p, s := 0, 1
 		for s < m {
 			if word[s] == word[p] {
@@ -23,20 +24,26 @@ func stringMatching(words []string) []string {
 				p = lps[p-1]
 			}
 		}
+
 		return lps
 	}
+
 	sort.Slice(words, func(i int, j int) bool { return len(words[i]) < len(words[j]) })
 	n := len(words)
 	check := func(curr string, start int) bool {
 		m := len(curr)
 		lps := getLPS(curr)
+
 		var cid, nid, nlen int
+
 		for idx := start; idx < n; idx++ {
 			next := words[idx]
+
 			nlen = len(next)
 			if nlen == m {
 				continue
 			}
+
 			cid, nid = 0, 0
 			for cid < m && nid < nlen {
 				if curr[cid] == next[nid] {
@@ -48,18 +55,22 @@ func stringMatching(words []string) []string {
 					cid = lps[cid-1]
 				}
 			}
+
 			if cid == m {
 				return true
 			}
 		}
+
 		return false
 	}
 	result := make([]string, 0)
+
 	for idx, word := range words {
 		if check(word, idx+1) {
 			result = append(result, word)
 		}
 	}
+
 	return result
 }
 
