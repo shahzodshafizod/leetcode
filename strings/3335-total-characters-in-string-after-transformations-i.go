@@ -11,7 +11,9 @@ func lengthAfterTransformations(s string, t int) int {
 
 	const MOD int = 1e9 + 7
 
-	z, a := 25, 0
+	z := 25
+
+	var a int
 	for ; t > 0; t-- {
 		a = (z + 1) % 26
 		dp[a] = (dp[a] + dp[z]) % MOD

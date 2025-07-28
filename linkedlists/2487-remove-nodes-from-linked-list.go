@@ -9,7 +9,10 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 // space: O(1)
 func removeNodes(head *pkg.ListNode) *pkg.ListNode {
 	reverse := func(head *pkg.ListNode) *pkg.ListNode {
-		var prev, next *pkg.ListNode = nil, nil
+		var (
+			prev *pkg.ListNode = nil
+			next *pkg.ListNode
+		)
 
 		curr := head
 		for curr != nil {

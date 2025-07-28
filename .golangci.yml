@@ -110,7 +110,6 @@ linters:
     - wastedassign
     - whitespace
     - wrapcheck
-    # - wsl # depricated
     - wsl_v5
     - zerologlint
 
@@ -218,12 +217,12 @@ linters:
     - usestdlibvars
     - usetesting
     - varnamelen
-    - wastedassign
-    - whitespace
-    - wrapcheck
 
-    # - wsl_v5
-    # - zerologlint
+    # - wastedassign
+    # - whitespace
+    # - wrapcheck
+
+    - wsl # depricated
 
   settings:
     lll:

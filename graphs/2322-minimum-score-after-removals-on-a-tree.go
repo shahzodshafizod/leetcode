@@ -51,16 +51,15 @@ func minimumScore(nums []int, edges [][]int) int {
 	for i, m := 0, len(edges); i < m-1; i++ {
 		a, b = edges[i][0], edges[i][1]
 		if isAncestor(a, b) {
-			a, b = b, a
+			a = b
 		}
 
 		for j := i + 1; j < m; j++ {
 			c, d = edges[j][0], edges[j][1]
 			if isAncestor(c, d) {
-				c, d = d, c
+				c = d
 			}
 
-			x1, x2, x3 = 0, 0, 0
 			if isAncestor(a, c) {
 				x1 = total ^ nodeXor[a]
 				x2 = nodeXor[a] ^ nodeXor[c]
