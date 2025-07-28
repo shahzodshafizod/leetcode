@@ -212,15 +212,9 @@ linters:
     - thelper
     - tparallel
     - unconvert
-    - unparam
+    
     - unused
-    - usestdlibvars
-    - usetesting
     - varnamelen
-
-    # - wastedassign
-    # - whitespace
-    # - wrapcheck
 
     - wsl # depricated
 
