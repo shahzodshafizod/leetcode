@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2044 | [Count Number of Maximum Bitwise-OR Subsets](https://leetcode.com/problems/count-number-of-maximum-bitwise-or-subsets/) | Medium | Array, Backtracking, Bit Manipulation, Enumeration | 2025-07-28 | [Go](dp/2044-count-number-of-maximum-bitwise-or-subsets.go) [Python](dp/2044-count-number-of-maximum-bitwise-or-subsets.py)
 | 2210 | [Count Hills and Valleys in an Array](https://leetcode.com/problems/count-hills-and-valleys-in-an-array/) | Easy | Array | 2025-07-27 | [Go](arrays/2210-count-hills-and-valleys-in-an-array.go) [Python](arrays/2210-count-hills-and-valleys-in-an-array.py)
 | 3480 | [Maximize Subarrays After Removing One Conflicting Pair](https://leetcode.com/problems/maximize-subarrays-after-removing-one-conflicting-pair/) | Hard | Array, Segment Tree, Enumeration, Prefix Sum | 2025-07-26 | [Go](prefixsums/3480-maximize-subarrays-after-removing-one-conflicting-pair.go) [Python](prefixsums/3480-maximize-subarrays-after-removing-one-conflicting-pair.py)
 | 3487 | [Maximum Unique Subarray Sum After Deletion](https://leetcode.com/problems/maximum-unique-subarray-sum-after-deletion/) | Easy | Array, Hash Table, Greedy | 2025-07-25 | [Go](greedy/3487-maximum-unique-subarray-sum-after-deletion.go) [Python](greedy/3487-maximum-unique-subarray-sum-after-deletion.py)
