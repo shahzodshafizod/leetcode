@@ -106,7 +106,7 @@ linters:
     - unused
     - usestdlibvars
     - usetesting
-    - varnamelen
+    # - varnamelen
     - wastedassign
     - whitespace
     - wrapcheck
@@ -210,12 +210,10 @@ linters:
     - testifylint
     - testpackage
     - thelper
-    - tparallel
-    - unconvert
-    
-    - unused
-    - varnamelen
 
+    - unused
+    
+    - varnamelen
     - wsl # depricated
 
   settings:

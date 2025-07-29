@@ -27,7 +27,7 @@ func maximumValueSum(nums []int, k int, _ [][]int) int64 {
 		delta = int64((num ^ k) - num)
 
 		if delta > 0 {
-			sum += int64(delta)
+			sum += delta
 			count++
 			minDelta = min(minDelta, delta)
 		} else {
