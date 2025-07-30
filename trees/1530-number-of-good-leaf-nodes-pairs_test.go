@@ -20,6 +20,6 @@ func TestCountPairs(t *testing.T) {
 		{root: pkg.MakeTree(0, []any{1, 1, 1}), distance: 2, goodPairs: 1},
 	} {
 		goodPairs := countPairs(tc.root, tc.distance)
-		assert.Equal(t, goodPairs, goodPairs)
+		assert.Equal(t, tc.goodPairs, goodPairs)
 	}
 }

@@ -15,8 +15,8 @@ func TestTricks(t *testing.T) {
 	assert.Equal((0b_0101_1000>>3)&1, 1) // starting from 0 from rightmost, the third bit is set
 
 	// 2. check if a number is even
-	assert.Equal(46&1 == 0, true)
-	assert.Equal(47&1 == 0, false)
+	assert.Equal(46&1, 0)
+	assert.NotEqual(47&1, 0)
 
 	// 3. Check if an integer is a power of 2
 	// A power of two is a number that has only a single bit in it

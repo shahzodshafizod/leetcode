@@ -16,6 +16,6 @@ func TestAverageWaitingTime(t *testing.T) {
 		{customers: [][]int{{5, 2}, {5, 4}, {10, 3}, {20, 1}}, averageWaitTime: 3.25000},
 	} {
 		averageWaitTime := averageWaitingTime(tc.customers)
-		assert.Equal(t, tc.averageWaitTime, averageWaitTime)
+		assert.InEpsilon(t, tc.averageWaitTime, averageWaitTime, 0.00001)
 	}
 }

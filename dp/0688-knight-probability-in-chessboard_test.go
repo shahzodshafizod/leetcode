@@ -23,6 +23,6 @@ func TestKnightProbability(t *testing.T) {
 		{n: 2, k: 0, row: 0, column: 1, probability: 1.00000},
 	} {
 		probability := knightProbability(tc.n, tc.k, tc.row, tc.column)
-		assert.Equal(t, tc.probability, probability)
+		assert.InDelta(t, tc.probability, probability, 0.000001)
 	}
 }

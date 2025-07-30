@@ -162,7 +162,6 @@ linters:
     - goprintffuncname
     - gosec
     - gosmopolitan
-    - govet
     - grouper
     - iface
     - importas
@@ -207,12 +206,8 @@ linters:
     - tagalign
     - tagliatelle
     - testableexamples
-    - testifylint
-    - testpackage
-    - thelper
 
-    - unused
-    
+    - testpackage
     - varnamelen
     - wsl # depricated
 

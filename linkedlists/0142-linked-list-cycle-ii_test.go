@@ -22,6 +22,6 @@ func TestDetectCycle(t *testing.T) {
 		{head: pkg.MakeCycleLinkedList(-1), position: -1},
 	} {
 		cyclePoint := detectCycle(tc.head)
-		assert.EqualValues(t, pkg.GetNode(tc.head, tc.position), cyclePoint)
+		assert.Equal(t, pkg.GetNode(tc.head, tc.position), cyclePoint)
 	}
 }

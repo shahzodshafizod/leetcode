@@ -29,6 +29,6 @@ func TestFindMedianSortedArrays(t *testing.T) {
 		{nums1: []int{}, nums2: []int{1}, median: 1},
 	} {
 		median := findMedianSortedArrays(tc.nums1, tc.nums2)
-		assert.Equal(t, tc.median, median)
+		assert.InEpsilon(t, tc.median, median, 0.00001)
 	}
 }

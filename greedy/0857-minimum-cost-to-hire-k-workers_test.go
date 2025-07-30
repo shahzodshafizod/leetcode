@@ -18,6 +18,6 @@ func TestMincostToHireWorkers(t *testing.T) {
 		{quality: []int{3, 1, 10, 10, 1}, wage: []int{4, 8, 2, 2, 7}, k: 3, money: 30.666666666666664},
 	} {
 		money := mincostToHireWorkers(tc.quality, tc.wage, tc.k)
-		assert.Equal(t, tc.money, money)
+		assert.InEpsilon(t, tc.money, money, 0.000000000000001)
 	}
 }

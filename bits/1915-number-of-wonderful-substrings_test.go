@@ -17,6 +17,6 @@ func TestWonderfulSubstrings(t *testing.T) {
 		{word: "he", substrings: 2},
 	} {
 		substrings := wonderfulSubstrings(tc.word)
-		assert.Equal(t, substrings, substrings)
+		assert.Equal(t, tc.substrings, substrings)
 	}
 }

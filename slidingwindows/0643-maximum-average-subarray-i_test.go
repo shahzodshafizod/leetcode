@@ -23,6 +23,6 @@ func TestFindMaxAverage(t *testing.T) {
 	} {
 		average := findMaxAverage(tc.nums, tc.k)
 		average = math.Round(average*1e5) / 1e5
-		assert.Equal(t, tc.average, average)
+		assert.InEpsilon(t, tc.average, average, 0.00001)
 	}
 }

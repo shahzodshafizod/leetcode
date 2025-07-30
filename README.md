@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2419 | [Longest Subarray With Maximum Bitwise AND](https://leetcode.com/problems/longest-subarray-with-maximum-bitwise-and/) | Medium | Array, Bit Manipulation, Brainteaser | 2025-07-30 | [Go](bits/2419-longest-subarray-with-maximum-bitwise-and.go) [Python](bits/2419-longest-subarray-with-maximum-bitwise-and.py)
 | 2411 | [Smallest Subarrays With Maximum Bitwise OR](https://leetcode.com/problems/smallest-subarrays-with-maximum-bitwise-or/) | Medium | Array, Binary Search, Bit Manipulation, Sliding Window | 2025-07-29 | [Go](bits/2411-smallest-subarrays-with-maximum-bitwise-or.go) [Python](bits/2411-smallest-subarrays-with-maximum-bitwise-or.py)
 | 2044 | [Count Number of Maximum Bitwise-OR Subsets](https://leetcode.com/problems/count-number-of-maximum-bitwise-or-subsets/) | Medium | Array, Backtracking, Bit Manipulation, Enumeration | 2025-07-28 | [Go](dp/2044-count-number-of-maximum-bitwise-or-subsets.go) [Python](dp/2044-count-number-of-maximum-bitwise-or-subsets.py)
 | 2210 | [Count Hills and Valleys in an Array](https://leetcode.com/problems/count-hills-and-valleys-in-an-array/) | Easy | Array | 2025-07-27 | [Go](arrays/2210-count-hills-and-valleys-in-an-array.go) [Python](arrays/2210-count-hills-and-valleys-in-an-array.py)

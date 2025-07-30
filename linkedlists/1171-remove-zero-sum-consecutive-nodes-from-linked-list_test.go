@@ -21,6 +21,6 @@ func TestRemoveZeroSumSublists(t *testing.T) {
 		{head: pkg.MakeLinkedList(5, -3, -4, 1, 6, -2, -5), newHead: pkg.MakeLinkedList(5, -2, -5)},
 	} {
 		newHead := removeZeroSumSublists(tc.head)
-		assert.Equal(t, newHead, newHead)
+		assert.Equal(t, tc.newHead, newHead)
 	}
 }
