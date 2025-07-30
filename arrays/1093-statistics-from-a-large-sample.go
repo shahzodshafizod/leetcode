@@ -3,7 +3,7 @@ package arrays
 // https://leetcode.com/problems/statistics-from-a-large-sample/
 
 func sampleStats(count []int) []float64 {
-	var mi, ma int = -1, 256
+	mi, ma := -1, 256
 
 	var sum float64
 
@@ -63,7 +63,7 @@ func sampleStats(count []int) []float64 {
 		}
 	}
 
-	var med float64 = float64(mid)
+	med := float64(mid)
 	if total%2 == 0 {
 		med = float64(mid+neighbor) / 2
 	}

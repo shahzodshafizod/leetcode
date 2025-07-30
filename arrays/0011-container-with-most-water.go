@@ -28,7 +28,7 @@ Step 8: Can we optimize our solution?
 // https://leetcode.com/problems/container-with-most-water/
 
 func maxArea(height []int) int {
-	var maxArea int = 0
+	maxArea := 0
 
 	var area int
 

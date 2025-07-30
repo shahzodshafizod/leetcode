@@ -25,7 +25,7 @@ func TestMatrixDFS(t *testing.T) {
 			values: []int{1, 2, 3, 7, 11, 10, 6, 5, 9},
 		},
 	} {
-		var matrix Matrix = NewMatrix(tc.matrix)
+		matrix := NewMatrix(tc.matrix)
 
 		values := matrix.DFS()
 		assert.Equal(t, tc.values, values)
@@ -47,7 +47,7 @@ func TestMatrixBFS(t *testing.T) {
 			values: []int{-1, 0, -1, 0, -1, -1, 1, -2, -1, 0, -1, -1, 0, -1, 0, 0},
 		},
 	} {
-		var matrix Matrix = NewMatrix(tc.matrix)
+		matrix := NewMatrix(tc.matrix)
 
 		values := matrix.BFS()
 		assert.Equal(t, tc.values, values)

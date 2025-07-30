@@ -13,7 +13,7 @@ func countBadPairs(nums []int) int64 {
 		pairs[num-idx]++
 	}
 
-	var bads int64 = int64(n*(n-1))/2 - goods
+	bads := int64(n*(n-1))/2 - goods
 
 	return bads
 }

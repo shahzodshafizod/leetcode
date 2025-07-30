@@ -202,10 +202,6 @@ linters:
     - sloglint
     - spancheck
     - sqlclosecheck
-    - staticcheck
-    - tagalign
-    - tagliatelle
-    - testableexamples
 
     - testpackage
     - varnamelen

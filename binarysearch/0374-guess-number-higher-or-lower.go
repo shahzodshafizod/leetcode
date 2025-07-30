@@ -34,12 +34,13 @@ func guessNumber(n int) int {
 		num = left + (right-left)/2
 		guessed = guess(num)
 
-		if guessed == -1 {
+		switch guessed {
+		case -1:
 			right = num - 1
-		} else if guessed == 1 {
+		case 1:
 			left = num + 1
-		} else {
-			break
+		default:
+			return num
 		}
 	}
 

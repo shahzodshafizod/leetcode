@@ -28,7 +28,7 @@ func mincostToHireWorkers(quality []int, wage []int, k int) float64 {
 		})
 	}
 
-	var money float64 = math.MaxFloat64
+	money := math.MaxFloat64
 
 	var top *candidate
 
