@@ -37,7 +37,7 @@ func TestMedianFinder(t *testing.T) {
 		var medianFinder MedianFinder
 
 		for index, command := range tc.commands {
-			var output any = nil
+			var output any
 
 			switch command {
 			case "MedianFinder":

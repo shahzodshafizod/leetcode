@@ -10,11 +10,11 @@ func minDays(bloomDay []int, m int, k int) int {
 		return -1
 	}
 
-	getNumOfBouquets := func(max int) int {
+	getNumOfBouquets := func(maximum int) int {
 		flowers, bouquets := 0, 0
 
 		for _, day := range bloomDay { // O(N)
-			if day <= max {
+			if day <= maximum {
 				flowers++
 			} else {
 				flowers = 0

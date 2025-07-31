@@ -17,7 +17,7 @@ func TestGuessNumber(t *testing.T) {
 		{n: 1, picked: 1, guessed: 1},
 		{n: 2, picked: 1, guessed: 1},
 	} {
-		GUESSED__NUMBER__ = tc.picked
+		GuessedNumber = tc.picked
 		guessed := guessNumber(tc.n)
 		assert.Equal(t, tc.guessed, guessed)
 	}

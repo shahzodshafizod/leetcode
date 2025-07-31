@@ -9,14 +9,14 @@ import (
 // time: O(3*n) = O(n)
 // space: O(n)
 func findRelativeRanks(score []int) []string {
-	max := -1
+	maximum := -1
 	for _, score := range score {
-		if max == -1 || max < score {
-			max = score
+		if maximum == -1 || maximum < score {
+			maximum = score
 		}
 	}
 	// var max = slices.Max(score)
-	indexes := make([]int, max+1)
+	indexes := make([]int, maximum+1)
 	for idx, score := range score {
 		indexes[score] = idx + 1
 	}
@@ -26,7 +26,7 @@ func findRelativeRanks(score []int) []string {
 
 	var rank string
 
-	for score := max; score >= 0; score-- {
+	for score := maximum; score >= 0; score-- {
 		if indexes[score] != 0 {
 			place++
 			switch place {

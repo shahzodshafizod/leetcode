@@ -29,7 +29,7 @@ func distinctNames(ideas []string) int64 {
 		suffixes[suffix] = append(suffixes[suffix], prefix)
 	}
 
-	var count int64 = 0
+	var count int64
 
 	for a := 0; a < 26; a++ {
 		for b := a + 1; b < 26; b++ {

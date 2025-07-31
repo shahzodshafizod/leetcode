@@ -38,7 +38,7 @@ func minimumCost(source string, target string, original []byte, changed []byte, 
 		}
 	}
 
-	var totalCost int64 = 0
+	var totalCost int64
 
 	for idx := range source {
 		src, dst = int(source[idx]-'a'), int(target[idx]-'a')

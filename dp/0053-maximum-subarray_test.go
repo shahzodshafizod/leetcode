@@ -20,7 +20,7 @@ func TestMaxSubArray(t *testing.T) {
 		{nums: []int{5, 4, 7, 8}, max: 24},
 		{nums: []int{1, 4, -1, 2}, max: 6},
 	} {
-		max := maxSubArray(tc.nums)
-		assert.Equal(t, tc.max, max)
+		maximum := maxSubArray(tc.nums)
+		assert.Equal(t, tc.max, maximum)
 	}
 }

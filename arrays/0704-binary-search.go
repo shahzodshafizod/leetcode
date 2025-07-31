@@ -3,9 +3,7 @@ package arrays
 // https://leetcode.com/problems/binary-search/
 
 func search(nums []int, target int) int {
-	len := len(nums)
-
-	left, right := 0, len-1
+	left, right := 0, len(nums)-1
 	if target < nums[left] || target > nums[right] {
 		return -1
 	}

@@ -7,7 +7,7 @@ func firstUniqChar(s string) int {
 
 	n := len(s)
 
-	for i, len := 0, n; i < len; i++ {
+	for i, m := 0, n; i < m; i++ {
 		unique[s[i]-'a'] = [2]int{unique[s[i]-'a'][0] + 1, i}
 	}
 

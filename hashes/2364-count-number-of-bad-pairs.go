@@ -6,7 +6,7 @@ func countBadPairs(nums []int) int64 {
 	n := len(nums)
 	pairs := make(map[int]int)
 
-	var goods int64 = 0
+	var goods int64
 
 	for idx, num := range nums {
 		goods += int64(pairs[num-idx])

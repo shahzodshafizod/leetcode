@@ -29,7 +29,7 @@ func goodTriplets(nums1 []int, nums2 []int) int64 {
 		indices2[nums2[idx]] = idx
 	}
 
-	var total int64 = 0
+	var total int64
 
 	var idx2, left, right int
 	for idx1 := 0; idx1 < n; idx1++ {

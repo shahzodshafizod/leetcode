@@ -15,7 +15,7 @@ func minimumLength(s string) int {
 
 	for _, cnt := range count {
 		if cnt&1 == 1 {
-			length += 1
+			length++
 		} else if cnt != 0 {
 			length += 2
 		}

@@ -24,12 +24,12 @@ func mergeKLists(lists []*pkg.ListNode) *pkg.ListNode {
 	tail := list
 
 	for minHeap.Len() > 0 {
-		min := heap.Pop(minHeap).(*pkg.ListNode)
-		if min.Next != nil {
-			heap.Push(minHeap, min.Next)
+		minimum := heap.Pop(minHeap).(*pkg.ListNode)
+		if minimum.Next != nil {
+			heap.Push(minHeap, minimum.Next)
 		}
 
-		tail.Next = min
+		tail.Next = minimum
 		tail = tail.Next
 		tail.Next = nil
 	}

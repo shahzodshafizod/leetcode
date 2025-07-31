@@ -11,7 +11,7 @@ func countFairPairs(nums []int, lower int, upper int) int64 {
 	sort.Ints(nums)
 
 	lessThan := func(top int) int64 {
-		var pairs int64 = 0
+		var pairs int64
 
 		left, right := 0, len(nums)-1
 		for left < right {

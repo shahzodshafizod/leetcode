@@ -3,7 +3,7 @@ package bits
 // https://leetcode.com/problems/reverse-bits/
 
 func reverseBits(num uint32) uint32 {
-	var reversed uint32 = 0
+	var reversed uint32
 
 	var power uint32 = 31
 	for num > 0 {

@@ -13,10 +13,10 @@ import "slices"
 // time: O(N^2), if array isn't sorted; else O(N)
 // space: O(1)
 func bubleSort(array []int) []int {
-	for i, len := 0, len(array); i < len-1; i++ {
+	for i, n := 0, len(array); i < n-1; i++ {
 		sorted := true
 
-		for j := 1; j < len-i; j++ {
+		for j := 1; j < n-i; j++ {
 			if array[j-1] > array[j] {
 				array[j-1], array[j] = array[j], array[j-1]
 				sorted = false
@@ -34,16 +34,16 @@ func bubleSort(array []int) []int {
 // time: O(N^2)
 // space: O(1)
 func selectionSort(array []int) []int {
-	var min int
-	for i, len := 0, len(array); i < len-1; i++ {
-		min = i
-		for j := i + 1; j < len; j++ {
-			if array[j] < array[min] {
-				min = j
+	var minimum int
+	for i, n := 0, len(array); i < n-1; i++ {
+		minimum = i
+		for j := i + 1; j < n; j++ {
+			if array[j] < array[minimum] {
+				minimum = j
 			}
 		}
 
-		array[i], array[min] = array[min], array[i]
+		array[i], array[minimum] = array[minimum], array[i]
 	}
 
 	return array
@@ -52,7 +52,7 @@ func selectionSort(array []int) []int {
 // time: O(N^2), if array isn't sorted (not ASC, nor DEC); else O(N)
 // space: O(1)
 func insertionSort(array []int) []int {
-	for i, len := 1, len(array); i < len; i++ {
+	for i, n := 1, len(array); i < n; i++ {
 		if array[i] < array[0] { // space: O(N)
 			array = append(append([]int{array[i]}, array[:i]...), array[i+1:]...)
 			continue
@@ -96,12 +96,12 @@ func bucketSort(array []int) []int {
 // time: O(N*Log(N))
 // space: O(N)
 func mergeSort(array []int) []int {
-	len := len(array)
-	if len <= 1 {
+	n := len(array)
+	if n <= 1 {
 		return array
 	}
 
-	middle := len / 2
+	middle := n / 2
 
 	return merge(
 		mergeSort(array[:middle]), // [0-middle)
@@ -176,8 +176,8 @@ func heapSort(array []int) []int {
 		swap      = func(i int, j int) { array[i], array[j] = array[j], array[i] }
 	)
 	// 1. create a max heap
-	len := len(array)
-	for i := 1; i < len; i++ {
+	n := len(array)
+	for i := 1; i < n; i++ {
 		// sift up
 		child := i
 		parent := getParent(child)
@@ -190,15 +190,15 @@ func heapSort(array []int) []int {
 	}
 	// 2. sort ascending
 	// move max to the end, and continue with the array[0:len-1]
-	for len > 0 {
-		len--
-		swap(0, len)
+	for n > 0 {
+		n--
+		swap(0, n)
 		// sift down
 		parent := 0
 
 		child := getLeft(parent)
-		for child < len {
-			if child+1 < len && compare(child, child+1) {
+		for child < n {
+			if child+1 < n && compare(child, child+1) {
 				child++
 			}
 

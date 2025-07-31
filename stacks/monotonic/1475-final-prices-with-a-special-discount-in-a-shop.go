@@ -8,7 +8,7 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 // Time: O(n)
 // Space: O(n)
 func finalPrices(prices []int) []int {
-	var top *pkg.ListNode = nil // stack top
+	var top *pkg.ListNode // stack top
 
 	n := len(prices)
 

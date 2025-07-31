@@ -11,14 +11,14 @@ type MyHashSet struct {
 }
 
 func NewMyHashSet() MyHashSet {
-	const cap = 997
+	const capacity = 997
 
-	array := make([]*pkg.ListNode, cap)
+	array := make([]*pkg.ListNode, capacity)
 	for idx := range array {
 		array[idx] = &pkg.ListNode{} // dummy head node
 	}
 
-	return MyHashSet{array: array, cap: cap}
+	return MyHashSet{array: array, cap: capacity}
 }
 
 func (m *MyHashSet) Add(key int) {

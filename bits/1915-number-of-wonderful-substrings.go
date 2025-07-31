@@ -8,7 +8,7 @@ func wonderfulSubstrings(word string) int64 {
 
 	var key int
 
-	var result int64 = 0
+	var result int64
 
 	for _, letter := range word {
 		// update state

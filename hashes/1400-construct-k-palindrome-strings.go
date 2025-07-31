@@ -11,7 +11,7 @@ func canConstruct(s string, k int) bool {
 		return true
 	}
 
-	var odds uint = 0
+	var odds uint
 	for _, c := range s {
 		odds ^= 1 << int(c-'a')
 	}

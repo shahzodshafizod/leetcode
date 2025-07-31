@@ -15,7 +15,7 @@ func TestGetMaximumGold(t *testing.T) {
 		{grid: [][]int{{0, 6, 0}, {5, 8, 7}, {0, 9, 0}}, max: 24},
 		{grid: [][]int{{1, 0, 7}, {2, 0, 6}, {3, 4, 5}, {0, 3, 0}, {9, 0, 20}}, max: 28},
 	} {
-		max := getMaximumGold(tc.grid)
-		assert.Equal(t, tc.max, max)
+		maximum := getMaximumGold(tc.grid)
+		assert.Equal(t, tc.max, maximum)
 	}
 }

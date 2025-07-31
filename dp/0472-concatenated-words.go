@@ -18,10 +18,10 @@ func findAllConcatenatedWordsInADict(words []string) []string {
 		dp := make([]bool, n+1)
 		dp[0] = true
 
-		for len := 1; len <= n; len++ {
-			for j := len - 1; j >= 0; j-- {
-				if dp[j] && set[word[j:len]] {
-					dp[len] = true
+		for length := 1; length <= n; length++ {
+			for j := length - 1; j >= 0; j-- {
+				if dp[j] && set[word[j:length]] {
+					dp[length] = true
 					break
 				}
 			}

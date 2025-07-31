@@ -153,33 +153,33 @@ func (m *memoization) Fib(n int) int {
 
 // time: O(m*n)
 // space: O(m*n)
-func (mm *memoization) GridTravaler(m int, n int) int {
-	var dp func(m int, n int, memo [][]int) int
+func (m *memoization) GridTravaler(mm int, n int) int {
+	var dp func(mm int, n int, memo [][]int) int
 
-	dp = func(m int, n int, memo [][]int) int {
-		if m == 0 || n == 0 {
+	dp = func(mm int, n int, memo [][]int) int {
+		if mm == 0 || n == 0 {
 			return 0
 		}
 
-		if m == 1 && n == 1 {
+		if mm == 1 && n == 1 {
 			return 1
 		}
 
-		if memo[m-1][n-1] != 0 {
-			return memo[m-1][n-1]
+		if memo[mm-1][n-1] != 0 {
+			return memo[mm-1][n-1]
 		}
 
-		memo[m-1][n-1] = dp(m-1, n, memo) + dp(m, n-1, memo)
+		memo[mm-1][n-1] = dp(mm-1, n, memo) + dp(mm, n-1, memo)
 
-		return memo[m-1][n-1]
+		return memo[mm-1][n-1]
 	}
 
-	memo := make([][]int, m)
-	for i := 0; i < m; i++ {
+	memo := make([][]int, mm)
+	for i := 0; i < mm; i++ {
 		memo[i] = make([]int, n)
 	}
 
-	return dp(m, n, memo)
+	return dp(mm, n, memo)
 }
 
 // m = targetSum
@@ -276,7 +276,7 @@ func (m *memoization) BestSum(targetSum int, numbers []int) []int {
 			return *memo[targetSum]
 		}
 
-		var shortest []int = nil
+		var shortest []int
 
 		for _, number := range numbers {
 			remainder := targetSum - number
@@ -690,7 +690,7 @@ func (t *tabulation) AllConstruct(target string, wordBank []string) [][]string {
 
 				if strings.Index(currTarget, word) == 0 {
 					var combination [][]string
-					for j, len := 0, len(dp[i]); j < len; j++ {
+					for j, n := 0, len(dp[i]); j < n; j++ {
 						combination = append(
 							combination,
 							append(append([]string{}, dp[i][j]...), word),

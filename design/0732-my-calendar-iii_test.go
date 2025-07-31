@@ -27,7 +27,7 @@ func TestMyCalendarThree(t *testing.T) {
 		var calendar MyCalendarThree
 
 		for idx, command := range tc.commands {
-			var output any = nil
+			var output any
 
 			switch command {
 			case "MyCalendarThree":

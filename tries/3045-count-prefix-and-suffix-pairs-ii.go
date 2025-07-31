@@ -13,7 +13,7 @@ func countPrefixSuffixPairs3045(words []string) int64 {
 	}
 	root := NewTrieNode()
 
-	var count int64 = 0
+	var count int64
 
 	var left, right int
 

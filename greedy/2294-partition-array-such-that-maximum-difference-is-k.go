@@ -10,10 +10,10 @@ import "sort"
 func partitionArray(nums []int, k int) int {
 	sort.Ints(nums)
 
-	partitions, min := 1, nums[0]
-	for _, max := range nums {
-		if max-min > k {
-			min = max
+	partitions, minimum := 1, nums[0]
+	for _, maximum := range nums {
+		if maximum-minimum > k {
+			minimum = maximum
 			partitions++
 		}
 	}

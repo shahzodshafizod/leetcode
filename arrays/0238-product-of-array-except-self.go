@@ -9,17 +9,17 @@ package arrays
 // time: O(2n) = O(n)
 // space: O(1)
 func productExceptSelf(nums []int) []int {
-	len := len(nums)
-	answer := make([]int, len)
+	n := len(nums)
+	answer := make([]int, n)
 	product := 1
 
-	for idx := 0; idx < len; idx++ { // from left to right
+	for idx := 0; idx < n; idx++ { // from left to right
 		answer[idx] = product
 		product *= nums[idx]
 	}
 
 	product = 1
-	for idx := len - 1; idx >= 0; idx-- { // from right to left
+	for idx := n - 1; idx >= 0; idx-- { // from right to left
 		answer[idx] *= product
 		product *= nums[idx]
 	}

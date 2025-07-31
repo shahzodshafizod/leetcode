@@ -12,17 +12,17 @@ type MyHashMap struct {
 }
 
 func NewMyHashMap() MyHashMap {
-	const cap = 997
+	const capacity = 997
 
-	keys := make([]*pkg.ListNode, cap)
-	vals := make([]*pkg.ListNode, cap)
+	keys := make([]*pkg.ListNode, capacity)
+	vals := make([]*pkg.ListNode, capacity)
 
-	for i := 0; i < cap; i++ {
+	for i := 0; i < capacity; i++ {
 		keys[i] = &pkg.ListNode{} // dummy head node
 		vals[i] = &pkg.ListNode{} // dummy head node
 	}
 
-	return MyHashMap{keys: keys, vals: vals, cap: cap}
+	return MyHashMap{keys: keys, vals: vals, cap: capacity}
 }
 
 func (m *MyHashMap) Put(key int, value int) {

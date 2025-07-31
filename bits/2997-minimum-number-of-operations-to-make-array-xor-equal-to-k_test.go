@@ -16,7 +16,7 @@ func TestMinOperations(t *testing.T) {
 		{nums: []int{2, 1, 3, 4}, k: 1, min: 2},
 		{nums: []int{2, 0, 2, 0}, k: 0, min: 0},
 	} {
-		min := minOperations(tc.nums, tc.k)
-		assert.Equal(t, tc.min, min)
+		minimum := minOperations(tc.nums, tc.k)
+		assert.Equal(t, tc.min, minimum)
 	}
 }

@@ -5,7 +5,7 @@ package slidingwindows
 func countGood(nums []int, k int) int64 {
 	count := make(map[int]int)
 
-	var goods int64 = 0
+	var goods int64
 
 	pairs, n := 0, len(nums)
 	for start, end := 0, 0; end < n; end++ {

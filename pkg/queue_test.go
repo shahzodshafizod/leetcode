@@ -38,7 +38,7 @@ func TestQueue(t *testing.T) {
 		{command: "Dequeue", value: []int{}, output: 5},
 		{command: "Empty", value: []int{}, output: true},
 	} {
-		var output any = nil
+		var output any
 
 		switch tc.command {
 		case "Queue":

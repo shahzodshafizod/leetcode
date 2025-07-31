@@ -3,7 +3,7 @@ package monotonic
 // https://leetcode.com/problems/find-the-number-of-subarrays-where-boundary-elements-are-maximum/
 
 func numberOfSubarrays(nums []int) int64 {
-	var count int64 = 0
+	var count int64
 
 	stack := make([][2]int, len(nums))
 	size := 0

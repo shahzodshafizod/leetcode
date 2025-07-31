@@ -46,7 +46,7 @@ func findCriticalAndPseudoCriticalEdges(n int, edges [][]int) [][]int {
 			node1, node2, cost = edges[pick][0], edges[pick][1], edges[pick][2]
 			if union(node1, node2) {
 				weight += cost
-				count -= 1
+				count--
 			}
 		}
 
@@ -58,7 +58,7 @@ func findCriticalAndPseudoCriticalEdges(n int, edges [][]int) [][]int {
 			node1, node2, cost = edges[idx][0], edges[idx][1], edges[idx][2]
 			if union(node1, node2) {
 				weight += cost
-				count -= 1
+				count--
 			}
 		}
 

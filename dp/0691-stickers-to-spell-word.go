@@ -12,7 +12,7 @@ import "strings"
 // Time: O(2^N ∗M)
 // Space: O(2^N ∗M)
 func minStickers(stickers []string, target string) int {
-	const MAX_INT = 16
+	const MaxInt = 16
 
 	dict := make([][26]int, len(stickers))
 
@@ -40,7 +40,7 @@ func minStickers(stickers []string, target string) int {
 			targetMap[c-'a']++
 		}
 
-		count := MAX_INT
+		count := MaxInt
 
 		for _, sticker := range dict {
 			if sticker[target[0]-'a'] == 0 {
@@ -64,7 +64,7 @@ func minStickers(stickers []string, target string) int {
 	}
 
 	count := dfs(target)
-	if count == MAX_INT {
+	if count == MaxInt {
 		count = -1
 	}
 

@@ -30,7 +30,7 @@ func kMirror(k int, n int) int64 {
 
 	var mirror, tmp int64
 
-	var sum int64 = 0
+	var sum int64
 
 	for left = 1; n > 0; left = right {
 		right = left * 10

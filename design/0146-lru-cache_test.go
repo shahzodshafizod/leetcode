@@ -37,7 +37,7 @@ func TestLRUCache(t *testing.T) {
 		var cache LRUCache
 
 		for index, command := range tc.commands {
-			var output any = nil
+			var output any
 
 			switch command {
 			case "LRUCache":

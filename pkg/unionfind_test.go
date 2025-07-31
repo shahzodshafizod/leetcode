@@ -38,7 +38,7 @@ func TestUnionFind(t *testing.T) {
 		{command: "Find", value: []int{3}, output: 2},
 		{command: "Find", value: []int{0}, output: 2},
 	} {
-		var output any = nil
+		var output any
 
 		switch tc.command {
 		case "UnionFind":

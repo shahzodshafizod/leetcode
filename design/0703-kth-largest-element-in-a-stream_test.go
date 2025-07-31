@@ -37,7 +37,7 @@ func TestKthLargest(t *testing.T) {
 		var kth KthLargest
 
 		for index, command := range tc.commands {
-			var output any = nil
+			var output any
 
 			switch command {
 			case "KthLargest":

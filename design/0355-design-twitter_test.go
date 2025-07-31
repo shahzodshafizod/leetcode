@@ -44,11 +44,11 @@ func TestTwitter(t *testing.T) {
 				userID := tc.values[index][0]
 				output = twitter.GetNewsFeed(userID)
 			case "follow":
-				followerId, followeeId := tc.values[index][0], tc.values[index][1]
-				twitter.Follow(followerId, followeeId)
+				followerID, followeeID := tc.values[index][0], tc.values[index][1]
+				twitter.Follow(followerID, followeeID)
 			case "unfollow":
-				followerId, followeeId := tc.values[index][0], tc.values[index][1]
-				twitter.Unfollow(followerId, followeeId)
+				followerID, followeeID := tc.values[index][0], tc.values[index][1]
+				twitter.Unfollow(followerID, followeeID)
 			}
 
 			assert.Equal(t, tc.output[index], output)

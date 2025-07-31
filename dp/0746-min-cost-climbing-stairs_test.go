@@ -15,7 +15,7 @@ func TestMinCostClimbingStairs(t *testing.T) {
 		{cost: []int{10, 15, 20}, min: 15},
 		{cost: []int{1, 100, 1, 1, 1, 100, 1, 1, 100, 1}, min: 6},
 	} {
-		min := minCostClimbingStairs(tc.cost)
-		assert.Equal(t, tc.min, min)
+		minimum := minCostClimbingStairs(tc.cost)
+		assert.Equal(t, tc.min, minimum)
 	}
 }

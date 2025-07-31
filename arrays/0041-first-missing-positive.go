@@ -3,12 +3,12 @@ package arrays
 // https://leetcode.com/problems/first-missing-positive/
 
 func firstMissingPositive(nums []int) int {
-	len := len(nums)
+	n := len(nums)
 	// 1. delete unneccessary elements (set to zero)
 	// and sort elements: O(2N) = O(N)
 	for idx := range nums {
 		for nums[idx] >= 1 &&
-			nums[idx] <= len &&
+			nums[idx] <= n &&
 			nums[idx] != idx+1 &&
 			nums[idx] != nums[nums[idx]-1] {
 			nums[idx], nums[nums[idx]-1] = nums[nums[idx]-1], nums[idx]
@@ -26,5 +26,5 @@ func firstMissingPositive(nums []int) int {
 	}
 	// if all elements in array exist, then the first
 	// missing is the next element after the last one.
-	return len + 1
+	return n + 1
 }

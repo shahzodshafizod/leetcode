@@ -9,7 +9,7 @@ func countInterestingSubarrays(nums []int, modulo int, k int) int64 {
 	precount := 0
 	freq := map[int]int{0: 1}
 
-	var total int64 = 0
+	var total int64
 
 	for _, num := range nums {
 		if num%modulo == k {

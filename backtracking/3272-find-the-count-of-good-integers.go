@@ -61,7 +61,7 @@ func countGoodIntegers(n int, k int) int64 {
 		facts[num] = facts[num-1] * int64(num)
 	}
 	// 3. calculating valid (non 0-leading) permutations
-	var total int64 = 0
+	var total int64
 
 	var count int64
 

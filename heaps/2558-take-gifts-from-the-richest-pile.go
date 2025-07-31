@@ -19,7 +19,7 @@ func pickGifts(gifts []int, k int) int64 {
 		heap.Fix(maxHeap, 0)
 	}
 
-	var remained int64 = 0
+	var remained int64
 	for _, gift := range gifts {
 		remained += int64(gift)
 	}

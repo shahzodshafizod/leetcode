@@ -198,10 +198,6 @@ linters:
     - reassign
     - recvcheck
     - revive
-    - rowserrcheck
-    - sloglint
-    - spancheck
-    - sqlclosecheck
 
     - testpackage
     - varnamelen

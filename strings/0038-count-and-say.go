@@ -7,21 +7,23 @@ import (
 
 // https://leetcode.com/problems/count-and-say/
 
+// RLE: Run-length encoding
+
 // Approach: Iterative
 // Time: O(nxm), m=max(len(RLE))
 // Space: O(n)
 func countAndSay(n int) string {
 	rle := "1"
 
-	var new_rle strings.Builder
+	var newRLE strings.Builder
 	for ; n > 1; n-- {
-		new_rle.Reset()
+		newRLE.Reset()
 
 		count, slen := 1, len(rle)
 		for idx := 1; idx < slen; idx++ {
 			if rle[idx] != rle[idx-1] {
-				new_rle.WriteString(strconv.Itoa(count))
-				new_rle.WriteByte(rle[idx-1])
+				newRLE.WriteString(strconv.Itoa(count))
+				newRLE.WriteByte(rle[idx-1])
 
 				count = 0
 			}
@@ -29,9 +31,9 @@ func countAndSay(n int) string {
 			count++
 		}
 
-		new_rle.WriteString(strconv.Itoa(count))
-		new_rle.WriteByte(rle[slen-1])
-		rle = new_rle.String()
+		newRLE.WriteString(strconv.Itoa(count))
+		newRLE.WriteByte(rle[slen-1])
+		rle = newRLE.String()
 	}
 
 	return rle

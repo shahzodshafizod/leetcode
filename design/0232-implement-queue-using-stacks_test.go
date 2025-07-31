@@ -22,7 +22,7 @@ func TestMyQueue(t *testing.T) {
 		var queue MyQueue
 
 		for index, operation := range tc.operations {
-			var output any = nil
+			var output any
 
 			switch operation {
 			case "MyQueue":

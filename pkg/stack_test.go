@@ -28,7 +28,7 @@ func TestStack(t *testing.T) {
 		{command: "Size", value: []string{}, output: 2},
 		{command: "Empty", value: []string{}, output: false},
 	} {
-		var output any = nil
+		var output any
 
 		switch tc.command {
 		case "Stack":

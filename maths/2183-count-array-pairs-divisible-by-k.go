@@ -14,7 +14,7 @@ func countPairs(nums []int, k int) int64 {
 	}
 	counts := make(map[int]int64)
 
-	var count int64 = 0
+	var count int64
 
 	for _, num := range nums {
 		curr := gcd(num, k)

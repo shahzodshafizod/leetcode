@@ -3,7 +3,7 @@ package slidingwindows
 // https://leetcode.com/problems/count-subarrays-with-fixed-bounds/
 
 func countSubarrays(nums []int, minK int, maxK int) int64 {
-	var count int64 = 0
+	var count int64
 
 	badid, minid, maxid := -1, -1, -1
 

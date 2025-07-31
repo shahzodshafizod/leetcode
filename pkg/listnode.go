@@ -43,7 +43,7 @@ func GetNode(head *ListNode, position int) *ListNode {
 func MakeCycleLinkedList(position int, vals ...int) *ListNode {
 	var head, tail *ListNode = nil, nil
 
-	var cyclePoint *ListNode = nil
+	var cyclePoint *ListNode
 
 	for index, val := range vals {
 		newNode := &ListNode{Val: val, Next: nil}

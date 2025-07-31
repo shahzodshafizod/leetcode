@@ -47,7 +47,7 @@ func TestMyLinkedList(t *testing.T) {
 		var list MyLinkedList
 
 		for index, command := range tc.commands {
-			var output any = nil
+			var output any
 
 			switch command {
 			case "MyLinkedList":

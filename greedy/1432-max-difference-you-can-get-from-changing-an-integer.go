@@ -35,15 +35,15 @@ func maxDiff(num int) int {
 	}
 
 	nines[nine] = 9
-	max, min := 0, 0
+	maximum, minimum := 0, 0
 	decimal := 1
 
 	for tmp := num; tmp > 0; tmp /= 10 {
 		digit = tmp % 10
-		max += nines[digit] * decimal
-		min += zeros[digit] * decimal
+		maximum += nines[digit] * decimal
+		minimum += zeros[digit] * decimal
 		decimal *= 10
 	}
 
-	return max - min
+	return maximum - minimum
 }

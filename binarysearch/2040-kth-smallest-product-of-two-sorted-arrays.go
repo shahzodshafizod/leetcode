@@ -9,7 +9,7 @@ func kthSmallestProduct(nums1 []int, nums2 []int, k int64) int64 {
 
 	m := len(nums2)
 	calcLessThan := func(target int64) int64 {
-		var count int64 = 0
+		var count int64
 
 		var left, right, mid int
 

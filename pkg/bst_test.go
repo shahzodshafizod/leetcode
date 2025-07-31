@@ -30,7 +30,7 @@ func TestBST(t *testing.T) {
 		{command: "Search", value: []int{4}, output: true},
 		{command: "Search", value: []int{6}, output: true},
 	} {
-		var output any = nil
+		var output any
 
 		switch tc.command {
 		case "BST":

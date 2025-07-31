@@ -23,7 +23,7 @@ func TestCoinChange(t *testing.T) {
 		{coins: []int{1, 3, 4, 5}, amount: 7, min: 2},
 		{coins: []int{411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422}, amount: 9864, min: 24},
 	} {
-		min := coinChange(tc.coins, tc.amount)
-		assert.Equal(t, tc.min, min)
+		minimum := coinChange(tc.coins, tc.amount)
+		assert.Equal(t, tc.min, minimum)
 	}
 }

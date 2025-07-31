@@ -74,15 +74,15 @@ func sampleStats(count []int) []float64 {
 	return []float64{float64(mi), float64(ma), mea, med, mo}
 }
 
-func sampleStatsSet(num int, count int, sum *float64, min, max *int, mode *[2]int) {
+func sampleStatsSet(num int, count int, sum *float64, minimum, maximum *int, mode *[2]int) {
 	*sum += float64(num) * float64(count)
 
-	if *min == -1 || num < *min {
-		*min = num
+	if *minimum == -1 || num < *minimum {
+		*minimum = num
 	}
 
-	if *max == 256 || num > *max {
-		*max = num
+	if *maximum == 256 || num > *maximum {
+		*maximum = num
 	}
 
 	if count > (*mode)[0] {

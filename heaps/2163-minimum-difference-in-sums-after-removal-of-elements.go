@@ -27,7 +27,7 @@ func minimumDifference(nums []int) int64 {
 
 	mxhp := pkg.NewHeap(make([]int, 0), func(x, y int) bool { return x > y })
 
-	var sumfir int64 = 0
+	var sumfir int64
 
 	for i := 0; i < n; i++ {
 		heap.Push(mxhp, nums[i])

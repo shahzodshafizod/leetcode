@@ -8,7 +8,7 @@ func reverseKGroup(head *pkg.ListNode, k int) *pkg.ListNode {
 	length := reverseKGroupLLLength(head, 0)
 	node := head
 
-	var prevGroup *pkg.ListNode = nil
+	var prevGroup *pkg.ListNode
 
 	times := length / k
 	for times > 0 {

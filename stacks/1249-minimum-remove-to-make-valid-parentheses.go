@@ -30,8 +30,8 @@ func minRemoveToMakeValid(s string) string {
 		case '(':
 			remove = append(remove, idx)
 		case ')':
-			if len := len(remove); len > 0 && slice[remove[len-1]] == '(' {
-				remove = remove[:len-1]
+			if n := len(remove); n > 0 && slice[remove[n-1]] == '(' {
+				remove = remove[:n-1]
 			} else {
 				remove = append(remove, idx)
 			}

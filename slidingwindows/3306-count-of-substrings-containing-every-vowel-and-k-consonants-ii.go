@@ -14,7 +14,7 @@ func countOfSubstrings(word string, k int) int64 {
 	}
 	n := len(word)
 	atLeast := func(k int) int64 {
-		var result int64 = 0
+		var result int64
 
 		var count [26]int
 

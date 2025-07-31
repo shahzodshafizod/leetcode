@@ -3,7 +3,7 @@ package hashes
 // https://leetcode.com/problems/task-scheduler-ii/
 
 func taskSchedulerII(tasks []int, space int) int64 {
-	var days int64 = 0
+	var days int64
 
 	nextday := make(map[int]int64)
 	for _, task := range tasks {

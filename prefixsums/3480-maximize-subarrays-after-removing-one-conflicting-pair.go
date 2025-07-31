@@ -15,7 +15,7 @@ func maxSubarrays(n int, conflictingPairs [][]int) int64 {
 		right[mx] = append(right[mx], mn)
 	}
 
-	var res int64 = 0
+	var res int64
 
 	left := [2]int{0, 0}
 	ar := make([]int64, n+1) // after removal

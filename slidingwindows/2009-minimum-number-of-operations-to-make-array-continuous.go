@@ -21,7 +21,7 @@ func minOperations(nums []int) int {
 	}
 
 	sort.Ints(nums)
-	len := len(nums)
+	n := len(nums)
 	ops := origlen
 	end := 0
 
@@ -29,7 +29,7 @@ func minOperations(nums []int) int {
 
 	for start := range nums {
 		// target window is: [start; start+length-1]
-		for end < len && nums[end] <= nums[start]+origlen-1 {
+		for end < n && nums[end] <= nums[start]+origlen-1 {
 			end++
 		}
 

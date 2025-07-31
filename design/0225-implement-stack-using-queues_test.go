@@ -27,7 +27,7 @@ func TestMyStack(t *testing.T) {
 		var stack MyStack
 
 		for index, command := range tc.commands {
-			var output any = nil
+			var output any
 
 			switch command {
 			case "MyStack":

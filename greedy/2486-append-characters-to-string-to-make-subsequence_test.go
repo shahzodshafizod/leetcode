@@ -19,7 +19,7 @@ func TestAppendCharacters(t *testing.T) {
 		{s: "z", t: "abcde", min: 5},
 		{s: "abba", t: "abba", min: 0},
 	} {
-		min := appendCharacters(tc.s, tc.t)
-		assert.Equal(t, tc.min, min)
+		minimum := appendCharacters(tc.s, tc.t)
+		assert.Equal(t, tc.min, minimum)
 	}
 }

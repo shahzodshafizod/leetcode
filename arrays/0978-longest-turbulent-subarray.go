@@ -23,7 +23,7 @@ func maxTurbulenceSize(arr []int) int {
 
 	var curr int
 
-	for idx, len := 1, len(arr); idx < len; idx++ {
+	for idx, n := 1, len(arr); idx < n; idx++ {
 		if arr[idx-1] > arr[idx] {
 			curr = 1
 		} else if arr[idx-1] < arr[idx] {

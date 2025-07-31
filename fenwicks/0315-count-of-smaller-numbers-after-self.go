@@ -8,16 +8,16 @@ import "slices"
 // Time: O(N Log N)
 // Space: O(N)
 func countSmaller(nums []int) []int {
-	min := slices.Min(nums)
-	bitree := make([]int, slices.Max(nums)-min+2) // 1-indexed
+	minimum := slices.Min(nums)
+	bitree := make([]int, slices.Max(nums)-minimum+2) // 1-indexed
 	update := func(idx int, delta int) {
-		idx -= min - 1
+		idx -= minimum - 1
 		for n := len(bitree); idx < n; idx += idx & -idx {
 			bitree[idx] += delta
 		}
 	}
 	count := func(idx int) int {
-		idx -= min
+		idx -= minimum
 		count := 0
 
 		for ; idx > 0; idx -= idx & -idx {

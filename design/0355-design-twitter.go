@@ -10,26 +10,26 @@ import (
 
 type tweet struct {
 	id       int
-	uniqueId int
+	uniqueID int
 }
 
 type Twitter struct {
 	tweets    map[int][]*tweet
 	followees map[int]map[int]bool
-	nextId    int
+	nextID    int
 }
 
 func NewTwitter() Twitter {
 	return Twitter{
 		tweets:    make(map[int][]*tweet),
 		followees: make(map[int]map[int]bool),
-		nextId:    1,
+		nextID:    1,
 	}
 }
 
 func (t *Twitter) PostTweet(userId int, tweetId int) { // O(1)
-	newTweet := &tweet{id: tweetId, uniqueId: t.nextId}
-	t.nextId++
+	newTweet := &tweet{id: tweetId, uniqueID: t.nextID}
+	t.nextID++
 
 	if t.tweets[userId] == nil {
 		t.tweets[userId] = []*tweet{newTweet}
@@ -40,12 +40,12 @@ func (t *Twitter) PostTweet(userId int, tweetId int) { // O(1)
 
 func (t *Twitter) GetNewsFeed(userId int) []int { // O(N Log N)
 	posts := make([]*tweet, len(t.tweets[userId]))
-	for followeeId := range t.followees[userId] {
-		posts = append(posts, t.tweets[followeeId]...)
+	for followeeID := range t.followees[userId] {
+		posts = append(posts, t.tweets[followeeID]...)
 	}
 
 	copy(posts, t.tweets[userId])
-	tweets := pkg.NewHeap(posts, func(x, y *tweet) bool { return x.uniqueId > y.uniqueId })
+	tweets := pkg.NewHeap(posts, func(x, y *tweet) bool { return x.uniqueID > y.uniqueID })
 	heap.Init(tweets)
 
 	result := make([]int, 0)

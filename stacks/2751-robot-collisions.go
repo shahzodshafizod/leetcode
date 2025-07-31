@@ -24,7 +24,7 @@ func survivedRobotsHealths(positions []int, healths []int, directions string) []
 		next  *node
 	}
 
-	var stack *node = nil
+	var stack *node
 
 	var newid, topid int
 	for _, posid := range posid {

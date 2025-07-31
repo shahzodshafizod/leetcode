@@ -11,14 +11,14 @@ package binarysearch
  * func guess(num int) int;
  */
 
-var GUESSED__NUMBER__ int
+var GuessedNumber int
 
 func guess(num int) int {
-	if num > GUESSED__NUMBER__ {
+	if num > GuessedNumber {
 		return -1
 	}
 
-	if num < GUESSED__NUMBER__ {
+	if num < GuessedNumber {
 		return 1
 	}
 

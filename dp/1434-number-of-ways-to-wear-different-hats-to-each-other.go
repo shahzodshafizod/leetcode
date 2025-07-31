@@ -19,9 +19,9 @@ func numberWays(hats [][]int) int {
 	n := len(hats)
 	done := (1 << n) - 1
 
-	const MAX_HAT = 40
+	const MaxHat = 40
 
-	var memo [MAX_HAT][]*int
+	var memo [MaxHat][]*int
 	for idx := range memo {
 		memo[idx] = make([]*int, done)
 	}
@@ -33,7 +33,7 @@ func numberWays(hats [][]int) int {
 			return 1
 		}
 
-		if hat == MAX_HAT {
+		if hat == MaxHat {
 			return 0
 		}
 

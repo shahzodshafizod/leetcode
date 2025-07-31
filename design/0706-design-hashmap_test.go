@@ -22,7 +22,7 @@ func TestMyHashMap(t *testing.T) {
 		var myHashMap MyHashMap
 
 		for index, command := range tc.commands {
-			var output any = nil
+			var output any
 
 			switch command {
 			case "MyHashMap":

@@ -1681,15 +1681,15 @@ func (g *graph) Dijkstra(adjList map[int][]*Edge, s int, n int) []int {
 	heap.Push(minPQ, &Edge{s, 0})
 
 	for minPQ.Len() > 0 {
-		nodeId := heap.Pop(minPQ).(*Edge).To // get the next minimal (promising) distance
-		visited[nodeId] = true
+		nodeID := heap.Pop(minPQ).(*Edge).To // get the next minimal (promising) distance
+		visited[nodeID] = true
 
-		for _, edge := range adjList[nodeId] {
+		for _, edge := range adjList[nodeID] {
 			if visited[edge.To] {
 				continue
 			}
 
-			newDist := dist[nodeId] + edge.Weight
+			newDist := dist[nodeID] + edge.Weight
 			if newDist < dist[edge.To] {
 				dist[edge.To] = newDist
 				heap.Push(minPQ, &Edge{edge.To, newDist})
@@ -1738,5 +1738,6 @@ func (g *graph) BellmanFord(adjList map[int][]*Edge, s int, n int) []int {
 }
 
 func (g *graph) FloydWarshall(adjList map[int][]*Edge, s int, n int) []int {
+	_, _, _ = adjList, s, n
 	return nil
 }

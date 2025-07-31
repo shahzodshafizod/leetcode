@@ -20,10 +20,10 @@ func reverseParentheses(s string) string {
 	}
 
 	idx, dir := 0, 1
-	len := len(s)
+	n := len(s)
 	result := make([]byte, 0)
 
-	for idx < len {
+	for idx < n {
 		if s[idx] == '(' || s[idx] == ')' {
 			idx = pairs[idx]
 			dir *= -1

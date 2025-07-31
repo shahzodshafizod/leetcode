@@ -17,7 +17,7 @@ func TestFirstBadVersion(t *testing.T) {
 		{n: 1, setting: 1, first: 1},
 		{n: 3, setting: 2, first: 2},
 	} {
-		FIRST__BAD__VERSION__ = tc.setting
+		FirstBadVersion = tc.setting
 		first := firstBadVersion(tc.n)
 		assert.Equal(t, tc.first, first)
 	}

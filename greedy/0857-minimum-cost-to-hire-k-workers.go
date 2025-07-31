@@ -32,7 +32,7 @@ func mincostToHireWorkers(quality []int, wage []int, k int) float64 {
 
 	var top *candidate
 
-	var qualities float64 = 0
+	var qualities float64
 
 	maxheap := pkg.NewHeap(make([]int, 0), func(x, y int) bool { return x > y })
 

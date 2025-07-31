@@ -16,7 +16,7 @@ func TestMaxProfit(t *testing.T) {
 		{prices: []int{7, 6, 4, 3, 1}, max: 0},
 		{prices: []int{2, 4, 1}, max: 2},
 	} {
-		max := maxProfit(tc.prices)
-		assert.Equal(t, tc.max, max)
+		maximum := maxProfit(tc.prices)
+		assert.Equal(t, tc.max, maximum)
 	}
 }

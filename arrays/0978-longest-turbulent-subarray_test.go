@@ -19,7 +19,7 @@ func TestMaxTurbulenceSize(t *testing.T) {
 		{arr: []int{100, 100, 100}, max: 1},
 		{arr: []int{100, 100, 100, 2}, max: 2},
 	} {
-		max := maxTurbulenceSize(tc.arr)
-		assert.Equal(t, tc.max, max)
+		maximum := maxTurbulenceSize(tc.arr)
+		assert.Equal(t, tc.max, maximum)
 	}
 }

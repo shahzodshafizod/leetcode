@@ -14,7 +14,7 @@ func largestPathValue(colors string, edges [][]int) int {
 	for idx := range edges {
 		src, dst = edges[idx][0], edges[idx][1]
 		adj[src] = append(adj[src], dst)
-		indegrees[dst] += 1
+		indegrees[dst]++
 	}
 
 	queue := make([]int, n)

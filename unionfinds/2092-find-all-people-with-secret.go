@@ -19,15 +19,15 @@ func findAllPeople(n int, meetings [][]int, firstPerson int) []int {
 	told[firstPerson] = true
 
 	var x, y, time int
-	for i, len := 0, len(meetings); i < len; {
+	for i, n := 0, len(meetings); i < n; {
 		time = meetings[i][2]
-		for j := i; j < len && meetings[j][2] == time; j++ {
+		for j := i; j < n && meetings[j][2] == time; j++ {
 			x = meetings[j][0]
 			y = meetings[j][1]
 			uf.Union(x, y)
 		}
 
-		for ; i < len && meetings[i][2] == time; i++ {
+		for ; i < n && meetings[i][2] == time; i++ {
 			x = meetings[i][0]
 			if uf.Find(x) == uf.Find(0) {
 				told[x] = true

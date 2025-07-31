@@ -4,7 +4,7 @@ package binarysearch
 
 func maximumCandies(candies []int, k int64) int {
 	canDivide := func(target int64) bool {
-		var count int64 = 0
+		var count int64
 		for _, candy := range candies {
 			count += int64(candy) / target
 			if count >= k {
@@ -15,7 +15,7 @@ func maximumCandies(candies []int, k int64) int {
 		return false
 	}
 
-	var sum int64 = 0
+	var sum int64
 	for _, candy := range candies {
 		sum += int64(candy)
 	}

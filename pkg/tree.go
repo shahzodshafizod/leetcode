@@ -8,7 +8,7 @@ type TreeNode struct {
 }
 
 func MakeTree(index int, vals []any) *TreeNode {
-	if len := len(vals); len == 0 || len <= index || vals[index] == nil {
+	if n := len(vals); n == 0 || n <= index || vals[index] == nil {
 		return nil
 	}
 
@@ -20,7 +20,7 @@ func MakeTree(index int, vals []any) *TreeNode {
 }
 
 func MakeTree2(vals ...any) *TreeNode {
-	var root *TreeNode = nil
+	var root *TreeNode
 
 	queue := make([]*TreeNode, 0)
 
@@ -29,10 +29,10 @@ func MakeTree2(vals ...any) *TreeNode {
 		queue = append(queue, root)
 	}
 
-	var curr *TreeNode = nil
+	var curr *TreeNode
 
 	for idx, n := 1, len(vals); idx < n; idx++ {
-		var child *TreeNode = nil
+		var child *TreeNode
 		if vals[idx] != nil {
 			child = &TreeNode{Val: vals[idx].(int)}
 			queue = append(queue, child)

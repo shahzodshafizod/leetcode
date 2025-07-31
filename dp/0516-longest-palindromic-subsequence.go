@@ -5,11 +5,11 @@ package dp
 // time: O(2^n) w/o memoization
 // time: O(n^2) w/ memoization
 func longestPalindromeSubseq(s string) int {
-	len := len(s)
-	memo := make([][]int, len)
+	n := len(s)
+	memo := make([][]int, n)
 
-	for i := 0; i < len; i++ {
-		memo[i] = make([]int, len)
+	for i := 0; i < n; i++ {
+		memo[i] = make([]int, n)
 	}
 
 	var dp func(left int, right int) int
@@ -38,7 +38,7 @@ func longestPalindromeSubseq(s string) int {
 		return memo[left][right]
 	}
 
-	return dp(0, len-1)
+	return dp(0, n-1)
 }
 
 /*

@@ -14,7 +14,7 @@ func minBitFlips(start int, goal int) int {
 	result := start ^ goal
 	for result != 0 {
 		result &= result - 1
-		flips += 1
+		flips++
 	}
 
 	return flips

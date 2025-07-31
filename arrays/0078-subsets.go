@@ -16,10 +16,10 @@ func subsets(nums []int) [][]int {
 		}
 
 		subsets := dfs(idx - 1)
-		for i, len := 0, len(subsets); i < len; i++ {
-			copy := append([]int{}, subsets[i]...)
-			copy = append(copy, nums[idx])
-			subsets = append(subsets, copy)
+		for i, n := 0, len(subsets); i < n; i++ {
+			cpy := append([]int{}, subsets[i]...)
+			cpy = append(cpy, nums[idx])
+			subsets = append(subsets, cpy)
 		}
 
 		return subsets

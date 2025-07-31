@@ -32,7 +32,7 @@ func TestAllOne(t *testing.T) {
 		var allOne AllOne
 
 		for index, command := range tc.commands {
-			var output any = nil
+			var output any
 
 			switch command {
 			case "AllOne":

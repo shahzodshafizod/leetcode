@@ -10,10 +10,10 @@ package binarysearch
  * func isBadVersion(version int) bool;
  */
 
-var FIRST__BAD__VERSION__ int
+var FirstBadVersion int
 
 func isBadVersion(version int) bool {
-	return version >= FIRST__BAD__VERSION__
+	return version >= FirstBadVersion
 }
 
 func firstBadVersion(n int) int {

@@ -6,7 +6,7 @@ package hashes
 // Time: O(n)
 // Space: O(1)
 func findTheDifference(s string, t string) byte {
-	var extra byte = 0
+	var extra byte
 	for idx := range s {
 		extra ^= s[idx]
 		extra ^= t[idx]

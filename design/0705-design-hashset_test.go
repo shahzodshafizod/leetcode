@@ -22,7 +22,7 @@ func TestMyHashSet(t *testing.T) {
 		var myHashSet MyHashSet
 
 		for index, command := range tc.commands {
-			var output any = nil
+			var output any
 
 			switch command {
 			case "MyHashSet":
