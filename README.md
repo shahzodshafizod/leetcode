@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0898 | [Bitwise ORs of Subarrays](https://leetcode.com/problems/bitwise-ors-of-subarrays/) | Medium | Array, Dynamic Programming, Bit Manipulation | 2025-07-31 | [Go](dp/0898-bitwise-ors-of-subarrays.go) [Python](dp/0898-bitwise-ors-of-subarrays.py)
 | 2419 | [Longest Subarray With Maximum Bitwise AND](https://leetcode.com/problems/longest-subarray-with-maximum-bitwise-and/) | Medium | Array, Bit Manipulation, Brainteaser | 2025-07-30 | [Go](bits/2419-longest-subarray-with-maximum-bitwise-and.go) [Python](bits/2419-longest-subarray-with-maximum-bitwise-and.py)
 | 2411 | [Smallest Subarrays With Maximum Bitwise OR](https://leetcode.com/problems/smallest-subarrays-with-maximum-bitwise-or/) | Medium | Array, Binary Search, Bit Manipulation, Sliding Window | 2025-07-29 | [Go](bits/2411-smallest-subarrays-with-maximum-bitwise-or.go) [Python](bits/2411-smallest-subarrays-with-maximum-bitwise-or.py)
 | 2044 | [Count Number of Maximum Bitwise-OR Subsets](https://leetcode.com/problems/count-number-of-maximum-bitwise-or-subsets/) | Medium | Array, Backtracking, Bit Manipulation, Enumeration | 2025-07-28 | [Go](dp/2044-count-number-of-maximum-bitwise-or-subsets.go) [Python](dp/2044-count-number-of-maximum-bitwise-or-subsets.py)
