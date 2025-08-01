@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2065 | [Maximum Path Quality of a Graph](https://leetcode.com/problems/maximum-path-quality-of-a-graph/) | Hard | Array, Backtracking, Graph | 2025-08-01 | [Go](graphs/2065-maximum-path-quality-of-a-graph.go) [Python](graphs/2065-maximum-path-quality-of-a-graph.py)
 | 0898 | [Bitwise ORs of Subarrays](https://leetcode.com/problems/bitwise-ors-of-subarrays/) | Medium | Array, Dynamic Programming, Bit Manipulation | 2025-07-31 | [Go](dp/0898-bitwise-ors-of-subarrays.go) [Python](dp/0898-bitwise-ors-of-subarrays.py)
 | 2419 | [Longest Subarray With Maximum Bitwise AND](https://leetcode.com/problems/longest-subarray-with-maximum-bitwise-and/) | Medium | Array, Bit Manipulation, Brainteaser | 2025-07-30 | [Go](bits/2419-longest-subarray-with-maximum-bitwise-and.go) [Python](bits/2419-longest-subarray-with-maximum-bitwise-and.py)
 | 2411 | [Smallest Subarrays With Maximum Bitwise OR](https://leetcode.com/problems/smallest-subarrays-with-maximum-bitwise-or/) | Medium | Array, Binary Search, Bit Manipulation, Sliding Window | 2025-07-29 | [Go](bits/2411-smallest-subarrays-with-maximum-bitwise-or.go) [Python](bits/2411-smallest-subarrays-with-maximum-bitwise-or.py)
