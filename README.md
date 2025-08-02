@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2561 | [Rearranging Fruits](https://leetcode.com/problems/rearranging-fruits/) | Hard | Array, Hash Table, Greedy, Sort | 2025-08-02 | [Go](greedy/2561-rearranging-fruits.go) [Python](greedy/2561-rearranging-fruits.py)
 | 2065 | [Maximum Path Quality of a Graph](https://leetcode.com/problems/maximum-path-quality-of-a-graph/) | Hard | Array, Backtracking, Graph | 2025-08-01 | [Go](graphs/2065-maximum-path-quality-of-a-graph.go) [Python](graphs/2065-maximum-path-quality-of-a-graph.py)
 | 0898 | [Bitwise ORs of Subarrays](https://leetcode.com/problems/bitwise-ors-of-subarrays/) | Medium | Array, Dynamic Programming, Bit Manipulation | 2025-07-31 | [Go](dp/0898-bitwise-ors-of-subarrays.go) [Python](dp/0898-bitwise-ors-of-subarrays.py)
 | 2419 | [Longest Subarray With Maximum Bitwise AND](https://leetcode.com/problems/longest-subarray-with-maximum-bitwise-and/) | Medium | Array, Bit Manipulation, Brainteaser | 2025-07-30 | [Go](bits/2419-longest-subarray-with-maximum-bitwise-and.go) [Python](bits/2419-longest-subarray-with-maximum-bitwise-and.py)
