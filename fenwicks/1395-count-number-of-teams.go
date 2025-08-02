@@ -83,25 +83,25 @@ func numTeams(rating []int) int {
 // func numTeams(rating []int) int {
 // 	var n = len(rating)
 // 	var cache = make([][2][3]int, n)
-// 	var backtrack func(idx int, accending int, count int) int
-// 	backtrack = func(idx int, accending int, count int) int {
+// 	var backtrack func(idx int, ascending int, count int) int
+// 	backtrack = func(idx int, ascending int, count int) int {
 // 		if idx == n {
 // 			return 0
 // 		}
 // 		if count == 3 {
 // 			return 1
 // 		}
-// 		if cache[idx][accending][count] != 0 {
-// 			return cache[idx][accending][count]
+// 		if cache[idx][ascending][count] != 0 {
+// 			return cache[idx][ascending][count]
 // 		}
 // 		var teams = 0
 // 		for j := idx + 1; j < n; j++ {
-// 			if accending == 1 && rating[idx] < rating[j] ||
-// 				accending == 0 && rating[idx] > rating[j] {
-// 				teams += backtrack(j, accending, count+1)
+// 			if ascending == 1 && rating[idx] < rating[j] ||
+// 				ascending == 0 && rating[idx] > rating[j] {
+// 				teams += backtrack(j, ascending, count+1)
 // 			}
 // 		}
-// 		cache[idx][accending][count] = teams
+// 		cache[idx][ascending][count] = teams
 // 		return teams
 // 	}
 // 	var teams = 0

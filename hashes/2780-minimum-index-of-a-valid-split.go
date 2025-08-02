@@ -7,17 +7,17 @@ package hashes
 // Space: O(1)
 func minimumIndex(nums []int) int {
 	n := len(nums)
-	dominent, count := nums[0], 0
+	dominant, count := nums[0], 0
 
 	for idx := 0; idx < n; idx++ {
-		if nums[idx] == dominent {
+		if nums[idx] == dominant {
 			count++
 		} else {
 			count--
 		}
 
 		if count == 0 {
-			dominent = nums[idx]
+			dominant = nums[idx]
 			count = 1
 		}
 	}
@@ -25,13 +25,13 @@ func minimumIndex(nums []int) int {
 	prefix, suffix := 0, 0
 
 	for idx := 0; idx < n; idx++ {
-		if nums[idx] == dominent {
+		if nums[idx] == dominant {
 			suffix++
 		}
 	}
 
 	for idx := 0; idx < n; idx++ {
-		if nums[idx] == dominent {
+		if nums[idx] == dominant {
 			prefix++
 			suffix--
 		}
@@ -49,17 +49,17 @@ func minimumIndex(nums []int) int {
 // // Space: O(n)
 // func minimumIndex(nums []int) int {
 // 	var n = len(nums)
-// 	var dominent = -1
+// 	var dominant = -1
 // 	var count = make(map[int]int)
 // 	for idx := 0; idx < n; idx++ {
 // 		count[nums[idx]]++
-// 		if dominent == -1 && count[nums[idx]]*2 > n {
-// 			dominent = nums[idx]
+// 		if dominant == -1 && count[nums[idx]]*2 > n {
+// 			dominant = nums[idx]
 // 		}
 // 	}
-// 	var prefix, suffix = 0, count[dominent]
+// 	var prefix, suffix = 0, count[dominant]
 // 	for idx := 0; idx < n-1; idx++ {
-// 		if nums[idx] == dominent {
+// 		if nums[idx] == dominant {
 // 			prefix++
 // 			suffix--
 // 		}

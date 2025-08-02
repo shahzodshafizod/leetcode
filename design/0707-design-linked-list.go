@@ -46,6 +46,7 @@ func (m *MyLinkedList) AddAtTail(val int) {
 func (m *MyLinkedList) AddAtIndex(index int, val int) {
 	if index == m.size {
 		m.AddAtTail(val)
+
 		return
 	}
 

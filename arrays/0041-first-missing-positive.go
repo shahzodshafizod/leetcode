@@ -4,7 +4,7 @@ package arrays
 
 func firstMissingPositive(nums []int) int {
 	n := len(nums)
-	// 1. delete unneccessary elements (set to zero)
+	// 1. delete unnecessary elements (set to zero)
 	// and sort elements: O(2N) = O(N)
 	for idx := range nums {
 		for nums[idx] >= 1 &&

@@ -13,6 +13,7 @@ func winnerSquareGame(n int) bool {
 		for x := 1; x*x <= curr; x++ {
 			if !dp[curr-x*x] {
 				dp[curr] = true
+
 				break
 			}
 		}

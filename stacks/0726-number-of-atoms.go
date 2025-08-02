@@ -107,7 +107,7 @@ func countOfAtoms(formula string) string {
 // 			stack.val.atoms = stack.val.atoms*10 + int(r-'0')
 // 		}
 // 	}
-// 	// 2. union all occurences and their atoms
+// 	// 2. union all occurrences and their atoms
 // 	var set = make(map[string]int)
 // 	var multiply = 1
 // 	var mStack = make([]int, 0)

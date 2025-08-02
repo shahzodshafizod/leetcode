@@ -17,11 +17,13 @@ func sampleStats(count []int) []float64 {
 	for left <= right {
 		if count[left] == 0 {
 			left++
+
 			continue
 		}
 
 		if count[right] == 0 {
 			right--
+
 			continue
 		}
 

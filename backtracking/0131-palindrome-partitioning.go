@@ -24,6 +24,7 @@ func partition(s string) [][]string {
 	dfs = func(sid int) {
 		if sid == len(s) {
 			res = append(res, append([]string{}, part...))
+
 			return
 		}
 

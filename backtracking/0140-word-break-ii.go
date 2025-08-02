@@ -50,6 +50,7 @@ func wordBreak(s string, wordDict []string) []string {
 	dfs = func(idx int, sentence *string) {
 		if idx == sn {
 			sentences = append(sentences, (*sentence)[1:])
+
 			return
 		}
 

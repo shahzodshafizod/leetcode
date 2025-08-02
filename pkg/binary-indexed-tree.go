@@ -30,6 +30,7 @@ type bit []int
 
 func NewBIT(n int) BIT {
 	b := bit(make([]int, n+1))
+
 	return &b
 }
 

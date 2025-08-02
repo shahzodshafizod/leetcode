@@ -33,6 +33,7 @@ func validArrangement(pairs [][]int) [][]int {
 	for node := range degree {
 		if degree[node] == 1 {
 			start = node
+
 			break
 		}
 	}

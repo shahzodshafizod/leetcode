@@ -76,11 +76,13 @@ func backspaceCompare(s string, t string) bool {
 
 		if indexS < 0 || indexT < 0 {
 			equal = false
+
 			break
 		}
 
 		if s[indexS] != t[indexT] {
 			equal = false
+
 			break
 		}
 

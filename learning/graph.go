@@ -136,7 +136,7 @@ A graph theory problem might be:
 	list of edges. Assume the notation for any triplet (u,v,w) means:
 	"the cost from node u to node v is w"
 
-	This representation is seldomly used because of its lack of structure.
+	This representation is seldom used because of its lack of structure.
 	However, it is conceptually simple and practical in a handful of algorithms.
 
 	Pros:
@@ -186,7 +186,7 @@ Problem #5: Traveling Salesman Problem (TSP)
 
 	Algorithms: Held-Karp, branch and bound and many approximation algorithms
 
-	The TSP problem is NP-Hard meaning it's a very computationally challanging problem.
+	The TSP problem is NP-Hard meaning it's a very computationally challenging problem.
 	This is unfortunate because the TSP has several very important applications.
 
 Problem #6: Bridges
@@ -1739,5 +1739,6 @@ func (g *graph) BellmanFord(adjList map[int][]*Edge, s int, n int) []int {
 
 func (g *graph) FloydWarshall(adjList map[int][]*Edge, s int, n int) []int {
 	_, _, _ = adjList, s, n
+
 	return nil
 }

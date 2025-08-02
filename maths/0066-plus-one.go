@@ -6,6 +6,7 @@ func plusOne(digits []int) []int {
 	for idx := len(digits) - 1; idx >= 0; idx-- {
 		if digits[idx] < 9 {
 			digits[idx]++
+
 			return digits
 		}
 

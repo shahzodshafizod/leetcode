@@ -203,6 +203,7 @@ func (m *memoization) CanSum(targetSum int, numbers []int) bool {
 		can := dp(targetSum, idx, memo)
 		if can {
 			memo[targetSum] = &can
+
 			return true
 		}
 		// decision NOT to include

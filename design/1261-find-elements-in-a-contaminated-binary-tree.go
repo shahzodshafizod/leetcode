@@ -38,6 +38,7 @@ func NewFindElements(root *pkg.TreeNode) FindElements {
 
 func (f *FindElements) Find(target int) bool {
 	_, found := f.values[target]
+
 	return found
 }
 

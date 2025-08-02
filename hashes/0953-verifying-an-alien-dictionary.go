@@ -21,6 +21,7 @@ func isAlienSorted(words []string, order string) bool {
 				return false
 			} else if indices[words[idx-1][c]] < indices[words[idx][c]] {
 				sorted = true
+
 				break
 			}
 		}

@@ -57,6 +57,7 @@ func exist(board [][]byte, word string) bool {
 			r, c := row+direction[0], col+direction[1]
 			if dfs(idx+1, r, c) {
 				board[row][col] = letter
+
 				return true
 			}
 		}

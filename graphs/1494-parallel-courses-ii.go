@@ -64,6 +64,7 @@ func minNumberOfSemesters(n int, relations [][]int, k int) int {
 
 				if count != k {
 					nextMask = (nextMask - 1) & availableMask
+
 					continue
 				}
 

@@ -18,6 +18,7 @@ func maximumSum(nums []int) int {
 
 		if _, ok := pairs[sum]; !ok {
 			pairs[sum] = [2]int{num, 0}
+
 			continue
 		}
 

@@ -23,6 +23,7 @@ func lengthOfLIS(nums []int) int {
 	for _, num := range nums {
 		if len(lis) == 0 || num > lis[len(lis)-1] {
 			lis = append(lis, num)
+
 			continue
 		}
 		// it's not a binary search, it's building blocks to the full solution

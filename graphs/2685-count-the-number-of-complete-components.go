@@ -46,6 +46,7 @@ func countCompleteComponents(n int, edges [][]int) int {
 			for _, v := range vertices {
 				if len(graph[v]) != len(vertices)-1 {
 					complete = 0
+
 					break
 				}
 			}

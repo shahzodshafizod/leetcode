@@ -46,6 +46,7 @@ func splitArraySameAverage(nums []int) bool {
 	for size := 1; size < n; size++ {
 		if total*size%n == 0 {
 			possible = true
+
 			break
 		}
 	}

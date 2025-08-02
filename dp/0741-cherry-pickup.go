@@ -24,6 +24,7 @@ func cherryPickup(grid [][]int) int {
 				if t-i < 0 || t-i >= n || t-j < 0 || t-j >= n ||
 					grid[i][t-i] == -1 || grid[j][t-j] == -1 {
 					dp[i][j] = -1
+
 					continue
 				}
 

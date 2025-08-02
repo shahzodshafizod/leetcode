@@ -55,6 +55,7 @@ func insertionSort(array []int) []int {
 	for i, n := 1, len(array); i < n; i++ {
 		if array[i] < array[0] { // space: O(N)
 			array = append(append([]int{array[i]}, array[:i]...), array[i+1:]...)
+
 			continue
 		}
 

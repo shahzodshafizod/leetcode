@@ -21,6 +21,7 @@ func isPrefixOfWord(sentence string, searchWord string) int {
 			continue
 		} else if searchWord[idx] != byte(c) {
 			block = true
+
 			continue
 		}
 

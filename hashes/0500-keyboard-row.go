@@ -29,6 +29,7 @@ func findWords(words []string) []string {
 		for _, c := range strings.ToLower(word) {
 			if codes[unicode.ToLower(c)] != code {
 				ok = false
+
 				break
 			}
 		}

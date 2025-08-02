@@ -23,6 +23,7 @@ func combinationSum(candidates []int, target int) [][]int {
 
 		if target == 0 {
 			combinations = append(combinations, slices.Clone(combination))
+
 			return
 		}
 		// decision to include candidates[idx]

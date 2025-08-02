@@ -32,6 +32,7 @@ func (m *MyHashMap) Put(key int, value int) {
 	for currKey.Next != nil {
 		if currKey.Next.Val == key {
 			currVal.Next.Val = value
+
 			return
 		}
 

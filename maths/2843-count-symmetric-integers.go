@@ -26,6 +26,7 @@ func countSymmetricIntegers(low int, high int) int {
 		// so we can skip the whole current odd-length section
 		if length&1 == 1 {
 			num = next - 1
+
 			continue
 		}
 		// now, we add right part digits to total
@@ -34,7 +35,7 @@ func countSymmetricIntegers(low int, high int) int {
 			sum += tmp % 10
 			tmp /= 10
 		}
-		// but substract left digits from total
+		// but subtract left digits from total
 		for ; tmp > 0; tmp /= 10 {
 			sum -= tmp % 10
 		}

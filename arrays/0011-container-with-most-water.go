@@ -10,7 +10,7 @@ Step 1: Verify the constraints
 	- Does the thickness of the lines affect the area?
 		: No, assume they take up no space.
 	- Do the left and right sides of the graph count as walls?
-		: No, the sides cannnot be used to form a container.
+		: No, the sides cannot be used to form a container.
 	- Does a higher line inside out container affect our area?
 		: No, lines inside a container don't affect the area.
 	- Can we pick two values if one value is higher in the middle?

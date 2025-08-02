@@ -30,12 +30,14 @@ func getDirections(root *pkg.TreeNode, startValue int, destValue int) string {
 		path := dfs(node.Left, target, level+1, 'L')
 		if len(path) > 0 {
 			path[level] = direction
+
 			return path
 		}
 
 		path = dfs(node.Right, target, level+1, 'R')
 		if len(path) > 0 {
 			path[level] = direction
+
 			return path
 		}
 

@@ -22,6 +22,7 @@ func findAllConcatenatedWordsInADict(words []string) []string {
 			for j := length - 1; j >= 0; j-- {
 				if dp[j] && set[word[j:length]] {
 					dp[length] = true
+
 					break
 				}
 			}

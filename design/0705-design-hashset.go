@@ -39,6 +39,7 @@ func (m *MyHashSet) Remove(key int) {
 	for curr.Next != nil {
 		if curr.Next.Val == key {
 			curr.Next = curr.Next.Next
+
 			return
 		}
 

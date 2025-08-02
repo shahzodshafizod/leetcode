@@ -24,6 +24,7 @@ func NewLRUCache(capacity int) LRUCache {
 func (l *LRUCache) Get(key int) int {
 	if node := l.ptrs[key]; node != nil {
 		l.ptrs[key] = l.list.PushFront(l.list.Remove(node))
+
 		return l.ptrs[key].Value.(*pkg.Pair).Val
 	}
 

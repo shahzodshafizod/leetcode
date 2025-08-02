@@ -49,6 +49,7 @@ func (t *Trie) Insert(word string) {
 func (t *Trie) _insert(word string, n int, i int, node *Trie) {
 	if i == n {
 		node.end = true
+
 		return
 	}
 

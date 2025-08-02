@@ -11,11 +11,13 @@ func deleteNode(root *pkg.TreeNode, key int) *pkg.TreeNode {
 
 	if root.Val > key {
 		root.Left = deleteNode(root.Left, key)
+
 		return root
 	}
 
 	if root.Val < key {
 		root.Right = deleteNode(root.Right, key)
+
 		return root
 	}
 
