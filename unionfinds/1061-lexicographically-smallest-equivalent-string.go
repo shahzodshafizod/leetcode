@@ -36,12 +36,16 @@ func smallestEquivalentString(s1 string, s2 string, baseStr string) string {
 		}
 	}
 
-	var b strings.Builder
+	var (
+		b   strings.Builder
+		err error
+	)
 
 	for _, c := range baseStr {
 		x = int(c - 'a')
 		y = find(x)
-		b.WriteByte(byte('a' + y))
+		err = b.WriteByte(byte('a' + y))
+		_ = err
 	}
 
 	return b.String()

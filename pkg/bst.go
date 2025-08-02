@@ -16,40 +16,40 @@ func NewBST() BST {
 }
 
 func (b *bst) Search(target int) bool {
-	return b.search(b.root, target) != nil
+	return b._search(b.root, target) != nil
 }
 
-func (b *bst) search(curr *TreeNode, target int) *TreeNode {
+func (b *bst) _search(curr *TreeNode, target int) *TreeNode {
 	if curr == nil {
 		return nil
 	}
 
 	if target < curr.Val {
-		return b.search(curr.Left, target)
+		return b._search(curr.Left, target)
 	}
 
 	if target > curr.Val {
-		return b.search(curr.Right, target)
+		return b._search(curr.Right, target)
 	}
 
 	return curr
 }
 
 func (b *bst) Insert(val int) {
-	b.root = b.insert(b.root, val)
+	b.root = b._insert(b.root, val)
 }
 
-func (b *bst) insert(curr *TreeNode, val int) *TreeNode {
+func (b *bst) _insert(curr *TreeNode, val int) *TreeNode {
 	if curr == nil {
 		return &TreeNode{Val: val}
 	}
 
 	if val > curr.Val {
-		curr.Right = b.insert(curr.Right, val)
+		curr.Right = b._insert(curr.Right, val)
 	}
 
 	if val < curr.Val {
-		curr.Left = b.insert(curr.Left, val)
+		curr.Left = b._insert(curr.Left, val)
 	}
 
 	return curr
@@ -65,18 +65,18 @@ func (b *bst) minNodeValue(curr *TreeNode) int {
 }
 
 func (b *bst) Remove(val int) {
-	b.root = b.remove(b.root, val)
+	b.root = b._remove(b.root, val)
 }
 
-func (b *bst) remove(curr *TreeNode, val int) *TreeNode {
+func (b *bst) _remove(curr *TreeNode, val int) *TreeNode {
 	if curr == nil {
 		return nil
 	}
 
 	if val > curr.Val {
-		curr.Right = b.remove(curr.Right, val)
+		curr.Right = b._remove(curr.Right, val)
 	} else if val < curr.Val {
-		curr.Left = b.remove(curr.Left, val)
+		curr.Left = b._remove(curr.Left, val)
 	} else {
 		if curr.Left == nil {
 			return curr.Right
@@ -88,7 +88,7 @@ func (b *bst) remove(curr *TreeNode, val int) *TreeNode {
 
 		minNodeVal := b.minNodeValue(curr.Right)
 		curr.Val = minNodeVal
-		curr.Right = b.remove(curr.Right, minNodeVal)
+		curr.Right = b._remove(curr.Right, minNodeVal)
 	}
 
 	return curr

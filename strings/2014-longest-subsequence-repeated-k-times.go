@@ -43,13 +43,17 @@ func longestSubsequenceRepeatedK(s string, k int) string {
 
 	slices.Sort(candidates)
 
-	var queue list.List
+	var (
+		queue list.List
+		ok    bool
+	)
 
 	subseq := ""
 	queue.PushBack(subseq)
 
 	for queue.Len() > 0 {
-		subseq = queue.Remove(queue.Front()).(string)
+		subseq, ok = queue.Remove(queue.Front()).(string)
+		_ = ok
 		nexts := []rune(subseq)
 		nexts = append(nexts, ' ')
 		n := len(nexts)

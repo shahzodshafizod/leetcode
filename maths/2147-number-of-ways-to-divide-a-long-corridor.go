@@ -5,7 +5,7 @@ package maths
 // Time: O(N)
 // Space: O(1)
 func numberOfWays(corridor string) int {
-	const MOD int = 1e9 + 7
+	const mod int = 1e9 + 7
 
 	seats, plants := 0, 0
 	ways := 1
@@ -18,7 +18,7 @@ func numberOfWays(corridor string) int {
 		}
 
 		if seats == 3 {
-			ways = (ways * (plants + 1)) % MOD
+			ways = (ways * (plants + 1)) % mod
 			seats, plants = 1, 0
 		}
 	}

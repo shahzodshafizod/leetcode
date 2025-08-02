@@ -17,17 +17,22 @@ func licenseKeyFormatting(s string, k int) string {
 		count = k
 	}
 
-	var sb strings.Builder
+	var (
+		sb  strings.Builder
+		err error
+	)
 
 	for idx := 0; idx < n; idx++ {
 		if s[idx] != '-' {
 			if count == 0 {
-				sb.WriteByte('-')
+				err = sb.WriteByte('-')
+				_ = err
 
 				count = k
 			}
 
-			sb.WriteByte(s[idx])
+			err = sb.WriteByte(s[idx])
+			_ = err
 
 			count--
 		}

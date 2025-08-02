@@ -9,7 +9,6 @@ import (
 // go test -v -count=1 ./dp/ -run ^TestDPFib$
 func TestDPFib(t *testing.T) {
 	dps := []DP{NewMemoization(), NewTabulation()}
-	assert := assert.New(t)
 
 	for _, tc := range []struct {
 		n int
@@ -22,7 +21,7 @@ func TestDPFib(t *testing.T) {
 	} {
 		for _, dp := range dps {
 			f := dp.Fib(tc.n)
-			assert.Equal(tc.f, f)
+			assert.Equal(t, tc.f, f)
 		}
 	}
 }
@@ -30,7 +29,6 @@ func TestDPFib(t *testing.T) {
 // go test -v -count=1 ./dp/ -run ^TestDPGridTraveler$
 func TestDPGridTraveler(t *testing.T) {
 	dps := []DP{NewMemoization(), NewTabulation()}
-	assert := assert.New(t)
 
 	for _, tc := range []struct {
 		m    int
@@ -45,7 +43,7 @@ func TestDPGridTraveler(t *testing.T) {
 	} {
 		for _, dp := range dps {
 			ways := dp.GridTravaler(tc.m, tc.n)
-			assert.Equal(tc.ways, ways)
+			assert.Equal(t, tc.ways, ways)
 		}
 	}
 }
@@ -53,7 +51,6 @@ func TestDPGridTraveler(t *testing.T) {
 // go test -v -count=1 ./dp/ -run ^TestDPCanSum$
 func TestDPCanSum(t *testing.T) {
 	dps := []DP{NewMemoization(), NewTabulation()}
-	assert := assert.New(t)
 
 	for _, tc := range []struct {
 		targetSum int
@@ -71,7 +68,7 @@ func TestDPCanSum(t *testing.T) {
 	} {
 		for _, dp := range dps {
 			can := dp.CanSum(tc.targetSum, tc.numbers)
-			assert.Equal(tc.can, can)
+			assert.Equal(t, tc.can, can)
 		}
 	}
 }
@@ -79,7 +76,6 @@ func TestDPCanSum(t *testing.T) {
 // go test -v -count=1 ./dp/ -run ^TestDPHowSum$
 func TestDPHowSum(t *testing.T) {
 	dps := []DP{NewMemoization(), NewTabulation()}
-	assert := assert.New(t)
 
 	for _, tc := range []struct {
 		targetSum   int
@@ -97,7 +93,7 @@ func TestDPHowSum(t *testing.T) {
 	} {
 		for _, dp := range dps {
 			combination := dp.HowSum(tc.targetSum, tc.numbers)
-			assert.Equal(tc.combination, combination)
+			assert.Equal(t, tc.combination, combination)
 		}
 	}
 }
@@ -105,7 +101,6 @@ func TestDPHowSum(t *testing.T) {
 // go test -v -count=1 ./dp/ -run ^TestDPBestSum$
 func TestDPBestSum(t *testing.T) {
 	dps := []DP{NewMemoization(), NewTabulation()}
-	assert := assert.New(t)
 
 	for _, tc := range []struct {
 		targetSum   int
@@ -126,7 +121,7 @@ func TestDPBestSum(t *testing.T) {
 	} {
 		for _, dp := range dps {
 			combination := dp.BestSum(tc.targetSum, tc.numbers)
-			assert.Equal(tc.combination, combination)
+			assert.Equal(t, tc.combination, combination)
 		}
 	}
 }
@@ -134,7 +129,6 @@ func TestDPBestSum(t *testing.T) {
 // go test -v -count=1 ./dp/ -run ^TestDPCanConstruct$
 func TestDPCanConstruct(t *testing.T) {
 	dps := []DP{NewMemoization(), NewTabulation()}
-	assert := assert.New(t)
 
 	for _, tc := range []struct {
 		target   string
@@ -152,7 +146,7 @@ func TestDPCanConstruct(t *testing.T) {
 	} {
 		for _, dp := range dps {
 			can := dp.CanConstruct(tc.target, tc.wordBank)
-			assert.Equal(tc.can, can)
+			assert.Equal(t, tc.can, can)
 		}
 	}
 }
@@ -160,7 +154,6 @@ func TestDPCanConstruct(t *testing.T) {
 // go test -v -count=1 ./dp/ -run ^TestDPCountConstruct$
 func TestDPCountConstruct(t *testing.T) {
 	dps := []DP{NewMemoization(), NewTabulation()}
-	assert := assert.New(t)
 
 	for _, tc := range []struct {
 		target   string
@@ -179,7 +172,7 @@ func TestDPCountConstruct(t *testing.T) {
 	} {
 		for _, dp := range dps {
 			count := dp.CountConstruct(tc.target, tc.wordBank)
-			assert.Equal(tc.count, count)
+			assert.Equal(t, tc.count, count)
 		}
 	}
 }
@@ -187,7 +180,6 @@ func TestDPCountConstruct(t *testing.T) {
 // go test -v -count=1 ./dp/ -run ^TestDPAllConstruct$
 func TestDPAllConstruct(t *testing.T) {
 	dps := []DP{NewMemoization(), NewTabulation()}
-	assert := assert.New(t)
 
 	for _, tc := range []struct {
 		target   string
@@ -230,7 +222,7 @@ func TestDPAllConstruct(t *testing.T) {
 	} {
 		for _, dp := range dps {
 			allWays := dp.AllConstruct(tc.target, tc.wordBank)
-			assert.Equal(tc.allWays, allWays)
+			assert.Equal(t, tc.allWays, allWays)
 		}
 	}
 }

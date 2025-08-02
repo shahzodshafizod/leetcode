@@ -29,11 +29,11 @@ func numTilings(n int) int {
 	tm, bm := 0, 0
 	preprev, prev, curr := 1, 1, 1 // [n-2], [n-1], [n]
 
-	const MOD int = 1e9 + 7
+	const mod int = 1e9 + 7
 
 	for i := 2; i <= n; i++ {
-		curr = (prev + preprev + tm + bm) % MOD
-		tm, bm = (preprev+bm)%MOD, (preprev+tm)%MOD
+		curr = (prev + preprev + tm + bm) % mod
+		tm, bm = (preprev+bm)%mod, (preprev+tm)%mod
 		preprev, prev = prev, curr
 	}
 

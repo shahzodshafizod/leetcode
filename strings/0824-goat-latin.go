@@ -10,11 +10,15 @@ func toGoatLatin(sentence string) string {
 		'A': true, 'E': true, 'I': true, 'O': true, 'U': true,
 	}
 
-	var words []string
+	var (
+		words []string
+		err   error
+	)
 
 	var a strings.Builder
 	for _, word := range strings.Split(sentence, " ") {
-		a.WriteByte('a')
+		err = a.WriteByte('a')
+		_ = err
 
 		if !isVowel[word[0]] {
 			word = word[1:] + string(word[0])

@@ -50,7 +50,7 @@ func (k *KthLargest) Add(val int) int {
 	return k.minHeap.Peak()
 }
 
-/**
+/*
  * Your KthLargest object will be instantiated and called as such:
  * obj := Constructor(k, nums);
  * param_1 := obj.Add(val);

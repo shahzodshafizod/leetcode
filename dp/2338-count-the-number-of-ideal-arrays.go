@@ -3,7 +3,7 @@ package dp
 // https://leetcode.com/problems/count-the-number-of-ideal-arrays/
 
 func idealArrays(n int, maxValue int) int {
-	const MOD, maxK int = 1e9 + 7, 14
+	const mod, maxK int = 1e9 + 7, 14
 
 	comb := make([][]int, n)
 	for i := 0; i < n; i++ {
@@ -14,7 +14,7 @@ func idealArrays(n int, maxValue int) int {
 	for i := 1; i < n; i++ {
 		comb[i][0] = 1
 		for j := 1; j <= maxK && j <= i; j++ {
-			comb[i][j] = (comb[i-1][j-1] + comb[i-1][j]) % MOD
+			comb[i][j] = (comb[i-1][j-1] + comb[i-1][j]) % mod
 		}
 	}
 
@@ -38,7 +38,7 @@ func idealArrays(n int, maxValue int) int {
 		// k is the number of items to be chosen
 		res := comb[n-1][k-1]
 		for mult := num * 2; mult <= maxValue; mult += num {
-			res = (res + dp(mult, k+1)) % MOD
+			res = (res + dp(mult, k+1)) % mod
 		}
 
 		memo[num][k] = &res
@@ -48,7 +48,7 @@ func idealArrays(n int, maxValue int) int {
 	total := 0
 
 	for num := 1; num <= maxValue; num++ {
-		total = (total + dp(num, 1)) % MOD
+		total = (total + dp(num, 1)) % mod
 	}
 
 	return total

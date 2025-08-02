@@ -122,7 +122,7 @@ func (s *SummaryRanges) GetIntervals() [][]int {
 // 	return intervals
 // }
 
-/**
+/*
  * Your SummaryRanges object will be instantiated and called as such:
  * obj := Constructor();
  * obj.AddNum(value);

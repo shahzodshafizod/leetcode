@@ -24,7 +24,7 @@ func countBalancedPermutations(num string) int {
 		postCnt[i] = cnt[i] + postCnt[i+1]
 	}
 
-	const MOD int = 1e9 + 7
+	const mod int = 1e9 + 7
 
 	n := len(num)
 	oddCnt := (n + 1) / 2
@@ -49,7 +49,7 @@ func countBalancedPermutations(num string) int {
 	for i := 1; i <= oddCnt; i++ {
 		comb[i][0] = 1
 		for j := 1; j <= maxFreq; j++ {
-			comb[i][j] = (comb[i-1][j-1] + comb[i-1][j]) % MOD
+			comb[i][j] = (comb[i-1][j-1] + comb[i-1][j]) % mod
 		}
 	}
 
@@ -79,8 +79,8 @@ func countBalancedPermutations(num string) int {
 		var nxt, ways int
 		for freq := 0; freq <= cnt[digit]; freq++ {
 			nxt = dfs(digit-1, ocnt-freq, balance-digit*freq)
-			ways = comb[ocnt][freq] * comb[ecnt][cnt[digit]-freq] % MOD
-			res = (res + ways*nxt) % MOD
+			ways = comb[ocnt][freq] * comb[ecnt][cnt[digit]-freq] % mod
+			res = (res + ways*nxt) % mod
 		}
 
 		memo[ocnt][balance][digit] = &res

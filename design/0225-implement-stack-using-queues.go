@@ -137,7 +137,7 @@ func (m *MyStack) Empty() bool {
 // 	return m.outFirst == nil
 // }
 
-/**
+/*
  * Your MyStack object will be instantiated and called as such:
  * obj := Constructor();
  * obj.Push(x);

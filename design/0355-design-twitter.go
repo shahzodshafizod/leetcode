@@ -27,24 +27,24 @@ func NewTwitter() Twitter {
 	}
 }
 
-func (t *Twitter) PostTweet(userId int, tweetId int) { // O(1)
-	newTweet := &tweet{id: tweetId, uniqueID: t.nextID}
+func (t *Twitter) PostTweet(userID int, tweetID int) { // O(1)
+	newTweet := &tweet{id: tweetID, uniqueID: t.nextID}
 	t.nextID++
 
-	if t.tweets[userId] == nil {
-		t.tweets[userId] = []*tweet{newTweet}
+	if t.tweets[userID] == nil {
+		t.tweets[userID] = []*tweet{newTweet}
 	} else {
-		t.tweets[userId] = append(t.tweets[userId], newTweet)
+		t.tweets[userID] = append(t.tweets[userID], newTweet)
 	}
 }
 
-func (t *Twitter) GetNewsFeed(userId int) []int { // O(N Log N)
-	posts := make([]*tweet, len(t.tweets[userId]))
-	for followeeID := range t.followees[userId] {
+func (t *Twitter) GetNewsFeed(userID int) []int { // O(N Log N)
+	posts := make([]*tweet, len(t.tweets[userID]))
+	for followeeID := range t.followees[userID] {
 		posts = append(posts, t.tweets[followeeID]...)
 	}
 
-	copy(posts, t.tweets[userId])
+	copy(posts, t.tweets[userID])
 	tweets := pkg.NewHeap(posts, func(x, y *tweet) bool { return x.uniqueID > y.uniqueID })
 	heap.Init(tweets)
 
@@ -53,28 +53,30 @@ func (t *Twitter) GetNewsFeed(userId int) []int { // O(N Log N)
 	count := 10
 	for tweets.Len() > 0 && count > 0 {
 		count--
-		tweet := heap.Pop(tweets).(*tweet)
+		tweet, ok := heap.Pop(tweets).(*tweet)
+		_ = ok
+
 		result = append(result, tweet.id)
 	}
 
 	return result
 }
 
-func (t *Twitter) Follow(followerId int, followeeId int) { // O(1)
-	if t.followees[followerId] == nil {
-		t.followees[followerId] = make(map[int]bool)
+func (t *Twitter) Follow(followerID int, followeeID int) { // O(1)
+	if t.followees[followerID] == nil {
+		t.followees[followerID] = make(map[int]bool)
 	}
 
-	t.followees[followerId][followeeId] = true
+	t.followees[followerID][followeeID] = true
 }
 
-func (t *Twitter) Unfollow(followerId int, followeeId int) { // O(1)
-	if t.followees[followerId] != nil && t.followees[followerId][followeeId] {
-		delete(t.followees[followerId], followeeId)
+func (t *Twitter) Unfollow(followerID int, followeeID int) { // O(1)
+	if t.followees[followerID] != nil && t.followees[followerID][followeeID] {
+		delete(t.followees[followerID], followeeID)
 	}
 }
 
-/**
+/*
  * Your Twitter object will be instantiated and called as such:
  * obj := Constructor();
  * obj.PostTweet(userId,tweetId);

@@ -9,15 +9,15 @@ func numOfSubarrays(arr []int) int {
 	oddCnt, envCnt := 0, 0
 	totalCount, prefixSum := 0, 0
 
-	const MOD int = 1e9 + 7
+	const mod int = 1e9 + 7
 
 	for _, num := range arr {
 		prefixSum += num
 		if prefixSum&1 == 0 {
-			totalCount = (totalCount + oddCnt) % MOD
+			totalCount = (totalCount + oddCnt) % mod
 			envCnt++
 		} else {
-			totalCount = (totalCount + envCnt + 1) % MOD
+			totalCount = (totalCount + envCnt + 1) % mod
 			oddCnt++
 		}
 	}

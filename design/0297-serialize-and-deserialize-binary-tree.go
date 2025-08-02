@@ -53,7 +53,7 @@ func (c *Codec) deserialize(data string) *pkg.TreeNode {
 	return root
 }
 
-/**
+/*
  * Your Codec object will be instantiated and called as such:
  * ser := Constructor();
  * deser := Constructor();

@@ -43,7 +43,7 @@ func (f *FreqStack) Pop() int {
 	return val
 }
 
-/**
+/*
  * Your FreqStack object will be instantiated and called as such:
  * obj := Constructor();
  * obj.Push(val);

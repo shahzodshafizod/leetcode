@@ -41,7 +41,7 @@ func (f *FindElements) Find(target int) bool {
 	return found
 }
 
-/**
+/*
  * Your FindElements object will be instantiated and called as such:
  * obj := Constructor(root);
  * param_1 := obj.Find(target);

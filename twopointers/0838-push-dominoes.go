@@ -35,7 +35,10 @@ func pushDominoes(dominoes string) string {
 		force[idx] -= f
 	}
 
-	var sb strings.Builder
+	var (
+		sb  strings.Builder
+		err error
+	)
 
 	f = 0
 
@@ -51,12 +54,14 @@ func pushDominoes(dominoes string) string {
 
 		force[idx] += f
 		if force[idx] > 0 {
-			sb.WriteByte('R')
+			err = sb.WriteByte('R')
 		} else if force[idx] < 0 {
-			sb.WriteByte('L')
+			err = sb.WriteByte('L')
 		} else {
-			sb.WriteByte('.')
+			err = sb.WriteByte('.')
 		}
+
+		_ = err
 	}
 
 	return sb.String()

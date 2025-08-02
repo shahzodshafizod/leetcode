@@ -58,9 +58,9 @@ func maximumSafenessFactor(grid [][]int) int {
 	heap.Push(pq, [3]int{grid[0][0], 0, 0})
 	grid[0][0] = -1
 
-	var top [3]int
 	for pq.Len() > 0 {
-		top = heap.Pop(pq).([3]int)
+		top, ok := heap.Pop(pq).([3]int)
+		_ = ok
 		dist = top[0]
 		row = top[1]
 		col = top[2]

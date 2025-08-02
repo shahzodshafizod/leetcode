@@ -43,10 +43,10 @@ func NewTrie() Trie {
 }
 
 func (t *Trie) Insert(word string) {
-	t.insert(word, len(word), 0, t)
+	t._insert(word, len(word), 0, t)
 }
 
-func (t *Trie) insert(word string, n int, i int, node *Trie) {
+func (t *Trie) _insert(word string, n int, i int, node *Trie) {
 	if i == n {
 		node.end = true
 		return
@@ -60,27 +60,27 @@ func (t *Trie) insert(word string, n int, i int, node *Trie) {
 		node.children[letter] = next
 	}
 
-	t.insert(word, n, i+1, next)
+	t._insert(word, n, i+1, next)
 }
 
 func (t *Trie) Search(word string) bool {
-	return t.search(word, len(word), 0, t, false)
+	return t._search(word, len(word), 0, t, false)
 }
 
-func (t *Trie) search(word string, n int, i int, node *Trie, prefix bool) bool {
+func (t *Trie) _search(word string, n int, i int, node *Trie, prefix bool) bool {
 	if i == n {
 		return prefix || node.end
 	}
 
 	if next := node.children[word[i]]; next != nil {
-		return t.search(word, n, i+1, next, prefix)
+		return t._search(word, n, i+1, next, prefix)
 	}
 
 	return false
 }
 
 func (t *Trie) StartsWith(prefix string) bool {
-	return t.search(prefix, len(prefix), 0, t, true)
+	return t._search(prefix, len(prefix), 0, t, true)
 }
 
 // type Trie struct {
@@ -128,7 +128,7 @@ func (t *Trie) StartsWith(prefix string) bool {
 // 	return true
 // }
 
-/**
+/*
  * Your Trie object will be instantiated and called as such:
  * obj := Constructor();
  * obj.Insert(word);

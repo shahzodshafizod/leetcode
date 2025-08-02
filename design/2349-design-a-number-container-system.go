@@ -41,7 +41,7 @@ func (n *NumberContainers) Find(number int) int {
 	return -1
 }
 
-/**
+/*
  * Your NumberContainers object will be instantiated and called as such:
  * obj := Constructor();
  * obj.Change(index,number);

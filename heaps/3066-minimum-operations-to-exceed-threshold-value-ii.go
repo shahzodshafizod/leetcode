@@ -12,13 +12,20 @@ func minOperations(nums []int, k int) int {
 	pq := pkg.NewHeap(nums, func(x, y int) bool { return x < y })
 	heap.Init(pq)
 
-	var first, second int
+	var (
+		first  int
+		second int
+		ok     bool
+	)
 
 	count := 0
 
 	for pq.Len() >= 2 && pq.Peak() < k {
-		first = heap.Pop(pq).(int)
-		second = heap.Pop(pq).(int)
+		first, ok = heap.Pop(pq).(int)
+		_ = ok
+		second, ok = heap.Pop(pq).(int)
+		_ = ok
+
 		heap.Push(pq, first*2+second)
 
 		count++

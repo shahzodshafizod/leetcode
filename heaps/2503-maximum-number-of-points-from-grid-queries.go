@@ -44,13 +44,12 @@ func maxPoints(grid [][]int, queries []int) []int {
 
 	var row, col, nr, nc int
 
-	var top [2]int
-
 	points := 0
 
 	for idx := 0; idx < qn; idx++ {
 		for queue.Len() > 0 && grid[queue.Peak()[0]][queue.Peak()[1]] < qindices[idx][0] {
-			top = heap.Pop(queue).([2]int)
+			top, ok := heap.Pop(queue).([2]int)
+			_ = ok
 
 			row, col = top[0], top[1]
 			for dir := 1; dir < 5; dir++ {

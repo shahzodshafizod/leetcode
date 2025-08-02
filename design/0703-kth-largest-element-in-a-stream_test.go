@@ -41,8 +41,10 @@ func TestKthLargest(t *testing.T) {
 
 			switch command {
 			case "KthLargest":
-				k := tc.values[index][0].(int)
-				src := tc.values[index][1].([]any)
+				k, ok := tc.values[index][0].(int)
+				_ = ok
+				src, ok := tc.values[index][1].([]any)
+				_ = ok
 				nums := make([]int, 0, len(src))
 
 				for _, num := range src {

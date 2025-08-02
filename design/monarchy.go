@@ -99,17 +99,17 @@ func (m *monarchy) Death(name string) {
 }
 
 func (m *monarchy) GetOrderOfSuccession() []string {
-	return m.getOrderOfSuccession(m.king)
+	return m._getOrderOfSuccession(m.king)
 }
 
-func (m *monarchy) getOrderOfSuccession(current *member) []string {
+func (m *monarchy) _getOrderOfSuccession(current *member) []string {
 	values := make([]string, 0)
 	if current.alive {
 		values = append(values, current.name)
 	}
 
 	for _, child := range current.children {
-		values = append(values, m.getOrderOfSuccession(child)...)
+		values = append(values, m._getOrderOfSuccession(child)...)
 	}
 
 	return values

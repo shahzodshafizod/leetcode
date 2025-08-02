@@ -27,7 +27,9 @@ func maxPerformance(n int, speed []int, efficiency []int, k int) int {
 
 	for _, engineer := range engineers {
 		if speeds.Len() == k {
-			totalSpeed -= heap.Pop(speeds).(int)
+			speed, ok := heap.Pop(speeds).(int)
+			_ = ok
+			totalSpeed -= speed
 		}
 
 		totalSpeed += engineer[1]

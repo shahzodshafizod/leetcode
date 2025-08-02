@@ -19,15 +19,14 @@ func swimInWater(grid [][]int) int {
 	heap.Push(pq, [3]int{grid[0][0], 0, 0})
 	grid[0][0] = -1
 
-	var top [3]int
-
 	var row, col, r, c int
 
 	t := 0
 	directions := [5]int{0, 1, 0, -1, 0}
 
 	for pq.Len() > 0 {
-		top = heap.Pop(pq).([3]int)
+		top, ok := heap.Pop(pq).([3]int)
+		_ = ok
 		t = max(t, top[0])
 
 		row, col = top[1], top[2]

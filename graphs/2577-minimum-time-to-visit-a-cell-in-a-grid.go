@@ -48,7 +48,9 @@ func minimumTime2577(grid [][]int) int {
 	var row, col, wait, time int
 
 	for minHeap.Len() > 0 {
-		curr := heap.Pop(minHeap).(*Cell)
+		curr, ok := heap.Pop(minHeap).(*Cell)
+		_ = ok
+
 		if curr.Row == m-1 && curr.Col == n-1 {
 			return curr.Time
 		}

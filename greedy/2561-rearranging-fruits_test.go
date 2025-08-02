@@ -11,7 +11,7 @@ func TestMinCost(t *testing.T) {
 	for _, tc := range []struct {
 		basket1 []int
 		basket2 []int
-		cost int64
+		cost    int64
 	}{
 		{basket1: []int{4, 2, 2, 2}, basket2: []int{1, 4, 1, 2}, cost: 1},
 		{basket1: []int{2, 3, 4, 1}, basket2: []int{3, 2, 5, 1}, cost: -1},

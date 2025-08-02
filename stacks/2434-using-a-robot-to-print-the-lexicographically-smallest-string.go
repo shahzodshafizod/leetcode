@@ -19,7 +19,10 @@ func robotWithString(s string) string {
 	t := make([]int, n)
 	size := 0
 
-	var paper strings.Builder
+	var (
+		paper strings.Builder
+		err   error
+	)
 
 	paper.Grow(n)
 
@@ -35,7 +38,8 @@ func robotWithString(s string) string {
 		}
 
 		for size > 0 && t[size-1] <= minChar {
-			paper.WriteByte(byte(t[size-1] + 'a'))
+			err = paper.WriteByte(byte(t[size-1] + 'a'))
+			_ = err
 
 			size--
 		}

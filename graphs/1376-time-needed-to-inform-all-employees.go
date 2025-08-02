@@ -66,15 +66,15 @@ func numOfMinutes(n int, headID int, manager []int, informTime []int) int {
 	return numOfMinutesDFS(adjacencyList, informTime, headID)
 }
 
-func numOfMinutesDFS(adjacencyList [][]int, informTime []int, ID int) int {
-	if adjacencyList[ID] == nil {
+func numOfMinutesDFS(adjacencyList [][]int, informTime []int, id int) int {
+	if adjacencyList[id] == nil {
 		return 0
 	}
 
 	maximum := 0
-	for _, employeeID := range adjacencyList[ID] {
+	for _, employeeID := range adjacencyList[id] {
 		maximum = max(maximum, numOfMinutesDFS(adjacencyList, informTime, employeeID))
 	}
 
-	return maximum + informTime[ID]
+	return maximum + informTime[id]
 }

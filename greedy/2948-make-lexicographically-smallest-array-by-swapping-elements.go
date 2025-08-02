@@ -33,10 +33,15 @@ func lexicographicallySmallestArray(nums []int, limit int) []int {
 		groupIndices[num] = size - 1
 	}
 
-	var group *list.List
+	var (
+		group *list.List
+		ok    bool
+	)
+
 	for idx, num := range nums {
 		group = groups[groupIndices[num]]
-		sorted[idx] = group.Remove(group.Front()).(int)
+		sorted[idx], ok = group.Remove(group.Front()).(int)
+		_ = ok
 	}
 
 	return sorted

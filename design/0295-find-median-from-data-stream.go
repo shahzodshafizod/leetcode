@@ -49,7 +49,7 @@ func (m *MedianFinder) FindMedian() float64 {
 	return float64(m.minHeap.Peak()+m.maxHeap.Peak()) / 2
 }
 
-/**
+/*
  * Your MedianFinder object will be instantiated and called as such:
  * obj := Constructor();
  * obj.AddNum(num);

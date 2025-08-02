@@ -27,7 +27,9 @@ func checkIfPrerequisite(numCourses int, prerequisites [][]int, queries [][]int)
 	}
 
 	for queue.Len() > 0 {
-		src = queue.Remove(queue.Front()).(int)
+		src, ok := queue.Remove(queue.Front()).(int)
+		_ = ok
+
 		for _, dst := range adjList[src] {
 			reach[dst][src] = true
 			for node := 0; node < numCourses; node++ {

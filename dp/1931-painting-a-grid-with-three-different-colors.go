@@ -6,7 +6,7 @@ package dp
 // Time: O(m*n*2^10)
 // Space: O(m*n*2^10)
 func colorTheGrid(m int, n int) int {
-	const MOD int = 1e9 + 7
+	const mod int = 1e9 + 7
 
 	memo := make([][][1023]*int, m) // 1023 = (1<<10)-1
 	for idx := range memo {
@@ -48,7 +48,7 @@ func colorTheGrid(m int, n int) int {
 				continue
 			}
 
-			res = (res + dp(newMask|(color<<shiftpos), row+1, col)) % MOD
+			res = (res + dp(newMask|(color<<shiftpos), row+1, col)) % mod
 		}
 
 		memo[row][col][mask] = &res

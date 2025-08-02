@@ -39,7 +39,7 @@ func (f *FindSumPairs) Count(tot int) int {
 	return count
 }
 
-/**
+/*
  * Your FindSumPairs object will be instantiated and called as such:
  * obj := Constructor(nums1, nums2);
  * obj.Add(index,val);

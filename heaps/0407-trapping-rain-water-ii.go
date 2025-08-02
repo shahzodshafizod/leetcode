@@ -32,7 +32,8 @@ func trapRainWater(heightMap [][]int) int {
 	var height, row, col, r, c int
 
 	for queue.Len() > 0 {
-		top := heap.Pop(queue).([3]int)
+		top, ok := heap.Pop(queue).([3]int)
+		_ = ok
 
 		height, row, col = top[0], top[1], top[2]
 		for dir := 1; dir < 5; dir++ {

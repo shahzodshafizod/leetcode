@@ -128,7 +128,7 @@ func (m *MyHashSet) Contains(key int) bool {
 // 	return start
 // }
 
-/**
+/*
  * Your MyHashSet object will be instantiated and called as such:
  * obj := Constructor();
  * obj.Add(key);

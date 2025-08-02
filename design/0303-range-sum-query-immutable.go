@@ -21,7 +21,7 @@ func (n *NumArray) SumRange(left int, right int) int {
 	return n.prefix[right+1] - n.prefix[left]
 }
 
-/**
+/*
  * Your NumArray object will be instantiated and called as such:
  * obj := Constructor(nums);
  * param_1 := obj.SumRange(left,right);

@@ -69,7 +69,9 @@ func networkDelayTime(times [][]int, n int, k int) int {
 	arrivalTime := make(map[int]int)
 
 	for minHeap.Len() > 0 {
-		dist := heap.Pop(minHeap).(*distance)
+		dist, ok := heap.Pop(minHeap).(*distance)
+		_ = ok
+
 		if _, found := arrivalTime[dist.target]; found {
 			continue
 		}

@@ -41,9 +41,15 @@ func maximumInvitations(favorite []int) int {
 
 	depth := make([]int, n)
 
-	var currEmpl, nextEmpl int
+	var (
+		currEmpl int
+		nextEmpl int
+		ok       bool
+	)
+
 	for queue.Len() > 0 {
-		currEmpl = queue.Remove(queue.Front()).(int)
+		currEmpl, ok = queue.Remove(queue.Front()).(int)
+		_ = ok
 		nextEmpl = favorite[currEmpl]
 		depth[nextEmpl] = max(depth[nextEmpl], depth[currEmpl]+1)
 

@@ -8,8 +8,6 @@ import (
 
 // go test -v -count=1 ./arrays/ -run ^TestRemoveElement$
 func TestRemoveElement(t *testing.T) {
-	assert := assert.New(t)
-
 	for _, tc := range []struct {
 		nums         []int
 		val          int
@@ -26,10 +24,10 @@ func TestRemoveElement(t *testing.T) {
 		// {nums: []int{0, 2, 3, 4, 5, 3, 1, 0}, val: 3, expectedNums: []int{0, 2, 0, 4, 5, 1, 3, 3}, k: 6},
 	} {
 		k := removeElement(tc.nums, tc.val)
-		assert.Equal(tc.k, k)
+		assert.Equal(t, tc.k, k)
 
 		for i := 0; i < k; i++ {
-			assert.Equal(tc.expectedNums[i], tc.nums[i])
+			assert.Equal(t, tc.expectedNums[i], tc.nums[i])
 		}
 	}
 }

@@ -77,15 +77,15 @@ func maximumScore(nums []int, k int) int {
 		size++
 	}
 	// step 3: Picking the highest prime score element
-	pow := func(x, n int, MOD int) int {
+	pow := func(x, n int, mod int) int {
 		res := 1
 
 		for n > 0 {
 			if n&1 == 1 {
-				res = (res * x) % MOD
+				res = (res * x) % mod
 			}
 
-			x = (x * x) % MOD
+			x = (x * x) % mod
 			n /= 2
 		}
 
@@ -98,18 +98,17 @@ func maximumScore(nums []int, k int) int {
 
 	score := 1
 
-	var top [2]int
-
 	var num, idx, count int
 
-	const MOD = int(1e9) + 7
+	const mod = int(1e9) + 7
 
 	for k > 0 && pq.Len() > 0 {
-		top = heap.Pop(pq).([2]int)
+		top, ok := heap.Pop(pq).([2]int)
+		_ = ok
 		idx, num = top[0], top[1]
 		count = min((idx-left[idx])*(right[idx]-idx), k)
 		k -= count
-		score = (score * pow(num, count, MOD)) % MOD
+		score = (score * pow(num, count, mod)) % mod
 	}
 
 	return score

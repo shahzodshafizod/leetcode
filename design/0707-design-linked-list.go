@@ -163,7 +163,7 @@ func (m *MyLinkedList) DeleteAtIndex(index int) {
 // 	m.size--
 // }
 
-/**
+/*
  * Your MyLinkedList object will be instantiated and called as such:
  * obj := Constructor();
  * param_1 := obj.Get(index);

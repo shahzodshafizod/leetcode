@@ -34,7 +34,7 @@ func (p *ProductOfNumbers) GetProduct(k int) int {
 	return p.presum[p.size] / p.presum[p.size-k]
 }
 
-/**
+/*
  * Your ProductOfNumbers object will be instantiated and called as such:
  * obj := Constructor();
  * obj.Add(num);

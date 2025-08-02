@@ -30,7 +30,9 @@ func (l *LFUCache) Get(key int) int {
 	}
 
 	node := l.nodes[key]
-	pair := node.Value.(*pkg.Pair)
+	pair, ok := node.Value.(*pkg.Pair)
+	_ = ok
+
 	l.buckets[pair.Cnt].Remove(node)
 
 	if l.buckets[pair.Cnt].Len() == 0 && l.minCnt == pair.Cnt {
@@ -49,7 +51,8 @@ func (l *LFUCache) Get(key int) int {
 
 func (l *LFUCache) Put(key int, value int) {
 	if l.Get(key) != -1 {
-		pair := l.nodes[key].Value.(*pkg.Pair)
+		pair, ok := l.nodes[key].Value.(*pkg.Pair)
+		_ = ok
 		pair.Val = value
 		l.nodes[key].Value = pair
 
@@ -58,7 +61,9 @@ func (l *LFUCache) Put(key int, value int) {
 
 	if l.capacity == 0 {
 		node := l.buckets[l.minCnt].Back()
-		pair := node.Value.(*pkg.Pair)
+		pair, ok := node.Value.(*pkg.Pair)
+		_ = ok
+
 		delete(l.nodes, pair.Key)
 		l.buckets[l.minCnt].Remove(node)
 
@@ -70,7 +75,7 @@ func (l *LFUCache) Put(key int, value int) {
 	l.capacity--
 }
 
-/**
+/*
  * Your LFUCache object will be instantiated and called as such:
  * obj := Constructor(capacity);
  * param_1 := obj.Get(key);

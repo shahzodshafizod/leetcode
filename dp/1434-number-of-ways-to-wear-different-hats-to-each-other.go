@@ -6,7 +6,7 @@ package dp
 // Time: O(k⋅n⋅2^n), k=# of hats, n=# of people
 // Space: O(k⋅2^n)
 func numberWays(hats [][]int) int {
-	const MOD int = 1e9 + 7
+	const mod int = 1e9 + 7
 
 	people := make(map[int][]int)
 
@@ -19,9 +19,9 @@ func numberWays(hats [][]int) int {
 	n := len(hats)
 	done := (1 << n) - 1
 
-	const MaxHat = 40
+	const maxHat = 40
 
-	var memo [MaxHat][]*int
+	var memo [maxHat][]*int
 	for idx := range memo {
 		memo[idx] = make([]*int, done)
 	}
@@ -33,7 +33,7 @@ func numberWays(hats [][]int) int {
 			return 1
 		}
 
-		if hat == MaxHat {
+		if hat == maxHat {
 			return 0
 		}
 
@@ -46,7 +46,7 @@ func numberWays(hats [][]int) int {
 		for _, person := range people[hat] {
 			person = 1 << person
 			if mask&person == 0 {
-				ways = (ways + dp(hat+1, mask|person)) % MOD
+				ways = (ways + dp(hat+1, mask|person)) % mod
 			}
 		}
 

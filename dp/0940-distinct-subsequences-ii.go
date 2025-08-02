@@ -6,7 +6,7 @@ package dp
 // Time: O(n)
 // Space: O(n)
 func distinctSubseqII(s string) int {
-	const MOD int = 1e9 + 7
+	const mod int = 1e9 + 7
 
 	dp := 1
 
@@ -15,12 +15,12 @@ func distinctSubseqII(s string) int {
 	var key int
 	for idx := range s {
 		key = int(s[idx] - 'a')
-		last[key], dp = dp, (dp*2-last[key])%MOD
+		last[key], dp = dp, (dp*2-last[key])%mod
 	}
 
 	dp-- // -1, excluding the empty subsequence
 	if dp < 0 {
-		dp += MOD
+		dp += mod
 	}
 
 	return dp

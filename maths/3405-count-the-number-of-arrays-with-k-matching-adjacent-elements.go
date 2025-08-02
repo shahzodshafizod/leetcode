@@ -23,17 +23,17 @@ You must multiply by modular inverse of the denominator under modulo.
 // Time: O(Min(K,N−K))
 // Space: O(1)
 func countGoodArrays(n int, m int, k int) int {
-	const MOD int = 1e9 + 7
+	const mod int = 1e9 + 7
 
 	pow := func(base, exp int) int {
 		result := 1
 
 		for exp > 0 {
 			if exp&1 == 1 {
-				result = result * base % MOD
+				result = result * base % mod
 			}
 
-			base = base * base % MOD
+			base = base * base % mod
 			exp >>= 1
 		}
 
@@ -48,14 +48,14 @@ func countGoodArrays(n int, m int, k int) int {
 		den := 1 // denominator
 
 		for i := 0; i < k; i++ {
-			num = (num * (n - i)) % MOD
-			den = (den * (i + 1)) % MOD
+			num = (num * (n - i)) % mod
+			den = (den * (i + 1)) % mod
 		}
 
-		den = pow(den, MOD-2)
+		den = pow(den, mod-2)
 
-		return num * den % MOD
+		return num * den % mod
 	}
 
-	return m * pow(m-1, n-1-k) % MOD * comb(n-1, k) % MOD
+	return m * pow(m-1, n-1-k) % mod * comb(n-1, k) % mod
 }

@@ -40,7 +40,9 @@ func findItineraryDFS(
 	index *int,
 ) {
 	for adjList[source] != nil && adjList[source].Len() > 0 {
-		next := heap.Pop(adjList[source]).(string)
+		next, ok := heap.Pop(adjList[source]).(string)
+		_ = ok
+
 		findItineraryDFS(adjList, next, result, index)
 	}
 

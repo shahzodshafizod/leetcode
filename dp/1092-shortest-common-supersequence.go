@@ -26,28 +26,35 @@ func shortestCommonSupersequence(str1 string, str2 string) string {
 		}
 	}
 
-	var csc strings.Builder
+	var (
+		csc strings.Builder
+		err error
+	)
 
 	i1, i2 = 0, 0
 	for i1 < n1 && i2 < n2 {
 		if str1[i1] == str2[i2] {
-			csc.WriteByte(str1[i1])
+			err = csc.WriteByte(str1[i1])
 
 			i1++
 			i2++
 		} else if dp[i1][i2+1] < dp[i1+1][i2] {
-			csc.WriteByte(str1[i1])
+			err = csc.WriteByte(str1[i1])
 
 			i1++
 		} else {
-			csc.WriteByte(str2[i2])
+			err = csc.WriteByte(str2[i2])
 
 			i2++
 		}
+
+		_ = err
 	}
 
-	csc.WriteString(str1[i1:])
-	csc.WriteString(str2[i2:])
+	_, err = csc.WriteString(str1[i1:])
+	_ = err
+	_, err = csc.WriteString(str2[i2:])
+	_ = err
 
 	return csc.String()
 }

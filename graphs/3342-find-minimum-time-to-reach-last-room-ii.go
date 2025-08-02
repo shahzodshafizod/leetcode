@@ -28,7 +28,8 @@ func minTimeToReach3342(moveTime [][]int) int {
 	var row, col, time, newr, newc, newt, step int
 
 	for minheap.Len() > 0 {
-		top := heap.Pop(minheap).([3]int)
+		top, ok := heap.Pop(minheap).([3]int)
+		_ = ok
 		row, col, time = top[0], top[1], top[2]
 		step = (row+col)%2 + 1
 

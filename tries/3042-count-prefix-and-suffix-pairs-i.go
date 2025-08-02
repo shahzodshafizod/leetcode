@@ -13,10 +13,10 @@ func countPrefixSuffixPairs(words []string) int {
 		children map[rune]*TrieNode
 	}
 
-	NewTrieNode := func() *TrieNode {
+	newTrieNode := func() *TrieNode {
 		return &TrieNode{children: make(map[rune]*TrieNode)}
 	}
-	root := NewTrieNode()
+	root := newTrieNode()
 
 	var prefix, suffix bool
 
@@ -34,7 +34,7 @@ func countPrefixSuffixPairs(words []string) int {
 		for _, c = range word {
 			if currp.children[c] == nil {
 				prefix = false
-				currp.children[c] = NewTrieNode()
+				currp.children[c] = newTrieNode()
 			}
 
 			currp = currp.children[c]
@@ -48,7 +48,7 @@ func countPrefixSuffixPairs(words []string) int {
 			c = rune(word[idx])
 			if currs.children[c] == nil {
 				suffix = false
-				currs.children[c] = NewTrieNode()
+				currs.children[c] = newTrieNode()
 			}
 
 			currs = currs.children[c]

@@ -10,18 +10,18 @@ func numWays(steps int, arrLen int) int {
 	prev, curr := make([]int, arrLen), make([]int, arrLen)
 	curr[0] = 1
 
-	const MOD int = 1e9 + 7
+	const mod int = 1e9 + 7
 
 	for st := 1; st <= steps; st++ {
 		prev, curr = curr, prev
 		for pos := arrLen - 1; pos >= 0; pos-- {
 			curr[pos] = prev[pos]
 			if pos > 0 {
-				curr[pos] = (curr[pos] + prev[pos-1]) % MOD
+				curr[pos] = (curr[pos] + prev[pos-1]) % mod
 			}
 
 			if pos+1 < arrLen {
-				curr[pos] = (curr[pos] + prev[pos+1]) % MOD
+				curr[pos] = (curr[pos] + prev[pos+1]) % mod
 			}
 		}
 	}

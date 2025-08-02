@@ -24,7 +24,9 @@ func mergeKLists(lists []*pkg.ListNode) *pkg.ListNode {
 	tail := list
 
 	for minHeap.Len() > 0 {
-		minimum := heap.Pop(minHeap).(*pkg.ListNode)
+		minimum, ok := heap.Pop(minHeap).(*pkg.ListNode)
+		_ = ok
+
 		if minimum.Next != nil {
 			heap.Push(minHeap, minimum.Next)
 		}

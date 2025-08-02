@@ -28,7 +28,8 @@ func minCost(grid [][]int) int {
 	var row, col, cost, r, c int
 
 	for queue.Len() > 0 {
-		item := queue.Remove(queue.Front()).([3]int)
+		item, ok := queue.Remove(queue.Front()).([3]int)
+		_ = ok
 
 		row, col, cost = item[0], item[1], item[2]
 		if min(row, col) < 0 || row == m || col == n || cost >= minCost[row][col] {

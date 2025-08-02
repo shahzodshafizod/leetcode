@@ -13,8 +13,10 @@ func lastStoneWeight(stones []int) int {
 	heap.Init(maxHeap)
 
 	for maxHeap.Len() > 1 {
-		y := heap.Pop(maxHeap).(int)
-		x := heap.Pop(maxHeap).(int)
+		y, ok := heap.Pop(maxHeap).(int)
+		_ = ok
+		x, ok := heap.Pop(maxHeap).(int)
+		_ = ok
 
 		if x != y {
 			heap.Push(maxHeap, y-x)

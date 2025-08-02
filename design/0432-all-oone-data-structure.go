@@ -10,7 +10,7 @@ type allOneNode struct {
 	next  *allOneNode
 }
 
-func NewAllOneNode(key string, prev *allOneNode, next *allOneNode) *allOneNode {
+func newAllOneNode(key string, prev *allOneNode, next *allOneNode) *allOneNode {
 	return &allOneNode{key: key, prev: prev, next: next}
 }
 
@@ -21,9 +21,9 @@ type AllOne struct {
 }
 
 func NewAllOne() AllOne {
-	head := NewAllOneNode("", nil, nil)
+	head := newAllOneNode("", nil, nil)
 	head.count = 5e4
-	tail := NewAllOneNode("", head, nil)
+	tail := newAllOneNode("", head, nil)
 	head.next = tail
 
 	return AllOne{
@@ -36,7 +36,7 @@ func NewAllOne() AllOne {
 func (a *AllOne) Inc(key string) {
 	node := a.keys[key]
 	if node == nil {
-		node = NewAllOneNode(key, a.tail.prev, a.tail)
+		node = newAllOneNode(key, a.tail.prev, a.tail)
 		node.prev.next = node
 		node.next.prev = node
 		a.keys[key] = node
@@ -178,7 +178,7 @@ func (a *AllOne) swap(node1 *allOneNode, node2 *allOneNode) {
 // 	return key
 // }
 
-/**
+/*
  * Your AllOne object will be instantiated and called as such:
  * obj := Constructor();
  * obj.Inc(key);

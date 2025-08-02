@@ -6,7 +6,7 @@ package dp
 // Time: O(gn), g=goal
 // Space: O(n)
 func numMusicPlaylists(n int, goal int, k int) int {
-	const MOD int = 1e9 + 7
+	const mod int = 1e9 + 7
 
 	prev, curr := make([]int, n+1), make([]int, n+1)
 	curr[0] = 1
@@ -17,10 +17,10 @@ func numMusicPlaylists(n int, goal int, k int) int {
 
 		for songs := 1; songs <= min(n, slots); songs++ {
 			// add a new song: n-songs+1 = # of choices
-			curr[songs] = (n - songs + 1) * prev[songs-1] % MOD
+			curr[songs] = (n - songs + 1) * prev[songs-1] % mod
 			// replay an old song: songs-k = # of choices
 			if songs > k {
-				curr[songs] = (curr[songs] + (songs-k)*prev[songs]) % MOD
+				curr[songs] = (curr[songs] + (songs-k)*prev[songs]) % mod
 			}
 		}
 	}

@@ -30,14 +30,14 @@ func mincostToHireWorkers(quality []int, wage []int, k int) float64 {
 
 	money := math.MaxFloat64
 
-	var top *candidate
-
 	var qualities float64
 
 	maxheap := pkg.NewHeap(make([]int, 0), func(x, y int) bool { return x > y })
 
 	for candidates.Len() > 0 { // O(n log k)
-		top = heap.Pop(candidates).(*candidate)
+		top, ok := heap.Pop(candidates).(*candidate)
+		_ = ok
+
 		qualities += float64(top.quality)
 		heap.Push(maxheap, top.quality)
 

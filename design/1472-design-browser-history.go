@@ -191,7 +191,7 @@ func (b *BrowserHistory) Forward(steps int) string {
 // 	fmt.Println("nil")
 // }
 
-/**
+/*
  * Your BrowserHistory object will be instantiated and called as such:
  * obj := Constructor(homepage);
  * obj.Visit(url);

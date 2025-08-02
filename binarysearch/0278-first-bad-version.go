@@ -2,7 +2,7 @@ package binarysearch
 
 // https://leetcode.com/problems/first-bad-version/
 
-/**
+/*
  * Forward declaration of isBadVersion API.
  * @param   version   your guess about first bad version
  * @return 	 	      true if current version is bad

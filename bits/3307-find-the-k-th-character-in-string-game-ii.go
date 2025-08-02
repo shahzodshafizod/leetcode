@@ -10,10 +10,10 @@ import "math/bits"
 func kthCharacter(k int64, operations []int) byte {
 	ans := 0
 
-	for bits := bits.Len(uint(k)); bits >= 0; bits-- {
-		if k > 1<<bits {
-			k -= 1 << bits
-			ans += operations[bits]
+	for n := bits.Len(uint(k)); n >= 0; n-- {
+		if k > 1<<n {
+			k -= 1 << n
+			ans += operations[n]
 		}
 	}
 

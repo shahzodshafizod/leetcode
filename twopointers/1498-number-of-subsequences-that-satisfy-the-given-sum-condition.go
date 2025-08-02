@@ -12,10 +12,10 @@ func numSubseq(nums []int, target int) int {
 	power2 := make([]int, n)
 	power2[0] = 1
 
-	const MOD int = 1e9 + 7
+	const mod int = 1e9 + 7
 
 	for idx := 1; idx < n; idx++ {
-		power2[idx] = (power2[idx-1] * 2) % MOD
+		power2[idx] = (power2[idx-1] * 2) % mod
 	}
 
 	sort.Ints(nums)
@@ -30,7 +30,7 @@ func numSubseq(nums []int, target int) int {
 			// for each element in the subarray [left+1:right]
 			// we can pick or not pick, so there are
 			// 2 ^ (right - left) subsequences in total
-			count = (count + power2[right-left]) % MOD
+			count = (count + power2[right-left]) % mod
 			left++
 		}
 	}

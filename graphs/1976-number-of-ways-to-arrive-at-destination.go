@@ -34,14 +34,13 @@ func countPaths1976(n int, roads [][]int) int {
 		func(x, y [2]int) bool { return x[1] < y[1] },
 	)
 
-	var item [2]int
-
 	var node, time, nn, nt int
 
-	const MOD = int(1e9) + 7
+	const mod = int(1e9) + 7
 
 	for queue.Len() > 0 {
-		item = heap.Pop(queue).([2]int)
+		item, ok := heap.Pop(queue).([2]int)
+		_ = ok
 
 		node, time = item[0], item[1]
 		if time > dist[n-1] {
@@ -56,7 +55,7 @@ func countPaths1976(n int, roads [][]int) int {
 
 				heap.Push(queue, [2]int{nn, dist[nn]})
 			} else if time+nt == dist[nn] {
-				count[nn] = (count[nn] + count[node]) % MOD
+				count[nn] = (count[nn] + count[node]) % mod
 			}
 		}
 	}

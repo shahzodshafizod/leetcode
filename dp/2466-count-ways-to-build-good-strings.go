@@ -6,7 +6,7 @@ package dp
 // Time: O(high)
 // Space: O(high)
 func countGoodStrings(low int, high int, zero int, one int) int {
-	var MOD int = 1e9 + 7
+	var mod int = 1e9 + 7
 
 	dp := make([]int, high+1)
 	dp[0] = 1
@@ -18,11 +18,11 @@ func countGoodStrings(low int, high int, zero int, one int) int {
 		}
 
 		if length-one >= 0 {
-			dp[length] = (dp[length] + dp[length-one]) % MOD
+			dp[length] = (dp[length] + dp[length-one]) % mod
 		}
 
 		if length >= low {
-			count = (count + dp[length]) % MOD
+			count = (count + dp[length]) % mod
 		}
 	}
 

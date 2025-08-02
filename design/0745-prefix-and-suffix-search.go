@@ -56,7 +56,7 @@ func (w *WordFilter) F(pref string, suff string) int {
 	return curr.index
 }
 
-/**
+/*
  * Your WordFilter object will be instantiated and called as such:
  * obj := Constructor(words);
  * param_1 := obj.F(pref,suff);

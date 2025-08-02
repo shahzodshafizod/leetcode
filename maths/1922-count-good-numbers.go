@@ -6,7 +6,7 @@ package maths
 // Time: O(logn)
 // Space: O(logn)
 func countGoodNumbers(n int64) int {
-	const MOD = int(1e9) + 7
+	const mod = int(1e9) + 7
 
 	var pow func(x int, n int64) int
 
@@ -17,13 +17,13 @@ func countGoodNumbers(n int64) int {
 
 		half := pow(x, n/2)
 		if n&1 == 1 {
-			return half * half * x % MOD
+			return half * half * x % mod
 		}
 
-		return half * half % MOD
+		return half * half % mod
 	}
 	evens := pow(5, n-n/2)
 	primes := pow(4, n/2)
 
-	return evens * primes % MOD
+	return evens * primes % mod
 }

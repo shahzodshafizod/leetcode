@@ -7,18 +7,18 @@ import "math/bits"
 // Approach: Bit Manipulation
 // Time: O(n)
 // Space: O(1)
-func findThePrefixCommonArray(A []int, B []int) []int {
+func findThePrefixCommonArray(a []int, b []int) []int {
 	var amask, bmask int64 = 0, 0
 
-	C := make([]int, len(A))
+	c := make([]int, len(a))
 
-	for idx := range A {
-		amask |= 1 << A[idx]
-		bmask |= 1 << B[idx]
-		C[idx] = bits.OnesCount(uint(amask & bmask))
+	for idx := range a {
+		amask |= 1 << a[idx]
+		bmask |= 1 << b[idx]
+		c[idx] = bits.OnesCount(uint(amask & bmask))
 	}
 
-	return C
+	return c
 }
 
 // // Approach: Counting

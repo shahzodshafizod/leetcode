@@ -25,7 +25,9 @@ func kClosest(points [][]int, k int) [][]int {
 
 	for k > 0 {
 		k--
-		point := heap.Pop(minHeap).([]int)
+		point, ok := heap.Pop(minHeap).([]int)
+		_ = ok
+
 		closestPoints = append(closestPoints, []int{point[0], point[1]})
 	}
 

@@ -6,7 +6,7 @@ package dp
 // Time: O(n + m*k), n=len(word), m=len(groups)
 // Space: O(k)
 func possibleStringCount(word string, k int) int {
-	const MOD int = 1e9 + 7
+	const mod int = 1e9 + 7
 
 	var groups []int
 
@@ -16,7 +16,7 @@ func possibleStringCount(word string, k int) int {
 	for idx := 1; idx < n; idx++ {
 		if word[idx-1] != word[idx] {
 			groups = append(groups, count)
-			total = (total * count) % MOD
+			total = (total * count) % mod
 			count = 0
 		}
 
@@ -24,7 +24,7 @@ func possibleStringCount(word string, k int) int {
 	}
 
 	groups = append(groups, count)
-	total = (total * count) % MOD
+	total = (total * count) % mod
 	m := len(groups)
 
 	if k <= m {
@@ -41,9 +41,9 @@ func possibleStringCount(word string, k int) int {
 
 		presum = 0
 		for idx := 1; idx < k; idx++ {
-			presum = (presum + dp[idx-1]) % MOD
+			presum = (presum + dp[idx-1]) % mod
 			if idx > count {
-				presum = (presum - dp[idx-count-1] + MOD) % MOD
+				presum = (presum - dp[idx-count-1] + mod) % mod
 			}
 
 			newDP[idx] = presum
@@ -53,7 +53,7 @@ func possibleStringCount(word string, k int) int {
 	}
 
 	for _, count := range dp {
-		total = (total - count + MOD) % MOD
+		total = (total - count + mod) % mod
 	}
 
 	return total

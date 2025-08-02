@@ -9,8 +9,8 @@ import (
 // go test -v -count=1 ./graphs/ -run ^TestMaximalPathQuality$
 func TestMaximalPathQuality(t *testing.T) {
 	for _, tc := range []struct {
-		values []int
-		edges [][]int
+		values  []int
+		edges   [][]int
 		maxTime int
 		quality int
 	}{

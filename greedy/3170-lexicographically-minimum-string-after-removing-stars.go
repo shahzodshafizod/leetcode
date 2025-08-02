@@ -34,13 +34,17 @@ func clearStars(s string) string {
 		return s
 	}
 
-	var cleared strings.Builder
+	var (
+		cleared strings.Builder
+		err     error
+	)
 
 	cleared.Grow(len(s) - stars*2)
 
 	for _, c := range starred {
 		if c != '*' {
-			cleared.WriteByte(c)
+			err = cleared.WriteByte(c)
+			_ = err
 		}
 	}
 

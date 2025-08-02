@@ -6,7 +6,7 @@ package maths
 // Time: O(n+logt×26^3)
 // Space: O(26^2)
 func lengthAfterTransformations(s string, t int, nums []int) int {
-	const MOD int = 1e9 + 7
+	const mod int = 1e9 + 7
 
 	multiply := func(a, b [26][26]int) [26][26]int {
 		var c [26][26]int
@@ -15,7 +15,7 @@ func lengthAfterTransformations(s string, t int, nums []int) int {
 			for j := 0; j < 26; j++ {
 				if a[i][j] != 0 {
 					for k := 0; k < 26; k++ {
-						c[i][k] = (c[i][k] + a[i][j]*b[j][k]) % MOD
+						c[i][k] = (c[i][k] + a[i][j]*b[j][k]) % mod
 					}
 				}
 			}
@@ -58,10 +58,10 @@ func lengthAfterTransformations(s string, t int, nums []int) int {
 		rowSum = 0
 
 		for j := 0; j < 26; j++ {
-			rowSum = (rowSum + final[j][letter]) % MOD
+			rowSum = (rowSum + final[j][letter]) % mod
 		}
 
-		res = (res + rowSum) % MOD
+		res = (res + rowSum) % mod
 	}
 
 	return res

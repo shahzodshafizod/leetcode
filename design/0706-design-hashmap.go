@@ -149,7 +149,7 @@ func (m *MyHashMap) Remove(key int) {
 // 	return start
 // }
 
-/**
+/*
  * Your MyHashMap object will be instantiated and called as such:
  * obj := Constructor();
  * obj.Put(key,value);

@@ -18,13 +18,13 @@ func numWays1639(words []string, target string) int {
 	curr, next := make([]int, tlen+1), make([]int, tlen+1)
 	curr[tlen], next[tlen] = 1, 1
 
-	const MOD int = 1e9 + 7
+	const mod int = 1e9 + 7
 
 	for wid := wlen - 1; wid >= 0; wid-- {
 		curr, next = next, curr
 		for tid := tlen - 1; tid >= 0; tid-- {
 			curr[tid] = (next[tid] +
-				count[wid][int(target[tid]-'a')]*next[tid+1]) % MOD
+				count[wid][int(target[tid]-'a')]*next[tid+1]) % mod
 		}
 	}
 

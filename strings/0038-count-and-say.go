@@ -15,15 +15,21 @@ import (
 func countAndSay(n int) string {
 	rle := "1"
 
-	var newRLE strings.Builder
+	var (
+		newRLE strings.Builder
+		err    error
+	)
+
 	for ; n > 1; n-- {
 		newRLE.Reset()
 
 		count, slen := 1, len(rle)
 		for idx := 1; idx < slen; idx++ {
 			if rle[idx] != rle[idx-1] {
-				newRLE.WriteString(strconv.Itoa(count))
-				newRLE.WriteByte(rle[idx-1])
+				_, err = newRLE.WriteString(strconv.Itoa(count))
+				_ = err
+				err = newRLE.WriteByte(rle[idx-1])
+				_ = err
 
 				count = 0
 			}
@@ -31,8 +37,10 @@ func countAndSay(n int) string {
 			count++
 		}
 
-		newRLE.WriteString(strconv.Itoa(count))
-		newRLE.WriteByte(rle[slen-1])
+		_, err = newRLE.WriteString(strconv.Itoa(count))
+		_ = err
+		err = newRLE.WriteByte(rle[slen-1])
+		_ = err
 		rle = newRLE.String()
 	}
 

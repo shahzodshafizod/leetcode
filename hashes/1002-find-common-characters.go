@@ -7,27 +7,27 @@ package hashes
 // time: O(n * k)
 // space: O(26 * 2) = O(1)
 func commonChars(words []string) []string {
-	const LETTERS = 26
+	const n = 26
 
-	var common [LETTERS]int
+	var common [n]int
 	for _, c := range words[0] {
 		common[c-'a']++
 	}
 
-	var current [LETTERS]int
+	var current [n]int
 
 	for i, wn := 1, len(words); i < wn; i++ {
 		for _, c := range words[i] {
 			current[c-'a']++
 		}
 
-		for i := 0; i < LETTERS; i++ {
+		for i := 0; i < n; i++ {
 			common[i] = min(common[i], current[i])
 			current[i] = 0
 		}
 	}
 
-	result := make([]string, 0)
+	var result []string
 
 	for letter, count := range common {
 		for count > 0 {

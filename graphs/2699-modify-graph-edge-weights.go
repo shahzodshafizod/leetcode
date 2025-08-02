@@ -41,7 +41,8 @@ func modifiedGraphEdges(n int, edges [][]int, source int, destination int, targe
 		var currNode, currDist, nextNode, egdeIndex, nextWeight int
 
 		for pq.Len() > 0 {
-			curr := heap.Pop(pq).([2]int)
+			curr, ok := heap.Pop(pq).([2]int)
+			_ = ok
 
 			currNode, currDist = curr[0], curr[1]
 			if currDist > distances[currNode][index] {

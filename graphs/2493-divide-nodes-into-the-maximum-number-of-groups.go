@@ -50,7 +50,11 @@ func magnificentSets(n int, edges [][]int) int {
 		union(a, b) // groupping connected components
 	}
 
-	var curr, next int
+	var (
+		curr int
+		next int
+		ok   bool
+	)
 
 	countGroups := func(src int) int {
 		queue := list.New()
@@ -64,7 +68,9 @@ func magnificentSets(n int, edges [][]int) int {
 			layer++
 
 			for ; size > 0; size-- {
-				curr = queue.Remove(queue.Front()).(int)
+				curr, ok = queue.Remove(queue.Front()).(int)
+				_ = ok
+
 				for _, next = range graph[curr] {
 					switch layers[next] {
 					case 0:

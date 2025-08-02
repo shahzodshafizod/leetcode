@@ -2,7 +2,7 @@ package binarysearch
 
 // https://leetcode.com/problems/guess-number-higher-or-lower/
 
-/**
+/*
  * Forward declaration of guess API.
  * @param  num   your guess
  * @return 	     -1 if num is higher than the picked number
