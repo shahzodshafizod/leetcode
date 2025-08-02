@@ -11,7 +11,7 @@ func toGoatLatin(sentence string) string {
 	}
 
 	var (
-		words []string
+		words = make([]string, 0)
 		err   error
 	)
 
