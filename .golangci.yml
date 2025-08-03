@@ -115,69 +115,28 @@ linters:
 
   # Disable specific linters.
   disable:
-    - arangolint
-    - asasalint
-    - asciicheck
-    - bidichk
-    - bodyclose
-    - canonicalheader
-    - containedctx
-    - contextcheck
-    - copyloopvar
-    - cyclop
-    - decorder
-    - depguard
-    - dogsled
-    - dupl
-    - dupword
-    - durationcheck
-    - embeddedstructfieldcheck
-    - err113
-    - errcheck
-    - errchkjson
-    - errname
-    - errorlint
-    - exhaustive
-    - exhaustruct
-    - exptostd
-    - fatcontext
-    - forbidigo
-    - forcetypeassert
-    - funcorder
-    - funlen
-    - ginkgolinter
-    - gocheckcompilerdirectives
-    - gochecknoglobals
-    - gochecknoinits
-    - gochecksumtype
-    - gocognit
-    - goconst
-    - gocritic
-    - gocyclo
-    - godot
-    - godox
-    - goheader
-    - gomoddirectives
-    - gomodguard
-    - goprintffuncname
-    - gosec
-    - gosmopolitan
-    - grouper
-    - iface
-    - importas
-    - inamedparam
-    - ineffassign
-    - interfacebloat
-    - intrange
-    - ireturn
-    - lll
-    - makezero
-    - mnd
-    - nestif
-    - paralleltest
-
-    - testpackage
-    - varnamelen
+    - cyclop # 57
+    - depguard # 877
+    - dupl # 14
+    - dupword # 45
+    - exhaustruct # 69
+    - forcetypeassert # 29
+    - funcorder # 8
+    - funlen # 32
+    - gochecknoglobals # 5
+    - gocognit # 10
+    - goconst # 5
+    - gocritic # 37
+    - godot # 1052
+    - gosec # 12
+    - inamedparam # 9
+    - intrange # 251
+    - ireturn # 18
+    - lll # 434
+    - mnd # 232
+    - nestif # 5
+    - paralleltest # 715
+    - testpackage # 684
     - wsl # depricated
 
   settings:

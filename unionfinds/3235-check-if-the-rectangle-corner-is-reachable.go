@@ -7,7 +7,7 @@ package unionfinds
 // AND the chain should go through the rectangle, not outside, ex. of edge case:
 // beginning and end of the chain touch borders, but the lies goes outside
 
-// TODO: Solve this problem by yourself
+// TO DO: Solve this problem by yourself
 
 // Approach: Union-Find
 // Time: O(N)

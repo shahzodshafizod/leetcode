@@ -11,8 +11,8 @@ func nextGreaterElement(nums1 []int, nums2 []int) []int {
 		nums1[idx] = -1
 	}
 
+	stack := make([]int, 0) // monotonic stack
 	size := 0
-	stack := make([]int, size) // monotonic stack
 
 	var curr, ptrid int
 

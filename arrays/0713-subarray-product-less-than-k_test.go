@@ -9,9 +9,8 @@ import (
 // go test -v -count=1 ./arrays/ -run ^TestNumSubarrayProductLessThanK$
 func TestNumSubarrayProductLessThanK(t *testing.T) {
 	for _, tc := range []struct {
-		nums []int
-		k    int
-		int
+		nums  []int
+		k     int
 		count int
 	}{
 		{nums: []int{10, 5, 2, 6}, k: 100, count: 8},

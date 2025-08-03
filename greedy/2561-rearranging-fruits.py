@@ -1,4 +1,4 @@
-from collections import Counter
+from collections import defaultdict
 from typing import List
 import unittest
 
@@ -9,14 +9,12 @@ import unittest
 
 class Solution(unittest.TestCase):
     def minCost(self, basket1: List[int], basket2: List[int]) -> int:
-        freq: Counter[int] = Counter()
+        freq: dict[int, int] = defaultdict(int)
         m = 10**9
-        for cost1 in basket1:
-            freq[cost1] += 1
-            m = min(m, cost1)
-        for cost2 in basket2:
-            freq[cost2] -= 1
-            m = min(m, cost2)
+        for i in range(len(basket1)):
+            freq[basket1[i]] += 1
+            freq[basket2[i]] -= 1
+            m = min(m, basket1[i], basket2[i])
         merge: List[int] = []
         for cost, cnt in freq.items():
             if cnt & 1 != 0:

@@ -1738,7 +1738,9 @@ func (g *graph) BellmanFord(adjList map[int][]*Edge, s int, n int) []int {
 }
 
 func (g *graph) FloydWarshall(adjList map[int][]*Edge, s int, n int) []int {
-	_, _, _ = adjList, s, n
+	_ = adjList
+	_ = s
+	_ = n
 
 	return nil
 }

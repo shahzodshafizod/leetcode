@@ -8,14 +8,10 @@ import (
 
 func minCost(basket1 []int, basket2 []int) int64 {
 	freq, minimal := make(map[int]int), int(1e9)
-	for _, val1 := range basket1 {
-		freq[val1]++
-		minimal = min(minimal, val1)
-	}
-
-	for _, val2 := range basket2 {
-		freq[val2]--
-		minimal = min(minimal, val2)
+	for i, n := 0, len(basket1); i < n; i++ {
+		freq[basket1[i]]++
+		freq[basket2[i]]--
+		minimal = min(minimal, basket1[i], basket2[i])
 	}
 
 	var merge []int

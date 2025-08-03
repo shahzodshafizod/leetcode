@@ -2,6 +2,7 @@ package design
 
 import (
 	"container/heap"
+	"slices"
 
 	"github.com/shahzodshafizod/leetcode/pkg"
 )
@@ -39,12 +40,11 @@ func (t *Twitter) PostTweet(userID int, tweetID int) { // O(1)
 }
 
 func (t *Twitter) GetNewsFeed(userID int) []int { // O(N Log N)
-	posts := make([]*tweet, len(t.tweets[userID]))
+	posts := slices.Clone(t.tweets[userID])
 	for followeeID := range t.followees[userID] {
 		posts = append(posts, t.tweets[followeeID]...)
 	}
 
-	copy(posts, t.tweets[userID])
 	tweets := pkg.NewHeap(posts, func(x, y *tweet) bool { return x.uniqueID > y.uniqueID })
 	heap.Init(tweets)
 

@@ -4,7 +4,7 @@ import (
 	"strconv"
 )
 
-// TODO: Solve it by YOURSELF!!!
+// TO DO: Solve it by YOURSELF!!!
 
 // https://leetcode.com/problems/count-the-number-of-powerful-integers/
 
