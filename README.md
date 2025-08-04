@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0904 | [Fruit Into Baskets](https://leetcode.com/problems/fruit-into-baskets/) | Medium | Array, Hash Table, Sliding Window | 2025-08-04 | [Go](slidingwindows/0904-fruit-into-baskets.go) [Python](slidingwindows/0904-fruit-into-baskets.py)
 | 0083 | [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) | Easy | Linked List | 2025-08-03 | [Go](linkedlists/0083-remove-duplicates-from-sorted-list.go) [Python](linkedlists/0083-remove-duplicates-from-sorted-list.py)
 | 2561 | [Rearranging Fruits](https://leetcode.com/problems/rearranging-fruits/) | Hard | Array, Hash Table, Greedy, Sort | 2025-08-02 | [Go](greedy/2561-rearranging-fruits.go) [Python](greedy/2561-rearranging-fruits.py)
 | 2065 | [Maximum Path Quality of a Graph](https://leetcode.com/problems/maximum-path-quality-of-a-graph/) | Hard | Array, Backtracking, Graph | 2025-08-01 | [Go](graphs/2065-maximum-path-quality-of-a-graph.go) [Python](graphs/2065-maximum-path-quality-of-a-graph.py)
