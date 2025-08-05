@@ -10,7 +10,7 @@ import (
 func TestTotalFruit(t *testing.T) {
 	for _, tc := range []struct {
 		fruits []int
-		total int
+		total  int
 	}{
 		{fruits: []int{1, 2, 1}, total: 3},
 		{fruits: []int{0, 1, 2, 2}, total: 3},

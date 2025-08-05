@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3477 | [Fruits Into Baskets II](https://leetcode.com/problems/fruits-into-baskets-ii/) | Easy | Array, Binary Search, Segment Tree, Simulation, Ordered Set | 2025-08-05 | [Go](arrays/3477-fruits-into-baskets-ii.go) [Python](arrays/3477-fruits-into-baskets-ii.py)
+| 2508 | [Add Edges to Make Degrees of All Nodes Even](https://leetcode.com/problems/add-edges-to-make-degrees-of-all-nodes-even/) | Hard | Hash Table, Graph | 2025-08-05 | [Go](graphs/2508-add-edges-to-make-degrees-of-all-nodes-even.go) [Python](graphs/2508-add-edges-to-make-degrees-of-all-nodes-even.py)
 | 0904 | [Fruit Into Baskets](https://leetcode.com/problems/fruit-into-baskets/) | Medium | Array, Hash Table, Sliding Window | 2025-08-04 | [Go](slidingwindows/0904-fruit-into-baskets.go) [Python](slidingwindows/0904-fruit-into-baskets.py)
 | 0083 | [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) | Easy | Linked List | 2025-08-03 | [Go](linkedlists/0083-remove-duplicates-from-sorted-list.go) [Python](linkedlists/0083-remove-duplicates-from-sorted-list.py)
 | 2561 | [Rearranging Fruits](https://leetcode.com/problems/rearranging-fruits/) | Hard | Array, Hash Table, Greedy, Sort | 2025-08-02 | [Go](greedy/2561-rearranging-fruits.go) [Python](greedy/2561-rearranging-fruits.py)
