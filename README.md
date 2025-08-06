@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3479 | [Fruits Into Baskets III](https://leetcode.com/problems/fruits-into-baskets-iii/) | Medium | Array, Binary Search, Segment Tree, Ordered Set | 2025-08-06 | [Go](intervals/3479-fruits-into-baskets-iii.go) [Python](intervals/3479-fruits-into-baskets-iii.py)
 | 3477 | [Fruits Into Baskets II](https://leetcode.com/problems/fruits-into-baskets-ii/) | Easy | Array, Binary Search, Segment Tree, Simulation, Ordered Set | 2025-08-05 | [Go](arrays/3477-fruits-into-baskets-ii.go) [Python](arrays/3477-fruits-into-baskets-ii.py)
 | 2508 | [Add Edges to Make Degrees of All Nodes Even](https://leetcode.com/problems/add-edges-to-make-degrees-of-all-nodes-even/) | Hard | Hash Table, Graph | 2025-08-05 | [Go](graphs/2508-add-edges-to-make-degrees-of-all-nodes-even.go) [Python](graphs/2508-add-edges-to-make-degrees-of-all-nodes-even.py)
 | 0904 | [Fruit Into Baskets](https://leetcode.com/problems/fruit-into-baskets/) | Medium | Array, Hash Table, Sliding Window | 2025-08-04 | [Go](slidingwindows/0904-fruit-into-baskets.go) [Python](slidingwindows/0904-fruit-into-baskets.py)
