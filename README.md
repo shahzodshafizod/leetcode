@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0808 | [Soup Servings](https://leetcode.com/problems/soup-servings/) | Medium | Math, Dynamic Programming, Probability and Statistics | 2025-08-08 | [Go](dp/0808-soup-servings.go) [Python](dp/0808-soup-servings.py)
+| 3363 | [Find the Maximum Number of Fruits Collected](https://leetcode.com/problems/find-the-maximum-number-of-fruits-collected/) | Hard | Array, Dynamic Programming, Matrix | 2025-08-07 | [Go](dp/3363-find-the-maximum-number-of-fruits-collected.go) [Python](dp/3363-find-the-maximum-number-of-fruits-collected.py)
 | 3479 | [Fruits Into Baskets III](https://leetcode.com/problems/fruits-into-baskets-iii/) | Medium | Array, Binary Search, Segment Tree, Ordered Set | 2025-08-06 | [Go](intervals/3479-fruits-into-baskets-iii.go) [Python](intervals/3479-fruits-into-baskets-iii.py)
 | 3477 | [Fruits Into Baskets II](https://leetcode.com/problems/fruits-into-baskets-ii/) | Easy | Array, Binary Search, Segment Tree, Simulation, Ordered Set | 2025-08-05 | [Go](arrays/3477-fruits-into-baskets-ii.go) [Python](arrays/3477-fruits-into-baskets-ii.py)
 | 2508 | [Add Edges to Make Degrees of All Nodes Even](https://leetcode.com/problems/add-edges-to-make-degrees-of-all-nodes-even/) | Hard | Hash Table, Graph | 2025-08-05 | [Go](graphs/2508-add-edges-to-make-degrees-of-all-nodes-even.go) [Python](graphs/2508-add-edges-to-make-degrees-of-all-nodes-even.py)
