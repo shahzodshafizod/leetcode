@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0869 | [Reordered Power of 2](https://leetcode.com/problems/reordered-power-of-2/) | Medium | Hash Table, Math, Sorting, Counting, Enumeration | 2025-08-10 | [Go](maths/0869-reordered-power-of-2.go) [Python](maths/0869-reordered-power-of-2.py)
+| 2867 | [Count Valid Paths in a Tree](https://leetcode.com/problems/count-valid-paths-in-a-tree/) | Hard | Math, Dynamic Programming, Tree, Depth-First Search, Number Theory | 2025-08-09 | [Go](unionfinds/2867-count-valid-paths-in-a-tree.go) [Python](unionfinds/2867-count-valid-paths-in-a-tree.py)
 | 0808 | [Soup Servings](https://leetcode.com/problems/soup-servings/) | Medium | Math, Dynamic Programming, Probability and Statistics | 2025-08-08 | [Go](dp/0808-soup-servings.go) [Python](dp/0808-soup-servings.py)
 | 3363 | [Find the Maximum Number of Fruits Collected](https://leetcode.com/problems/find-the-maximum-number-of-fruits-collected/) | Hard | Array, Dynamic Programming, Matrix | 2025-08-07 | [Go](dp/3363-find-the-maximum-number-of-fruits-collected.go) [Python](dp/3363-find-the-maximum-number-of-fruits-collected.py)
 | 3479 | [Fruits Into Baskets III](https://leetcode.com/problems/fruits-into-baskets-iii/) | Medium | Array, Binary Search, Segment Tree, Ordered Set | 2025-08-06 | [Go](intervals/3479-fruits-into-baskets-iii.go) [Python](intervals/3479-fruits-into-baskets-iii.py)
