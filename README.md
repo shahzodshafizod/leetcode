@@ -2,6 +2,9 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2264 | [Largest 3-Same-Digit Number in String](https://leetcode.com/problems/largest-3-same-digit-number-in-string/) | Easy | String | 2025-08-14 | [Go](strings/2264-largest-3-same-digit-number-in-string.go) [Python](strings/2264-largest-3-same-digit-number-in-string.py)
+| 0326 | [Power of Three](https://leetcode.com/problems/power-of-three/) | Easy | Math, Recursion | 2025-08-13 | [Go](maths/0326-power-of-three.go) [Python](maths/0326-power-of-three.py)
+| 2787 | [Ways to Express an Integer as Sum of Powers](https://leetcode.com/problems/ways-to-express-an-integer-as-sum-of-powers/) | Medium | Dynamic Programming | 2025-08-12 | [Go](dp/2787-ways-to-express-an-integer-as-sum-of-powers.go) [Python](dp/2787-ways-to-express-an-integer-as-sum-of-powers.py)
 | 2438 | [Range Product Queries of Powers](https://leetcode.com/problems/range-product-queries-of-powers/) | Medium | Array, Bit Manipulation, Prefix Sum | 2025-08-11 | [Go](prefixsums/2438-range-product-queries-of-powers.go) [Python](prefixsums/2438-range-product-queries-of-powers.py)
 | 0869 | [Reordered Power of 2](https://leetcode.com/problems/reordered-power-of-2/) | Medium | Hash Table, Math, Sorting, Counting, Enumeration | 2025-08-10 | [Go](maths/0869-reordered-power-of-2.go) [Python](maths/0869-reordered-power-of-2.py)
 | 2867 | [Count Valid Paths in a Tree](https://leetcode.com/problems/count-valid-paths-in-a-tree/) | Hard | Math, Dynamic Programming, Tree, Depth-First Search, Number Theory | 2025-08-09 | [Go](unionfinds/2867-count-valid-paths-in-a-tree.go) [Python](unionfinds/2867-count-valid-paths-in-a-tree.py)

@@ -9,7 +9,7 @@ import (
 // go test -v -count=1 ./unionfinds/ -run ^TestCountPaths2867$
 func TestCountPaths2867(t *testing.T) {
 	for _, tc := range []struct {
-		n int
+		n     int
 		edges [][]int
 		count int64
 	}{

@@ -9,7 +9,7 @@ import (
 // go test -v -count=1 ./prefixsums/ -run ^TestProductQueries$
 func TestProductQueries(t *testing.T) {
 	for _, tc := range []struct {
-		n int
+		n       int
 		queries [][]int
 		answers []int
 	}{

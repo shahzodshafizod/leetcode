@@ -9,7 +9,7 @@ import (
 // go test -v -count=1 ./dp/ -run ^TestSoupServings$
 func TestSoupServings(t *testing.T) {
 	for _, tc := range []struct {
-		n int
+		n           int
 		probability float64
 	}{
 		{n: 50, probability: 0.62500},

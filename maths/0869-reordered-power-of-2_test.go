@@ -9,7 +9,7 @@ import (
 // go test -v -count=1 ./maths/ -run ^TestReorderedPowerOf2$
 func TestReorderedPowerOf2(t *testing.T) {
 	for _, tc := range []struct {
-		n int
+		n   int
 		can bool
 	}{
 		{n: 1, can: true},
