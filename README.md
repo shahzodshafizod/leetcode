@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1323 | [Maximum 69 Number](https://leetcode.com/problems/maximum-69-number/) | Easy | Math, Greedy | 2025-08-16 | [Go](greedy/1323-maximum-69-number.go) [Python](greedy/1323-maximum-69-number.py)
+| 2532 | [Time to Cross a Bridge](https://leetcode.com/problems/time-to-cross-a-bridge/) | Hard | Array, Heap (Priority Queue), Simulation | 2025-08-15 | [Go](heaps/2532-time-to-cross-a-bridge.go) [Python](heaps/2532-time-to-cross-a-bridge.py)
 | 2264 | [Largest 3-Same-Digit Number in String](https://leetcode.com/problems/largest-3-same-digit-number-in-string/) | Easy | String | 2025-08-14 | [Go](strings/2264-largest-3-same-digit-number-in-string.go) [Python](strings/2264-largest-3-same-digit-number-in-string.py)
 | 0326 | [Power of Three](https://leetcode.com/problems/power-of-three/) | Easy | Math, Recursion | 2025-08-13 | [Go](maths/0326-power-of-three.go) [Python](maths/0326-power-of-three.py)
 | 2787 | [Ways to Express an Integer as Sum of Powers](https://leetcode.com/problems/ways-to-express-an-integer-as-sum-of-powers/) | Medium | Dynamic Programming | 2025-08-12 | [Go](dp/2787-ways-to-express-an-integer-as-sum-of-powers.go) [Python](dp/2787-ways-to-express-an-integer-as-sum-of-powers.py)
