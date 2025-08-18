@@ -40,20 +40,37 @@ class Solution(unittest.TestCase):
     #                 dp[i] += dp[i - j] / maxPts
     #     return sum(dp[k:])
 
-    # Approach #3: Bottom-Up Dynamic Programming (Optimized)
-    # Time: O(n)
-    # Space: O(n)
+    # # Approach #3: Bottom-Up Dynamic Programming (Optimized)
+    # # Time: O(n)
+    # # Space: O(n)
+    # def new21Game(self, n: int, k: int, maxPts: int) -> float:
+    #     dp: List[float] = [0] * (n + 1)
+    #     dp[0] = 1
+    #     wsum = 1 if k > 0 else 0
+    #     for i in range(1, n + 1):
+    #         dp[i] = wsum / maxPts
+    #         if i < k:
+    #             wsum += dp[i]
+    #         if i - maxPts >= 0 and i - maxPts < k:
+    #             wsum -= dp[i - maxPts]
+    #     return sum(dp[k:])
+
+    # Approach #4: Bottom-Up Dynamic Programming (Optimized)
+    # Time: O(k + maxPts)
+    # Space: O(k + maxPts)
     def new21Game(self, n: int, k: int, maxPts: int) -> float:
-        dp: List[float] = [0] * (n + 1)
-        dp[0] = 1
-        s = 1 if k > 0 else 0
-        for i in range(1, n + 1):
-            dp[i] = s / maxPts
-            if i < k:
-                s += dp[i]
-            if i - maxPts >= 0 and i - maxPts < k:
-                s -= dp[i - maxPts]
-        return sum(dp[k:])
+        if k == 0 or k + maxPts <= n:
+            return 1
+        dp: List[float] = [0] * (k + maxPts)
+        wsum = 0
+        for i in range(k, k + maxPts):
+            if i <= n:
+                dp[i] = 1
+                wsum += 1
+        for i in range(k - 1, -1, -1):
+            dp[i] = wsum / maxPts
+            wsum += dp[i] - dp[i + maxPts]
+        return dp[0]
 
     def test(self):
         for n, k, maxPts, expected in [

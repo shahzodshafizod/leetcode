@@ -4,36 +4,63 @@ package dp
 
 // https://leetcode.com/problems/new-21-game/
 
-// Approach #3: Bottom-Up Dynamic Programming (Optimized)
-// Time: O(n)
-// Space: O(n)
+// Approach #4: Bottom-Up Dynamic Programming (Optimized)
+// Time: O(k + maxPts)
+// Space: O(k + maxPts)
 func new21Game(n int, k int, maxPts int) float64 {
-	dp := make([]float64, n+1)
-	dp[0] = 1
-
-	var s float64
-	if k > 0 {
-		s = 1
+	if k == 0 || k+maxPts <= n {
+		return 1
 	}
 
-	for i := 1; i <= n; i++ {
-		dp[i] = s / float64(maxPts)
-		if i < k {
-			s += dp[i]
-		}
+	dp := make([]float64, k+maxPts)
 
-		if i-maxPts >= 0 && i-maxPts < k {
-			s -= dp[i-maxPts]
+	var wsum float64
+
+	for i := k; i < k+maxPts; i++ {
+		if i <= n {
+			dp[i] = 1
+			wsum++
 		}
 	}
 
-	var score float64
-	for i := k; i <= n; i++ {
-		score += dp[i]
+	for i := k - 1; i >= 0; i-- {
+		dp[i] = wsum / float64(maxPts)
+		wsum += dp[i] - dp[i+maxPts]
 	}
 
-	return score
+	return dp[0]
 }
+
+// // Approach #3: Bottom-Up Dynamic Programming (Optimized)
+// // Time: O(n)
+// // Space: O(n)
+// func new21Game(n int, k int, maxPts int) float64 {
+// 	dp := make([]float64, n+1)
+// 	dp[0] = 1
+
+// 	var wsum float64
+// 	if k > 0 {
+// 		wsum = 1
+// 	}
+
+// 	for i := 1; i <= n; i++ {
+// 		dp[i] = wsum / float64(maxPts)
+// 		if i < k {
+// 			wsum += dp[i]
+// 		}
+
+// 		if i-maxPts >= 0 && i-maxPts < k {
+// 			wsum -= dp[i-maxPts]
+// 		}
+// 	}
+
+// 	var score float64
+// 	for i := k; i <= n; i++ {
+// 		score += dp[i]
+// 	}
+
+// 	return score
+// }
 
 // // Approach #2: Bottom-Up Dynamic Programming
 // // Time: O(n * maxPts)

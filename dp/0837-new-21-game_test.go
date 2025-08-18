@@ -9,9 +9,9 @@ import (
 // go test -v -count=1 ./dp/ -run ^TestNew21Game$
 func TestNew21Game(t *testing.T) {
 	for _, tc := range []struct {
-		n int
-		k int
-		maxPts int
+		n           int
+		k           int
+		maxPts      int
 		probability float64
 	}{
 		{n: 10, k: 1, maxPts: 10, probability: 1.00000},

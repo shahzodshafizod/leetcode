@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0679 | [24 Game](https://leetcode.com/problems/24-game/) | Hard | Array, Math, Backtracking | 2025-08-18 | [Go](backtracking/0679-24-game.go) [Python](backtracking/0679-24-game.py)
 | 0837 | [New 21 Game](https://leetcode.com/problems/new-21-game/) | Medium | Math, Dynamic Programming, Sliding Window, Probability and Statistics | 2025-08-17 | [Go](dp/0837-new-21-game.go) [Python](dp/0837-new-21-game.py)
 | 1323 | [Maximum 69 Number](https://leetcode.com/problems/maximum-69-number/) | Easy | Math, Greedy | 2025-08-16 | [Go](greedy/1323-maximum-69-number.go) [Python](greedy/1323-maximum-69-number.py)
 | 2532 | [Time to Cross a Bridge](https://leetcode.com/problems/time-to-cross-a-bridge/) | Hard | Array, Heap (Priority Queue), Simulation | 2025-08-15 | [Go](heaps/2532-time-to-cross-a-bridge.go) [Python](heaps/2532-time-to-cross-a-bridge.py)
