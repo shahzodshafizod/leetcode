@@ -2,6 +2,9 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3195 | [Find the Minimum Area to Cover All Ones I](https://leetcode.com/problems/find-the-minimum-area-to-cover-all-ones-i/) | Medium | Array, Matrix | 2025-08-22 | [Go](matrices/3195-find-the-minimum-area-to-cover-all-ones-i.go) [Python](matrices/3195-find-the-minimum-area-to-cover-all-ones-i.py)
+| 1504 | [Count Submatrices With All Ones](https://leetcode.com/problems/count-submatrices-with-all-ones/) | Medium | Array, Dynamic Programming, Stack, Matrix, Monotonic Stack | 2025-08-21 | [Go](stacks/monotonic/1504-count-submatrices-with-all-ones.go) [Python](stacks/monotonic/1504-count-submatrices-with-all-ones.py)
+| 1277 | [Count Square Submatrices with All Ones](https://leetcode.com/problems/count-square-submatrices-with-all-ones/) | Medium | Array, Dynamic Programming, Matrix | 2025-08-20 | [Go](dp/1277-count-square-submatrices-with-all-ones.go) [Python](dp/1277-count-square-submatrices-with-all-ones.py)
 | 2348 | [Number of Zero-Filled Subarrays](https://leetcode.com/problems/number-of-zero-filled-subarrays/) | Medium | Array, Math | 2025-08-19 | [Go](arrays/2348-number-of-zero-filled-subarrays.go) [Python](arrays/2348-number-of-zero-filled-subarrays.py)
 | 0679 | [24 Game](https://leetcode.com/problems/24-game/) | Hard | Array, Math, Backtracking | 2025-08-18 | [Go](backtracking/0679-24-game.go) [Python](backtracking/0679-24-game.py)
 | 0837 | [New 21 Game](https://leetcode.com/problems/new-21-game/) | Medium | Math, Dynamic Programming, Sliding Window, Probability and Statistics | 2025-08-17 | [Go](dp/0837-new-21-game.go) [Python](dp/0837-new-21-game.py)
