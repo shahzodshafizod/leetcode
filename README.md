@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3197 | [Find the Minimum Area to Cover All Ones II](https://leetcode.com/problems/find-the-minimum-area-to-cover-all-ones-ii/) | Hard | Array, Matrix, Enumeration | 2025-08-23 | [Go](matrices/3197-find-the-minimum-area-to-cover-all-ones-ii.go) [Python](matrices/3197-find-the-minimum-area-to-cover-all-ones-ii.py)
 | 3195 | [Find the Minimum Area to Cover All Ones I](https://leetcode.com/problems/find-the-minimum-area-to-cover-all-ones-i/) | Medium | Array, Matrix | 2025-08-22 | [Go](matrices/3195-find-the-minimum-area-to-cover-all-ones-i.go) [Python](matrices/3195-find-the-minimum-area-to-cover-all-ones-i.py)
 | 1504 | [Count Submatrices With All Ones](https://leetcode.com/problems/count-submatrices-with-all-ones/) | Medium | Array, Dynamic Programming, Stack, Matrix, Monotonic Stack | 2025-08-21 | [Go](stacks/monotonic/1504-count-submatrices-with-all-ones.go) [Python](stacks/monotonic/1504-count-submatrices-with-all-ones.py)
 | 1277 | [Count Square Submatrices with All Ones](https://leetcode.com/problems/count-square-submatrices-with-all-ones/) | Medium | Array, Dynamic Programming, Matrix | 2025-08-20 | [Go](dp/1277-count-square-submatrices-with-all-ones.go) [Python](dp/1277-count-square-submatrices-with-all-ones.py)
