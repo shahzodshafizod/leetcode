@@ -47,17 +47,21 @@ func minimumSum(grid [][]int) int {
 			// horizontal-up: divide horizontally, up is also divided
 			res = min(res,
 				area(lb, col, tb, row)+area(col+1, rb, tb, row)+area(lb, rb, row+1, db))
+
 			// horizontal-down: divide horizontally, down is also divided
 			res = min(res,
 				area(lb, rb, 0, row)+area(lb, col, row+1, db)+area(col+1, rb, row+1, db))
+
 			// vertical-left: divide vertically, left is also divided
 			res = min(res,
 				area(lb, col, tb, row)+area(lb, col, row+1, db)+area(col+1, rb, tb, db))
+
 			// vertical-right: divide vertically, right is also divided
 			res = min(res,
 				area(lb, col, tb, db)+area(col+1, rb, tb, row)+area(col+1, rb, row+1, db))
 		}
 	}
+
 	// two horizontal cuts
 	for row1 := range m - 2 {
 		for row2 := row1; row2 < m-1; row2++ {
@@ -65,6 +69,7 @@ func minimumSum(grid [][]int) int {
 				area(lb, rb, tb, row1)+area(lb, rb, row1+1, row2)+area(lb, rb, row2+1, db))
 		}
 	}
+
 	// two vertical cuts
 	for col1 := range n - 2 {
 		for col2 := col1; col2 < n-1; col2++ {

@@ -39,16 +39,21 @@ class Solution(unittest.TestCase):
             for col in range(lb, rb + 1):
                 # horizontal-up: divide horizontally, up is also divided
                 res = min(res, area(lb, col, tb, row) + area(col + 1, rb, tb, row) + area(lb, rb, row + 1, db))
+
                 # horizontal-down: divide horizontally, down is also divided
                 res = min(res, area(lb, rb, 0, row) + area(lb, col, row + 1, db) + area(col + 1, rb, row + 1, db))
+
                 # vertical-left: divide vertically, left is also divided
                 res = min(res, area(lb, col, tb, row) + area(lb, col, row + 1, db) + area(col + 1, rb, tb, db))
+
                 # vertical-right: divide vertically, right is also divided
                 res = min(res, area(lb, col, tb, db) + area(col + 1, rb, tb, row) + area(col + 1, rb, row + 1, db))
+
         # two horizontal cuts
         for row1 in range(m - 2):
             for row2 in range(row1, m - 1):
                 res = min(res, area(lb, rb, tb, row1) + area(lb, rb, row1 + 1, row2) + area(lb, rb, row2 + 1, db))
+
         # two vertical cuts
         for col1 in range(n - 2):
             for col2 in range(col1, n - 1):
