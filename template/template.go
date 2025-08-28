@@ -2,7 +2,7 @@ package template
 
 /*
 #### (Problem Number)
-[Title](https://leetcode.com/problems//)
+Title
 Difficulty
 [TAGS]
 YYYY-MM-DD
