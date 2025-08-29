@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3021 | Alice and Bob Playing Flower Game | Medium | Math | 2025-08-29 | [Go](maths/3021-alice-and-bob-playing-flower-game.go) [Python](maths/3021-alice-and-bob-playing-flower-game.py)
 | 3072 | Distribute Elements Into Two Arrays II | Hard | Array, Binary Indexed Tree, Segment Tree, Simulation | 2025-08-28 | [Go](fenwicks/3072-distribute-elements-into-two-arrays-ii.go) [Python](fenwicks/3072-distribute-elements-into-two-arrays-ii.py)
 | 3446 | Sort Matrix by Diagonals | Medium | Array, Sorting, Matrix | 2025-08-28 | [Go](matrices/3446-sort-matrix-by-diagonals.go) [Python](matrices/3446-sort-matrix-by-diagonals.py)
 | 3459 | Length of Longest V-Shaped Diagonal Segment | Hard | Array, Dynamic Programming, Memoization, Matrix | 2025-08-27 | [Go](dp/3459-length-of-longest-v-shaped-diagonal-segment.go) [Python](dp/3459-length-of-longest-v-shaped-diagonal-segment.py)
