@@ -16,7 +16,7 @@ func minDifficulty(jobDifficulty []int, d int) int {
 		curr[idx] = 300_001
 	}
 
-	for day := 0; day < d; day++ {
+	for day := range d {
 		prev, curr = curr, prev
 		stack := make([]int, 0)
 		slen := 0

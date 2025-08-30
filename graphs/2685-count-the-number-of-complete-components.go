@@ -38,7 +38,7 @@ func countCompleteComponents(n int, edges [][]int) int {
 
 	count := 0
 
-	for node := 0; node < n; node++ {
+	for node := range n {
 		if !seen[node] {
 			vertices := dfs(node)
 			complete = 1

@@ -9,7 +9,7 @@ func minJumps(arr []int) int {
 	n := len(arr)
 	indices := make(map[int][]int)
 
-	for idx := 0; idx < n; idx++ {
+	for idx := range n {
 		indices[arr[idx]] = append(indices[arr[idx]], idx)
 	}
 

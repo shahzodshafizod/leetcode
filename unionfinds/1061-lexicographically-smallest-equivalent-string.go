@@ -10,7 +10,7 @@ import (
 // Space: O(1)
 func smallestEquivalentString(s1 string, s2 string, baseStr string) string {
 	var root [26]int
-	for idx := 0; idx < 26; idx++ {
+	for idx := range 26 {
 		root[idx] = idx
 	}
 
@@ -27,7 +27,7 @@ func smallestEquivalentString(s1 string, s2 string, baseStr string) string {
 
 	var x, y int
 
-	for idx := 0; idx < n; idx++ {
+	for idx := range n {
 		x = find(int(s1[idx] - 'a'))
 		y = find(int(s2[idx] - 'a'))
 

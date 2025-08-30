@@ -17,7 +17,7 @@ func countGoodTriplets(arr []int, a int, b int, c int) int {
 
 	var i, j, k, x, y, z int
 
-	for i = 0; i < n; i++ {
+	for i = range n {
 		x = arr[i]
 
 		for j = i + 1; j < n; j++ {

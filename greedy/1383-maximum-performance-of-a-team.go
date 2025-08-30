@@ -13,7 +13,7 @@ import (
 // Space: O(n)
 func maxPerformance(n int, speed []int, efficiency []int, k int) int {
 	engineers := make([][2]int, 0, n)
-	for idx := 0; idx < n; idx++ {
+	for idx := range n {
 		engineers = append(engineers, [2]int{efficiency[idx], speed[idx]})
 	}
 

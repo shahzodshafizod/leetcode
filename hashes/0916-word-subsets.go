@@ -10,7 +10,7 @@ func wordSubsets(words1 []string, words2 []string) []string {
 			freq[int(c-'a')]++
 		}
 
-		for idx := 0; idx < 26; idx++ {
+		for idx := range 26 {
 			maxFreq[idx] = max(maxFreq[idx], freq[idx])
 			freq[idx] = 0
 		}
@@ -27,7 +27,7 @@ func wordSubsets(words1 []string, words2 []string) []string {
 
 		universal = true
 
-		for idx := 0; idx < 26; idx++ {
+		for idx := range 26 {
 			if freq[idx] < maxFreq[idx] {
 				universal = false
 			}

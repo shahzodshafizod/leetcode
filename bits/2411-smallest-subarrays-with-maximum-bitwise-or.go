@@ -12,7 +12,7 @@ func smallestSubarrays(nums []int) []int {
 	var maxPos, num int
 	for i := n - 1; i >= 0; i-- {
 		maxPos, num = i, nums[i]
-		for j := 0; j < 32; j++ {
+		for j := range 32 {
 			if num&1 == 1 {
 				pos[j] = i
 			}

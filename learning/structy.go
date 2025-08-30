@@ -294,14 +294,14 @@ func (s *structy) IslandCount(grid [][]byte) int {
 	}
 
 	visited := make([][]bool, m)
-	for row := 0; row < m; row++ {
+	for row := range m {
 		visited[row] = make([]bool, n)
 	}
 
 	islands := 0
 
-	for row := 0; row < m; row++ {
-		for col := 0; col < n; col++ {
+	for row := range m {
+		for col := range n {
 			islands += dfs(row, col, visited)
 		}
 	}
@@ -339,14 +339,14 @@ func (s *structy) MinimumIsland(grid [][]byte) int {
 	}
 
 	visited := make([][]bool, m)
-	for row := 0; row < m; row++ {
+	for row := range m {
 		visited[row] = make([]bool, n)
 	}
 
 	minSize := math.MaxInt
 
-	for row := 0; row < m; row++ {
-		for col := 0; col < n; col++ {
+	for row := range m {
+		for col := range n {
 			if count := count(row, col, visited); count > 0 {
 				minSize = min(minSize, count)
 			}

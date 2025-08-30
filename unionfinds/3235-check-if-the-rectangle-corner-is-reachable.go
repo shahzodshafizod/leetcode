@@ -60,14 +60,14 @@ func canReachCorner(xCorner int, yCorner int, circles [][]int) bool {
 
 	var x2, y2, r2 int
 
-	for i := 0; i < n; i++ {
+	for i := range n {
 		x, y, r = circles[i][0], circles[i][1], circles[i][2]
 		// if circle 1 is out of usable range
 		if x-r >= xCorner || y-r >= yCorner || x >= xCorner && y >= yCorner {
 			continue
 		}
 
-		for j := 0; j < i; j++ {
+		for j := range i {
 			// if already unioned
 			if find(i) == find(j) {
 				continue

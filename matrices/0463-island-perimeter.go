@@ -6,8 +6,8 @@ func islandPerimeter(grid [][]int) int {
 	m, n := len(grid), len(grid[0])
 	blocks, borders := 0, 0
 
-	for row := 0; row < m; row++ {
-		for col := 0; col < n; col++ {
+	for row := range m {
+		for col := range n {
 			if grid[row][col] == 1 {
 				blocks += 4
 

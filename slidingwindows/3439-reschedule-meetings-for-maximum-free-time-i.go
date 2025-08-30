@@ -7,7 +7,7 @@ func maxFreeTime(eventTime int, k int, startTime []int, endTime []int) int {
 
 	var left, right int
 
-	for i := 0; i < n; i++ {
+	for i := range n {
 		busy += endTime[i] - startTime[i]
 
 		left = 0

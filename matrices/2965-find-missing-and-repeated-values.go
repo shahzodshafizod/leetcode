@@ -13,8 +13,8 @@ func findMissingAndRepeatedValues(grid [][]int) []int {
 
 	var twice int
 
-	for row := 0; row < n; row++ {
-		for col := 0; col < n; col++ {
+	for row := range n {
+		for col := range n {
 			if !seen[grid[row][col]] {
 				seen[grid[row][col]] = true
 				sum -= grid[row][col]

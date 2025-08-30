@@ -8,7 +8,7 @@ func minMaxDifference(num int) int {
 	var zeros, nines [10]int
 
 	var digit int
-	for digit = 0; digit < 10; digit++ {
+	for digit = range 10 {
 		zeros[digit] = digit
 		nines[digit] = digit
 	}

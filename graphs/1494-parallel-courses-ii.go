@@ -29,7 +29,7 @@ func minNumberOfSemesters(n int, relations [][]int, k int) int {
 
 		indegree := make([]int, n)
 
-		for node := 0; node < n; node++ {
+		for node := range n {
 			if mask&(1<<node) != 0 {
 				continue
 			}
@@ -42,7 +42,7 @@ func minNumberOfSemesters(n int, relations [][]int, k int) int {
 		availableMask := 0
 		count := 0
 
-		for node := 0; node < n; node++ {
+		for node := range n {
 			if indegree[node] == 0 && mask&(1<<node) == 0 {
 				availableMask |= 1 << node
 				count++

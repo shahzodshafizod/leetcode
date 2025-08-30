@@ -32,7 +32,7 @@ func NewMatrix(grid [][]int) Matrix {
 
 func (m *matrix) BFS() []int {
 	seen := make([][]bool, m.height)
-	for i := 0; i < m.height; i++ {
+	for i := range m.height {
 		seen[i] = make([]bool, m.width)
 	}
 
@@ -66,7 +66,7 @@ func (m *matrix) BFS() []int {
 
 func (m *matrix) DFS() []int {
 	seen := make([][]bool, m.height)
-	for row := 0; row < m.height; row++ {
+	for row := range m.height {
 		seen[row] = make([]bool, m.width)
 	}
 

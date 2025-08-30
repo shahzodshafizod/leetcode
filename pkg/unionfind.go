@@ -33,7 +33,7 @@ func (u *unionFind) Reset(x int) {
 
 func NewUnionFind(size int) UnionFind {
 	uf := &unionFind{parent: make([]int, size)}
-	for i := 0; i < size; i++ {
+	for i := range size {
 		// each node's root is the node itself,
 		// so nodes are disconnected
 		uf.Reset(i)
@@ -71,7 +71,7 @@ type unionFindQuickFind struct {
 
 func NewUnionFindQuickFind(size int) UnionFind {
 	uf := &unionFindQuickFind{make([]int, size)}
-	for idx := 0; idx < size; idx++ {
+	for idx := range size {
 		uf.Reset(idx)
 	}
 
@@ -113,7 +113,7 @@ type unionFindQuickUnion struct {
 
 func NewUnionFindQuickUnion(size int) UnionFind {
 	uf := &unionFindQuickUnion{make([]int, size)}
-	for idx := 0; idx < size; idx++ {
+	for idx := range size {
 		uf.Reset(idx)
 	}
 
@@ -159,7 +159,7 @@ func NewUnionFindRanked(size int) UnionFind {
 		root: make([]int, size),
 		rank: make([]int, size),
 	}
-	for idx := 0; idx < size; idx++ {
+	for idx := range size {
 		uf.Reset(idx)
 	}
 

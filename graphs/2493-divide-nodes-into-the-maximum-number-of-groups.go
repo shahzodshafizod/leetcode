@@ -11,7 +11,7 @@ func magnificentSets(n int, edges [][]int) int {
 	parent := make([]int, n)
 	depth := make([]int, n)
 
-	for node := 0; node < n; node++ {
+	for node := range n {
 		parent[node] = node
 	}
 
@@ -89,7 +89,7 @@ func magnificentSets(n int, edges [][]int) int {
 	groupCounts := make(map[int]int)
 
 	var count, group int
-	for node := 0; node < n; node++ {
+	for node := range n {
 		count = countGroups(node)
 		if count == -1 {
 			return -1

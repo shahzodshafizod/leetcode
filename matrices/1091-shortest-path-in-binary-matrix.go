@@ -22,7 +22,7 @@ func shortestPathBinaryMatrix(grid [][]int) int {
 	for length := len(queue); length > 0; length = len(queue) {
 		count++
 
-		for i := 0; i < length; i++ {
+		for i := range length {
 			cell = queue[i]
 			row = cell[0]
 			col = cell[1]

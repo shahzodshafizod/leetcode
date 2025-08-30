@@ -17,7 +17,7 @@ func NewMyHashMap() MyHashMap {
 	keys := make([]*pkg.ListNode, capacity)
 	vals := make([]*pkg.ListNode, capacity)
 
-	for i := 0; i < capacity; i++ {
+	for i := range capacity {
 		keys[i] = &pkg.ListNode{} // dummy head node
 		vals[i] = &pkg.ListNode{} // dummy head node
 	}

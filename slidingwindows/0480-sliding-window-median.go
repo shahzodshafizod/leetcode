@@ -15,7 +15,7 @@ func medianSlidingWindow(nums []int, k int) []float64 {
 	maxHeap := pkg.NewHeap(make([]int, 0), func(x, y int) bool { return x > y })
 	minHeap := pkg.NewHeap(make([]int, 0), func(x, y int) bool { return x < y })
 
-	for idx := 0; idx < k; idx++ {
+	for idx := range k {
 		heap.Push(maxHeap, nums[idx])
 		heap.Push(minHeap, heap.Pop(maxHeap))
 

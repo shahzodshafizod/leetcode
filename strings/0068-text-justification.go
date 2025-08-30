@@ -21,7 +21,7 @@ func fullJustify(words []string, maxWidth int) []string {
 			extra = spaces % max(1, wcount-1)
 
 			spaces /= max(1, wcount-1)
-			for j := 0; j < wcount-1; j++ {
+			for j := range wcount - 1 {
 				line[j] += strings.Repeat(" ", spaces)
 				if extra > 0 {
 					line[j] += " "

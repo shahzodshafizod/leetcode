@@ -92,8 +92,8 @@ Step 2: Write out some test cases
 // https://leetcode.com/problems/sudoku-solver/
 
 func solveSudoku(board [][]byte) {
-	for row := 0; row < 9; row++ {
-		for col := 0; col < 9; col++ {
+	for row := range 9 {
+		for col := range 9 {
 			if board[row][col] == '.' {
 				continue
 			}
@@ -110,7 +110,7 @@ func solveSudoku(board [][]byte) {
 func sudokuIsValid(board [][]byte, row, col int, num byte) bool {
 	blkrow, blkcol := (row/3)*3, (col/3)*3
 
-	for i := 0; i < 9; i++ {
+	for i := range 9 {
 		if i != row && board[i][col] == num {
 			return false
 		}

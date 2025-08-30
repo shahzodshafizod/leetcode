@@ -12,10 +12,10 @@ func maximalRectangle(matrix [][]byte) int {
 	stack := make([][2]int, cols) // increasing stack {index, height}
 
 	var top, index, height, width int
-	for row := 0; row < rows; row++ { // O(rows)
+	for row := range rows { // O(rows)
 		top = -1 // reset the stack
 
-		for col := 0; col < cols; col++ { // O(rows*cols)
+		for col := range cols { // O(rows*cols)
 			if matrix[row][col] == '0' {
 				heights[col] = 0
 			} else {

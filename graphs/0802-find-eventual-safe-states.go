@@ -30,7 +30,7 @@ func eventualSafeNodes(graph [][]int) []int {
 	}
 	result := make([]int, 0)
 
-	for node := 0; node < n; node++ {
+	for node := range n {
 		if dfs(node) {
 			result = append(result, node)
 		}

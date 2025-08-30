@@ -16,7 +16,7 @@ func wonderfulSubstrings(word string) int64 {
 		// add count of same previous states
 		result += freq[mask]
 
-		for idx := 0; idx < 10; idx++ {
+		for idx := range 10 {
 			key = mask ^ (1 << idx)
 			if value, exists := freq[key]; exists {
 				result += value

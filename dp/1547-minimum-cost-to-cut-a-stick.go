@@ -22,7 +22,7 @@ func minCost(n int, cuts []int) int {
 
 	var start, end, mid, cost int
 	for diff := 2; diff < m; diff++ {
-		for start = 0; start < m-diff; start++ {
+		for start = range m - diff {
 			end = start + diff
 			dp[start][end] = math.MaxInt
 			cost = cuts[end] - cuts[start]

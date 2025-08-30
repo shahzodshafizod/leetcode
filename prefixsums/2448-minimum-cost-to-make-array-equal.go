@@ -21,7 +21,7 @@ func minCost(nums []int, cost []int) int64 {
 	sort.Slice(indices, func(i, j int) bool { return nums[indices[i]] < nums[indices[j]] })
 
 	var postMult, postCost int64 = 0, 0
-	for idx := 0; idx < n; idx++ {
+	for idx := range n {
 		postMult += int64(nums[idx] * cost[idx])
 		postCost += int64(cost[idx])
 	}

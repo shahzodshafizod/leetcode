@@ -11,10 +11,10 @@ func lengthAfterTransformations(s string, t int, nums []int) int {
 	multiply := func(a, b [26][26]int) [26][26]int {
 		var c [26][26]int
 
-		for i := 0; i < 26; i++ {
-			for j := 0; j < 26; j++ {
+		for i := range 26 {
+			for j := range 26 {
 				if a[i][j] != 0 {
-					for k := 0; k < 26; k++ {
+					for k := range 26 {
 						c[i][k] = (c[i][k] + a[i][j]*b[j][k]) % mod
 					}
 				}
@@ -26,7 +26,7 @@ func lengthAfterTransformations(s string, t int, nums []int) int {
 	powMatrix := func(base [26][26]int, exp int) [26][26]int {
 		// identity matrix
 		var res [26][26]int
-		for i := 0; i < 26; i++ {
+		for i := range 26 {
 			res[i][i] = 1
 		}
 
@@ -43,7 +43,7 @@ func lengthAfterTransformations(s string, t int, nums []int) int {
 
 	var transformation [26][26]int
 
-	for i := 0; i < 26; i++ {
+	for i := range 26 {
 		for j := 1; j <= nums[i]; j++ {
 			transformation[(i+j)%26][i] = 1
 		}
@@ -57,7 +57,7 @@ func lengthAfterTransformations(s string, t int, nums []int) int {
 		letter = int(c - 'a')
 		rowSum = 0
 
-		for j := 0; j < 26; j++ {
+		for j := range 26 {
 			rowSum = (rowSum + final[j][letter]) % mod
 		}
 

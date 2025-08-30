@@ -34,7 +34,7 @@ func kMirror(k int, n int) int64 {
 
 	for left = 1; n > 0; left = right {
 		right = left * 10
-		for p := 0; p < 2; p++ {
+		for p := range 2 {
 			for i = left; i < right && n > 0; i++ {
 				mirror, tmp = int64(i), int64(i)
 				if p == 0 {

@@ -6,7 +6,7 @@ package dp
 // space: O(M)
 func uniquePaths(m int, n int) int {
 	count := make([]int, n)
-	for i := 0; i < n; i++ {
+	for i := range n {
 		count[i] = 1
 	}
 

@@ -22,7 +22,7 @@ func licenseKeyFormatting(s string, k int) string {
 		err error
 	)
 
-	for idx := 0; idx < n; idx++ {
+	for idx := range n {
 		if s[idx] != '-' {
 			if count == 0 {
 				err = sb.WriteByte('-')

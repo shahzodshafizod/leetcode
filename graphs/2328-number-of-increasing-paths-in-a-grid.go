@@ -42,8 +42,8 @@ func countPaths(grid [][]int) int {
 	}
 	count := 0
 
-	for row := 0; row < m; row++ {
-		for col := 0; col < n; col++ {
+	for row := range m {
+		for col := range n {
 			count = (count + dfs(row, col)) % mod
 		}
 	}

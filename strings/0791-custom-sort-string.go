@@ -8,7 +8,7 @@ func customSortString(order string, s string) string {
 	var counts [26]int
 
 	slen := len(s)
-	for idx := 0; idx < slen; idx++ {
+	for idx := range slen {
 		counts[s[idx]-'a']++
 	}
 

@@ -9,7 +9,7 @@ func findDifferentBinaryString(nums []string) string {
 	n := len(nums)
 	num := make([]byte, n)
 
-	for idx := 0; idx < n; idx++ {
+	for idx := range n {
 		if nums[idx][idx] == '0' {
 			num[idx] = '1'
 		} else {

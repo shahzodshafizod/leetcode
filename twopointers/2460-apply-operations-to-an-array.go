@@ -7,7 +7,7 @@ package twopointers
 // Space: O(1)
 func applyOperations(nums []int) []int {
 	n, left := len(nums), 0
-	for idx := 0; idx < n; idx++ {
+	for idx := range n {
 		if nums[idx] == 0 {
 			continue
 		}

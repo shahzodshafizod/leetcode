@@ -9,7 +9,7 @@ func maxSumOfThreeSubarrays(nums []int, k int) []int {
 	n := len(nums)
 
 	sums := make([]int, n)
-	for idx := 0; idx < k; idx++ {
+	for idx := range k {
 		sums[0] += nums[idx]
 	}
 

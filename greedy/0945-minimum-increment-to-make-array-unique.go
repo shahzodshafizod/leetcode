@@ -18,7 +18,7 @@ func minIncrementForUnique(nums []int) int {
 
 	moves := 0
 
-	for num := 0; num < n; num++ { // O(len)
+	for num := range n { // O(len)
 		if count[num] > 1 {
 			moves += count[num] - 1
 			count[num+1] += count[num] - 1

@@ -16,7 +16,7 @@ func countSubstrings(s string) int {
 	}
 	count := 0
 
-	for i := 0; i < n; i++ {
+	for i := range n {
 		count += expand(i, i)
 		if i+1 < n {
 			count += expand(i, i+1)

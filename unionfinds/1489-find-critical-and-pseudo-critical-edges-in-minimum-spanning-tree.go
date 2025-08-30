@@ -34,7 +34,7 @@ func findCriticalAndPseudoCriticalEdges(n int, edges [][]int) [][]int {
 	sort.Slice(edges, func(i, j int) bool { return edges[i][2] < edges[j][2] })
 
 	kruskal := func(skip int, pick int) int {
-		for idx := 0; idx < n; idx++ {
+		for idx := range n {
 			parent[idx] = idx
 		}
 

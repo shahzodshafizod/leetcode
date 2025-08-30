@@ -10,7 +10,7 @@ func findTargetSumWays(nums []int, target int) int {
 	dp := make(map[int]int)
 	dp[0] = 1
 
-	for idx := 0; idx < n; idx++ {
+	for idx := range n {
 		prev := dp
 		dp = make(map[int]int)
 

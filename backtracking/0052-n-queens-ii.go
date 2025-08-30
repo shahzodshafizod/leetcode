@@ -16,7 +16,7 @@ func totalNQueens(n int) int {
 
 		solutions := 0
 
-		for col := 0; col < n; col++ {
+		for col := range n {
 			if cols[col] || diag[row+col] || backDiag[n-row+col] {
 				continue
 			}

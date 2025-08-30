@@ -17,7 +17,7 @@ func getMaximumGold(grid [][]int) int {
 		grid[row][col] = 0
 		maxgold := 0
 
-		for idx := 0; idx < 4; idx++ {
+		for idx := range 4 {
 			r, c := row+directions[idx], col+directions[idx+1]
 			if min(r, c) >= 0 && r < m && c < n && grid[r][c] != 0 {
 				maxgold = max(maxgold, dfs(r, c))
@@ -30,8 +30,8 @@ func getMaximumGold(grid [][]int) int {
 	}
 	maxgold := 0
 
-	for row := 0; row < m; row++ {
-		for col := 0; col < n; col++ {
+	for row := range m {
+		for col := range n {
 			if grid[row][col] != 0 {
 				maxgold = max(maxgold, dfs(row, col))
 			}

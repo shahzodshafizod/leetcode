@@ -17,7 +17,7 @@ func cherryPickupII(grid [][]int) int {
 	for row := m - 1; row >= 0; row-- {
 		next, curr = curr, next
 
-		for col1 := 0; col1 < n-1; col1++ {
+		for col1 := range n - 1 {
 			for col2 := col1 + 1; col2 < n; col2++ {
 				count = 0
 

@@ -76,7 +76,7 @@ func (m *MyLinkedList) getNodeAtIndex(index int) *pkg.DListNode {
 	}
 
 	node := m.head.Next
-	for i := 0; i < index; i++ {
+	for range index {
 		node = node.Next
 	}
 

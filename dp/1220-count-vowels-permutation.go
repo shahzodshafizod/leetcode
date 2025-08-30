@@ -35,7 +35,7 @@ func countVowelPermutation(n int) int {
 		curr[4] = (prev[0]) % mod
 		count = 0
 
-		for i := 0; i < 5; i++ {
+		for i := range 5 {
 			prev[i] = curr[i]
 			count = (count + curr[i]) % mod
 		}

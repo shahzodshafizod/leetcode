@@ -14,7 +14,7 @@ func newUF(n int) *uf {
 		par:  make([]int, n+1),
 		rank: make([]int, n+1),
 	}
-	for i := 0; i < n; i++ {
+	for i := range n {
 		uf.par[i] = i
 		uf.rank[i] = 1
 	}

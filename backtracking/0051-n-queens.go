@@ -31,7 +31,7 @@ func solveNQueens(n int) [][]string {
 			return
 		}
 
-		for col := 0; col < n; col++ {
+		for col := range n {
 			if cols[col] || negDiag[n-row+col] || posDiag[row+col] {
 				continue
 			}

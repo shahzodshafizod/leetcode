@@ -44,7 +44,7 @@ func maxTargetNodes3373(edges1 [][]int, edges2 [][]int) []int {
 	count1 := [2]int{n - evens1, evens1}
 
 	answer := make([]int, n)
-	for node := 0; node < n; node++ {
+	for node := range n {
 		answer[node] = count1[color1[node]] + max2
 	}
 

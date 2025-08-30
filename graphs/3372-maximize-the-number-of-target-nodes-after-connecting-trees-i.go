@@ -37,7 +37,7 @@ func maxTargetNodes(edges1 [][]int, edges2 [][]int, k int) []int {
 		answer := make([]int, n)
 		mx := 0
 
-		for node := 0; node < n; node++ {
+		for node := range n {
 			answer[node] = dfs(-1, node, adj, k) + val
 			mx = max(mx, answer[node])
 		}

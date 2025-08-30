@@ -9,7 +9,7 @@ func minimumIndex(nums []int) int {
 	n := len(nums)
 	dominant, count := nums[0], 0
 
-	for idx := 0; idx < n; idx++ {
+	for idx := range n {
 		if nums[idx] == dominant {
 			count++
 		} else {
@@ -24,13 +24,13 @@ func minimumIndex(nums []int) int {
 
 	prefix, suffix := 0, 0
 
-	for idx := 0; idx < n; idx++ {
+	for idx := range n {
 		if nums[idx] == dominant {
 			suffix++
 		}
 	}
 
-	for idx := 0; idx < n; idx++ {
+	for idx := range n {
 		if nums[idx] == dominant {
 			prefix++
 			suffix--

@@ -23,7 +23,7 @@ func mostBooked(n int, meetings [][]int) int {
 	)
 	// sorted array is a valid heap
 	rooms := make([]int, n)
-	for room := 0; room < n; room++ {
+	for room := range n {
 		rooms[room] = room
 	}
 

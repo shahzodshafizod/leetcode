@@ -115,8 +115,6 @@ linters:
 
   # Disable specific linters.
   disable:
-    - cyclop # 57
-    - depguard # 877
     - dupl # 14
     - dupword # 45
     - exhaustruct # 69
@@ -127,10 +125,8 @@ linters:
     - gocognit # 10
     - goconst # 5
     - gocritic # 37
-    - godot # 1052
     - gosec # 12
     - inamedparam # 9
-    - intrange # 251
     - ireturn # 18
     - lll # 434
     - mnd # 232
@@ -161,6 +157,30 @@ linters:
           arguments: [27]
         - name: cognitive-complexity
           arguments: [41]
+    cyclop:
+      max-complexity: 27 # 10
+      # package-average: 0
+    depguard:
+      rules:
+        main:
+          allow:
+            - testing
+            - sort
+            - math
+            - strings
+            - container/heap
+            - container/list
+            - strconv
+            - slices
+            - bytes
+            - unicode
+            - fmt
+            - maps
+            - reflect
+            - github.com/stretchr/testify/assert
+            - github.com/shahzodshafizod/leetcode/pkg
+    godot:
+      period: false
 
   # exclusions:
 

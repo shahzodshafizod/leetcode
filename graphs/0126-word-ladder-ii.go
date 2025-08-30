@@ -12,7 +12,7 @@ func findLadders(beginWord string, endWord string, wordList []string) [][]string
 		found = found || word == endWord
 
 		pattern := []byte(word)
-		for idx := 0; idx < m; idx++ {
+		for idx := range m {
 			tmp := pattern[idx]
 			pattern[idx] = '*'
 			graph[string(pattern)] = append(graph[string(pattern)], word)
@@ -35,7 +35,7 @@ func findLadders(beginWord string, endWord string, wordList []string) [][]string
 
 		for _, word := range queue {
 			pattern := []byte(word)
-			for idx := 0; idx < m; idx++ {
+			for idx := range m {
 				tmp := pattern[idx]
 
 				pattern[idx] = '*'

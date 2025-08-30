@@ -15,7 +15,7 @@ func isZeroArray(nums []int, queries [][]int) bool {
 	}
 
 	presum := 0
-	for idx := 0; idx < n; idx++ {
+	for idx := range n {
 		presum += line[idx]
 		if nums[idx] > presum {
 			return false

@@ -29,7 +29,7 @@ func findFarmland(land [][]int) [][]int {
 
 	var r2, c2 int
 
-	for row := 0; row < m; row++ {
+	for row := range m {
 		for col := 0; col < n; col++ {
 			if land[row][col] == 1 {
 				r2, c2 = dfs(row, col)

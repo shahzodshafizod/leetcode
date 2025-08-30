@@ -26,7 +26,7 @@ func TestRemoveElement(t *testing.T) {
 		k := removeElement(tc.nums, tc.val)
 		assert.Equal(t, tc.k, k)
 
-		for i := 0; i < k; i++ {
+		for i := range k {
 			assert.Equal(t, tc.expectedNums[i], tc.nums[i])
 		}
 	}

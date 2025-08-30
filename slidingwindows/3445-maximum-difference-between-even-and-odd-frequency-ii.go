@@ -33,7 +33,7 @@ func maxDifference(s string, k int) int {
 
 		maxDiff := -n
 
-		for idx := 0; idx < n; idx++ {
+		for idx := range n {
 			switch s[idx] {
 			case a:
 				cnta++

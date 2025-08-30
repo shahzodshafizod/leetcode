@@ -175,7 +175,7 @@ func (m *memoization) GridTravaler(mm int, n int) int {
 	}
 
 	memo := make([][]int, mm)
-	for i := 0; i < mm; i++ {
+	for i := range mm {
 		memo[i] = make([]int, n)
 	}
 
@@ -473,7 +473,7 @@ func (t *tabulation) GridTravaler(m int, n int) int {
 	array := make([]int, m)
 	array[0] = 1
 
-	for col := 0; col < n; col++ {
+	for range n {
 		for row := 1; row < m; row++ {
 			array[row] += array[row-1]
 		}

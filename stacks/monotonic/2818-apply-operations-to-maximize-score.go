@@ -44,7 +44,7 @@ func maximumScore(nums []int, k int) int {
 	stack := make([]int, n)
 	size := 0
 
-	for idx := 0; idx < n; idx++ {
+	for idx := range n {
 		for size > 0 && scores[stack[size-1]] < scores[idx] {
 			size--
 		}

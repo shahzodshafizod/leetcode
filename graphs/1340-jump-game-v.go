@@ -30,7 +30,7 @@ func maxJumps(arr []int, d int) int {
 	}
 	maxJump := 0
 
-	for idx := 0; idx < n; idx++ {
+	for idx := range n {
 		maxJump = max(maxJump, dfs(idx))
 	}
 

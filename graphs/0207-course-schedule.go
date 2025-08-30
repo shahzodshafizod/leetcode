@@ -81,7 +81,7 @@ func canFinish(numCourses int, prerequisites [][]int) bool {
 
 	stack := make([]int, 0)
 
-	for i := 0; i < numCourses; i++ {
+	for i := range numCourses {
 		if inDegree[i] == 0 {
 			stack = append(stack, i)
 		}

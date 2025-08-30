@@ -13,7 +13,7 @@ func trapRainWater(heightMap [][]int) int {
 	m, n := len(heightMap), len(heightMap[0])
 	queue := pkg.NewHeap(make([][3]int, 0), func(x [3]int, y [3]int) bool { return x[0] < y[0] })
 
-	for row := 0; row < m; row++ {
+	for row := range m {
 		heap.Push(queue, [3]int{heightMap[row][0], row, 0})
 		heap.Push(queue, [3]int{heightMap[row][n-1], row, n - 1})
 		heightMap[row][0] = -1

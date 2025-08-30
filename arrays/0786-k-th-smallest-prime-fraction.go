@@ -21,7 +21,7 @@ func kthSmallestPrimeFraction(arr []int, k int) []int {
 		numerator, denominator = 0, 0
 
 		j = 1
-		for i := 0; i < n; i++ {
+		for i := range n {
 			for j < n && float64(arr[i]) >= mid*float64(arr[j]) {
 				j++
 			}

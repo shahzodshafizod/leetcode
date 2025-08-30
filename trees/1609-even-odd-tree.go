@@ -18,7 +18,7 @@ func isEvenOddTree(root *pkg.TreeNode) bool {
 			factor = -1
 		}
 
-		for i := 0; i < length; i++ {
+		for i := range length {
 			node := queue[i]
 			if node.Val&1 == levelParity ||
 				i > 0 && (node.Val-queue[i-1].Val)*factor <= 0 {

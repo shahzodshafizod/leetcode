@@ -28,7 +28,7 @@ func knightProbability(n int, k int, row int, column int) float64 {
 	prev := make([][]float64, n)
 	curr := make([][]float64, n)
 
-	for i := 0; i < n; i++ {
+	for i := range n {
 		prev[i] = make([]float64, n)
 		curr[i] = make([]float64, n)
 	}
@@ -43,8 +43,8 @@ func knightProbability(n int, k int, row int, column int) float64 {
 	for step := 1; step <= k; step++ {
 		res = 0
 
-		for r := 0; r < n; r++ {
-			for c := 0; c < n; c++ {
+		for r := range n {
+			for c := range n {
 				curr[r][c] = 0
 
 				for _, way := range ways {

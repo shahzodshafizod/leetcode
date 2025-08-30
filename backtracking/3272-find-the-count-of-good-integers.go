@@ -67,7 +67,7 @@ func countGoodIntegers(n int, k int) int64 {
 
 	for number := range palindromes {
 		var freq [10]int
-		for idx := 0; idx < n; idx++ {
+		for range n {
 			freq[number%10]++
 			number /= 10
 		}

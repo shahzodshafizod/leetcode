@@ -17,7 +17,7 @@ func decrypt(code []int, k int) []int {
 	}
 
 	decrypted := make([]int, n)
-	for idx := 0; idx < n; idx++ {
+	for idx := range n {
 		decrypted[idx] = presum
 		presum = presum - code[start%n] + code[(end+1)%n]
 		start, end = start+1, end+1

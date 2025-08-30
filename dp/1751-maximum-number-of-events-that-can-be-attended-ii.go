@@ -16,7 +16,7 @@ func maxValue(events [][]int, k int) int {
 	next := make([]int, n)
 
 	var left, right, mid int
-	for idx := 0; idx < n; idx++ {
+	for idx := range n {
 		left, right = idx+1, n
 		for left < right {
 			mid = left + (right-left)/2

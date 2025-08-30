@@ -51,8 +51,8 @@ func orangesRotting(grid [][]int) int {
 	rottens := make([][2]int, 0)
 	freshes := 0
 
-	for row := 0; row < m; row++ {
-		for col := 0; col < n; col++ {
+	for row := range m {
+		for col := range n {
 			switch grid[row][col] {
 			case 1:
 				freshes++
@@ -65,7 +65,7 @@ func orangesRotting(grid [][]int) int {
 	minutes := 0
 
 	for length := len(rottens); length > 0; {
-		for i := 0; i < length; i++ {
+		for i := range length {
 			for _, direction := range directions {
 				row, col := rottens[i][0]+direction[0], rottens[i][1]+direction[1]
 				if row >= 0 && col >= 0 && row < m && col < n && grid[row][col] == 1 {

@@ -53,7 +53,7 @@ Step 2: Write out some test cases
 func numOfMinutes(n int, headID int, manager []int, informTime []int) int {
 	adjacencyList := make([][]int, n)
 
-	for id := 0; id < n; id++ {
+	for id := range n {
 		if manager[id] != -1 {
 			if adjacencyList[manager[id]] == nil {
 				adjacencyList[manager[id]] = []int{id}

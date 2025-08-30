@@ -14,7 +14,7 @@ func minDominoRotations(tops []int, bottoms []int) int {
 	for _, target := range []int{tops[0], bottoms[0]} {
 		tswaps, bswaps := 0, 0
 
-		for idx = 0; idx < n; idx++ {
+		for idx = 0; idx < n; idx++ { //nolint:intrange
 			if tops[idx] != target && bottoms[idx] != target {
 				break
 			} else if tops[idx] != target {

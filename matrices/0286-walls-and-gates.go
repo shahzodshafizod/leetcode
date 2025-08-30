@@ -40,8 +40,8 @@ func wallsAndGates(matrix [][]int) [][]int {
 
 	directions := [4][2]int{{-1, 0}, {0, 1}, {1, 0}, {0, -1}} // up, right, down and left
 
-	for row := 0; row < m; row++ {
-		for col := 0; col < n; col++ {
+	for row := range m {
+		for col := range n {
 			if matrix[row][col] == 0 {
 				wallsAndGatesDFS(matrix, directions, m, n, row, col, 0)
 			}

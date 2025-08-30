@@ -11,7 +11,7 @@ func maxFreeTime(eventTime int, startTime []int, endTime []int) int {
 	slot, left := 0, 0
 
 	var right, meeting int
-	for i := 0; i < n; i++ {
+	for i := range n {
 		meeting = endTime[i] - startTime[i]
 		if slot >= meeting {
 			meeting = 0

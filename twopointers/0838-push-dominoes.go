@@ -42,7 +42,7 @@ func pushDominoes(dominoes string) string {
 
 	f = 0
 
-	for idx := 0; idx < n; idx++ {
+	for idx := range n {
 		switch dominoes[idx] {
 		case 'R':
 			f = n

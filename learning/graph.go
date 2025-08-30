@@ -1537,7 +1537,7 @@ func (g *graph) TopologicalSortBFS(adjList map[int][]*Edge, n int) []int {
 	visited := make(map[int]bool)
 	queue := pkg.NewQueue[int]()
 
-	for src := 0; src < n; src++ {
+	for src := range n {
 		if indegrees[src] == 0 && !visited[src] {
 			queue.Enqueue(src)
 
@@ -1587,7 +1587,7 @@ func (g *graph) TopologicalSortDFS(adjList map[int][]*Edge, n int) []int {
 	visited := make(map[int]bool)
 	idx := n - 1
 
-	for src := 0; src < n; src++ {
+	for src := range n {
 		if !visited[src] {
 			visited[src] = true
 			idx = dfs(src, visited, idx, sorted)
@@ -1709,7 +1709,7 @@ func (g *graph) BellmanFord(adjList map[int][]*Edge, s int, n int) []int {
 
 	dist[s] = 0
 	// step 2: relax edges
-	for i := 0; i < n-1; i++ {
+	for range n - 1 {
 		for src, edges := range adjList {
 			for _, edge := range edges {
 				if dist[src] != math.MaxInt {
@@ -1719,7 +1719,7 @@ func (g *graph) BellmanFord(adjList map[int][]*Edge, s int, n int) []int {
 		}
 	}
 	// step 3: check for negative-weight cycles
-	for i := 0; i < n-1; i++ {
+	for range n - 1 {
 		for src, edges := range adjList {
 			if dist[src] == math.MaxInt {
 				continue

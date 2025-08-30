@@ -42,8 +42,8 @@ func minDays(grid [][]int) int {
 
 		count := 0
 
-		for row := 0; row < m; row++ {
-			for col := 0; col < n; col++ {
+		for row := range m {
+			for col := range n {
 				count += dfs(row, col, visited)
 			}
 		}
@@ -54,8 +54,8 @@ func minDays(grid [][]int) int {
 		return 0
 	}
 
-	for row := 0; row < m; row++ {
-		for col := 0; col < n; col++ {
+	for row := range m {
+		for col := range n {
 			if grid[row][col] == 0 {
 				continue
 			}

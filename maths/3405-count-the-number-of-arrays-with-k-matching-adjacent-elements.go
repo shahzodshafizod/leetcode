@@ -47,7 +47,7 @@ func countGoodArrays(n int, m int, k int) int {
 		num := 1 // numerator
 		den := 1 // denominator
 
-		for i := 0; i < k; i++ {
+		for i := range k {
 			num = (num * (n - i)) % mod
 			den = (den * (i + 1)) % mod
 		}

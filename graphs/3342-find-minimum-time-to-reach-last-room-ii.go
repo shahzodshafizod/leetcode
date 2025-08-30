@@ -15,7 +15,7 @@ func minTimeToReach3342(moveTime [][]int) int {
 	n, m := len(moveTime), len(moveTime[0])
 	seen := make([][]bool, n)
 
-	for row := 0; row < n; row++ {
+	for row := range n {
 		seen[row] = make([]bool, m)
 	}
 

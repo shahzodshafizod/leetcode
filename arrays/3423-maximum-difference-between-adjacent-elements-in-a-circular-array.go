@@ -7,7 +7,7 @@ func maxAdjacentDistance(nums []int) int {
 	n := len(nums)
 	nei := n - 1
 
-	for idx := 0; idx < n; idx++ {
+	for idx := range n {
 		if nums[idx] > nums[nei] {
 			diff = max(diff, nums[idx]-nums[nei])
 		} else {

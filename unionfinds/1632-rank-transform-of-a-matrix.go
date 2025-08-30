@@ -20,10 +20,10 @@ func matrixRankTransform(matrix [][]int) [][]int {
 	list := make(map[int][][2]int)
 
 	answer := make([][]int, m)
-	for row := 0; row < m; row++ {
+	for row := range m {
 		answer[row] = make([]int, n)
 
-		for col := 0; col < n; col++ {
+		for col := range n {
 			list[matrix[row][col]] = append(list[matrix[row][col]], [2]int{row, col})
 		}
 	}

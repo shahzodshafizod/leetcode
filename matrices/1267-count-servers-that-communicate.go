@@ -9,8 +9,8 @@ func countServers(grid [][]int) int {
 	m, n := len(grid), len(grid[0])
 	rcount, ccount := make([]int, m), make([]int, n)
 
-	for row := 0; row < m; row++ {
-		for col := 0; col < n; col++ {
+	for row := range m {
+		for col := range n {
 			rcount[row] += grid[row][col]
 			ccount[col] += grid[row][col]
 		}
@@ -18,8 +18,8 @@ func countServers(grid [][]int) int {
 
 	count := 0
 
-	for row := 0; row < m; row++ {
-		for col := 0; col < n; col++ {
+	for row := range m {
+		for col := range n {
 			if grid[row][col] == 1 && rcount[row]+ccount[col] > 2 {
 				count++
 			}

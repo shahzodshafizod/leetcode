@@ -24,13 +24,13 @@ func maxScore(nums []int) int {
 	dp := make([]int, limit)
 
 	var count, newMask int
-	for mask := 0; mask < limit; mask++ {
+	for mask := range limit {
 		count = bits.OnesCount(uint(mask))
 		if count&1 == 1 {
 			continue
 		}
 
-		for i := 0; i < n; i++ {
+		for i := range n {
 			if mask&(1<<i) == 0 {
 				continue
 			}

@@ -24,9 +24,9 @@ func findTheCity(n int, edges [][]int, distanceThreshold int) int {
 	}
 	// Floyd-Warshall algorithm to compute
 	// shortest paths between all pairs of cities
-	for through := 0; through < n; through++ {
-		for from := 0; from < n; from++ {
-			for to := 0; to < n; to++ {
+	for through := range n {
+		for from := range n {
+			for to := range n {
 				adjMatrix[from][to] = min(
 					adjMatrix[from][to],
 					adjMatrix[from][through]+adjMatrix[through][to], // !!!dangerous section: MAX+MAX becomes negative!!!
@@ -42,7 +42,7 @@ func findTheCity(n int, edges [][]int, distanceThreshold int) int {
 	for from := n - 1; from >= 0; from-- {
 		connections = 0
 
-		for to := 0; to < n; to++ {
+		for to := range n {
 			if from != to && adjMatrix[from][to] <= distanceThreshold {
 				connections++
 			}

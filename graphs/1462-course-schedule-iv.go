@@ -18,7 +18,7 @@ func checkIfPrerequisite(numCourses int, prerequisites [][]int, queries [][]int)
 	queue := list.New()
 
 	reach := make([][]bool, numCourses)
-	for course := 0; course < numCourses; course++ {
+	for course := range numCourses {
 		reach[course] = make([]bool, numCourses)
 
 		if indegree[course] == 0 {
@@ -32,7 +32,7 @@ func checkIfPrerequisite(numCourses int, prerequisites [][]int, queries [][]int)
 
 		for _, dst := range adjList[src] {
 			reach[dst][src] = true
-			for node := 0; node < numCourses; node++ {
+			for node := range numCourses {
 				reach[dst][node] = reach[dst][node] || reach[src][node]
 			}
 

@@ -9,8 +9,8 @@ func kWeakestRows(mat [][]int, k int) []int {
 	soldiers := make([]int, m)
 	indices := make([]int, m)
 
-	for row := 0; row < m; row++ {
-		for col := 0; col < n; col++ {
+	for row := range m {
+		for col := range n {
 			soldiers[row] += mat[row][col]
 		}
 

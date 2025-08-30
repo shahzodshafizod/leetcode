@@ -9,7 +9,7 @@ func setZeroes(matrix [][]int) {
 	m, n := len(matrix), len(matrix[0])
 	firstCol := false
 
-	for row := 0; row < m; row++ {
+	for row := range m {
 		if matrix[row][0] == 0 {
 			firstCol = true
 		}

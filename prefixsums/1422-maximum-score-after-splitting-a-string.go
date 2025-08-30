@@ -9,7 +9,7 @@ func maxScore(s string) int {
 	score := 0
 
 	n := len(s)
-	for idx := 0; idx < n-1; idx++ {
+	for idx := range n - 1 {
 		if s[idx] == '0' {
 			zeroes++
 		} else {

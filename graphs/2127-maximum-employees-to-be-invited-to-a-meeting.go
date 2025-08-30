@@ -27,13 +27,13 @@ func maximumInvitations(favorite []int) int {
 	n := len(favorite)
 	indegree := make([]int, n)
 
-	for empl := 0; empl < n; empl++ {
+	for empl := range n {
 		indegree[favorite[empl]]++
 	}
 
 	queue := list.New()
 
-	for empl := 0; empl < n; empl++ {
+	for empl := range n {
 		if indegree[empl] == 0 {
 			queue.PushBack(empl)
 		}
@@ -64,7 +64,7 @@ func maximumInvitations(favorite []int) int {
 
 	var cycleLength, tmpEmpl int
 
-	for empl := 0; empl < n; empl++ {
+	for empl := range n {
 		if indegree[empl] == 0 {
 			continue
 		}

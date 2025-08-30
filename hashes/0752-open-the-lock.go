@@ -21,8 +21,8 @@ func openLock(deadends []string, target string) int {
 	level := 1
 
 	for length := len(queue); length > 0; length = len(queue) {
-		for idx := 0; idx < length; idx++ {
-			for digit := 0; digit < 4; digit++ {
+		for idx := range length {
+			for digit := range 4 {
 				for _, op := range []int{-1, 1} {
 					next := []byte(queue[idx])
 					next[digit] = '0' + uint8((int(next[digit]-'0')+op+10)%10)

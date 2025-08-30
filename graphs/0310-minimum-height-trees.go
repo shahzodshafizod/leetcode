@@ -36,7 +36,7 @@ func findMinHeightTrees(n int, edges [][]int) []int {
 	for length = len(leaves); n > 2; length = len(leaves) {
 		n -= length
 
-		for idx := 0; idx < length; idx++ {
+		for idx := range length {
 			for _, neighbor := range adjList[leaves[idx]] {
 				count[neighbor]--
 				if count[neighbor] == 1 {

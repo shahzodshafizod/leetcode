@@ -63,7 +63,7 @@ func getAncestors(n int, edges [][]int) [][]int {
 			}
 		}
 	}
-	for ancestor := 0; ancestor < n; ancestor++ { // O(N)
+	for ancestor := range n { // O(N)
 		dfs(ancestor, ancestor) // O(M) = maximal path length
 	}
 

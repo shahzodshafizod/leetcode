@@ -10,8 +10,8 @@ func firstCompleteIndex(arr []int, mat [][]int) int {
 	positions := make([][2]int, m*n+1)
 
 	var row, col int
-	for row = 0; row < m; row++ {
-		for col = 0; col < n; col++ {
+	for row = range m {
+		for col = range n {
 			positions[mat[row][col]] = [2]int{row, col}
 		}
 	}

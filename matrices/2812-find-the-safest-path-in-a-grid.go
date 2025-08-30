@@ -37,7 +37,7 @@ func maximumSafenessFactor(grid [][]int) int {
 
 	for length-idx > 0 {
 		for idx < length {
-			for dir := 0; dir < 4; dir++ {
+			for dir := range 4 {
 				dist = queue[idx][0]
 				row = queue[idx][1] + directions[dir]
 				col = queue[idx][2] + directions[dir+1]
@@ -69,7 +69,7 @@ func maximumSafenessFactor(grid [][]int) int {
 			return dist
 		}
 
-		for dir := 0; dir < 4; dir++ {
+		for dir := range 4 {
 			r := row + directions[dir]
 			c := col + directions[dir+1]
 

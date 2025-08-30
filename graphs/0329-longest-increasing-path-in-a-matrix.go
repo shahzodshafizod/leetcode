@@ -39,8 +39,8 @@ func longestIncreasingPath(matrix [][]int) int {
 	}
 	length := 1
 
-	for row := 0; row < m; row++ {
-		for col := 0; col < n; col++ {
+	for row := range m {
+		for col := range n {
 			length = max(length, dfs(row, col))
 		}
 	}

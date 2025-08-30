@@ -16,7 +16,7 @@ func maxPoints(grid [][]int, queries []int) []int {
 	qn := len(queries)
 	qindices := make([][2]int, qn)
 
-	for idx := 0; idx < qn; idx++ {
+	for idx := range qn {
 		qindices[idx][0] = queries[idx]
 		qindices[idx][1] = idx
 	}
@@ -28,7 +28,7 @@ func maxPoints(grid [][]int, queries []int) []int {
 	m, n := len(grid), len(grid[0])
 	seen := make([][]bool, m)
 
-	for row := 0; row < m; row++ {
+	for row := range m {
 		seen[row] = make([]bool, n)
 	}
 
@@ -46,7 +46,7 @@ func maxPoints(grid [][]int, queries []int) []int {
 
 	points := 0
 
-	for idx := 0; idx < qn; idx++ {
+	for idx := range qn {
 		for queue.Len() > 0 && grid[queue.Peak()[0]][queue.Peak()[1]] < qindices[idx][0] {
 			top, ok := heap.Pop(queue).([2]int)
 			_ = ok

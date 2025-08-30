@@ -14,7 +14,7 @@ func answerString(word string, numFriends int) string {
 	k := n - numFriends + 1
 	largest := ""
 
-	for i := 0; i < n; i++ {
+	for i := range n {
 		largest = max(largest, word[i:min(i+k, n)])
 	}
 

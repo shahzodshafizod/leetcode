@@ -21,7 +21,7 @@ func commonChars(words []string) []string {
 			current[c-'a']++
 		}
 
-		for i := 0; i < n; i++ {
+		for i := range n {
 			common[i] = min(common[i], current[i])
 			current[i] = 0
 		}

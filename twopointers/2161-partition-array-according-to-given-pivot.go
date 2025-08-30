@@ -9,7 +9,7 @@ func pivotArray(nums []int, pivot int) []int {
 	n := len(nums)
 	left := 0
 
-	for idx := 0; idx < n; idx++ {
+	for idx := range n {
 		if nums[idx] < pivot {
 			nums[left] = nums[idx]
 			left++

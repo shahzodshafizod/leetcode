@@ -11,7 +11,7 @@ func findJudge(n int, trust [][]int) int {
 		trustees[tr[1]-1]++
 	}
 
-	for label := 0; label < n; label++ {
+	for label := range n {
 		if trusters[label] == 0 && trustees[label] == n-1 {
 			return label + 1
 		}

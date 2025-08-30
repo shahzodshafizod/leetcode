@@ -17,7 +17,7 @@ func minOperations(boxes string) []int {
 	left, lboxes := 0, 0
 	answer := make([]int, n)
 
-	for idx := 0; idx < n; idx++ {
+	for idx := range n {
 		left += lboxes
 		right -= rboxes
 		answer[idx] = left + right

@@ -11,9 +11,9 @@ func largestIsland(grid [][]int) int {
 
 	var row, col int
 
-	for row = 0; row < n; row++ {
+	for row = range n {
 		ids[row] = make([]int, n)
-		for col = 0; col < n; col++ {
+		for col = range n {
 			ids[row][col] = -1
 		}
 	}
@@ -46,8 +46,8 @@ func largestIsland(grid [][]int) int {
 	id := 0
 	maxArea := 0
 
-	for row = 0; row < n; row++ {
-		for col = 0; col < n; col++ {
+	for row = range n {
+		for col = range n {
 			if grid[row][col] == 0 {
 				zeroes = append(zeroes, [2]int{row, col})
 			} else if ids[row][col] == -1 {

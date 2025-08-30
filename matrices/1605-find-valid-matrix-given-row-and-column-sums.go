@@ -21,7 +21,7 @@ func restoreMatrix(rowSum []int, colSum []int) [][]int {
 	m, n := len(rowSum), len(colSum)
 	matrix := make([][]int, m)
 
-	for row := 0; row < m; row++ {
+	for row := range m {
 		matrix[row] = make([]int, n)
 		matrix[row][0] = rowSum[row]
 	}
@@ -29,7 +29,7 @@ func restoreMatrix(rowSum []int, colSum []int) [][]int {
 	var sum int
 	for col := 1; col < n; col++ {
 		sum = 0
-		for row := 0; row < m; row++ {
+		for row := range m {
 			sum += matrix[row][col-1]
 			if sum > colSum[col-1] {
 				matrix[row][col] = sum - colSum[col-1]

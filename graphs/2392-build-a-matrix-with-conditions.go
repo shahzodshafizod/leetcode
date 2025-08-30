@@ -69,13 +69,13 @@ func buildMatrix(k int, rowConditions [][]int, colConditions [][]int) [][]int {
 	}
 
 	matrix := make([][]int, k)
-	for row := 0; row < k; row++ {
+	for row := range k {
 		matrix[row] = make([]int, k)
 		matrix[row][0] = rowOrdering[row]
 	}
 
 	for col := 1; col < k; col++ {
-		for row := 0; row < k; row++ {
+		for row := range k {
 			if matrix[row][col-1] != colOrdering[col-1] {
 				matrix[row][col] = matrix[row][col-1]
 				matrix[row][col-1] = 0

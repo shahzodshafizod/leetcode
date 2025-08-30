@@ -10,10 +10,10 @@ func highestPeak(isWater [][]int) [][]int {
 	queue := make([][2]int, 0)
 
 	height := make([][]int, m)
-	for row := 0; row < m; row++ {
+	for row := range m {
 		height[row] = make([]int, n)
 
-		for col := 0; col < n; col++ {
+		for col := range n {
 			if isWater[row][col] == 1 {
 				queue = append(queue, [2]int{row, col})
 			} else {

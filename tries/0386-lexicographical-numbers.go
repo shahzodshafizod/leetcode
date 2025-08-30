@@ -9,7 +9,7 @@ func lexicalOrder(n int) []int {
 	nums := make([]int, n)
 	num := 1
 
-	for idx := 0; idx < n; idx++ {
+	for idx := range n {
 		nums[idx] = num
 
 		if num*10 <= n {

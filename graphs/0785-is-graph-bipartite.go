@@ -23,7 +23,7 @@ func isBipartite(graph [][]int) bool {
 
 		return true
 	}
-	for node := 0; node < n; node++ {
+	for node := range n {
 		if colors[node] == 0 && !dfs(node, 1) {
 			return false
 		}

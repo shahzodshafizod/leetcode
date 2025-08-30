@@ -24,7 +24,7 @@ func wordPattern(pattern string, s string) bool {
 
 	var code int
 
-	for idx := 0; idx < n; idx++ {
+	for idx := range n {
 		if letter, ok = codes[words[idx]]; !ok {
 			code = int(pattern[idx] - 'a')
 			if used[code] {

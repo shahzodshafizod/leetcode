@@ -27,7 +27,7 @@ func longestPalindrome(s string) string {
 	var longRes string
 
 	radius := 0
-	for i := 0; i < n-radius; i++ {
+	for i := 0; i < n-radius; i++ { //nolint:intrange
 		for _, res := range []string{
 			expand(i, i),   // odd length
 			expand(i, i+1), // even length

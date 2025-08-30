@@ -17,7 +17,7 @@ func minDifference(nums []int) int {
 
 	minDiff := math.MaxInt
 
-	for left := 0; left < 4; left++ { // smaller index
+	for left := range 4 { // smaller index
 		right := n - 4 + left // larger index
 		minDiff = min(minDiff, nums[right]-nums[left])
 	}

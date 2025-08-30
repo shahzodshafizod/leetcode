@@ -19,7 +19,7 @@ func TestRemoveDuplicates(t *testing.T) {
 		k := removeDuplicates(tc.nums)
 		assert.Equal(t, tc.k, k)
 
-		for i := 0; i < k; i++ {
+		for i := range k {
 			assert.Equal(t, tc.expectedNums[i], tc.nums[i])
 		}
 	}

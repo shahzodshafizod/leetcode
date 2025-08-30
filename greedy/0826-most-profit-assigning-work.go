@@ -32,7 +32,7 @@ func maxProfitAssignment(difficulty []int, profit []int, worker []int) int {
 	n := len(difficulty)
 	jobProfile := make([][2]int, n)
 
-	for idx := 0; idx < n; idx++ {
+	for idx := range n {
 		jobProfile[idx][0] = difficulty[idx]
 		jobProfile[idx][1] = profit[idx]
 	}

@@ -27,9 +27,9 @@ func minimumCost(source string, target string, original []byte, changed []byte, 
 		minCosts[src][dst] = min(minCosts[src][dst], int64(cost[idx]))
 	}
 
-	for through := 0; through < 26; through++ {
-		for src := 0; src < 26; src++ {
-			for dst := 0; dst < 26; dst++ {
+	for through := range 26 {
+		for src := range 26 {
+			for dst := range 26 {
 				minCosts[src][dst] = min(
 					minCosts[src][dst],
 					minCosts[src][through]+minCosts[through][dst], // !!!dangerous section: MAX+MAX becomes negative!!!

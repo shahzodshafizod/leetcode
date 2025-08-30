@@ -16,7 +16,7 @@ func isAlienSorted(words []string, order string) bool {
 		n1, n2 = len(words[idx-1]), len(words[idx])
 
 		limit = min(n1, n2)
-		for c := 0; c < limit; c++ {
+		for c := range limit {
 			if indices[words[idx-1][c]] > indices[words[idx][c]] {
 				return false
 			} else if indices[words[idx-1][c]] < indices[words[idx][c]] {

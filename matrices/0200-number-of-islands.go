@@ -73,8 +73,8 @@ func numIslands(grid [][]byte) int {
 	}
 	num := 0
 
-	for row := 0; row < m; row++ {
-		for col := 0; col < n; col++ {
+	for row := range m {
+		for col := range n {
 			if grid[row][col] == '1' {
 				num++
 

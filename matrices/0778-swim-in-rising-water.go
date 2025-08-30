@@ -34,7 +34,7 @@ func swimInWater(grid [][]int) int {
 			break
 		}
 
-		for dir := 0; dir < 4; dir++ {
+		for dir := range 4 {
 			r = row + directions[dir]
 			c = col + directions[dir+1]
 

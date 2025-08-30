@@ -2,6 +2,8 @@ package backtracking
 
 // https://leetcode.com/problems/word-search/
 
+import "slices"
+
 // time: O(m*n*4^w)
 // space: O(2*w) = O(w); O(w)-recursion stack, O(w)-counts
 func exist(board [][]byte, word string) bool {
@@ -9,8 +11,8 @@ func exist(board [][]byte, word string) bool {
 	letters := []byte(word)
 	counts := make([]int, w)
 
-	for row := 0; row < m; row++ { // time: O(m*n*w)
-		for col := 0; col < n; col++ {
+	for row := range m { // time: O(m*n*w)
+		for col := range n {
 			for idx := range letters {
 				if board[row][col] == letters[idx] {
 					counts[idx]++
@@ -19,10 +21,8 @@ func exist(board [][]byte, word string) bool {
 		}
 	}
 	// Follow up: answer#1
-	for _, count := range counts {
-		if count == 0 {
-			return false
-		}
+	if slices.Contains(counts, 0) {
+		return false
 	}
 	// Follow up: answer#2
 	if counts[0] > counts[w-1] {
@@ -67,8 +67,8 @@ func exist(board [][]byte, word string) bool {
 		return false
 	}
 
-	for row := 0; row < m; row++ { // O(m*n*4^w)
-		for col := 0; col < n; col++ {
+	for row := range m { // O(m*n*4^w)
+		for col := range n {
 			if dfs(0, row, col) { // O(4^w)
 				return true
 			}

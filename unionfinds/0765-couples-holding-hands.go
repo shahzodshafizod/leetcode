@@ -15,7 +15,7 @@ func minSwapsCouples(row []int) int {
 	n := len(row) >> 1 // we have len(row)/2 couples
 	p := make([]int, n)
 
-	for i := 0; i < n; i++ {
+	for i := range n {
 		p[i] = i
 	}
 
@@ -38,7 +38,7 @@ func minSwapsCouples(row []int) int {
 		}
 	}
 
-	for i := 0; i < n; i++ {
+	for i := range n {
 		union(row[2*i]>>1, row[2*i+1]>>1)
 		// OR union(row[2*i]/2, row[2*i+1]/2)
 	}

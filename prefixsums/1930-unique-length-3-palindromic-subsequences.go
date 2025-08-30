@@ -18,7 +18,7 @@ func countPalindromicSubsequence(s string) int {
 	var masks [26]int
 
 	var key int
-	for idx := 0; idx < n-1; idx++ {
+	for idx := range n - 1 {
 		key = int(s[idx] - 'a')
 		masks[key] |= left & right[idx+1]
 		left |= 1 << key

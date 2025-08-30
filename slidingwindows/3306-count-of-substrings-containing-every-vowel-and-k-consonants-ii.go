@@ -23,7 +23,7 @@ func countOfSubstrings(word string, k int) int64 {
 		vowels, consonants := 0, 0
 		left := 0
 
-		for right := 0; right < n; right++ {
+		for right := range n {
 			code = int(word[right] - 'a')
 			count[code]++
 

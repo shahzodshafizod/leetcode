@@ -29,14 +29,14 @@ func minimumDifference(nums []int) int64 {
 
 	var sumfir int64
 
-	for i := 0; i < n; i++ {
+	for i := range n {
 		heap.Push(mxhp, nums[i])
 		sumfir += int64(nums[i])
 	}
 
 	diff := sumfir - sumsec[0]
 
-	for i := 0; i < n; i++ {
+	for i := range n {
 		heap.Push(mxhp, nums[n+i])
 		sumfir += int64(nums[n+i]) - int64(heap.Pop(mxhp).(int))
 		diff = min(diff, sumfir-sumsec[i+1])

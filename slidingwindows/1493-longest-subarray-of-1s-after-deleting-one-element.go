@@ -8,7 +8,7 @@ package slidingwindows
 func longestSubarray1493(nums []int) int {
 	size, start, tries := 0, 0, 1
 
-	for end := range len(nums) {
+	for end := range nums {
 		if nums[end] == 0 {
 			tries--
 		}

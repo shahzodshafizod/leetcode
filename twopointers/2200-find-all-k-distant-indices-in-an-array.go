@@ -12,7 +12,7 @@ func findKDistantIndices(nums []int, key int, k int) []int {
 
 	var left int
 
-	for idx := 0; idx < n; idx++ {
+	for idx := range n {
 		if nums[idx] == key {
 			left = max(right, idx-k)
 			right = min(n-1, idx+k) + 1

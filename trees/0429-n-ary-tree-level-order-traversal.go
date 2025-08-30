@@ -14,7 +14,7 @@ func levelOrder429(root *pkg.NTreeNode) [][]int {
 
 	for length := len(queue); length > 0; length = len(queue) {
 		levelValues := make([]int, 0)
-		for i := 0; i < length; i++ {
+		for i := range length {
 			levelValues = append(levelValues, queue[i].Val)
 			queue = append(queue, queue[i].Children...)
 		}

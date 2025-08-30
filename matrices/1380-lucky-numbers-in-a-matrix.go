@@ -55,9 +55,9 @@ func luckyNumbers(matrix [][]int) []int {
 
 	minOfmaxs := mx
 
-	for col := 0; col < n; col++ {
+	for col := range n {
 		maxcol := mn
-		for row := 0; row < m; row++ {
+		for row := range m {
 			maxcol = max(maxcol, matrix[row][col])
 		}
 

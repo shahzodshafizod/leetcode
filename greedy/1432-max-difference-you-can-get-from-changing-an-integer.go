@@ -23,7 +23,7 @@ func maxDiff(num int) int {
 	}
 
 	var zeros, nines [10]int
-	for digit = 0; digit < 10; digit++ {
+	for digit = range 10 {
 		zeros[digit] = digit
 		nines[digit] = digit
 	}

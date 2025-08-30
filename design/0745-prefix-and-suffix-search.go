@@ -21,7 +21,7 @@ func NewWordFilter(words []string) WordFilter {
 		word := words[index] + "#" + words[index]
 		newWordLen = 2*wordLen + 1
 
-		for i := 0; i < wordLen; i++ {
+		for i := range wordLen {
 			curr := &root
 
 			for j := i; j < newWordLen; j++ {

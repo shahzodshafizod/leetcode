@@ -8,7 +8,7 @@ func longestPalindromeSubseq(s string) int {
 	n := len(s)
 	memo := make([][]int, n)
 
-	for i := 0; i < n; i++ {
+	for i := range n {
 		memo[i] = make([]int, n)
 	}
 

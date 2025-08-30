@@ -9,7 +9,7 @@ func zeroFilledSubarray(nums []int) int64 {
 		start int
 	)
 
-	for end := range len(nums) {
+	for end := range nums {
 		if nums[end] != 0 {
 			start = end + 1
 		}

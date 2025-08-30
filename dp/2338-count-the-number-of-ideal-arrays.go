@@ -6,7 +6,7 @@ func idealArrays(n int, maxValue int) int {
 	const mod, maxK int = 1e9 + 7, 14
 
 	comb := make([][]int, n)
-	for i := 0; i < n; i++ {
+	for i := range n {
 		comb[i] = make([]int, maxK+1)
 	}
 

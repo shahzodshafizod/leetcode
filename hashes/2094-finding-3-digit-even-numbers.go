@@ -16,7 +16,7 @@ func findEvenNumbers(digits []int) []int {
 		}
 
 		count[sadi]--
-		for dahi := 0; dahi < 10; dahi++ {
+		for dahi := range 10 {
 			if count[dahi] == 0 {
 				continue
 			}

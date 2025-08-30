@@ -13,7 +13,7 @@ func numSubmatrixSumTarget(matrix [][]int, target int) int {
 		counter := map[int]int{0: 1}
 
 		count, presum := 0, 0
-		for idx := 0; idx < m; idx++ {
+		for idx := range m {
 			presum += nums[idx]
 			count += counter[presum-k]
 			counter[presum]++
@@ -23,11 +23,11 @@ func numSubmatrixSumTarget(matrix [][]int, target int) int {
 	}
 	count := 0
 
-	for start := 0; start < n; start++ {
+	for start := range n {
 		presum := make([]int, m)
 
 		for end := start; end < n; end++ {
-			for row := 0; row < m; row++ {
+			for row := range m {
 				presum[row] += matrix[row][end]
 			}
 

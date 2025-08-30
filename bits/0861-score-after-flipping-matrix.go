@@ -19,7 +19,7 @@ func matrixScore(grid [][]int) int {
 	for col := 1; col < n; col++ {
 		count = 0
 
-		for row := 0; row < m; row++ {
+		for row := range m {
 			/*
 				For counting 0's, the first and the current should be different:
 					2.1. if the first element of this row is 1,

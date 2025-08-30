@@ -14,7 +14,7 @@ func getHappyString(n int, k int) string {
 
 	var prev rune = -1
 
-	for idx := 0; idx < n; idx++ {
+	for range n {
 		partitionLen /= 2
 		i = 0
 

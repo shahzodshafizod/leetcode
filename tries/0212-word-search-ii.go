@@ -64,8 +64,8 @@ func findWords(board [][]byte, words []string) []string {
 
 	result := make([]string, 0)
 
-	for row := 0; row < m; row++ {
-		for col := 0; col < n; col++ {
+	for row := range m {
+		for col := range n {
 			dfs(row, col, root, &result)
 		}
 	}

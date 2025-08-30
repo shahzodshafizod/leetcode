@@ -13,7 +13,7 @@ func productExceptSelf(nums []int) []int {
 	answer := make([]int, n)
 	product := 1
 
-	for idx := 0; idx < n; idx++ { // from left to right
+	for idx := range n { // from left to right
 		answer[idx] = product
 		product *= nums[idx]
 	}

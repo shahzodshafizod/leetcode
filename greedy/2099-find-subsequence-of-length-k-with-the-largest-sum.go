@@ -8,7 +8,7 @@ func maxSubsequence(nums []int, k int) []int {
 	n := len(nums)
 	indices := make([]int, n)
 
-	for idx := 0; idx < n; idx++ {
+	for idx := range n {
 		indices[idx] = idx
 	}
 
@@ -17,7 +17,7 @@ func maxSubsequence(nums []int, k int) []int {
 	})
 
 	pick := make([]bool, n)
-	for idx := 0; idx < k; idx++ {
+	for idx := range k {
 		pick[indices[idx]] = true
 	}
 

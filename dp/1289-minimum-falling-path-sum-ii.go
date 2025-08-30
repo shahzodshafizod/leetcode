@@ -26,7 +26,7 @@ func minFallingPathSum(grid [][]int) int {
 			}
 		}
 		// 2. replace min1<-min2, others<-min1 in the current row
-		for col := 0; col < n; col++ {
+		for col := range n {
 			if col == min1col {
 				grid[row][col] += grid[row-1][min2col]
 			} else {

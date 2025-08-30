@@ -40,7 +40,7 @@ func sortJumbled(mapping []int, nums []int) []int {
 	)
 
 	sorted := make([]int, n)
-	for idx := 0; idx < n; idx++ {
+	for idx := range n {
 		sorted[idx] = nums[indices[idx]]
 	}
 

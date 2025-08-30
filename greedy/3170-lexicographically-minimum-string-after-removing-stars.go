@@ -17,7 +17,7 @@ func clearStars(s string) string {
 		if c == '*' {
 			stars++
 
-			for k := 0; k < 26; k++ {
+			for k := range 26 {
 				if n := len(stack[k]); n != 0 {
 					starred[stack[k][n-1]] = '*'
 					stack[k] = stack[k][:n-1]

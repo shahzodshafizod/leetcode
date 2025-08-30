@@ -36,7 +36,7 @@ func lenLongestFibSubseq(arr []int) int {
 	indices := make(map[int]int, n)
 	dp := make([][]int, n)
 
-	for i := 0; i < n; i++ {
+	for i := range n {
 		indices[arr[i]] = i
 
 		dp[i] = make([]int, n)
@@ -48,7 +48,7 @@ func lenLongestFibSubseq(arr []int) int {
 	longest := 0
 
 	var prev, curr, next int
-	for prev = 0; prev < n; prev++ {
+	for prev = range n {
 		for curr = prev + 1; curr < n; curr++ {
 			next = indices[arr[prev]+arr[curr]]
 			if next > curr {

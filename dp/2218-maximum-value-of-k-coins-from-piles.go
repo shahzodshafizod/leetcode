@@ -19,7 +19,7 @@ func maxValueOfCoins(piles [][]int, k int) int {
 			curr[coins] = next[coins]
 			// take from curr pile
 			total, limit = 0, min(coins, len(piles[i]))
-			for j := 0; j < limit; j++ {
+			for j := range limit {
 				total += piles[i][j]
 				// skip curr pile
 				curr[coins] = max(curr[coins],

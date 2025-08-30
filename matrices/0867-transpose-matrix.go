@@ -32,9 +32,9 @@ func transpose(matrix [][]int) [][]int {
 	}
 
 	transposed := make([][]int, n)
-	for col := 0; col < n; col++ {
+	for col := range n {
 		transposed[col] = make([]int, m)
-		for row := 0; row < m; row++ {
+		for row := range m {
 			transposed[col][row] = matrix[row][col]
 		}
 	}

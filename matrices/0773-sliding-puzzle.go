@@ -24,7 +24,7 @@ func slidingPuzzle(board [][]int) int {
 	length := 0
 
 	for size := len(queue); size > 0; size = len(queue) {
-		for idx := 0; idx < size; idx++ {
+		for idx := range size {
 			state = []byte(queue[idx])
 			if string(state) == "123450" {
 				return length

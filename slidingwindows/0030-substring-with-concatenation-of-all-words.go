@@ -22,7 +22,7 @@ func findSubstring(s string, words []string) []int {
 
 	substrings := make([]int, 0)
 
-	for idx := 0; idx < wordLen; idx++ {
+	for idx := range wordLen {
 		count := getCounter()
 		wordsFound = 0
 		left := idx

@@ -18,7 +18,7 @@ func equalSubstring(s string, t string, maxCost int) int {
 	maxlen := 0
 
 	n := len(s)
-	for end := 0; end < n; end++ {
+	for end := range n {
 		cost += getcost(end)
 		for cost > maxCost {
 			cost -= getcost(start)

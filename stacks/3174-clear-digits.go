@@ -7,7 +7,7 @@ func clearDigits(s string) string {
 	stack := make([]byte, n)
 	size := 0
 
-	for idx := 0; idx < n; idx++ {
+	for idx := range n {
 		if '0' <= s[idx] && s[idx] <= '9' {
 			size--
 		} else {

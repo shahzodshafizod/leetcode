@@ -31,7 +31,7 @@ func distinctNames(ideas []string) int64 {
 
 	var count int64
 
-	for a := 0; a < 26; a++ {
+	for a := range 26 {
 		for b := a + 1; b < 26; b++ {
 			count += (counts[a] - same[a][b]) * (counts[b] - same[b][a])
 		}
