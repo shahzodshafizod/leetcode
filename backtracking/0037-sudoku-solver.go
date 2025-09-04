@@ -92,141 +92,67 @@ Step 2: Write out some test cases
 // https://leetcode.com/problems/sudoku-solver/
 
 func solveSudoku(board [][]byte) {
+	// Check if it's valid and set existed values
+	var (
+		rows, cols, boxes [9]int
+		bit, boxID        int
+	)
+
 	for row := range 9 {
 		for col := range 9 {
-			if board[row][col] == '.' {
+			if board[row][col] != '.' {
+				bit = 1 << int(board[row][col]-'1')
+				boxID = (row/3)*3 + col/3
+				rows[row] ^= bit
+				cols[col] ^= bit
+				boxes[boxID] ^= bit
+			}
+		}
+	}
+
+	// Solve
+	var backtrack func(row int, col int) bool
+
+	backtrack = func(row int, col int) bool {
+		if row == 9 {
+			return true
+		}
+
+		col++
+		if col == 9 {
+			return backtrack(row+1, -1)
+		}
+
+		if board[row][col] != '.' {
+			return backtrack(row, col)
+		}
+
+		boxID := row/3*3 + col/3
+
+		var bit int
+		for num := range 9 {
+			bit = 1 << num
+			if rows[row]&bit != 0 || cols[col]&bit != 0 || boxes[boxID]&bit != 0 {
 				continue
 			}
 
-			if !sudokuIsValid(board, row, col, board[row][col]) {
-				return
-			}
-		}
-	}
+			rows[row] ^= bit
+			cols[col] ^= bit
+			boxes[boxID] ^= bit
 
-	sudokuBacktrack(board, 0, 0)
-}
-
-func sudokuIsValid(board [][]byte, row, col int, num byte) bool {
-	blkrow, blkcol := (row/3)*3, (col/3)*3
-
-	for i := range 9 {
-		if i != row && board[i][col] == num {
-			return false
-		}
-
-		if i != col && board[row][i] == num {
-			return false
-		}
-
-		r := blkrow + i/3
-		c := blkcol + i%3
-
-		if r != row && c != col && board[r][c] == num {
-			return false
-		}
-	}
-
-	return true
-}
-
-func sudokuBacktrack(board [][]byte, row, col int) bool {
-	if row == 8 && col == 9 {
-		return true
-	}
-
-	if col == 9 {
-		row++
-		col = 0
-	}
-
-	if board[row][col] != '.' {
-		return sudokuBacktrack(board, row, col+1)
-	}
-
-	var num byte
-	for num = '1'; num <= '9'; num++ {
-		if sudokuIsValid(board, row, col, num) {
-			board[row][col] = num
-
-			if sudokuBacktrack(board, row, col+1) {
+			board[row][col] = byte('1' + num)
+			if backtrack(row, col) {
 				return true
 			}
 
+			rows[row] ^= bit
+			cols[col] ^= bit
+			boxes[boxID] ^= bit
 			board[row][col] = '.'
 		}
+
+		return false
 	}
 
-	return false // unreachable if solvable
+	backtrack(0, -1)
 }
-
-// func solveSudoku(board [][]byte) {
-// 	var (
-// 		rows  = [9]map[byte]bool{}
-// 		cols  = [9]map[byte]bool{}
-// 		boxes = [9]map[byte]bool{}
-// 	)
-// 	for i := 0; i < 9; i++ {
-// 		rows[i] = make(map[byte]bool)
-// 		cols[i] = make(map[byte]bool)
-// 		boxes[i] = make(map[byte]bool)
-// 	}
-
-// 	var value byte
-// 	for row := 0; row < 9; row++ {
-// 		for col := 0; col < 9; col++ {
-// 			value = board[row][col]
-// 			if value == '.' {
-// 				continue
-// 			}
-// 			var boxID = 3*(row/3) + col/3
-// 			if !sudokuIsValid(rows[row], cols[col], boxes[boxID], value) {
-// 				return
-// 			}
-// 			rows[row][value] = true
-// 			cols[col][value] = true
-// 			boxes[boxID][value] = true
-// 		}
-// 	}
-
-// 	sudokuBacktrack(board, rows, cols, boxes, 0, 0)
-// }
-
-// func sudokuIsValid(row, col, box map[byte]bool, num byte) bool {
-// 	return !row[num] && !col[num] && !box[num]
-// }
-
-// func sudokuBacktrack(board [][]byte, rows, cols, boxes [9]map[byte]bool, row, col int) bool {
-// 	if row == 8 && col == 9 {
-// 		return true
-// 	}
-// 	if col == 9 {
-// 		row++
-// 		col = 0
-// 	}
-
-// 	if board[row][col] != '.' {
-// 		return sudokuBacktrack(board, rows, cols, boxes, row, col+1)
-// 	}
-
-// 	var boxID = 3*(row/3) + col/3
-// 	var num byte
-// 	for num = '1'; num <= '9'; num++ {
-// 		if sudokuIsValid(rows[row], cols[col], boxes[boxID], num) {
-// 			board[row][col] = num
-// 			rows[row][num] = true
-// 			cols[col][num] = true
-// 			boxes[boxID][num] = true
-
-// 			if sudokuBacktrack(board, rows, cols, boxes, row, col+1) {
-// 				return true
-// 			}
-
-// 			board[row][col] = '.'
-// 			rows[row][num] = false
-// 			cols[col][num] = false
-// 			boxes[boxID][num] = false
-// 		}
-// 	}
-// 	return false // unreachable if solvable
-// }

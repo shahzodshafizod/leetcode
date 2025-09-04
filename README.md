@@ -2,6 +2,11 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3516 | Find Closest Person | Easy | Math | 2025-09-04 | [Go](maths/3516-find-closest-person.go) [Python](maths/3516-find-closest-person.py)
+| 3027 | Find the Number of Ways to Place People II | Hard | Array, Math, Geometry, Sorting, Enumeration | 2025-09-03 | [Go](maths/3027-find-the-number-of-ways-to-place-people-ii.go) [Python](maths/3027-find-the-number-of-ways-to-place-people-ii.py)
+| 3025 | Find the Number of Ways to Place People I | Medium | Array, Math, Geometry, Sorting, Enumeration | 2025-09-02 | [Go](maths/3025-find-the-number-of-ways-to-place-people-i.go) [Python](maths/3025-find-the-number-of-ways-to-place-people-i.py)
+| 1792 | Maximum Average Pass Ratio | Medium | Array, Greedy, Heap (Priority Queue) | 2025-09-01 | [Go](heaps/1792-maximum-average-pass-ratio.go) [Python](heaps/1792-maximum-average-pass-ratio.py)
+| 3161 | Block Placement Queries | Hard | Array, Binary Search, Binary Indexed Tree, Segment Tree | 2025-08-31 | [Go](fenwicks/3161-block-placement-queries.go) [Python](fenwicks/3161-block-placement-queries.py)
 | 0036 | Valid Sudoku | Medium | Array, Hash Table, Matrix | 2025-08-30 | [Go](bits/0036-valid-sudoku.go) [Python](bits/0036-valid-sudoku.py)
 | 3021 | Alice and Bob Playing Flower Game | Medium | Math | 2025-08-29 | [Go](maths/3021-alice-and-bob-playing-flower-game.go) [Python](maths/3021-alice-and-bob-playing-flower-game.py)
 | 3072 | Distribute Elements Into Two Arrays II | Hard | Array, Binary Indexed Tree, Segment Tree, Simulation | 2025-08-28 | [Go](fenwicks/3072-distribute-elements-into-two-arrays-ii.go) [Python](fenwicks/3072-distribute-elements-into-two-arrays-ii.py)
@@ -665,7 +670,7 @@
 | 0589 | N-ary Tree Preorder Traversal | Easy | Stack, Tree, Depth-First Search | 2024-02-03 | [Go](trees/0589-n-ary-tree-preorder-traversal.go)
 | 0429 | N-ary Tree Level Order Traversal | Medium | Tree, Breadth-First Search | 2024-02-03 | [Go](trees/0429-n-ary-tree-level-order-traversal.go)
 | 0387 | First Unique Character in a String | Easy | Hash Table, String, Queue, Counting | 2024-02-03 | [Go](queues/0387-first-unique-character-in-a-string.go)
-| 0037 | Sudoku Solver | Hard | Array, Hash Table, Backtracking, Matrix | 2024-02-02 | [Go](backtracking/0037-sudoku-solver.go)
+| 0037 | Sudoku Solver | Hard | Array, Hash Table, Backtracking, Matrix | 2024-02-02 | [Go](backtracking/0037-sudoku-solver.go) [Python](backtracking/0037-sudoku-solver.py)
 | 0688 | Knight Probability in Chessboard | Medium | Dynamic Programming | 2024-02-01 | [Go](dp/0688-knight-probability-in-chessboard.go)
 | 0746 | Min Cost Climbing Stairs | Easy | Array, Dynamic Programming | 2024-01-31 | [Go](dp/0746-min-cost-climbing-stairs.go)
 | 0743 | Network Delay Time | Medium | Depth-First Search, Breadth-First Search, Graph, Heap (Priority Queue), Shortest Path | 2024-01-30 | [Go](graphs/0743-network-delay-time.go)
