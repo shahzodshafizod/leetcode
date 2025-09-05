@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2749 | Minimum Operations to Make the Integer Zero | Medium | Bit Manipulation, Brainteaser, Enumeration | 2025-09-05 | [Go](bits/2749-minimum-operations-to-make-the-integer-zero.go) [Python](bits/2749-minimum-operations-to-make-the-integer-zero.py)
 | 3516 | Find Closest Person | Easy | Math | 2025-09-04 | [Go](maths/3516-find-closest-person.go) [Python](maths/3516-find-closest-person.py)
 | 3027 | Find the Number of Ways to Place People II | Hard | Array, Math, Geometry, Sorting, Enumeration | 2025-09-03 | [Go](maths/3027-find-the-number-of-ways-to-place-people-ii.go) [Python](maths/3027-find-the-number-of-ways-to-place-people-ii.py)
 | 3025 | Find the Number of Ways to Place People I | Medium | Array, Math, Geometry, Sorting, Enumeration | 2025-09-02 | [Go](maths/3025-find-the-number-of-ways-to-place-people-i.go) [Python](maths/3025-find-the-number-of-ways-to-place-people-i.py)
