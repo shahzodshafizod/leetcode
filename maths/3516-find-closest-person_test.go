@@ -9,9 +9,9 @@ import (
 // go test -v -count=1 ./maths/ -run ^TestFindClosest$
 func TestFindClosest(t *testing.T) {
 	for _, tc := range []struct {
-		x int
-		y int
-		z int
+		x   int
+		y   int
+		z   int
 		num int
 	}{
 		{x: 2, y: 7, z: 4, num: 1},

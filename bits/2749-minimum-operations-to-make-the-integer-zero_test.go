@@ -11,7 +11,7 @@ func TestMakeTheIntegerZero(t *testing.T) {
 	for _, tc := range []struct {
 		num1 int
 		num2 int
-		cnt int
+		cnt  int
 	}{
 		{num1: 3, num2: -2, cnt: 3},
 		{num1: 5, num2: 7, cnt: -1},

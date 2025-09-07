@@ -10,7 +10,7 @@ import (
 func TestNumberOfPairs(t *testing.T) {
 	for _, tc := range []struct {
 		points [][]int
-		count int
+		count  int
 	}{
 		{points: [][]int{{1, 1}, {2, 2}, {3, 3}}, count: 0},
 		{points: [][]int{{6, 2}, {4, 4}, {2, 6}}, count: 2},
