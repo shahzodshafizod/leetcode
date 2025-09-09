@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2327 | Number of People Aware of a Secret | Medium | Dynamic Programming, Queue, Simulation | 2025-09-09 | [Go](dp/2327-number-of-people-aware-of-a-secret.go) [Python](dp/2327-number-of-people-aware-of-a-secret.py)
 | 1317 | Convert Integer to the Sum of Two No-Zero Integers | Easy | Math | 2025-09-08 | [Go](maths/1317-convert-integer-to-the-sum-of-two-no-zero-integers.go) [Python](maths/1317-convert-integer-to-the-sum-of-two-no-zero-integers.py)
 | 1304 | Find N Unique Integers Sum up to Zero | Easy | Array, Math | 2025-09-07 | [Go](arrays/1304-find-n-unique-integers-sum-up-to-zero.go) [Python](arrays/1304-find-n-unique-integers-sum-up-to-zero.py)
 | 3495 | Minimum Operations to Make Array Elements Zero | Hard | Array, Math, Bit Manipulation | 2025-09-06 | [Go](bits/3495-minimum-operations-to-make-array-elements-zero.go) [Python](bits/3495-minimum-operations-to-make-array-elements-zero.py)
