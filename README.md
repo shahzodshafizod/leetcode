@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2785 | Sort Vowels in a String | Medium | String, Sorting | 2025-09-11 | [Go](strings/2785-sort-vowels-in-a-string.go) [Python](strings/2785-sort-vowels-in-a-string.py)
 | 1733 | Minimum Number of People to Teach | Medium | Array, Hash Table, Greedy | 2025-09-10 | [Go](greedy/1733-minimum-number-of-people-to-teach.go) [Python](greedy/1733-minimum-number-of-people-to-teach.py)
 | 2327 | Number of People Aware of a Secret | Medium | Dynamic Programming, Queue, Simulation | 2025-09-09 | [Go](dp/2327-number-of-people-aware-of-a-secret.go) [Python](dp/2327-number-of-people-aware-of-a-secret.py)
 | 1317 | Convert Integer to the Sum of Two No-Zero Integers | Easy | Math | 2025-09-08 | [Go](maths/1317-convert-integer-to-the-sum-of-two-no-zero-integers.go) [Python](maths/1317-convert-integer-to-the-sum-of-two-no-zero-integers.py)
