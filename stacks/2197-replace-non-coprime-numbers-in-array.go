@@ -12,9 +12,8 @@ func replaceNonCoprimes(nums []int) []int {
 	}
 	stack := make([]int, len(nums))
 
-	var size, g, lcm int
-	for idx := range nums {
-		lcm = nums[idx]
+	var size, g int
+	for _, lcm := range nums {
 		for size > 0 {
 			g = gcd(stack[size-1], lcm)
 			if g == 1 {

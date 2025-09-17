@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2353 | Design a Food Rating System | Medium | Array, Hash Table, String, Design, Heap (Priority Queue), Ordered Set | 2025-09-17 | [Go](design/2353-design-a-food-rating-system.go) [Python](design/2353-design-a-food-rating-system.py)
 | 2197 | Replace Non-Coprime Numbers in Array | Hard | Array, Math, Stack, Number Theory | 2025-09-16 | [Go](stacks/2197-replace-non-coprime-numbers-in-array.go) [Python](stacks/2197-replace-non-coprime-numbers-in-array.py)
 | 1935 | Maximum Number of Words You Can Type | Easy | Hash Table, String | 2025-09-15 | [Go](hashes/1935-maximum-number-of-words-you-can-type.go) [Python](hashes/1935-maximum-number-of-words-you-can-type.py)
 | 0966 | Vowel Spellchecker | Medium | Array, Hash Table, String | 2025-09-14 | [Go](hashes/0966-vowel-spellchecker.go) [Python](hashes/0966-vowel-spellchecker.py)
