@@ -4,8 +4,8 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 
 // https://leetcode.com/problems/double-a-number-represented-as-a-linked-list/
 
-func doubleIt(head *pkg.ListNode) *pkg.ListNode {
-	dummy := &pkg.ListNode{Val: 0, Next: head}
+func doubleIt(head *pkg.ListNode[int]) *pkg.ListNode[int] {
+	dummy := &pkg.ListNode[int]{Val: 0, Next: head}
 
 	for node := dummy; node.Next != nil; node = node.Next {
 		node.Next.Val *= 2

@@ -10,7 +10,7 @@ import (
 // go test -v -count=1 ./linkedlists/ -run ^TestIsPalindrome$
 func TestIsPalindrome(t *testing.T) {
 	for _, tc := range []struct {
-		head *pkg.ListNode
+		head *pkg.ListNode[int]
 		is   bool
 	}{
 		{head: pkg.MakeLinkedList(1, 2, 3, 2, 1), is: true},

@@ -5,16 +5,16 @@ import (
 )
 
 // Definition for singly-linked list.
-type ListNode struct {
-	Val  int
-	Next *ListNode
+type ListNode[T any] struct {
+	Val  T
+	Next *ListNode[T]
 }
 
-func MakeLinkedList(vals ...int) *ListNode {
-	var head, tail *ListNode = nil, nil
+func MakeLinkedList[T any](vals ...T) *ListNode[T] {
+	var head, tail *ListNode[T] = nil, nil
 
 	for _, val := range vals {
-		newNode := &ListNode{Val: val, Next: nil}
+		newNode := &ListNode[T]{Val: val, Next: nil}
 		if head == nil {
 			head, tail = newNode, newNode
 		} else {
@@ -27,7 +27,7 @@ func MakeLinkedList(vals ...int) *ListNode {
 }
 
 // position starts from 0
-func GetNode(head *ListNode, position int) *ListNode {
+func GetNode[T any](head *ListNode[T], position int) *ListNode[T] {
 	for node := head; node != nil && position >= 0; {
 		if position == 0 {
 			return node
@@ -40,13 +40,13 @@ func GetNode(head *ListNode, position int) *ListNode {
 	return nil
 }
 
-func MakeCycleLinkedList(position int, vals ...int) *ListNode {
-	var head, tail *ListNode = nil, nil
+func MakeCycleLinkedList[T any](position int, vals ...T) *ListNode[T] {
+	var head, tail *ListNode[T] = nil, nil
 
-	var cyclePoint *ListNode
+	var cyclePoint *ListNode[T]
 
 	for index, val := range vals {
-		newNode := &ListNode{Val: val, Next: nil}
+		newNode := &ListNode[T]{Val: val, Next: nil}
 		if index == position {
 			cyclePoint = newNode
 		}

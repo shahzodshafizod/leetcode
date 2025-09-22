@@ -4,7 +4,7 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 
 // https://leetcode.com/problems/find-the-minimum-and-maximum-number-of-nodes-between-critical-points/
 
-func nodesBetweenCriticalPoints(head *pkg.ListNode) []int {
+func nodesBetweenCriticalPoints(head *pkg.ListNode[int]) []int {
 	first, last := -1, -1
 	minima := 100000
 

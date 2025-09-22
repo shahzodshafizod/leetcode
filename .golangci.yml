@@ -157,6 +157,8 @@ linters:
           arguments: [27]
         - name: cognitive-complexity
           arguments: [41]
+        - name: confusing-results
+          disabled: true
     cyclop:
       max-complexity: 27 # 10
       # package-average: 0

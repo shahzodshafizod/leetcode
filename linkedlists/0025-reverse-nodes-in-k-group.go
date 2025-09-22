@@ -4,17 +4,17 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 
 // https://leetcode.com/problems/reverse-nodes-in-k-group/
 
-func reverseKGroup(head *pkg.ListNode, k int) *pkg.ListNode {
+func reverseKGroup(head *pkg.ListNode[int], k int) *pkg.ListNode[int] {
 	length := reverseKGroupLLLength(head, 0)
 	node := head
 
-	var prevGroup *pkg.ListNode
+	var prevGroup *pkg.ListNode[int]
 
 	times := length / k
 	for times > 0 {
 		times--
 
-		var localHead, localTrail *pkg.ListNode = nil, node
+		var localHead, localTrail *pkg.ListNode[int] = nil, node
 
 		count := 1
 		for count <= k {
@@ -45,7 +45,7 @@ func reverseKGroup(head *pkg.ListNode, k int) *pkg.ListNode {
 	return head
 }
 
-func reverseKGroupLLLength(node *pkg.ListNode, length int) int {
+func reverseKGroupLLLength(node *pkg.ListNode[int], length int) int {
 	if node == nil {
 		return length
 	}

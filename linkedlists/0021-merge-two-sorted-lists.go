@@ -21,8 +21,8 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 // }
 
 // space: O(1)
-func mergeTwoLists(list1 *pkg.ListNode, list2 *pkg.ListNode) *pkg.ListNode {
-	dummy := &pkg.ListNode{} // to escape "if tail != nil"
+func mergeTwoLists(list1 *pkg.ListNode[int], list2 *pkg.ListNode[int]) *pkg.ListNode[int] {
+	dummy := &pkg.ListNode[int]{} // to escape "if tail != nil"
 	tail := dummy
 
 	for list1 != nil && list2 != nil {

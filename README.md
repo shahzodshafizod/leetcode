@@ -2,6 +2,11 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3005 | Count Elements With Maximum Frequency | Easy | Array, Hash Table, Counting | 2025-09-22 | [Go](hashes/3005-count-elements-with-maximum-frequency.go) [Python](hashes/3005-count-elements-with-maximum-frequency.py)
+| 1912 | Design Movie Rental System | Hard | Array, Hash Table, Design, Heap (Priority Queue), Ordered Set | 2025-09-21 | [Go](design/1912-design-movie-rental-system.go) [Python](design/1912-design-movie-rental-system.py)
+| 3508 | Implement Router | Medium | Array, Hash Table, Binary Search, Design, Queue, Ordered Set | 2025-09-20 | [Go](design/3508-implement-router.go) [Python](design/3508-implement-router.py)
+| 3484 | Design Spreadsheet | Medium | Array, Hash Table, String, Design, Matrix | 2025-09-19 | [Go](design/3484-design-spreadsheet.go) [Python](design/3484-design-spreadsheet.py)
+| 3408 | Design Task Manager | Medium | Hash Table, Design, Heap (Priority Queue), Ordered Set | 2025-09-18 | [Go](design/3408-design-task-manager.go) [Python](design/3408-design-task-manager.py)
 | 2353 | Design a Food Rating System | Medium | Array, Hash Table, String, Design, Heap (Priority Queue), Ordered Set | 2025-09-17 | [Go](design/2353-design-a-food-rating-system.go) [Python](design/2353-design-a-food-rating-system.py)
 | 2197 | Replace Non-Coprime Numbers in Array | Hard | Array, Math, Stack, Number Theory | 2025-09-16 | [Go](stacks/2197-replace-non-coprime-numbers-in-array.go) [Python](stacks/2197-replace-non-coprime-numbers-in-array.py)
 | 1935 | Maximum Number of Words You Can Type | Easy | Hash Table, String | 2025-09-15 | [Go](hashes/1935-maximum-number-of-words-you-can-type.go) [Python](hashes/1935-maximum-number-of-words-you-can-type.py)

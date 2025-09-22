@@ -31,7 +31,7 @@ Steps to reverse linked list:
 
 // https://leetcode.com/problems/reverse-linked-list-ii/
 
-func reverseBetween(head *pkg.ListNode, left int, right int) *pkg.ListNode {
+func reverseBetween(head *pkg.ListNode[int], left int, right int) *pkg.ListNode[int] {
 	if head == nil {
 		return nil
 	}
@@ -39,7 +39,7 @@ func reverseBetween(head *pkg.ListNode, left int, right int) *pkg.ListNode {
 	position := 1
 	node := head
 
-	var lastPrev *pkg.ListNode
+	var lastPrev *pkg.ListNode[int]
 
 	for node != nil && position < left {
 		lastPrev = node
@@ -47,7 +47,7 @@ func reverseBetween(head *pkg.ListNode, left int, right int) *pkg.ListNode {
 		position++
 	}
 
-	var localHead, localTail *pkg.ListNode = nil, node
+	var localHead, localTail *pkg.ListNode[int] = nil, node
 
 	for node != nil && position <= right {
 		current := node

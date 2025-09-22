@@ -7,8 +7,8 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 // Approach: Iterative
 // Time: O(n)
 // Space: O(1)
-func removeElements(head *pkg.ListNode, val int) *pkg.ListNode {
-	dummy := &pkg.ListNode{Next: head}
+func removeElements(head *pkg.ListNode[int], val int) *pkg.ListNode[int] {
+	dummy := &pkg.ListNode[int]{Next: head}
 
 	node := dummy
 	for node.Next != nil {

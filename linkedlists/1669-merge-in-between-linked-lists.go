@@ -4,13 +4,18 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 
 // https://leetcode.com/problems/merge-in-between-linked-lists/
 
-func mergeInBetween(list1 *pkg.ListNode, a int, b int, list2 *pkg.ListNode) *pkg.ListNode {
-	var start *pkg.ListNode
+func mergeInBetween(
+	list1 *pkg.ListNode[int],
+	a int,
+	b int,
+	list2 *pkg.ListNode[int],
+) *pkg.ListNode[int] {
+	var start *pkg.ListNode[int]
 	for node, i := list1, 0; i < a; node, i = node.Next, i+1 {
 		start = node
 	}
 
-	var end *pkg.ListNode
+	var end *pkg.ListNode[int]
 	for node, i := start, b-a+1; i >= 0; node, i = node.Next, i-1 {
 		end = node
 	}

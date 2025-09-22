@@ -10,11 +10,11 @@ import (
 // go test -v -count=1 ./linkedlists/ -run ^TestMergeKLists$
 func TestMergeKLists(t *testing.T) {
 	for _, tc := range []struct {
-		lists  []*pkg.ListNode
-		sorted *pkg.ListNode
+		lists  []*pkg.ListNode[int]
+		sorted *pkg.ListNode[int]
 	}{
 		{
-			lists: []*pkg.ListNode{
+			lists: []*pkg.ListNode[int]{
 				pkg.MakeLinkedList(1, 4, 5),
 				pkg.MakeLinkedList(1, 3, 4),
 				pkg.MakeLinkedList(2, 6),
@@ -22,35 +22,35 @@ func TestMergeKLists(t *testing.T) {
 			sorted: pkg.MakeLinkedList(1, 1, 2, 3, 4, 4, 5, 6),
 		},
 		{
-			lists:  []*pkg.ListNode{},
-			sorted: pkg.MakeLinkedList(),
+			lists:  []*pkg.ListNode[int]{},
+			sorted: pkg.MakeLinkedList[int](),
 		},
 		{
-			lists:  []*pkg.ListNode{pkg.MakeLinkedList()},
-			sorted: pkg.MakeLinkedList(),
+			lists:  []*pkg.ListNode[int]{pkg.MakeLinkedList[int]()},
+			sorted: pkg.MakeLinkedList[int](),
 		},
 		{
-			lists: []*pkg.ListNode{
+			lists: []*pkg.ListNode[int]{
 				pkg.MakeLinkedList(2),
-				pkg.MakeLinkedList(),
+				pkg.MakeLinkedList[int](),
 				pkg.MakeLinkedList(-1),
 			},
 			sorted: pkg.MakeLinkedList(-1, 2),
 		},
 		{
-			lists: []*pkg.ListNode{
+			lists: []*pkg.ListNode[int]{
 				pkg.MakeLinkedList(-10, -9, -9, -3, -1, -1, 0),
 				pkg.MakeLinkedList(-5),
 				pkg.MakeLinkedList(4),
 				pkg.MakeLinkedList(-8),
-				pkg.MakeLinkedList(),
+				pkg.MakeLinkedList[int](),
 				pkg.MakeLinkedList(-9, -6, -5, -4, -2, 2, 3),
 				pkg.MakeLinkedList(-3, -3, -2, -1, 0),
 			},
 			sorted: pkg.MakeLinkedList(-10, -9, -9, -9, -8, -6, -5, -5, -4, -3, -3, -3, -2, -2, -1, -1, -1, 0, 0, 2, 3, 4),
 		},
 		{
-			lists: []*pkg.ListNode{
+			lists: []*pkg.ListNode[int]{
 				pkg.MakeLinkedList(-8, -8, -3, -2, 0, 2, 2, 3, 3),
 				pkg.MakeLinkedList(-5, -3, 1),
 				pkg.MakeLinkedList(-9, -7, -1, 4),

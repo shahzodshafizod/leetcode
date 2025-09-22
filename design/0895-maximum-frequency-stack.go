@@ -13,21 +13,21 @@ import (
 
 type FreqStack struct {
 	counts  map[int]int
-	buckets map[int]*pkg.ListNode
+	buckets map[int]*pkg.ListNode[int]
 	maxCnt  int
 }
 
 func NewFreqStack() FreqStack {
 	return FreqStack{
 		counts:  make(map[int]int),
-		buckets: make(map[int]*pkg.ListNode),
+		buckets: make(map[int]*pkg.ListNode[int]),
 	}
 }
 
 func (f *FreqStack) Push(val int) {
 	f.counts[val]++
 	cnt := f.counts[val]
-	f.buckets[cnt] = &pkg.ListNode{Val: val, Next: f.buckets[cnt]}
+	f.buckets[cnt] = &pkg.ListNode[int]{Val: val, Next: f.buckets[cnt]}
 	f.maxCnt = max(f.maxCnt, cnt)
 }
 

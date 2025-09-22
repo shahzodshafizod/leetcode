@@ -10,8 +10,8 @@ import (
 // go test -v -count=1 ./linkedlists/ -run ^TestReorderList$
 func TestReorderList(t *testing.T) {
 	for _, tc := range []struct {
-		head      *pkg.ListNode
-		reordered *pkg.ListNode
+		head      *pkg.ListNode[int]
+		reordered *pkg.ListNode[int]
 	}{
 		{head: pkg.MakeLinkedList(1, 2, 3, 4), reordered: pkg.MakeLinkedList(1, 4, 2, 3)},
 		{head: pkg.MakeLinkedList(1, 2, 3, 4, 5, 6, 7, 8, 9), reordered: pkg.MakeLinkedList(1, 9, 2, 8, 3, 7, 4, 6, 5)},

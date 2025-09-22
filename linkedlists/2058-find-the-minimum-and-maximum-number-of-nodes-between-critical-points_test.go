@@ -10,7 +10,7 @@ import (
 // go test -v -count=1 ./linkedlists/ -run ^TestNodesBetweenCriticalPoints$
 func TestNodesBetweenCriticalPoints(t *testing.T) {
 	for _, tc := range []struct {
-		head      *pkg.ListNode
+		head      *pkg.ListNode[int]
 		distances []int
 	}{
 		{head: pkg.MakeLinkedList(3, 1), distances: []int{-1, -1}},

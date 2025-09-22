@@ -8,33 +8,33 @@ import (
 
 // https://leetcode.com/problems/design-a-food-rating-system/
 
-type item struct {
+type foodItem struct {
 	rating  int
 	food    string
 	cuisine string
 }
 
 type FoodRatings struct {
-	cuisines map[string]*pkg.Heap[*item]
-	foods    map[string]*item
+	cuisines map[string]*pkg.Heap[*foodItem]
+	foods    map[string]*foodItem
 }
 
 func NewFoodRatings(foods []string, cuisines []string, ratings []int) FoodRatings {
 	f := FoodRatings{
-		cuisines: make(map[string]*pkg.Heap[*item]),
-		foods:    make(map[string]*item),
+		cuisines: make(map[string]*pkg.Heap[*foodItem]),
+		foods:    make(map[string]*foodItem),
 	}
 	for idx := range foods {
 		if f.cuisines[cuisines[idx]] == nil {
 			f.cuisines[cuisines[idx]] = pkg.NewHeap(
-				make([]*item, 0),
-				func(x, y *item) bool {
+				make([]*foodItem, 0),
+				func(x, y *foodItem) bool {
 					return x.rating > y.rating || x.rating == y.rating && x.food < y.food
 				},
 			)
 		}
 
-		item := &item{rating: ratings[idx], food: foods[idx], cuisine: cuisines[idx]}
+		item := &foodItem{rating: ratings[idx], food: foods[idx], cuisine: cuisines[idx]}
 		heap.Push(f.cuisines[cuisines[idx]], item)
 		f.foods[foods[idx]] = item
 	}
@@ -44,7 +44,7 @@ func NewFoodRatings(foods []string, cuisines []string, ratings []int) FoodRating
 
 func (f *FoodRatings) ChangeRating(food string, newRating int) {
 	cuisine := f.foods[food].cuisine
-	item := &item{
+	item := &foodItem{
 		rating:  newRating,
 		food:    food,
 		cuisine: cuisine,

@@ -10,8 +10,8 @@ import (
 // go test -v -count=1 ./linkedlists/ -run ^TestDeleteDuplicates$
 func TestDeleteDuplicates(t *testing.T) {
 	for _, tc := range []struct {
-		head    *pkg.ListNode
-		cleaned *pkg.ListNode
+		head    *pkg.ListNode[int]
+		cleaned *pkg.ListNode[int]
 	}{
 		{head: pkg.MakeLinkedList(1, 1, 2), cleaned: pkg.MakeLinkedList(1, 2)},
 		{head: pkg.MakeLinkedList(1, 1, 2, 3, 3), cleaned: pkg.MakeLinkedList(1, 2, 3)},

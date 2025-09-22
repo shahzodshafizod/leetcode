@@ -10,10 +10,10 @@ import (
 // go test -v -count=1 ./linkedlists/ -run ^TestSortList$
 func TestSortList(t *testing.T) {
 	for _, tc := range []struct {
-		head   *pkg.ListNode
-		sorted *pkg.ListNode
+		head   *pkg.ListNode[int]
+		sorted *pkg.ListNode[int]
 	}{
-		{head: pkg.MakeLinkedList(), sorted: pkg.MakeLinkedList()},
+		{head: pkg.MakeLinkedList[int](), sorted: pkg.MakeLinkedList[int]()},
 		{head: pkg.MakeLinkedList(4), sorted: pkg.MakeLinkedList(4)},
 		{head: pkg.MakeLinkedList(5, 2), sorted: pkg.MakeLinkedList(2, 5)},
 		{head: pkg.MakeLinkedList(5, 2, 4), sorted: pkg.MakeLinkedList(2, 4, 5)},

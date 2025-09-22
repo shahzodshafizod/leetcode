@@ -20,11 +20,11 @@ Step 2: Write out some test cases
 
 // https://leetcode.com/problems/reverse-linked-list/
 
-func reverseList(head *pkg.ListNode) *pkg.ListNode {
+func reverseList(head *pkg.ListNode[int]) *pkg.ListNode[int] {
 	node := head
 	head = nil
 
-	var next *pkg.ListNode
+	var next *pkg.ListNode[int]
 	for node != nil {
 		next = node.Next
 		node.Next = head

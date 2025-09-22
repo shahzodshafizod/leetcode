@@ -37,25 +37,31 @@ func TestFoodRatings(t *testing.T) {
 			case "FoodRatings":
 				values, ok := tc.values[idx].([][]any)
 				_ = ok
+
 				foods := make([]string, 0, len(values[0]))
 				for _, food := range values[0] {
 					foods = append(foods, food.(string))
 				}
+
 				cuisines := make([]string, 0, len(values[1]))
 				for _, cuisine := range values[1] {
 					cuisines = append(cuisines, cuisine.(string))
 				}
+
 				ratings := make([]int, 0, len(values[2]))
 				for _, rating := range values[2] {
 					ratings = append(ratings, rating.(int))
 				}
+
 				foodRatings = NewFoodRatings(foods, cuisines, ratings)
 			case "changeRating":
 				values, ok := tc.values[idx].([]any)
+				_ = ok
 				food, ok := values[0].(string)
 				_ = ok
 				rating, ok := values[1].(int)
 				_ = ok
+
 				foodRatings.ChangeRating(food, rating)
 			case "highestRated":
 				values, ok := tc.values[idx].([]any)
