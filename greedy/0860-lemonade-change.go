@@ -19,6 +19,7 @@ func lemonadeChange(bills []int) bool {
 			} else {
 				fiveStack -= 3
 			}
+		default:
 		}
 
 		if fiveStack < 0 {

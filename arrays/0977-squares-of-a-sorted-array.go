@@ -14,6 +14,7 @@ func sortedSquares(nums []int) []int {
 			lsq = nums[li] * nums[li]
 		case rsq == -1:
 			rsq = nums[ri] * nums[ri]
+		default:
 		}
 
 		if lsq >= rsq {

@@ -34,6 +34,7 @@ func TestMyCalendarThree(t *testing.T) {
 				calendar = NewMyCalendarThree()
 			case "book":
 				output = calendar.Book(tc.values[idx][0], tc.values[idx][1])
+			default:
 			}
 
 			assert.Equal(t, tc.output[idx], output)

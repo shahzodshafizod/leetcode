@@ -45,6 +45,7 @@ func TestAllOne(t *testing.T) {
 				output = allOne.GetMaxKey()
 			case "getMinKey":
 				output = allOne.GetMinKey()
+			default:
 			}
 
 			assert.Equal(t, tc.output[index], output)

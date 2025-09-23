@@ -53,6 +53,7 @@ func TestQueue(t *testing.T) {
 			output = queue.Empty()
 		case "Size":
 			output = queue.Size()
+		default:
 		}
 
 		assert.Equal(t, tc.output, output)

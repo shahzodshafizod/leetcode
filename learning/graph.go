@@ -1636,6 +1636,7 @@ func (g *graph) Dungeon(grid [][]byte) int {
 					queue.Enqueue([3]int{r, c, path + 1})
 
 					visited[r][c] = true
+				default:
 				}
 			}
 		}

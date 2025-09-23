@@ -48,6 +48,7 @@ func TestSpreadsheet(t *testing.T) {
 				values, ok := tc.values[idx].([]string)
 				_ = ok
 				output = sheet.GetValue(values[0])
+			default:
 			}
 
 			assert.Equal(t, tc.output[idx], output)

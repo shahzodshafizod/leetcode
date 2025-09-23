@@ -39,6 +39,7 @@ func maxDifference(s string, k int) int {
 				cnta++
 			case b:
 				cntb++
+			default:
 			}
 
 			if idx+1 >= k {
@@ -53,6 +54,7 @@ func maxDifference(s string, k int) int {
 					preva++
 				case b:
 					prevb++
+				default:
 				}
 
 				prevStat = getStat(preva, prevb)

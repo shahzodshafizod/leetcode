@@ -35,6 +35,7 @@ func TestWordFilter(t *testing.T) {
 				filter = NewWordFilter(tc.values[idx])
 			case "f":
 				output = filter.F(tc.values[idx][0], tc.values[idx][1])
+			default:
 			}
 
 			assert.Equal(t, tc.output[idx], output)

@@ -35,6 +35,7 @@ func minRemoveToMakeValid(s string) string {
 			} else {
 				remove = append(remove, idx)
 			}
+		default:
 		}
 	}
 

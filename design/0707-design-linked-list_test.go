@@ -62,6 +62,7 @@ func TestMyLinkedList(t *testing.T) {
 				list.AddAtIndex(tc.values[index][0], tc.values[index][1])
 			case "deleteAtIndex":
 				list.DeleteAtIndex(tc.values[index][0])
+			default:
 			}
 
 			assert.Equal(t, tc.output[index], output)

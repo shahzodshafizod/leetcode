@@ -41,6 +41,7 @@ func TestBST(t *testing.T) {
 			bst.Insert(tc.value[0])
 		case "Remove":
 			bst.Remove(tc.value[0])
+		default:
 		}
 
 		assert.Equal(t, tc.output, output)

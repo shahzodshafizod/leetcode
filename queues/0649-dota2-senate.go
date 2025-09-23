@@ -36,6 +36,7 @@ func predictPartyVictory(senate string) string {
 				dires = append(dires, index)
 				skipR++
 			}
+		default:
 		}
 	}
 

@@ -16,6 +16,7 @@ func maxFrequencyElements(nums []int) int {
 			total = 1
 		case count[num] == maxCount:
 			total++
+		default:
 		}
 	}
 

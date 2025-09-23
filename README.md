@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0088 | Merge Sorted Array | Easy | Array, Two Pointers, Sorting | 2025-09-23 | [Go](arrays/0088-merge-sorted-array.go) [Python](arrays/0088-merge-sorted-array.py)
 | 3005 | Count Elements With Maximum Frequency | Easy | Array, Hash Table, Counting | 2025-09-22 | [Go](hashes/3005-count-elements-with-maximum-frequency.go) [Python](hashes/3005-count-elements-with-maximum-frequency.py)
 | 1912 | Design Movie Rental System | Hard | Array, Hash Table, Design, Heap (Priority Queue), Ordered Set | 2025-09-21 | [Go](design/1912-design-movie-rental-system.go) [Python](design/1912-design-movie-rental-system.py)
 | 3508 | Implement Router | Medium | Array, Hash Table, Binary Search, Design, Queue, Ordered Set | 2025-09-20 | [Go](design/3508-implement-router.go) [Python](design/3508-implement-router.py)
@@ -541,7 +542,7 @@
 | 2487 | Remove Nodes From Linked List | Medium | Linked List, Stack, Recursion, Monotonic Stack | 2024-05-06 | [Go](linkedlists/2487-remove-nodes-from-linked-list.go)
 | 0237 | Delete Node in a Linked List | Medium | Linked List | 2024-05-05 | [Go](linkedlists/0237-delete-node-in-a-linked-list.go)
 | 0881 | Boats to Save People | Medium | Array, Two Pointers, Greedy, Sorting | 2024-05-04 | [Go](greedy/0881-boats-to-save-people.go)
-| 0165 | Compare Version Numbers | Medium | Two Pointers, String | 2024-05-03 | [Go](strings/0165-compare-version-numbers.go)
+| 0165 | Compare Version Numbers | Medium | Two Pointers, String | 2024-05-03 | [Go](strings/0165-compare-version-numbers.go) [Python](strings/0165-compare-version-numbers.py)
 | 2441 | Largest Positive Integer That Exists With Its Negative | Easy | Array, Hash Table, Two Pointers, Sorting | 2024-05-02 | [Go](hashes/2441-largest-positive-integer-that-exists-with-its-negative.go)
 | 2000 | Reverse Prefix of Word | Easy | Two Pointers, String | 2024-05-01 | [Go](strings/2000-reverse-prefix-of-word.go)
 | 1915 | Number of Wonderful Substrings | Medium | Hash Table, String, Bit Manipulation, Prefix Sum | 2024-04-30 | [Go](bits/1915-number-of-wonderful-substrings.go)

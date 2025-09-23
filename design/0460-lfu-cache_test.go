@@ -32,6 +32,7 @@ func TestLFUCache(t *testing.T) {
 				output = lfu.Get(tc.values[idx][0])
 			case "put":
 				lfu.Put(tc.values[idx][0], tc.values[idx][1])
+			default:
 			}
 
 			assert.Equal(t, tc.output[idx], output)

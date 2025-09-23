@@ -47,6 +47,7 @@ func TestUnionFind(t *testing.T) {
 			uf.Union(tc.value[0], tc.value[1])
 		case "Find":
 			output = uf.Find(tc.value[0])
+		default:
 		}
 
 		assert.Equal(t, tc.output, output)
@@ -79,6 +80,7 @@ func TestDSQuickFind(t *testing.T) {
 				uf.Union(tc.values[idx][0], tc.values[idx][1])
 			case "Connected":
 				output = uf.Find(tc.values[idx][0]) == uf.Find(tc.values[idx][1])
+			default:
 			}
 
 			assert.Equal(t, tc.output[idx], output)

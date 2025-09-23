@@ -12,6 +12,7 @@ func maxDepth(s string) int {
 			depth = max(depth, counter)
 		case ')':
 			counter--
+		default:
 		}
 	}
 

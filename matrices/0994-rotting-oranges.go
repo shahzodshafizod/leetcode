@@ -58,6 +58,7 @@ func orangesRotting(grid [][]int) int {
 				freshes++
 			case 2:
 				rottens = append(rottens, [2]int{row, col})
+			default:
 			}
 		}
 	}

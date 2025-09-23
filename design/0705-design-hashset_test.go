@@ -33,6 +33,7 @@ func TestMyHashSet(t *testing.T) {
 				myHashSet.Remove(tc.values[index][0])
 			case "contains":
 				output = myHashSet.Contains(tc.values[index][0])
+			default:
 			}
 
 			assert.Equal(t, tc.output[index], output)

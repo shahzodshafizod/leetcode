@@ -40,6 +40,7 @@ func TestMyStack(t *testing.T) {
 				output = stack.Top()
 			case "empty":
 				output = stack.Empty()
+			default:
 			}
 
 			assert.Equal(t, tc.output[index], output)

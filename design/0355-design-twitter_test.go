@@ -49,6 +49,7 @@ func TestTwitter(t *testing.T) {
 			case "unfollow":
 				followerID, followeeID := tc.values[index][0], tc.values[index][1]
 				twitter.Unfollow(followerID, followeeID)
+			default:
 			}
 
 			assert.Equal(t, tc.output[index], output)

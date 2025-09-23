@@ -52,6 +52,7 @@ func TestTaskManager(t *testing.T) {
 				manager.Rmv(values[0])
 			case "execTop":
 				output = manager.ExecTop()
+			default:
 			}
 
 			assert.Equal(t, tc.output[idx], output)

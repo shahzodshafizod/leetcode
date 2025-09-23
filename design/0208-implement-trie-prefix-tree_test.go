@@ -48,6 +48,7 @@ func TestTrie(t *testing.T) {
 				output = trie.Search(tc.values[index][0])
 			case "startsWith":
 				output = trie.StartsWith(tc.values[index][0])
+			default:
 			}
 
 			assert.Equal(t, tc.output[index], output)

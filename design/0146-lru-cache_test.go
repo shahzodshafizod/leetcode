@@ -46,6 +46,7 @@ func TestLRUCache(t *testing.T) {
 				output = cache.Get(tc.values[index][0])
 			case "put":
 				cache.Put(tc.values[index][0], tc.values[index][1])
+			default:
 			}
 
 			assert.Equal(t, tc.output[index], output)

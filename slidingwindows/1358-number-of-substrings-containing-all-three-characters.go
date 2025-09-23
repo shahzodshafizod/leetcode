@@ -14,6 +14,7 @@ func numberOfSubstrings(s string) int {
 			b = idx
 		case 'c':
 			c = idx
+		default:
 		}
 
 		count += min(a, b, c) + 1

@@ -60,6 +60,7 @@ func TestMovieRentingSystem(t *testing.T) {
 				renting.Drop(values[0], values[1])
 			case "report":
 				output = renting.Report()
+			default:
 			}
 
 			assert.Equal(t, tc.output[idx], output)

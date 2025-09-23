@@ -41,6 +41,7 @@ func TestFindElements(t *testing.T) {
 				finder = NewFindElements(pkg.MakeTree2(tc.values[idx][0].([]any)...))
 			case "find":
 				output = finder.Find(tc.values[idx][0].(int))
+			default:
 			}
 
 			assert.Equal(t, tc.output[idx], output)

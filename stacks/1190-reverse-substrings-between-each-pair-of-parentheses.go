@@ -16,6 +16,7 @@ func reverseParentheses(s string) string {
 			stack = stack[:len(stack)-1]
 			pairs[opening] = idx
 			pairs[idx] = opening
+		default:
 		}
 	}
 

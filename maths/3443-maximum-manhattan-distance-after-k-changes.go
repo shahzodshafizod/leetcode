@@ -22,6 +22,7 @@ func maxDistance(s string, k int) int {
 			lat++
 		case 'S':
 			lat--
+		default:
 		}
 
 		x, y = lon, lat

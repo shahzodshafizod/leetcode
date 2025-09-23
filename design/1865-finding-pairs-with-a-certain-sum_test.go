@@ -42,6 +42,7 @@ func TestFindSumPairs(t *testing.T) {
 				f.Add(tc.values[idx][0][0], tc.values[idx][0][1])
 			case "count":
 				output = f.Count(tc.values[idx][0][0])
+			default:
 			}
 
 			assert.Equal(t, tc.output[idx], output)

@@ -46,6 +46,7 @@ func TestMedianFinder(t *testing.T) {
 				medianFinder.AddNum(tc.values[index][0])
 			case "findMedian":
 				output = medianFinder.FindMedian()
+			default:
 			}
 
 			assert.Equal(t, tc.output[index], output)

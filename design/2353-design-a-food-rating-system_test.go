@@ -69,6 +69,7 @@ func TestFoodRatings(t *testing.T) {
 				cuisine, ok := values[0].(string)
 				_ = ok
 				output = foodRatings.HighestRated(cuisine)
+			default:
 			}
 
 			assert.Equal(t, tc.output[idx], output)

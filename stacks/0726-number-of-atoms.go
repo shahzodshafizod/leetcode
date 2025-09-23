@@ -57,6 +57,7 @@ func countOfAtoms(formula string) string {
 		case r == '(':
 			multiply /= stack[len(stack)-1]
 			stack = stack[:len(stack)-1]
+		default:
 		}
 	}
 

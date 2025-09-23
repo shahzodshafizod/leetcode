@@ -43,6 +43,7 @@ func TestStack(t *testing.T) {
 			output = stack.Empty()
 		case "Size":
 			output = stack.Size()
+		default:
 		}
 
 		assert.Equal(t, tc.output, output)

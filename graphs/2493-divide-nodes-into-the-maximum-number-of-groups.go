@@ -79,6 +79,7 @@ func magnificentSets(n int, edges [][]int) int {
 						queue.PushBack(next)
 					case layer:
 						return -1
+					default:
 					}
 				}
 			}

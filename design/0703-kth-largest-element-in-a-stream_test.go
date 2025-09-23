@@ -54,6 +54,7 @@ func TestKthLargest(t *testing.T) {
 				kth = NewKthLargest(k, nums)
 			case "add":
 				output = kth.Add(tc.values[index][0].(int))
+			default:
 			}
 
 			assert.Equal(t, tc.output[index], output)

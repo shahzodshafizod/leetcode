@@ -37,6 +37,7 @@ func TestSummaryRanges(t *testing.T) {
 				sr.AddNum(tc.values[idx][0])
 			case "getIntervals":
 				output = sr.GetIntervals()
+			default:
 			}
 
 			assert.Equal(t, tc.outputs[idx], output)

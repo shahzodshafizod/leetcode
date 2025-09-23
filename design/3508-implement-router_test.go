@@ -44,6 +44,7 @@ func TestRouter(t *testing.T) {
 				output = router.ForwardPacket()
 			case "getCount":
 				output = router.GetCount(tc.values[idx][0], tc.values[idx][1], tc.values[idx][2])
+			default:
 			}
 
 			assert.Equal(t, tc.output[idx], output)

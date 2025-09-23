@@ -72,6 +72,7 @@ func TestProductOfNumbers(t *testing.T) {
 				p.Add(tc.values[idx][0])
 			case "getProduct":
 				output = p.GetProduct(tc.values[idx][0])
+			default:
 			}
 
 			assert.Equal(t, tc.output[idx], output)

@@ -33,6 +33,7 @@ func TestBrowserHistory(t *testing.T) {
 				output = history.Back(tc.values[index][0].(int))
 			case "forward":
 				output = history.Forward(tc.values[index][0].(int))
+			default:
 			}
 
 			assert.Equal(t, tc.output[index], output)

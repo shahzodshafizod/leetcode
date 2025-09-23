@@ -35,6 +35,7 @@ func TestMyQueue(t *testing.T) {
 				output = queue.Pop()
 			case "empty":
 				output = queue.Empty()
+			default:
 			}
 
 			assert.Equal(t, tc.output[index], output)

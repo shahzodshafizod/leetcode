@@ -22,6 +22,7 @@ func findDifference(nums1 []int, nums2 []int) [][]int {
 			answer[0] = append(answer[0], num-1000)
 		case 2:
 			answer[1] = append(answer[1], num-1000)
+		default:
 		}
 	}
 

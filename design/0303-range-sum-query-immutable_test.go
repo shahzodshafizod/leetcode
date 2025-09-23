@@ -30,6 +30,7 @@ func TestNumArray(t *testing.T) {
 				numArray = NewNumArray(tc.values[idx])
 			case "sumRange":
 				output = numArray.SumRange(tc.values[idx][0], tc.values[idx][1])
+			default:
 			}
 
 			assert.Equal(t, tc.output[idx], output)

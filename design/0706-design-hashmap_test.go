@@ -33,6 +33,7 @@ func TestMyHashMap(t *testing.T) {
 				output = myHashMap.Get(tc.values[index][0])
 			case "remove":
 				myHashMap.Remove(tc.values[index][0])
+			default:
 			}
 
 			assert.Equal(t, tc.output[index], output)

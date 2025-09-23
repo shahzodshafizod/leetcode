@@ -18,6 +18,7 @@ func judgeCircle(moves string) bool {
 			x++
 		case 'U':
 			x--
+		default:
 		}
 	}
 

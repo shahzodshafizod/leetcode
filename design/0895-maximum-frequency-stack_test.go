@@ -37,6 +37,7 @@ func TestFreqStack(t *testing.T) {
 				f.Push(tc.values[idx][0])
 			case "pop":
 				output = f.Pop()
+			default:
 			}
 
 			assert.Equal(t, tc.output[idx], output)

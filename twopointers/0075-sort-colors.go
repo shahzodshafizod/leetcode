@@ -22,6 +22,7 @@ func sortColors(nums []int) {
 			nums[idx], nums[right] = nums[right], nums[idx]
 			right--
 			idx--
+		default:
 		}
 	}
 }

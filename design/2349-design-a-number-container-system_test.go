@@ -32,6 +32,7 @@ func TestNumberContainers(t *testing.T) {
 				container.Change(tc.values[idx][0], tc.values[idx][1])
 			case "find":
 				output = container.Find(tc.values[idx][0])
+			default:
 			}
 
 			assert.Equal(t, tc.output[idx], output)
