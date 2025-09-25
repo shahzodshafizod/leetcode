@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0120 | Triangle | Medium | Array, Dynamic Programming | 2025-09-25 | [Go](dp/0120-triangle.go) [Python](dp/0120-triangle.py)
 | 0088 | Merge Sorted Array | Easy | Array, Two Pointers, Sorting | 2025-09-23 | [Go](arrays/0088-merge-sorted-array.go) [Python](arrays/0088-merge-sorted-array.py)
 | 3005 | Count Elements With Maximum Frequency | Easy | Array, Hash Table, Counting | 2025-09-22 | [Go](hashes/3005-count-elements-with-maximum-frequency.go) [Python](hashes/3005-count-elements-with-maximum-frequency.py)
 | 1912 | Design Movie Rental System | Hard | Array, Hash Table, Design, Heap (Priority Queue), Ordered Set | 2025-09-21 | [Go](design/1912-design-movie-rental-system.go) [Python](design/1912-design-movie-rental-system.py)
