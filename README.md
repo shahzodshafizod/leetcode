@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0611 | Valid Triangle Number | Medium | Array, Two Pointers, Binary Search, Greedy, Sorting | 2025-09-26 | [Go](twopointers/0611-valid-triangle-number.go) [Python](twopointers/0611-valid-triangle-number.py)
 | 0120 | Triangle | Medium | Array, Dynamic Programming | 2025-09-25 | [Go](dp/0120-triangle.go) [Python](dp/0120-triangle.py)
 | 0166 | Fraction to Recurring Decimal | Medium | Hash Table, Math, String | 2025-09-24 | [Go](maths/0166-fraction-to-recurring-decimal.go) [Python](maths/0166-fraction-to-recurring-decimal.py)
 | 0088 | Merge Sorted Array | Easy | Array, Two Pointers, Sorting | 2025-09-23 | [Go](arrays/0088-merge-sorted-array.go) [Python](arrays/0088-merge-sorted-array.py)
