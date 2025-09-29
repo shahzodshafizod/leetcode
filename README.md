@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1039 | Minimum Score Triangulation of Polygon | Medium | Array, Dynamic Programming | 2025-09-29 | [Go](dp/1039-minimum-score-triangulation-of-polygon.go) [Python](dp/1039-minimum-score-triangulation-of-polygon.py)
 | 0976 | Largest Perimeter Triangle | Easy | Array, Math, Greedy, Sorting | 2025-09-28 | [Go](maths/0976-largest-perimeter-triangle.go) [Python](maths/0976-largest-perimeter-triangle.py)
 | 0812 | Largest Triangle Area | Easy | Array, Math, Geometry | 2025-09-27 | [Go](maths/0812-largest-triangle-area.go) [Python](maths/0812-largest-triangle-area.py)
 | 0611 | Valid Triangle Number | Medium | Array, Two Pointers, Binary Search, Greedy, Sorting | 2025-09-26 | [Go](twopointers/0611-valid-triangle-number.go) [Python](twopointers/0611-valid-triangle-number.py)
