@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2221 | Find Triangular Sum of an Array | Medium | Array, Math, Simulation, Combinatorics | 2025-09-30 | [Go](maths/2221-find-triangular-sum-of-an-array.go) [Python](maths/2221-find-triangular-sum-of-an-array.py)
 | 1039 | Minimum Score Triangulation of Polygon | Medium | Array, Dynamic Programming | 2025-09-29 | [Go](dp/1039-minimum-score-triangulation-of-polygon.go) [Python](dp/1039-minimum-score-triangulation-of-polygon.py)
 | 0976 | Largest Perimeter Triangle | Easy | Array, Math, Greedy, Sorting | 2025-09-28 | [Go](maths/0976-largest-perimeter-triangle.go) [Python](maths/0976-largest-perimeter-triangle.py)
 | 0812 | Largest Triangle Area | Easy | Array, Math, Geometry | 2025-09-27 | [Go](maths/0812-largest-triangle-area.go) [Python](maths/0812-largest-triangle-area.py)
@@ -479,7 +480,7 @@
 | 1598 | Crawler Log Folder | Easy | Array, String, Stack | 2024-07-10 | [Go](stacks/1598-crawler-log-folder.go)
 | 1701 | Average Waiting Time | Medium | Array, Simulation | 2024-07-09 | [Go](arrays/1701-average-waiting-time.go)
 | 1823 | Find the Winner of the Circular Game | Medium | Array, Math, Recursion, Queue, Simulation | 2024-07-08 | [Go](queues/1823-find-the-winner-of-the-circular-game.go)
-| 1518 | Water Bottles | Easy | Math, Simulation | 2024-07-07 | [Go](maths/1518-water-bottles.go)
+| 1518 | Water Bottles | Easy | Math, Simulation | 2024-07-07 | [Go](maths/1518-water-bottles.go) [Python](maths/1518-water-bottles.py)
 | 2582 | Pass the Pillow | Easy | Math, Simulation | 2024-07-06 | [Go](maths/2582-pass-the-pillow.go)
 | 2058 | Find the Minimum and Maximum Number of Nodes Between Critical Points | Medium | Linked List | 2024-07-05 | [Go](linkedlists/2058-find-the-minimum-and-maximum-number-of-nodes-between-critical-points.go)
 | 2181 | Merge Nodes in Between Zeros | Medium | Linked List, Simulation | 2024-07-04 | [Go](linkedlists/2181-merge-nodes-in-between-zeros.go)
