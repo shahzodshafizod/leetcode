@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3187 | Peaks in Array | Hard | Array, Binary Indexed Tree, Segment Tree | 2025-10-01 | [Go](fenwicks/3187-peaks-in-array.go) [Python](fenwicks/3187-peaks-in-array.py)
 | 2221 | Find Triangular Sum of an Array | Medium | Array, Math, Simulation, Combinatorics | 2025-09-30 | [Go](maths/2221-find-triangular-sum-of-an-array.go) [Python](maths/2221-find-triangular-sum-of-an-array.py)
 | 1039 | Minimum Score Triangulation of Polygon | Medium | Array, Dynamic Programming | 2025-09-29 | [Go](dp/1039-minimum-score-triangulation-of-polygon.go) [Python](dp/1039-minimum-score-triangulation-of-polygon.py)
 | 0976 | Largest Perimeter Triangle | Easy | Array, Math, Greedy, Sorting | 2025-09-28 | [Go](maths/0976-largest-perimeter-triangle.go) [Python](maths/0976-largest-perimeter-triangle.py)
