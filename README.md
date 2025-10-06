@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0815 | Bus Routes | Hard | Array, Hash Table, Breadth-First Search | 2025-10-03 | [Go](graphs/0815-bus-routes.go) [Python](graphs/0815-bus-routes.py)
 | 1970 | Last Day Where You Can Still Cross | Hard | Array, Binary Search, Depth-First Search, Breadth-First Search, Union Find, Matrix | 2025-10-02 | [Go](binarysearch/1970-last-day-where-you-can-still-cross.go) [Python](binarysearch/1970-last-day-where-you-can-still-cross.py)
 | 3187 | Peaks in Array | Hard | Array, Binary Indexed Tree, Segment Tree | 2025-10-01 | [Go](fenwicks/3187-peaks-in-array.go) [Python](fenwicks/3187-peaks-in-array.py)
 | 2221 | Find Triangular Sum of an Array | Medium | Array, Math, Simulation, Combinatorics | 2025-09-30 | [Go](maths/2221-find-triangular-sum-of-an-array.go) [Python](maths/2221-find-triangular-sum-of-an-array.py)
