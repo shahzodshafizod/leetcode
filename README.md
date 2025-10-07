@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1293 | Shortest Path in a Grid with Obstacles Elimination | Hard | Array, Breadth-First Search, Matrix | 2025-10-05 | [Go](matrices/1293-shortest-path-in-a-grid-with-obstacles-elimination.go) [Python](matrices/1293-shortest-path-in-a-grid-with-obstacles-elimination.py)
 | 0839 | Similar String Groups | Hard | Array, Hash Table, String, Depth-First Search, Breadth-First Search, Union Find | 2025-10-04 | [Go](graphs/0839-similar-string-groups.go) [Python](graphs/0839-similar-string-groups.py)
 | 0815 | Bus Routes | Hard | Array, Hash Table, Breadth-First Search | 2025-10-03 | [Go](graphs/0815-bus-routes.go) [Python](graphs/0815-bus-routes.py)
 | 1970 | Last Day Where You Can Still Cross | Hard | Array, Binary Search, Depth-First Search, Breadth-First Search, Union Find, Matrix | 2025-10-02 | [Go](binarysearch/1970-last-day-where-you-can-still-cross.go) [Python](binarysearch/1970-last-day-where-you-can-still-cross.py)
