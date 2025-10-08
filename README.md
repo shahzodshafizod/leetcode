@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2642 | Design Graph With Shortest Path Calculator | Hard | Graph, Design, Heap (Priority Queue), Shortest Path | 2025-10-07 | [Go](design/2642-design-graph-with-shortest-path-calculator.go) [Python](design/2642-design-graph-with-shortest-path-calculator.py)
 | 2360 | Longest Cycle in a Graph | Hard | Depth-First Search, Breadth-First Search, Graph, Topological Sort | 2025-10-06 | [Go](graphs/2360-longest-cycle-in-a-graph.go) [Python](graphs/2360-longest-cycle-in-a-graph.py)
 | 1293 | Shortest Path in a Grid with Obstacles Elimination | Hard | Array, Breadth-First Search, Matrix | 2025-10-05 | [Go](matrices/1293-shortest-path-in-a-grid-with-obstacles-elimination.go) [Python](matrices/1293-shortest-path-in-a-grid-with-obstacles-elimination.py)
 | 0839 | Similar String Groups | Hard | Array, Hash Table, String, Depth-First Search, Breadth-First Search, Union Find | 2025-10-04 | [Go](graphs/0839-similar-string-groups.go) [Python](graphs/0839-similar-string-groups.py)
