@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1125 | Smallest Sufficient Team | Hard | Array, Dynamic Programming, Bit Manipulation, Bitmask | 2025-10-09 | [Go](dp/1125-smallest-sufficient-team.go) [Python](dp/1125-smallest-sufficient-team.py)
 | 3123 | Find Edges in Shortest Paths | Hard | Depth-First Search, Breadth-First Search, Graph, Heap (Priority Queue), Shortest Path | 2025-10-08 | [Go](graphs/3123-find-edges-in-shortest-paths.go) [Python](graphs/3123-find-edges-in-shortest-paths.py)
 | 2642 | Design Graph With Shortest Path Calculator | Hard | Graph, Design, Heap (Priority Queue), Shortest Path | 2025-10-07 | [Go](design/2642-design-graph-with-shortest-path-calculator.go) [Python](design/2642-design-graph-with-shortest-path-calculator.py)
 | 2360 | Longest Cycle in a Graph | Hard | Depth-First Search, Breadth-First Search, Graph, Topological Sort | 2025-10-06 | [Go](graphs/2360-longest-cycle-in-a-graph.go) [Python](graphs/2360-longest-cycle-in-a-graph.py)
