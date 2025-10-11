@@ -30,11 +30,14 @@ func TestGraph(t *testing.T) {
 				values, ok := tc.values[idx].([]any)
 				_ = ok
 				n, ok := values[0].(int)
+				_ = ok
 				edges, ok := values[1].([][]int)
+				_ = ok
 				graph = NewGraph(n, edges)
 			case "addEdge":
 				edge, ok := tc.values[idx].([][]int)
 				_ = ok
+
 				graph.AddEdge(edge[0])
 			case "shortestPath":
 				values, ok := tc.values[idx].([]int)

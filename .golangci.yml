@@ -115,6 +115,7 @@ linters:
 
   # Disable specific linters.
   disable:
+    - godoclint
     - dupl # 14
     - dupword # 45
     - exhaustruct # 69

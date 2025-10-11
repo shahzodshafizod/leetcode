@@ -19,6 +19,7 @@ func NewGraph(n int, edges [][]int) Graph {
 	for _, edge := range edges {
 		g.AddEdge(edge)
 	}
+
 	return g
 }
 
@@ -36,13 +37,17 @@ func (g *Graph) ShortestPath(node1 int, node2 int) int {
 		func(x, y [2]int) bool { return x[1] < y[1] },
 	)
 	seen := make([]bool, len(g.adj))
+
 	var node, cost, nextNode, nextCost int
 	for pq.Len() > 0 {
-		item := heap.Pop(pq).([2]int)
+		item, ok := heap.Pop(pq).([2]int)
+		_ = ok
+
 		node, cost = item[0], item[1]
 		if node == node2 {
 			return cost
 		}
+
 		seen[node] = true
 		for _, nei := range g.adj[node] {
 			nextNode, nextCost = nei[0], nei[1]+cost
@@ -51,6 +56,7 @@ func (g *Graph) ShortestPath(node1 int, node2 int) int {
 			}
 		}
 	}
+
 	return -1
 }
 

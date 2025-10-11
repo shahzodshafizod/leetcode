@@ -12,8 +12,10 @@ func smallestSufficientTeam(reqSkills []string, people [][]string) []int {
 	for idx, skill := range reqSkills {
 		indices[skill] = idx
 	}
+
 	n := len(people)
 	skills := make([]int, n)
+
 	for person := range people {
 		for _, skill := range people[person] {
 			skills[person] |= 1 << indices[skill]
@@ -26,7 +28,9 @@ func smallestSufficientTeam(reqSkills []string, people [][]string) []int {
 
 	for smask := maximal - 1; smask >= 0; smask-- { // smask: skills mask
 		dp[smask] = (1 << n) - 1
+
 		var pmask int
+
 		for person := range n {
 			if smask|skills[person] != smask {
 				pmask = dp[smask|skills[person]] | (1 << person)
@@ -38,12 +42,15 @@ func smallestSufficientTeam(reqSkills []string, people [][]string) []int {
 	}
 
 	mask := dp[0]
+
 	var team []int
+
 	for pid := range n {
 		if mask&(1<<pid) != 0 {
 			team = append(team, pid)
 		}
 	}
+
 	return team
 }
 

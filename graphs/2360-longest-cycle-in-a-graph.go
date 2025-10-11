@@ -22,10 +22,12 @@ func longestCycle(edges []int) int {
 		dist[node] = length
 		length = dfs(edges[node], length+1)
 		dist[node] = -1
+
 		return length
 	}
 
 	length := -1
+
 	for node := range n {
 		if dist[node] == 0 {
 			length = max(length, dfs(node, 1))

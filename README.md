@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 1416 | Restore The Array | Hard | String, Dynamic Programming | 2025-10-11 | [Go](dp/1416-restore-the-array.go) [Python](dp/1416-restore-the-array.py)
+| 1444 | Number of Ways of Cutting a Pizza | Hard | Array, Dynamic Programming, Memoization, Matrix, Prefix Sum | 2025-10-10 | [Go](dp/1444-number-of-ways-of-cutting-a-pizza.go) [Python](dp/1444-number-of-ways-of-cutting-a-pizza.py)
 | 1125 | Smallest Sufficient Team | Hard | Array, Dynamic Programming, Bit Manipulation, Bitmask | 2025-10-09 | [Go](dp/1125-smallest-sufficient-team.go) [Python](dp/1125-smallest-sufficient-team.py)
 | 3123 | Find Edges in Shortest Paths | Hard | Depth-First Search, Breadth-First Search, Graph, Heap (Priority Queue), Shortest Path | 2025-10-08 | [Go](graphs/3123-find-edges-in-shortest-paths.go) [Python](graphs/3123-find-edges-in-shortest-paths.py)
 | 2642 | Design Graph With Shortest Path Calculator | Hard | Graph, Design, Heap (Priority Queue), Shortest Path | 2025-10-07 | [Go](design/2642-design-graph-with-shortest-path-calculator.go) [Python](design/2642-design-graph-with-shortest-path-calculator.py)

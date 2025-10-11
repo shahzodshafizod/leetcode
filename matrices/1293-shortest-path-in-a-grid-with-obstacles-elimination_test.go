@@ -9,8 +9,8 @@ import (
 // go test -v -count=1 ./matrices/ -run ^TestShortestPath$
 func TestShortestPath(t *testing.T) {
 	for _, tc := range []struct {
-		grid [][]int
-		k int
+		grid   [][]int
+		k      int
 		length int
 	}{
 		{grid: [][]int{{0, 0, 0}, {1, 1, 0}, {0, 0, 0}, {0, 1, 1}, {0, 0, 0}}, k: 1, length: 6},
