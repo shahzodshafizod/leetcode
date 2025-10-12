@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3539 | Find Sum of Array Product of Magical Sequences | Hard | Array, Math, Dynamic Programming, Bit Manipulation, Combinatorics, Bitmask | 2025-10-12 | [Go](dp/3539-find-sum-of-array-product-of-magical-sequences.go) [Python](dp/3539-find-sum-of-array-product-of-magical-sequences.py)
 | 1416 | Restore The Array | Hard | String, Dynamic Programming | 2025-10-11 | [Go](dp/1416-restore-the-array.go) [Python](dp/1416-restore-the-array.py)
 | 1444 | Number of Ways of Cutting a Pizza | Hard | Array, Dynamic Programming, Memoization, Matrix, Prefix Sum | 2025-10-10 | [Go](dp/1444-number-of-ways-of-cutting-a-pizza.go) [Python](dp/1444-number-of-ways-of-cutting-a-pizza.py)
 | 1125 | Smallest Sufficient Team | Hard | Array, Dynamic Programming, Bit Manipulation, Bitmask | 2025-10-09 | [Go](dp/1125-smallest-sufficient-team.go) [Python](dp/1125-smallest-sufficient-team.py)
