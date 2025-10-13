@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2273 | Find Resultant Array After Removing Anagrams | Easy | Array, Hash Table, String, Sorting | 2025-10-13 | [Go](strings/2273-find-resultant-array-after-removing-anagrams.go) [Python](strings/2273-find-resultant-array-after-removing-anagrams.py)
 | 3539 | Find Sum of Array Product of Magical Sequences | Hard | Array, Math, Dynamic Programming, Bit Manipulation, Combinatorics, Bitmask | 2025-10-12 | [Go](dp/3539-find-sum-of-array-product-of-magical-sequences.go) [Python](dp/3539-find-sum-of-array-product-of-magical-sequences.py)
 | 1416 | Restore The Array | Hard | String, Dynamic Programming | 2025-10-11 | [Go](dp/1416-restore-the-array.go) [Python](dp/1416-restore-the-array.py)
 | 1444 | Number of Ways of Cutting a Pizza | Hard | Array, Dynamic Programming, Memoization, Matrix, Prefix Sum | 2025-10-10 | [Go](dp/1444-number-of-ways-of-cutting-a-pizza.go) [Python](dp/1444-number-of-ways-of-cutting-a-pizza.py)
