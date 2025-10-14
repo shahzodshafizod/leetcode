@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3349 | Adjacent Increasing Subarrays Detection I | Easy | Array | 2025-10-14 | [Go](arrays/3349-adjacent-increasing-subarrays-detection-i.go) [Python](arrays/3349-adjacent-increasing-subarrays-detection-i.py)
+| 0403 | Frog Jump | Hard | Array | 2025-10-13 | [Go](dp/0403-frog-jump.go) [Python](dp/0403-frog-jump.py)
 | 2273 | Find Resultant Array After Removing Anagrams | Easy | Array, Hash Table, String, Sorting | 2025-10-13 | [Go](strings/2273-find-resultant-array-after-removing-anagrams.go) [Python](strings/2273-find-resultant-array-after-removing-anagrams.py)
 | 3539 | Find Sum of Array Product of Magical Sequences | Hard | Array, Math, Dynamic Programming, Bit Manipulation, Combinatorics, Bitmask | 2025-10-12 | [Go](dp/3539-find-sum-of-array-product-of-magical-sequences.go) [Python](dp/3539-find-sum-of-array-product-of-magical-sequences.py)
 | 1416 | Restore The Array | Hard | String, Dynamic Programming | 2025-10-11 | [Go](dp/1416-restore-the-array.go) [Python](dp/1416-restore-the-array.py)
