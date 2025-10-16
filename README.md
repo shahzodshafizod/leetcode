@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3041 | Maximize Consecutive Elements in an Array After Modification | Hard | Array, Dynamic Programming, Sorting | 2025-10-15 | [Go](dp/3041-maximize-consecutive-elements-in-an-array-after-modification.go) [Python](dp/3041-maximize-consecutive-elements-in-an-array-after-modification.py)
 | 1312 | Minimum Insertion Steps to Make a String Palindrome | Hard | String, Dynamic Programming | 2025-10-14 | [Go](dp/1312-minimum-insertion-steps-to-make-a-string-palindrome.go) [Python](dp/1312-minimum-insertion-steps-to-make-a-string-palindrome.py)
 | 3349 | Adjacent Increasing Subarrays Detection I | Easy | Array | 2025-10-14 | [Go](arrays/3349-adjacent-increasing-subarrays-detection-i.go) [Python](arrays/3349-adjacent-increasing-subarrays-detection-i.py)
 | 0403 | Frog Jump | Hard | Array | 2025-10-13 | [Go](dp/0403-frog-jump.go) [Python](dp/0403-frog-jump.py)
