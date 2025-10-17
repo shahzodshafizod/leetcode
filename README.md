@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3003 | Maximize the Number of Partitions After Operations | Hard | String, Dynamic Programming, Bit Manipulation, Bitmask | 2025-10-17 | [Go](dp/3003-maximize-the-number-of-partitions-after-operations.go) [Python](dp/3003-maximize-the-number-of-partitions-after-operations.py)
 | 3098 | Find the Sum of Subsequence Powers | Hard | Array, Dynamic Programming, Sorting | 2025-10-16 | [Go](dp/3098-find-the-sum-of-subsequence-powers.go) [Python](dp/3098-find-the-sum-of-subsequence-powers.py)
 | 3041 | Maximize Consecutive Elements in an Array After Modification | Hard | Array, Dynamic Programming, Sorting | 2025-10-15 | [Go](dp/3041-maximize-consecutive-elements-in-an-array-after-modification.go) [Python](dp/3041-maximize-consecutive-elements-in-an-array-after-modification.py)
 | 1312 | Minimum Insertion Steps to Make a String Palindrome | Hard | String, Dynamic Programming | 2025-10-14 | [Go](dp/1312-minimum-insertion-steps-to-make-a-string-palindrome.go) [Python](dp/1312-minimum-insertion-steps-to-make-a-string-palindrome.py)
