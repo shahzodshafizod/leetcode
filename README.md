@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2011 | Final Value of Variable After Performing Operations | Easy | Array, String, Simulation | 2025-10-20 | [Go](strings/2011-final-value-of-variable-after-performing-operations.go) [Python](strings/2011-final-value-of-variable-after-performing-operations.py)
+| 3177 | Find the Maximum Length of a Good Subsequence II | Hard | Array, Hash Table, Dynamic Programming | 2025-10-19 | [Go](dp/3177-find-the-maximum-length-of-a-good-subsequence-ii.go) [Python](dp/3177-find-the-maximum-length-of-a-good-subsequence-ii.py)
 | 3130 | Find All Possible Stable Binary Arrays II | Hard | Dynamic Programming, Prefix Sum | 2025-10-18 | [Go](dp/3130-find-all-possible-stable-binary-arrays-ii.go) [Python](dp/3130-find-all-possible-stable-binary-arrays-ii.py)
 | 3003 | Maximize the Number of Partitions After Operations | Hard | String, Dynamic Programming, Bit Manipulation, Bitmask | 2025-10-17 | [Go](dp/3003-maximize-the-number-of-partitions-after-operations.go) [Python](dp/3003-maximize-the-number-of-partitions-after-operations.py)
 | 3098 | Find the Sum of Subsequence Powers | Hard | Array, Dynamic Programming, Sorting | 2025-10-16 | [Go](dp/3098-find-the-sum-of-subsequence-powers.go) [Python](dp/3098-find-the-sum-of-subsequence-powers.py)
