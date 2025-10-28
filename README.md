@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3193 | Count the Number of Inversions | Hard | Array, Dynamic Programming | 2025-10-20 | [Go](dp/3193-count-the-number-of-inversions.go) [Python](dp/3193-count-the-number-of-inversions.py)
 | 2011 | Final Value of Variable After Performing Operations | Easy | Array, String, Simulation | 2025-10-20 | [Go](strings/2011-final-value-of-variable-after-performing-operations.go) [Python](strings/2011-final-value-of-variable-after-performing-operations.py)
 | 3177 | Find the Maximum Length of a Good Subsequence II | Hard | Array, Hash Table, Dynamic Programming | 2025-10-19 | [Go](dp/3177-find-the-maximum-length-of-a-good-subsequence-ii.go) [Python](dp/3177-find-the-maximum-length-of-a-good-subsequence-ii.py)
 | 3130 | Find All Possible Stable Binary Arrays II | Hard | Dynamic Programming, Prefix Sum | 2025-10-18 | [Go](dp/3130-find-all-possible-stable-binary-arrays-ii.go) [Python](dp/3130-find-all-possible-stable-binary-arrays-ii.py)
