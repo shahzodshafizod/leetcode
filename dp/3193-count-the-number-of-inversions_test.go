@@ -17,7 +17,7 @@ func TestNumberOfPermutations(t *testing.T) {
 		{n: 3, requirements: [][]int{{2, 2}, {1, 1}, {0, 0}}, count: 1},
 		{n: 2, requirements: [][]int{{0, 0}, {1, 0}}, count: 1},
 		{n: 3, requirements: [][]int{{2, 0}}, count: 1},
-		{n: 15, requirements: [][]int{{14,58},{0,0},{10,28}}, count: 243296005},
+		{n: 15, requirements: [][]int{{14, 58}, {0, 0}, {10, 28}}, count: 243296005},
 	} {
 		count := numberOfPermutations(tc.n, tc.requirements)
 		assert.Equal(t, tc.count, count)

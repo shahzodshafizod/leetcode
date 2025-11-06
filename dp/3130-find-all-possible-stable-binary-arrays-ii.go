@@ -7,28 +7,35 @@ package dp
 // Space: O(zero * one)
 func numberOfStableArrays(zero int, one int, limit int) int {
 	const mod = int(1e9) + 7
+
 	dp := make([][][2]int, zero+1)
 	for i := range dp {
 		dp[i] = make([][2]int, one+1)
 	}
+
 	for z := min(zero, limit); z >= 0; z-- {
 		dp[z][0][0] = 1
 	}
+
 	for o := min(one, limit); o >= 0; o-- {
 		dp[0][o][1] = 1
 	}
+
 	for z := 1; z <= zero; z++ {
 		for o := 1; o <= one; o++ {
 			dp[z][o][0] = (dp[z-1][o][0] + dp[z-1][o][1]) % mod
+
 			dp[z][o][1] = (dp[z][o-1][0] + dp[z][o-1][1]) % mod
 			if z > limit {
 				dp[z][o][0] = (dp[z][o][0] - dp[z-limit-1][o][1] + mod) % mod
 			}
+
 			if o > limit {
 				dp[z][o][1] = (dp[z][o][1] - dp[z][o-limit-1][0] + mod) % mod
 			}
 		}
 	}
+
 	return (dp[zero][one][0] + dp[zero][one][1]) % mod
 }
 

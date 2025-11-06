@@ -2,6 +2,11 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3351 | Sum of Good Subsequences | Hard | Array, Hash Table, Dynamic Programming | 2025-10-25 | [Go](dp/3351-sum-of-good-subsequences.go) [Python](dp/3351-sum-of-good-subsequences.py)
+| 3352 | Count K-Reducible Numbers Less Than N | Hard | Math, String, Dynamic Programming, Combinatorics | 2025-10-24 | [Go](dp/3352-count-k-reducible-numbers-less-than-n.go) [Python](dp/3352-count-k-reducible-numbers-less-than-n.py)
+| 3461 | Check If Digits Are Equal in String After Operations I | Easy | Math, String, Simulation, Combinatorics, Number Theory | 2025-10-23 | [Go](strings/3461-check-if-digits-are-equal-in-string-after-operations-i.go) [Python](strings/3461-check-if-digits-are-equal-in-string-after-operations-i.py)
+| 3347 | Maximum Frequency of an Element After Performing Operations II | Hard | Array, Binary Search, Sliding Window, Sorting, Prefix Sum | 2025-10-22 | [Go](binarysearch/3347-maximum-frequency-of-an-element-after-performing-operations-ii.go) [Python](binarysearch/3347-maximum-frequency-of-an-element-after-performing-operations-ii.py)
+| 3213 | Construct String with Minimum Cost | Hard | Array, String, Dynamic Programming, Suffix Array | 2025-10-21 | [Go](dp/3213-construct-string-with-minimum-cost.go) [Python](dp/3213-construct-string-with-minimum-cost.py)
 | 3193 | Count the Number of Inversions | Hard | Array, Dynamic Programming | 2025-10-20 | [Go](dp/3193-count-the-number-of-inversions.go) [Python](dp/3193-count-the-number-of-inversions.py)
 | 2011 | Final Value of Variable After Performing Operations | Easy | Array, String, Simulation | 2025-10-20 | [Go](strings/2011-final-value-of-variable-after-performing-operations.go) [Python](strings/2011-final-value-of-variable-after-performing-operations.py)
 | 3177 | Find the Maximum Length of a Good Subsequence II | Hard | Array, Hash Table, Dynamic Programming | 2025-10-19 | [Go](dp/3177-find-the-maximum-length-of-a-good-subsequence-ii.go) [Python](dp/3177-find-the-maximum-length-of-a-good-subsequence-ii.py)

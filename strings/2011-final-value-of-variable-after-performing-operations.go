@@ -4,6 +4,7 @@ package strings
 
 func finalValueAfterOperations(operations []string) int {
 	var res int
+
 	for _, op := range operations {
 		if op[1] == '+' {
 			res++
@@ -11,5 +12,6 @@ func finalValueAfterOperations(operations []string) int {
 			res--
 		}
 	}
+
 	return res
 }

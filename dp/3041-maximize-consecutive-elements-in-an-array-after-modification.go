@@ -9,7 +9,9 @@ import "sort"
 // Space: O(1)
 func maxSelectedElements(nums []int) int {
 	sort.Ints(nums)
+
 	dp := make(map[int]int)
+
 	var res int
 	for _, num := range nums {
 		newdp := make(map[int]int)
@@ -22,6 +24,7 @@ func maxSelectedElements(nums []int) int {
 		dp = newdp
 		res = max(res, dp[num], dp[num+1])
 	}
+
 	return res
 }
 
