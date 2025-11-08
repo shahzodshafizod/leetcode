@@ -2,6 +2,13 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3289 | The Two Sneaky Numbers of Digitville | Easy | Array, Hash Table, Math | 2025-10-31 | [Go](bits/3289-the-two-sneaky-numbers-of-digitville.go) [Python](bits/3289-the-two-sneaky-numbers-of-digitville.py)
+| 1526 | Minimum Number of Increments on Subarrays to Form a Target Array | Hard | Array, Dynamic Programming, Stack, Greedy, Monotonic Stack | 2025-10-30 | [Go](greedy/1526-minimum-number-of-increments-on-subarrays-to-form-a-target-array.go) [Python](greedy/1526-minimum-number-of-increments-on-subarrays-to-form-a-target-array.py)
+| 3370 | Smallest Number With All Set Bits | Easy | Math, Bit Manipulation | 2025-10-29 | [Go](bits/3370-smallest-number-with-all-set-bits.go) [Python](bits/3370-smallest-number-with-all-set-bits.py)
+| 3354 | Make Array Elements Equal to Zero | Easy | Array, Simulation, Prefix Sum | 2025-10-28 | [Go](prefixsums/3354-make-array-elements-equal-to-zero.go) [Python](prefixsums/3354-make-array-elements-equal-to-zero.py)
+| 3367 | Maximize Sum of Weights after Edge Removals | Hard | Dynamic Programming, Tree, Depth-First Search | 2025-10-27 | [Go](trees/3367-maximize-sum-of-weights-after-edge-removals.go) [Python](trees/3367-maximize-sum-of-weights-after-edge-removals.py)
+| 3425 | Longest Special Path | Hard | Array, Hash Table, Tree, Depth-First Search, Prefix Sum | 2025-10-26 | [Go](graphs/3425-longest-special-path.go) [Python](graphs/3425-longest-special-path.py)
+| 1716 | Calculate Money in Leetcode Bank | Easy | Math | 2025-10-25 | [Go](maths/1716-calculate-money-in-leetcode-bank.go) [Python](maths/1716-calculate-money-in-leetcode-bank.py)
 | 3351 | Sum of Good Subsequences | Hard | Array, Hash Table, Dynamic Programming | 2025-10-25 | [Go](dp/3351-sum-of-good-subsequences.go) [Python](dp/3351-sum-of-good-subsequences.py)
 | 3352 | Count K-Reducible Numbers Less Than N | Hard | Math, String, Dynamic Programming, Combinatorics | 2025-10-24 | [Go](dp/3352-count-k-reducible-numbers-less-than-n.go) [Python](dp/3352-count-k-reducible-numbers-less-than-n.py)
 | 3461 | Check If Digits Are Equal in String After Operations I | Easy | Math, String, Simulation, Combinatorics, Number Theory | 2025-10-23 | [Go](strings/3461-check-if-digits-are-equal-in-string-after-operations-i.go) [Python](strings/3461-check-if-digits-are-equal-in-string-after-operations-i.py)
