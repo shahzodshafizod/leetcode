@@ -2,6 +2,15 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 2169 | Count Operations to Obtain Zero | Easy | Math, Simulation | 2025-11-09 | [Go](maths/2169-count-operations-to-obtain-zero.go) [Python](maths/2169-count-operations-to-obtain-zero.py)
+| 0110 | Balanced Binary Tree | Easy | Tree, Depth-First Search, Binary Tree | 2025-11-08 | [Go](trees/0110-balanced-binary-tree.go) [Python](trees/0110-balanced-binary-tree.py)
+| 2528 | Maximize the Minimum Powered City | Hard | Array, Binary Search, Greedy, Queue, Sliding Window, Prefix Sum | 2025-11-07 | [Go](binarysearch/2528-maximize-the-minimum-powered-city.go) [Python](binarysearch/2528-maximize-the-minimum-powered-city.py)
+| 2366 | Minimum Replacements to Sort the Array | Hard | Array, Math, Greedy | 2025-11-06 | [Go](greedy/2366-minimum-replacements-to-sort-the-array.go) [Python](greedy/2366-minimum-replacements-to-sort-the-array.py)
+| 3321 | Find X-Sum of All K-Long Subarrays II | Hard | Array, Hash Table, Sliding Window, Heap (Priority Queue) | 2025-11-05 | [Go](slidingwindows/3321-find-x-sum-of-all-k-long-subarrays-ii.go) [Python](slidingwindows/3321-find-x-sum-of-all-k-long-subarrays-ii.py)
+| 3318 | Find X-Sum of All K-Long Subarrays I | Easy | Array, Hash Table, Sliding Window, Heap (Priority Queue) | 2025-11-04 | [Go](slidingwindows/3318-find-x-sum-of-all-k-long-subarrays-i.go) [Python](slidingwindows/3318-find-x-sum-of-all-k-long-subarrays-i.py)
+| 1578 | Minimum Time to Make Rope Colorful | Medium | Array, String, Dynamic Programming, Greedy | 2025-11-03 | [Go](greedy/1578-minimum-time-to-make-rope-colorful.go) [Python](greedy/1578-minimum-time-to-make-rope-colorful.py)
+| 1402 | Reducing Dishes | Hard | Array, Dynamic Programming, Greedy, Sorting | 2025-11-02 | [Go](greedy/1402-reducing-dishes.go) [Python](greedy/1402-reducing-dishes.py)
+| 1326 | Minimum Number of Taps to Open to Water a Garden | Hard | Array, Dynamic Programming, Greedy | 2025-11-01 | [Go](greedy/1326-minimum-number-of-taps-to-open-to-water-a-garden.go) [Python](greedy/1326-minimum-number-of-taps-to-open-to-water-a-garden.py)
 | 3289 | The Two Sneaky Numbers of Digitville | Easy | Array, Hash Table, Math | 2025-10-31 | [Go](bits/3289-the-two-sneaky-numbers-of-digitville.go) [Python](bits/3289-the-two-sneaky-numbers-of-digitville.py)
 | 1526 | Minimum Number of Increments on Subarrays to Form a Target Array | Hard | Array, Dynamic Programming, Stack, Greedy, Monotonic Stack | 2025-10-30 | [Go](greedy/1526-minimum-number-of-increments-on-subarrays-to-form-a-target-array.go) [Python](greedy/1526-minimum-number-of-increments-on-subarrays-to-form-a-target-array.py)
 | 3370 | Smallest Number With All Set Bits | Easy | Math, Bit Manipulation | 2025-10-29 | [Go](bits/3370-smallest-number-with-all-set-bits.go) [Python](bits/3370-smallest-number-with-all-set-bits.py)
