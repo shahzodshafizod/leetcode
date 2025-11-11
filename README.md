@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0119 | Pascal's Triangle II | Easy | Array, Dynamic Programming | 2025-11-10 | [Go](dp/0119-pascals-triangle-ii.go) [Python](dp/0119-pascals-triangle-ii.py)
+| 2589 | Minimum Time to Complete All Tasks | Hard | Array, Binary Search, Stack, Greedy, Sorting | 2025-11-10 | [Go](greedy/2589-minimum-time-to-complete-all-tasks.go) [Python](greedy/2589-minimum-time-to-complete-all-tasks.py)
 | 2169 | Count Operations to Obtain Zero | Easy | Math, Simulation | 2025-11-09 | [Go](maths/2169-count-operations-to-obtain-zero.go) [Python](maths/2169-count-operations-to-obtain-zero.py)
 | 0110 | Balanced Binary Tree | Easy | Tree, Depth-First Search, Binary Tree | 2025-11-08 | [Go](trees/0110-balanced-binary-tree.go) [Python](trees/0110-balanced-binary-tree.py)
 | 2528 | Maximize the Minimum Powered City | Hard | Array, Binary Search, Greedy, Queue, Sliding Window, Prefix Sum | 2025-11-07 | [Go](binarysearch/2528-maximize-the-minimum-powered-city.go) [Python](binarysearch/2528-maximize-the-minimum-powered-city.py)
