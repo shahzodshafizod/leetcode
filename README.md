@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0144 | Binary Tree Preorder Traversal | Easy | Stack, Tree, Depth-First Search, Binary Tree | 2025-11-11 | [Go](trees/0144-binary-tree-preorder-traversal.go) [Python](trees/0144-binary-tree-preorder-traversal.py)
+| 3219 | Minimum Cost for Cutting Cake II | Hard | Array, Greedy, Sorting | 2025-11-11 | [Go](greedy/3219-minimum-cost-for-cutting-cake-ii.go) [Python](greedy/3219-minimum-cost-for-cutting-cake-ii.py)
 | 0119 | Pascal's Triangle II | Easy | Array, Dynamic Programming | 2025-11-10 | [Go](dp/0119-pascals-triangle-ii.go) [Python](dp/0119-pascals-triangle-ii.py)
 | 2589 | Minimum Time to Complete All Tasks | Hard | Array, Binary Search, Stack, Greedy, Sorting | 2025-11-10 | [Go](greedy/2589-minimum-time-to-complete-all-tasks.go) [Python](greedy/2589-minimum-time-to-complete-all-tasks.py)
 | 2169 | Count Operations to Obtain Zero | Easy | Math, Simulation | 2025-11-09 | [Go](maths/2169-count-operations-to-obtain-zero.go) [Python](maths/2169-count-operations-to-obtain-zero.py)
