@@ -12,6 +12,7 @@ func minimumCost(m int, n int, horizontalCut []int, verticalCut []int) int64 {
 	hpieces, vpieces := 1, 1
 
 	var total int64
+
 	for hid >= 0 && vid >= 0 {
 		if horizontalCut[hid] > verticalCut[vid] {
 			total += int64(horizontalCut[hid] * vpieces)
@@ -27,6 +28,7 @@ func minimumCost(m int, n int, horizontalCut []int, verticalCut []int) int64 {
 	for ; hid >= 0; hid-- {
 		total += int64(horizontalCut[hid] * vpieces)
 	}
+
 	for ; vid >= 0; vid-- {
 		total += int64(verticalCut[vid] * hpieces)
 	}

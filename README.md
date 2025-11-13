@@ -2,6 +2,7 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 3229 | Minimum Operations to Make Array Equal to Target | Hard | Array, Dynamic Programming, Stack, Greedy, Monotonic Stack | 2025-11-12 | [Go](greedy/3229-minimum-operations-to-make-array-equal-to-target.go) [Python](greedy/3229-minimum-operations-to-make-array-equal-to-target.py)
 | 0144 | Binary Tree Preorder Traversal | Easy | Stack, Tree, Depth-First Search, Binary Tree | 2025-11-11 | [Go](trees/0144-binary-tree-preorder-traversal.go) [Python](trees/0144-binary-tree-preorder-traversal.py)
 | 3219 | Minimum Cost for Cutting Cake II | Hard | Array, Greedy, Sorting | 2025-11-11 | [Go](greedy/3219-minimum-cost-for-cutting-cake-ii.go) [Python](greedy/3219-minimum-cost-for-cutting-cake-ii.py)
 | 0119 | Pascal's Triangle II | Easy | Array, Dynamic Programming | 2025-11-10 | [Go](dp/0119-pascals-triangle-ii.go) [Python](dp/0119-pascals-triangle-ii.py)
