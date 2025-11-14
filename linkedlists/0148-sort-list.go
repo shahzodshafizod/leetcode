@@ -7,7 +7,7 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 // Approach#5: Merge Sort
 // time: O(n log n)
 // space: O(log n) - for recursion stack OR w/o: O(1)
-func sortList(head *pkg.ListNode[int]) *pkg.ListNode[int] {
+func sortList(head *pkg.ListNode) *pkg.ListNode {
 	if head == nil || head.Next == nil {
 		return head
 	}

@@ -6,16 +6,16 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 
 // 2. Chaining
 type MyHashSet struct {
-	array []*pkg.ListNode[int]
+	array []*pkg.ListNode
 	cap   int
 }
 
 func NewMyHashSet() MyHashSet {
 	const capacity = 997
 
-	array := make([]*pkg.ListNode[int], capacity)
+	array := make([]*pkg.ListNode, capacity)
 	for idx := range array {
-		array[idx] = &pkg.ListNode[int]{} // dummy head node
+		array[idx] = &pkg.ListNode{} // dummy head node
 	}
 
 	return MyHashSet{array: array, cap: capacity}
@@ -31,7 +31,7 @@ func (m *MyHashSet) Add(key int) {
 		curr = curr.Next
 	}
 
-	curr.Next = &pkg.ListNode[int]{Val: key}
+	curr.Next = &pkg.ListNode{Val: key}
 }
 
 func (m *MyHashSet) Remove(key int) {

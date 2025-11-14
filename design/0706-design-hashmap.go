@@ -6,20 +6,20 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 
 // 2. Chaining
 type MyHashMap struct {
-	keys []*pkg.ListNode[int]
-	vals []*pkg.ListNode[int]
+	keys []*pkg.ListNode
+	vals []*pkg.ListNode
 	cap  int
 }
 
 func NewMyHashMap() MyHashMap {
 	const capacity = 997
 
-	keys := make([]*pkg.ListNode[int], capacity)
-	vals := make([]*pkg.ListNode[int], capacity)
+	keys := make([]*pkg.ListNode, capacity)
+	vals := make([]*pkg.ListNode, capacity)
 
 	for i := range capacity {
-		keys[i] = &pkg.ListNode[int]{} // dummy head node
-		vals[i] = &pkg.ListNode[int]{} // dummy head node
+		keys[i] = &pkg.ListNode{} // dummy head node
+		vals[i] = &pkg.ListNode{} // dummy head node
 	}
 
 	return MyHashMap{keys: keys, vals: vals, cap: capacity}
@@ -40,8 +40,8 @@ func (m *MyHashMap) Put(key int, value int) {
 		currVal = currVal.Next
 	}
 
-	currKey.Next = &pkg.ListNode[int]{Val: key}
-	currVal.Next = &pkg.ListNode[int]{Val: value}
+	currKey.Next = &pkg.ListNode{Val: key}
+	currVal.Next = &pkg.ListNode{Val: value}
 }
 
 func (m *MyHashMap) Get(key int) int {

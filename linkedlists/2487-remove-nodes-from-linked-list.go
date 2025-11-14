@@ -7,9 +7,9 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 // Approach: Reverse Twice
 // time: O(3n) = O(n)
 // space: O(1)
-func removeNodes(head *pkg.ListNode[int]) *pkg.ListNode[int] {
-	reverse := func(head *pkg.ListNode[int]) *pkg.ListNode[int] {
-		var prev, next *pkg.ListNode[int]
+func removeNodes(head *pkg.ListNode) *pkg.ListNode {
+	reverse := func(head *pkg.ListNode) *pkg.ListNode {
+		var prev, next *pkg.ListNode
 
 		curr := head
 		for curr != nil {
@@ -25,7 +25,7 @@ func removeNodes(head *pkg.ListNode[int]) *pkg.ListNode[int] {
 	head = reverse(head)
 	maximum := 0
 
-	var prev *pkg.ListNode[int]
+	var prev *pkg.ListNode
 
 	for node := head; node != nil; node = node.Next {
 		if node.Val < maximum {

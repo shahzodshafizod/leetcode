@@ -10,7 +10,7 @@ import (
 // go test -v -count=1 ./linkedlists/ -run ^TestHasCycle$
 func TestHasCycle(t *testing.T) {
 	for _, tc := range []struct {
-		head *pkg.ListNode[int]
+		head *pkg.ListNode
 		has  bool
 	}{
 		{head: pkg.MakeCycleLinkedList(1, 3, 2, 0, -4), has: true},

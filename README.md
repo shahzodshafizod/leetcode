@@ -2,6 +2,9 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0956 | Tallest Billboard | Hard | Array, Dynamic Programming | 2025-11-13 | [Go](dp/0956-tallest-billboard.go) [Python](dp/0956-tallest-billboard.py)
+| 0168 | Excel Sheet Column Title | Easy | Math, String | 2025-11-13 | [Go](maths/0168-excel-sheet-column-title.go) [Python](maths/0168-excel-sheet-column-title.py)
+| 0160 | Intersection of Two Linked Lists | Easy | Hash Table, Linked List, Two Pointers | 2025-11-12 | [Go](linkedlists/0160-intersection-of-two-linked-lists.go) [Python](linkedlists/0160-intersection-of-two-linked-lists.py)
 | 3229 | Minimum Operations to Make Array Equal to Target | Hard | Array, Dynamic Programming, Stack, Greedy, Monotonic Stack | 2025-11-12 | [Go](greedy/3229-minimum-operations-to-make-array-equal-to-target.go) [Python](greedy/3229-minimum-operations-to-make-array-equal-to-target.py)
 | 0144 | Binary Tree Preorder Traversal | Easy | Stack, Tree, Depth-First Search, Binary Tree | 2025-11-11 | [Go](trees/0144-binary-tree-preorder-traversal.go) [Python](trees/0144-binary-tree-preorder-traversal.py)
 | 3219 | Minimum Cost for Cutting Cake II | Hard | Array, Greedy, Sorting | 2025-11-11 | [Go](greedy/3219-minimum-cost-for-cutting-cake-ii.go) [Python](greedy/3219-minimum-cost-for-cutting-cake-ii.py)

@@ -10,12 +10,12 @@ import (
 // go test -v -count=1 ./linkedlists/ -run ^TestRemoveNthFromEnd$
 func TestRemoveNthFromEnd(t *testing.T) {
 	for _, tc := range []struct {
-		head    *pkg.ListNode[int]
+		head    *pkg.ListNode
 		n       int
-		newHead *pkg.ListNode[int]
+		newHead *pkg.ListNode
 	}{
 		{head: pkg.MakeLinkedList(1, 2, 3, 4, 5), n: 2, newHead: pkg.MakeLinkedList(1, 2, 3, 5)},
-		{head: pkg.MakeLinkedList(1), n: 1, newHead: pkg.MakeLinkedList[int]()},
+		{head: pkg.MakeLinkedList(1), n: 1, newHead: pkg.MakeLinkedList()},
 		{head: pkg.MakeLinkedList(1, 2), n: 1, newHead: pkg.MakeLinkedList(1)},
 	} {
 		newHead := removeNthFromEnd(tc.head, tc.n)

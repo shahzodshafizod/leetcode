@@ -4,8 +4,8 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 
 // https://leetcode.com/problems/merge-nodes-in-between-zeros/
 
-func mergeNodes(head *pkg.ListNode[int]) *pkg.ListNode[int] {
-	dummy := &pkg.ListNode[int]{}
+func mergeNodes(head *pkg.ListNode) *pkg.ListNode {
+	dummy := &pkg.ListNode{}
 	tail := dummy
 	sum := 0
 

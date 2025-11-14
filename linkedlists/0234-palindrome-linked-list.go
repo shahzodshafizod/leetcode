@@ -7,10 +7,10 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 // time: O(n)
 // space: O(1)
 // modifying
-func isPalindrome(head *pkg.ListNode[int]) bool {
+func isPalindrome(head *pkg.ListNode) bool {
 	tortoise, hare := head, head
 	// 1. find middle (prev,next) and reverse the first half
-	var prev, next *pkg.ListNode[int]
+	var prev, next *pkg.ListNode
 
 	for hare != nil && hare.Next != nil {
 		hare = hare.Next.Next

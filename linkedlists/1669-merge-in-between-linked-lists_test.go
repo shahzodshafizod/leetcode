@@ -10,11 +10,11 @@ import (
 // go test -v -count=1 ./linkedlists/ -run ^TestMergeInBetween$
 func TestMergeInBetween(t *testing.T) {
 	for _, tc := range []struct {
-		list1  *pkg.ListNode[int]
+		list1  *pkg.ListNode
 		a      int
 		b      int
-		list2  *pkg.ListNode[int]
-		merged *pkg.ListNode[int]
+		list2  *pkg.ListNode
+		merged *pkg.ListNode
 	}{
 		{
 			list1:  pkg.MakeLinkedList(10, 1, 13, 6, 9, 5),

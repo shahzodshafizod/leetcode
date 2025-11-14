@@ -5,12 +5,12 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 // https://leetcode.com/problems/remove-zero-sum-consecutive-nodes-from-linked-list/
 
 // Prefix Sum + Hash Table
-func removeZeroSumSublists(head *pkg.ListNode[int]) *pkg.ListNode[int] {
-	dummy := &pkg.ListNode[int]{Next: head}
+func removeZeroSumSublists(head *pkg.ListNode) *pkg.ListNode {
+	dummy := &pkg.ListNode{Next: head}
 	sum := 0
-	hashset := make(map[int]*pkg.ListNode[int])
+	hashset := make(map[int]*pkg.ListNode)
 
-	var start, node *pkg.ListNode[int]
+	var start, node *pkg.ListNode
 
 	for end := dummy; end != nil; end = end.Next {
 		sum += end.Val

@@ -11,7 +11,7 @@ tortoise=1_step, hare=2_steps.
 
 // https://leetcode.com/problems/linked-list-cycle-ii/
 
-func detectCycle(head *pkg.ListNode[int]) *pkg.ListNode[int] {
+func detectCycle(head *pkg.ListNode) *pkg.ListNode {
 	tortoise, hare := head, head
 	for hare != nil && hare.Next != nil {
 		tortoise = tortoise.Next

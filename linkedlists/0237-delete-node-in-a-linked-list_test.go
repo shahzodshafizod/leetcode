@@ -10,9 +10,9 @@ import (
 // go test -v -count=1 ./linkedlists/ -run ^TestDeleteNode$
 func TestDeleteNode(t *testing.T) {
 	for _, tc := range []struct {
-		head     *pkg.ListNode[int]
+		head     *pkg.ListNode
 		position int
-		newHead  *pkg.ListNode[int]
+		newHead  *pkg.ListNode
 	}{
 		{head: pkg.MakeLinkedList(4, 5, 1, 9), position: 1, newHead: pkg.MakeLinkedList(4, 1, 9)},
 		{head: pkg.MakeLinkedList(4, 5, 1, 9), position: 2, newHead: pkg.MakeLinkedList(4, 5, 9)},

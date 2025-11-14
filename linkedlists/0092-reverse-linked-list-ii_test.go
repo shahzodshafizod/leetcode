@@ -10,10 +10,10 @@ import (
 // go test -v -count=1 ./linkedlists/ -run ^TestReverseBetween$
 func TestReverseBetween(t *testing.T) {
 	for _, tc := range []struct {
-		head     *pkg.ListNode[int]
+		head     *pkg.ListNode
 		left     int
 		right    int
-		reversed *pkg.ListNode[int]
+		reversed *pkg.ListNode
 	}{
 		{head: pkg.MakeLinkedList(1, 2, 3, 4, 5), left: 2, right: 4, reversed: pkg.MakeLinkedList(1, 4, 3, 2, 5)},
 		{head: pkg.MakeLinkedList(1, 2, 3, 4, 5), left: 1, right: 4, reversed: pkg.MakeLinkedList(4, 3, 2, 1, 5)},
@@ -23,7 +23,7 @@ func TestReverseBetween(t *testing.T) {
 		{head: pkg.MakeLinkedList(1, 2, 3, 4, 5, 6), left: 1, right: 1, reversed: pkg.MakeLinkedList(1, 2, 3, 4, 5, 6)},
 		{head: pkg.MakeLinkedList(1, 2, 3, 4, 5, 6), left: 6, right: 6, reversed: pkg.MakeLinkedList(1, 2, 3, 4, 5, 6)},
 		{head: pkg.MakeLinkedList(5), left: 1, right: 1, reversed: pkg.MakeLinkedList(5)},
-		{head: pkg.MakeLinkedList[int](), left: 0, right: 0, reversed: pkg.MakeLinkedList[int]()},
+		{head: pkg.MakeLinkedList(), left: 0, right: 0, reversed: pkg.MakeLinkedList()},
 		{head: pkg.MakeLinkedList(1, 2, 3, 4, 5, 6, 7), left: 3, right: 5, reversed: pkg.MakeLinkedList(1, 2, 5, 4, 3, 6, 7)},
 	} {
 		reversed := reverseBetween(tc.head, tc.left, tc.right)

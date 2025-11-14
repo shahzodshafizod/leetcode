@@ -4,7 +4,7 @@ import "github.com/shahzodshafizod/leetcode/pkg"
 
 // https://leetcode.com/problems/reorder-list/
 
-func reorderList(head *pkg.ListNode[int]) {
+func reorderList(head *pkg.ListNode) {
 	// 1, find middle
 	tortoise, hare := head, head
 	for hare != nil && hare.Next != nil {
@@ -15,7 +15,7 @@ func reorderList(head *pkg.ListNode[int]) {
 	middle := tortoise
 
 	// 2. reverse the second part
-	var tail, next *pkg.ListNode[int]
+	var tail, next *pkg.ListNode
 	for tortoise != nil {
 		next = tortoise.Next
 		tortoise.Next = tail
