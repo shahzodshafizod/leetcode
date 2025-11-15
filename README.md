@@ -2,6 +2,10 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0171 | Excel Sheet Column Number | Easy | Math, String | 2025-11-15 | [Go](maths/0171-excel-sheet-column-number.go) [Python](maths/0171-excel-sheet-column-number.py)
+| 1575 | Count All Possible Routes | Hard | Array, Dynamic Programming, Memoization | 2025-11-15 | [Go](dp/1575-count-all-possible-routes.go) [Python](dp/1575-count-all-possible-routes.py)
+| 0169 | Majority Element | Easy | Array, Hash Table, Divide and Conquer, Sorting, Counting | 2025-11-14 | [Go](hashes/0169-majority-element.go) [Python](hashes/0169-majority-element.py)
+| 1187 | Make Array Strictly Increasing | Hard | Array, Binary Search, Dynamic Programming, Sorting | 2025-11-14 | [Go](dp/1187-make-array-strictly-increasing.go) [Python](dp/1187-make-array-strictly-increasing.py)
 | 0956 | Tallest Billboard | Hard | Array, Dynamic Programming | 2025-11-13 | [Go](dp/0956-tallest-billboard.go) [Python](dp/0956-tallest-billboard.py)
 | 0168 | Excel Sheet Column Title | Easy | Math, String | 2025-11-13 | [Go](maths/0168-excel-sheet-column-title.go) [Python](maths/0168-excel-sheet-column-title.py)
 | 0160 | Intersection of Two Linked Lists | Easy | Hash Table, Linked List, Two Pointers | 2025-11-12 | [Go](linkedlists/0160-intersection-of-two-linked-lists.go) [Python](linkedlists/0160-intersection-of-two-linked-lists.py)
