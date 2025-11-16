@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0202 | Happy Number | Easy | Hash Table, Math, Two Pointers | 2025-11-15 | [Go](twopointers/0202-happy-number.go) [Python](twopointers/0202-happy-number.py)
+| 2943 | Find Beautiful Indices in the Given Array II | Hard | Two Pointers, String, Binary Search, Rolling Hash, String Matching, Hash Function | 2025-11-15 | [Go](strings/2943-find-beautiful-indices-in-the-given-array-ii.go) [Python](strings/2943-find-beautiful-indices-in-the-given-array-ii.py)
 | 0171 | Excel Sheet Column Number | Easy | Math, String | 2025-11-15 | [Go](maths/0171-excel-sheet-column-number.go) [Python](maths/0171-excel-sheet-column-number.py)
 | 1575 | Count All Possible Routes | Hard | Array, Dynamic Programming, Memoization | 2025-11-15 | [Go](dp/1575-count-all-possible-routes.go) [Python](dp/1575-count-all-possible-routes.py)
 | 0169 | Majority Element | Easy | Array, Hash Table, Divide and Conquer, Sorting, Counting | 2025-11-14 | [Go](hashes/0169-majority-element.go) [Python](hashes/0169-majority-element.py)
