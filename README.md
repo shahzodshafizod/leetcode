@@ -2,6 +2,10 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0414 | Third Maximum Number | Easy | Array, Sorting | 2025-11-16 | [Go](hashes/0414-third-maximum-number.go) [Python](hashes/0414-third-maximum-number.py)
+| 3399 | Smallest Substring With Identical Characters II | Hard | Binary Search, Greedy, String | 2025-11-16 | [Go](binarysearch/3399-smallest-substring-with-identical-characters-ii.go) [Python](binarysearch/3399-smallest-substring-with-identical-characters-ii.py)
+| 0292 | Nim Game | Easy | Math, Brainteaser, Game Theory | 2025-11-16 | [Go](maths/0292-nim-game.go) [Python](maths/0292-nim-game.py)
+| 3171 | Find Subarray With Bitwise OR Closest to K | Hard | Array, Binary Search, Bit Manipulation, Segment Tree | 2025-11-16 | [Go](bits/3171-find-subarray-with-bitwise-or-closest-to-k.go) [Python](bits/3171-find-subarray-with-bitwise-or-closest-to-k.py)
 | 0202 | Happy Number | Easy | Hash Table, Math, Two Pointers | 2025-11-15 | [Go](twopointers/0202-happy-number.go) [Python](twopointers/0202-happy-number.py)
 | 2943 | Find Beautiful Indices in the Given Array II | Hard | Two Pointers, String, Binary Search, Rolling Hash, String Matching, Hash Function | 2025-11-15 | [Go](strings/2943-find-beautiful-indices-in-the-given-array-ii.go) [Python](strings/2943-find-beautiful-indices-in-the-given-array-ii.py)
 | 0171 | Excel Sheet Column Number | Easy | Math, String | 2025-11-15 | [Go](maths/0171-excel-sheet-column-number.go) [Python](maths/0171-excel-sheet-column-number.py)

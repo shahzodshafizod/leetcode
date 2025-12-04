@@ -9,7 +9,7 @@ import (
 // go test -v -count=1 ./twopointers/ -run ^TestIsHappy$
 func TestIsHappy(t *testing.T) {
 	for _, tc := range []struct {
-		n int
+		n  int
 		is bool
 	}{
 		{n: 19, is: true},
