@@ -1,10 +1,10 @@
 from collections import deque
-from typing import List, Optional, Any
+from typing import List, Optional, Any, Deque
 
 
 # Definition for a binary tree node.
 class TreeNode:
-    def __init__(self, val: int = 0, left: "TreeNode" = None, right: "TreeNode" = None):
+    def __init__(self, val: int = 0, left: "Optional[TreeNode]" = None, right: "Optional[TreeNode]" = None):
         self.val = val
         self.left = left
         self.right = right
@@ -38,13 +38,13 @@ class TreeNode:
 
 def create_tree(vals: List[Any]) -> Optional[TreeNode]:
     root = None
-    queue = deque()
+    queue: Deque[Optional[TreeNode]] = deque()
     if len(vals) > 0 and vals[0] is not None:
         root = TreeNode(vals[0])
         queue.append(root)
     curr = None
     for idx in range(1, len(vals)):
-        child = None
+        child: Optional[TreeNode] = None
         if vals[idx] is not None:
             child = TreeNode(vals[idx])
             queue.append(child)
@@ -59,7 +59,7 @@ def create_tree(vals: List[Any]) -> Optional[TreeNode]:
 
 # Definition for a n-ary tree node.
 class Node:
-    def __init__(self, val: int = 0, children: List = None):
+    def __init__(self, val: int = 0, children: "Optional[List[Node]]" = None):
         self.val = val
         self.children = children or []
 
@@ -68,7 +68,7 @@ def create_n_ary_tree(vals: List[Any]) -> Optional[Node]:
     if len(vals) == 0 or vals[0] is None:
         return None
     root = Node(vals[0])
-    queue = deque()
+    queue: Deque[Node] = deque()
     queue.append(root)
     idx = 2
     while idx < len(vals):
