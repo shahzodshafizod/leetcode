@@ -28,17 +28,26 @@ func kthSmallestPath(destination []int, k int) string {
 	row, col := destination[0], destination[1]
 	path := ""
 
+	var pathSb31 strings.Builder
+
 	for row != 0 && col != 0 {
 		c := comb(row+col-1, row)
 		if k <= c {
-			path += "H"
+			_, err := pathSb31.WriteString("H")
+			_ = err
+
 			col--
 		} else {
 			k -= c
-			path += "V"
+
+			_, err := pathSb31.WriteString("V")
+			_ = err
+
 			row--
 		}
 	}
+
+	path += pathSb31.String()
 
 	path += strings.Repeat("H", col) + strings.Repeat("V", row)
 

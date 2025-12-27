@@ -17,6 +17,7 @@ func productQueries(n int, queries [][]int) []int {
 	prepro := make([][]int, m)
 
 	var pro int
+
 	for i := range m {
 		prepro[i] = make([]int, m)
 

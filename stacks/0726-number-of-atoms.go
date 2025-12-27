@@ -3,6 +3,7 @@ package stacks
 import (
 	"sort"
 	"strconv"
+	"strings"
 	"unicode"
 )
 
@@ -70,16 +71,24 @@ func countOfAtoms(formula string) string {
 	result := ""
 
 	n := len(elements)
+
+	var resultSb73 strings.Builder
+
 	for idx := range elements { // O(N)
 		if idx+1 < n && elements[idx].name == elements[idx+1].name {
 			elements[idx+1].atoms += elements[idx].atoms
 		} else {
-			result += elements[idx].name
+			_, err := resultSb73.WriteString(elements[idx].name)
+			_ = err
+
 			if elements[idx].atoms > 1 {
-				result += strconv.Itoa(elements[idx].atoms)
+				_, err := resultSb73.WriteString(strconv.Itoa(elements[idx].atoms))
+				_ = err
 			}
 		}
 	}
+
+	result += resultSb73.String()
 
 	return result
 }

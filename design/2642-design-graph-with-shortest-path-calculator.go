@@ -39,6 +39,7 @@ func (g *Graph) ShortestPath(node1 int, node2 int) int {
 	seen := make([]bool, len(g.adj))
 
 	var node, cost, nextNode, nextCost int
+
 	for pq.Len() > 0 {
 		item, ok := heap.Pop(pq).([2]int)
 		_ = ok

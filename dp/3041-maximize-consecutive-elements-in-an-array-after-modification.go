@@ -13,6 +13,7 @@ func maxSelectedElements(nums []int) int {
 	dp := make(map[int]int)
 
 	var res int
+
 	for _, num := range nums {
 		newdp := make(map[int]int)
 		// keep the number the same

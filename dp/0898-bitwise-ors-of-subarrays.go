@@ -4,6 +4,7 @@ package dp
 
 func subarrayBitwiseORs(arr []int) int {
 	combined, prev := make(map[int]struct{}), make(map[int]struct{})
+
 	for _, num := range arr {
 		curr := map[int]struct{}{num: {}}
 

@@ -32,11 +32,12 @@ func countOfPairs(n int, x int, y int) []int64 {
 		if a < 0 {
 			return -a
 		}
+
 		return a
 	}
 
 	// For each house i, apply the exact mathematical formulas
-	for i := 0; i < n; i++ {
+	for i := range n {
 		// Base case: every house connects to neighbors
 		diff[0] += 2
 

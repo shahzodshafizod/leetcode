@@ -10,6 +10,7 @@ func minLength(s string, numOps int) int {
 	n := len(s)
 
 	var cnt int
+
 	for i := range n {
 		if int(s[i]-'0') == i%2 {
 			cnt++

@@ -26,13 +26,13 @@ func longestDupSubstring(s string) string {
 
 		// Compute base^(length-1) % mod
 		power := 1
-		for i := 0; i < length-1; i++ {
+		for range length - 1 {
 			power = (power * base) % mod
 		}
 
 		// Compute initial hash for first window
 		hash := 0
-		for i := 0; i < length; i++ {
+		for i := range length {
 			hash = (hash*base + int(s[i]-'a')) % mod
 		}
 

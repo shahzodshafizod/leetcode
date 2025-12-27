@@ -26,6 +26,7 @@ func handleQuery(nums1 []int, nums2 []int, queries [][]int) []int64 {
 
 	// Build the segment tree
 	var build func(st *SegmentTree, node, start, end int)
+
 	build = func(st *SegmentTree, node, start, end int) {
 		if start == end {
 			st.tree[node] = nums1[start]
@@ -33,6 +34,7 @@ func handleQuery(nums1 []int, nums2 []int, queries [][]int) []int64 {
 			mid := (start + end) / 2
 			leftChild := 2*node + 1
 			rightChild := 2*node + 2
+
 			build(st, leftChild, start, mid)
 			build(st, rightChild, mid+1, end)
 			st.tree[node] = st.tree[leftChild] + st.tree[rightChild]
@@ -40,13 +42,10 @@ func handleQuery(nums1 []int, nums2 []int, queries [][]int) []int64 {
 	}
 
 	// Push lazy updates down to children
-	var push func(st *SegmentTree, node, start, end int)
-	push = func(st *SegmentTree, node, start, end int) {
+	push := func(st *SegmentTree, node, start, end int) {
 		if st.lazy[node] {
-			// Flip current node: count of 1s becomes (total - count of 1s)
 			st.tree[node] = (end - start + 1) - st.tree[node]
 
-			// Propagate to children if not a leaf
 			if start != end {
 				leftChild := 2*node + 1
 				rightChild := 2*node + 2
@@ -60,6 +59,7 @@ func handleQuery(nums1 []int, nums2 []int, queries [][]int) []int64 {
 
 	// Flip range [l, r]
 	var flip func(st *SegmentTree, node, start, end, l, r int)
+
 	flip = func(st *SegmentTree, node, start, end, l, r int) {
 		// Push pending updates
 		push(st, node, start, end)
@@ -73,6 +73,7 @@ func handleQuery(nums1 []int, nums2 []int, queries [][]int) []int64 {
 		if start >= l && end <= r {
 			st.lazy[node] = true
 			push(st, node, start, end)
+
 			return
 		}
 
@@ -80,6 +81,7 @@ func handleQuery(nums1 []int, nums2 []int, queries [][]int) []int64 {
 		mid := (start + end) / 2
 		leftChild := 2*node + 1
 		rightChild := 2*node + 2
+
 		flip(st, leftChild, start, mid, l, r)
 		flip(st, rightChild, mid+1, end, l, r)
 
@@ -92,6 +94,7 @@ func handleQuery(nums1 []int, nums2 []int, queries [][]int) []int64 {
 	// Get total count of 1s
 	getTotalOnes := func(st *SegmentTree) int {
 		push(st, 0, 0, st.n-1)
+
 		return st.tree[0]
 	}
 
@@ -104,7 +107,7 @@ func handleQuery(nums1 []int, nums2 []int, queries [][]int) []int64 {
 	build(segTree, 0, 0, n-1)
 
 	// Calculate initial sum of nums2
-	var sum2 int64 = 0
+	var sum2 int64
 	for _, num := range nums2 {
 		sum2 += int64(num)
 	}

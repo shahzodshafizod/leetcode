@@ -49,11 +49,18 @@ func minStickers(stickers []string, target string) int {
 
 			next := ""
 
+			var nextSb52 strings.Builder
+
 			for idx, cnt := range targetMap {
 				if cnt > sticker[idx] {
-					next += strings.Repeat(string(byte('a'+idx)), cnt-sticker[idx])
+					_, err := nextSb52.WriteString(
+						strings.Repeat(string(byte('a'+idx)), cnt-sticker[idx]),
+					)
+					_ = err
 				}
 			}
+
+			next += nextSb52.String()
 
 			count = min(count, 1+dfs(next)) // +1 mean we chose this sticker
 		}

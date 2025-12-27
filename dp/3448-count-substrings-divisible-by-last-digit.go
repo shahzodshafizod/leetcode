@@ -21,7 +21,8 @@ package dp
 // Space Complexity: O(9 * 9) = O(1)
 func countSubstrings3448(s string) int64 {
 	n := len(s)
-	var result int64 = 0
+
+	var result int64
 
 	// dp[divisor][remainder] = count of substrings ending at current position
 	// with this remainder when divided by divisor
@@ -45,7 +46,7 @@ func countSubstrings3448(s string) int64 {
 			newDp[divisor][digit%divisor]++
 
 			// Extend existing substrings
-			for remainder := 0; remainder < divisor; remainder++ {
+			for remainder := range divisor {
 				if dp[divisor][remainder] > 0 {
 					newRemainder := (remainder*10 + digit) % divisor
 					newDp[divisor][newRemainder] += dp[divisor][remainder]

@@ -22,6 +22,7 @@ func TestCriticalConnections(t *testing.T) {
 			if critical[i][0] != critical[j][0] {
 				return critical[i][0] < critical[j][0]
 			}
+
 			return critical[i][1] < critical[j][1]
 		})
 		assert.Equal(t, tc.critical, critical)

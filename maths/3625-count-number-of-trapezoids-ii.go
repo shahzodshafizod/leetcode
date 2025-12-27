@@ -23,6 +23,7 @@ package maths
 // Space Complexity: O(n^2) for storing segment information
 func countTrapezoids(points [][]int) int {
 	n := len(points)
+
 	const inf = 1e9 + 7
 
 	// Map: slope -> list of intercepts
@@ -32,7 +33,7 @@ func countTrapezoids(points [][]int) int {
 	midToSlopes := make(map[int][]float64)
 
 	// Process all pairs of points (segments)
-	for i := 0; i < n; i++ {
+	for i := range n {
 		x1, y1 := points[i][0], points[i][1]
 		for j := i + 1; j < n; j++ {
 			x2, y2 := points[j][0], points[j][1]

@@ -63,7 +63,7 @@ package binarysearch
 
 // Alternative implementation using slices.Max for clearer upper bound
 func maxRunTime(n int, batteries []int) int64 {
-	var totalSum int64 = 0
+	var totalSum int64
 	for _, battery := range batteries {
 		totalSum += int64(battery)
 	}
@@ -71,13 +71,14 @@ func maxRunTime(n int, batteries []int) int64 {
 	// Binary search on possible running time
 	left, right := int64(1), totalSum/int64(n)
 
-	var result int64 = 0
+	var result int64
 
 	for left <= right {
 		mid := left + (right-left)/2
 
 		// Check if we can run n computers for mid minutes
-		var powerSum int64 = 0
+		var powerSum int64
+
 		for _, battery := range batteries {
 			if int64(battery) < mid {
 				powerSum += int64(battery)

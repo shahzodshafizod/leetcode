@@ -1,5 +1,7 @@
 package dp
 
+import "strings"
+
 // https://leetcode.com/problems/strange-printer/
 
 // Bottom Up Dynamic Programming (Tabulation)
@@ -10,13 +12,19 @@ func strangePrinter(s string) int {
 	uniqS := ""
 
 	prev := ' '
+
+	var uniqSSb13 strings.Builder
+
 	for _, c := range s {
 		if c != prev {
-			uniqS += string(c)
+			_, err := uniqSSb13.WriteRune(c)
+			_ = err
 		}
 
 		prev = c
 	}
+
+	uniqS += uniqSSb13.String()
 
 	s = uniqS
 	n := len(s)

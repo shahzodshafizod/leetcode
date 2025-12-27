@@ -14,6 +14,7 @@ func maxPower(stations []int, r int, k int) int64 {
 	)
 
 	line := make([]int64, n+1)
+
 	for i := range stations {
 		power = int64(stations[i])
 		left = max(i-r, 0)
