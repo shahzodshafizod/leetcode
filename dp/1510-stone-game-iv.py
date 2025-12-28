@@ -1,4 +1,3 @@
-import math  # pylint: disable=unused-import
 import unittest
 
 # https://leetcode.com/problems/stone-game-iv/

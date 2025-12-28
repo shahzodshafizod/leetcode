@@ -1,6 +1,5 @@
 from collections import deque
-import heapq  # pylint: disable=unused-import
-from typing import List
+from typing import List, Deque
 import unittest
 
 # https://leetcode.com/problems/sliding-window-maximum/
@@ -39,8 +38,8 @@ class Solution(unittest.TestCase):
     # Time: O(N)
     # Space: O(k)
     def maxSlidingWindow(self, nums: List[int], k: int) -> List[int]:
-        queue = deque()
-        maxes = []
+        queue: Deque[int] = deque()
+        maxes: List[int] = []
         for idx, num in enumerate(nums):
             if queue and idx - queue[0] >= k:
                 queue.popleft()

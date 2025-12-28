@@ -1,5 +1,4 @@
 from typing import List
-import heapq  # pylint: disable=unused-import
 import unittest
 
 # https://leetcode.com/problems/put-marbles-in-bags/

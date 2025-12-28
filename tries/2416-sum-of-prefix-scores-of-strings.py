@@ -1,5 +1,4 @@
-from collections import defaultdict  # pylint: disable=unused-import
-from typing import List
+from typing import Any, Dict, List
 import unittest
 
 # https://leetcode.com/problems/sum-of-prefix-scores-of-strings/
@@ -30,7 +29,7 @@ class Solution(unittest.TestCase):
     # Time: O(N*L)
     # Space: O(N*L)
     def sumPrefixScores(self, words: List[str]) -> List[int]:
-        root = {}
+        root: Dict[str, Any] = {}
         for word in words:
             curr = root
             for c in word:

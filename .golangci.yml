@@ -115,26 +115,26 @@ linters:
 
   # Disable specific linters.
   disable:
-    - godoclint
-    - dupl # 14
+    - godoclint # 53 - strict doc format not needed for educational code
+    - dupl # 14 - duplicate code in tests, acceptable for test data
     - dupword # 45
-    - exhaustruct # 69
-    - forcetypeassert # 29
-    - funcorder # 8
-    - funlen # 32
-    - gochecknoglobals # 5
-    - gocognit # 10
-    - goconst # 5
-    - gocritic # 37
-    - gosec # 12
-    - inamedparam # 9
-    - ireturn # 18
-    - lll # 434
-    - mnd # 232
-    - nestif # 5
-    - paralleltest # 715
-    - testpackage # 684
-    - wsl # depricated
+    - exhaustruct # 65 - requires all struct fields initialized, too strict
+    - forcetypeassert # 29 - requires checked type assertions everywhere
+    - funcorder # 8 - strict function ordering, not necessary
+    - funlen # 39 - function length, some complex algos need longer functions
+    - gochecknoglobals # 5 - global variables sometimes needed
+    - gocognit # 20 - cognitive complexity, using cyclop instead
+    - goconst # 5 - extract constants, too strict for test values
+    - gocritic # 45 - style suggestions may conflict with algorithm clarity
+    - gosec # 60 - security warnings don't apply to algorithm solutions
+    - inamedparam # 9 - named parameters not always needed
+    - ireturn # 4 - return interfaces, too strict
+    - lll # 467 - line length, using golines formatter instead
+    - mnd # 358 - magic numbers acceptable in algorithm code
+    - nestif # 2 - nested if complexity, overlaps with other checks
+    - paralleltest # 920 - parallel tests not always needed
+    - testpackage # 895 - tests in same package for testing internals
+    - wsl # deprecated
 
   settings:
     revive:

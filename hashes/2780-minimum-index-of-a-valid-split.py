@@ -1,4 +1,3 @@
-from collections import defaultdict  # pylint: disable=unused-import
 from typing import List
 import unittest
 

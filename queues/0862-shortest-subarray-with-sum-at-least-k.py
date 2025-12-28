@@ -1,5 +1,4 @@
 from collections import deque
-import heapq  # pylint: disable=unused-import
 from typing import List
 import unittest
 

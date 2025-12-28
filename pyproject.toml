@@ -2,3 +2,16 @@
 line-length = 200
 target-version = ['py311']
 skip-string-normalization = true
+
+[tool.pytest.ini_options]
+# Test discovery patterns
+python_files = ["*-*.py", "test_*.py"]
+python_classes = ["Test*", "Solution"]
+python_functions = ["test*"]
+# Ignore directories
+testpaths = ["."]
+norecursedirs = [".git", ".pytest_cache", "__pycache__", ".lectures"]
+# Add current directory to Python path for pkg imports
+pythonpath = ["."]
+# Output options
+addopts = "-v --tb=short"

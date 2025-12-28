@@ -1,5 +1,5 @@
-from collections import defaultdict, deque  # pylint: disable=unused-import
-from typing import List, Optional
+from collections import defaultdict
+from typing import List, Optional, Dict, Tuple, Any
 import unittest
 from pkg.tree import TreeNode, create_tree
 
@@ -58,7 +58,7 @@ class Solution(unittest.TestCase):
     # Time: O(n+m), n=# of tree nodes, m=len(queries)
     # Space: O(n+m)
     def treeQueries(self, root: Optional[TreeNode], queries: List[int]) -> List[int]:
-        heights = defaultdict(int)
+        heights: Dict[int, int] = defaultdict(int)
         max_height = 0
 
         def dfs(node: Optional[TreeNode], height: int) -> None:
@@ -77,7 +77,7 @@ class Solution(unittest.TestCase):
         return [heights[queries[idx]] for idx in range(len(queries))]
 
     def test(self):
-        for root, queries, expected in [
+        test_cases: List[Tuple[List[Any], List[int], List[int]]] = [
             ([5, 8, 9, 2, 1, 3, 7, 4, 6], [3, 2, 4, 8], [3, 2, 3, 2]),
             ([1, None, 5, 3, None, 2, 4], [3, 5, 4, 2, 4], [1, 0, 3, 3, 3]),
             ([2, None, 5, 3, 1, None, 4], [1, 5, 5, 3, 4, 5], [3, 0, 0, 2, 2, 0]),
@@ -93,7 +93,8 @@ class Solution(unittest.TestCase):
                 [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
                 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
             ),
-        ]:
+        ]
+        for root, queries, expected in test_cases:
             root = create_tree(root)
             output = self.treeQueries(root, queries)
             self.assertListEqual(expected, output, f"expected: {expected}, output: {output}")

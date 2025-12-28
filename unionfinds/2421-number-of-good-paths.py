@@ -1,5 +1,4 @@
-from collections import defaultdict  # pylint: disable=unused-import
-from typing import List
+from typing import List, Tuple
 import unittest
 
 # https://leetcode.com/problems/number-of-good-paths/
@@ -68,11 +67,12 @@ class Solution(unittest.TestCase):
         return result
 
     def test(self):
-        for vals, edges, expected in [
+        test_cases: List[Tuple[List[int], List[List[int]], int]] = [
             ([1], [], 1),
             ([2, 1, 1], [[0, 1], [2, 0]], 3),
             ([1, 3, 2, 1, 3], [[0, 1], [0, 2], [2, 3], [2, 4]], 6),
             ([1, 1, 2, 2, 3], [[0, 1], [1, 2], [2, 3], [2, 4]], 7),
-        ]:
+        ]
+        for vals, edges, expected in test_cases:
             output = self.numberOfGoodPaths(vals, edges)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

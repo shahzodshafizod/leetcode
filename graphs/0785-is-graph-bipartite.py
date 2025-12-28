@@ -1,5 +1,4 @@
-from collections import deque  # pylint: disable=unused-import
-from typing import List
+from typing import List, Tuple
 import unittest
 
 # https://leetcode.com/problems/is-graph-bipartite/
@@ -75,7 +74,7 @@ class Solution(unittest.TestCase):
         return True
 
     def test(self):
-        for graph, expected in [
+        test_cases: List[Tuple[List[List[int]], bool]] = [
             ([[1], [0]], True),
             ([[1, 2, 3], [0, 2], [0, 1, 3], [0, 2]], False),
             ([[1, 3], [0, 2], [1, 3], [0, 2]], True),
@@ -98,6 +97,7 @@ class Solution(unittest.TestCase):
             ([[3, 4, 6], [3, 6], [3, 6], [0, 1, 2, 5], [0, 7, 8], [3], [0, 1, 2, 7], [4, 6], [4], []], True),
             ([[1, 2, 3], [0, 3, 4], [0, 3], [0, 1, 2], [1]], False),
             ([[1, 2, 3, 4], [0, 2, 3], [0, 1, 3, 4], [0, 1, 2, 4], [0, 2, 3]], False),
-        ]:
+        ]
+        for graph, expected in test_cases:
             output = self.isBipartite(graph)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

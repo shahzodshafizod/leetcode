@@ -1,4 +1,3 @@
-from functools import lru_cache  # pylint: disable=unused-import
 import unittest
 
 # https://leetcode.com/problems/number-of-ways-to-rearrange-sticks-with-k-sticks-visible/

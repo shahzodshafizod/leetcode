@@ -1,7 +1,6 @@
 from collections import deque
-import heapq  # pylint: disable=unused-import
 import unittest
-from typing import List
+from typing import List, Deque
 
 # https://leetcode.com/problems/constrained-subsequence-sum/
 
@@ -56,7 +55,7 @@ class Solution(unittest.TestCase):
     # Time: O(n)
     # Space: O(n)
     def constrainedSubsetSum(self, nums: List[int], k: int) -> int:
-        queue = deque()
+        queue: Deque[int] = deque()
         queue.append(0)
         result = nums[0]
         for idx in range(1, len(nums)):

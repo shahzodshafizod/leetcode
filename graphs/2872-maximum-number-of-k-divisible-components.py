@@ -1,5 +1,5 @@
-from collections import deque  # pylint: disable=unused-import
-from typing import List
+from collections import deque
+from typing import List, Tuple
 import unittest
 
 # https://leetcode.com/problems/maximum-number-of-k-divisible-components/
@@ -33,7 +33,7 @@ class Solution(unittest.TestCase):
     def maxKDivisibleComponents(self, n: int, edges: List[List[int]], values: List[int], k: int) -> int:
         if n < 2:
             return 1
-        graph = [[] for _ in range(n)]
+        graph: List[List[int]] = [[] for _ in range(n)]
         indegree = [0] * n
         for a, b in edges:
             graph[a].append(b)
@@ -60,7 +60,7 @@ class Solution(unittest.TestCase):
         return count
 
     def test(self):
-        for n, edges, values, k, expected in [
+        test_cases: List[Tuple[int, List[List[int]], List[int], int, int]] = [
             (1, [], [0], 1, 1),
             (1, [], [100], 100, 1),
             (5, [[0, 2], [1, 2], [1, 3], [2, 4]], [1, 8, 1, 4, 4], 6, 2),
@@ -76,6 +76,7 @@ class Solution(unittest.TestCase):
                 2,
             ),
             # (20, [[17,4],[4,2],[3,15],[15,19],[19,7],[7,12],[15,16],[19,18],[18,13],[19,9],[19,1],[12,8],[1,11],[7,6],[9,0],[15,10],[13,14],[18,5],[4,5]], [900160,891774,2283737,414736,265741,212260,2983538,280834,17654,221822,996740,1517078,374434,43488,610048,241798,611382,3234714,1156844,93794], 5784192, 2),
-        ]:
+        ]
+        for n, edges, values, k, expected in test_cases:
             output = self.maxKDivisibleComponents(n, edges, values, k)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")

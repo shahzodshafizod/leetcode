@@ -1,4 +1,3 @@
-from collections import defaultdict  # pylint: disable=unused-import
 import unittest
 
 # https://leetcode.com/problems/maximum-manhattan-distance-after-k-changes/
@@ -58,6 +57,8 @@ class Solution(unittest.TestCase):
                     lat += 1
                 case 'S':
                     lat -= 1
+                case _:
+                    pass
             distance = max(distance, min(abs(lon) + abs(lat) + 2 * k, idx + 1))
         return distance
 

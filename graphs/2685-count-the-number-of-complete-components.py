@@ -1,7 +1,6 @@
 from collections import defaultdict
-from typing import List
+from typing import List, Dict
 import unittest
-from pkg.unionfind import UnionFind  # pylint: disable=unused-import
 
 # https://leetcode.com/problems/count-the-number-of-complete-components/
 
@@ -40,7 +39,7 @@ class Solution(unittest.TestCase):
     # Time: O(E+2V) = O(E+V)
     # Space: O(E+3V) = O(E+V)
     def countCompleteComponents(self, n: int, edges: List[List[int]]) -> int:
-        graph = defaultdict(list)
+        graph: Dict[int, List[int]] = defaultdict(list)
         for a, b in edges:
             graph[a].append(b)
             graph[b].append(a)

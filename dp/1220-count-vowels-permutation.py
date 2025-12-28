@@ -1,4 +1,3 @@
-from functools import lru_cache  # pylint: disable=unused-import
 import unittest
 
 # https://leetcode.com/problems/count-vowels-permutation/

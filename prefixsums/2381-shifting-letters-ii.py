@@ -1,5 +1,4 @@
 from typing import List
-import heapq  # pylint: disable=unused-import
 import unittest
 
 # https://leetcode.com/problems/shifting-letters-ii/
@@ -42,15 +41,15 @@ class Solution(unittest.TestCase):
                 direction = -1
             line[start] += direction
             line[end + 1] -= direction
-        s = list(s)
+        sc = list(s)
         delta = 0
-        for idx, c in enumerate(s):
+        for idx, c in enumerate(sc):
             delta += line[idx]
             code = (ord(c) - ord('a') + delta) % 26
             if code < 0:
                 code += 26
-            s[idx] = chr(ord('a') + code)
-        return "".join(s)
+            sc[idx] = chr(ord('a') + code)
+        return "".join(sc)
 
     def test(self):
         for s, shifts, expected in [

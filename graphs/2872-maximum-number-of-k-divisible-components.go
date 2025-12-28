@@ -3,7 +3,7 @@ package graphs
 // https://leetcode.com/problems/maximum-number-of-k-divisible-components/
 
 // Approach: Depth-First Search (Graph)
-// Time: Time: O(n+e), n=# of nodes, e=# of edges
+// Time: O(n+e), n=# of nodes, e=# of edges
 // Space: O(n+e)
 func maxKDivisibleComponents(n int, edges [][]int, values []int, k int) int {
 	adj := make([][]int, n)
@@ -43,7 +43,7 @@ func maxKDivisibleComponents(n int, edges [][]int, values []int, k int) int {
 }
 
 // // Approach: Breadth-First Search (Graph)
-// // Time: Time: O(n+e), n=# of nodes, e=# of edges
+// Time: O(n+e), n=# of nodes, e=# of edges
 // // Space: O(n+e)
 // func maxKDivisibleComponents(n int, edges [][]int, values []int, k int) int {
 // 	if n < 2 {

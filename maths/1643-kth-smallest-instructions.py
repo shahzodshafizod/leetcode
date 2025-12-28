@@ -1,5 +1,4 @@
-from functools import cache  # pylint: disable=unused-import
-from typing import List
+from typing import List, Any
 import unittest
 
 # There are nCk(m + n, m) = nCk(m + n, n) solutions
@@ -38,7 +37,7 @@ class Solution(unittest.TestCase):
     #     return dfs(0, 0, "")
 
     # Credit to: http://ptaskbook.com/en/tasks/recur.php (Recur6)
-    dp = [[None] * 30 for _ in range(30)]
+    dp: List[List[Any]] = [[None] * 30 for _ in range(30)]
 
     def comb(self, n: int, k: int) -> int:
         if k in (n, 0):

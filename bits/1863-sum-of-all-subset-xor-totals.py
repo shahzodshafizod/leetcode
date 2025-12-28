@@ -1,4 +1,3 @@
-from functools import cache  # pylint: disable=unused-import
 from typing import List
 import unittest
 

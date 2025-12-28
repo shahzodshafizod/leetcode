@@ -1,7 +1,7 @@
 from collections import defaultdict
+from typing import List, Dict, Tuple, Any
 import heapq
 import unittest
-from sortedcontainers import SortedSet  # pylint: disable=unused-import
 
 # https://leetcode.com/problems/design-a-number-container-system/
 
@@ -13,8 +13,8 @@ from sortedcontainers import SortedSet  # pylint: disable=unused-import
 # Space: O(n)
 class NumberContainers:
     def __init__(self):
-        self.idx2num = {}  # index -> number
-        self.num2idx = defaultdict(list)  # {number: [indices]}
+        self.idx2num: Dict[int, int] = {}  # index -> number
+        self.num2idx: Dict[int, List[int]] = defaultdict(list)  # {number: [indices]}
 
     def change(self, index: int, number: int) -> None:
         self.idx2num[index] = number
@@ -46,20 +46,26 @@ class NumberContainers:
 
 class Solution(unittest.TestCase):
     def test(self):
-        for commands, values, expected in [
+        test_cases: List[Tuple[List[str], List[List[int]], List[Any]]] = [
             (
                 ["NumberContainers", "find", "change", "change", "change", "change", "find", "change", "find"],
                 [[], [10], [2, 10], [1, 10], [3, 10], [5, 10], [10], [1, 20], [10]],
                 [None, -1, None, None, None, None, 1, None, 2],
             ),
-        ]:
+        ]
+        for commands, values, expected in test_cases:
+            container: NumberContainers | None = None
             for idx, command in enumerate(commands):
                 output = None
                 match command:
                     case "NumberContainers":
                         container = NumberContainers()
                     case "change":
-                        container.change(values[idx][0], values[idx][1])
+                        if container:
+                            container.change(values[idx][0], values[idx][1])
                     case "find":
-                        output = container.find(values[idx][0])
+                        if container:
+                            output = container.find(values[idx][0])
+                    case _:
+                        pass
                 self.assertEqual(expected[idx], output, f"expected: {expected[idx]}, output: {output}")

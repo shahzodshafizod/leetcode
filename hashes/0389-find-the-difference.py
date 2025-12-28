@@ -1,4 +1,3 @@
-from collections import Counter  # pylint: disable=unused-import
 import unittest
 
 # https://leetcode.com/problems/find-the-difference/

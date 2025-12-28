@@ -1,7 +1,6 @@
-from collections import defaultdict, deque  # pylint: disable=unused-import
-from functools import lru_cache  # pylint: disable=unused-import
+from collections import deque
 from itertools import combinations
-from typing import List
+from typing import List, Tuple
 import unittest
 
 # https://leetcode.com/problems/parallel-courses-ii/
@@ -65,7 +64,7 @@ class Solution(unittest.TestCase):
             if state == TARGET:
                 result = semesters
                 break
-            nextCourses = []  # new courses to study
+            nextCourses: List[int] = []  # new courses to study
             for course in range(n):
                 if preq[course] & state != preq[course]:  # not enough prereq
                     continue
@@ -82,7 +81,7 @@ class Solution(unittest.TestCase):
         return result
 
     def test(self):
-        for n, relations, k, expected in [
+        test_cases: List[Tuple[int, List[List[int]], int, int]] = [
             (11, [], 2, 6),
             (4, [[2, 1], [3, 1], [1, 4]], 2, 3),
             (5, [[2, 1], [3, 1], [4, 1], [1, 5]], 2, 4),
@@ -120,6 +119,7 @@ class Solution(unittest.TestCase):
                 9,
                 3,
             ),
-        ]:
+        ]
+        for n, relations, k, expected in test_cases:
             output = self.minNumberOfSemesters(n, relations, k)
             self.assertEqual(expected, output, f"expected: {expected}, output: {output}")
