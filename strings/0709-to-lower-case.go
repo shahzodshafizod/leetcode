@@ -12,7 +12,7 @@ package strings
 // Space: O(N) - create new byte slice/string
 func toLowerCase(s string) string {
 	result := []byte(s)
-	for i := range len(result) {
+	for i := range result {
 		// Check if character is uppercase (A-Z)
 		if result[i] >= 'A' && result[i] <= 'Z' {
 			// Convert to lowercase by adding 32 to ASCII value

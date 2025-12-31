@@ -22,6 +22,7 @@ func removeInvalidParentheses(s string) []string {
 			} else {
 				rightToRemove++
 			}
+		default:
 		}
 	}
 

@@ -49,12 +49,15 @@ import "math/bits"
 // Alternative: Using bits.OnesCount from math/bits
 func countPrimeSetBits(left int, right int) int {
 	const primesMask = 0b10100010100010101100
+
 	count := 0
+
 	for num := left; num <= right; num++ {
 		setBits := bits.OnesCount(uint(num))
 		if primesMask&(1<<setBits) != 0 {
 			count++
 		}
 	}
+
 	return count
 }

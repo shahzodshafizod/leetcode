@@ -2,6 +2,8 @@
 
 | #### | Title | Difficulty | Tags | Date | Solutions
 | ---- | ----- | ---------- | ---- | ---- | ---------
+| 0381 | Insert Delete GetRandom O(1) - Duplicates allowed | Hard | Array, Hash Table, Math, Design, Randomized | 2025-12-31 | [Go](design/0381-insert-delete-getrandom-o1-duplicates-allowed.go) [Python](design/0381-insert-delete-getrandom-o1-duplicates-allowed.py)
+| 0363 | Max Sum of Rectangle No Larger Than K | Hard | Array, Binary Search, Matrix, Prefix Sum, Ordered Set | 2025-12-31 | [Go](prefixsums/0363-max-sum-of-rectangle-no-larger-than-k.go) [Python](prefixsums/0363-max-sum-of-rectangle-no-larger-than-k.py)
 | 0771 | Jewels and Stones | Easy | Hash Table, String | 2025-12-30 | [Go](hashes/0771-jewels-and-stones.go) [Python](hashes/0771-jewels-and-stones.py)
 | 0420 | Strong Password Checker | Hard | String, Greedy, Heap (Priority Queue) | 2025-12-30 | [Go](strings/0420-strong-password-checker.go) [Python](strings/0420-strong-password-checker.py)
 | 0766 | Toeplitz Matrix | Easy | Array, Matrix | 2025-12-29 | [Go](matrices/0766-toeplitz-matrix.go) [Python](matrices/0766-toeplitz-matrix.py)

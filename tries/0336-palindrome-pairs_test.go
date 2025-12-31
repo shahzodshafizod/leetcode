@@ -36,12 +36,14 @@ func TestPalindromePairs(t *testing.T) {
 			if output[i][0] != output[j][0] {
 				return output[i][0] < output[j][0]
 			}
+
 			return output[i][1] < output[j][1]
 		})
 		sort.Slice(tc.output, func(i, j int) bool {
 			if tc.output[i][0] != tc.output[j][0] {
 				return tc.output[i][0] < tc.output[j][0]
 			}
+
 			return tc.output[i][1] < tc.output[j][1]
 		})
 		assert.Equal(t, tc.output, output)
